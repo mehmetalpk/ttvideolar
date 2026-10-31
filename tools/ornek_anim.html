@@ -60,7 +60,7 @@ function face(cx,cy,r,o={}){
   // brows
   const br=o.brow||0, sad=o.sad||0;
   x.strokeStyle=o.browCol||hair;x.lineWidth=r*0.07;x.lineCap='round';
-  [-1,1].forEach(s=>{x.beginPath();x.moveTo(cx+s*r*0.18,cy-r*0.27-br*r*0.12-sad*r*0.08);x.lineTo(cx+s*r*0.48,cy-r*0.25-br*r*0.12+sad*r*0.04);x.stroke();});
+  const ang=o.angry||0;[-1,1].forEach(s=>{x.beginPath();x.moveTo(cx+s*r*0.18,cy-r*0.27-br*r*0.12-sad*r*0.08+ang*r*0.1);x.lineTo(cx+s*r*0.48,cy-r*0.25-br*r*0.12+sad*r*0.04-ang*r*0.08);x.stroke();});
   // nose
   x.strokeStyle=o.skinShade||'#c48f69';x.lineWidth=r*0.045;x.beginPath();x.moveTo(cx,cy+r*0.05);x.quadraticCurveTo(cx+r*0.08,cy+r*0.22,cx-r*0.02,cy+r*0.25);x.stroke();
   // mustache
