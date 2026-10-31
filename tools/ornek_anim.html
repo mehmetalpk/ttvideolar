@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const W=1080,H=1920;
+const c=document.getElementById('c'),x=c.getContext('2d');
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const ease=t=>{t=cl(t);return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+const eOut=t=>{t=cl(t);return 1-Math.pow(1-t,3)};
+const back=t=>{t=cl(t);const c1=1.7,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)};
+const prog=(t,a,b)=>cl((t-a)/(b-a));
+function rng(seed){let s=seed;return()=>{s=(s*16807)%2147483647;return (s-1)/2147483646}}
+const F='Inter';
+
+function rr(px,py,w,h,r){x.beginPath();x.moveTo(px+r,py);x.arcTo(px+w,py,px+w,py+h,r);x.arcTo(px+w,py+h,px,py+h,r);x.arcTo(px,py+h,px,py,r);x.arcTo(px,py,px+w,py,r);x.closePath();}
+function grad(y0,y1,stops){const g=x.createLinearGradient(0,y0,0,y1);stops.forEach((s,i)=>g.addColorStop(i/(stops.length-1),s));return g}
+
+// ---------- text ----------
+function wrap(text,maxW){const words=text.split(' ');const lines=[];let cur='';for(const w of words){const t=cur?cur+' '+w:w;if(x.measureText(t).width>maxW&&cur){lines.push(cur);cur=w}else cur=t}if(cur)lines.push(cur);return lines}
+function caption(text,t,s,e,opt={}){
+  if(t<s||t>e)return;
+  const lt=t-s, size=opt.size||66, y=opt.y||1470, color=opt.color||'#fff';
+  const sc=0.8+0.2*back(lt/0.22), a=cl(lt/0.12)*cl((e-t)/0.12);
+  x.save();x.globalAlpha=a;x.font=`800 ${size}px ${F}`;x.textAlign='center';x.textBaseline='middle';
+  const lines=wrap(text,opt.maxW||880);const lh=size*1.2;const y0=y-(lines.length-1)*lh/2;
+  x.translate(W/2,y);x.scale(sc,sc);x.translate(-W/2,-y);
+  x.lineJoin='round';
+  lines.forEach((l,i)=>{const yy=y0+i*lh;x.lineWidth=size*0.2;x.strokeStyle='#000';x.strokeText(l,W/2,yy);x.fillStyle=color;x.fillText(l,W/2,yy)});
+  x.restore();
+}
+
+// ---------- people ----------
+function body(cx,cy,w,h,col){x.fillStyle=col;x.beginPath();x.moveTo(cx-w/2,cy+h);x.lineTo(cx-w/2,cy+w*0.28);x.quadraticCurveTo(cx-w/2,cy,cx-w*0.22,cy);x.lineTo(cx+w*0.22,cy);x.quadraticCurveTo(cx+w/2,cy,cx+w/2,cy+w*0.28);x.lineTo(cx+w/2,cy+h);x.closePath();x.fill();}
+function face(cx,cy,r,o={}){
+  const skin=o.skin||'#e8b48c', hair=o.hair||'#2b1d16';
+  x.save();
+  if(o.hairStyle==='long'){x.fillStyle=hair;x.beginPath();x.ellipse(cx,cy+r*0.35,r*1.12,r*1.3,0,0,7);x.fill();}
+  // neck
+  x.fillStyle=o.skinShade||'#cf9a73';x.fillRect(cx-r*0.32,cy+r*0.6,r*0.64,r*0.6);
+  x.fillStyle=skin;
+  x.beginPath();x.ellipse(cx-r*0.88,cy+r*0.1,r*0.15,r*0.22,0,0,7);x.ellipse(cx+r*0.88,cy+r*0.1,r*0.15,r*0.22,0,0,7);x.fill();
+  x.beginPath();x.ellipse(cx,cy,r*0.88,r,0,0,7);x.fill();
+  // blush
+  if(o.blush){x.fillStyle='rgba(230,110,110,0.25)';x.beginPath();x.ellipse(cx-r*0.5,cy+r*0.25,r*0.16,r*0.1,0,0,7);x.ellipse(cx+r*0.5,cy+r*0.25,r*0.16,r*0.1,0,0,7);x.fill();}
+  // hair top
+  x.fillStyle=hair;
+  if(o.hairStyle!=='bald'){
+    x.beginPath();x.moveTo(cx-r*0.92,cy-r*0.05);
+    x.bezierCurveTo(cx-r*1.0,cy-r*1.25,cx+r*1.0,cy-r*1.25,cx+r*0.92,cy-r*0.05);
+    x.quadraticCurveTo(cx+r*0.8,cy-r*0.55,cx+r*0.2,cy-r*0.58);
+    x.quadraticCurveTo(cx-r*0.5,cy-r*0.5,cx-r*0.92,cy-r*0.05);x.fill();
+  }
+  if(o.cap){x.fillStyle=o.cap;x.beginPath();x.ellipse(cx,cy-r*0.55,r*0.95,r*0.55,0,Math.PI,0);x.fill();rr(cx-r*0.3,cy-r*0.62,r*1.35,r*0.16,r*0.08);x.fill();}
+  if(o.beard){x.fillStyle=o.beard;x.beginPath();x.moveTo(cx-r*0.86,cy+r*0.05);x.quadraticCurveTo(cx-r*0.8,cy+r*1.05,cx,cy+r*1.05);x.quadraticCurveTo(cx+r*0.8,cy+r*1.05,cx+r*0.86,cy+r*0.05);x.quadraticCurveTo(cx+r*0.6,cy+r*0.55,cx,cy+r*0.5);x.quadraticCurveTo(cx-r*0.6,cy+r*0.55,cx-r*0.86,cy+r*0.05);x.fill();}
+  // eyes
+  const lk=(o.look||0)*r*0.08, eo=o.eyeOpen==null?1:o.eyeOpen, ey=cy-r*0.02;
+  x.fillStyle='#1d1a22';
+  [-1,1].forEach(s=>{x.beginPath();x.ellipse(cx+s*r*0.33+lk,ey+(o.lookDown||0)*r*0.06,r*0.085,Math.max(r*0.012,r*0.11*eo),0,0,7);x.fill();});
+  if(eo>0.5){x.fillStyle='#fff';[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33+lk+r*0.03,ey-r*0.035,r*0.025,0,7);x.fill()});}
+  // brows
+  const br=o.brow||0, sad=o.sad||0;
+  x.strokeStyle=o.browCol||hair;x.lineWidth=r*0.07;x.lineCap='round';
+  [-1,1].forEach(s=>{x.beginPath();x.moveTo(cx+s*r*0.18,cy-r*0.27-br*r*0.12-sad*r*0.08);x.lineTo(cx+s*r*0.48,cy-r*0.25-br*r*0.12+sad*r*0.04);x.stroke();});
+  // nose
+  x.strokeStyle=o.skinShade||'#c48f69';x.lineWidth=r*0.045;x.beginPath();x.moveTo(cx,cy+r*0.05);x.quadraticCurveTo(cx+r*0.08,cy+r*0.22,cx-r*0.02,cy+r*0.25);x.stroke();
+  // mustache
+  if(o.mustache){x.fillStyle=o.mustache;x.beginPath();x.ellipse(cx-r*0.13,cy+r*0.36,r*0.17,r*0.07,0.15,0,7);x.ellipse(cx+r*0.13,cy+r*0.36,r*0.17,r*0.07,-0.15,0,7);x.fill();}
+  // mouth
+  const my=cy+r*0.5, sm=o.smile||0;
+  if(o.mouthOpen>0){x.fillStyle='#5a1f25';x.beginPath();x.ellipse(cx,my+r*0.02,r*0.18,r*0.04+r*0.13*o.mouthOpen,0,0,7);x.fill();}
+  else{x.strokeStyle='#6a2c2c';x.lineWidth=r*0.05;x.beginPath();x.moveTo(cx-r*0.2,my);x.quadraticCurveTo(cx,my+sm*r*0.22,cx+r*0.2,my);x.stroke();}
+  x.restore();
+}
+
+// ---------- shared backgrounds ----------
+function nightSky(){x.fillStyle=grad(0,H,['#070b1e','#141c44','#2a2459']);x.fillRect(0,0,W,H);const r=rng(7);x.fillStyle='#fff';for(let i=0;i<90;i++){x.globalAlpha=0.3+r()*0.6;x.beginPath();x.arc(r()*W,r()*1100,r()*2.5+0.5,0,7);x.fill()}x.globalAlpha=1;}
+function skyline(off,baseY,seed,col,win){const r=rng(seed);let px=-200+(off%400);x.fillStyle=col;const bs=[];for(let i=0;i<14;i++){const w=110+r()*120,h=250+r()*520;bs.push([px,baseY-h,w,h]);px+=w+8;}bs.forEach(b=>x.fillRect(...b));if(win){bs.forEach(([bx,by,bw,bh],k)=>{const rr2=rng(seed*31+k);for(let wy=by+30;wy<baseY-30;wy+=52)for(let wx=bx+18;wx<bx+bw-30;wx+=40){if(rr2()<0.35){x.fillStyle=rr2()<0.5?'#ffd77a':'#ffb84d';x.globalAlpha=0.55+rr2()*0.4;x.fillRect(wx,wy,20,28)}}});x.globalAlpha=1;}}
+
+function taxi(cx,cy,s){
+  x.save();x.translate(cx,cy);x.scale(s,s);
+  // beam
+  const g=x.createLinearGradient(230,0,720,0);g.addColorStop(0,'rgba(255,240,180,0.55)');g.addColorStop(1,'rgba(255,240,180,0)');x.fillStyle=g;x.beginPath();x.moveTo(230,-10);x.lineTo(720,-90);x.lineTo(720,110);x.lineTo(230,30);x.fill();
+  x.fillStyle='#f7c325';rr(-260,-60,520,120,40);x.fill();
+  x.beginPath();x.moveTo(-170,-60);x.lineTo(-110,-150);x.lineTo(110,-150);x.lineTo(185,-60);x.fill();
+  x.fillStyle='#22304f';x.beginPath();x.moveTo(-145,-62);x.lineTo(-98,-135);x.lineTo(-8,-135);x.lineTo(-8,-62);x.fill();x.beginPath();x.moveTo(8,-62);x.lineTo(8,-135);x.lineTo(100,-135);x.lineTo(160,-62);x.fill();
+  // sign
+  x.fillStyle='#111';rr(-60,-185,120,38,8);x.fill();x.fillStyle='#ffd23f';x.font=`800 26px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('TAKSİ',0,-165);
+  // checker
+  for(let i=0;i<12;i++){x.fillStyle=i%2?'#111':'#f7c325';x.fillRect(-180+i*30,-8,30,16);}
+  x.fillStyle='#fff6c8';x.beginPath();x.ellipse(250,-15,14,20,0,0,7);x.fill();
+  x.fillStyle='#e23a3a';x.fillRect(-262,-30,10,26);
+  [-150,150].forEach(w=>{x.fillStyle='#0d0d12';x.beginPath();x.arc(w,60,52,0,7);x.fill();x.fillStyle='#777';x.beginPath();x.arc(w,60,22,0,7);x.fill();});
+  x.restore();
+}
+
+// ---------- scenes ----------
+const S=[];
+// 1 HOOK
+S.push({d:3.95,f(t){
+  nightSky();
+  x.fillStyle='rgba(255,250,220,0.9)';x.beginPath();x.arc(860,300,70,0,7);x.fill();
+  skyline(-t*30,1330,3,'#1a1f3d',false);skyline(-t*70,1380,11,'#0f1330',true);
+  x.fillStyle='#16182a';x.fillRect(0,1380,W,540);
+  x.fillStyle='#ffd23f';for(let i=-1;i<8;i++){x.fillRect(((i*180-t*400)%1440+1440)%1440-180,1600,100,14)}
+  taxi(540+Math.sin(t*2)*6,1470+Math.sin(t*14)*2,1.0);
+  const L=[['Babamın ikinci ailesini',86,'#fff',0.15],['TAKSİ ŞOFÖRÜNDEN',112,'#ffd23f',2.35],['öğrendim.',86,'#fff',3.0]];
+  L.forEach(([tx,sz,col,st],i)=>{const p=back((t-st)/0.35);if(t<st)return;x.save();x.translate(W/2,520+i*140);x.scale(p,p);x.font=`900 ${sz}px ${F}`;const mw=x.measureText(tx).width;if(mw>960){const k=960/mw;x.scale(k,k)}x.textAlign='center';x.textBaseline='middle';x.lineJoin='round';x.lineWidth=sz*0.22;x.strokeStyle='#000';x.strokeText(tx,0,0);x.fillStyle=col;x.fillText(tx,0,0);x.restore();});
+}});
+
+function taxiInterior(t,st){
+  x.fillStyle='#10131f';x.fillRect(0,0,W,H);
+  // window
+  x.save();rr(90,330,900,820,70);x.clip();
+  x.fillStyle=grad(330,1150,['#0b1030','#26215a']);x.fillRect(0,0,W,H);
+  skyline(-t*260,1150,5,'#0c0f26',true);
+  const r=rng(19);for(let i=0;i<26;i++){const sp=300+r()*700,yy=380+r()*700,rad=10+r()*40;const xx=((r()*1600-t*sp)%1600+1600)%1600-250;x.fillStyle=['rgba(255,190,90,0.35)','rgba(255,90,90,0.3)','rgba(120,180,255,0.3)'][i%3];x.beginPath();x.arc(xx,yy,rad,0,7);x.fill();}
+  x.restore();
+  x.strokeStyle='#05060c';x.lineWidth=28;rr(90,330,900,820,70);x.stroke();
+  // seat
+  x.fillStyle='#262a3a';rr(150,900,780,1100,90);x.fill();x.fillStyle='#2e3346';rr(190,940,700,200,60);x.fill();
+  // passenger
+  const zoom=st.zoom||1;
+  x.save();x.translate(540,1150);x.scale(zoom,zoom);x.translate(-540,-1150);
+  body(540,1230,520,800,'#3d5bd9');x.fillStyle='#3350c4';x.beginPath();x.ellipse(540,1235,140,40,0,0,7);x.fill();
+  face(540,1080,150,{hair:'#241812',smile:st.smile,eyeOpen:st.eye,brow:st.brow,sad:st.sad,look:st.look,lookDown:st.lookDown,mouthOpen:st.mouthOpen,blush:true});
+  x.restore();
+  // mirror
+  x.strokeStyle='#05060c';x.lineWidth=10;x.beginPath();x.moveTo(540,0);x.lineTo(540,150);x.stroke();
+  x.fillStyle='#05060c';rr(215,140,650,200,40);x.fill();
+  x.save();rr(230,155,620,170,30);x.clip();
+  x.fillStyle='#2a2f45';x.fillRect(0,0,W,H);
+  face(540,300,230,{skin:'#d9a07a',hair:'#1a1410',cap:'#2b3a67',beard:'#3a2b22',eyeOpen:st.dEye==null?1:st.dEye,brow:st.dBrow||0,look:-0.5});
+  x.fillStyle='rgba(255,255,255,0.08)';x.beginPath();x.moveTo(230,155);x.lineTo(420,155);x.lineTo(300,325);x.lineTo(230,325);x.fill();
+  x.restore();
+  if(st.tint){x.fillStyle=`rgba(120,0,10,${st.tint})`;x.fillRect(0,0,W,H);}
+}
+// 2 TAXI A
+S.push({d:5.8,f(t){
+  const surp=eOut(prog(t,4.5,4.8));
+  taxiInterior(t,{smile:0.5,eye:1,look:-0.3,dBrow:surp*1.2,dEye:1+surp*0.3,brow:surp*0.5});
+  caption('Geçen hafta sonu eve taksiyle dönüyordum.',t,0.2,2.45);
+  caption('Şoför soyadımı duyunca durdu: "Kemal Bey\'in oğlu musun?"',t,2.5,5.7);
+}});
+// 3 FISHING
+S.push({d:4.7,f(t){
+  x.fillStyle=grad(0,1000,['#4e5aa8','#e6799a','#ffb37a','#ffe0a3']);x.fillRect(0,0,W,1000);
+  x.fillStyle='#fff3c4';x.beginPath();x.arc(700,950-t*25,120,0,7);x.fill();
+  x.fillStyle='#6c4d7d';x.beginPath();x.moveTo(0,1000);x.lineTo(0,760);x.lineTo(220,640);x.lineTo(420,800);x.lineTo(640,690);x.lineTo(880,830);x.lineTo(1080,720);x.lineTo(1080,1000);x.fill();
+  x.fillStyle=grad(1000,H,['#e8a3a0','#4a6aa8','#22325e']);x.fillRect(0,1000,W,920);
+  x.strokeStyle='rgba(255,240,200,0.5)';x.lineWidth=5;for(let i=0;i<10;i++){const yy=1040+i*60,xo=Math.sin(t*1.5+i)*30;x.beginPath();x.moveTo(560+xo-(60+i*12),yy);x.lineTo(560+xo+(60+i*12),yy);x.stroke();}
+  // birds
+  x.strokeStyle='#3a2a4a';x.lineWidth=5;for(let i=0;i<3;i++){const bx=200+i*90+t*40,by=420+i*30+Math.sin(t*3+i)*10;x.beginPath();x.moveTo(bx-22,by);x.quadraticCurveTo(bx-10,by-14+Math.sin(t*8+i)*6,bx,by);x.quadraticCurveTo(bx+10,by-14+Math.sin(t*8+i)*6,bx+22,by);x.stroke();}
+  // dock
+  x.fillStyle='#5b3b28';x.beginPath();x.moveTo(0,1190);x.lineTo(470,1190);x.lineTo(470,1240);x.lineTo(0,1240);x.fill();
+  x.fillStyle='#4a2f20';[60,220,400].forEach(p=>x.fillRect(p,1240,30,260));
+  // dad
+  body(270,1010,250,190,'#5d7a4a');
+  face(270,880,110,{skin:'#e3ab84',hair:'#b9b9bd',mustache:'#9a9aa0',smile:0.6,eyeOpen:0.6,look:0.8,browCol:'#9a9aa0'});
+  x.fillStyle='#5d7a4a';x.beginPath();x.moveTo(340,1180);x.lineTo(470,1180);x.lineTo(470,1210);x.lineTo(340,1210);x.fill();
+  // rod
+  const bob=Math.sin(t*2.4)*10;
+  x.strokeStyle='#2a1a10';x.lineWidth=9;x.beginPath();x.moveTo(330,1080);x.lineTo(700,760);x.stroke();
+  x.strokeStyle='rgba(255,255,255,0.8)';x.lineWidth=2;x.beginPath();x.moveTo(700,760);x.quadraticCurveTo(780,900,820,1250+bob);x.stroke();
+  x.fillStyle='#e23a3a';x.beginPath();x.arc(820,1255+bob,14,Math.PI,0);x.fill();x.fillStyle='#fff';x.beginPath();x.arc(820,1255+bob,14,0,Math.PI);x.fill();
+  // tag
+  const p=back(prog(t,0.4,0.8));x.save();x.translate(540,300);x.scale(p,p);x.fillStyle='rgba(0,0,0,0.55)';rr(-370,-55,740,110,55);x.fill();x.fillStyle='#fff';x.font=`800 50px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('İki haftada bir perşembe',0,2);x.restore();
+  caption('"Baban hâlâ iki haftada bir perşembe balığa gidiyor mu?"',t,0.15,3.2);
+  caption('"Evet, gidiyor galiba."',t,3.25,4.6);
+}});
+// 4 TAXI B
+S.push({d:6.25,f(t){
+  const laugh=prog(t,2.25,2.5)*(1-prog(t,4.4,4.9));
+  const shock=eOut(prog(t,4.9,5.6));
+  taxiInterior(t,{smile:0.5+laugh*0.5-shock*1.0,mouthOpen:laugh*0.8,eye:1-laugh*0.6+shock*0.15,brow:shock*0.4,sad:shock,look:-0.3,zoom:1+ease(prog(t,4.9,6.25))*0.3,dBrow:0.1,tint:shock*0.28});
+  caption('"Hâlâ muhasebedeki o kadınla mı gidiyor?"',t,0.15,2.25);
+  caption('Güldüm. Şaka yapıyor sandım.',t,2.3,4.85);
+  caption('Şaka yapmıyordu.',t,4.9,6.2,{size:96,color:'#ff5a5a'});
+}});
+function fish(cx,cy,s,col){x.fillStyle=col;x.beginPath();x.ellipse(cx,cy,26*s,15*s,0,0,7);x.fill();x.beginPath();x.moveTo(cx+18*s,cy);x.lineTo(cx+38*s,cy-14*s);x.lineTo(cx+38*s,cy+14*s);x.fill();x.fillStyle='#111';x.beginPath();x.arc(cx-12*s,cy-3*s,3.5*s,0,7);x.fill();}
+function heart(cx,cy,s,col){x.fillStyle=col;x.beginPath();x.moveTo(cx,cy+22*s);x.bezierCurveTo(cx-40*s,cy-4*s,cx-22*s,cy-34*s,cx,cy-14*s);x.bezierCurveTo(cx+22*s,cy-34*s,cx+40*s,cy-4*s,cx,cy+22*s);x.fill();}
+// 5 CALENDAR
+S.push({d:4.65,f(t){
+  x.fillStyle=grad(0,H,['#1a1030','#2b1640']);x.fillRect(0,0,W,H);
+  const n=Math.min(6,Math.floor(eOut(prog(t,0.2,1.6))*6+0.0001));
+  x.save();x.translate(540,330);const ps=1+0.15*Math.max(0,1-Math.abs(t-1.7)/0.25);x.scale(ps,ps);x.font=`900 220px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#ffd23f';x.fillText(n+' YIL',0,0);x.restore();
+  const days=['Pzt','Sal','Çar','Per','Cum','Cmt','Paz'];const gx=110,gy=560,cw=123,ch=125;
+  x.fillStyle='#fff';x.globalAlpha=0.95;rr(gx-20,gy-90,cw*7+40,ch*5+120,36);x.fill();x.globalAlpha=1;
+  x.font=`700 34px ${F}`;x.textAlign='center';x.textBaseline='middle';
+  days.forEach((d,i)=>{x.fillStyle=i===3?'#e23a5a':'#555';x.fillText(d,gx+cw*i+cw/2,gy-45)});
+  for(let r=0;r<5;r++)for(let k=0;k<7;k++){const cx=gx+cw*k+cw/2,cy=gy+ch*r+ch/2;
+    x.strokeStyle='#e5e5ea';x.lineWidth=2;x.strokeRect(gx+cw*k,gy+ch*r,cw,ch);
+    const num=r*7+k-1;if(num>=1&&num<=30){x.fillStyle='#999';x.font=`600 26px ${F}`;x.fillText(num,gx+cw*k+26,gy+ch*r+24);}
+    if(k===3&&r%2===0){const ap=back(prog(t,0.2+r*0.12,0.45+r*0.12));const flip=prog(t,2.6+r*0.1,2.85+r*0.1);
+      x.save();x.translate(cx,cy+10);x.scale(ap*Math.abs(Math.cos(flip*Math.PI)),ap);
+      if(flip<0.5)fish(0,0,1.3,'#3a8fd9');else heart(0,0,1.4,'#e23a5a');x.restore();}
+  }
+  caption('Meğer babam 6 yıldır anneme...',t,0.25,2.5);
+  caption('"Arkadaşlarla balığa gidiyorum" diyormuş.',t,2.55,4.6);
+}});
+// party photo
+function partyPhoto(t){
+  x.fillStyle=grad(0,1100,['#5a2333','#8a3b3b']);x.fillRect(-400,-600,1600,2200);
+  const r=rng(4);for(let i=0;i<20;i++){x.fillStyle=['#ffd23f','#5ad1ff','#ff6b8a','#8aff8a'][i%4];x.globalAlpha=0.6+0.4*Math.sin(t*4+i);x.beginPath();x.arc(-60+i*36,40+Math.sin(i*0.8)*22,9,0,7);x.fill();}x.globalAlpha=1;
+  // tree
+  x.fillStyle='#1f6b3a';[[0,90,170],[0,170,210],[0,260,250]].forEach(([_,yy,w])=>{x.beginPath();x.moveTo(70,yy-80);x.lineTo(70-w/2,yy+60);x.lineTo(70+w/2,yy+60);x.fill();});
+  x.fillStyle='#5b3b28';x.fillRect(55,320,30,50);x.fillStyle='#ffd23f';x.beginPath();x.arc(70,10,16,0,7);x.fill();
+  [['#ff4d4d',40,150],['#ffd23f',100,220],['#5ad1ff',30,290],['#ff4d4d',120,300]].forEach(([cc,a,b])=>{x.fillStyle=cc;x.beginPath();x.arc(a,b,10,0,7);x.fill()});
+  // woman
+  body(400,560,200,400,'#c62839');face(400,430,85,{skin:'#eab896',hair:'#6b3a1f',hairStyle:'long',smile:0.8,blush:true});
+  // dad
+  body(240,580,230,400,'#2d3a5a');face(240,440,90,{skin:'#e3ab84',hair:'#b9b9bd',mustache:'#9a9aa0',smile:0.9,browCol:'#9a9aa0'});
+  // santa hat on dad
+  x.fillStyle='#d62828';x.beginPath();x.moveTo(160,380);x.quadraticCurveTo(240,250,330,330);x.lineTo(320,385);x.fill();x.fillStyle='#fff';rr(150,368,180,34,17);x.fill();x.beginPath();x.arc(334,326,18,0,7);x.fill();
+  // baby
+  x.fillStyle='#9fd3f5';x.beginPath();x.ellipse(250,640,95,62,-0.2,0,7);x.fill();
+  face(205,610,46,{skin:'#f3c9a8',hair:'#c9a27a',hairStyle:'bald',smile:0.7,eyeOpen:0.4,blush:true});
+  x.fillStyle='#e3ab84';x.beginPath();x.ellipse(320,660,30,22,0,0,7);x.fill();
+}
+// 6 PHONE PHOTO
+S.push({d:5.15,f(t){
+  x.fillStyle='#0d0f1a';x.fillRect(0,0,W,H);
+  const r=rng(21);for(let i=0;i<14;i++){x.fillStyle='rgba(255,190,90,0.12)';x.beginPath();x.arc(r()*W,r()*H,40+r()*90,0,7);x.fill();}
+  const up=eOut(prog(t,0.05,0.7));const py=260+(1-up)*1400;
+  const pw=600,ph=1080,px=(W-pw)/2;
+  // hand
+  x.fillStyle='#c98e66';x.beginPath();x.ellipse(px+pw-20,py+ph-80,120,260,-0.3,0,7);x.fill();
+  x.fillStyle='#0a0a0a';rr(px,py,pw,ph,70);x.fill();
+  x.save();rr(px+22,py+22,pw-44,ph-44,52);x.clip();
+  x.fillStyle='#000';x.fillRect(px,py,pw,ph);
+  const z=1+ease(prog(t,2.9,4.6))*0.9;
+  x.translate(px+22,py+220);
+  const k=ease(prog(t,2.9,4.6)),ax=230,ay=630;x.translate(ax+(278-ax)*k,ay+(380-ay)*k);x.scale(z,z);x.translate(-ax,-ay);
+  x.save();x.beginPath();x.rect(-400*k,-400*k,556+800*k,760+800*k);x.clip();partyPhoto(t);
+  if(t>3.1){const a=prog(t,3.4,3.7);x.strokeStyle=`rgba(255,60,60,${a})`;x.lineWidth=7/z;x.beginPath();x.arc(225,628,80+Math.sin(t*6)*4,0,7);x.stroke();}
+  x.restore();
+  x.restore();
+  // photo ui
+  x.fillStyle='#fff';x.font=`600 30px ${F}`;x.textAlign='center';x.fillText('Yılbaşı partisi',W/2,py+150);
+  x.fillStyle='#333';rr(W/2-60,py+40,120,30,15);x.fill();
+  caption('Şoför telefonunu çıkarıp bir fotoğraf gösterdi.',t,0.15,3.05,{y:1530});
+  caption('Babam... kucağında bir bebekle.',t,3.1,5.1,{y:1530,size:76});
+}});
+// 7 WEDDING
+S.push({d:2.5,f(t){
+  x.fillStyle=grad(0,H,['#3b2f2a','#1f1815']);x.fillRect(0,0,W,H);
+  const fx=190,fy=380,fw=700,fh=860;
+  x.fillStyle='#b8893f';rr(fx-30,fy-30,fw+60,fh+60,10);x.fill();
+  x.save();x.beginPath();x.rect(fx,fy,fw,fh);x.clip();
+  x.fillStyle=grad(fy,fy+fh,['#e9dcc6','#cbb79a']);x.fillRect(fx,fy,fw,fh);
+  body(420,880,260,500,'#1c1c24');x.fillStyle='#fff';x.beginPath();x.moveTo(400,880);x.lineTo(440,880);x.lineTo(420,960);x.fill();
+  face(420,740,100,{skin:'#e3ab84',hair:'#2a1d15',mustache:'#2a1d15',smile:0.8});
+  x.fillStyle='rgba(255,255,255,0.75)';x.beginPath();x.ellipse(660,800,150,260,0,0,7);x.fill();
+  body(660,890,250,500,'#fafafa');face(660,750,92,{skin:'#eab896',hair:'#3b2416',hairStyle:'long',smile:0.8,blush:true});
+  x.fillStyle='rgba(255,255,255,0.18)';x.beginPath();x.moveTo(fx,fy);x.lineTo(fx+260,fy);x.lineTo(fx+80,fy+fh);x.lineTo(fx,fy+fh);x.fill();
+  // crack
+  const cp=eOut(prog(t,1.2,1.6));
+  if(cp>0){x.strokeStyle='#fff';x.lineWidth=5;const pts=[[540,380],[520,520],[575,610],[530,760],[590,880],[545,1040],[600,1240]];const nn=Math.floor(cp*(pts.length-1));x.beginPath();x.moveTo(...pts[0]);for(let i=1;i<=nn;i++)x.lineTo(...pts[i]);x.stroke();
+    x.lineWidth=3;if(cp>0.5){x.beginPath();x.moveTo(575,610);x.lineTo(680,650);x.moveTo(530,760);x.lineTo(420,800);x.moveTo(590,880);x.lineTo(700,960);x.stroke();}}
+  x.restore();
+  const p=back(prog(t,0.05,0.4));x.save();x.translate(540,250);x.scale(p,p);x.font=`900 130px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#ffd23f';x.fillText('24 YIL',0,0);x.restore();
+  caption('Annemle babam 24 yıldır evli.',t,0.2,2.45,{y:1460,size:74});
+}});
+// 8 DINNER
+S.push({d:4.77,f(t){
+  x.fillStyle=grad(0,H,['#5a3d2b','#3a271c']);x.fillRect(0,0,W,H);
+  // lamp
+  x.fillStyle='rgba(255,220,150,0.18)';x.beginPath();x.moveTo(540,250);x.lineTo(120,1100);x.lineTo(960,1100);x.fill();
+  x.strokeStyle='#222';x.lineWidth=6;x.beginPath();x.moveTo(540,0);x.lineTo(540,200);x.stroke();x.fillStyle='#e8c66a';x.beginPath();x.moveTo(440,260);x.lineTo(640,260);x.lineTo(590,190);x.lineTo(490,190);x.fill();
+  const z=1+ease(prog(t,2.3,4.77))*0.45;x.save();x.translate(840,880);x.scale(z,z);x.translate(-840,-880);
+  const talk=Math.abs(Math.sin(t*9))*0.7;
+  // family
+  body(200,880,230,400,'#2d3a5a');face(200,750,95,{skin:'#e3ab84',hair:'#b9b9bd',mustache:'#9a9aa0',smile:0.7,mouthOpen:t%2<1.3?talk:0,browCol:'#9a9aa0',look:0.5});
+  body(410,890,220,400,'#8a4f8c');face(410,760,90,{skin:'#eab896',hair:'#5a3220',hairStyle:'long',smile:0.8,eyeOpen:0.5,blush:true,look:-0.6});
+  body(630,900,210,400,'#e07a3a');face(630,770,85,{skin:'#eab896',hair:'#2b1a12',hairStyle:'long',smile:0.5,lookDown:1,look:0.3});
+  body(840,880,230,400,'#3d5bd9');face(840,750,95,{hair:'#241812',smile:-0.1,eyeOpen:1,look:0,lookDown:0,sad:0.4});
+  // table
+  x.fillStyle='#7a4a2a';rr(0,980,W,1000,0);x.fill();x.fillStyle='#f3efe6';x.fillRect(0,980,W,30);
+  [200,410,630,840].forEach(p=>{x.fillStyle='#fff';x.beginPath();x.ellipse(p,1090,100,40,0,0,7);x.fill();x.fillStyle='#d8582c';x.beginPath();x.ellipse(p,1085,55,20,0,0,7);x.fill();});
+  x.restore();
+  caption('Arabadan indim, eve girdim...',t,0.2,2.25);
+  caption('...ve hiçbir şey olmamış gibi akşam yemeği yedim.',t,2.3,4.72);
+}});
+function star(cx,cy,R,fill,stroke){x.beginPath();for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,rad=i%2?R*0.45:R;x.lineTo(cx+Math.cos(a)*rad,cy+Math.sin(a)*rad)}x.closePath();if(fill){x.fillStyle=fill;x.fill()}if(stroke){x.strokeStyle=stroke;x.lineWidth=5;x.stroke()}}
+// 9 STARS
+S.push({d:7.13,f(t){
+  x.fillStyle=grad(0,H,['#101428','#1d1840']);x.fillRect(0,0,W,H);
+  const pw=640,ph=1100,px=(W-pw)/2,py=200;
+  x.fillStyle='#0a0a0a';rr(px,py,pw,ph,70);x.fill();x.fillStyle='#f4f5f9';rr(px+22,py+22,pw-44,ph-44,52);x.fill();
+  x.textAlign='center';x.textBaseline='middle';x.fillStyle='#111';x.font=`800 46px ${F}`;x.fillText('Yolculuğun nasıldı?',W/2,py+170);
+  x.save();x.beginPath();x.arc(W/2,py+390,120,0,7);x.fillStyle='#2a2f45';x.fill();x.clip();face(W/2,py+400,90,{skin:'#d9a07a',hair:'#1a1410',cap:'#2b3a67',beard:'#3a2b22',smile:0.6});x.restore();
+  x.fillStyle='#555';x.font=`600 34px ${F}`;x.fillText('Şoförünü değerlendir',W/2,py+570);
+  for(let i=0;i<5;i++){const st=0.5+i*0.3,p=prog(t,st,st+0.2);const s=1+0.35*Math.sin(cl(p)*Math.PI);const cx=px+110+i*105,cy=py+700;
+    x.save();x.translate(cx,cy);x.scale(s,s);star(0,0,44,p>0?'#ffc21a':null,p>0?'#e0a400':'#bbb');x.restore();}
+  const bp=prog(t,2.15,2.35),bs=1-0.08*Math.sin(cl(bp)*Math.PI);
+  x.save();x.translate(W/2,py+900);x.scale(bs,bs);x.fillStyle=t>2.15?'#1db954':'#111';rr(-210,-55,420,110,55);x.fill();x.fillStyle='#fff';x.font=`800 40px ${F}`;x.fillText(t>2.35?'Gönderildi ✓':'Gönder',0,2);x.restore();
+  caption('Bu arada şoföre 5 yıldız verdim.',t,0.15,2.42,{y:1480});
+  caption('Başka ne yapacaktım ki?',t,2.46,4.32,{y:1480,size:80});
+  caption('Sence babamla konuşmalı mıyım?',t,4.36,7.05,{y:1480,size:78,color:'#ffd23f'});
+}});
+
+window.SCENES=S.map(s=>s.d);
+window.draw=function(i,t){x.setTransform(1,0,0,1,0,0);x.globalAlpha=1;S[i].f(t);const d=S[i].d;const a=Math.max(i===0?0:1-t/0.12,1-(d-t)/0.12);if(a>0){x.fillStyle=`rgba(0,0,0,${cl(a)})`;x.fillRect(0,0,W,H)}};
+window.frame=function(i,t){draw(i,t);return c.toDataURL('image/jpeg',0.92).split(',')[1]};
+</script></body></html>
