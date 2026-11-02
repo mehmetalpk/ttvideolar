@@ -7,3 +7,4 @@ Her kanal klasöründe: `<NN>_<konu>.mp4` + `stok.md` (sıra, başlık, süre, a
 - Kriminal: D.B. Cooper, Anvers elmas soygunu, Frank Abagnale
 - Osmanlısal: Kahve yasağı (IV. Murat), Lale Devri, Karakoncolos
 - Psikolojik: Kapı etkisi, Kulak kurdu, Zeigarnik etkisi
+- Sporsal: İstanbul 2005 (Liverpool-Milan), Hakan Şükür 11 saniye, Naim Süleymanoğlu
