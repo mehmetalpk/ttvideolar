@@ -1,0 +1,37 @@
+function walls(base,col,s=1){x.fillStyle=col;x.fillRect(0,base-160*s,W,160*s);for(let i=0;i<7;i++){const cx=60+i*160;x.fillRect(cx-40*s,base-260*s,80*s,260*s);for(let k=0;k<3;k++)x.fillRect(cx-40*s+k*30*s,base-290*s,18*s,30*s);}for(let i=0;i<36;i++)x.fillRect(i*32,base-185*s,18,25*s);}
+function chainLine(y,t,col='#9aa0a8'){x.strokeStyle=col;x.lineWidth=10;for(let i=0;i<28;i++){const cx=i*40+20,cy=y+Math.sin(i*0.5+t*2)*8;x.beginPath();x.ellipse(cx,cy,22,12,0,0,7);x.stroke();}}
+function hill(t,road){x.fillStyle='#5a7a3a';x.beginPath();x.moveTo(0,1180);x.quadraticCurveTo(540,500,W,1180);x.fill();x.fillStyle='#4a6a2e';x.beginPath();x.moveTo(0,1180);x.quadraticCurveTo(540,700,W,1180);x.fill();if(road){x.strokeStyle='#8a6a3a';x.lineWidth=60;x.beginPath();x.moveTo(-20,1180);x.quadraticCurveTo(540,560,W+20,1180);x.stroke();x.strokeStyle='#5a3a1a';x.lineWidth=6;for(let i=0;i<=24;i++){const u=i/24;const px=(1-u)*(1-u)*-20+2*(1-u)*u*540+u*u*(W+20),py=(1-u)*(1-u)*1180+2*(1-u)*u*560+u*u*1180;x.beginPath();x.moveTo(px-6,py-30);x.lineTo(px+6,py+30);x.stroke();}}}
+function hillPt(u){return[(1-u)*(1-u)*-20+2*(1-u)*u*540+u*u*(W+20),(1-u)*(1-u)*1180+2*(1-u)*u*560+u*u*1180-40];}
+function nightBg(){x.fillStyle=grad(0,H,['#0a0e24','#252a50']);x.fillRect(0,0,W,H);const r=rng(9);x.fillStyle='#fff';for(let i=0;i<60;i++){x.globalAlpha=0.3+r()*0.5;x.beginPath();x.arc(r()*W,r()*800,r()*2.5+0.5,0,7);x.fill();}x.globalAlpha=1;x.fillStyle='#e8eefc';x.beginPath();x.arc(900,680,50,0,7);x.fill();}
+function boatsOnHill(t,speed,col){for(let i=0;i<3;i++){const u=((t*speed+i*0.33)%1);const [px,py]=hillPt(u);const d=u<0.5?-0.35*(1-u*2):0.35*(u*2-1);ship(px,py-10,0.5,d);}}
+// 0 hook
+shot(0,0,t=>{nightBg();hill(t,true);boatsOnHill(t,0.12);bigText('GEMİLER',W/2,340,140,'#ffd23f',1);bigText('KARADAN YÜRÜDÜ',W/2,480,96,'#fff',1);vignette(0.5);});
+// 1 1453
+shot(1,1,t=>{paper(false);walls(1180,'rgba(43,29,18,0.8)');bigText('1453',W/2,640,250,'#ffd23f',eOut(cl(t*3)));bigText('İSTANBUL KUŞATMASI',W/2,380,76,'#fff',1);vignette(0.4);});
+// 2 zincir
+shot(2,2,t=>{x.fillStyle=grad(0,H,['#7fa8c8','#d8e4ea']);x.fillRect(0,0,W,H);walls(1000,'#6a5a4a',0.8);x.fillStyle='#2f6f8a';x.fillRect(0,1000,W,H);waves(1010,t,'#2a6580',8);chainLine(1080,t);bigText('DEV ZİNCİR',W/2,360,140,'#ffd23f',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 3 giremiyor
+shot(3,3,t=>{x.fillStyle=grad(0,H,['#7fa8c8','#d8e4ea']);x.fillRect(0,0,W,H);x.fillStyle='#2f6f8a';x.fillRect(0,880,W,H);waves(890,t,'#2a6580',10);chainLine(1000,t);for(let i=0;i<3;i++)ship(200+i*330,1150+Math.sin(t*2+i)*8-Math.max(0,Math.sin(t*3))*20,0.55,Math.sin(t*2+i)*0.04);stampX(540,1000,1.2,cl((t-0.8)*3));bigText('GİREMİYORDU',W/2,360,120,'#fff',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 4 yardım gemileri
+shot(4,4,t=>{x.fillStyle=grad(0,H,['#6a7fa0','#d7c7a8']);x.fillRect(0,0,W,H);walls(900,'#6a5a4a',0.7);x.fillStyle='#2f6f8a';x.fillRect(0,900,W,H);waves(910,t,'#2a6580',10);for(let i=0;i<4;i++)ship(-100+t*200+i*170,1080+(i%2)*60,0.45,0);bigText('YARDIM GELDİ',W/2,360,120,'#ff9d8a',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 5 sultan mehmed
+shot(5,5,t=>{paper(true);rays(540,800,t,'rgba(201,162,74,0.1)');sultan(540,800,125,{robe:'#2a7d74',brow:0.6,look:0.3});bigText('SULTAN MEHMED',W/2,340,110,'#ffd23f',1);bigText('imkânsız bir karar',W/2,470,70,'#fff',eOut(cl((t-0.5)*3)));vignette(0.5);});
+// 6 karadan geçecek
+shot(6,6,t=>{paper(true);ship(540,900,1.0,Math.sin(t*3)*0.05);x.fillStyle='#4a6a2e';x.fillRect(150,920,780,40);bigText('KARADAN',W/2,360,150,'#ffd23f',1);bigText('GEÇECEK!',W/2,510,120,'#fff',eOut(cl(t*4)));vignette(0.5);});
+// 7 yol
+shot(7,7,t=>{x.fillStyle=grad(0,H,['#9fd0e8','#f2e6c8']);x.fillRect(0,0,W,H);hill(t,false);const n=Math.floor(cl(t/2.8)*24);x.strokeStyle='#8a6a3a';x.lineWidth=60;x.beginPath();for(let i=0;i<=n;i++){const [px,py]=hillPt(i/24);i?x.lineTo(px,py+40):x.moveTo(px,py+40);}x.stroke();bigText('KALAS YOL',W/2,340,130,'#2b1d12',0);bigText('KALASTAN YOL',W/2,340,120,'#ffd23f',1);});
+// 8 yağlandı
+shot(8,8,t=>{paper(false);for(let i=0;i<5;i++){x.fillStyle='#8a6a3a';rr(140,640+i*110,800,70,12);x.fill();}const r=rng(3);for(let i=0;i<12;i++){x.fillStyle='rgba(230,190,60,0.85)';const yy=520+((t*300+r()*600)%600);x.beginPath();x.ellipse(200+r()*680,yy,10,16,0,0,7);x.fill();}bigText('YAĞLANDI',W/2,380,140,'#ffd23f',1);vignette(0.4);});
+// 9 çekildi
+shot(9,9,t=>{x.fillStyle=grad(0,H,['#f2a65a','#f6dcae']);x.fillRect(0,0,W,H);hill(t,true);boatsOnHill(t,0.15);for(let i=0;i<6;i++){const [px,py]=hillPt(((t*0.15+0.12+i*0.02)%1));sil(px,py+40,0.35,'#2b1d12');}bigText('ÇEKİLDİ',W/2,360,140,'#fff',1);});
+// 10 22 nisan sabahı
+shot(10,10,t=>{x.fillStyle=grad(0,H,['#f6c27a','#fde8c0']);x.fillRect(0,0,W,H);sun(540,1000,70);walls(1180,'#4a3a2a',1);for(let i=0;i<5;i++)sil(140+i*200,1180-260,0.6,'#1b120c');bigText('22 NİSAN',W/2,360,140,'#ffd23f',1);bigText('SABAH',W/2,500,90,'#fff',eOut(cl((t-0.5)*3)));});
+// 11 haliçte
+shot(11,11,t=>{x.fillStyle=grad(0,H,['#9fd0e8','#f2e6c8']);x.fillRect(0,0,W,H);x.fillStyle='#2f6f8a';x.fillRect(0,700,W,H);waves(710,t,'#2a6580',8);chainLine(760,t,'#5a6068');const n=Math.min(9,1+Math.floor(t*4));for(let i=0;i<n;i++)ship(140+(i%3)*400,900+Math.floor(i/3)*110,0.4,Math.sin(t*2+i)*0.04);bigText("HALİÇ'TE!",W/2,360,150,'#ffd23f',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 12 yeni cephe
+shot(12,12,t=>{paper(true);walls(1100,'rgba(201,162,74,0.6)',0.9);const r=rng(4);for(let i=0;i<4;i++)ship(180+i*240,1060,0.3,0);x.strokeStyle='#c1121f';x.lineWidth=10;x.setLineDash([24,16]);x.beginPath();x.moveTo(80,820);x.lineTo(1000,820);x.stroke();x.setLineDash([]);bigText('YENİ BİR CEPHE',W/2,380,110,'#ff6b5a',1);vignette(0.5);});
+// 13 fetih
+shot(13,13,t=>{x.fillStyle=grad(0,H,['#f2b36a','#f6dcae']);x.fillRect(0,0,W,H);skylineIst(1180,'#2b1d12');rays(540,700,t,'rgba(255,230,160,0.2)');bigText('37 GÜN SONRA',W/2,360,110,'#fff',1);bigText('FETİH',W/2,520,150,'#ffd23f',eOut(cl((t-0.8)*3)));});
+// 14 soru
+shot(14,14,t=>{nightBg();hill(t,true);boatsOnHill(t,0.1);frameText(['Sen surlarda olsan','ne düşünürdün?'],620,t,eOut(cl(t*3)));});
+shot(15,17,t=>cta(t));
