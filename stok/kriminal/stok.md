@@ -1,0 +1,3 @@
+# Kriminal Hikayeler — stok (ses: Emrullah QftNgZhlSOYKrYbk7WR7, beğen/takip kapanışlı; filigran @kriminalhikayeler; yapay zekâ beyanı planlamada AÇILACAK)
+NN | konu | süre | TikTok başlığı | açıklama | YouTube başlığı | YT etiketleri | kaynaklar
+01 | Victor Lustig ve Eyfel Kulesi'nin "satışı" (1925) | 57 sn | Eyfel Kulesi'ni satan adam 🗼 | Bir adam Eyfel Kulesi'ni sattı, üstelik iki kez satmaya kalktı 🗼 Sen olsan bu teklife inanır mıydın? 👇 #victorlustig #eyfelkulesi #dolandırıcılık #suçdosyası #tarih #paris #keşfet #fyp | Eyfel Kulesi'ni iki kez satmaya kalkan dolandırıcı 🗼 #shorts | victor lustig, eyfel kulesi, dolandırıcılık, paris, suç tarihi, shorts | Wikipedia (Victor Lustig); Smithsonian Magazine – The Smoothest Con Man That Ever Lived
