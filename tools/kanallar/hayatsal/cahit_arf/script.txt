@@ -1,0 +1,22 @@
+[intense] Savaştan kaçan bir ailenin utangaç çocuğuydu.
+Yıllar sonra portresi, on liralık banknota basıldı. || Yıllar sonra portresi, 10 liralık banknota basıldı.
+
+[serious] Cahit Arf, bin dokuz yüz onda Selanik'te doğdu. || Cahit Arf, 1910'da Selanik'te doğdu.
+İki yaşındayken Balkan Savaşı başladı, ailesi göç etmek zorunda kaldı. || 2 yaşındayken Balkan Savaşı başladı, ailesi göç etmek zorunda kaldı.
+Sık sık taşındılar. Okulda kimseyle oynamayan, içine kapanık bir çocuktu.
+[lower, thoughtful] İzmir'de bir öğretmeni, ona geometri problemleri verdi.
+Matematik aşkı, işte o sorularla başladı.
+
+[serious] Babasının biriktirdiği Fransız frangıyla Paris'e okumaya gitti.
+Para bitince döndü, Galatasaray Lisesi'nde öğretmenlik yaptı.
+[dry humor] Yerine girdiği Fransız öğretmen altı yüz lira alırken, ona altmış lira veriliyordu. || Yerine girdiği Fransız öğretmen 600 lira alırken, ona 60 lira veriliyordu.
+
+[intense] Bin dokuz yüz otuz yedide Almanya'ya, Göttingen'e gitti. Doktorasını yaklaşık bir yılda bitirdi. || 1937'de Almanya'ya, Göttingen'e gitti. Doktorasını yaklaşık 1 yılda bitirdi.
+Orada yaptığı keşif, bugün dünyada onun adıyla anılıyor: Arf değişmezi.
+[excited] Türkiye'de TÜBİTAK'ın kuruluşunda görev aldı.
+İki bin dokuzda portresi, on liralık banknotun arkasına basıldı. || 2009'da portresi, 10 liralık banknotun arkasına basıldı.
+
+[softly] Sence bir öğretmenin tek bir sorusu, bir hayatı değiştirebilir mi?
+Yorumlara yaz.
+Ve bu tür hikâyeleri kaçırmamak için,
+videoyu beğenmeyi ve takip etmeyi unutma.
