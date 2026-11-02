@@ -34,15 +34,21 @@ def tts():
     text = tts_text()
     json.dump({'text': text, 'model_id': 'eleven_v4'}, open(f'{D}/req.json', 'w'), ensure_ascii=False)
     body = json.dumps({'text': text, 'model_id': 'eleven_v4'}).encode()
-    for attempt in range(2):
+    quota_hits = 0
+    for attempt in range(6):
         r = urllib.request.Request('https://api.elevenlabs.io/v1/text-to-speech/QftNgZhlSOYKrYbk7WR7/with-timestamps?output_format=mp3_44100_128', data=body, headers={'xi-api-key': key, 'Content-Type': 'application/json'})
         try:
             d = json.load(urllib.request.urlopen(r, timeout=300)); break
         except urllib.error.HTTPError as e:
             msg = e.read()[:400].decode('utf-8', 'ignore'); print('HTTP', e.code, msg)
-            if attempt == 0: time.sleep(20); continue
-            if e.code in (401, 402, 429) or 'quota' in msg.lower(): sys.exit(3)
-            sys.exit(4)
+            if e.code in (401, 402) or 'quota' in msg.lower() or 'credit' in msg.lower():
+                quota_hits += 1
+                if quota_hits >= 2: sys.exit(3)
+            time.sleep(30)
+        except Exception as e:
+            print('ERR', e); time.sleep(20)
+    else:
+        sys.exit(3)
     open(f'{D}/voice.mp3', 'wb').write(base64.b64decode(d['audio_base64']))
     json.dump({'text': text, 'alignment': d['alignment']}, open(f'{D}/align.json', 'w'), ensure_ascii=False)
 
@@ -92,7 +98,7 @@ def build():
         parts += [common, osm, rd(f'{R}/osmanlisal/osm_extra.js.txt')]
     else:
         parts += [common]
-    parts += [rd(f'{R}/ortak/extra.js.txt'), rd(f'{R}/ortak/bio.js.txt'), rd(f'{R}/ortak/krim.js.txt'), rd('/home/claude/ttvideolar/tools/kanallar/ortak/plus.js.txt'), rd(f'{D}/scenes.js.txt')]
+    parts += [rd(f'{R}/ortak/extra.js.txt'), rd(f'{R}/ortak/bio.js.txt'), rd(f'{R}/ortak/krim.js.txt'), rd(f'{R}/ortak/plus.js.txt'), rd(f'{D}/scenes.js.txt')]
     tail = """
 window.SCENES=S.map(s=>s.d);window.G0=S.map(s=>s.g0);
 window.draw=function(i,t){x.setTransform(1,0,0,1,0,0);x.globalAlpha=1;x.setLineDash([]);x.lineCap='round';S[i].f(t);karaoke(S[i].g0+t);watermark();};

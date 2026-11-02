@@ -1,0 +1,3 @@
+# İslamik Hikayeler — stok (ses: Emrullah QftNgZhlSOYKrYbk7WR7, beğen/takip kapanışlı; filigran @islamikhikayeler; yapay zekâ beyanı planlamada AÇILACAK)
+NN | konu | süre | TikTok başlığı | açıklama | YouTube başlığı | YT etiketleri | kaynaklar
+01 | Hz. İbrahim ve ateş | 57 sn | Ateşe atıldı ama ateş onu yakmadı 🔥 | Putları kıran genç, dev bir ateşe atıldı. Ama ateşe bir emir geldi 🔥 Sen en zor anında kime güvenirsin? 👇 Kaynak: Enbiya Suresi 51-70 #kuran #kıssa #islam #hzibrahim #peygamberkıssaları #keşfet #fyp | Hz. İbrahim ve onu yakmayan ateş 🔥 #shorts | kuran, kıssa, hz ibrahim, enbiya suresi, islam, peygamber kıssaları, shorts | Kur'an, Enbiya 51-70 (Diyanet meali)

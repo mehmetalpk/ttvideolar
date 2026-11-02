@@ -1,0 +1,26 @@
+function idol(cx,base,s,col,br=0){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;if(br<=0){rr(-60,-300,120,300,20);x.fill();x.beginPath();x.ellipse(0,-320,55,60,0,0,7);x.fill();x.fillRect(-80,-20,160,20);x.strokeStyle='rgba(0,0,0,0.3)';x.lineWidth=6;for(let i=0;i<4;i++){x.beginPath();x.moveTo(-50,-240+i*55);x.lineTo(50,-240+i*55);x.stroke();}}else{const r=rng(cx|0);for(let i=0;i<6;i++){x.save();x.translate((r()-0.5)*260*br,-20-r()*60*(1-br));x.rotate((r()-0.5)*2*br);rr(-40,-50,80,70,12);x.fill();x.restore();}}x.restore();}
+function temple(){x.fillStyle=grad(0,H,['#2a1e16','#120c08']);x.fillRect(0,0,W,H);x.fillStyle='#3a2a1e';for(let i=0;i<5;i++)x.fillRect(80+i*220,420,60,760);x.fillRect(40,380,1000,50);ground(1180,'#1a120c');}
+function blaze(t,a=1){x.fillStyle=grad(0,H,['#1a0a05','#3a1208']);x.fillRect(0,0,W,H);spot(540,1000,700,0.5*a,'255,140,40');fire(540,1180,1000,700,t,a);fire(540,1180,700,520,t+1,a);}
+function cool(t,k){const g=x.createRadialGradient(540,900,20,540,900,420*k);g.addColorStop(0,'rgba(170,230,255,0.9)');g.addColorStop(1,'rgba(120,200,255,0)');x.fillStyle=g;x.beginPath();x.arc(540,900,Math.max(2,420*k),0,7);x.fill();}
+function garden(t){x.fillStyle=grad(0,H,['#1f6b5e','#0b2a24']);x.fillRect(0,0,W,H);for(let i=0;i<7;i++)tree(80+i*155,1180,0.9+(i%2)*0.2,t,i%2?'#ffd23f':null);ground(1180,'#0f3a30');}
+shot(0,0,t=>{zoomed(1+t*0.03,()=>{blaze(t);orb(540,880,230,t);orb(540,880,120,t);});bigText('ATEŞ',W/2,380,190,'#ffd23f',1);bigText('ONU YAKMADI',W/2,560,100,'#fff',1);});
+shot(1,1,t=>{temple();spot(540,800,500,0.3);for(let i=0;i<5;i++)idol(160+i*190,1180,i===2?1.5:1.0,'#6b5a48');orb(540,1350-200,110,t);bigText('HZ. İBRAHİM',W/2,380,120,'#ffd23f',eOut(cl(t*3)));});
+shot(2,2,t=>{temple();for(let i=0;i<5;i++)idol(160+i*190,1180,1.0,'#6b5a48');for(let i=0;i<7;i++)sil(120+i*140,1260,0.6,'#0a0705');orb(900,1000,90,t);sbubble(540,560,820,150,t<2.4?'BU HEYKELLER NE?':'NEDEN TAPIYORSUNUZ?',eOut(cl(t*3)),58);});
+shot(3,3,t=>{sepia();for(let i=0;i<9;i++)sil(80+i*115,1180,0.7+(i%3)*0.08,'#1a120a');idol(540,900,1.0,'#6b5a48');bigText('ATALARIMIZ',W/2,380,120,'#fff',1);bigText('BÖYLE YAPARDI',W/2,530,90,'#ffd23f',eOut(cl((t-0.6)*3)));vignette();});
+shot(4,4,t=>{temple();for(let i=0;i<5;i++)idol(160+i*190,1180,i===2?1.5:1.0,'#6b5a48');for(let i=0;i<6;i++)sil(300+i*130+t*400,1300,0.6,'#0a0705');bigText('TAPINAK BOŞ',W/2,380,120,'#fff',1);});
+shot(5,5,t=>{temple();const b=eOut(cl(t*1.5));for(let i=0;i<5;i++)idol(160+i*190,1180,i===2?1.5:1.0,'#6b5a48',i===2?0:b);if(t<0.3){x.fillStyle='rgba(255,255,255,0.4)';x.fillRect(0,0,W,H);}orb(540,700,90,t);bigText('PARAMPARÇA',W/2,380,130,'#ff9d5a',1);});
+shot(6,6,t=>{temple();spot(540,850,400,0.4);for(let i=0;i<5;i++)idol(160+i*190,1180,i===2?1.5:1.0,'#6b5a48',i===2?0:1);bigText('EN BÜYÜĞÜ',W/2,380,130,'#ffd23f',1);bigText('KALDI',W/2,530,100,'#fff',eOut(cl((t-0.5)*3)));});
+shot(7,7,t=>{temple();for(let i=0;i<5;i++)idol(160+i*190,1180,i===2?1.5:1.0,'#6b5a48',i===2?0:1);for(let i=0;i<8;i++)sil(100+i*125,1300,0.7,'#0a0705');sbubble(540,560,700,150,'KİM YAPTI?',eOut(cl(t*3)),80);});
+shot(8,8,t=>{bgGreen();orb(540,850,200,t);rays(540,850,t,'rgba(255,230,160,0.08)');bigText('BİR GENÇ',W/2,380,130,'#fff',1);bigText('İBRAHİM',W/2,530,110,'#ffd23f',eOut(cl((t-0.4)*3)));vignette();});
+shot(9,9,t=>{temple();orb(540,900,150,t);for(let i=0;i<4;i++){sil(130+i*90,1300,0.7,'#0a0705');sil(950-i*90,1300,0.7,'#0a0705');}sbubble(540,560,760,150,'SEN Mİ YAPTIN?',eOut(cl(t*3)),70);});
+shot(10,10,t=>{temple();spot(540,850,400,0.4);idol(540,1180,1.6,'#6b5a48');orb(880,1000,90,t);x.strokeStyle='#ffd23f';x.lineWidth=10;x.beginPath();x.moveTo(800,980);x.lineTo(640+Math.sin(t*4)*10,800);x.stroke();bigText('BÜYÜKLERİ',W/2,380,130,'#ffd23f',1);bigText('YAPMIŞ OLMALI',W/2,530,90,'#fff',eOut(cl((t-0.5)*3)));});
+shot(11,11,t=>{temple();idol(540,1180,1.6,'#6b5a48');sbubble(540,560,720,150,'SORUN ONA!',eOut(cl(t*3)),76);x.save();x.globalAlpha=0.6+0.4*Math.sin(t*5);bigText('...',W/2,860,110,'#fff',1);x.restore();});
+shot(12,12,t=>{dark();for(let i=0;i<9;i++)sil(80+i*115,1180,0.8,'#1a1a24');spot(540,900,500,0.15);bigText('BİR AN',W/2,380,130,'#fff',1);bigText('DÜŞÜNDÜLER',W/2,530,100,'#8fd8ff',eOut(cl((t-0.4)*3)));});
+shot(13,13,t=>{temple();idol(540,1180,1.6,'#6b5a48');stampT('KONUŞMAZ',540,900,(t-0.8)*3,'#c1121f',110);bigText('SEN BİLİYORSUN',W/2,380,110,'#fff',1);});
+shot(14,14,t=>{x.fillStyle=grad(0,H,['#2a0a05','#120402']);x.fillRect(0,0,W,H);fire(540,1180,1000,300+t*80,t,0.7);for(let i=0;i<9;i++)sil(80+i*115,1180,0.8,'#000');bigText('YAKIN ONU!',W/2,380,140,'#ff3b3b',1);});
+shot(15,15,t=>{zoomed(1+t*0.05,()=>{blaze(t);});bigText('BÜYÜK ATEŞ',W/2,380,140,'#ffd23f',1);});
+shot(16,16,t=>{blaze(t,0.8);rays(540,0,t,'rgba(255,255,255,0.12)');orb(540,880,150,t);bigText('ALLAH BUYURDU',W/2,380,110,'#fff',eOut(cl(t*3)));});
+shot(17,17,t=>{const k=eOut(cl(t/1.5));blaze(t,1-k*0.8);cool(t,k);orb(540,880,170,t);frameText(['Ey ateş!','Serin ve esenlik ol'],460,t,eOut(cl(t*3)));});
+shot(18,18,t=>{garden(t);orb(540,900,170,t);rays(540,900,t,'rgba(255,240,180,0.1)');bigText('TUZAK BOZULDU',W/2,380,110,'#ffd23f',1);});
+shot(19,19,t=>{bgNight();crescent(540,520,110,GO);mosque(540,1180,0.9,'#0b0e22');vignette();frameText(['En zor anında','kime güvenirsin?'],900,t,eOut(cl(t*3)));});
+shot(20,22,t=>cta(t));
