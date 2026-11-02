@@ -1,0 +1,37 @@
+function interior(t,glow=0){x.fillStyle=grad(0,H,['#1a1430','#2a1f3a']);x.fillRect(0,0,W,H);x.fillStyle='#3a2c4a';for(let i=0;i<3;i++){const cx=180+i*360;x.fillRect(cx-120,560,40,620);x.fillRect(cx+80,560,40,620);x.beginPath();x.moveTo(cx-120,560);x.quadraticCurveTo(cx,380,cx+120,560);x.lineTo(cx+80,560);x.quadraticCurveTo(cx,440,cx-80,560);x.fill();}for(let i=0;i<5;i++)lantern(140+i*200,620,t+i);x.fillStyle='#5a2a2a';x.fillRect(0,1120,W,60);if(glow>0){orb(540,820,380*glow,t);rays(540,820,t,`rgba(255,230,160,${0.12*glow})`);}}
+function rowsSil(n,base,col){for(let r=0;r<2;r++)for(let i=0;i<n;i++)sil(110+i*(860/(n-1))+r*40,base+r*50,0.75,col);}
+function books(n,t){for(let i=0;i<n;i++){const h=300+(i%3)*20;x.fillStyle=[PAL.red,PAL.navy,PAL.teal,'#5a3a22'][i%4];x.fillRect(140+i*82,1150-h,70,h);x.fillStyle=PAL.gold;x.fillRect(140+i*82,1150-h+30,70,10);x.fillRect(140+i*82,1150-40,70,10);}}
+function worldMap(t,p){paper(false);x.fillStyle='rgba(90,110,70,0.55)';[[300,700,200,140],[560,640,150,110],[640,820,180,150],[820,700,160,120],[460,900,120,170]].forEach(([a,b,c,d])=>{x.beginPath();x.ellipse(a,b,c,d,0.3,0,7);x.fill();});const pts=[[540,720],[420,640],[300,760],[520,860],[700,800],[860,680],[640,960],[480,1000]];x.strokeStyle='#c1121f';x.lineWidth=8;x.setLineDash([18,12]);x.beginPath();const n=Math.floor(p*(pts.length-1));for(let i=0;i<=n;i++){i?x.lineTo(...pts[i]):x.moveTo(...pts[i]);}x.stroke();x.setLineDash([]);for(let i=0;i<=n;i++){x.fillStyle=PAL.red;x.beginPath();x.arc(...pts[i],14,0,7);x.fill();}}
+// 0 hook
+shot(0,0,t=>{interior(t,0.5);x.save();x.globalAlpha=0.9;bigText('ŞEFAAT',W/2,720,120,'#fff',1);x.restore();stampX(540,720,1.4,1);bigText('BİR SÜRÇME',W/2,340,120,'#ffd23f',1);bigText('SEYAHAT!',W/2,940,140,'#ffd23f',1);});
+// 1 1630
+shot(1,1,t=>{paper(false);skylineIst(1180,'rgba(43,29,18,0.85)');bigText('1630',W/2,700,250,'#ffd23f',eOut(cl(t*3)));bigText('İSTANBUL',W/2,380,90,'#fff',1);vignette(0.4);});
+// 2 evliya, aşure gecesi
+shot(2,2,t=>{x.fillStyle=grad(0,H,['#0a0e24','#252a50']);x.fillRect(0,0,W,H);crescent(880,700,60,'#f3e6c4');townsman(540,860,115,{robe:PAL.teal,eyeOpen:t>1.5?0.05:1,cap:'#f3e6c4'});bigText('EVLİYA ÇELEBİ',W/2,360,110,'#ffd23f',1);bigText('19 yaşında',W/2,490,70,'#fff',eOut(cl((t-0.5)*3)));vignette(0.5);});
+// 3 ahi çelebi camii
+shot(3,3,t=>{x.fillStyle=grad(0,H,['#1a1f45','#4a3a5a']);x.fillRect(0,0,W,H);mosque(540,1080,0.9,'#0b0e22');x.fillStyle='#1e3c50';x.fillRect(0,1080,W,100);waves(1086,t,'#24486a',6);for(let i=0;i<3;i++)ship(180+i*340+Math.sin(t+i)*10,1110,0.18,0);bigText('AHİ ÇELEBİ CAMİİ',W/2,360,96,'#ffd23f',1);bigText('Yemiş İskelesi',W/2,490,70,'#fff',eOut(cl((t-0.6)*3)));});
+// 4 cemaat
+shot(4,4,t=>{interior(t,0.25);rowsSil(7,1150,'rgba(20,14,30,0.95)');bigText('NURLU CEMAAT',W/2,360,110,'#ffd23f',1);});
+// 5 nur
+shot(5,5,t=>{interior(t,eOut(cl(t*1.2)));bigText('RÜYASINDA',W/2,360,120,'#fff',1);});
+// 6 şefaat dileyecekti
+shot(6,6,t=>{interior(t,0.7);x.save();x.translate(540,1150);sil(0,0,1.7,'#0b0712');x.restore();bigText('ŞEFAAT',W/2,360,130,'#ffd23f',1);bigText('dileyecekti',W/2,490,74,'#fff',eOut(cl((t-0.5)*3)));});
+// 7 dili sürçtü
+shot(7,7,t=>{paper(true);townsman(540+Math.sin(t*30)*4*cl(1-t),860,115,{robe:PAL.teal,mouthOpen:0.6,brow:1,cap:'#f3e6c4'});bigText('DİLİ SÜRÇTÜ',W/2,360,120,'#ff6b5a',1);vignette(0.5);});
+// 8 şefaat -> seyahat
+shot(8,8,t=>{interior(t,0.6);bigText('ŞEFAAT',W/2,600,120,'#fff',1);stampX(540,600,1.3,cl((t-0.4)*3));bigText('SEYAHAT',W/2,860,150,'#ffd23f',eOut(cl((t-1)*3)));bigText('ya Resulallah',W/2,1020,70,'#fff',eOut(cl((t-1.4)*3)));});
+// 9 tebessüm
+shot(9,9,t=>{interior(t,1);bigText('TEBESSÜM',W/2,360,130,'#ffd23f',1);});
+// 10 üç müjde
+shot(10,10,t=>{interior(t,0.6);['ŞEFAAT','SEYAHAT','ZİYARET'].forEach((w,i)=>badge(540,620+i*190,w,[PAL.teal,PAL.red,PAL.navy][i],(t-i*0.8)*3));bigText('3 MÜJDE',W/2,380,130,'#ffd23f',1);});
+// 11 şeyh yorumladı
+shot(11,11,t=>{paper(true);townsman(330,860,95,{robe:PAL.teal,cap:'#f3e6c4'});x.save();x.translate(760,860);body(0,95,285,475,'#3a2a1a');face(0,0,95,{skin:'#e3ab84',hair:'#ddd',beard:'#ddd',mustache:'#ddd',eyeOpen:0.6,smile:0.6});x.fillStyle='#e8dcc0';x.beginPath();x.moveTo(-60,-60);x.lineTo(60,-60);x.lineTo(45,-250);x.quadraticCurveTo(0,-275,-45,-250);x.closePath();x.fill();x.restore();bigText('RÜYA TABİRİ',W/2,360,120,'#ffd23f',1);vignette(0.5);});
+// 12 önce istanbul
+shot(12,12,t=>{x.fillStyle=grad(0,H,['#f2b36a','#f6dcae']);x.fillRect(0,0,W,H);skylineIst(1180,'#2b1d12');scroll(540,760,0.8,eOut(cl(t*2)),'İSTANBUL');bigText('ÖNCE İSTANBUL',W/2,360,120,'#fff',1);});
+// 13 40 yıl
+shot(13,13,t=>{worldMap(t,cl(t/2.6));bigText('40+ YIL',W/2,360,150,'#ffd23f',1);vignette(0.3);});
+// 14 10 cilt
+shot(14,14,t=>{paper(true);books(Math.min(10,1+Math.floor(t*4)),t);bigText('10 CİLT',W/2,360,150,'#ffd23f',1);bigText('SEYAHATNÂME',W/2,500,90,'#fff',eOut(cl((t-1)*3)));vignette(0.5);});
+// 15 soru
+shot(15,15,t=>{x.fillStyle=grad(0,H,['#0a0e24','#252a50']);x.fillRect(0,0,W,H);crescent(820,1000,70,'#f3e6c4');frameText(['Bir rüya bir hayatı','değiştirebilir mi?'],620,t,eOut(cl(t*3)));});
+shot(16,18,t=>cta(t));

@@ -6,3 +6,4 @@ NN | konu | süre | TikTok başlığı | açıklama | YouTube başlığı | YT e
 |
 |
 |
+|
