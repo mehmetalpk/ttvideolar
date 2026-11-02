@@ -1,4 +1,5 @@
 # Psikolojik Hikayeler — stok (ses: İrem, sonu beğen/takip kapanışlı; yapay zekâ beyanı planlamada açılacak)
+(01–03 planlandı: 02.11–04.11, Metricool brand 7824666 — mp4ler silindi)
 NN | konu | süre | TikTok başlığı | açıklama | YouTube başlığı | YT etiketleri | kaynak
 01 | Kapı etkisi | 46 sn | Odaya girip neden geldiğini unutuyorsan sebebi bu 🚪 | Bir odaya girdin ve neden geldiğini unuttun mu? Suçlu sen değilsin, kapı 🚪 Sen de yaşadın mı? 👇 #psikoloji #kapıetkisi #hafıza #beyin #bilgi #keşfet #fyp | Odaya girince neden unutuyoruz? Kapı etkisi 🚪 | psikoloji, kapı etkisi, hafıza, beyin, bilgi, shorts | Radvansky ve ark. 2011 (Notre Dame)
 02 | Kulak kurdu | 52 sn | Kafandan çıkmayan şarkının sırrı 🎵 | Sevmediğin bir şarkı bütün gün kafanda mı çalıyor? Bilim bir çözüm buldu: sakız 🎵 Kafana en son hangi şarkı takıldı? 👇 #psikoloji #kulakkurdu #müzik #beyin #bilgi #keşfet #fyp | Kafana takılan şarkıdan kurtulmanın yolu 🎵 Kulak kurdu | psikoloji, kulak kurdu, earworm, müzik, beyin, shorts | Beaman ve ark. 2015, Quarterly Journal of Experimental Psychology (Reading Üniv.)
