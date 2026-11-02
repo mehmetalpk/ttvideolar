@@ -1,0 +1,34 @@
+function mapBg(t,canal=0,labels=true){paper(false);x.save();x.translate(0,90);x.fillStyle='#3f7d9a';x.beginPath();x.ellipse(260,1050,240,140,0,0,7);x.fill();x.beginPath();x.ellipse(880,980,130,230,0.1,0,7);x.fill();x.strokeStyle='#3f7d9a';x.lineWidth=16;x.lineCap='round';x.beginPath();x.moveTo(150,560);x.quadraticCurveTo(300,640,470,700);x.quadraticCurveTo(420,860,330,920);x.stroke();x.beginPath();x.moveTo(800,520);x.quadraticCurveTo(640,620,560,700);x.quadraticCurveTo(700,800,840,780);x.stroke();
+ if(canal>0){x.strokeStyle='#c1121f';x.lineWidth=14;x.setLineDash([22,14]);x.beginPath();x.moveTo(475,700);x.lineTo(475+80*cl(canal),700);x.stroke();x.setLineDash([]);}
+ if(labels){x.fillStyle=PAL.ink;x.font=`800 40px ${F}`;x.textAlign='center';x.fillText('KARADENİZ',260,1060);x.fillText('HAZAR',880,990);x.fillText('DON',300,610);x.fillText('VOLGA',730,560);}x.restore();}
+function shovelers(n,base,t,col='#2b1d12'){for(let i=0;i<n;i++){const cx=80+i*(W-160)/(n-1),a=Math.sin(t*6+i)*0.6;sil(cx,base,0.7,col);x.save();x.translate(cx+20,base-100);x.rotate(a);x.strokeStyle='#5a3a1a';x.lineWidth=8;x.beginPath();x.moveTo(0,0);x.lineTo(40,90);x.stroke();x.fillStyle='#777';x.fillRect(30,85,26,22);x.restore();}}
+function steppe(t,col1='#d8c48a',col2='#b89a5a'){x.fillStyle=grad(0,H,['#a8c4d8','#efe2c2']);x.fillRect(0,0,W,H);x.fillStyle=col1;x.fillRect(0,950,W,H);x.fillStyle=col2;x.beginPath();x.moveTo(0,1000);x.quadraticCurveTo(540,930,W,1000);x.lineTo(W,H);x.lineTo(0,H);x.fill();}
+// 0 hook
+shot(0,0,t=>{mapBg(t,0.2+t*0.3);bigText('İKİ DENİZE',W/2,340,130,'#ffd23f',1);bigText('BİR KANAL',W/2,480,120,'#fff',1);vignette(0.4);});
+// 1 1569 sokullu
+shot(1,1,t=>{paper(true);sultan(540,840,115,{robe:'#1f2a44'});bigText('1569',W/2,340,150,'#ffd23f',1);bigText('SOKULLU MEHMED PAŞA',W/2,490,72,'#fff',eOut(cl((t-0.8)*3)));vignette(0.5);});
+// 2 don volga
+shot(2,2,t=>{mapBg(t,eOut(cl((t-1.2)/1.5)));bigText('DON + VOLGA',W/2,360,120,'#ffd23f',1);vignette(0.3);});
+// 3 karadeniz-hazar
+shot(3,3,t=>{mapBg(t,1);const u=cl(t/3.2);const pts=[[260,1050],[330,920],[470,700],[555,700],[700,800],[860,960]];const seg=u*(pts.length-1),k=Math.floor(seg),f=seg-k;const a=pts[Math.min(k,pts.length-1)],b=pts[Math.min(k+1,pts.length-1)];ship(a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f+70,0.22,0);bigText('KARADENİZ → HAZAR',W/2,360,86,'#ffd23f',1);});
+// 4 iran/ticaret/hac
+shot(4,4,t=>{paper(true);const L=[['İRAN CEPHESİ','#c1121f'],['TİCARET YOLU','#2a7d74'],['HAC YOLU','#c9a24a']];L.forEach((l,i)=>badge(540,650+i*190,l[0],l[1],(t-i*1.4)*3));bigText('NEDEN?',W/2,380,150,'#ffd23f',1);vignette(0.5);});
+// 5 kazı
+shot(5,5,t=>{steppe(t);x.fillStyle='#6a4a2a';x.fillRect(0,1080,W*cl(t/3),70);shovelers(7,1060,t);bigText('KAZMALARLA',W/2,360,120,'#2b1d12',0);bigText('BOZKIRDA KAZI',W/2,360,110,'#ffd23f',1);});
+// 6 astrahan
+shot(6,6,t=>{steppe(t,'#c8b47a','#a88a4a');x.fillStyle='#6a5a4a';x.fillRect(240,820,600,180);for(let i=0;i<6;i++)x.fillRect(240+i*110,780,60,60);x.fillStyle='#6a5a4a';x.beginPath();x.arc(540,820,90,Math.PI,0);x.fill();for(let i=0;i<5;i++)janissary(140+i*200,1180,0.45,'#1b120c');bigText('ASTRAHAN',W/2,380,130,'#ffd23f',1);bigText('KUŞATMASI',W/2,520,90,'#fff',eOut(cl((t-0.5)*3)));});
+// 7 ters gitti
+shot(7,7,t=>{paper(false);bigText('AMA...',W/2,800,220,'#c1121f',eOut(cl(t*3)));vignette(0.4);});
+// 8 söylentiler
+shot(8,8,t=>{x.fillStyle=grad(0,H,['#2a3048','#7a8aa0']);x.fillRect(0,0,W,H);snow(t);for(let i=0;i<4;i++)janissary(200+i*230,1180,0.5,'#0d0f1c');bubble(320,760,'KIŞ GELİYOR!',eOut(cl(t*3)));bubble(740,880,'RUSLAR GELİYOR!',eOut(cl((t-1.2)*3)));bigText('SÖYLENTİLER',W/2,380,120,'#fff',1);});
+// 9 geri çekilme, fırtına
+shot(9,9,t=>{if(t<1.4){steppe(t,'#9a8a6a','#7a6a4a');for(let i=0;i<5;i++)janissary(900-i*200-t*120,1180,0.45,'#1b120c');bigText('GERİ ÇEKİLDİ',W/2,370,120,'#fff',1);}else{x.fillStyle=grad(0,H,['#1b2230','#3c4658']);x.fillRect(0,0,W,H);if(Math.floor(t*6)%5===1){x.fillStyle='rgba(255,255,255,0.4)';x.fillRect(0,0,W,H);}waves(900,t*2,'#1e3a52',60,240);ship(400,920,0.7,Math.sin(t*5)*0.25);ship(780,980,0.5,Math.sin(t*4+1)*0.3);waves(1040,t*2+1,'#13283b',70,200);bigText('FIRTINA',W/2,370,150,'#fff',1);}});
+// 10 üçte bir
+shot(10,10,t=>{mapBg(t,0.33,true);x.save();x.translate(540,850);x.fillStyle=PAL.paper;rr(-160,-60,320,120,20);x.fill();x.restore();bigText('1/3 ?',W/2,850,90,'#c1121f',1);bigText('KESİN DEĞİL',W/2,360,120,'#ffd23f',1);vignette(0.3);});
+// 11 383 yıl sonra
+shot(11,11,t=>{paper(true);const yr=Math.round(1569+eOut(cl(t/3))*(1952-1569));bigText(String(yr),W/2,760,230,'#ffd23f',1);bigText('383 YIL SONRA',W/2,380,110,'#fff',1);vignette(0.6);});
+// 12 sovyet kanal
+shot(12,12,t=>{x.fillStyle=grad(0,H,['#8ab4d8','#e8eef2']);x.fillRect(0,0,W,H);x.fillStyle='#6a7a5a';x.fillRect(0,850,W,330);x.fillStyle='#3f7d9a';x.fillRect(0,960,W,120);waves(965,t,'#3a7090',6);x.fillStyle='#8a8f98';x.fillRect(420,860,60,220);x.fillRect(600,860,60,220);ship(t*300-100,1000,0.45,0);bigText('VOLGA-DON',W/2,360,120,'#ffd23f',1);bigText('KANALI • 1952',W/2,500,90,'#fff',eOut(cl((t-0.5)*3)));});
+// 13 soru
+shot(13,13,t=>{mapBg(t,1);frameText(['Açılsaydı tarih','nasıl değişirdi?'],430,t,eOut(cl(t*3)));});
+shot(14,16,t=>cta(t));
