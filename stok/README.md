@@ -8,4 +8,4 @@ Her kanal klasöründe: `<NN>_<konu>.mp4` + `stok.md` (sıra, başlık, süre, a
 - Osmanlısal: Kahve yasağı (IV. Murat), Lale Devri, Karakoncolos
 - Psikolojik: Kapı etkisi, Kulak kurdu, Zeigarnik etkisi
 - Sporsal: İstanbul 2005 (Liverpool-Milan), Hakan Şükür 11 saniye, Naim Süleymanoğlu, Kimi Antonelli 2026 şampiyonluğu
-- Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni
+- Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni, Mona Lisa hırsızlığı, Michelangelo Davut
