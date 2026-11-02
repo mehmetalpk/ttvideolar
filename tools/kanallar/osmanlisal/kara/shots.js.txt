@@ -1,0 +1,45 @@
+const S=[];const T=PH.map(p=>p[0]);function shot(i,f){S.push({d:T[i+1]-T[i],g0:T[i],f});}
+function darkDoorScene(t){x.fillStyle=grad(0,H,['#05060e','#141a33']);x.fillRect(0,0,W,H);snow(t,60);door(540,1600,1.6,true);const g=x.createRadialGradient(540,1200,30,540,1200,700);g.addColorStop(0,'rgba(80,120,200,0.15)');g.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g;x.fillRect(0,0,W,H);}
+// 0 HOOK
+shot(0,(t)=>{x.fillStyle='#04050c';x.fillRect(0,0,W,H);snow(t,70);const z=1.6+t*0.08;x.save();x.translate(540,1150);x.scale(z,z);x.translate(-540,-1150);beast(540,1450,1.3,t,true);x.restore();vignette(0.7);
+ bigText('Adını seslenirse',W/2,330,90,'#fff',1);bigText('CEVAP VERME',W/2,470,128,'#ffd23f',1);bigText('kışın en soğuk gecesi',W/2,610,72,'#fff',1);});
+// 1 SAKIN
+shot(1,(t)=>{darkDoorScene(t);bigText('SAKIN!',W/2,450,180,'#ff5a5a',prog(t,0,0.2),-0.05);vignette(0.6);});
+// 2 village zemheri
+shot(2,(t)=>{village(t);bigText('ZEMHERİ',W/2,360,140,'#ffd23f',prog(t,0.2,0.5));x.fillStyle='#fff';x.font=`700 52px ${F}`;x.textAlign='center';x.globalAlpha=prog(t,1.2,1.6);x.fillText('kışın en karanlık günleri',W/2,480);x.globalAlpha=1;vignette(0.5);});
+// 3 title
+shot(3,(t)=>{x.fillStyle='#04050c';x.fillRect(0,0,W,H);snow(t,50);beast(540,1550,1.6,t);bigText('KARAKONCOLOS',W/2,420,120,'#ffd23f',prog(t,0,0.25));vignette(0.6);});
+// 4 reveal features
+shot(4,(t)=>{village(t);x.fillStyle='rgba(0,0,10,0.45)';x.fillRect(0,0,W,H);const z=1+t*0.05;x.save();x.translate(540,1500);x.scale(z,z);x.translate(-540,-1500);beast(540,1560,1.5,t);x.restore();
+ [['TÜYLÜ',260,780,0.1],['İRİ',820,820,0.7],['PARLAYAN GÖZLER',W/2,420,1.4]].forEach(([s,cx,cy,st])=>bigText(s,cx,cy,s.length>6?84:96,'#ffd23f',prog(t,st,st+0.25)));vignette(0.6);});
+// 5 Evliya
+shot(5,(t)=>{paper(false);x.save();x.translate(540,950);x.fillStyle='#7a2a1a';rr(-330,-260,660,520,16);x.fill();x.fillStyle='#f3e6c4';rr(-310,-240,300,480,8);x.fill();rr(10,-240,300,480,8);x.fill();x.strokeStyle=PAL.ink;x.lineWidth=4;for(let l=0;l<7;l++){[-290,30].forEach(sx=>{x.beginPath();for(let k=0;k<5;k++){const xx=sx+k*52,yy=-180+l*60;x.moveTo(xx,yy);x.quadraticCurveTo(xx+14,yy-20,xx+30,yy+4);}x.stroke();});}
+ x.strokeStyle='#f6f1e4';x.lineWidth=12;x.beginPath();x.moveTo(250,-60);x.lineTo(420,-360);x.stroke();x.restore();bigText('EVLİYA ÇELEBİ',W/2,330,104,'#ffd23f',prog(t,0.1,0.4));bigText('Seyahatname',W/2,460,76,PAL.ink,prog(t,0.6,0.9));vignette(0.4);});
+// 6 mimics voice
+shot(6,(t)=>{darkDoorScene(t);beast(860,1560,0.9,t);bubble(380,820,'Benim... aç kapıyı',prog(t,0.3,0.6));bigText('SESİNİ TAKLİT EDER',W/2,380,84,'#ffd23f',prog(t,1.2,1.5));vignette(0.6);});
+// 7 calls by name
+shot(7,(t)=>{x.fillStyle=grad(0,H,['#0e1022','#1e2240']);x.fillRect(0,0,W,H);x.fillStyle='#2a2238';rr(140,620,800,820,20);x.fill();x.fillStyle='#d8c7a0';rr(200,700,680,500,10);x.fill();
+ townsman(540,980,120,{robe:'#3a4a6a',cap:'#5b3b28',eyeOpen:1.3,brow:1.2,mouthOpen:0.3,look:0});const sh=Math.sin(t*40)*(t<0.6?8:0);x.save();x.translate(sh,0);bigText('"MEHMET!"',W/2,420,150,'#ff5a5a',prog(t,0,0.2),-0.05);x.restore();vignette(0.6);});
+// 8 followers
+shot(8,(t)=>{x.fillStyle='#e9eef9';x.fillRect(0,0,W,H);x.fillStyle=grad(0,800,['#0b0e1e','rgba(11,14,30,0)']);x.fillRect(0,0,W,900);footprints(t,eOut(prog(t,0,1)));snow(t,60);vignette(0.5);});
+// 9 frozen at dawn (no body shown)
+shot(9,(t)=>{x.fillStyle=grad(0,H,['#6b7fb0','#e9eef9']);x.fillRect(0,0,W,H);footprints(t,1);x.fillStyle='rgba(200,220,255,0.35)';for(let i=0;i<14;i++){x.save();x.translate(540+Math.cos(i)*330,700+Math.sin(i*2)*200);x.rotate(i);x.fillRect(-4,-60,8,120);x.rotate(Math.PI/3);x.fillRect(-4,-60,8,120);x.rotate(Math.PI/3);x.fillRect(-4,-60,8,120);x.restore();}
+ bigText('SABAHA KARŞI...',W/2,380,110,'#1f2a44',prog(t,0.1,0.4));bigText('DONMUŞ',W/2,520,130,'#2a6fd0',prog(t,1.2,1.5));snow(t,40);vignette(0.4);});
+// 10 food at door
+shot(10,(t)=>{darkDoorScene(t);x.save();x.translate(400,1610);x.fillStyle='#8a5a2b';x.beginPath();x.ellipse(0,0,110,30,0,0,7);x.fill();x.fillStyle='#c9a24a';x.beginPath();x.ellipse(0,-20,90,40,0,Math.PI,0);x.fill();x.restore();x.strokeStyle='rgba(255,255,255,0.6)';x.lineWidth=6;for(let k=-1;k<=1;k++){x.beginPath();for(let y=0;y<100;y+=6){const xx=400+k*30+Math.sin(y/20+t*3)*10;y?x.lineTo(xx,1560-y):x.moveTo(xx,1560-y)}x.stroke();}
+ bigText('KAPI ÖNÜNE YİYECEK',W/2,380,88,'#ffd23f',prog(t,0.2,0.5));vignette(0.6);});
+// 11 stay in
+shot(11,(t)=>{x.fillStyle=grad(0,H,['#0e1022','#1e2240']);x.fillRect(0,0,W,H);x.fillStyle='#2a2238';rr(140,640,800,760,20);x.fill();x.fillStyle=`rgba(255,190,90,${0.8+0.2*Math.sin(t*6)})`;rr(220,720,640,440,10);x.fill();
+ [[380,'#8a4f8c'],[700,'#2d3a5a']].forEach(([cx,rb],i)=>townsman(cx,960,90,{robe:rb,cap:'#5b3b28',eyeOpen:1,look:i?-0.6:0.6,sad:0.4}));bigText('DIŞARI ÇIKMA',W/2,400,120,'#ff5a5a',prog(t,0.1,0.35));snow(t,40);vignette(0.6);});
+// 12 AMA
+shot(12,(t)=>{x.fillStyle='#04050c';x.fillRect(0,0,W,H);snow(t,40);bigText('AMA...',W/2,820,220,'#ffd23f',prog(t,0,0.25));bigText('bir yolu daha var',W/2,1000,80,'#fff',prog(t,0.6,0.9));});
+// 13 kara answer
+shot(13,(t)=>{x.fillStyle=grad(0,H,['#05060e','#141a33']);x.fillRect(0,0,W,H);snow(t,60);beast(300,1650,1.1,t);bubble(560,700,'Neredesin?',prog(t,0.1,0.35));
+ const p=prog(t,1.2,1.5);if(p>0){const s=back(p);x.save();x.translate(640,1000);x.scale(s,s);x.font=`800 54px ${F}`;const w1='"KARA kazanın başında!"';const w=x.measureText(w1).width+80;x.fillStyle='#fff';rr(-w/2,-60,w,120,50);x.fill();x.textAlign='center';x.textBaseline='middle';x.fillStyle=PAL.ink;x.fillText(w1,0,4);x.restore();}
+ bigText('"KARA"',W/2,380,170,'#ffd23f',prog(t,2.2,2.5));vignette(0.55);});
+// 14 you hear your name
+shot(14,(t)=>{x.fillStyle='#070915';x.fillRect(0,0,W,H);x.fillStyle='#1e2240';rr(120,1150,840,400,30);x.fill();x.fillStyle='#e9eef9';rr(140,1100,300,120,40);x.fill();townsman(320,1050,90,{robe:'#3a4a6a',cap:'#e9eef9',eyeOpen:1.3,brow:1,look:1});
+ x.save();x.globalAlpha=0.4+0.4*Math.sin(t*6);x.font=`800 64px ${F}`;x.fillStyle='#9fb4ff';x.textAlign='center';x.fillText('...adını duysan',W/2,620);x.restore();vignette(0.6);});
+// 15 LOOP
+shot(15,(t)=>{x.fillStyle='#04050c';x.fillRect(0,0,W,H);snow(t,70);const z=1.6;x.save();x.translate(540,1150);x.scale(z,z);x.translate(-540,-1150);beast(540,1450,1.3,t,true);x.restore();vignette(0.7);
+ bigText('Kapıyı',W/2,330,90,'#fff',prog(t,0,0.2));bigText('AÇAR MIYDIN?',W/2,470,128,'#ffd23f',prog(t,0.15,0.35));});

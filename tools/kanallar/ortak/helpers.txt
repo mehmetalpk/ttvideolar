@@ -1,0 +1,1 @@
+function bigText(tx,cx,cy,sz,col,p,rot=0){if(p<=0)return;const s=back(p);x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.font=`900 ${sz}px ${F}`;x.textAlign='center';x.textBaseline='middle';x.lineJoin='round';x.lineWidth=sz*0.2;x.strokeStyle='#000';x.strokeText(tx,0,0);x.fillStyle=col;x.fillText(tx,0,0);x.restore();}

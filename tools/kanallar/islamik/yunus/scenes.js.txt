@@ -1,0 +1,34 @@
+const S=[];const T=PH.map(p=>p[0]);
+function zoomed(z,f){x.save();x.translate(W/2,H/2);x.scale(z,z);x.translate(-W/2,-H/2);f();x.restore();}
+function deep(){x.fillStyle=grad(0,H,['#0b3a5c','#05101f']);x.fillRect(0,0,W,H);const r=rng(4);x.fillStyle='rgba(180,220,255,0.25)';for(let i=0;i<30;i++){x.beginPath();x.arc(r()*W,r()*H,2+r()*6,0,7);x.fill();}}
+function bubbles(t){const r=rng(8);x.strokeStyle='rgba(200,230,255,0.5)';x.lineWidth=3;for(let i=0;i<25;i++){const px=r()*W,py=(r()*H-t*120*(0.5+r()))%H;x.beginPath();x.arc(px,py<0?py+H:py,5+r()*10,0,7);x.stroke();}}
+function sky(c1,c2){x.fillStyle=grad(0,1100,[c1,c2]);x.fillRect(0,0,W,H);}
+// 0 hook
+shot(0,0,t=>{zoomed(1+t*0.03,()=>{deep();bubbles(t);whale(540,950,1.15,t);orb(600,960,150,t);});vignette();bigText('BALIĞIN',W/2,380,170,'#ffd23f',1);bigText('KARNINDA',W/2,560,130,'#fff',1);});
+// 1 kavmine davet
+shot(1,1,t=>{sky('#f0b878','#f8deae');ground(1300,'#8a6a48');for(let i=0;i<5;i++)house(140+i*200,1300,150,170+(i%2)*60,'#b98a5a');orb(540,1100,130+Math.sin(t*3)*10,t);for(let i=0;i<5;i++)sil(160+i*190+(i>1?90:0),1340,0.8,'#3a2a1c');bigText('HZ. YUNUS',W/2,420,130,'#fff',eOut(cl(t*3)));});
+// 2 yüz çevirdiler, ayrıldı
+shot(2,2,t=>{sky('#5b4a6b','#a07a7a');ground(1300,'#5a4532');for(let i=0;i<5;i++)house(140+i*200,1300,150,170+(i%2)*60,'#6e5040');for(let i=0;i<5;i++)sil(160+i*190,1340,0.8,'#1d140c');orb(540+t*260,1100,120,t);bigText('YÜZ ÇEVİRDİLER',W/2,420,100,'#ff9d8a',eOut(cl(t*3)));});
+// 3 gemi
+shot(3,3,t=>{sky('#7fb8d8','#d6ecf2');waves(1150,t,'#2c6d99',18);ship(400+t*120,1120,1,Math.sin(t*2)*0.03);orb(400+t*120,1060,70,t);waves(1210,t+1,'#1f5577',14);});
+// 4 fırtına
+shot(4,4,t=>{sky('#1b2230','#3c4658');if(Math.floor(t*6)%5===1){x.fillStyle='rgba(255,255,255,0.5)';x.fillRect(0,0,W,H);}x.strokeStyle='#fff';x.lineWidth=8;if(t%0.8<0.25){x.beginPath();x.moveTo(800,0);x.lineTo(720,300);x.lineTo(790,320);x.lineTo(680,640);x.stroke();}
+ waves(1050,t*2,'#1e3a52',70,260);ship(540,1060,0.95,Math.sin(t*5)*0.22);waves(1180,t*2+1,'#13283b',90,220);bigText('DENİZ AZDI',W/2,400,130,'#fff',1);});
+// 5 kura
+shot(5,6,t=>{bgGreen();for(let i=0;i<3;i++){const hi=i===1&&t>1.0;const up=hi?eOut(cl((t-1)*3))*120:0;x.save();x.translate(300+i*240,950-up);x.fillStyle=hi?'#ffd23f':CR;rr(-50,-200,100,400,30);x.fill();if(hi){orb(0,0,220,t);}x.restore();}bigText(t<1.0?'KURA':'ONA ÇIKTI',W/2,420,130,'#fff',1);vignette();});
+// 6 denize, balık
+shot(7,8,t=>{sky('#3c4658','#71809a');waves(700,t,'#1e3a52',30);x.fillStyle=grad(700,H,['#1e3a52','#07131f']);x.fillRect(0,740,W,H);const sp=cl(t*1.5);x.fillStyle='rgba(255,255,255,0.7)';for(let i=0;i<10;i++){const a=Math.PI+i/9*Math.PI;x.beginPath();x.arc(540+Math.cos(a)*sp*160,720+Math.sin(a)*sp*160,14*(1-sp)+2,0,7);x.fill();}
+ const k=eOut(cl((t-1.0)/1.2));whale(540,1500-k*450,1.1,t,k);if(t>1.0)bigText('BÜYÜK BİR BALIK',W/2,400,100,'#fff',1);});
+// 7 üç karanlık
+shot(9,9,t=>{x.fillStyle='#020308';x.fillRect(0,0,W,H);['GECENİN','DENİZİN','BALIĞIN'].forEach((w,i)=>bigText(w,W/2,480+i*190,110,['#8090c0','#5aa0d0','#c9a24a'][i],eOut(cl((t-i*0.5)*3))));bigText('KARANLIĞI',W/2,1100,90,'#fff',eOut(cl((t-1.5)*3)));});
+// 8 dua
+shot(10,12,t=>{x.fillStyle='#050812';x.fillRect(0,0,W,H);orb(540,1050,260+Math.sin(t*2)*20,t);rays(540,1050,t,'rgba(255,230,160,0.07)');
+ const L=["Lâ ilâhe illâ ente","sübhâneke","innî küntü","mine'z-zâlimîn"];const n=t<1.6?1:t<2.9?2:t<3.9?3:4;frameText(L.slice(0,n),620,t,1);});
+// 9 kabul
+shot(13,13,t=>{deep();rays(540,-100,t,'rgba(255,230,160,0.15)');whale(540,1050,1.0,t);orb(600,1060,120,t);bigText('KABUL OLDU',W/2,420,130,'#ffd23f',eOut(cl(t*3)));vignette(0.4);});
+// 10 sahil
+shot(14,14,t=>{sky('#f6c27a','#fde8c0');sun(800,600,80);waves(1050,t,'#3b8fb5',20);x.fillStyle='#e6c98f';x.beginPath();x.moveTo(0,1200);x.quadraticCurveTo(500,1080,W,1160);x.lineTo(W,H);x.lineTo(0,H);x.fill();whale(1050-t*100,1100,0.6,t);orb(420,1170,110,t);bigText('SAHİLE',W/2,400,120,'#fff',eOut(cl(t*3)));});
+// 11 kabak bitkisi
+shot(15,15,t=>{sky('#f6c27a','#fde8c0');x.fillStyle='#e6c98f';x.fillRect(0,1200,W,H);orb(540,1180,130,t);gourd(540,1240,eOut(cl(t/1.4)),t);bigText('KABAK BİTKİSİ',W/2,400,110,'#2e6b2a',eOut(cl(t*3)));});
+// 12 soru
+shot(16,16,t=>{bgNight();crescent(540,520,110,GO);mosque(540,1350,0.9,'#0b0e22');vignette();frameText(['Sen hangi','duaya sığınırsın?'],930,t,eOut(cl(t*3)));});

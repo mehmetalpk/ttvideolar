@@ -1,0 +1,43 @@
+const S=[];const T=PH.map(p=>p[0]);function shot(i,f){S.push({d:T[i+1]-T[i],g0:T[i],f});}
+function bigTulip(t,col){const g=x.createRadialGradient(540,1000,40,540,1000,650);g.addColorStop(0,'rgba(201,162,74,0.5)');g.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g;x.fillRect(0,0,W,H);tulip(540,1000,2.6+Math.sin(t*2)*0.05,col,t);}
+function ferman(t,stamp,sub){const u=eOut(prog(t,0,0.6));const top=360,h=200+u*860;x.fillStyle='#f3e6c4';rr(170,top,740,h,10);x.fill();x.fillStyle='#8a6a3a';rr(150,top-30,780,50,25);x.fill();rr(150,top+h-20,780,50,25);x.fill();
+ x.save();x.beginPath();x.rect(170,top+30,740,h-50);x.clip();x.strokeStyle=PAL.ink;x.lineWidth=4;for(let l=0;l<5;l++){const yy=500+l*70;x.beginPath();for(let k=0;k<12;k++){const xx=230+k*52;x.moveTo(xx,yy);x.quadraticCurveTo(xx+14,yy-22,xx+30,yy+4);}x.stroke();}tulip(540,980,0.9,PAL.red,t);x.restore();
+ const sp=prog(t,0.7,1.0);if(sp>0){x.save();x.translate(540,1230);const s=1+(1-back(sp))*0.8;x.scale(s,s);x.rotate(-0.12);x.strokeStyle='#c1121f';x.lineWidth=12;rr(-280,-75,560,150,20);x.stroke();x.fillStyle='#c1121f';x.font=`900 84px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(stamp,0,6);x.restore();}
+ if(sub)bigText(sub,W/2,250,84,'#ffd23f',prog(t,0.05,0.3));}
+// 0 HOOK
+shot(0,(t)=>{paper(true);coins(t);bigTulip(t,'#d6283a');vignette(0.6);bigText('Bir çiçek için',W/2,330,90,'#fff',1);bigText('FERMAN',W/2,470,140,'#ffd23f',1);bigText('çıkaran devlet',W/2,610,90,'#fff',1);});
+// 1 ferman
+shot(1,(t)=>{paper(true);ferman(t,'FİYAT FERMANI','');vignette(0.5);});
+// 2 1718
+shot(2,(t)=>{paper(false);skylineIst(1350,'rgba(43,29,18,0.85)');bigText('1718',W/2,720,260,PAL.gold,eOut(t/0.25));x.fillStyle=PAL.ink;x.font=`700 54px ${F}`;x.textAlign='center';x.globalAlpha=prog(t,0.3,0.6);x.fillText('İSTANBUL',W/2,900);x.globalAlpha=1;vignette(0.4);});
+// 3 peace -> party
+shot(3,(t)=>{paper(false);if(t<1.4){x.save();x.translate(540,850);[0.6,-0.6].forEach(a=>{x.save();x.rotate(a);x.fillStyle='#9aa0a8';rr(-14,-330,28,520,10);x.fill();x.fillStyle=PAL.gold;rr(-70,150,140,26,10);x.fill();x.fillStyle='#4a2c18';rr(-12,176,24,90,8);x.fill();x.restore();});x.restore();stampX(540,850,1.8,prog(t,0.4,0.7));bigText('SAVAŞ BİTTİ',W/2,380,110,'#c1121f',prog(t,0.3,0.6));}
+ else{paper(true);for(let i=0;i<7;i++){const cx=110+i*145;lantern(cx,520+Math.sin(i)*60,t+i);}for(let i=0;i<9;i++)tulip(80+i*115,1250+Math.sin(i)*30,0.9,['#d6283a','#f2c94c','#c75ca8'][i%3],t+i);bigText('ZEVK VE SEFA',W/2,380,110,'#ffd23f',prog(t,1.4,1.7));}vignette(0.45);});
+// 4 İbrahim Paşa in garden
+shot(4,(t)=>{paper(false);for(let r=0;r<3;r++)for(let i=0;i<8;i++)tulip(70+i*135+(r%2)*60,1500+r*130,0.75,['#d6283a','#f2c94c','#c75ca8','#e8eef9'][(i+r)%4],t+i+r);
+ const z=1+t*0.03;x.save();x.translate(540,900);x.scale(z,z);x.translate(-540,-900);sultan(540,820,130,{robe:'#2a7d74',smile:0.7,eyeOpen:0.8,look:0.4});x.restore();
+ bigText('SADRAZAM',W/2,330,80,'#fff',prog(t,0.1,0.4));bigText('İBRAHİM PAŞA',W/2,440,110,'#ffd23f',prog(t,0.3,0.6));vignette(0.4);});
+// 5 LALE
+shot(5,(t)=>{paper(true);bigTulip(t,'#d6283a');bigText('LALE',W/2,420,200,'#ffd23f',prog(t,0,0.2));});
+// 6 candles garden
+shot(6,(t)=>{x.fillStyle=grad(0,H,['#0c0a18','#1f1830']);x.fillRect(0,0,W,H);for(let r=0;r<4;r++)for(let i=0;i<7;i++){const cx=90+i*150+(r%2)*70,cy=900+r*170;tulip(cx,cy,0.7,['#d6283a','#f2c94c','#c75ca8'][(i+r)%3],t+i);candle(cx+50,cy+170,1,t+i*3+r);}bigText('MUM IŞIĞINDA',W/2,380,110,'#ffd23f',prog(t,0.1,0.4));vignette(0.5);});
+// 7 turtles
+shot(7,(t)=>{x.fillStyle=grad(0,H,['#0c0a18','#1f1830']);x.fillRect(0,0,W,H);x.fillStyle='#1d3a24';x.fillRect(0,1200,W,720);for(let i=0;i<6;i++)tulip(60+i*190,1180,0.6,['#d6283a','#f2c94c'][i%2],t+i);
+ [[200,1450,1.2],[620,1560,1.0],[900,1380,0.9]].forEach(([cx,cy,s],i)=>turtle(cx+t*40*(i%2?-1:1),cy,s,t+i));bigText('KAPLUMBAĞA',W/2,380,120,'#ffd23f',prog(t,0.1,0.4));bigText('sırtında mum!',W/2,510,80,'#fff',prog(t,0.6,0.9));vignette(0.5);});
+// 8 price up
+shot(8,(t)=>{paper(false);coins(t,12,9);const p=eOut(prog(t,0.1,1.6));x.strokeStyle='#c1121f';x.lineWidth=22;x.lineCap='round';x.beginPath();x.moveTo(160,1350);const pts=[[160,1350],[360,1250],[520,1280],[700,1000],[920,640]];let tot=pts.length-1;for(let i=1;i<=tot;i++){const q=cl(p*tot-(i-1));if(q<=0)break;const [ax,ay]=pts[i-1],[bx,by]=pts[i];x.lineTo(ax+(bx-ax)*q,ay+(by-ay)*q);}x.stroke();
+ x.fillStyle='#b89a6a';x.beginPath();x.ellipse(300,800,110,130,0,0,7);x.fill();x.strokeStyle='#8a6a3a';x.lineWidth=6;x.beginPath();x.moveTo(300,670);x.lineTo(300,600);x.stroke();x.fillStyle=PAL.ink;x.font=`800 44px ${F}`;x.textAlign='center';x.fillText('SOĞAN',300,980);bigText('FİYATLAR UÇTU',W/2,380,110,'#c1121f',prog(t,0.2,0.5));vignette(0.35);});
+// 9 narh ferman
+shot(9,(t)=>{paper(true);ferman(t,'NARH — 1722','FİYAT TAVANI');vignette(0.5);});
+// 10 isyan
+shot(10,(t)=>{paper(true);x.fillStyle='rgba(140,10,10,0.4)';x.fillRect(0,0,W,H);for(let i=0;i<6;i++){const cx=90+i*180+Math.sin(t*3+i)*8;janissary(cx,1420,0.9+(i%2)*0.12,'#0b0705');lantern(cx+60,950-(i%2)*50,t+i);}
+ bigText('1730',W/2,350,170,'#ffd23f',prog(t,0.05,0.3));bigText('PATRONA HALİL İSYANI',W/2,500,74,'#fff',prog(t,0.6,0.9));vignette(0.6);});
+// 11 AMA
+shot(11,(t)=>{paper(false);bigText('AMA...',W/2,820,220,PAL.red,prog(t,0,0.25));vignette(0.35);});
+// 12 nobody called it
+shot(12,(t)=>{paper(false);x.save();x.translate(540,900);x.rotate(-0.05);x.fillStyle='#7a2a1a';rr(-260,-340,520,680,16);x.fill();x.strokeStyle=PAL.gold;x.lineWidth=8;rr(-230,-310,460,620,10);x.stroke();x.fillStyle=PAL.gold;x.font=`900 72px ${F}`;x.textAlign='center';x.fillText('LALE',0,-60);x.fillText('DEVRİ',0,30);tulip(0,180,0.6,'#f2c94c',t);x.restore();
+ x.save();x.globalAlpha=prog(t,0.5,0.8);x.font=`900 300px ${F}`;x.fillStyle='#c1121f';x.textAlign='center';x.textBaseline='middle';x.fillText('?',860,600);x.restore();bigText('KİMSE BÖYLE DEMEDİ',W/2,330,84,'#ffd23f',prog(t,0.1,0.4));vignette(0.35);});
+// 13 200 years later
+shot(13,(t)=>{paper(true);const yr=Math.round(1730+eOut(prog(t,0.1,1.8))*(1913-1730));bigText(String(yr),W/2,700,220,'#ffd23f',1);x.fillStyle='#ead9b0';x.font=`700 54px ${F}`;x.textAlign='center';x.globalAlpha=prog(t,1.6,2.0);x.fillText('İsim sonradan verildi',W/2,880);x.globalAlpha=1;vignette(0.6);});
+// 14 LOOP
+shot(14,(t)=>{paper(true);coins(t);bigTulip(t,'#d6283a');vignette(0.6);bigText('Sence hangi şeyin',W/2,330,84,'#fff',prog(t,0,0.2));bigText('FİYATINA',W/2,470,130,'#ffd23f',prog(t,0.2,0.4));bigText('ferman çıkmalı?',W/2,610,90,'#fff',prog(t,0.4,0.6));});

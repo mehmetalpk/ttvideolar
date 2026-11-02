@@ -1,0 +1,33 @@
+const S=[];const T=PH.map(p=>p[0]);
+function zoomed(z,f){x.save();x.translate(W/2,H/2);x.scale(z,z);x.translate(-W/2,-H/2);f();x.restore();}
+function soil(){x.fillStyle=grad(0,H,['#d9b77e','#a77c4a']);x.fillRect(0,0,W,H);const r=rng(2);x.fillStyle='rgba(90,60,30,0.25)';for(let i=0;i<60;i++){x.beginPath();x.arc(r()*W,r()*H,4+r()*14,0,7);x.fill();}
+ x.fillStyle='#5f9b45';for(let i=0;i<40;i++){const px=r()*W,py=300+r()*1100;x.beginPath();x.moveTo(px,py);x.quadraticCurveTo(px+10,py-60,px+25,py-90);x.quadraticCurveTo(px+14,py-50,px+20,py);x.fill();}}
+function valley(t){x.fillStyle=grad(0,H,['#f4c98a','#f9e7c4']);x.fillRect(0,0,W,H);x.fillStyle='#b98e5a';x.beginPath();x.moveTo(0,900);x.quadraticCurveTo(300,700,600,880);x.quadraticCurveTo(850,760,W,860);x.lineTo(W,H);x.lineTo(0,H);x.fill();x.fillStyle='#9c7442';x.beginPath();x.moveTo(0,1150);x.quadraticCurveTo(540,1000,W,1150);x.lineTo(W,H);x.lineTo(0,H);x.fill();}
+function nest(cx,cy){x.fillStyle='#7a5530';x.beginPath();x.ellipse(cx,cy,200,80,0,Math.PI,0);x.fill();x.fillStyle='#1a0f08';x.beginPath();x.ellipse(cx,cy-10,60,30,0,0,7);x.fill();}
+// 0 hook
+shot(0,0,t=>{zoomed(1+t*0.03,()=>{soil();ant(540,1050,3.2,-0.15,t*0.3);});vignette(0.4);sbubble(760,700,240,180,'!',1,130);bigText('KARINCA',W/2,360,170,'#ffd23f',1);bigText('KONUŞTU',W/2,530,130,'#fff',1);});
+// 1 kitap
+shot(1,1,t=>{bgGreen();book(540,880,1+t*0.03,'NEML SURESİ',t);vignette(0.4);});
+// 2 mülk
+shot(2,2,t=>{x.fillStyle=grad(0,H,['#2a1c46','#7a4b2a']);x.fillRect(0,0,W,H);rays(540,1000,t,'rgba(255,215,120,0.12)');mosque(540,1300,1.0,'#c9a24a');ground(1300,'#3a2618');const r=rng(6);for(let i=0;i<14;i++){x.fillStyle='#ffd23f';x.beginPath();x.ellipse(150+r()*780,1330+r()*60,26,10,0,0,7);x.fill();}bigText('BÜYÜK MÜLK',W/2,420,130,'#ffd23f',eOut(cl(t*3)));});
+// 3 kuşların dili
+shot(3,3,t=>{x.fillStyle=grad(0,H,['#7fc0e0','#e8f4f8']);x.fillRect(0,0,W,H);const r=rng(1);for(let i=0;i<7;i++){bird((r()*W+t*120*(0.6+r()))%W,600+r()*600,1+r(),t+i);}
+ x.strokeStyle='rgba(31,107,94,0.7)';x.lineWidth=8;for(let k=0;k<3;k++){const rr2=((t*1.2+k/3)%1)*300;x.globalAlpha=1-rr2/300;x.beginPath();x.arc(540,1000,rr2,-0.6,0.6);x.stroke();x.beginPath();x.arc(540,1000,rr2,Math.PI-0.6,Math.PI+0.6);x.stroke();}x.globalAlpha=1;bigText('KUŞLARIN DİLİ',W/2,420,120,'#1f6b5e',eOut(cl(t*3)));});
+// 4 vadi
+shot(4,4,t=>{valley(t);dust(900-t*80,880,500,t);banners(880,6,0.5,t);x.save();x.translate(-t*60,0);x.restore();bigText('KARINCA VADİSİ',W/2,420,110,'#fff',eOut(cl(t*3)));for(let i=0;i<6;i++)ant(150+i*140+Math.sin(t+i)*20,1250+(i%2)*60,0.5,0.1,t+i);});
+// 5 bir karınca seslendi
+shot(5,6,t=>{soil();x.fillStyle='#8a8279';x.beginPath();x.ellipse(540,1150,300,90,0,0,7);x.fill();ant(540,1060,2.0,-0.3,t*0.4);sbubble(640,690,620,200,'Ey karıncalar!',(t-1.49)*3,80);if(t<1.49)sbubble(720,720,200,160,'!',t*4,110);vignette(0.4);});
+// 6 yuvaya koşan karıncalar
+shot(7,7,t=>{soil();nest(540,1200);for(let i=0;i<9;i++){const a=i/9*6.28,d=520*(1-((t*0.6+i*0.11)%1));ant(540+Math.cos(a)*d,1170+Math.sin(a)*d*0.5,0.7,a+Math.PI,t*2+i);}bigText('YUVALARINIZA!',W/2,420,110,'#fff',1);});
+// 7 ordu yaklaşıyor
+shot(8,8,t=>{valley(t);const k=t/3;dust(540,950,700+k*300,t);banners(980+k*60,7,0.8+k*0.5,t);for(let i=0;i<5;i++)ant(200+i*170,1350,0.6,0,t*2+i);bigText('FARKINDA OLMADAN',W/2,420,100,'#ffd23f',eOut(cl(t*3)));});
+// 8 tebessüm
+shot(9,9,t=>{bgGreen();rays(540,1150,t,'rgba(255,230,160,0.14)');orb(540,1150,260,t);ant(540,1180,0.8,0,t*0.3);bigText('TEBESSÜM ETTİ',W/2,420,120,'#ffd23f',eOut(cl(t*3)));vignette(0.5);});
+// 9 dua
+shot(10,11,t=>{bgNight();crescent(540,330,70,GO);const L=['Rabbim,','verdiğin nimete','şükretmemi','nasip et'];const n=t<0.63?1:t<1.6?2:t<2.4?3:4;frameText(L.slice(0,n),860,t,1);vignette(0.5);});
+// 10 koca ordu
+shot(12,12,t=>{valley(t);banners(1250,6,1.6+t*0.05,t);dust(540,1250,1200,t);ant(540,1400,0.35,0,t*2);bigText('KOCA BİR ORDU',W/2,420,120,'#fff',eOut(cl(t*3)));});
+// 11 kulak verdi
+shot(13,13,t=>{x.fillStyle='#0b0d18';x.fillRect(0,0,W,H);const g=x.createRadialGradient(540,1050,10,540,1050,420);g.addColorStop(0,'rgba(255,230,160,0.55)');g.addColorStop(1,'rgba(255,230,160,0)');x.fillStyle=g;x.fillRect(0,0,W,H);ant(540,1060,0.6+t*0.15,0,t*0.5);bigText('KULAK VERDİ',W/2,420,120,'#ffd23f',eOut(cl(t*3)));});
+// 12 soru
+shot(14,14,t=>{bgGreen();girih(GO,0.08);frameText(['Bu kıssa bize','ne anlatıyor?'],700,t,eOut(cl(t*3)));ant(540,1080,0.8,0,t);vignette(0.5);});
