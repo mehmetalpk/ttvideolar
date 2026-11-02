@@ -4,3 +4,4 @@ NN | konu | süre | TikTok başlığı | açıklama | YouTube başlığı | YT e
 02 | Lagari Hasan Çelebi'nin roketle uçuşu (1633, rivayet) | 60 sn | Barutla gökyüzüne fırlatılan Osmanlı 🚀 | Evliya Çelebi'ye göre 1633'te bir Osmanlı, 7 kanatlı bir roketle gökyüzüne yükseldi 🚀 Sence Lagari gerçekten uçtu mu? 👇 Kaynak: Evliya Çelebi, Seyahatname #osmanlı #lagarihasançelebi #roket #tarih #istanbul #evliyaçelebi #keşfet #fyp | Lagari Hasan Çelebi: Roketle uçan Osmanlı 🚀 #shorts | lagari hasan çelebi, roket, osmanlı tarihi, evliya çelebi, havacılık tarihi, IV. Murad, shorts | Wikipedia (Lagâri Hasan Çelebi); TDV İslâm Ansiklopedisi; Evliya Çelebi, Seyahatname
 |
 |
+|
