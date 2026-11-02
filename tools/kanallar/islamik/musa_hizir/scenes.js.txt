@@ -1,0 +1,25 @@
+function sky5(c1,c2){x.fillStyle=grad(0,1180,[c1,c2]);x.fillRect(0,0,W,H);}
+function orbG(cx,cy,r,t){const a=0.75+0.2*Math.sin(t*3);const g=x.createRadialGradient(cx,cy,2,cx,cy,r);g.addColorStop(0,`rgba(220,255,235,${a})`);g.addColorStop(0.35,`rgba(120,220,170,${a*0.6})`);g.addColorStop(1,'rgba(100,200,150,0)');x.fillStyle=g;x.beginPath();x.arc(cx,cy,r,0,7);x.fill();}
+function twoSeas(t){sky5('#7fb8d8','#d6ecf2');x.fillStyle='#2c6d99';x.beginPath();x.moveTo(0,700);x.lineTo(540,1000);x.lineTo(0,1180);x.fill();x.fillStyle='#3a9a8a';x.beginPath();x.moveTo(W,700);x.lineTo(540,1000);x.lineTo(W,1180);x.fill();x.fillStyle='#d8bf8a';x.beginPath();x.moveTo(0,700);x.lineTo(540,1000);x.lineTo(W,700);x.lineTo(W,600);x.lineTo(0,600);x.fill();ground(1180,'#1e5a70');}
+function wall(cx,base,k,lean=0){x.save();x.translate(cx,base);x.rotate(lean);for(let r=0;r<8;r++)for(let i=0;i<6;i++){const idx=r*6+i;if(idx/48>k)continue;x.fillStyle=(r+i)%2?'#a8805a':'#b8906a';rr(-300+i*100+(r%2)*20,-(r+1)*60,96,56,6);x.fill();}x.restore();}
+function chest(cx,cy,s,t,open=1){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#6a3a1a';rr(-120,-60,240,120,12);x.fill();x.fillStyle='#c9a24a';x.fillRect(-120,-10,240,14);x.fillRect(-14,-60,28,120);if(open){x.fillStyle='rgba(255,215,90,0.9)';for(let i=0;i<9;i++){x.beginPath();x.arc(-90+i*22,-70-Math.sin(i)*10,16,0,7);x.fill();}spot(0,-70,200,0.4);}x.restore();}
+function crown(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#c9a24a';x.beginPath();x.moveTo(-150,80);x.lineTo(-150,-60);x.lineTo(-75,10);x.lineTo(0,-90);x.lineTo(75,10);x.lineTo(150,-60);x.lineTo(150,80);x.fill();x.fillStyle='#8b1e1e';[-90,0,90].forEach(a=>{x.beginPath();x.arc(a,45,16,0,7);x.fill();});x.restore();}
+function holeShip(cx,cy,s,t,hole){ship(cx,cy,s,Math.sin(t*2)*0.03);if(hole){x.fillStyle='#000';x.beginPath();x.arc(cx+60*s,cy+50*s,18*s*hole,0,7);x.fill();}}
+shot(0,0,t=>{zoomed(1+t*0.03,()=>{sky5('#3a5a7a','#a8c8d8');waves(1000,t,'#2c6d99',18);holeShip(300,980,0.7,t,1);wall(780,1180,1,-0.08*(1-cl(t/3)));});bigText('NEDEN?',W/2,400,190,'#ffd23f',1);bigText('MUSA SABREDEMEDİ',W/2,580,80,'#fff',1);});
+shot(1,1,t=>{twoSeas(t);orb(420,880,110,t);orbG(660,880,110,t);bigText('İKİ DENİZİN',W/2,380,120,'#fff',1);bigText('BİRLEŞTİĞİ YER',W/2,520,90,'#ffd23f',eOut(cl((t-0.5)*3)));});
+shot(2,2,t=>{bgGreen();orbG(540,880,240,t);rays(540,880,t,'rgba(200,255,220,0.08)');bigText('HIZIR',W/2,400,180,'#ffd23f',eOut(cl(t*3)));vignette();});
+shot(3,3,t=>{bgGreen();orb(380,900,120,t);orbG(700,900,140,t);sbubble(540,560,800,150,'SANA UYABİLİR MİYİM?',eOut(cl(t*3)),58);vignette();});
+shot(4,4,t=>{bgGreen();orb(380,900,120,t);orbG(700,900,140,t);frameText(['Benimle','sabredemezsin'],480,t,eOut(cl(t*3)));vignette();});
+shot(5,5,t=>{sky5('#7fb8d8','#d6ecf2');waves(1000,t,'#2c6d99',18);holeShip(540,980,0.9,t,cl((t-1.2)*3));orb(500,800,60,t);orbG(600,800,60,t);bigText('GEMİYİ DELDİ',W/2,400,120,'#c1121f',eOut(cl((t-1.2)*3)));});
+shot(6,6,t=>{sky5('#5a7a9a','#a8c0d0');waves(1000,t,'#2c6d99',18);holeShip(540,980,0.9,t,1);sbubble(540,500,760,150,'BOĞMAK İÇİN Mİ?',eOut(cl(t*3)),66);});
+shot(7,7,t=>{dark();rain(t,0.15);const k=cl(t/3);x.globalAlpha=1-k*0.8;orb(540,900,140,t);x.globalAlpha=1;bigText('ANLAŞILMAZ',W/2,400,130,'#fff',1);bigText('BİR OLAY',W/2,540,100,'#8fd8ff',eOut(cl((t-0.5)*3)));});
+shot(8,8,t=>{dark();orb(540,900,140,t);stampT('İTİRAZ!',540,900,t*3,'#c1121f',120);});
+shot(9,9,t=>{sky5('#e8a868','#f8dcae');city(1180,'#8a6a48',false);ground(1180,'#8a6a40');const k=cl(t/4);wall(540,1150,0.4+0.6*k,-0.15*(1-k));orbG(840,1000,90,t);bigText('DUVARI ONARDI',W/2,380,110,'#fff',1);});
+shot(10,10,t=>{sky5('#e8a868','#f8dcae');ground(1180,'#8a6a40');wall(540,1150,1,0);coins(t,8,6);sbubble(540,500,760,150,'ÜCRET ALSAYDIN!',eOut(cl(t*3)),66);});
+shot(11,11,t=>{bgNight();rays(540,900,t,'rgba(200,255,220,0.08)');orbG(540,900,220,t);bigText('AÇIKLAMA',W/2,400,140,'#ffd23f',eOut(cl(t*3)));});
+shot(12,12,t=>{sky5('#7fb8d8','#d6ecf2');waves(1000,t,'#2c6d99',18);holeShip(300,980,0.6,t,1);crown(760,820,1.2);stampX(760,820,1.2,cl((t-2.5)*3));bigText('GASPÇI KRAL',W/2,400,120,'#fff',1);});
+shot(13,13,t=>{bgGreen();house(540,1180,420,360,'#0b2a24');orb(470,1060,70,t);orb(610,1060,70,t+1);rays(540,700,t,'rgba(255,230,160,0.08)');bigText('DAHA HAYIRLISI',W/2,400,110,'#ffd23f',1);vignette();});
+shot(14,14,t=>{sky5('#e8a868','#f8dcae');ground(1180,'#8a6a40');wall(540,920,0.55,0);x.fillStyle='#5a3a20';x.fillRect(150,920,780,260);chest(540,1080,1.0,t,1);bigText('YETİMLERİN',W/2,380,120,'#fff',1);bigText('HAZİNESİ',W/2,520,110,'#ffd23f',1);});
+shot(15,15,t=>{bgNight();orbG(540,900,200,t);frameText(['Kendiliğimden','yapmadım'],480,t,eOut(cl(t*3)));});
+shot(16,16,t=>{twoSeas(t);orb(420,880,110,t);orbG(660,880,110,t);frameText(['Kötü görünenin ardında','bir hayır olabilir mi?'],400,t,eOut(cl(t*3)));});
+shot(17,19,t=>cta(t));
