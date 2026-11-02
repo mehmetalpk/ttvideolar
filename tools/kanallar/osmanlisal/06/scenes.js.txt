@@ -1,0 +1,33 @@
+function galley(cx,cy,s,t,col='#3a2414',flag=PAL.red,row=1){x.save();x.translate(cx,cy);x.scale(s,s);if(row){x.strokeStyle='#2b1d12';x.lineWidth=5;for(let i=0;i<9;i++){const a=Math.sin(t*5+i*0.3)*0.4*row;x.beginPath();x.moveTo(-200+i*50,10);x.lineTo(-200+i*50-60*Math.sin(a+0.6),90);x.stroke();}}x.fillStyle=col;x.beginPath();x.moveTo(-280,-10);x.lineTo(300,-10);x.lineTo(340,-40);x.lineTo(240,40);x.lineTo(-230,40);x.closePath();x.fill();x.fillRect(-6,-260,12,250);x.fillStyle='#efe2c2';x.beginPath();x.moveTo(0,-250);x.lineTo(150,-40);x.lineTo(-10,-60);x.fill();x.fillStyle=flag;x.beginPath();x.moveTo(6,-260);x.lineTo(70,-245+Math.sin(t*6)*5);x.lineTo(6,-225);x.fill();x.restore();}
+function bigShip(cx,cy,s,t,flag='#1f4f9a',rock=1){x.save();x.translate(cx,cy);x.rotate(Math.sin(t*1.5)*0.02*rock);x.scale(s,s);x.fillStyle='#4a3020';x.beginPath();x.moveTo(-300,-40);x.lineTo(320,-60);x.lineTo(260,90);x.lineTo(-240,90);x.closePath();x.fill();x.fillRect(-260,-110,120,80);x.fillRect(200,-120,110,70);[-120,40,180].forEach((m,i)=>{x.fillRect(m-6,-420+i*30,12,380-i*30);x.fillStyle='#e8dcc0';rr(m-90,-380+i*30,180,120,10);x.fill();rr(m-80,-240+i*30,160,100,10);x.fill();x.fillStyle=flag;x.fillRect(m+6,-430+i*30,60,30);x.fillStyle='#4a3020';});x.restore();}
+function sea(t,c1='#6a9ab8',c2='#d8e8ee',y=820){x.fillStyle=grad(0,y,[c1,c2]);x.fillRect(0,0,W,H);x.fillStyle='#2f6f8a';x.fillRect(0,y,W,H);waves(y+6,t,'#2a6580',8);}
+function cannonSmoke(cx,cy,t,k){const r=rng(k);for(let i=0;i<5;i++){const a=((t*0.8+r())%1);x.fillStyle=`rgba(230,230,230,${0.6*(1-a)})`;x.beginPath();x.arc(cx+(r()-0.5)*80+a*60,cy-a*80,30+a*70,0,7);x.fill();}}
+// 0 hook
+shot(0,0,t=>{sea(t,'#5a6a88','#c8b8a8');for(let i=0;i<3;i++)bigShip(180+i*360,900,0.55,t+i,'#1f4f9a');galley(540,1110,1.0,t,'#2b1d12');waves(1150,t+1,'#1f5577',10);bigText('DEV DONANMA',W/2,340,120,'#fff',1);bigText('YENİLDİ!',W/2,480,130,'#ffd23f',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 1 1538
+shot(1,1,t=>{paper(false);galley(540,1000,1.0,t,'#2b1d12',PAL.red,0.3);bigText('1538',W/2,650,230,'#ffd23f',eOut(cl(t*3)));bigText('EYLÜL • PREVEZE',W/2,380,80,'#fff',1);vignette(0.4);});
+// 2 ittifak
+shot(2,2,t=>{sea(t,'#7a8aa8','#d8d8e0');const cols=['#f2c94c','#c1121f','#1f4f9a','#e8b020'];const L=['PAPALIK','VENEDİK','CENOVA','İSPANYA'];for(let i=0;i<4;i++){const p=eOut(cl((t-i*0.8)*2));bigShip(170+i*250,920+(1-p)*400,0.36,t+i,cols[i]);x.globalAlpha=p;x.fillStyle='#fff';x.font=`800 38px ${F}`;x.textAlign='center';x.fillText(L[i],170+i*250,1010);x.globalAlpha=1;}bigText('HAÇLI İTTİFAKI',W/2,360,110,'#fff',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 3 doria
+shot(3,3,t=>{x.fillStyle=grad(0,H,['#1a2440','#3a4a6a']);x.fillRect(0,0,W,H);spot(540,850,500,0.3,'180,200,255');x.save();x.translate(540,860);body(0,0,330,520,'#1b2238');x.fillStyle='#0b0f1c';x.beginPath();x.arc(0,-60,75,0,7);x.fill();x.restore();bigText('ANDREA DORIA',W/2,360,110,'#8fd8ff',1);bigText('Cenevizli amiral',W/2,490,70,'#fff',eOut(cl((t-0.5)*3)));});
+// 4 barbaros
+shot(4,4,t=>{paper(true);rays(540,800,t,'rgba(201,162,74,0.12)');sultan(540,820,120,{robe:PAL.navy,beard:'#b5401a',mustache:'#b5401a',brow:0.4});bigText('BARBAROS',W/2,340,140,'#ffd23f',1);bigText('HAYREDDİN PAŞA',W/2,480,84,'#fff',eOut(cl((t-0.5)*3)));vignette(0.5);});
+// 5 midilli
+shot(5,5,t=>{sea(t,'#8ab4d8','#f2e6c8',900);x.fillStyle='#8a7a4a';x.beginPath();x.ellipse(540,920,330,90,0,Math.PI,0);x.fill();for(let i=0;i<5;i++)house(380+i*80,910-Math.sin(i)*20,50,50,'#e8dcc0');if(t>1.6)galley(540,1060,0.6,t);bigText('MİDİLLİ',W/2,360,130,'#ffd23f',1);bigText(t<1.6?'doğdu':'korsandan amirale',W/2,500,76,'#fff',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 6 kızıl sakal
+shot(6,6,t=>{paper(true);x.save();const z=1+t*0.05;x.translate(540,860);x.scale(z,z);x.translate(-540,-860);sultan(540,760,170,{robe:PAL.navy,beard:'#c0461a',mustache:'#c0461a'});x.restore();bigText('BARBAROSSA',W/2,340,120,'#ff6b3a',1);bigText('= KIZIL SAKAL',W/2,480,90,'#fff',eOut(cl((t-1.4)*3)));vignette(0.5);});
+// 7 rüzgâra bağlı
+shot(7,7,t=>{sea(t);bigShip(540,920,0.75,t,'#1f4f9a');x.strokeStyle='rgba(255,255,255,0.7)';x.lineWidth=7;for(let i=0;i<6;i++){const px=((t*500+i*200)%1400)-200;x.beginPath();x.moveTo(px,520+i*50);x.quadraticCurveTo(px+80,500+i*50,px+160,520+i*50);x.stroke();}bigText('RÜZGÂRA BAĞLI',W/2,360,110,'#fff',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 8 rüzgâr kesildi
+shot(8,8,t=>{x.fillStyle=grad(0,820,['#d8c8a8','#f2ead8']);x.fillRect(0,0,W,H);x.fillStyle='#4a8aa8';x.fillRect(0,820,W,H);x.fillStyle='rgba(255,255,255,0.3)';x.fillRect(0,830,W,4);for(let i=0;i<3;i++)bigShip(200+i*340,960,0.4,0,'#1f4f9a',0);badge(540,1110,'RÜZGÂR: 0',PAL.navy,1);bigText('KIPIRDAYAMADILAR',W/2,360,90,'#c1121f',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 9 kadırgalar saldırdı
+shot(9,9,t=>{sea(t,'#c8a888','#f2e6c8');for(let i=0;i<2;i++)bigShip(260+i*520,880,0.38,0,'#1f4f9a',0);for(let i=0;i<4;i++)galley(-200+t*260+i*190,1060+(i%2)*60,0.45,t+i*0.5);cannonSmoke(300,820,t,3);cannonSmoke(780,840,t,5);bigText('KÜREKLE HÜCUM',W/2,360,110,'#ffd23f',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 10 yağmur, doria çekildi
+shot(10,10,t=>{sea(t,'#3a4250','#7a8290');rain(t,0.4);bigShip(540+t*120,920,0.5,t,'#1f4f9a');x.fillStyle='rgba(30,40,60,0.3)';x.fillRect(0,0,W,H);bigText('GERİ ÇEKİLDİ',W/2,360,120,'#fff',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 11 tek gemi kaybetmedi
+shot(11,11,t=>{sea(t,'#f2b36a','#f6dcae');const n=Math.min(6,1+Math.floor(t*3));for(let i=0;i<n;i++)galley(160+(i%3)*380,920+Math.floor(i/3)*130,0.42,t+i);badge(540,600,'KAYIP: 0',PAL.red,eOut(cl((t-1)*3)));bigText('HEPSİ SAĞLAM',W/2,360,110,'#ffd23f',1);x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+// 12 akdeniz
+shot(12,12,t=>{paper(false);x.fillStyle='#3f7d9a';x.beginPath();x.ellipse(540,860,430,170,0,0,7);x.fill();x.fillStyle='#3f7d9a';x.beginPath();x.ellipse(840,700,90,80,0,0,7);x.fill();const p=eOut(cl(t/2));for(let i=0;i<6;i++){if(i/6>p)break;x.fillStyle=PAL.red;x.beginPath();x.moveTo(220+i*120,860);x.lineTo(260+i*120,840);x.lineTo(220+i*120,820);x.fill();x.fillRect(216+i*120,820,6,80);}bigText('AKDENİZ',W/2,360,140,'#ffd23f',1);bigText('~30 YIL ÜSTÜNLÜK',W/2,500,80,'#fff',eOut(cl((t-0.6)*3)));vignette(0.3);});
+// 13 soru
+shot(13,13,t=>{sea(t,'#f2b36a','#f6dcae');galley(540,1080,0.8,t);frameText(['Bu zaferin','asıl sırrı neydi?'],560,t,eOut(cl(t*3)));x.fillStyle='#1e3c50';x.fillRect(0,1180,W,H);});
+shot(14,16,t=>cta(t));
