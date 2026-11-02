@@ -22,3 +22,6 @@ ElevenLabs eleven_v4, Emrullah Tuna QftNgZhlSOYKrYbk7WR7 (varsayılan erkek anla
 ## sfx / mux
 `python3 sfx.py '<sahne başlangıçları + bitiş JSON>' '<dum zamanları JSON>' audio/sfx.wav 0.8`
 `ffmpeg -f concat -safe 0 -i out/list.txt -i audio/voice_fast.mp3 -i audio/sfx.wav -filter_complex "[1:a]apad[v];[2:a]volume=0.6[s];[v][s]amix=inputs=2:normalize=0:duration=first[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -shortest out.mp4`
+
+## Otomatik hat: pipe.py (Kasım 2026)
+`python3 tools/kanallar/pipe.py <dir> <kanal> audio` → `build prev` → `build render mux`. `<dir>/script.txt`: satır başına bir ifade (`konuşma || altyazı`), boş satır = paragraf. Ses ElevenLabs `/with-timestamps` ile alınır, PH zamanları karakter hizalamasından otomatik çıkar (silencedetect ile ince ayar). Anahtar `/home/claude/.el_key` dosyasından okunur (depoya asla girmez). Ek yardımcılar: `ortak/plus.js.txt` (badge, coins, stampX, fire, mapArrow, counter). Örnekler: kriminal/eyfel, islamik/ibrahim, hayatsal/ronaldo, osmanlisal/hezarfen.

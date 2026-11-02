@@ -73,7 +73,7 @@ def align():
             body = TAG.sub('', sp).strip()
             i = text.find(body[:12], pos)
             if i < 0: raise SystemExit(f'not found: {body}')
-            pos = i + len(body[:12])
+            pos = i + max(12, int(len(body) * 0.8))
             t = max(0.0, (st[i] - L) / 1.1)
             near = [s for s in seg_starts if abs(s - t) < 0.3]
             if near: t = min(near, key=lambda s: abs(s - t))
