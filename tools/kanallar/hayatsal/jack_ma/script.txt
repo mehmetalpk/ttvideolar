@@ -1,0 +1,20 @@
+[intense] Sınavda matematikten bir puan aldı. Otuz bir iş başvurusundan ret yedi. || Sınavda matematikten 1 puan aldı. 31 iş başvurusundan ret yedi.
+Sonra Alibaba'yı kurdu.
+
+[serious] Jack Ma, bin dokuz yüz altmış dörtte Çin'in Hangzhou şehrinde doğdu. || Jack Ma, 1964'te Çin'in Hangzhou şehrinde doğdu.
+İngilizce öğrenmek için yıllarca bisikletle otele gidip turistlere rehberlik yaptı.
+Üniversite sınavında iki kez başarısız oldu.
+Ancak üçüncü denemede bir öğretmen okuluna girebildi.
+
+[lower, thoughtful] Kendi anlattığına göre mezun olunca otuz bir işe başvurdu, hepsinden ret aldı. || Kendi anlattığına göre mezun olunca 31 işe başvurdu, hepsinden ret aldı.
+Bir fast food zincirine başvuran yirmi dört kişiden yirmi üçü alındı. Alınmayan tek kişi oydu. || Bir fast food zincirine başvuran 24 kişiden 23'ü alındı. Alınmayan tek kişi oydu.
+Harvard'a on kez başvurduğunu ve hepsinde reddedildiğini söyler. || Harvard'a 10 kez başvurduğunu ve hepsinde reddedildiğini söyler.
+
+[serious] İngilizce öğretmeni oldu. Bin dokuz yüz doksan beşte Amerika'da internetle tanıştı. || İngilizce öğretmeni oldu. 1995'te Amerika'da internetle tanıştı.
+[excited] Bin dokuz yüz doksan dokuzda, on sekiz arkadaşıyla kendi dairesinde Alibaba'yı kurdu. || 1999'da, 18 arkadaşıyla kendi dairesinde Alibaba'yı kurdu.
+İki bin on dörtte, halka arzı o güne kadarki en büyük halka arz oldu. || 2014'te, halka arzı o güne kadarki en büyük halka arz oldu.
+
+[softly] Sence reddedilmek mi daha çok öğretir, kazanmak mı?
+Yorumlara yaz.
+Ve bu tür hikâyeleri kaçırmamak için,
+videoyu beğenmeyi ve takip etmeyi unutma.
