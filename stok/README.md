@@ -6,3 +6,4 @@ Her kanal klasöründe: `<NN>_<konu>.mp4` + `stok.md` (sıra, başlık, süre, a
 - Hayatsal: Aziz Sancar, Steve Jobs, Walt Disney
 - Kriminal: D.B. Cooper, Anvers elmas soygunu, Frank Abagnale
 - Osmanlısal: Kahve yasağı (IV. Murat), Lale Devri, Karakoncolos
+- Psikolojik: Kapı etkisi, Kulak kurdu, Zeigarnik etkisi
