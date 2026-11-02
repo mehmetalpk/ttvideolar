@@ -28,6 +28,7 @@ Metricool'da bu hafta yalnızca 3 video var (hepsi 31.10, 15:17–15:44 arası, 
 - Senin İçin oranı %0–10: dağıtım neredeyse hiç FYP'ye çıkmamış. Olası nedenler: yeni hesap + kısa aralıkla toplu yükleme + açıklamalarda #gerçekhikaye (sabit kuralla yasak; 31.10 videolarında kullanılmıştı). Erişim kısıtlaması ŞÜPHESİ var, kesin değil.
 
 ## Uygulanacak kurallar
+- BEĞEN/TAKİP KAPANIŞI (SABİT KURAL — kullanıcı isteği 02.11; haftalık görev bu maddeyi SİLMEZ/DEĞİŞTİRMEZ): Tek parça her videonun sonunda, hikâyenin son cümlesi/sorusundan sonra seslendirmeye şu kapanış eklenir: "Yorumlara yaz. Ve bu tür hikâyeleri kaçırmamak için, videoyu beğenmeyi ve takip etmeyi unutma." Son ~4 sn ekranda atan kırmızı kalp + "+ TAKİP" butonu (nabız halkalı) ve büyük "BEĞEN & TAKİP ET" yazısı gösterilir. Bu kapanış süre hedefine dahil değildir (hikâye 25–38 sn + kapanış ~4 sn). SERİ/PART videolarında (Part 1, Part 2, …) bu kapanış KULLANILMAZ.
 - Video süresi hedefi: 25–38 sn (yeni kısa format). 44–52 sn'lik eski format 31.10'da %6–12 izlendi; devam etme. (değişmedi, veri destekliyor)
 - İlk kare/ilk cümle: hikâyenin en şok edici anı ilk 1,5 sn'de, büyük yazıyla ekranda; giriş/selam/bağlam cümlesi YOK. (yeni: ort. izleme 3–6 sn)
 - Aynı gün iki video arasında en az 4 saat; art arda toplu yükleme yapma. (yeni: 31.10'da 27 dk'da 3 video, FYP %0–10)
@@ -36,4 +37,4 @@ Metricool'da bu hafta yalnızca 3 video var (hepsi 31.10, 15:17–15:44 arası, 
 - Türleri dönüşümlü dene (duygusal, komedi, gerilim, aile dramı, intikam) — en az 2 hafta veri toplanana kadar tek türe yüklenme. (korundu: tür başına <3 video)
 - Havuz boşalınca seçilecek tür: henüz verisi olmayanlar öncelikli → komedi, gerilim, duygusal (eşit sırayla). (korundu/netleşti)
 - Ses: kadın/erkek ses karşılaştırması için veri yok; hikâyenin anlatıcısının cinsiyetine uy.
-- Sabit kurallar (bu dosya değiştirmez): izlenme süresi önceliği, yayın saati = zirve −1 saat, #gerçekhikaye yasağı, yapay zekâ etiketi — skill'deki gibi uygulanır.
+- Sabit kurallar (bu dosya değiştirmez): beğen/takip kapanışı (part videoları hariç), izlenme süresi önceliği, yayın saati = zirve −1 saat, #gerçekhikaye yasağı, yapay zekâ etiketi — skill'deki gibi uygulanır.
