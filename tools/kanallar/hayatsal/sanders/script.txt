@@ -1,0 +1,23 @@
+[intense] Altmış beş yaşında, elinde sadece emekli maaşı ve bir tavuk tarifi vardı. || 65 yaşında, elinde sadece emekli maaşı ve bir tavuk tarifi vardı.
+
+[serious] Harland Sanders, bin sekiz yüz doksanda doğdu. || Harland Sanders, 1890'da doğdu.
+Babasını çok küçük yaşta kaybetti.
+On iki yaşında okulu bıraktı, on üçünde evden ayrıldı. || 12 yaşında okulu bıraktı, 13'ünde evden ayrıldı.
+Tramvay kondüktörlüğü, sigortacılık, lastik satıcılığı... Onlarca iş denedi.
+
+[lower, thoughtful] Bin dokuz yüz otuzda, Kentucky'de bir benzin istasyonunda yolculara yemek yapmaya başladı. || 1930'da, Kentucky'de bir benzin istasyonunda yolculara yemek yapmaya başladı.
+Kızarmış tavuğu öyle sevildi ki, kısa sürede bir restorana dönüştü.
+Elli yaşında, basınçlı tencerede kızartma tarifini son hâline getirdi. || 50 yaşında, basınçlı tencerede kızartma tarifini son hâline getirdi.
+
+[intense] Ama yeni otoyol, restoranın önünden geçmedi. Müşteriler azaldı.
+Restoranı sattı. Ayda yüz beş dolarlık maaşla kaldı. || Restoranı sattı. Ayda 105 dolarlık maaşla kaldı.
+
+[serious] Pes etmek yerine arabasına bindi, restoran restoran dolaşıp tarifini anlattı.
+Sattıkları her tavuktan küçük bir pay aldı.
+[excited] Birkaç yıl içinde altı yüzü aşkın şubeye ulaştı. || Birkaç yıl içinde 600'ü aşkın şubeye ulaştı.
+Bin dokuz yüz altmış dörtte şirketi iki milyon dolara sattı. || 1964'te şirketi 2 milyon dolara sattı.
+
+[softly] Sence başlamak için hiç geç olur mu?
+Yorumlara yaz.
+Ve bu tür hikâyeleri kaçırmamak için,
+videoyu beğenmeyi ve takip etmeyi unutma.
