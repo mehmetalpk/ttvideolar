@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+function night(){radial(540,1000,1200,'#24306a','#070a1c');x.fillStyle='#0b1030';x.fillRect(-60,1500,W+120,500);}
+function clock(cx,cy,s,txt0){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#111';rr(-170,-70,340,140,20);x.fill();x.strokeStyle='#333';x.lineWidth=6;x.stroke();x.font=`800 90px monospace`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#ff3b3b';x.fillText(txt0,0,6);x.restore();}
+const sc=[];
+// 0 HOOK: Baba vs fridge at 3am
+sc.push({a:0,f(t,T){
+  x.save();shake(t,0,1.3,12);
+  night();burst(700,1050,620+20*Math.sin(t*9),'rgba(255,45,85,0.18)',t);
+  x.save();zoom(540,1100,1.04+0.05*t);
+  fridge(790,1290,0.95,{panel:true,T:t,panelState:'deny'});
+  person(BABA,330,1020,190,{angry:1,mouthOpen:0.85,red:0.4+0.2*Math.sin(t*10),look:1,eyeBig:1.1});
+  arm(470,1380,600,1110,52,BABA.shirt,BABA.skin);
+  x.restore();x.restore();
+  clock(800,1330,0.75,'03:00');
+  hook([['BABAM GECE 3\'TE',96,'#fff'],['BUZDOLABIYLA',140,'#ffd23f'],['KAVGA ETTİ!',110,'#fff']],300);
+  bolumBadge(4,175,235,t);
+},capY:1660});
+// 1 Kerem intro
+sc.push({a:mid(1),f(t,T){
+  x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(t,'#39d353',5);
+  x.save();zoom(540,1050,1.02+0.05*t);sunglassesKerem(540,1060,240,{smile:0.5,brow:-0.4});x.restore();
+  bigText('KEREM, 12',540,380,130,'#fff',prog(t,0.05,0.3),-0.04);
+  bigText('"HACKER"',540,540,120,'#39d353',prog(T,W2(1,'hacker')-0.05,W2(1,'hacker')+0.2),0.04);
+},pops:[[0.05],[0.8]]});
+// 2 cardboard smart lock on fridge
+sc.push({a:mid(2),f(t,T){
+  radial(540,800,1300,'#fff0d0','#d9a86a');x.fillStyle='#b07a4a';x.fillRect(-60,1500,W+120,500);
+  x.save();zoom(540,800,1.0+0.12*ease(t/3));fridge(580,1050,1.0,{panel:true,T:t,panelState:'lock'});x.restore();
+  person(KEREM,180,1150,110,{glasses:0,smile:0.6,look:1});
+  bigText('"AKILLI KİLİT"',540,330,120,'#ffd23f',prog(T,W2(2,'akıllı')-0.1,W2(2,'akıllı')+0.2),-0.04);
+},pops:[[0.6]]});
+// 3 chocolates in secret compartment
+sc.push({a:W2(2,'çikolatalarını')-0.12,f(t,T){
+  x.fillStyle='#eaf4ff';x.fillRect(0,0,W,H);x.fillStyle='#cfe0f0';for(let i=0;i<4;i++)x.fillRect(0,500+i*360,W,14);
+  x.save();zoom(540,1000,1.05+0.05*t);
+  x.fillStyle='#2a2d34';rr(190,760,700,460,30);x.fill();x.strokeStyle='#ff2d55';x.lineWidth=10;x.stroke();
+  chocolate(380,1000,1.3,-0.1);chocolate(560,960,1.3,0.12);chocolate(720,1020,1.3,-0.05);
+  lock(540,860,0.6,'#ff2d55');x.restore();
+  bigText('ŞİFRELİ BÖLME',540,420,110,'#fff',prog(T,W2(2,'şifreli')-0.1,W2(2,'şifreli')+0.2),-0.03);
+},pops:[[0.8]]});
+// 4 reveal: tape + string
+sc.push({a:W2(2,'Aslında')-0.12,f(t,T){
+  radial(540,900,1200,'#fff0d0','#c9945a');
+  x.save();zoom(540,1100,1.25);fridge(540,1200,1.0,{string:true});x.restore();
+  bigText('BANT',360,450,150,'#ff5a5a',prog(T,W2(2,'bant')-0.05,W2(2,'bant')+0.2),-0.08);
+  bigText('+ İP',740,470,150,'#ffd23f',prog(T,W2(2,'ipti')-0.05,W2(2,'ipti')+0.2),0.06);
+},pops:[[0.4],[0.8]]});
+// 5 Baba hungry pressing keys at night
+sc.push({a:mid(3),f(t,T){
+  night();
+  x.save();zoom(540,1000,1.0+0.06*t);fridge(720,1150,0.95,{panel:true,T:t,panelState:'lock'});
+  person(BABA,290,1000,170,{smile:-0.2,eyeOpen:0.55,brow:0.2,look:1});
+  const pr=(Math.sin(t*12)+1)/2;arm(400,1260,640-pr*30,860+pr*40,48,BABA.shirt,BABA.skin);x.restore();
+  clock(540,330,0.9,'03:00');
+  if(T>W2(3,'tuşlara')){const r=rng(Math.floor(t*6)+1);bigText('BİP!',300+r()*480,560+r()*120,90,'#ffd23f',1,(r()-0.5)*0.4);}
+},pops:[[1.6],[2.0]]});
+// 6 ACCESS DENIED
+sc.push({a:mid(4),f(t,T){
+  const td=W2(4,'Erişim');x.save();shake(T,td,td+1.2,18);
+  x.fillStyle=(T>td&&Math.floor(T*6)%2)?'#3a0008':'#12040a';x.fillRect(0,0,W,H);
+  x.save();zoom(540,1000,1.0+0.08*t);keypad(540,1000,2.3,T,T>td?'deny':'lock');x.restore();x.restore();
+  bigText('ERİŞİM',540,330,140,'#fff',prog(T,td-0.05,td+0.2),-0.04);
+  bigText('REDDEDİLDİ!',540,490,130,'#ff3b3b',prog(T,W2(4,'reddedildi')-0.05,W2(4,'reddedildi')+0.2),-0.04);
+},pops:[[1.3],[1.8]]});
+// 7 Baba shouting
+sc.push({a:mid(5),f(t,T){
+  x.save();shake(t,0,1.6,24);
+  radial(540,1100,1100,'#ff6a3d','#5a0a10');
+  person(BABA,540,1080,240,{angry:1,mouthOpen:0.95,red:0.7,eyeBig:1.1});
+  x.restore();
+  bigText('BENİM EVİMDE?!',540,400,120,'#fff',prog(t,0.02,0.25),-0.05);
+},sfx:'dum',pops:[[0.02]]});
+// 8 scissors cut
+sc.push({a:mid(6),f(t,T){
+  night();
+  x.save();zoom(540,1000,1.2);fridge(540,1100,1.0,{string:true});x.restore();
+  const tk=W2(6,'kesti'),o=Math.abs(Math.sin(t*7))*0.8;
+  scissors(200+eOut(prog(T,tk-0.8,tk))*200,1120,1.4,T>tk?0.6:o);
+  if(T>tk){burst(560,1080,110,'#ffd23f',t);txt('KIRT!',560,1080,56,'#111',{stroke:false});}
+  bigText('MAKAS!',540,400,150,'#ff5a5a',prog(T,W2(6,'Makası')-0.05,W2(6,'Makası')+0.2),-0.05);
+},pops:[[0.1],[1.3]]});
+// 9 note falls
+sc.push({a:W2(6,'çinden')-0.15,f(t,T){
+  radial(540,900,1100,'#2c3a7a','#0a0f2a');
+  const fp=eOut(prog(t,0,0.6));
+  paper(540,250+fp*700,820,600,-0.06+0.06*fp,[['BABA,',70,'#c0263a',900],['bunu okuyorsan',62],['GÜVENLİK İHLALİ',72,'#c0263a',900],['yaptın.',62],['— Kerem </>',44,'#3b6fb6']],{y0:-200,lh:105});
+  person(BABA,880,1550,120,{eyeBig:1.3,mouthOpen:0.4,brow:1,look:-1});
+},pops:[[0.4],[2.4]]});
+// 10 report
+sc.push({a:mid(7),f(t,T){
+  radial(540,800,1300,'#fff3d6','#e0b070');x.fillStyle='#8a5a3a';x.fillRect(-60,1350,W+120,600);
+  x.save();zoom(540,950,1.0+0.04*t);
+  paper(540,930,840,760,0.03,[['İHLAL RAPORU',76,'#111',900]],{bg:'#ffffff'});
+  const a=W2(7,'Şüpheli'),b=W2(7,'Silah');
+  if(T>a-0.1)paper(540,930,840,760,0.03,[['',1],['',1],['Şüpheli: BABA',68,'#c0263a',900]],{bg:'rgba(0,0,0,0)',y0:-200,lh:70});
+  if(T>b-0.1)paper(540,930,840,760,0.03,[['',1],['',1],['',1],['',1],['Silah: MAKAS',68,'#c0263a',900]],{bg:'rgba(0,0,0,0)',y0:-200,lh:70});
+  x.restore();
+  sunglassesKerem(900,1420,100,{smile:0.5});
+  stamp('GİZLİ',360,1180,70,'#ff2d55',prog(T,a-0.2,a+0.1));
+},pops:[[1.9],[3.0]]});
+// 11 Baba signs: punishment
+sc.push({a:mid(8),f(t,T){
+  radial(540,800,1300,'#fff3d6','#e0b070');x.fillStyle='#8a5a3a';x.fillRect(-60,1350,W+120,600);
+  person(BABA,540,620,130,{smile:0.5,brow:-0.5,eyeOpen:0.6,lookDown:1});
+  paper(540,1090,800,520,-0.02,[['İHLAL RAPORU',56,'#111',900],['imza: Baba ✓',50,'#3b6fb6']],{bg:'#fff',y0:-170,lh:80});
+  const c0=W2(8,'"Ceza');stamp('CEZA:',540,1110,70,'#c0263a',prog(T,c0-0.1,c0+0.15),-0.1);
+  stamp('1 HAFTA İNTERNET YOK',540,1230,60,'#c0263a',prog(T,W2(8,'internet')-0.1,W2(8,'internet')+0.15),-0.08);
+  if(T>W2(8,'yok'))bigText('NOOO!',820,420,100,'#ff3b3b',prog(T,W2(8,'yok'),W2(8,'yok')+0.2),0.1);
+},pops:[[2.2],[3.4]]});
+// 12 Anne quietly brings box
+sc.push({a:mid(9),f(t,T){
+  x.fillStyle='#1a1530';x.fillRect(0,0,W,H);
+  x.fillStyle='#ffe7a8';x.globalAlpha=0.9;x.beginPath();x.moveTo(380,300);x.lineTo(700,300);x.lineTo(900,1600);x.lineTo(180,1600);x.fill();x.globalAlpha=1;
+  x.fillStyle='#3a2a1a';rr(360,280,360,1320,10);x.stroke();
+  const z=1+0.2*ease(t/3.4);x.save();zoom(540,1050,z);
+  person(ANNE,540,880,150,{smile:0.35,eyeOpen:0.55,brow:-0.3,look:1});
+  box(540,1240,0.95,t);x.restore();
+  radial(540,1000,900,'rgba(0,0,0,0)','rgba(0,0,0,0.65)');
+  bigText('ÇOK SESSİZCE...',540,360,100,'#c9b8ff',prog(T,W2(9,'sessizce')-0.05,W2(9,'sessizce')+0.2));
+},sfx:'dum',pops:[[2.6,'dum']]});
+// 13 end card
+sc.push({a:mid(10),f(t,T){
+  radial(540,900,1200,'#3b2d6e','#0b0820');burst(540,800,700,'rgba(255,45,85,0.12)',t);
+  endCard(5,'YARIN',st(10)-0.1,T);
+},pops:[[0.05],[0.25],[0.6]]});
+setup(sc,TIM,en(10)+0.7);
+</script></body></html>
