@@ -10,3 +10,4 @@ Her kanal klasöründe: `<NN>_<konu>.mp4` + `stok.md` (sıra, başlık, süre, a
 - Sporsal: İstanbul 2005 (Liverpool-Milan), Hakan Şükür 11 saniye, Naim Süleymanoğlu, Kimi Antonelli 2026 şampiyonluğu
 - Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni, Mona Lisa hırsızlığı, Michelangelo Davut
 - Parasal: Almanya 1923 hiperenflasyon, Bitcoin pizza, Lale çılgınlığı
+- Yemeksel: Döner/İskender, Kruvasan efsanesi, Hacı Bekir lokum
