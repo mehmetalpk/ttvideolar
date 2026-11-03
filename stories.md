@@ -5,3 +5,5 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-10-31 | Partiye katılmadım, hayatımın kadını bilgisayarıyla geldi (Part 1) | kaynak kaydı yok (Metricool'dan tespit edildi) | ?
 - 2026-10-31 | İnterneti yokmuş, meğer uçak modunu kendisi açmış (Part 2, aynı seri) | kaynak kaydı yok (Metricool'dan tespit edildi) | ?
 - 2026-11-02 | Babamın telefonunda 214 mesaj buldum | r/stories u/shahroz_aslam_ (havuz) | duygusal/aile | erkek (Emrullah Tuna) | 36.5 | 17:00 | TikTok+YouTube+Instagram
+- 2026-11-03 | Hacker kardeşim Wi-Fi şifresini değiştirdi [Part 1/3] | r/stories u/Chocolate_cerealpuff (havuz, Fiction) | komedi/seri | erkek (Emrullah Tuna) | 41.3 | 09:00 | TikTok+YouTube+Instagram
+- 2026-11-03 | Babamın şifresi kardeşimin dosyasında çıktı [Part 2/3] | r/stories u/Chocolate_cerealpuff (havuz, Fiction) | komedi/seri | erkek (Emrullah Tuna) | 42.4 | 17:00 | TikTok+YouTube+Instagram
