@@ -4,7 +4,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 ## Bekleyen
 ### DİZİ: Hacker Kerem (komedi) — Part 1-2 kaynak hikâyeden, Part 3 kaynak finali (ucu açık), Bölüm 4+ ÖZGÜN devam (aynı karakterler)
-- Tür: DİZİ (uzun soluklu). YAYIN KURALLARI günlük görev talimatındaki "DİZİ KURALLARI (Hacker Kerem)" bölümündedir — onu uygula (YouTube+Instagram bir bölüm önde gider; TikTok bölümü bir gün sonra "devamı YouTube'da" kapanışıyla alır).
+- Tür: DİZİ (uzun soluklu). YAYIN KURALLARI günlük görev talimatındaki "DİZİ KURALLARI (Hacker Kerem)" bölümündedir — onu uygula (tüm platformlar aynı bölümü aynı saatte alır; YouTube yönlendirmesi YOK).
 - Bölüm 4'ten itibaren hikâye özgündür: açıklamada "Reddit'ten uyarlanmıştır" YERİNE "Reddit'teki bir hikâyeden ilham alınmıştır." yaz. Her bölüm tek başına anlaşılır olsun (ilk cümle kanca + tek cümlelik "Kerem, 12 yaşında kendini hacker sanan kardeşim" tanıtımı), sonu küçük bir kancayla bitsin.
 - Kaynak: r/stories, u/Chocolate_cerealpuff — "My little brother tried to become a hacker and accidentally started a family war" (Reddit'te **Fiction** etiketli)
 - Anlatıcı: erkek, abi Emre (ses: Emrullah Tuna). Kardeş: Kerem, 12 yaşında. Marka adı YOK: Minecraft → "blok oyunu sunucusu", PlayStation → "oyun konsolu", Discord → "sohbet grubu", YouTube → "internet videoları".
