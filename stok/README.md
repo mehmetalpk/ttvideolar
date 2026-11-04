@@ -9,6 +9,6 @@ Her kanal klasöründe: `<NN>_<konu>.mp4` + `stok.md` (sıra, başlık, süre, a
 - Psikolojik: Kapı etkisi, Kulak kurdu, Zeigarnik etkisi, Spot ışığı etkisi, Sıklık yanılsaması (Baader-Meinhof)
 - Sporsal: İstanbul 2005 (Liverpool-Milan), Hakan Şükür 11 saniye, Naim Süleymanoğlu, Kimi Antonelli 2026 şampiyonluğu, Maracanazo 1950 (Uruguay-Brezilya), Bob Beamon 1968 uzun atlama
 - Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni, Mona Lisa hırsızlığı, Michelangelo Davut, Van Gogh Yıldızlı Gece, John Cage 4'33"
-- Parasal: Almanya 1923 hiperenflasyon, Bitcoin pizza, Lale çılgınlığı, Ronald Wayne (Apple %10 → 800$)
+- Parasal: Almanya 1923 hiperenflasyon, Bitcoin pizza, Lale çılgınlığı, Ronald Wayne (Apple %10 → 800$), Blockbuster-Netflix (50 milyon $ teklif)
 - Yemeksel: Döner/İskender, Kruvasan efsanesi, Hacı Bekir lokum
 - Motivasyonel: 66 gün kuralı (alışkanlık), Kimse gelmeyecek
