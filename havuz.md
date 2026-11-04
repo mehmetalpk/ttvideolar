@@ -3,7 +3,7 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
-> **KAPANIŞ SESİ — KULLANICI GERİ BİLDİRİMİ (4 Kasım, günlük görevdeki kapanış cümlelerinin YERİNE geçer):** Beğeni kapısı kapanışında heyecanlı/bağıran ton KULLANMA. Seslendirme: "[warm, playful] Part <sonraki numara>... <iki/üç> bin beğeni gelirse geliyor." (ör. "Part beş... üç bin beğeni gelirse geliyor."). Ekranda: "3K BEĞENİ" + altında sarı "= PART <n>" (Part 1 için "2K BEĞENİ = PART 2"). Bu kısa klibin ses seviyesini hikâye sesinden YÜKSEK yapma (gerekirse -5 dB). Açıklamadaki satır: "Part <n>, 3K beğeni gelirse geliyor 👀".
+> **KAPANIŞ SESİ — KULLANICI GERİ BİLDİRİMİ (4 Kasım, günlük görevdeki kapanış cümlelerinin YERİNE geçer):** Beğeni kapısı kapanışında heyecanlı/bağıran ton KULLANMA. Seslendirme: "[warm, playful] Part <sonraki numara>... <iki/üç> bin beğeni gelirse geliyor." (ör. "Part beş... üç bin beğeni gelirse geliyor."). Ekranda: "3K BEĞENİ" + altında sarı "= PART <n>" (Part 1 için "2K BEĞENİ = PART 2"). Bu kısa klibin ses seviyesini hikâye sesinden YÜKSEK yapma (gerekirse -5 dB). Açıklamadaki satır: "Part <n>, 3K beğeni gelirse geliyor 👀 Hatırlatılmasını istiyorsan yorumlara \"hatırlat\" yaz 💬". Kapı cümlesinden sonra ikinci kısa klip: "[warm, playful] Hatırlatılmasını istiyorsan, yorumlara hatırlat yaz." + son sahnede beyaz konuşma balonu içinde "YORUMLARA \"HATIRLAT\" YAZ 💬" (ses -5 dB).
 
 ## Bekleyen
 ### DİZİ: Hacker Kerem (komedi) — Part 1-2 kaynak hikâyeden, Part 3 kaynak finali (ucu açık), Bölüm 4+ ÖZGÜN devam (aynı karakterler)
