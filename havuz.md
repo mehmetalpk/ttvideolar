@@ -3,6 +3,8 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> SES EFEKTİ YASAĞI (kullanıcı isteği, 4 Kas 21:34 — promptta "SES EFEKTİ" maddesinin ÖNÜNE geçer): İzleyiciler bip/pop seslerinden şikâyet ediyor. Videolara HİÇBİR sentez bip, pop, tık, "ding" sesi KOYMA (karaoke kelime geçişlerinde, yazı pop'larında, sahne geçişlerinde dahil). Sadece seslendirme. İstersen gerilimde çok kısık (−20 dB) tek bir düşük "dum" ya da yumuşak whoosh, videoda en fazla 2–3 kez. Emin değilsen hiç efekt koyma.
+
 > BEĞENİ EŞİĞİ (kullanıcı isteği, 4 Kas 21:33 — diğer tüm notların ÖNÜNE geçer): TÜM kapılar 1K (bin) beğeni. Part 1 → 1K, Part 2 → 1K, devam bölümleri → 1K. Seslendirme: "[warm, playful] Part <n>... bin beğeni gelirse geliyor." Ekran: "1K BEĞENİ = PART <n>". Açıklama: "Part <n>, 1K beğeni gelirse geliyor 👀". Notlarda geçen 2K/3K ifadeleri ESKİDİR. (Bölüm 4 videosunda 3K yazıyor ama kontrol eşiği 1K sayılır.)
 
 > SÜRE KURALI (kullanıcı isteği, 4 Kas 17:00 — TÜM Redditsel videolar için geçerli): Videolar çok kısa kalıyordu (~40 sn). Bundan sonra her video kapanış dahil 70–85 sn olacak. Seslendirme metni ~190–230 kelime (atempo 1.1 sonrası ~65–78 sn konuşma + ~6.5 sn kapanış). Uzatmayı dolgu cümleyle değil, olayla yap: her bölüme 1 ekstra sahne/diyalog, 1 ara gerilim ya da komik an, karakterlere kısa replik. Hook ilk 2 sn'de kalır, tempo düşmez; sahne başına ~4–6 sn, aynı görsel 7 sn'den uzun durmaz. Seri dışı tek videolar da aynı süreye uyar.

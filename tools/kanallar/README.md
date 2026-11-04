@@ -20,6 +20,7 @@ window.frame=function(i,t){draw(i,t);return c.toDataURL('image/jpeg',0.92).split
 ElevenLabs eleven_v4, Emrullah Tuna QftNgZhlSOYKrYbk7WR7 (varsayılan erkek anlatıcı). `atempo=1.1` + baş sessizlik kırpma. Zamanlama: silencedetect noise=-35dB:d=0.18 → konuşma segmentleri; her segmentin hece tahmini = süre × (toplam hece / toplam konuşma süresi); cümleleri segmentlere elle eşleştir (otomatik DP güvenilmez). PH zamanı = segment başı − 0.06.
 
 ## sfx / mux
+> KULLANICI İSTEĞİ (4 Kas): bip/pop sesi YOK. sfx.py'nin sahne başı pop/whoosh'larını KULLANMA; videoda sadece seslendirme. En fazla gerilim anında çok kısık (volume=0.15) 1–2 düşük "dum". Emin değilsen sfx hiç ekleme (mux sırasında sadece ses dosyasını kullan).
 `python3 sfx.py '<sahne başlangıçları + bitiş JSON>' '<dum zamanları JSON>' audio/sfx.wav 0.8`
 `ffmpeg -f concat -safe 0 -i out/list.txt -i audio/voice_fast.mp3 -i audio/sfx.wav -filter_complex "[1:a]apad[v];[2:a]volume=0.6[s];[v][s]amix=inputs=2:normalize=0:duration=first[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -shortest out.mp4`
 
