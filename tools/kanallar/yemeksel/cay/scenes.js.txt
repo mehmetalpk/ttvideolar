@@ -1,0 +1,18 @@
+function bgC(){bgDoc('#4a1a0c','#120604');}
+shot(0,0,t=>{bgC();spot(540,900,620,0.45,'255,150,80');rays(540,900,t,'rgba(255,160,90,0.10)');teaGlass(540,920,1.9+t*0.03,1,t);bigText('ÇAY ÜLKESİ',W/2,300,130,'#ffd23f',1);bigText('NASIL OLDUK?',W/2,440,100,'#fff',1);vignette(0.4);});
+shot(1,1,t=>{bgWarm();spot(540,900,500,0.35);const k=eOut(cl(t*1.5));tCup(540-260*k,950,1.4);teaGlass(540+260*k,930,1.2*k+0.01,1,t,0);bigText('100 YIL ÖNCE',W/2,300,120,'#fff',1);bigText('KAHVE!',W/2,440,130,'#ffd23f',eOut(cl((t-1)*3)));});
+shot(2,2,t=>{blockade(t);yearStamp('1914–18','ABLUKA',eOut(cl(t*2.5)),520);});
+shot(3,3,t=>{worldMap(t);x.fillStyle='rgba(0,0,0,0.45)';x.fillRect(0,0,W,H);mapArrow(780,1060,560,700,eOut(cl(t*1.2)),'#ff3b3b');sackT(780,1060,0.7,'#c9a46a','YEMEN');stampX(780,1060,1.2,cl((t-1.8)*3));bigText('YEMEN ELDEN ÇIKTI',W/2,330,90,'#fff',1);});
+shot(4,4,t=>{bgWarm();tCup(540,820,1.6);priceTag(540,560,'PAHALI',90);stampT('YOK',540,1130,cl((t-1.0)*3),'#ff3b3b',130);});
+shot(5,5,t=>{teaHills(1250,t);bigText('KARADENİZ',W/2,330,140,'#fff',1);});
+shot(6,6,t=>{bgDoc('#2a2420','#0d0b08');scroll(540,860,1.1,cl(t*2),'KANUN');yearStamp('1924','RİZE',eOut(cl((t-0.8)*2.5)),420);});
+shot(7,7,t=>{teaHills(1250,t);x.fillStyle='rgba(20,30,10,0.35)';x.fillRect(0,0,W,H);sil(540,1250,2.6,'#142010');bigText('ZİHNİ DERİN',W/2,320,130,'#ffd23f',1);bigText('ZİRAAT MÜHENDİSİ',W/2,450,75,'#fff',eOut(cl((t-0.8)*3)));});
+shot(8,8,t=>{teaHills(1250,t);const k=cl(t/4);for(let i=0;i<14;i++){const px=120+i*62,py=500+((t*300+i*90)%600);x.fillStyle='#5a3a1a';x.beginPath();x.ellipse(px,py,10,14,0,0,7);x.fill();}yearStamp('1937','TOHUMLAR',eOut(cl(t*2.5)),480);});
+shot(9,9,t=>{teaHills(1250,t);for(let i=0;i<9;i++)teaLeaf(160+i*95,760+Math.sin(t*3+i)*30,1.3,Math.sin(t+i)*0.6);bigText('İLK YAPRAKLAR',W/2,330,115,'#fff',1);bigText('1938',W/2,1120,120,'#ffd23f',eOut(cl((t-0.8)*3)));});
+shot(10,10,t=>{bgDoc('#2a2420','#0d0b08');letterP(540,900,0.9,-0.05);stampT('ÇAY KANUNU',540,1000,cl((t-0.6)*3),'#c1121f',90);yearStamp('1940','',eOut(cl(t*2.5)),420);});
+shot(11,11,t=>{teaHills(1250,t);people(4,540,1250,1.6,'#1a2a14');for(let i=0;i<5;i++)teaLeaf(200+i*170,1100+Math.sin(t*4+i)*10,1.0,0.3);badge(540,560,'ALIM GARANTİSİ',' #2a9d4a'.trim(),eOut(cl((t-0.8)*3)));bigText('FİDAN + GARANTİ',W/2,330,100,'#ffd23f',1);});
+shot(12,12,t=>{bgDoc('#7aa6c9','#e9d6b0');x.fillStyle='#3a8a40';x.fillRect(0,1150,W,800);factory(540,1150,1.2,t);yearStamp('1947','İLK FABRİKA',eOut(cl(t*2.5)),420);});
+shot(13,13,t=>{bgC();spot(540,900,500,0.4,'255,150,80');const f=cl(t/2.5);teaGlass(540,860,2.0,f,t);bigText('İNCE BELLİ',W/2,330,130,'#ffd23f',1);});
+shot(14,14,t=>{bgWarm();tableP(540,1180,900);caydanlik(260,1020,0.85,t);[480,660,840].forEach((a,i)=>teaGlass(a,922,0.65,1,t,1));bigText(['MİSAFİR','SOHBET','KAHVALTI'][Math.min(2,Math.floor(t/1.3))],W/2,360,130,'#ffd23f',1);});
+shot(15,16,t=>{bgC();teaGlass(330,1180,0.8,1,t);teaGlass(740,1180,0.8,1,t);frameText(['Günde kaç','bardak?'],650,t,eOut(cl(t*3)));});
+shot(17,17,t=>cta(t));
