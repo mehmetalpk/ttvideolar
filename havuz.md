@@ -3,6 +3,11 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> PLATFORMA ÖZEL KAPANIŞ (kullanıcı isteği, 5 Kas 01:50 — KAPANIŞ SESİ / GÜNCELLEME notlarındaki "hatırlat yaz" kısmının yerine geçer): Her video İKİ sürüm render edilir, sadece kapanış ekranı ve 2. kapanış cümlesi farklıdır.
+>  - INSTAGRAM sürümü: 1) "[warm, playful] Part <n>... bin beğeni gelirse geliyor." 2) "[warm, playful] Part <n> hakkında bilgi almak için bana DM'den part yaz. Bir de bu videoyu, merak edecek bir arkadaşına gönder." Ekran: "1K BEĞENİ = PART <n>" + balon "DM'DEN "PART" YAZ 📩" + altında küçük "ARKADAŞINA GÖNDER ➤". IG açıklaması: "Part <n>, 1K beğeni gelirse geliyor 👀 Haber almak için DM'den "PART" yaz 📩"
+>  - TIKTOK + YOUTUBE sürümü: 1) aynı. 2) "[warm, playful] Kaçırmamak için kaydet ve takip et." Ekran: "1K BEĞENİ = PART <n>" + balon "KAYDET 🔖 + TAKİP ET". Açıklama: "Part <n>, 1K beğeni gelirse geliyor 👀 Kaçırmamak için kaydet 🔖 takip et"
+>  - Planlama: aynı saatte İKİ ayrı gönderi: (a) sadece instagram + IG sürümü, (b) tiktok + youtube + TT/YT sürümü. Beğeni kapısı yine sadece TikTok beğenisine bakar.
+
 > SES EFEKTİ YASAĞI (kullanıcı isteği, 4 Kas 21:34 — promptta "SES EFEKTİ" maddesinin ÖNÜNE geçer): İzleyiciler bip/pop seslerinden şikâyet ediyor. Videolara HİÇBİR sentez bip, pop, tık, "ding" sesi KOYMA (karaoke kelime geçişlerinde, yazı pop'larında, sahne geçişlerinde dahil). Sadece seslendirme. İstersen gerilimde çok kısık (−20 dB) tek bir düşük "dum" ya da yumuşak whoosh, videoda en fazla 2–3 kez. Emin değilsen hiç efekt koyma.
 
 > BEĞENİ EŞİĞİ (kullanıcı isteği, 4 Kas 21:33 — diğer tüm notların ÖNÜNE geçer): TÜM kapılar 1K (bin) beğeni. Part 1 → 1K, Part 2 → 1K, devam bölümleri → 1K. Seslendirme: "[warm, playful] Part <n>... bin beğeni gelirse geliyor." Ekran: "1K BEĞENİ = PART <n>". Açıklama: "Part <n>, 1K beğeni gelirse geliyor 👀". Notlarda geçen 2K/3K ifadeleri ESKİDİR. (Bölüm 4 videosunda 3K yazıyor ama kontrol eşiği 1K sayılır.)
