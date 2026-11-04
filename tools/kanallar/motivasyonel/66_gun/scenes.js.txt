@@ -1,0 +1,13 @@
+function dayGrid(n,lit,cy,cols=11,col='#5fe08a'){const s=72;for(let i=0;i<n;i++){const cx=540-(cols-1)*s/2+(i%cols)*s,yy=cy+Math.floor(i/cols)*s;x.fillStyle=i<lit?col:'#2a2a2a';rr(cx-30,yy-30,60,60,10);x.fill();}}
+shot(0,0,t=>{blk();bigText('21 GÜN',W/2,560,240,'#fff',1);stampX(540,560,2.2,cl(t*3)+0.6);slam('YALAN',860,170,'#ff2d2d',t);});
+shot(1,1,t=>{blk();calendar(540,800,t,-1);stampX(540,800,2,cl((t-0.4)*3));bigText('KAZANILMAZ',W/2,330,110,'#fff',1);});
+shot(2,2,t=>{blk();if(t<2.6){rays(540,600,t,'rgba(255,210,63,0.1)');bigText('LONDRA',W/2,600,170,'#ffd23f',back(cl(t*2))+0.01);bigText('UCL ARAŞTIRMASI',W/2,780,80,'#fff',eOut(cl((t-0.6)*3)));}else{people(8,540,1150,1.0,'#444',120,-1);counter(0,96,eOut(cl((t-2.6)/1)),W/2,560,200,'#ffd23f');bigText('GÖNÜLLÜ',W/2,760,90,'#fff',1);}});
+shot(3,3,t=>{blk();dayGrid(66,Math.floor(66*cl(t/3.5)),560,11);slam('66 GÜN',330,170,'#5fe08a',t-1.5>0?t-1.5:9);});
+shot(4,4,t=>{blk();bigText('18',300,700,220,'#ffd23f',1);bigText('GÜN',300,880,70,'#fff',1);bigText('254',780,700,220,'#ff4d4d',eOut(cl((t-1.6)*3)));bigText('GÜN',780,880,70,'#fff',eOut(cl((t-1.6)*3)));bigText('HERKES FARKLI',W/2,330,100,'#fff',1);});
+shot(5,5,t=>{blk();dayGrid(66,21,560,11,'#ffd23f');x.strokeStyle='#ff2d2d';x.lineWidth=10;const k=eOut(cl(t*2));rr(540-5*72-36,560-36,11*72*k,144,14);x.stroke();slam('SADECE 1/3',330,150,'#ffd23f',t);});
+shot(6,6,t=>{blk();dayGrid(33,33,640,11);x.fillStyle='#120303';rr(540-1*72-34,640+72-34,68,68,10);x.fill();x.strokeStyle='#ff4d4d';x.lineWidth=6;rr(540-1*72-30,640+72-30,60,60,10);x.stroke();bigText('1 GÜN KAÇTI',W/2,330,120,'#ff4d4d',1);bigText('SORUN YOK',W/2,1050,110,'#5fe08a',eOut(cl((t-1.5)*3)));});
+shot(7,7,t=>{blk();if(t<1.8){slam('MÜKEMMEL',600,150,'#666',t);stampX(540,600,2,cl((t-0.6)*3));}else{stepsUp(7,7,t);slam('GERİ DÖN',380,170,'#5fe08a',t-1.8);}});
+shot(8,8,t=>{blk();rays(540,800,t,'rgba(95,224,138,0.12)');slam('66',760,380,'#5fe08a',t);bigText('İKİ AYDAN BİRAZ FAZLA',W/2,1060,70,'#fff',eOut(cl((t-0.8)*3)));});
+shot(9,9,t=>{blk();victory(540,1180,1.6,'#ffd23f');bigText('BUGÜN BAŞLA',W/2,330,120,'#fff',1);});
+shot(10,10,t=>{blk();dayGrid(66,Math.floor(66*cl(t/2.5)),700,11);frameText(['Hangi','alışkanlık?'],440,t,eOut(cl(t*3))+0.2);});
+shot(11,12,t=>cta(t));
