@@ -1,0 +1,20 @@
+function bgLk(){bgDoc('#3a1428','#10050c');}
+shot(0,0,t=>{bgLk();spot(540,900,600,0.4,'255,160,200');lokumPile(330,1100,0.9);beans(t,10,700,1100);bigText('LOKUM',W/2,300,130,'#ffb6d0',1);bigText('→ JELİBON?',W/2,440,110,'#ffd23f',1);vignette(0.4);});
+shot(1,1,t=>{bgLk();yearStamp('1777','İSTANBUL',eOut(cl(t*2.5)),760);});
+shot(2,2,t=>{sky();mosque(540,1250,1.3,'#6a7a8a');x.fillStyle='#2d5d7a';x.fillRect(0,1250,W,H);sil(820,1250,2.0,'#2a1a10');bigText('KASTAMONU → İSTANBUL',W/2,300,75,'#fff',1);bigText('BEKİR EFENDİ',W/2,420,100,'#ffd23f',1);});
+shot(3,3,t=>{bgShop();shopFront(540,1250,1.2,'#7a1d2e','ŞEKERCİ');bigText('BAHÇEKAPI',W/2,330,130,'#ffd23f',1);});
+shot(4,4,t=>{bgWarm();jar(300,900,1.2,'#c98a2a','BAL');jar(540,900,1.2,'#5a2a14','PEKMEZ');jar(780,900,1.2,'#efe6d2','UN');bigText('ESKİ TARİF',W/2,330,130,'#fff',1);});
+shot(5,5,t=>{bgWarm();jar(360,900,1.3,'#ffffff','ŞEKER');jar(720,900,1.3,'#f3efe6','NİŞASTA');bigText('YENİ TARİF',W/2,330,130,'#ffd23f',1);});
+shot(6,6,t=>{bgLk();rays(540,900,t,'rgba(255,180,210,0.12)');lokumC(540,900,2.6+Math.sin(t*3)*0.05,'#f7b6c8');bigText('GÜL KOKULU',W/2,330,130,'#ffb6d0',1);});
+shot(7,7,t=>{bgDoc('#3a2a1c','#120c06');x.fillStyle='#c9a24a';x.fillRect(240,800,600,360);x.fillStyle='#8a1e2a';x.beginPath();x.moveTo(200,800);x.lineTo(540,560);x.lineTo(880,800);x.fill();lokumPile(540,1080,0.6);bigText('SARAYA',W/2,300,130,'#ffd23f',1);bigText('ŞEKERCİBAŞI',W/2,430,95,'#fff',1);});
+shot(8,8,t=>{bgLk();spot(540,950,500,0.35);sil(540,1250,2.4,'#1a0a10');bigText('HACI BEKİR',W/2,330,140,'#ffd23f',1);});
+shot(9,9,t=>{bgDoc('#3a6a8a','#123048');waves(1200,t,'#1d4f6e');shipS(300+t*60,1150,1.0,t);giftBox(820,880,0.8);bigText('İNGİLTERE\'YE',W/2,300,110,'#fff',1);});
+shot(10,10,t=>{bgLk();giftBox(540,950,1.2);lokumPile(540,780,0.5);bigText('TURKISH DELIGHT',W/2,330,95,'#ffd23f',1);});
+shot(11,11,t=>{bgDoc('#2a3a5a','#0c1424');lokumPile(540,1050,0.9);for(let i=0;i<6;i++)sil(120+i*170,1350,1.0,'#1a2030');bigText('AVRUPA BAYILDI',W/2,330,110,'#ff7ab6',1);});
+shot(12,12,t=>{bgDoc('#2a3a5a','#0c1424');pot(540,950,1.2,t,'#d8b0c0');qmarks(540,620,t,3);stampT('TUTMADI',540,1150,cl((t-1.8)*3),'#ff3b3b',100);bigText('TAKLİT DENEMESİ',W/2,330,95,'#fff',1);});
+shot(13,13,t=>{bgDoc('#2a3a5a','#0c1424');rays(540,900,t,'rgba(255,215,120,0.12)');const cols=['#e63946','#ffd23f','#5fe08a','#ff7ab6','#f4a261'];for(let i=0;i<5;i++){x.fillStyle=cols[i];rr(220+i*130,860+Math.sin(t*3+i)*10,100,100,30);x.fill();}bigText('JEL ŞEKERİ',W/2,330,140,'#ffd23f',1);});
+shot(14,14,t=>{bgDoc('#3a1428','#10050c');const k=eOut(cl(t/2.5));lokumC(380,900,1.6,'#f7b6c8');bigText('+',540,900,120,'#fff',1);jbean(720,900,3.0,'#e63946',0.2);bigText('YUMUŞAK İÇ + KABUK',W/2,330,80,'#fff',1);});
+shot(15,15,t=>{bgDoc('#3a1428','#10050c');beans(t,40,560,1250);bigText('JELİBON!',W/2,330,150,'#ffd23f',back(cl(t*2)));});
+shot(16,17,t=>{bgShop();shopFront(540,1250,1.2,'#7a1d2e','ŞEKERCİ');rays(540,800,t,'rgba(255,215,120,0.10)');bigText(t<3.6?'HÂLÂ AÇIK':'200+ YIL',W/2,330,140,'#ffd23f',1);});
+shot(18,18,t=>{bgLk();lokumC(360,1220,0.9,'#f7b6c8');jbean(720,1220,2.2,'#e63946',0.2);frameText(['Lokum mu,','jelibon mu?'],650,t,eOut(cl(t*3)));});
+shot(19,20,t=>cta(t));

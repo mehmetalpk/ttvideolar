@@ -1,0 +1,17 @@
+function bgK(){bgDoc('#1e2a3a','#080c12');}
+shot(0,0,t=>{bgK();spot(540,880,600,0.45,'255,200,120');croissant(540,920,1.6+t*0.03,Math.sin(t)*0.05);crescent(860,560,70,'#fff');bigText('KRUVASAN',W/2,300,140,'#ffd23f',1);bigText('+ OSMANLI ?',W/2,440,100,'#fff',1);vignette(0.4);});
+shot(1,1,t=>{bgK();vienna(1250);tents(1450,t);yearStamp('1683','VİYANA KUŞATMASI',eOut(cl(t*2.5)),560);});
+shot(2,2,t=>{bgDoc('#0e1420','#05070c');x.fillStyle='#ffe6a8';x.beginPath();x.arc(860,300,60,0,7);x.fill();vienna(1100);x.fillStyle='rgba(255,180,80,0.7)';x.fillRect(320,1000,90,70);baker(260,1250,1.4);baker(420,1250,1.4);bigText('GECE, FIRINDA',W/2,400,100,'#fff',1);bigText('EFSANEYE GÖRE',W/2,520,70,'#ffd23f',1);});
+shot(3,3,t=>{bgDoc('#0e1420','#05070c');vienna(1050);tunnel(t);bigText('TÜNEL!',W/2,330,160,'#ff6b6b',1);});
+shot(4,4,t=>{bgDoc('#0e1420','#05070c');vienna(1250);for(let i=0;i<4;i++){const k=((t*1.5+i/4)%1);x.strokeStyle=`rgba(255,80,80,${1-k})`;x.lineWidth=8;x.beginPath();x.arc(540,700,80+k*400,0,7);x.stroke();}baker(400,1250,1.4);baker(680,1250,1.4);bigText('ALARM',W/2,330,150,'#ff4d4d',1);bigText('ŞEHİR KURTULDU',W/2,480,80,'#fff',eOut(cl((t-1.4)*3)));});
+shot(5,5,t=>{bgK();crescentFlag(400,800,1.1,t);croissant(800,1120,0.9,0.1);bigText('HİLAL ŞEKLİ',W/2,300,120,'#ffd23f',1);});
+shot(6,6,t=>{bgK();spot(540,880,500,0.4);const b=cl((t-1.2)*2);croissant(540,900,1.4,0);if(b>0){x.fillStyle='#1e2a3a';x.beginPath();x.arc(760,780,120*b,0,7);x.fill();}bigText('HİLALİ YEDİLER',W/2,330,110,'#ffd23f',1);});
+shot(7,7,t=>{bgK();croissant(540,900,1.2,0);bigText('HARİKA, DEĞİL Mİ?',W/2,330,100,'#fff',1);});
+shot(8,8,t=>{bgDoc('#2a2420','#0d0b08');docs(540,880,t);stampT('BELGE YOK',540,900,cl((t-0.6)*3),'#ff3b3b',120);bigText('TARİHÇİLER',W/2,330,130,'#fff',1);});
+shot(9,9,t=>{bgDoc('#2a2420','#0d0b08');scroll(540,760,1.0,cl(t*2),'1227');croissant(540,1150,0.8,0,'#c8a060');bigText('YÜZYILLAR ÖNCE',W/2,300,110,'#ffd23f',1);bigText('"KIPFERL"',W/2,440,90,'#fff',1);});
+shot(10,10,t=>{bgDoc('#3a4a6a','#151c2a');x.fillStyle='#2a3448';x.fillRect(470,500,140,750);x.beginPath();x.moveTo(440,520);x.lineTo(540,250);x.lineTo(640,520);x.fill();x.fillRect(380,1150,320,100);bigText('ASIL DOĞUM YERİ',W/2,300,95,'#fff',1);bigText('PARİS',W/2,1150,130,'#ffd23f',1);});
+shot(11,11,t=>{bgDoc('#3a4a6a','#151c2a');x.fillStyle='#4a3a2a';x.fillRect(0,1250,W,H);parisShop(540,1250,1.1);sil(860,1250,1.6,'#1a1410');yearStamp('1838',"AUGUST ZANG",eOut(cl(t*2.5)),420);});
+shot(12,12,t=>{bgDoc('#3a4a6a','#151c2a');croissant(540,880,1.3,0);bigText('CROISSANT',W/2,330,120,'#ffd23f',1);bigText('= HİLAL',W/2,1150,110,'#fff',eOut(cl((t-1.5)*3)));});
+shot(13,13,t=>{bgK();rays(540,880,t,'rgba(255,215,120,0.12)');croissant(540,900,1.5,0);x.strokeStyle='rgba(255,240,200,0.6)';x.lineWidth=6;for(let i=0;i<5;i++){x.beginPath();x.arc(540,1000,180+i*22,Math.PI*1.15,Math.PI*1.85);x.stroke();}bigText('KAT KAT',W/2,330,140,'#ffd23f',1);});
+shot(14,14,t=>{bgK();crescent(330,1200,80,'#fff');croissant(760,1200,0.6,0);frameText(['Zafer ekmeği mi,','efsane mi?'],650,t,eOut(cl(t*3)));});
+shot(15,16,t=>cta(t));
