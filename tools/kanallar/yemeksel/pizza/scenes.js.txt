@@ -1,0 +1,20 @@
+function bgP(){bgDoc('#3a140c','#100503');}
+function sigScrib(cx,cy,w,t,p){x.strokeStyle='#1a2a5a';x.lineWidth=6;x.beginPath();const n=Math.floor(40*p);for(let i=0;i<=n;i++){const px=cx-w/2+i*w/40,py=cy+Math.sin(i*1.3)*22+Math.sin(i*0.4)*10;i?x.lineTo(px,py):x.moveTo(px,py);}x.stroke();}
+shot(0,0,t=>{bgP();spot(540,900,620,0.45,'255,150,80');rays(540,900,t,'rgba(255,170,90,0.10)');pizzaM(540,890,250,t*0.15);crown(540,640,0.9);bigText('KRALİÇE PİZZASI',W/2,290,110,'#ffd23f',1);bigText('EFSANE Mİ?',W/2,420,100,'#fff',1);vignette(0.4);});
+shot(1,1,t=>{bgP();pizzaM(540,950,230,0.3);qmarks(540,690,t,3);bigText('GERÇEK Mİ?',W/2,330,140,'#fff',1);});
+shot(2,2,t=>{naples(1250,t);yearStamp('1889','NAPOLİ',eOut(cl(t*2.5)),520);});
+shot(3,3,t=>{bgDoc('#7aa6c9','#e9d6b0');x.fillStyle='#8a6a4a';x.fillRect(0,1250,W,700);palace(540,1250,1.1);sil(430,1250,2.0,'#2a1a2a');sil(650,1250,1.85,'#4a1a3a');crown(430,820,0.6);crown(650,850,0.55);bigText('KRAL & KRALİÇE',W/2,330,110,'#ffd23f',1);});
+shot(4,4,t=>{naples(1250,t);x.fillStyle='rgba(0,0,0,0.25)';x.fillRect(0,0,W,H);for(let i=0;i<5;i++)sil(160+i*190,1250,1.3,'#1a0e08');pizza(820,1060,90,t);bigText('SOKAK YEMEĞİ',W/2,330,120,'#fff',1);bigText('ANLATILANA GÖRE',W/2,460,70,'#ffd23f',1);});
+shot(5,5,t=>{bgShop();woodOven(540,1200,1.25,t);baker(850,1250,1.5);bigText('ESPOSITO',W/2,300,130,'#ffd23f',1);bigText('3 PİZZA',W/2,440,100,'#fff',eOut(cl((t-1.5)*3)));});
+shot(6,6,t=>{bgP();const k=eOut(cl((t-1.2)*2));pizza(220,800,150,0);pizza(860,800,150,1);pizzaM(540,820,200+60*k,0);const w=['DOMATES','MOZZARELLA','FESLEĞEN'],c=['#ff4d4d','#fff','#5fe08a'];const i=Math.min(2,Math.floor(Math.max(0,t-1.5)/1.1));bigText('FAVORİ',W/2,330,140,'#ffd23f',1);if(t>1.5)bigText(w[i],W/2,1130,100,c[i],1);});
+shot(7,7,t=>{bgP();itFlag(540,640,760,t);pizzaM(540,1020,170,t*0.2);bigText('BAYRAK RENKLERİ',W/2,300,100,'#fff',1);});
+shot(8,8,t=>{bgP();rays(540,880,t,'rgba(255,215,120,0.12)');pizzaM(540,900,300,t*0.1);crown(540,560,1.0);bigText('MARGHERITA',W/2,320,130,'#ffd23f',back(cl((t-1.4)*3)));});
+shot(9,9,t=>{bgDoc('#2a2420','#0d0b08');spot(540,850,500,0.3);letterP(540,850,1.0,-0.04);sealWax(700,1080,50);bigText('TEŞEKKÜR MEKTUBU',W/2,330,90,'#ffd23f',1);});
+shot(10,10,t=>{bgDoc('#2a2420','#0d0b08');docs(540,880,t);qmarks(540,680,t,3);bigText('TARİHÇİLER',W/2,300,130,'#fff',1);bigText('İKNA DEĞİL',W/2,1130,100,'#ff6b6b',1);});
+shot(11,11,t=>{bgDoc('#2a2420','#0d0b08');zoomed(1+t*0.03,()=>{letterP(540,850,1.0,0);sigScrib(620,1080,300,t,cl(t*1.2));});stampT('UYUŞMUYOR',540,700,cl((t-1.2)*3),'#ff3b3b',100);bigText('İMZA',W/2,300,140,'#ffd23f',1);});
+shot(12,12,t=>{bgDoc('#2a2420','#0d0b08');bookOld(540,880,1.3,1,'1889');stampT('KAYIT YOK',540,880,cl((t-1.0)*3),'#ff3b3b',110);bigText('RESMÎ KAYITLAR',W/2,330,100,'#fff',1);});
+shot(13,13,t=>{bgDoc('#3a2a1c','#120c06');bookOld(540,900,1.3,1);pizzaM(740,900,110,0);yearStamp('1853','',eOut(cl(t*2)),400);bigText('ZATEN YAZILMIŞ',W/2,1130,90,'#ffd23f',eOut(cl((t-2)*3)));});
+shot(14,14,t=>{bgP();pizzaM(540,900,260,0.2);stampX(540,900,1.3,cl((t-0.8)*3));bigText('İCAT ETMEDİ?',W/2,330,120,'#fff',1);});
+shot(15,15,t=>{bgP();rays(540,880,t,'rgba(255,215,120,0.12)');pizzaM(540,900,270,t*0.2);bigText('UNUTULMAZ',W/2,300,130,'#ffd23f',1);bigText('BİR HİKÂYE',W/2,430,100,'#fff',1);});
+shot(16,17,t=>{bgP();pizzaM(300,1180,110,t*0.3);crown(780,1180,0.8);frameText(['Efsane mi,','gerçek mi?'],650,t,eOut(cl(t*3)));});
+shot(18,18,t=>cta(t));
