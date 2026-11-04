@@ -8,6 +8,6 @@ Her kanal klasöründe: `<NN>_<konu>.mp4` + `stok.md` (sıra, başlık, süre, a
 - Osmanlısal: Kahve yasağı (IV. Murat), Lale Devri, Karakoncolos, Hezarfen Ahmed Çelebi, Lagari Hasan Çelebi, Fatih'in gemileri karadan yürütmesi, Sokullu Don-Volga kanalı, Patrona Halil İsyanı, Barbaros ve Preveze, Evliya Çelebi'nin rüyası
 - Psikolojik: Kapı etkisi, Kulak kurdu, Zeigarnik etkisi, Spot ışığı etkisi
 - Sporsal: İstanbul 2005 (Liverpool-Milan), Hakan Şükür 11 saniye, Naim Süleymanoğlu, Kimi Antonelli 2026 şampiyonluğu, Maracanazo 1950 (Uruguay-Brezilya)
-- Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni, Mona Lisa hırsızlığı, Michelangelo Davut
+- Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni, Mona Lisa hırsızlığı, Michelangelo Davut, Van Gogh Yıldızlı Gece
 - Parasal: Almanya 1923 hiperenflasyon, Bitcoin pizza, Lale çılgınlığı
 - Yemeksel: Döner/İskender, Kruvasan efsanesi, Hacı Bekir lokum
