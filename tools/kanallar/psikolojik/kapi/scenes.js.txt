@@ -1,0 +1,14 @@
+shot(0,0,t=>{bgPsi();doorP(820,1300,1.0,0.6,true);person(430,900,150,{look:Math.sin(t*3)*0.6,brow:0.6,mouthOpen:0.3});qmarks(430,640,t);bigText('NEDEN GELMİŞTİM?',W/2,360,88,'#fff',1);});
+shot(1,1,t=>{bgPsi();doorP(540,1250,1.6,0,false);x.strokeStyle='#ff4d4d';x.lineWidth=14;x.strokeRect(330,580,420,670);bigText('KAPININ HATASI',W/2,400,105,'#ff6b6b',1);});
+shot(2,2,t=>{bgPsi();spot(540,900,500,0.3,'255,150,220');brainI(540,900,2.2*back(cl(t*2)));bigText('KAPI ETKİSİ',W/2,400,130,'#ffd23f',1);});
+shot(3,3,t=>{bgPsi();yearStamp('2011','NOTRE DAME ÜNİV.',eOut(cl(t*2.5)),700);brainI(540,1150,0.6,'#ff9ad5',10);});
+shot(4,4,t=>{bgTeal();tableP(250,1250,300);tableP(830,1250,300);const k=eOut(cl(t/2.6));person(250+580*k,830,110,{smile:0.5});box(250+580*k,1010,1);bigText('TAŞI',W/2,400,140,'#fff',1);});
+shot(5,5,t=>{bgTeal();x.fillStyle='rgba(255,255,255,0.15)';x.fillRect(538,500,4,800);bigText('AYNI ODA',290,440,70,'#5fe08a',1);bigText('KAPIDAN',790,440,70,'#ff9ad5',1);person(290,900,100,{smile:0.4});doorP(790,1250,0.9,0.7,true);person(790,900,100,{brow:0.4});});
+shot(6,6,t=>{bgPsi();barsCmp(0.45,0.9,'AYNI ODA','KAPI',t/1.8);bigText('UNUTMA',W/2,400,130,'#ff6b6b',1);});
+shot(7,7,t=>{bgPsi();filmstrip(900,t,320);bigText('SAHNE SAHNE',W/2,400,120,'#ffd23f',1);brainI(540,640,0.6);});
+shot(8,8,t=>{bgPsi();doorP(540,1250,1.5,0.4,true);stampT('SAHNE SONU',540,880,t*2.5,'#ff6b6b',90);});
+shot(9,9,t=>{bgTeal();x.fillStyle='#4a5470';rr(240,700,600,520,20);x.fill();for(let i=0;i<3;i++){x.fillStyle='#6a7490';rr(270,730+i*165,540,140,14);x.fill();x.fillStyle='#ddd';x.fillRect(500,790+i*165,80,16);}const k=eOut(cl(t/1.6));box(540,600+k*200,1.1*(1-k*0.5));bigText('ARŞİVE',W/2,400,140,'#fff',1);});
+shot(10,10,t=>{bgPsi();doorP(820,1300,1.0,0.6,true);person(480,900,150,{look:-0.6,brow:0.3});x.strokeStyle='#5fe08a';x.lineWidth=20;x.beginPath();x.moveTo(700,1050);x.lineTo(300,1050);x.stroke();x.fillStyle='#5fe08a';x.beginPath();x.moveTo(260,1050);x.lineTo(320,1000);x.lineTo(320,1100);x.fill();bigText('GERİ DÖN',W/2,400,140,'#5fe08a',1);});
+shot(11,11,t=>{bgPsi();person(540,950,170,{smile:0.9,eyeOpen:1});bulb(540,560,0.8*back(cl(t*2)),t);bigText('HATIRLADIN!',W/2,330,110,'#ffd23f',eOut(cl((t-0.8)*3)));});
+shot(12,12,t=>{bgPsi();person(540,1000,150,{brow:0.5,look:0.3});frameText(['Sen de','yaşadın mı?'],560,t,eOut(cl(t*3)));});
+shot(13,15,t=>cta(t));

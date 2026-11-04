@@ -25,3 +25,12 @@ ElevenLabs eleven_v4, Emrullah Tuna QftNgZhlSOYKrYbk7WR7 (varsayılan erkek anla
 
 ## Otomatik hat: pipe.py (Kasım 2026)
 `python3 tools/kanallar/pipe.py <dir> <kanal> audio` → `build prev` → `build render mux`. `<dir>/script.txt`: satır başına bir ifade (`konuşma || altyazı`), boş satır = paragraf. Ses ElevenLabs `/with-timestamps` ile alınır, PH zamanları karakter hizalamasından otomatik çıkar (silencedetect ile ince ayar). Anahtar `/home/claude/.el_key` dosyasından okunur (depoya asla girmez). Ek yardımcılar: `ortak/plus.js.txt` (badge, coins, stampX, fire, mapArrow, counter). Örnekler: kriminal/eyfel, islamik/ibrahim, hayatsal/ronaldo, osmanlisal/hezarfen.
+
+## Psikolojik / Sporsal / Sanatsal / Motivasyonel / Parasal (2026-11-04 eklendi)
+Her kanal klasöründe build.sh.example (hangi ortak/ parçaların hangi sırayla birleştiği), watermark.txt ve örnek videolar (shots.js.txt, scenes.js.txt, req.json) var. ortak/common.js.txt'deki '@KANAL' yerine kanalın filigranını sed ile yaz (watermark.txt). Ortak parçalar: head.js, helpers.txt, common.js, extra.js, bio.js, krim.js (cta), psi.js, spor.js, san.js, art2.js (müze/heykel/mona), para.js (para, btc, lale, tablolar), mot.js (motivasyon parçaları), yem.js. sfx.py ve mux.py (mux.py: `python3 mux.py <klasör> '[dum PH indeksleri]'`, çıktı adını düzenle).
+- Sesler: Psikolojik İrem R0D8QjgVyRju4HRoCrIC · Sporsal/Sanatsal Emrullah QftNgZhlSOYKrYbk7WR7 · Motivasyonel/Parasal İsmet dCYGxgtXZ2SWEwZrYmkc. ElevenLabs isteklerini PARALEL gönderme (429).
+- Psikolojik formatı: "Böyle mi hissediyorsun?" → tanıdık durum → psikolojik etkinin adı ve açıklaması (bilimsel kaynaklı) → izleyiciye soru.
+- Motivasyonel formatı: hikâye şart değil; gaza getiren, disiplin/başarı/zengin olma inancı; kısa sert cümleler, büyük yazı slam'leri.
+- Parasal: para tarihi / büyük kayıp-büyük fırsat hikâyeleri, rakamlar doğrulanır, "yatırım tavsiyesi değildir" tonu.
+- Sanatsal: sanat/müzik/heykel eserlerinin arkasındaki hikâyeler; gerçek kişilerin yüzü çizilmez (siluet), telifli eser kopyalanmaz.
+- Sporsal: unutulmaz maçlar/sporcular; skor ve tarihler doğrulanır; gerçek kişi yüzü yok, takım logosu yok.

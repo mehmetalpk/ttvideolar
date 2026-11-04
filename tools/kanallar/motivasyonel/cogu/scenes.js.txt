@@ -1,0 +1,17 @@
+const P=(i,s,l,r,fl,fr)=>shot(i,i,t=>pairS(l,r,s,t,fl,fr));
+P(0,0,'BAHANE','YOL',()=>couch(270,950,0),()=>txtP('→',810,850,300,'#111'));
+P(1,1,'BAHANE','YOL',()=>couch(270,950,0),()=>txtP('→',810,850,300,'#111'));
+P(2,0,'ERTELE','05:00',()=>alarm(270,800,0.8,0,'07:45'),()=>alarm(810,800,0.8,0,'05:00'));
+P(3,1,'ERTELE','05:00',()=>alarm(270,800,0.8,0,'07:45'),()=>{sun(810,850,60);alarm(810,800,0.8,0,'05:00');});
+P(4,0,'"CANIM İSTEMİYOR"','YİNE DE YAPAR',()=>couch(270,950,0),()=>dumbbell(810,850,0.9));
+P(5,1,'"CANIM İSTEMİYOR"','YİNE DE YAPAR',()=>couch(270,950,0),()=>dumbbell(810,850,0.9));
+P(6,0,'İZLER','KURAR',()=>phone(270,820,0.9,0),()=>bag(810,850,0.8));
+P(7,1,'İZLER','KURAR',()=>phone(270,820,0.9,0),()=>bag(810,850,0.8));
+P(8,0,'HAYAL EDER','ÇALIŞIR',()=>{bigText('Z z z',270,800,110,'#888',1);},()=>desk(810,1050,0));
+P(9,1,'HAYAL EDER','ÇALIŞIR',()=>{bigText('Z z z',270,800,110,'#888',1);},()=>desk(810,1050,0));
+shot(10,10,t=>{blk();slam('FARK NE?',800,180,'#fff',t);});
+shot(11,11,t=>{blk();bigText('YETENEK',W/2,800,150,'#666',1);stampT('✗',W/2,800,t*4,'#ff2d2d',200,0);});
+shot(12,12,t=>{blk();bigText('ŞANS',W/2,800,170,'#666',1);stampT('✗',W/2,800,t*4,'#ff2d2d',200,0);});
+shot(13,13,t=>{blk();calendar(540,1000,t,Math.floor(t*4)%7);slam('HER GÜN SEÇ',400,120,'#ffd23f',t);});
+shot(14,14,t=>{blk();x.fillStyle='#333';x.fillRect(0,500,540,800);x.fillStyle='#ffd23f';x.fillRect(540,500,540,800);bigText('ÇOĞU',270,900,110,'#888',1);txtP('AZ',810,900,170,'#111');slam('BUGÜN?',380,160,'#fff',t);});
+shot(15,15,t=>cta(t));

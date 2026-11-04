@@ -1,0 +1,11 @@
+#!/bin/bash
+# usage: build.sh dir
+d=$1; cd /home/claude/san
+{ cat ../work/head.js.txt ../osm/helpers.txt $d/shots.js.txt common.js.txt extra.js.txt bio.js.txt krim.js.txt psi.js.txt spor.js.txt san.js.txt art2.js.txt $d/scenes.js.txt
+cat <<'T'
+window.SCENES=S.map(s=>s.d);
+window.draw=function(i,t){x.setTransform(1,0,0,1,0,0);x.globalAlpha=1;x.setLineDash([]);x.lineCap='round';S[i].f(t);karaoke(S[i].g0+t);watermark();};
+window.frame=function(i,t){draw(i,t);return c.toDataURL('image/jpeg',0.92).split(',')[1]};
+</script></body></html>
+T
+} > $d/anim.html

@@ -1,0 +1,27 @@
+function stoneBg(){bgDoc('#2c3440','#0b0e12');}
+function yard(){bgDoc('#5c6a78','#1b2026');x.fillStyle='#7a6a58';x.fillRect(0,1380,W,H-1380);x.fillStyle='#8a7a66';for(let i=0;i<8;i++)x.fillRect(i*140,1380,6,H);}
+shot(0,0,t=>{stoneBg();rays(540,900,t,'rgba(230,235,245,0.10)');spot(540,1000,600,0.4,'230,235,245');statue(540,1500,1.15+t*0.03);bigText('EN ÜNLÜ HEYKEL',W/2,300,115,'#ffd23f',1);vignette(0.5);});
+shot(1,1,t=>{stoneBg();spot(540,1000,600,0.3,'230,235,245');marble(540,1500,420,900,1);crack(560,800,1.4,cl(t*1.2));bigText('VAZGEÇİLMİŞ',W/2,280,115,'#fff',1);bigText('BİR TAŞTAN',W/2,410,115,'#ffd23f',1);vignette(0.5);});
+shot(2,2,t=>{sky();duomo(540,1500,1.3);yearStamp('1464','FLORANSA',eOut(cl(t*2.5)),560);});
+shot(3,3,t=>{sky();duomo(540,1500,1.3);x.save();x.globalAlpha=0.85;statue(860,1500,0.7,'#f3f1ea');x.restore();bigText('DEV BİR DAVUT',W/2,300,110,'#fff',1);});
+shot(4,4,t=>{bgDoc('#9fb3c4','#e6e2d6');x.fillStyle='#eceae4';x.beginPath();x.moveTo(0,1100);x.lineTo(260,700);x.lineTo(520,950);x.lineTo(780,620);x.lineTo(W,900);x.lineTo(W,H);x.lineTo(0,H);x.fill();x.strokeStyle='#c6c4be';x.lineWidth=6;for(let i=0;i<6;i++){x.beginPath();x.moveTo(100+i*170,1000);x.lineTo(160+i*170,1300);x.stroke();}const k=eOut(cl(t/3));marble(300+k*240,1700,300,700,0);bigText('CARRARA MERMERİ',W/2,300,95,'#fff',1);});
+shot(5,5,t=>{stoneBg();marble(540,1500,420,900,0);crack(560,700,1.8,cl(t*1.3));crack(420,1000,1.2,cl(t*1.3-0.3));bigText('SORUNLU TAŞ',W/2,300,120,'#ff6b6b',1);vignette(0.5);});
+shot(6,6,t=>{yard();marble(540,1500,420,900,0.5);x.fillStyle='#4a5260';x.beginPath();x.moveTo(480,1500);x.lineTo(500,1250);x.lineTo(530,1500);x.fill();x.beginPath();x.moveTo(570,1500);x.lineTo(585,1270);x.lineTo(610,1500);x.fill();if(t<2)chips(540,1350,t);hammer(760,1250,1,t<2?t:0);stampT('YARIM KALDI',540,620,cl((t-2)*3),'#ff3b3b',100);});
+shot(7,7,t=>{yard();marble(540,1500,420,900,0.5);sil(820,1500,1.5,'#2a2f38');bigText('10 YIL SONRA',W/2,300,120,'#ffd23f',1);bigText('ROSSELLINO',W/2,440,90,'#fff',eOut(cl((t-1.6)*3)));});
+shot(8,8,t=>{yard();marble(540,1500,420,900,0.5);sil(820+t*90,1500,1.5,'#2a2f38');stampT('VAZGEÇTİ',540,700,cl(t*3),'#ff3b3b',110);});
+shot(9,9,t=>{yard();duomo(540,1000,0.6,'#a65c40');x.fillStyle='rgba(30,30,35,0.25)';x.fillRect(0,0,W,H);x.save();x.translate(940,1440);x.rotate(-Math.PI/2);marble(0,0,320,800,0.5);x.restore();bigText('AVLUDA UNUTULDU',W/2,300,95,'#fff',1);});
+shot(10,10,t=>{yard();const sun=t>0.9;if(sun){sun?null:0;}if(!sun){x.fillStyle='rgba(20,25,35,0.4)';x.fillRect(0,0,W,H);rainD(t);}else{spot(800,300,700,0.5,'255,220,140');x.fillStyle='#ffd23f';x.beginPath();x.arc(800,300,90,0,7);x.fill();}x.save();x.translate(940,1440);x.rotate(-Math.PI/2);marble(0,0,320,800,0.5,'#d8d6ce');x.restore();bigText(sun?'GÜNEŞ':'YAĞMUR',W/2,640,130,'#fff',1);});
+shot(11,11,t=>{yard();x.save();x.translate(940,1440);x.rotate(-Math.PI/2);marble(0,0,320,800,0.5,'#cfcdc4');x.restore();const n=Math.min(25,Math.floor(t*22));bigText(n+' YIL',W/2,700,240,'#ffd23f',1);});
+shot(12,12,t=>{yard();x.save();x.translate(940,1440);x.rotate(-Math.PI/2);marble(0,0,320,800,0.5,'#cfcdc4');x.restore();people(5,540,1700,1.1,'#1e232b');bigText('"DEV"',W/2,600,220,'#ffd23f',back(cl(t*2)));bigText('İL GİGANTE',W/2,800,70,'#fff',1);});
+shot(13,13,t=>{stoneBg();yearStamp('1501','FLORANSA',eOut(cl(t*2.5)),760);});
+shot(14,15,t=>{yard();marble(400,1500,380,880,0.5);sil(820,1500,1.9,'#14181e');spot(820,1100,300,0.35);bigText('26 YAŞINDA',W/2,300,120,'#fff',1);bigText('MICHELANGELO',W/2,440,105,'#ffd23f',eOut(cl((t-2.9)*3)));});
+shot(16,16,t=>{yard();marble(540,1500,420,900,0.5);people(7,540,1720,1.0,'#1e232b');qmarks(540,620,t,3);bigText('İMKÂNSIZ',W/2,300,130,'#ff6b6b',1);});
+shot(17,17,t=>{stoneBg();spot(540,1000,600,0.3,'230,235,245');const k=cl(t/4);marble(540,1500,420,920,0.5,`rgba(232,230,224,${1-k*0.85})`);statue(540,1500,1.15,'#efede6',k);scaffold(540,1500,560,980);chips(540,900,t,18);hammer(800,900,0.9,t);bigText('3 YIL',W/2,280,150,'#ffd23f',1);});
+shot(18,18,t=>{stoneBg();yearStamp('1504','FLORANSA',eOut(cl(t*2.5)),760);});
+shot(19,19,t=>{stoneBg();spot(540,1000,600,0.45,'230,235,245');statue(540,1500,1.15);cloth(540,1520,480,1300,eOut(cl(t*1.2)));bigText('ÖRTÜ KALKTI',W/2,280,120,'#fff',1);});
+shot(20,20,t=>{stoneBg();rays(540,900,t,'rgba(255,230,160,0.12)');spot(540,1000,600,0.45,'230,235,245');statue(540,1500,1.15);x.strokeStyle='#ffd23f';x.lineWidth=6;x.beginPath();x.moveTo(880,1500);x.lineTo(880,780);x.stroke();for(const yy of[1500,780]){x.beginPath();x.moveTo(850,yy);x.lineTo(910,yy);x.stroke();}bigText('5,17 m',920,1140,70,'#ffd23f',1);bigText('KUSURSUZ',W/2,300,140,'#ffd23f',1);});
+shot(21,21,t=>{sky();duomo(320,1500,0.9);statue(820,1500,0.7);x.strokeStyle='#ff4d4d';x.lineWidth=16;const k=cl(t*1.5);if(k>0){x.beginPath();x.moveTo(330,600);x.lineTo(330+260*k,600+260*k);x.moveTo(590,600);x.lineTo(590-260*k,600+260*k);x.stroke();}bigText('ÇATIYA DEĞİL',W/2,300,110,'#fff',1);});
+shot(22,22,t=>{sky();vecchio(540,1500,1.05);statue(260,1540,0.55);people(6,700,1700,0.9,'#2a2f38');bigText('ŞEHRİN KALBİNE',W/2,280,100,'#fff',1);});
+shot(23,23,t=>{stoneBg();const k=cl((t-0.8)/2);marble(540,1500,420,900,0.5,`rgba(232,230,224,${1-k})`);statue(540,1500,1.15,'#efede6',k);rays(540,900,t,`rgba(255,230,160,${0.12*k})`);bigText(k<0.5?'ÇÖP TAŞ':'BAŞYAPIT',W/2,300,140,k<0.5?'#bbb':'#ffd23f',1);});
+shot(24,24,t=>{stoneBg();marble(540,1700,300,520,0.5);frameText(['Herkes vazgeçti,','sen vazgeçmedin mi?'],700,t,eOut(cl(t*3)));});
+shot(25,26,t=>cta(t));

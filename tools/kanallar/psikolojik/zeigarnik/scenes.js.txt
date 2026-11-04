@@ -1,0 +1,15 @@
+function cafe(t,dark){x.fillStyle=grad(0,H,dark?['#2a1a12','#120a06']:['#5a3a22','#2a1a10']);x.fillRect(0,0,W,H);x.fillStyle='rgba(255,210,140,0.18)';for(let i=0;i<3;i++){x.beginPath();x.arc(200+i*340,420,60,0,7);x.fill();}for(let i=0;i<3;i++){x.fillStyle='#8a5a32';x.beginPath();x.ellipse(200+i*340,1150,120,30,0,0,7);x.fill();x.fillRect(190+i*340,1150,20,150);}}
+shot(0,0,t=>{x.fillStyle='#0b0a1a';x.fillRect(0,0,W,H);tv(540,720,0.9,'DEVAM EDECEK...',t);spot(540,720,500,0.25,'120,140,255');bed(t);person(240,960,80,{eyeOpen:1,brow:0.6,look:0.5});bigText('NEDEN UYUYAMIYORSUN?',W/2,330,74,'#fff',1);});
+shot(1,1,t=>{cafe(t);bigText('100 YIL ÖNCE',W/2,400,120,'#ffd23f',1);bigText('BİR KAFEDE',W/2,560,90,'#fff',eOut(cl(t*3)));});
+shot(2,2,t=>{cafe(t);yearStamp("1920'LER",'BERLİN',eOut(cl(t*2.5)),560);for(let i=0;i<2;i++)sil(300+i*480+Math.sin(t+i)*60,1300,1.1,'#120a06');});
+shot(3,3,t=>{cafe(t);sil(300,1300,1.3,'#120a06');x.save();x.translate(700,880);x.rotate(0.06);x.fillStyle='#f3e6c4';x.fillRect(-200,-260,400,520);x.fillStyle='#3a2a1a';x.font=`700 46px ${F}`;x.textAlign='left';['☕ Kahve','🍰 Pasta','☕ Çay','🥐 Kruvasan'].forEach((s,i)=>{if(t>i*0.6)x.fillText(s.replace(/[^\wÇĞİÖŞÜçğıöşü ]/g,'').trim(),-160,-170+i*110);});x.restore();bigText('HEPSİNİ HATIRLIYOR',W/2,330,90,'#ffd23f',1);});
+shot(4,4,t=>{cafe(t,true);x.save();x.translate(700,880);x.rotate(0.06);x.globalAlpha=1-cl((t-0.8)/1.5);x.fillStyle='#f3e6c4';x.fillRect(-200,-260,400,520);x.restore();x.globalAlpha=1;stampT('ÖDENDİ',600,880,t*3,'#5fe08a',110);bigText('UNUTTU',W/2,330,130,'#ff6b6b',eOut(cl((t-1.2)*3)));});
+shot(5,5,t=>{bgTeal();board(540,880,800,500);flask(380,960,0.9,t);bigText('BLUMA ZEIGARNIK',W/2,380,90,'#fff',1);});
+shot(6,6,t=>{bgTeal();for(let i=0;i<4;i++){x.fillStyle='#e8e2f5';rr(160+(i%2)*400,620+Math.floor(i/2)*320,360,260,20);x.fill();x.fillStyle='#3a3f5a';x.font=`800 50px ${F}`;x.textAlign='center';x.fillText('GÖREV '+(i+1),340+(i%2)*400,770+Math.floor(i/2)*320);if(i%2&&t>1.2)stampT('YARIDA',340+(i%2)*400,750+Math.floor(i/2)*320,(t-1.2)*3,'#ff6b6b',54);}bigText('YARIDA KESTİ',W/2,400,110,'#fff',1);});
+shot(7,7,t=>{bgPsi();barsCmp(0.45,0.9,'BİTEN','YARIM',t/2,'#8a90b0','#ffd23f');bigText('2 KAT',W/2,400,160,'#ffd23f',eOut(cl((t-2.2)*3)));});
+shot(8,8,t=>{bgPsi();brainI(540,880,1.8*back(cl(t*2)));bigText('ZEIGARNIK ETKİSİ',W/2,400,100,'#ffd23f',1);});
+shot(9,9,t=>{bgPsi();tabs(t,6,3);bigText('AÇIK SEKME',W/2,400,120,'#fff',1);});
+shot(10,10,t=>{x.fillStyle='#0b0a1a';x.fillRect(0,0,W,H);tv(540,850,1.1,'DEVAM EDECEK...',t);bigText('BU YÜZDEN',W/2,380,120,'#ffd23f',1);});
+shot(11,12,t=>{bgTeal();check(260,700,1.3,t>2.4,'İlk adım');check(260,880,1.3,false,'İkinci adım');check(260,1060,1.3,false,'Bitir');bigText('KÜÇÜK BİR ADIM',W/2,400,110,'#5fe08a',1);});
+shot(13,13,t=>{bgPsi();tabs(t,5,2);frameText(['Açık kalan','sekmen var mı?'],560,t,eOut(cl(t*3)));});
+shot(14,15,t=>cta(t));

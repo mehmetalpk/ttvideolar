@@ -1,0 +1,18 @@
+shot(0,0,t=>{blk();curve(cl(0.4+t/2.4),true);bigText('%1',W/2,380,220,'#5fe08a',1);bigText('HER GÜN',W/2,560,90,'#fff',1);});
+shot(1,1,t=>{blk();curve(1,true);slam('37 KAT',380,190,'#5fe08a',t);});
+shot(2,2,t=>{blk();bigText('SLOGAN DEĞİL',W/2,650,100,'#666',1);slam('MATEMATİK',880,150,'#ffd23f',t-0.8);});
+shot(3,3,t=>{blk();bigText('1,01',W/2-80,860,220,'#fff',1);bigText('365',W/2+240,720,110,'#ffd23f',eOut(cl(t*3)));});
+shot(4,4,t=>{blk();rays(540,860,t,'rgba(95,224,138,0.12)');bigText('≈ '+(1+36.8*eOut(cl(t/1.2))).toFixed(1),W/2,860,200,'#5fe08a',1);});
+shot(5,5,t=>{blk();slam('TERSİ?',800,200,'#ff4d4d',t);});
+shot(6,6,t=>{blk();curve(eOut(cl(t/3.5)),false);bigText('%1 KÖTÜ',W/2,380,140,'#ff4d4d',1);});
+shot(7,7,t=>{blk();curve(1,false);slam('0,03',800,240,'#ff4d4d',t);});
+shot(8,8,t=>{blk();bookI(540,850,1.4);slam('1 SAYFA',380,160,'#ffd23f',t);});
+shot(9,9,t=>{blk();ground(1250,'#111');player(540,1250,1.4,'#c1121f','#111',t*12);slam('10 ŞINAV',380,160,'#ffd23f',t);});
+shot(10,10,t=>{blk();x.fillStyle='#f3f3f3';rr(240,700,600,300,30);x.fill();x.fillStyle='#111';x.font=`900 90px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('1 KELİME',540,850);slam('YENİ BİLGİ',380,140,'#ffd23f',t);});
+shot(11,11,t=>{blk();people(6,540,1250,1.1,'#333',150,-1);slam('KİMSE FARK ETMEZ',380,95,'#888',t);});
+shot(12,12,t=>{blk();sil(540,1250,1.8,'#333');slam('SEN BİLE',380,150,'#888',t);});
+shot(13,13,t=>{blk();calendar(540,850,t,-1);people(6,540,1350,0.7,'#ffd23f',150,-1);slam('1 YIL SONRA',380,140,'#5fe08a',t-0.9);});
+shot(14,14,t=>{blk();stepsUp(7,7,t);bigText('SIKICI',W/2,380,170,'#888',1);});
+shot(15,15,t=>{blk();curve(1,true);slam('SONUÇLARI ASLA',380,110,'#5fe08a',t);});
+shot(16,16,t=>{blk();bigText('%1',W/2,800,300,'#ffd23f',back(cl(t*2))+0.01);bigText('NEREYE?',W/2,1080,110,'#fff',eOut(cl((t-0.6)*3)));});
+shot(17,17,t=>cta(t));

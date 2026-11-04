@@ -1,0 +1,18 @@
+function card(txt,col,p){if(p<=0)return;x.save();x.translate(540,860);const s=back(cl(p));x.scale(s,s);x.fillStyle='#ece4d2';rr(-360,-180,720,360,24);x.fill();x.fillStyle='#3a2a1a';x.font=`800 48px ${F}`;x.textAlign='center';x.fillText('KİMLİK',0,-100);x.fillStyle=col;x.font=`900 80px ${F}`;x.fillText(txt,0,30);x.restore();}
+shot(0,0,t=>{bgDoc('#3a0a0a','#120404');spot(540,950,600,0.4);lifter(540,1240,1.0,1);bigText('3 KATINI',W/2,380,170,'#ffd23f',1);bigText('KALDIRDI',W/2,560,110,'#fff',1);});
+shot(1,1,t=>{sepia();yearStamp('1967','BULGARİSTAN',eOut(cl(t*2.5)),700);});
+shot(2,2,t=>{sepia();card('NAİM','#1f4f9a',1);stampT('YASAK',540,900,(t-0.8)*3,'#c1121f',130);});
+shot(3,3,t=>{sepia();card('NAUM ŞALAMANOV','#c1121f',t*3);bigText('ZORLA',W/2,400,130,'#fff',1);});
+shot(4,4,t=>{dark();yearStamp('1986','MELBOURNE',eOut(cl(t*2.5)),600);medal(540,1150,110,t,'1.');});
+shot(5,5,t=>{nightSky();skyline(0,1300,4,'#0b0f1e',true);ground(1300,'#06080f');sil(300+t*120,1340,1.1,'#000');trFlag(820,900,260,t);bigText('SIĞINDI',W/2,380,150,'#fff',1);});
+shot(6,6,t=>{dark();x.strokeStyle='#ff4d4d';x.lineWidth=40;x.beginPath();x.moveTo(140,880);x.lineTo(940,880);x.stroke();x.fillStyle='#ff4d4d';for(let i=0;i<5;i++)x.fillRect(150+i*170,840,80,80);bigText('ENGEL',W/2,400,170,'#ff4d4d',1);});
+shot(7,7,t=>{dark();const n=Math.min(12,Math.floor(t*6));for(let i=0;i<n;i++)cash(300+(i%3)*240,700+Math.floor(i/3)*100,1,(i%2?0.05:-0.04));bigText('1 MİLYON $',W/2,400,140,'#5fe08a',1);});
+shot(8,8,t=>{dark();yearStamp('1988','SEUL',eOut(cl(t*2.5)),700);trFlag(540,1150,300,t);});
+shot(9,9,t=>{bgDoc('#3a0a0a','#120404');spot(540,950,600,0.4);lifter(540,1240,1.0,eOut(cl(t/1.8)));bigText('190 KG',W/2,400,170,'#ffd23f',1);});
+shot(10,10,t=>{dark();bigText('60 × 3',W/2,650,170,'#fff',1);bigText('+ 10',W/2,850,170,'#ffd23f',eOut(cl((t-0.6)*3)));bigText('= 190',W/2,1060,170,'#5fe08a',eOut(cl((t-1.4)*3)));});
+shot(11,11,t=>{dark();rays(540,800,t,'rgba(255,215,120,0.12)');medal(380,850,150,t,'ALTIN');x.save();x.translate(760,880);x.rotate(0.06);x.fillStyle='#c1121f';x.fillRect(-150,-210,300,420);x.fillStyle='#fff';x.fillRect(-120,-180,240,330);x.fillStyle='#c1121f';x.font=`900 44px ${F}`;x.textAlign='center';x.fillText('KAPAK',0,190);x.restore();});
+shot(12,12,t=>{dark();['1988','1992','1996'].forEach((y,i)=>{if(t>i*0.6){medal(220+i*320,850,110,t,'ALTIN');bigText(y,220+i*320,1080,70,'#fff',1);}});bigText('SEUL · BARSELONA · ATLANTA',W/2,400,60,'#ffd23f',1);});
+shot(13,13,t=>{dark();stampT('3 OLİMPİYAT',540,850,t*3,'#ffd23f',110);});
+shot(14,14,t=>{bgDoc('#3a0a0a','#120404');trFlag(540,800,560,t);bigText('CEP HERKÜLÜ',W/2,1150,130,'#ffd23f',back(cl(t*2)));});
+shot(15,15,t=>{dark();lifter(540,1350,0.8,1);frameText(['En büyük','efsane o mu?'],560,t,eOut(cl(t*3)));});
+shot(16,17,t=>cta(t));

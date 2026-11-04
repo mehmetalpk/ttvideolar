@@ -1,0 +1,14 @@
+shot(0,0,t=>{bgPsi();notes(540,880,t,7,320);person(540,900,170,{angry:0.5,brow:0.7,mouthOpen:0.2});bigText('KAFANDAN ÇIKMAYAN',W/2,330,90,'#fff',1);bigText('ŞARKI',W/2,480,140,'#ffd23f',1);});
+shot(1,1,t=>{bgPsi();worm(560,880,2.6*back(cl(t*2)),t);bigText('KULAK KURDU',W/2,400,120,'#ff9ad5',1);});
+shot(2,2,t=>{bgPsi();bigText('OHR',W/2,620,150,'#fff',1);bigText('+ WURM',W/2,800,150,'#ff9ad5',eOut(cl(t*3)));bigText('= KULAK KURDU',W/2,1000,90,'#ffd23f',eOut(cl((t-1.2)*3)));});
+shot(3,3,t=>{bgTeal();bigText('%'+Math.floor(90*eOut(cl(t/1.5)))+'+',W/2,780,260,'#ffd23f',1);bigText('HER HAFTA',W/2,1000,100,'#fff',eOut(cl((t-1)*3)));people(7,540,1300,0.8,'#0b2328',120,-1);});
+shot(4,4,t=>{bgPsi();bigText('?',W/2,850,520*back(cl(t*2)),'#ffd23f',1);});
+shot(5,5,t=>{bgPsi();brainI(540,750,1.5);x.fillStyle='#3a3f5a';rr(190,1050,700,60,30);x.fill();x.fillStyle='#ff9ad5';rr(190,1050,700*0.6*eOut(cl(t/1.5)),60,30);x.fill();bigText('YARIM KALDI',W/2,400,110,'#fff',1);});
+shot(6,6,t=>{bgTeal();wave(880,t,22,36);bigText('SADECE BİR PARÇA',W/2,400,100,'#fff',1);});
+shot(7,7,t=>{bgPsi();loopArrows(540,880,300,t);notes(540,880,t,4,120);bigText('TEKRAR TEKRAR',W/2,380,110,'#ffd23f',1);});
+shot(8,8,t=>{bgTeal();if(t<4.6){yearStamp('2015','READİNG ÜNİV.',eOut(cl(t*2.5)),700);}else{gumBubble(540,860,320*back(cl((t-4.6)*3)));bigText('SAKIZ!',W/2,400,160,'#ff9ad5',1);}});
+shot(9,9,t=>{bgPsi();gumBubble(540,860,250+Math.sin(t*2)*30);bigText('-%33',W/2,860,170,'#fff',1);bigText('DAHA AZ DUYDULAR',W/2,400,90,'#ffd23f',1);});
+shot(10,10,t=>{bgPsi();person(540,900,190,{mouthOpen:0.5+0.5*Math.sin(t*12),smile:0.3});x.globalAlpha=1-cl(t/4);notes(540,880,t,5,330);x.globalAlpha=1;bigText('ÇENE MEŞGUL',W/2,380,110,'#fff',1);});
+shot(11,11,t=>{bgTeal();person(540,950,170,{smile:0.9});gumBubble(540,1040,90+t*30);bigText('BİR SAKIZ DENE',W/2,400,100,'#ffd23f',1);});
+shot(12,12,t=>{bgPsi();notes(540,1050,t,5,260);frameText(['Kafana en son','hangi şarkı takıldı?'],560,t,eOut(cl(t*3)));});
+shot(13,15,t=>cta(t));
