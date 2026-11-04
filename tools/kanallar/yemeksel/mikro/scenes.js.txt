@@ -1,0 +1,23 @@
+function bgLab(){bgDoc('#1c2a36','#070b10');}
+function popFly(t,n=18){const r=rng(5);for(let i=0;i<n;i++){const st=r()*1.2,k=cl((t-st)*1.2);if(k<=0){kernel(300+r()*480,1080,1.2);r();continue;}const vx=(r()-0.5)*700,vy=-900-r()*400;const px=540+vx*k*0.9-0+(r()-0.5)*200,py=1080+vy*k+900*k*k;popcorn(px,Math.min(1100,py),1.5,t*3+i);}}
+shot(0,0,t=>{bgLab();spot(540,880,600,0.4,'120,200,255');for(let i=0;i<4;i++){const k=((t*1.0+i/4)%1);x.strokeStyle=`rgba(120,220,255,${0.7*(1-k)})`;x.lineWidth=10;x.beginPath();x.arc(540,880,140+k*420,0,7);x.stroke();}chocBar(540,860,2.2,cl(0.4+t*0.15),-0.08);bigText('MİKRODALGA',W/2,300,130,'#7fd8ff',1);bigText('ERİYEN BİR ÇİKOLATA',W/2,440,80,'#ffd23f',1);vignette(0.4);});
+shot(1,1,t=>{bgLab();radarDish(540,1250,1.4,t);yearStamp('1945','AMERİKA',eOut(cl(t*2.5)),480);});
+shot(2,2,t=>{bgLab();radarDish(300,1250,1.0,t);sil(720,1250,2.6,'#0c1218');bigText('PERCY SPENCER',W/2,300,105,'#ffd23f',1);bigText('RADAR UZMANI',W/2,430,75,'#fff',eOut(cl((t-1)*3)));});
+shot(3,3,t=>{bgLab();magnetron(540,880,1.7,t);bigText('MAGNETRON',W/2,330,130,'#7fd8ff',1);});
+shot(4,4,t=>{bgLab();magnetron(330,880,1.1,t);sil(800,1250,2.4,'#0c1218');bigText('ANLATILANA GÖRE',W/2,330,95,'#fff',1);});
+shot(5,5,t=>{bgLab();spot(540,880,500,0.35,'255,180,120');chocBar(540,860,2.4,cl(0.3+t*0.8),-0.05);bigText('ERİMİŞ!',W/2,330,150,'#ffd23f',back(cl(t*3)));});
+shot(6,6,t=>{bgLab();people(5,540,1250,2.0,'#2a3644',150);bigText('ÇOĞU İNSAN',W/2,330,120,'#fff',1);bigText('UMURSAMAZDI',W/2,460,90,'#8a9aa8',1);});
+shot(7,7,t=>{bgLab();bulb(540,700,1.4,t);sil(540,1250,1.6,'#0c1218');bigText('MERAK ETTİ',W/2,300,130,'#ffd23f',1);});
+shot(8,8,t=>{bgLab();magnetron(250,820,0.9,t);const r=rng(2);for(let i=0;i<30;i++)kernel(560+r()*360,1060+r()*60,1.4);bigText('BİR AVUÇ MISIR',W/2,330,105,'#fff',1);});
+shot(9,9,t=>{bgLab();magnetron(250,820,0.9,t);popFly(t);bigText('PAT! PAT!',W/2,330,150,'#ffd23f',1);});
+shot(10,10,t=>{bgLab();magnetron(250,820,0.9,t);egg(720,900,1.8+Math.sin(t*20)*0.02*t);bigText('YUMURTA',W/2,330,140,'#fff',1);});
+shot(11,11,t=>{bgLab();egg(600,900,1.8,cl(t*2.5+0.05));bigText('PATLADI!',W/2,330,150,'#ffd23f',back(cl(t*3)));});
+shot(12,12,t=>{bgLab();spot(540,880,500,0.3,'255,210,120');microwave(540,880,1.4,t);bigText('HIZLI ISITMA',W/2,330,120,'#7fd8ff',1);});
+shot(13,13,t=>{bgDoc('#2a2420','#0d0b08');scroll(540,880,1.1,cl(t*2),'PATENT');bigText('AYNI YIL',W/2,330,130,'#ffd23f',1);});
+shot(14,14,t=>{bgLab();x.fillStyle='#2a3644';x.fillRect(0,1250,W,700);radarange(780,1250,0.75,t);bigText('1947',330,640,190,'#ffd23f',eOut(cl(t*2.5)));bigText('İLK TİCARİ',330,800,70,'#fff',eOut(cl((t-0.5)*2.5)));});
+shot(15,15,t=>{bgWarm();x.fillStyle='#6b4a2a';x.fillRect(0,1050,W,40);x.fillStyle='#4a2e1a';x.fillRect(0,1090,W,200);radarange(540,1250,0.72+Math.sin(t*2)*0.005,t);bigText('MUTFAĞA SIĞMAZ',W/2,300,105,'#ff6b6b',1);});
+shot(16,16,t=>{bgLab();x.fillStyle='#2a3644';x.fillRect(0,1250,W,700);radarange(360,1250,0.72,t);heightBar(590,458,1250,'1,80 M',cl(t*1.5));bigText('340 KG',870,900,110,'#ffd23f',back(cl((t-1.8)*3)));bigText('DEV GİBİ',W/2,300,130,'#fff',1);});
+shot(17,17,t=>{bgMoney();coins(t,16,4);priceTag(540,880,'~5.000 $',150,'#c1121f');bigText('FİYATI',W/2,330,140,'#fff',1);});
+shot(18,18,t=>{bgWarm();x.fillStyle='#6b4a2a';x.fillRect(0,1100,W,40);microwave(540,940,1.1,t);bigText('YILLAR SONRA',W/2,300,120,'#ffd23f',1);bigText('TEZGÂHA SIĞDI',W/2,430,90,'#fff',eOut(cl((t-1.4)*3)));});
+shot(19,20,t=>{bgLab();microwave(540,1150,0.6,t);frameText(['Mikrodalgada','ne ısıtıyorsun?'],650,t,eOut(cl(t*3)));});
+shot(21,21,t=>cta(t));
