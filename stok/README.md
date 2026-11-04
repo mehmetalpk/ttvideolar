@@ -8,7 +8,7 @@ Her kanal klasöründe: `<NN>_<konu>.mp4` + `stok.md` (sıra, başlık, süre, a
 - Osmanlısal: Kahve yasağı (IV. Murat), Lale Devri, Karakoncolos, Hezarfen Ahmed Çelebi, Lagari Hasan Çelebi, Fatih'in gemileri karadan yürütmesi, Sokullu Don-Volga kanalı, Patrona Halil İsyanı, Barbaros ve Preveze, Evliya Çelebi'nin rüyası
 - Psikolojik: Kapı etkisi, Kulak kurdu, Zeigarnik etkisi, Spot ışığı etkisi, Sıklık yanılsaması (Baader-Meinhof), Dunning-Kruger etkisi
 - Sporsal: İstanbul 2005 (Liverpool-Milan), Hakan Şükür 11 saniye, Naim Süleymanoğlu, Kimi Antonelli 2026 şampiyonluğu, Maracanazo 1950 (Uruguay-Brezilya), Bob Beamon 1968 uzun atlama, Leicester City 2016 (5000'e 1)
-- Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni, Mona Lisa hırsızlığı, Michelangelo Davut, Van Gogh Yıldızlı Gece, John Cage 4'33", Han van Meegeren (sahte Vermeer)
+- Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni, Mona Lisa hırsızlığı, Michelangelo Davut, Van Gogh Yıldızlı Gece, John Cage 4'33", Han van Meegeren (sahte Vermeer), Mozart ve Allegri'nin Miserere'si
 - Parasal: Almanya 1923 hiperenflasyon, Bitcoin pizza, Lale çılgınlığı, Ronald Wayne (Apple %10 → 800$), Blockbuster-Netflix (50 milyon $ teklif), Güney Denizi balonu 1720 (Newton'un kaybı), James Howells (çöpe giden 8000 bitcoin)
 - Yemeksel: Döner/İskender, Kruvasan efsanesi, Hacı Bekir lokum
 - Motivasyonel: "Bir gün" bahanesi, "Çoğu insan / Az insan", Yüzde 1 kuralı, 66 gün kuralı (alışkanlık), Kimse gelmeyecek, 5 saniye kuralı (erteleme), Başarısızlık: 9000 kaçan şut (Jordan sözü)
