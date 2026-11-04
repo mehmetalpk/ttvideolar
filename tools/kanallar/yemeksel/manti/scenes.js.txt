@@ -1,0 +1,18 @@
+function bgM(){bgDoc('#3a1c0e','#0f0704');}
+function erciyes(base){bgDoc('#7aa6c9','#e9d6b0');x.fillStyle='#6a5a6a';x.beginPath();x.moveTo(0,base-150);x.lineTo(420,base-640);x.lineTo(520,base-700);x.lineTo(640,base-620);x.lineTo(W,base-200);x.lineTo(W,base);x.lineTo(0,base);x.fill();x.fillStyle='#f6f6f6';x.beginPath();x.moveTo(370,base-580);x.lineTo(420,base-640);x.lineTo(520,base-700);x.lineTo(640,base-620);x.lineTo(690,base-560);x.lineTo(600,base-590);x.lineTo(520,base-560);x.lineTo(440,base-600);x.fill();x.fillStyle='#d9cdb4';for(let i=0;i<9;i++){const h=120+(i*47%90);x.fillRect(i*120,base-h,110,h);}x.fillStyle='#8a6a4a';x.fillRect(0,base,W,H-base);}
+function steamUp(cx,cy,t,n=4){x.strokeStyle='rgba(255,255,255,0.4)';x.lineWidth=10;for(let i=0;i<n;i++){x.beginPath();for(let k=0;k<12;k++){const yy=cy-k*18,xx=cx-60+i*40+Math.sin(t*3+k*0.6+i)*14;k?x.lineTo(xx,yy):x.moveTo(xx,yy);}x.stroke();}}
+shot(0,0,t=>{bgM();spot(540,880,600,0.45,'255,180,110');rays(540,880,t,'rgba(255,200,120,0.10)');spoonM(470,880,2.0+t*0.02,40,1,-0.12);bigText('BİR KAŞIĞA',W/2,300,120,'#fff',1);bigText('40 MANTI!',W/2,440,140,'#ffd23f',1);vignette(0.4);});
+shot(1,1,t=>{steppe(1250,t);yurt(250,1250,1.1);rider(700-t*30,1250,1.1,t);bigText('ORTA ASYA',W/2,330,140,'#fff',1);bigText('BOZKIRLARI',W/2,470,90,'#ffd23f',eOut(cl((t-1)*3)));});
+shot(2,2,t=>{steppe(1250,t);for(let i=0;i<3;i++)rider(200+i*300+((t*80)%120),1250-i*20,0.8,t+i,'#3a2414');bigText('ATLI GÖÇEBELER',W/2,300,105,'#fff',1);bigText('SÖYLENENE GÖRE',W/2,430,70,'#ffd23f',1);});
+shot(3,3,t=>{bgM();spot(540,900,500,0.35);mantiPlate(540,900,1.5,t);steamUp(540,780,t);bigText(t<0.9?'DOYURUCU':'PRATİK',W/2,330,140,'#ffd23f',1);});
+shot(4,4,t=>{worldMap(t);x.fillStyle='rgba(0,0,0,0.4)';x.fillRect(0,0,W,H);mapArrow(560,760,920,720,eOut(cl(t*1.2)),'#ffd23f');bigText('ADI DA DOĞUDAN',W/2,330,110,'#fff',1);});
+shot(5,5,t=>{bgM();const L=[['MANTU','MOĞOLCA'],['MANTOU','ÇİNCE'],['MANDU','KORECE']];L.forEach(([a,b],i)=>{const p=eOut(cl((t-i*1.2)*3));if(p<=0)return;bigText(a,W/2,600+i*230,120,'#ffd23f',p);bigText(b,W/2,690+i*230,50,'#fff',p);});mantiP(160,1120,2.2,0.2);mantiP(920,1120,2.2,-0.3);bigText('ADLAR',W/2,330,140,'#fff',1);});
+shot(6,6,t=>{bgM();for(let i=0;i<3;i++)mantiP(270+i*270,880,3.5,Math.sin(t+i)*0.2);qmarks(540,700,t,3);bigText('AYNI AİLE?',W/2,330,130,'#ffd23f',1);});
+shot(7,7,t=>{worldMap(t);x.fillStyle='rgba(0,0,0,0.4)';x.fillRect(0,0,W,H);mapArrow(900,720,330,760,eOut(cl(t*0.9)),'#ffd23f');const p=eOut(cl(t*0.9));rider(900-570*p,800,0.45,t,'#ffd23f');bigText("ANADOLU'YA",W/2,330,130,'#fff',1);});
+shot(8,8,t=>{bgDoc('#3a2a1c','#120c06');spot(540,900,500,0.3);bookOld(540,920,1.3,1,'MANTU');mantiP(700,940,2.4,0);bigText('15. YÜZYIL',W/2,300,120,'#ffd23f',1);bigText('ŞİRVANİ',W/2,430,100,'#fff',eOut(cl((t-1.5)*3)));});
+shot(9,9,t=>{bgM();pot(540,980,1.0,t,'#e8e2d0');steamUp(540,840,t,5);x.fillStyle='#f6f6f2';x.beginPath();x.ellipse(860,1110,120,40,0,0,7);x.fill();bigText('BUHARDA',W/2,330,140,'#fff',1);bigText('+ YOĞURT',W/2,470,90,'#ffd23f',eOut(cl((t-1.4)*3)));});
+shot(10,10,t=>{erciyes(1250);bigText('KAYSERİ',W/2,330,150,'#ffd23f',back(cl(t*2)));});
+shot(11,11,t=>{bgShop();doughSheet(540,860,640,560,cl(t/3.2),t);rollingPin(540,1130+Math.sin(t*4)*10,0.9,0.05);const w=['İNCECİK','KÜÇÜCÜK','NOHUT KADAR'];bigText(w[Math.min(2,Math.floor(t/1.7))],W/2,330,130,'#ffd23f',1);});
+shot(12,12,t=>{bgM();rays(540,880,t,'rgba(255,215,120,0.12)');const p=cl(t/3.5);spoonM(470,880,2.0,40,p,-0.12);counter(0,40,p,540,1130,120,'#ffd23f');bigText('HÜNERİN ÖLÇÜSÜ',W/2,330,105,'#fff',1);});
+shot(13,14,t=>{bgM();spoonM(480,1180,0.8,40,1,-0.1);frameText(['Bir kaşığa','kaç mantı?'],650,t,eOut(cl(t*3)));});
+shot(15,15,t=>cta(t));
