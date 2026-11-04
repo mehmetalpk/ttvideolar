@@ -1,0 +1,16 @@
+function wheel(cx,cy,r,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.strokeStyle='#ddd';x.lineWidth=40;x.beginPath();x.arc(0,0,r,0,7);x.stroke();x.lineWidth=34;x.beginPath();x.moveTo(-r,0);x.lineTo(r,0);x.moveTo(0,0);x.lineTo(0,r);x.stroke();x.fillStyle='#c1121f';x.beginPath();x.arc(0,0,r*0.25,0,7);x.fill();x.restore();}
+function mirror(cx,cy,w,h){x.fillStyle='#7a5a3a';rr(cx-w/2-24,cy-h/2-24,w+48,h+48,30);x.fill();const g=x.createLinearGradient(cx-w/2,cy-h/2,cx+w/2,cy+h/2);g.addColorStop(0,'#b8c6d6');g.addColorStop(1,'#5a6a7a');x.fillStyle=g;rr(cx-w/2,cy-h/2,w,h,20);x.fill();x.fillStyle='rgba(255,255,255,0.25)';x.beginPath();x.moveTo(cx-w/2+40,cy-h/2);x.lineTo(cx-w/2+120,cy-h/2);x.lineTo(cx-w/2,cy-h/2+160);x.lineTo(cx-w/2,cy-h/2+60);x.fill();}
+shot(0,0,t=>{blk();sil(540,1150,2.6,'#1a1a1a');spot(540,900,500,0.2,'255,60,60');slam('KİMSE',380,190,'#ff2d2d',t);bigText('GELMEYECEK',W/2,560,110,'#fff',1);});
+shot(1,1,t=>{blk();const L=['PATRON','ŞANS','DOĞRU ZAMAN'];L.forEach((w,i)=>{if(t>i*0.8){bigText(w,W/2,560+i*200,110,'#888',1);stampX(540,560+i*200,0.7,cl((t-i*0.8-0.3)*4));}});bigText('NE...',W/2,330,120,'#fff',1);});
+shot(2,2,t=>{blk();people(5,540,1100,1.3,'#333',180,-1);slam('HERKES MEŞGUL',380,110,'#fff',t);});
+shot(3,3,t=>{blk();rays(540,800,t,'rgba(255,45,45,0.1)');slam('SENİN KADAR',600,130,'#ffd23f',t);bigText('İSTEMEYECEK',W/2,800,120,'#fff',eOut(cl((t-0.8)*3)));});
+shot(4,4,t=>{blk();if(t<1.7){slam('KÖTÜ HABER?',700,130,'#888',t);}else{rays(540,700,t,'rgba(95,224,138,0.15)');slam('EN İYİ HABER',700,130,'#5fe08a',t-1.7);}});
+shot(5,5,t=>{blk();wheel(540,820,260,Math.sin(t*2)*0.4);slam('DİREKSİYON SENDE',330,100,'#ffd23f',t);});
+shot(6,6,t=>{blk();mirror(540,780,520,700);sil(540,1100,2.4,'#1a2430');slam('AYNADAKİ KİŞİ',300,110,'#fff',t);});
+shot(7,7,t=>{blk();alarm(540,800,1.2,t,'06:00');if(t<1.7)bigText('KALKAN SENSİN',W/2,330,110,'#5fe08a',1);else bigText('ERTELEYEN DE',W/2,330,110,'#ff4d4d',1);});
+shot(8,8,t=>{blk();x.save();x.translate(540,1000);x.scale(2,2);x.translate(-540,-1150);couch(540,1150,t);x.restore();if(t<1.8)slam('BAHANE = RAHAT',380,100,'#888',t);else slam('AMA YERİNDE SAYARSIN',380,80,'#ff4d4d',t-1.8);});
+shot(9,9,t=>{blk();stepsUp(7,Math.min(7,1+Math.floor(t*2.5)),t);slam('BUGÜN 1 ADIM',330,120,'#ffd23f',t);});
+shot(10,10,t=>{blk();fork(t,cl((t-1.4)*3));x.save();x.translate(0,0);x.restore();bigText('1 YIL SONRA',W/2,330,120,'#fff',1);});
+shot(11,11,t=>{blk();rays(540,900,t,'rgba(255,210,63,0.12)');victory(540,1150,1.6,'#ffd23f');slam('SEN GİT',330,170,'#ffd23f',t-0.9>0?t-0.9:9);});
+shot(12,12,t=>{blk();stepsUp(7,3,t);frameText(['Bugün hangi','adımı atacaksın?'],560,t,eOut(cl(t*3))+0.2);});
+shot(13,14,t=>cta(t));

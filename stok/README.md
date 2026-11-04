@@ -11,4 +11,4 @@ Her kanal klasöründe: `<NN>_<konu>.mp4` + `stok.md` (sıra, başlık, süre, a
 - Sanatsal (@sanatsal.hikayeler): Beethoven 9. Senfoni, Mona Lisa hırsızlığı, Michelangelo Davut, Van Gogh Yıldızlı Gece, John Cage 4'33"
 - Parasal: Almanya 1923 hiperenflasyon, Bitcoin pizza, Lale çılgınlığı, Ronald Wayne (Apple %10 → 800$)
 - Yemeksel: Döner/İskender, Kruvasan efsanesi, Hacı Bekir lokum
-- Motivasyonel: 66 gün kuralı (alışkanlık)
+- Motivasyonel: 66 gün kuralı (alışkanlık), Kimse gelmeyecek
