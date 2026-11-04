@@ -1,0 +1,17 @@
+const BC=['#f2f2f2','#f2f2f2','#ffd23f','#2e7d32'];
+function silentCrowd(y0,y1,t,k){x.save();x.globalAlpha=1;crowd(y0,y1,t*(1-k),k>0.5?['#3a3f4a','#2a2e36']:BC);x.restore();}
+shot(0,0,t=>{stadium(t,BC);ballS(540,880,70,t*4);x.fillStyle='rgba(0,0,0,'+(0.15+0.35*cl(t/3))+')';x.fillRect(0,0,W,H);bigText('200 BİN KİŞİ',W/2,330,140,'#fff',1);bigText('TEK GOLLE SUSTU',W/2,490,95,'#ffd23f',1);});
+shot(1,1,t=>{stadium(t,BC);yearStamp('1950','16 TEMMUZ · RİO',eOut(cl(t*2.5))+0.01,600);});
+shot(2,2,t=>{stadium(t,BC);trophy(540,760,1.6*back(cl(t*2))+0.01);bigText('FİNAL MAÇI',W/2,330,120,'#ffd23f',1);player(330,1180,0.9,'#f2f2f2','#1f4f9a',t*3);player(750,1180,0.9,'#6cb4ee','#111',t*3+1);bigText('BREZİLYA',330,1240,56,'#fff',1);bigText('URUGUAY',750,1240,56,'#6cb4ee',1);});
+shot(3,3,t=>{stadium(t,BC);score(0,0,'BREZİLYA','URUGUAY',1,700);bigText('BERABERLİK',W/2,330,120,'#fff',1);bigText('YETİYORDU',W/2,470,100,'#5fe08a',eOut(cl((t-0.5)*3)));});
+shot(4,4,t=>{sepia();const k=t<2.2?0:1;newspaper(540,800,0.95,-0.05+k*0.08,k?'CAMPEÕES!':'ŞAMPİYON!');if(t>2.2)newspaper(580,860,0.8,0.08,'CAMPEÕES!');bigText('MAÇTAN ÖNCE',W/2,250,100,'#ffd23f',1);});
+shot(5,5,t=>{night();pitch(700,t);goalNet(540,1050,1.3,t>0.8?1:0);const k=eOut(cl(t/0.8));ballS(540,1350-k*420,60*(1.4-k*0.6),t*8);bigText("47'",W/2,330,170,'#fff',1);bigText('FRİAÇA · 1-0',W/2,500,90,'#ffd23f',eOut(cl((t-0.8)*3)));});
+shot(6,6,t=>{stadium(t,BC);if(t<2){player(540,1180,1.3,'#6cb4ee','#111',t*6);bigText('PES ETMEDİ',W/2,330,130,'#6cb4ee',1);}else{score(1,1,'BREZİLYA','URUGUAY',1,700);bigText("66' SCHIAFFINO",W/2,330,100,'#fff',1);}});
+shot(7,7,t=>{night();pitch(700,t);const k=eOut(cl(t/2.2));player(150+k*330,1150,1.1,'#6cb4ee','#111',t*9);ballS(250+k*330,1130,30,t*8);if(t>2.4){goalNet(540,1050,1.3,1);const q=eOut(cl((t-2.4)/0.6));ballS(540,1100-q*200,40,t*8);}bigText("79'",W/2,330,170,'#ff6b6b',1);bigText('GHIGGIA',W/2,500,100,'#fff',1);});
+shot(8,8,t=>{stadium(t,BC);score(1,2,'BREZİLYA','URUGUAY',1,800);bigText('GOL!',W/2,380,200,'#6cb4ee',back(cl(t*2))+0.01);});
+shot(9,9,t=>{night();crowd(450,1150,0,['#3a3f4a','#2a2e36']);x.fillStyle='rgba(0,0,0,0.45)';x.fillRect(0,0,W,H);bigText('SESSİZLİK',W/2,700,150,'#fff',1);});
+shot(10,10,t=>{night();crowd(450,1150,0,['#3a3f4a','#2a2e36']);x.fillStyle='rgba(0,0,0,0.45)';x.fillRect(0,0,W,H);counter(0,173850,eOut(cl(t/2)),W/2,760,150,'#ffd23f');bigText('RESMİ SEYİRCİ',W/2,330,100,'#fff',1);});
+shot(11,11,t=>{dark();if(t<2.6){x.save();x.translate(540,820);x.scale(1.4,1.4);x.fillStyle='#f2f2f2';x.fillRect(-150,-180,300,380);x.fillRect(-230,-180,90,160);x.fillRect(140,-180,90,160);x.restore();stampX(540,820,1.6,cl((t-0.8)*3));bigText('BEYAZ FORMA',W/2,330,110,'#fff',1);}else{x.save();x.translate(540,820);x.scale(1.4,1.4);x.fillStyle='#ffd23f';x.fillRect(-150,-180,300,380);x.fillRect(-230,-180,90,160);x.fillRect(140,-180,90,160);x.fillStyle='#2e7d32';x.fillRect(-150,-180,300,24);x.restore();bigText('SARI FORMA',W/2,330,120,'#ffd23f',1);}});
+shot(12,12,t=>{night();flood(t);spot(540,1050,360,0.5,'120,180,255');sil(540,1180,1.5,'#6cb4ee');const n=Math.min(3,Math.floor((t-2.5)/1.2)+1);const L=['PAPA','SİNATRA','GHIGGIA'];for(let i=0;i<3;i++)if(i<n)bigText(L[i],W/2,620+i*130,90,i===2?'#6cb4ee':'#fff',1);bigText('SADECE 3 KİŞİ',W/2,330,120,'#ffd23f',1);});
+shot(13,13,t=>{stadium(t,BC);score(1,2,'BREZİLYA','URUGUAY',1,1000);frameText(['En büyük','sürpriz bu mu?'],560,t,eOut(cl(t*3))+0.2);});
+shot(14,15,t=>cta(t));

@@ -1,0 +1,3 @@
+# Sporsal Hikayeler — stok
+NN | konu | süre | TikTok başlığı | açıklama | YouTube başlığı | YT etiketleri | kaynak
+04 | Maracanazo 1950 (Brezilya 1-2 Uruguay) | 62 sn | 200 bin kişilik stadyumu susturan gol ⚽ | Beraberlik yetiyordu, gazeteler şampiyon ilan etmişti. Sonra 79. dakika geldi ⚽ Sence futbol tarihinin en büyük sürprizi bu mu? 👇 #futbol #maracanazo #dünyakupası #brezilya #uruguay #futboltarihi #keşfet #fyp | 200 bin kişiyi susturan gol: Maracanazo 1950 ⚽ | futbol, maracanazo, dünya kupası 1950, brezilya, uruguay, ghiggia, futbol tarihi, shorts | Wikipedia (Uruguay v Brazil 1950 FIFA World Cup), beIN Sports (Maracanazo 75. yıl), DFB Datencenter
