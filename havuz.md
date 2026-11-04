@@ -5,6 +5,9 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 > **KAPANIŞ SESİ — KULLANICI GERİ BİLDİRİMİ (4 Kasım, günlük görevdeki kapanış cümlelerinin YERİNE geçer):** Beğeni kapısı kapanışında heyecanlı/bağıran ton KULLANMA. Seslendirme: "[warm, playful] Part <sonraki numara>... <iki/üç> bin beğeni gelirse geliyor." (ör. "Part beş... üç bin beğeni gelirse geliyor."). Ekranda: "3K BEĞENİ" + altında sarı "= PART <n>" (Part 1 için "2K BEĞENİ = PART 2"). Bu kısa klibin ses seviyesini hikâye sesinden YÜKSEK yapma (gerekirse -5 dB). Açıklamadaki satır: "Part <n>, 3K beğeni gelirse geliyor 👀 Hatırlatılmasını istiyorsan yorumlara \"hatırlat\" yaz 💬". Kapı cümlesinden sonra ikinci kısa klip: "[warm, playful] Hatırlatılmasını istiyorsan, yorumlara hatırlat yaz." + son sahnede beyaz konuşma balonu içinde "YORUMLARA \"HATIRLAT\" YAZ 💬" (ses -5 dB).
 
+> GÜNCELLEME (4 Kas 16:55): İki kapanış cümlesi AYRI ekranlarda değil, TEK EKRANDA arka arkaya: üstte "3K BEĞENİ = PART <n>" + kalp, altta "YORUMLARA "HATIRLAT" YAZ 💬" balonu; iki ses klibi arasında ~0.1 sn boşluk. Kapanış toplam ~6.5 sn.
+
+
 ## Bekleyen
 ### DİZİ: Hacker Kerem (komedi) — Part 1-2 kaynak hikâyeden, Part 3 kaynak finali (ucu açık), Bölüm 4+ ÖZGÜN devam (aynı karakterler)
 - Tür: BEĞENİ KAPILI SERİ (günlük görevdeki "BEĞENİ KAPISI KURALLARI"na bak). SABAH slotu. Bölüm 4 (4 Kasım akşamı yayınlandı) "Bölüm 5 yarın" diye bitti; Bölüm 5 (5 Kasım sabahı) KOŞULSUZ yayınlanır ve sonu "3K beğeni gelirse devam" kapısıdır. Bölüm 6 ve sonrası SADECE bir önceki bölüm TikTok'ta ≥3.000 beğeni aldıysa üretilir; almadıysa dizi biter (Kullanıldı'ya taşı) ve sabah slotuna havuzdan yeni seri gelir.
