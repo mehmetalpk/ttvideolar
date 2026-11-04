@@ -1,0 +1,17 @@
+function shoe(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#e8e8e8';x.beginPath();x.moveTo(-160,40);x.lineTo(-150,-60);x.quadraticCurveTo(-60,-90,-20,-40);x.lineTo(150,-10);x.quadraticCurveTo(190,10,180,40);x.closePath();x.fill();x.fillStyle='#c1121f';x.fillRect(-165,40,350,22);x.strokeStyle='#111';x.lineWidth=6;for(let i=0;i<3;i++){x.beginPath();x.moveTo(-100+i*30,-60+i*6);x.lineTo(-70+i*30,-30+i*6);x.stroke();}x.restore();}
+function ring(cx,cy,r,p,col){r=Math.max(4,r);x.strokeStyle='#2a2a2a';x.lineWidth=30;x.beginPath();x.arc(cx,cy,r,0,7);x.stroke();x.strokeStyle=col;x.beginPath();x.arc(cx,cy,r,-Math.PI/2,-Math.PI/2+6.283*cl(p));x.stroke();}
+function bubble(cx,cy,txt,sz,p){if(p<=0)return;x.save();x.globalAlpha=cl(p*2);x.fillStyle='#fff';x.font=`900 ${sz}px ${F}`;const w=x.measureText(txt).width+80;rr(cx-w/2,cy-sz,w,sz*2,40);x.fill();x.beginPath();x.moveTo(cx-40,cy+sz-4);x.lineTo(cx-90,cy+sz+60);x.lineTo(cx+10,cy+sz-4);x.fill();x.fillStyle='#111';x.textAlign='center';x.textBaseline='middle';x.fillText(txt,cx,cy+4);x.restore();}
+shot(0,0,t=>{blk();spot(540,800,520,0.25,'255,60,60');ring(540,800,230,1-t/4,'#ff2d2d');bigText(String(Math.max(1,5-Math.floor(t))),W/2,810,260,'#fff',1);bigText('5 SANİYEN VAR',W/2,330,120,'#ff2d2d',1);});
+shot(1,1,t=>{blk();alarm(540,800,1.3,t,'06:00');slam('KALK!',330,150,'#ffd23f',t);});
+shot(2,2,t=>{blk();brainI(540,800,1.6,'#ff9ad5');bubble(540,480,'5 DAKİKA DAHA...',70,t*2);if(t>1.6)stampX(540,800,1.1,cl((t-1.6)*4));});
+shot(3,3,t=>{blk();doorP(540,1150,1.5,0,0);shoe(540,1110,0.9);bubble(540,430,'YARIN BAŞLARSIN',70,(t-0.8)*2);bigText('BEYNİN FISILDIYOR',W/2,280,90,'#888',1);});
+shot(4,4,t=>{blk();x.save();x.translate(540,1000);x.scale(2,2);x.translate(-540,-1150);couch(540,1150,t);x.restore();slam('BAHANE KAZANIYOR',380,86,'#ff4d4d',t);});
+shot(5,5,t=>{blk();rays(540,800,t,'rgba(255,210,63,0.1)');ring(540,800,230,cl(t/1.5),'#ffd23f');bigText('5',W/2,810,260,'#ffd23f',eOut(cl(t*3)));bigText('5 SANİYE KURALI',W/2,330,110,'#fff',1);});
+shot(6,6,t=>{blk();sil(540,1150,2.4,'#1f1f1f');qmarks(540,950,t);slam('HİSSETTİĞİN AN',330,110,'#fff',t);bigText('GERİYE SAY',W/2,470,100,'#ffd23f',eOut(cl((t-1)*3)));});
+shot(7,7,t=>{blk();const d=S[7].d,k=Math.min(4,Math.floor(t/(d/5)));const lt=t-k*(d/5);rays(540,800,t,'rgba(255,45,45,0.1)');ring(540,800,250,(k+1)/5,'#ff2d2d');slam(String(5-k),810,320,k<4?'#fff':'#ffd23f',lt);bigText('GERİ SAYIM',W/2,330,110,'#ff2d2d',1);});
+shot(8,8,t=>{blk();rays(540,900,t,'rgba(95,224,138,0.12)');victory(540,1150,1.6,'#5fe08a');slam('0 = HAREKET',330,140,'#5fe08a',t);});
+shot(9,9,t=>{blk();brainI(540,800,1.4,'#555');if(t>0.8)stampX(540,800,1.2,cl((t-0.8)*4));bigText('BAHANEYE',W/2,300,110,'#fff',1);bigText('ZAMAN YOK',W/2,430,110,'#ff2d2d',eOut(cl((t-0.4)*3)));});
+shot(10,10,t=>{blk();clock(540,800,220,t);if(t<2)slam('MOTİVASYONU',330,120,'#888',t);else slam('BEKLEME',330,150,'#ff2d2d',t-2);});
+shot(11,11,t=>{blk();stepsUp(7,Math.min(7,1+Math.floor(t*3)),t);slam('5 SANİYEDE KALK',330,110,'#ffd23f',t);});
+shot(12,12,t=>{blk();ring(540,1000,140,1,'#ffd23f');bigText('5',W/2,1005,160,'#ffd23f',1);frameText(['Ertelediğin','o tek şey ne?'],520,t,eOut(cl(t*3))+0.2);});
+shot(13,14,t=>cta(t));
