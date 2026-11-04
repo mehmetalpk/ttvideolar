@@ -3,6 +3,8 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> SÜRE KURALI (kullanıcı isteği, 4 Kas 17:00 — TÜM Redditsel videolar için geçerli): Videolar çok kısa kalıyordu (~40 sn). Bundan sonra her video kapanış dahil 70–85 sn olacak. Seslendirme metni ~190–230 kelime (atempo 1.1 sonrası ~65–78 sn konuşma + ~6.5 sn kapanış). Uzatmayı dolgu cümleyle değil, olayla yap: her bölüme 1 ekstra sahne/diyalog, 1 ara gerilim ya da komik an, karakterlere kısa replik. Hook ilk 2 sn'de kalır, tempo düşmez; sahne başına ~4–6 sn, aynı görsel 7 sn'den uzun durmaz. Seri dışı tek videolar da aynı süreye uyar.
+
 > **KAPANIŞ SESİ — KULLANICI GERİ BİLDİRİMİ (4 Kasım, günlük görevdeki kapanış cümlelerinin YERİNE geçer):** Beğeni kapısı kapanışında heyecanlı/bağıran ton KULLANMA. Seslendirme: "[warm, playful] Part <sonraki numara>... <iki/üç> bin beğeni gelirse geliyor." (ör. "Part beş... üç bin beğeni gelirse geliyor."). Ekranda: "3K BEĞENİ" + altında sarı "= PART <n>" (Part 1 için "2K BEĞENİ = PART 2"). Bu kısa klibin ses seviyesini hikâye sesinden YÜKSEK yapma (gerekirse -5 dB). Açıklamadaki satır: "Part <n>, 3K beğeni gelirse geliyor 👀 Hatırlatılmasını istiyorsan yorumlara \"hatırlat\" yaz 💬". Kapı cümlesinden sonra ikinci kısa klip: "[warm, playful] Hatırlatılmasını istiyorsan, yorumlara hatırlat yaz." + son sahnede beyaz konuşma balonu içinde "YORUMLARA \"HATIRLAT\" YAZ 💬" (ses -5 dB).
 
 > GÜNCELLEME (4 Kas 16:55): İki kapanış cümlesi AYRI ekranlarda değil, TEK EKRANDA arka arkaya: üstte "3K BEĞENİ = PART <n>" + kalp, altta "YORUMLARA "HATIRLAT" YAZ 💬" balonu; iki ses klibi arasında ~0.1 sn boşluk. Kapanış toplam ~6.5 sn.
