@@ -1,0 +1,19 @@
+const LB='#1d4fa8';
+function odds(txt,cy,sz,p){bigText(txt,W/2,cy,sz,'#ffd23f',p);}
+function ltable(hi,pos,t){const n=6;for(let i=0;i<n;i++){const y=470+i*110;const me=i===pos;x.fillStyle=me?LB:'rgba(255,255,255,0.08)';rr(140,y,800,90,14);x.fill();x.fillStyle='#fff';x.font=`900 50px ${F}`;x.textAlign='left';x.textBaseline='middle';x.fillText(me?(hi?'1':'20'):String(hi?i+1:15+i),170,y+46);x.fillText(me?'LEICESTER':'• • • • •',290,y+46);}}
+function mini(cx,base,s,col,t){player(cx,base,s,col,'#fff',t*8);}
+shot(0,0,t=>{stadium(t,[LB,'#fff','#111']);bigText("5000'DE 1",W/2,720,190,'#ffd23f',1);bigText('İMKÂNSIZ ŞAMPİYON',W/2,320,84,'#fff',1);});
+shot(1,1,t=>{night();ltable(0,5,t);bigText('140 GÜN EN DİPTE',W/2,320,100,'#ff4d4d',1);});
+shot(2,2,t=>{night();for(let i=0;i<9;i++){const on=t>i*0.3;x.fillStyle=!on?'#222':(i<2?'#888':'#36d17a');x.beginPath();x.arc(170+i*92,760,38,0,7);x.fill();}bigText('9 MAÇTA 7 GALİBİYET',W/2,320,90,'#5fe08a',1);bigText('KÜMEDE KALDILAR',W/2,1000,90,'#fff',eOut(cl((t-1.5)*3)));});
+shot(3,3,t=>{night();spot(540,850,450,0.3);sil(540,1150,2.4,'#0e1a38');qmarks(540,700,t);bigText('YENİ HOCA: RANİERİ',W/2,320,90,'#fff',1);});
+shot(4,4,t=>{night();pitch(950,t);mini(540,1150,1.6,LB,t);bigText('ALT LİGLERDEN',W/2,320,110,'#ffd23f',1);bigText('JAMIE VARDY',W/2,450,90,'#fff',1);});
+shot(5,5,t=>{stadium(t,[LB,'#fff']);const n=Math.min(11,1+Math.floor(t*3.5));for(let i=0;i<n;i++){ballS(150+(i%6)*156,600+Math.floor(i/6)*150,55,t+i);}bigText('11 MAÇ ÜST ÜSTE GOL',W/2,320,80,'#ffd23f',1);if(t>3)bigText('REKOR',W/2,1000,130,'#ff4d4d',eOut(cl((t-3)*3)));});
+shot(6,6,t=>{night();ltable(1,0,t);bigText('ZİRVEDEN İNMEDİ',W/2,320,110,'#5fe08a',1);});
+shot(7,7,t=>{night();rays(540,800,t,'rgba(29,79,168,0.2)');bigText('MASAL BİTECEK Mİ?',W/2,600,100,'#fff',1);if(t>1.8)slam2('BİTMEDİ',820,170,'#ffd23f',t-1.8);});
+shot(8,8,t=>{stadium(t,['#034694','#fff']);if(t<1.6){bigText('2 MAYIS',W/2,680,170,'#ffd23f',1);bigText('2016',W/2,840,110,'#fff',1);}else score(2,0,'CHELSEA','TOTTENHAM',1,700);});
+shot(9,9,t=>{stadium(t,['#034694','#fff']);score(t>0.6?2:2,t>0.6?2:0,'CHELSEA','TOTTENHAM',1,700);goalNet(540,1150,1.2,Math.max(0,1-t*2));bigText('2-2',W/2,330,150,'#ffd23f',eOut(cl((t-0.6)*3)));});
+shot(10,10,t=>{stadium(t,[LB,'#fff','#ffd23f']);confetti(t,60);trophy(540,820,3.2);bigText('ŞAMPİYON',W/2,330,150,'#ffd23f',1);bigText('132 YILDA İLK KEZ',W/2,1080,80,'#fff',eOut(cl((t-1)*3)));});
+shot(11,11,t=>{night();for(let i=0;i<38;i++){const on=t>i*0.06;const lost=[7,24,27].includes(i);x.fillStyle=!on?'#1a1a1a':lost?'#ff4d4d':'#36d17a';x.fillRect(140+(i%8)*102,520+Math.floor(i/8)*110,86,86);}bigText('SADECE 3 YENİLGİ',W/2,320,110,'#fff',1);if(t>3)bigText('EN BÜYÜK SÜRPRİZ',W/2,1130,80,'#ffd23f',eOut(cl((t-3)*3)));});
+shot(12,12,t=>{stadium(t,[LB,'#fff']);frameText(['Bu mucize','tekrar olur mu?'],560,t,eOut(cl(t*3))+0.2);});
+shot(13,14,t=>cta(t));
+function slam2(tx,cy,sz,col,t){x.save();const k=Math.max(0,1-t*3);x.translate(Math.sin(t*90)*14*k,Math.cos(t*70)*14*k);const s=1+Math.max(0,0.4-t*2);x.translate(W/2,cy);x.scale(s,s);x.translate(-W/2,-cy);bigText(tx,W/2,cy,sz,col,1);x.restore();}
