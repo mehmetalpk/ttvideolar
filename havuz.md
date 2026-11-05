@@ -8,7 +8,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 >  - OUTRO 2–3 sn: seri (final değil): "[calm, intriguing] Devamı <n>. partta. Takip et." — ekranda "DEVAMI PART <n>'DE 👀" + küçük "+ TAKİP ET". Final part / münferit: "[warm] Takip et." — ekranda "+ TAKİP ET". Açıklama: seri ise "Devamı Part <n>'de 👀", hepsinde "Takip etmeyi unutma ✅".
 >  - SAÇ: tek parça şekil, kafa tepesinin üstüne taşar; ayrı elips/silindir ÇİZME (face() güncellendi).
 >  - 6 KASIM CUMA AKŞAMI = HACKER KEREM FİNALİ ("PART 6 — FİNAL"): seri bu bölümle BİTER. En az 120 sn (120–150 sn), havuzdaki Bölüm 6–8 özetlerindeki en iyi anları birleştirip tatmin edici bir son yaz: tüm açık uçları kapat (buzdolabı kilidi/annenin kutusu vb.), komik bir doruk + sıcak bir kapanış. Outroda "devamı" YOK, sadece "Takip et." Uzunluk kuralı (70–85 sn) bu bölüm için geçerli DEĞİL. Sabah slotu yine münferit hikâye.
->  - CUMARTESİ'DEN İTİBAREN AKŞAMLAR: duruma göre seri. Kaan 0lm3k zorundaydı Part 1 ≥100 TikTok beğenisi aldıysa 7 Kasım akşamı Kaan Part 2 (final). Sonra havuzdan YENİ seri (Part 1), devam koşulu ≥100 beğeni. Koşul tutmazsa akşam slotuna münferit hikâye ya da yeni seri Part 1.
+>  - CUMARTESİ'DEN İTİBAREN AKŞAMLAR: duruma göre seri. Kaan 0lm3k zorundaydı Part 1 ≥100 TikTok beğenisi aldıysa 7 Kasım akşamı Kaan Part 2 (final). Sonra havuzdaki "AKŞAM SERİSİ — SIRADAKİ" (Gizli Ajan) serisi Part 1 (Kaan Part 1 <100 beğeni ise 7 Kasım akşamı direkt bu), devam koşulu ≥100 beğeni. Koşul tutmazsa akşam slotuna münferit hikâye ya da yeni seri Part 1.
 
 > REDDITSEL YENİ FORMAT (kullanıcı isteği, 6 Kas 02:16 — aşağıdaki BEĞENİ EŞİĞİ, PLATFORMA ÖZEL KAPANIŞ, KAPANIŞ SESİ, GÜNCELLEME notlarındaki çelişen her şeyin YERİNE geçer):
 >  1) GÜNDE 1 SERİ BÖLÜMÜ + 1 MÜNFERİT (tek videoluk, bitmiş) HİKÂYE. AKŞAM slotu = seri, SABAH slotu = münferit hikâye.
@@ -36,6 +36,17 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 
 ## Bekleyen
+
+### AKŞAM SERİSİ — SIRADAKİ (Kaan'dan sonra ilk yeni seri; 2 part): Mükemmel Sevgili Gizli Ajan Çıktı (gerilim + hafif komedi)
+- Kaynak: Reddit, "My Friend's 'Perfect' Relationship Was a Full-On FBI Operation" (muhtemelen kurgu — "gerçek/yaşanmış" deme; açıklamada "Reddit'ten uyarlanmıştır."). Tam metin kopyalanmadı.
+- Uyarlama: FBI YOK → "gizli ajan" (kurum adı verme; MİT/emniyet vb. gerçek kurum adı KULLANMA). Kara para aklama operasyonu. İsimler: Matt → Mert (romantik, kötü espri yapan, her sabah "günaydın" mesajı atan), Lisa → Elif, anlatıcı = Mert'in en yakın arkadaşı (erkek, Emrullah sesi). Marka/uygulama adı yok ("bir tanışma uygulaması").
+- Özet (kendi cümlelerimle): Mert uygulamada Elif'le tanışır; Elif fazla mükemmeldir — aynı garip müzikleri sever, Mert'in berbat esprilerine güler. Birkaç haftada ayrılmaz olurlar ama tuhaflıklar birikir: asla fotoğrafını çektirmez, işi sorulunca sadece "devlette çalışıyorum" der, hep nakit öder. Bir gece barda Mert telefonla dışarı çıkınca Elif anlatıcıya eğilip "İyi bir arkadaşa benziyorsun. Mert'in başını beladan uzak tut." der. İki gün sonra Elif yok olur: telefon kapalı, ev boşaltılmış. Mert yıkılır, terk edildiğini sanır. Bir ay sonra haberlerde Elif'i görürler — gerçek adı başka, büyük bir kara para operasyonunda ifade veren gizli ajan. Mert hedef bile değildi; sadece Elif'in kılıfıydı. O günden beri tanışma uygulamalarına girmiyor.
+- PART 1 (~75 sn): tanışma + "fazla mükemmel" + ipuçları (fotoğraf yok, "devlette çalışıyorum", nakit) + bardaki uyarı cümlesi + yok oluş (telefon kapalı, boş ev). Son kare: boş daire, Mert'in ekranında "bu numara kullanılmamaktadır". Outro: "Devamı 2. partta. Takip et."
+- PART 2 (FİNAL, ~75 sn): Mert'in çöküşü (komik-acı) → bir ay sonra TV haberi, Elif ekranda başka isimle → "hedef değildin, kılıftın" → kapanış: "O günden beri tanışma uygulamalarına girmiyor." + soru: "Sen olsan fark eder miydin?" Outro: "Takip et."
+- Kanca önerileri: P1 "En yakın arkadaşımın sevgilisi bana tek bir cümle fısıldadı. İki gün sonra ortadan kayboldu." / P2 "Bir ay sonra onu haberlerde gördük. Ama adı Elif değildi."
+- Görsel: Elif'in yüzü hep gölgede/yarım (fotoğraf vermeyen gizemli kadın); TV haberi sahnesinde gerçek logo/kanal adı YOK.
+- Ton: gerilim + hafif komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #gizliajan #ilişki #gerilim #keşfet #fyp
+
 ### DİZİ: Hacker Kerem (komedi) — Part 1-2 kaynak hikâyeden, Part 3 kaynak finali (ucu açık), Bölüm 4+ ÖZGÜN devam (aynı karakterler)
 - Tür: BEĞENİ KAPILI SERİ (günlük görevdeki "BEĞENİ KAPISI KURALLARI"na bak). SABAH slotu. Bölüm 4 (4 Kasım akşamı yayınlandı) "Bölüm 5 yarın" diye bitti; Bölüm 5 (5 Kasım sabahı) KOŞULSUZ yayınlanır ve sonu "3K beğeni gelirse devam" kapısıdır. Bölüm 6 ve sonrası SADECE bir önceki bölüm TikTok'ta ≥3.000 beğeni aldıysa üretilir; almadıysa dizi biter (Kullanıldı'ya taşı) ve sabah slotuna havuzdan yeni seri gelir.
 - Bölüm 4'ten itibaren hikâye özgündür: açıklamada "Reddit'ten uyarlanmıştır" YERİNE "Reddit'teki bir hikâyeden ilham alınmıştır." yaz. Her bölüm tek başına anlaşılır olsun (ilk cümle kanca + tek cümlelik "Kerem, 12 yaşında kendini hacker sanan kardeşim" tanıtımı), sonu küçük bir kancayla bitsin.
