@@ -30,10 +30,11 @@ function face(cx,cy,r,o={}){
   if(o.red){x.fillStyle=`rgba(230,40,40,${o.red*0.35})`;x.beginPath();x.ellipse(cx,cy,r*0.88,r,0,0,7);x.fill();}
   x.fillStyle=hair;
   if(o.hairStyle!=='bald'){
-    x.beginPath();x.moveTo(cx-r*0.92,cy-r*0.05);
-    x.bezierCurveTo(cx-r*1.0,cy-r*1.25,cx+r*1.0,cy-r*1.25,cx+r*0.92,cy-r*0.05);
-    x.quadraticCurveTo(cx+r*0.8,cy-r*0.55,cx+r*0.2,cy-r*0.58);
-    x.quadraticCurveTo(cx-r*0.5,cy-r*0.5,cx-r*0.92,cy-r*0.05);x.fill();
+    x.beginPath();x.moveTo(cx-r*0.95,cy+r*0.05);
+    x.bezierCurveTo(cx-r*1.1,cy-r*1.5,cx+r*1.1,cy-r*1.5,cx+r*0.95,cy+r*0.05);
+    x.quadraticCurveTo(cx+r*0.85,cy-r*0.42,cx+r*0.25,cy-r*0.48);
+    x.quadraticCurveTo(cx-r*0.55,cy-r*0.42,cx-r*0.95,cy+r*0.05);x.fill();
+    x.beginPath();x.ellipse(cx,cy-r*0.9,r*0.7,r*0.24,0,0,7);x.fill(); // saç hacmi: kafa üstü asla açıkta kalmasın
     if(o.messy){for(let k=0;k<5;k++){x.beginPath();const a=-2.6+k*0.5;x.moveTo(cx+Math.cos(a)*r*0.7,cy-r*0.5+Math.sin(a)*r*0.3);x.lineTo(cx+Math.cos(a)*r*1.12,cy-r*0.55+Math.sin(a)*r*0.75);x.lineTo(cx+Math.cos(a+0.25)*r*0.8,cy-r*0.5+Math.sin(a+0.25)*r*0.4);x.fill();}}
   }
   if(o.bigHair){x.beginPath();x.ellipse(cx,cy-r*0.75,r*0.75,r*0.32,0,0,7);x.fill();}

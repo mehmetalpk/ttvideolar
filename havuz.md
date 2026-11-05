@@ -3,6 +3,15 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> REDDITSEL YENİ FORMAT (kullanıcı isteği, 6 Kas 02:16 — aşağıdaki BEĞENİ EŞİĞİ, PLATFORMA ÖZEL KAPANIŞ, KAPANIŞ SESİ, GÜNCELLEME notlarındaki çelişen her şeyin YERİNE geçer):
+>  1) GÜNDE 1 SERİ BÖLÜMÜ + 1 MÜNFERİT (tek videoluk, bitmiş) HİKÂYE. AKŞAM slotu = seri, SABAH slotu = münferit hikâye.
+>  2) DEVAM KOŞULU: önceki bölüm/part ≥100 TikTok beğenisi → seri devam eder. Altında kalırsa seri biter, yerine yeni seri başlar. Bu sayı videoda/açıklamada SÖYLENMEZ.
+>  3) BEĞENİ HATIRLATMASI YOK: "… bin beğeni gelirse geliyor" ve "1K BEĞENİ" ekranı tamamen kalktı. Seri videosunun sonu: "[calm, intriguing] Devamı <n>. partta." (ekranda "DEVAMI PART <n>'DE 👀"), ardından platform CTA'sı (IG: "Bunu merak edecek bir arkadaşına gönder." / TT+YT: "Kaçırmamak için kaydet ve takip et."). Münferit hikâyede "devamı" cümlesi yok: hikâyenin sonu + kısa soru + platform CTA'sı.
+>  4) OUTRO ÖNCESİ SON SAHNE KISA: hikâyenin son sahnesi en fazla ~2 sn; cliffhanger cümlesi tek ve kısa. Outro (devamı + CTA) toplam ~4–5 sn.
+>  5) KANCA DAHA DİKKAT ÇEKİCİ: ilk cümle en çarpıcı an/çatışma, somut ve şaşırtıcı (rakam, yasak, tehlike, utanç, ihanet); "Bugün size…", "Bir gün…", "Merhaba" ile BAŞLAMA. İlk 1 sn: ekranın üst yarısında 3 satır dev yazı (orta satır sarı, 130px+), büyük şaşkın/öfkeli yüz yakın plan, hafif titreme/zoom hareketi. Kanca yazısı ile ilk cümle aynı merakı versin ama birebir aynı olmasın. 2 kanca seçeneği yazıp daha merak uyandıranı seç.
+>  6) SAÇ: karakterlerde saç kafanın tepesini TAMAMEN kapatmalı (kel görünmesin). tools/lib_karaoke.js ve örnek animasyonlardaki face() güncellendi; kendi çizim fonksiyonun varsa saçı kafa elipsinin üstüne taşacak şekilde çiz (tepe ≈ cy−1.1r) ve önizlemede kontrol et.
+>  Geçiş (6 Kasım): AKŞAM seri = "Kaan 0lm3k zorundaydı" Part 2 (Part 1 ≥100 beğeni ise; final part, sonunda "devamı" yok, seri biter) — değilse Hacker Kerem Bölüm 6. 7 Kasım'dan itibaren tek seri = Hacker Kerem (Bölüm 5 ≥100 beğeni aldıysa Bölüm 6'dan devam), bitince havuzdan yeni seri. SABAH = havuzdan/WebSearch'ten münferit hikâye.
+
 > PLATFORMA ÖZEL KAPANIŞ (kullanıcı isteği, 5 Kas 01:51 — KAPANIŞ SESİ / GÜNCELLEME notlarındaki "hatırlat yaz" kısmının yerine geçer): Her video İKİ sürüm render edilir, sadece kapanış ekranı ve 2. kapanış cümlesi farklıdır (hikâye bir kez render edilir, kapanış iki kez).
 >  - INSTAGRAM sürümü: 1) "[warm, playful] Part <n>... bin beğeni gelirse geliyor." 2) "[warm, playful] Bunu merak edecek bir arkadaşına gönder." Ekran: "1K BEĞENİ = PART <n>" + balon "ARKADAŞINA" / "GÖNDER ➤". IG açıklaması: "Part <n>, 1K beğeni gelirse geliyor 👀 Merak edecek bir arkadaşına gönder ➤"
 >  - TIKTOK + YOUTUBE sürümü: 1) aynı. 2) "[warm, playful] Kaçırmamak için kaydet ve takip et." Ekran: "1K BEĞENİ = PART <n>" + balon "KAYDET 🔖" / "+ TAKİP ET". Açıklama: "Part <n>, 1K beğeni gelirse geliyor 👀 Kaçırmamak için kaydet 🔖 takip et"
