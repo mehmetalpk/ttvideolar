@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script>
+<script>
+const q=new URLSearchParams(location.search);const N=q.get('n'),V=q.get('v'),D=+q.get('d'),K2=+q.get('k2'),TH=q.get('th');
+function bookmark(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#ffd23f';x.beginPath();x.moveTo(-30,-42);x.lineTo(30,-42);x.lineTo(30,42);x.lineTo(0,18);x.lineTo(-30,42);x.closePath();x.fill();x.restore();}
+function plane(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#3fa9ff';x.beginPath();x.moveTo(-45,-5);x.lineTo(50,-40);x.lineTo(15,45);x.lineTo(5,10);x.closePath();x.fill();x.fillStyle='#1d6fc0';x.beginPath();x.moveTo(5,10);x.lineTo(50,-40);x.lineTo(15,45);x.fill();x.restore();}
+const S0=[{a:0,noCap:true,f(t,T){
+ if(TH==='kaan'){radial(540,900,1200,'#2a1a4a','#05040c');}else{radial(540,900,1200,'#3b2d6e','#0b0820');}
+ burst(540,820,720,'rgba(255,45,85,0.10)',t);
+ const p=prog(t,0,0.3);bigText('1K BEĞENİ',540,520,175,'#fff',p,-0.04);
+ bigText('= PART '+N,540,720,150,'#ffd23f',prog(t,0.12,0.42),-0.04);
+ const hb=1+0.12*Math.max(0,Math.sin(t*7));if(t>0.2)heart(540,1000,2.0*hb*back(prog(t,0.2,0.5)),'#ff2d55');
+ const bp=back(prog(t,K2-0.15,K2+0.2));if(bp>0){x.save();x.translate(540,1330);x.scale(bp,bp);x.translate(-540,-1330);
+  x.fillStyle='#fff';x.shadowColor='rgba(0,0,0,0.45)';x.shadowBlur=30;rr(150,1180,780,300,56);x.fill();x.beginPath();x.moveTo(420,1478);x.lineTo(380,1560);x.lineTo(500,1478);x.fill();x.shadowBlur=0;
+  if(V==='ig'){txt('ARKADAŞINA',540,1270,96,'#111',{stroke:false});txt('GÖNDER',470,1390,104,'#ff2d55',{stroke:false});plane(775,1388,1.2);}
+  else{txt('KAYDET',480,1270,100,'#111',{stroke:false});bookmark(745,1268,1.1);txt('+ TAKİP ET',540,1390,100,'#ff2d55',{stroke:false});}
+  x.restore();}
+}}];
+S=S0;S0[0].d=D;window.SCENES=[D];TIM=[];CHUNKS=[];
+</script></body></html>
