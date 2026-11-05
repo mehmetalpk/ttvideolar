@@ -3,6 +3,13 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> REDDITSEL GÜNCELLEME 2 (kullanıcı isteği, 6 Kas 02:23 — önceki tüm kapanış/CTA notlarının YERİNE geçer):
+>  - "Kaydet" ve "arkadaşına gönder" CTA'ları KALDIRILDI. Platforma özel 2 sürüm YOK: tek render, tek gönderi (Instagram + TikTok + YouTube birlikte).
+>  - OUTRO 2–3 sn: seri (final değil): "[calm, intriguing] Devamı <n>. partta. Takip et." — ekranda "DEVAMI PART <n>'DE 👀" + küçük "+ TAKİP ET". Final part / münferit: "[warm] Takip et." — ekranda "+ TAKİP ET". Açıklama: seri ise "Devamı Part <n>'de 👀", hepsinde "Takip etmeyi unutma ✅".
+>  - SAÇ: tek parça şekil, kafa tepesinin üstüne taşar; ayrı elips/silindir ÇİZME (face() güncellendi).
+>  - 6 KASIM CUMA AKŞAMI = HACKER KEREM FİNALİ ("PART 6 — FİNAL"): seri bu bölümle BİTER. En az 120 sn (120–150 sn), havuzdaki Bölüm 6–8 özetlerindeki en iyi anları birleştirip tatmin edici bir son yaz: tüm açık uçları kapat (buzdolabı kilidi/annenin kutusu vb.), komik bir doruk + sıcak bir kapanış. Outroda "devamı" YOK, sadece "Takip et." Uzunluk kuralı (70–85 sn) bu bölüm için geçerli DEĞİL. Sabah slotu yine münferit hikâye.
+>  - CUMARTESİ'DEN İTİBAREN AKŞAMLAR: duruma göre seri. Kaan 0lm3k zorundaydı Part 1 ≥100 TikTok beğenisi aldıysa 7 Kasım akşamı Kaan Part 2 (final). Sonra havuzdan YENİ seri (Part 1), devam koşulu ≥100 beğeni. Koşul tutmazsa akşam slotuna münferit hikâye ya da yeni seri Part 1.
+
 > REDDITSEL YENİ FORMAT (kullanıcı isteği, 6 Kas 02:16 — aşağıdaki BEĞENİ EŞİĞİ, PLATFORMA ÖZEL KAPANIŞ, KAPANIŞ SESİ, GÜNCELLEME notlarındaki çelişen her şeyin YERİNE geçer):
 >  1) GÜNDE 1 SERİ BÖLÜMÜ + 1 MÜNFERİT (tek videoluk, bitmiş) HİKÂYE. AKŞAM slotu = seri, SABAH slotu = münferit hikâye.
 >  2) DEVAM KOŞULU: önceki bölüm/part ≥100 TikTok beğenisi → seri devam eder. Altında kalırsa seri biter, yerine yeni seri başlar. Bu sayı videoda/açıklamada SÖYLENMEZ.
