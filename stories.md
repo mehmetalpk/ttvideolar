@@ -9,5 +9,5 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-03 | Babamın şifresi kardeşimin dosyasında çıktı [Part 2/3] | r/stories u/Chocolate_cerealpuff (havuz, Fiction) | komedi/seri | erkek (Emrullah Tuna) | 42.4 | 17:00 | TikTok+YouTube+Instagram
 - 2026-11-04 | Hacker Kerem – Bölüm 3: Sıfırlama Düğmesi [Bölüm 3/8] | r/stories u/Chocolate_cerealpuff (havuz, Fiction) | komedi/dizi | erkek (Emrullah Tuna) | 40.0 | 09:00 | TikTok+YouTube+Instagram
 - 2026-11-04 | Hacker Kerem – Bölüm 4: Buzdolabı Kilidi [Bölüm 4/8] | özgün devam (r/stories u/Chocolate_cerealpuff'tan ilham) | komedi/dizi | erkek (Emrullah Tuna) | 40.9 | 17:00 | TikTok+YouTube+Instagram
-- 2026-11-05 | Hacker Kerem – Bölüm 5: Akıllı Hoparlör [Bölüm 5] | özgün devam (r/stories u/Chocolate_cerealpuff'tan ilham) | komedi/dizi | erkek (Emrullah Tuna) | 84.4 (IG) / 84.6 (TT) | planlanmadı (Metricool 403) | — | SABAH
-- 2026-11-05 | Kaan 0lm3k zorundaydı [Part 1/2] | Reddit kısa öykü ("Patrick had to Die" uyarlaması) | gerilim/seri | erkek (Emrullah Tuna) | 85.5 (IG) / 85.7 (TT) | planlanmadı (Metricool 403) | — | AKŞAM
+- 2026-11-05 | Hacker Kerem – Bölüm 5: Akıllı Hoparlör [Bölüm 5] | özgün devam (r/stories u/Chocolate_cerealpuff'tan ilham) | komedi/dizi | erkek (Emrullah Tuna) | 84.4 (IG) / 84.6 (TT) | 13:05 | TikTok+YouTube+Instagram | SABAH
+- 2026-11-05 | Kaan 0lm3k zorundaydı [Part 1/2] | Reddit kısa öykü ("Patrick had to Die" uyarlaması) | gerilim/seri | erkek (Emrullah Tuna) | 85.5 (IG) / 85.7 (TT) | 17:05 | TikTok+YouTube+Instagram | AKŞAM
