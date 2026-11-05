@@ -83,7 +83,7 @@ function buildChunks(TIM,size){x.font=`800 ${size}px ${F}`;const sp=x.measureTex
     s.w.forEach((w,wi)=>{const ww=x.measureText(w[0]).width;if(lw>0&&lw+sp+ww>880){if(lines>=2)push();else{lines++;lw=0;}}lw+=(lw>0?sp:0)+ww;cur.push(w);});push();});
   CHUNKS.forEach(ch=>ch.s=ch.w[0][1]);CHUNKS.forEach((ch,i)=>{const nx=CHUNKS[i+1];ch.e=nx?nx.s:ch.w[ch.w.length-1][2]+1.0;});
 }
-function karaoke(T,opt={}){const size=opt.size||64,y=opt.y||1560;const ch=CHUNKS.find(c=>T>=c.s-0.05&&T<c.e);if(!ch)return;
+function karaoke(T,opt={}){const size=opt.size||64,y=Math.min(opt.y||1150,1250);const ch=CHUNKS.find(c=>T>=c.s-0.05&&T<c.e);if(!ch)return;
   x.save();x.font=`800 ${size}px ${F}`;x.textBaseline='middle';x.textAlign='left';x.lineJoin='round';const sp=x.measureText(' ').width+size*0.2;
   const lines=[[]];let lw=0;ch.w.forEach(w=>{const ww=x.measureText(w[0]).width;if(lw>0&&lw+sp+ww>880){lines.push([]);lw=0;}lines[lines.length-1].push([w,ww]);lw+=(lw>0?sp:0)+ww;});
   const lh=size*1.25,y0=y-(lines.length-1)*lh/2;const a=ch.s<0.05?1:cl((T-ch.s+0.05)/0.1);x.globalAlpha=a;
@@ -108,7 +108,7 @@ function setup(scenes,tim,end){S=scenes;TIM=tim;END=end;buildChunks(TIM,64);
 }
 window.draw=function(i,t){x.setTransform(1,0,0,1,0,0);x.globalAlpha=1;x.setLineDash([]);x.lineCap='round';x.textAlign='center';
   const sc=S[i],T=sc.a+t;x.save();sc.f(t,T);x.restore();x.setTransform(1,0,0,1,0,0);x.globalAlpha=1;
-  if(!sc.noCap)karaoke(T,{y:sc.capY||1560});
+  if(!sc.noCap)karaoke(T,{y:sc.capY||1150});
   if(sc.after){x.save();sc.after(t,T);x.restore();}
   const d=sc.d;const a=Math.max(i===0?0:1-t/0.1,i===S.length-1?0:1-(d-t)/0.1);if(a>0){x.fillStyle=`rgba(0,0,0,${cl(a)})`;x.fillRect(0,0,W,H)}
   watermark();};

@@ -19,7 +19,7 @@ function grad(y0,y1,stops){const g=x.createLinearGradient(0,y0,0,y1);stops.forEa
 function wrap(text,maxW){const words=text.split(' ');const lines=[];let cur='';for(const w of words){const t=cur?cur+' '+w:w;if(x.measureText(t).width>maxW&&cur){lines.push(cur);cur=w}else cur=t}if(cur)lines.push(cur);return lines}
 function caption(text,t,s,e,opt={}){
   if(t<s||t>e)return;
-  const lt=t-s, size=opt.size||66, y=opt.y||1470, color=opt.color||'#fff';
+  const lt=t-s, size=opt.size||66, y=Math.min(opt.y||1150,1250), color=opt.color||'#fff';
   const sc=0.8+0.2*back(lt/0.22), a=cl(lt/0.12)*cl((e-t)/0.12);
   x.save();x.globalAlpha=a;x.font=`800 ${size}px ${F}`;x.textAlign='center';x.textBaseline='middle';
   const lines=wrap(text,opt.maxW||880);const lh=size*1.2;const y0=y-(lines.length-1)*lh/2;

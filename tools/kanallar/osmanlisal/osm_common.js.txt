@@ -6,7 +6,7 @@ function syl(w){const m=w.match(VOW);let n=m?m.length:1;if(/\d/.test(w))n=Math.m
 // spoken-length overrides for numerals
 const SPOKEN={"1718.":9,"1722'de":9,"12":3,"200":3};
 const CAP=PH.slice(0,-1).map((p,i)=>{const words=p[1].split(' ');const ss=words.map(w=>SPOKEN[w]||syl(w));const tot=ss.reduce((a,b)=>a+b,0);const dur=(PH[i+1][0]-p[0])*0.88;let acc=p[0];const st=words.map((w,k)=>{const s=acc;acc+=dur*ss[k]/tot;return s});return {s:p[0],e:PH[i+1][0],words,st}});
-function karaoke(gt,y=1500){
+function karaoke(gt,y=1150){y=Math.min(y,1250);
   const c0=CAP.find(c=>gt>=c.s&&gt<c.e);if(!c0)return;
   const size=68;x.save();x.font=`800 ${size}px ${F}`;x.textAlign='left';x.textBaseline='middle';x.lineJoin='round';
   // wrap
