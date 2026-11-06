@@ -59,7 +59,7 @@ const EMRE={skin:'#e8b48c',hair:'#2b1d16',shirt:'#3b6fb6'};
 const KEREM={skin:'#f0c29e',hair:'#6b4226',messy:true,shirt:'#1f1f24'};
 const BABA={skin:'#d9a07a',hair:'#5c5c63',mustache:'#3d3d42',shirt:'#8a5a3a',skinShade:'#bf8660'};
 const ANNE={skin:'#eab896',hair:'#3a2418',hairStyle:'long',shirt:'#c0506a',blush:true};
-function person(P,cx,cy,r,o={}){body(cx,cy+r*1.05,r*2.4,r*4,o.shirt||P.shirt);if(P===KEREM&&!o.noHood){x.fillStyle='#39d353';x.font=`900 ${r*0.38}px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('</>',cx,cy+r*1.75);}face(cx,cy,r,{...P,...o});}
+function person(P,cx,cy,r,o={}){body(cx,cy+r*1.05,r*2.4,r*4,o.shirt||P.shirt);if(P===KEREM&&!o.noHood&&!(cy+r*1.75>1020&&cy+r*1.75<1290)){x.fillStyle='#39d353';x.font=`900 ${r*0.38}px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('</>',cx,cy+r*1.75);}face(cx,cy,r,{...P,...o});}
 function arm(x0,y0,x1,y1,w,col,skin){x.strokeStyle=col;x.lineWidth=w;x.lineCap='round';x.beginPath();x.moveTo(x0,y0);x.lineTo(x1,y1);x.stroke();x.fillStyle=skin;x.beginPath();x.arc(x1,y1,w*0.55,0,7);x.fill();}
 
 // ---------- objects ----------

@@ -1,6 +1,6 @@
 // shared extra helpers for Hacker Kerem dizisi
 function bolumBadge(n,cx=175,cy=235,pulse=0){x.save();x.translate(cx,cy);const s=1+0.05*Math.sin(pulse*8);x.scale(s,s);x.rotate(-0.08);x.fillStyle='#ff2d55';rr(-140,-58,280,116,26);x.fill();x.strokeStyle='#fff';x.lineWidth=7;x.stroke();x.font=`900 62px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#fff';x.fillText(`BÖLÜM ${n}`,0,4,250);x.restore();}
-function followBtn(cx,cy,T,s=1){x.save();x.translate(cx,cy);x.scale(s,s);const ph=(T*1.4)%1;x.strokeStyle=`rgba(255,45,85,${1-ph})`;x.lineWidth=10;rr(-190-ph*40,-60-ph*40,380+ph*80,120+ph*80,60+ph*40);x.stroke();const k=1+0.05*Math.sin(T*8);x.scale(k,k);x.fillStyle='#ff2d55';rr(-190,-60,380,120,60);x.fill();txt('+ TAKİP',0,4,66,'#fff',{stroke:false});x.restore();}
+function followBtn(cx,cy,T,s=1){x.save();x.translate(cx,cy);x.scale(s,s);const ph=(T*1.4)%1;x.strokeStyle=`rgba(255,45,85,${1-ph})`;x.lineWidth=10;rr(-190-ph*40,-60-ph*40,380+ph*80,120+ph*80,60+ph*40);x.stroke();const k=1+0.05*Math.sin(T*8);x.scale(k,k);x.fillStyle='#ff2d55';rr(-190,-60,380,120,60);x.fill();txt('+ TAKİP ET',0,4,62,'#fff',{stroke:false});x.restore();}
 function eyesIcon(cx,cy,s,T){x.save();x.translate(cx,cy);x.scale(s,s);[-1,1].forEach(k=>{x.fillStyle='#fff';x.beginPath();x.ellipse(k*58,0,50,64,0,0,7);x.fill();x.strokeStyle='#000';x.lineWidth=8;x.stroke();x.fillStyle='#111';x.beginPath();x.arc(k*58+18*Math.sin(T*2),12,24,0,7);x.fill();});x.restore();}
 function endCard(n,when,T0,T,bg){const p=prog(T,T0,T0+0.3);
   bigText(`BÖLÜM ${n}`,540,560,190,'#fff',p,-0.05);
