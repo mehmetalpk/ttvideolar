@@ -3,6 +3,8 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> ALTYAZI KONUMU (kullanıcı isteği, 5 Kas 17:08 — TÜM kanallar, TÜM yeni videolar): Altyazı ALTTA OLMAYACAK; platform yazıları (açıklama, kullanıcı adı, butonlar) alt kısmı kapatıyor. Karaoke altyazı merkezi y=1150 (bant ≈ y 1060–1260, en fazla 2 satır); karaoke fonksiyonları y'yi en fazla 1250'ye izin verir — capY/y ile aşağı ÇEKME. Sahne tasarımı: (1) altyazı bandına (y 1060–1260) sahne yazısı/rakam/skor KOYMA, büyük başlıklar y≤1000'de, ikincil yazılar gerekiyorsa y 1300–1420 arasında; çizimler/karakterler bandın arkasında kalabilir. (2) y>1450 alanına önemli HİÇBİR şey koyma. (3) Sağ kenarda x>920'ye yazı koyma (beğen/yorum butonları).
+
 > REDDITSEL GÜNCELLEME 2 (kullanıcı isteği, 6 Kas 02:23 — önceki tüm kapanış/CTA notlarının YERİNE geçer):
 >  - "Kaydet" ve "arkadaşına gönder" CTA'ları KALDIRILDI. Platforma özel 2 sürüm YOK: tek render, tek gönderi (Instagram + TikTok + YouTube birlikte).
 >  - OUTRO 2–3 sn: seri (final değil): "[calm, intriguing] Devamı <n>. partta. Takip et." — ekranda "DEVAMI PART <n>'DE 👀" + küçük "+ TAKİP ET". Final part / münferit: "[warm] Takip et." — ekranda "+ TAKİP ET". Açıklama: seri ise "Devamı Part <n>'de 👀", hepsinde "Takip etmeyi unutma ✅".

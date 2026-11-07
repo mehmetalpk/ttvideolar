@@ -1,5 +1,10 @@
 # Kanal araçları (İslamik / Hayatsal / Kriminal / Osmanlısal)
 
+> ALTYAZI KONUMU (kullanıcı isteği, 5 Kas 17:08 — TÜM kanallar, TÜM yeni videolar): Altyazı ALTTA OLMAYACAK; platform yazıları (açıklama, kullanıcı adı, butonlar) alt kısmı kapatıyor. Karaoke altyazı merkezi y=1150 (bant ≈ y 1060–1260, en fazla 2 satır); karaoke fonksiyonları y'yi en fazla 1250'ye izin verir — capY/y ile aşağı ÇEKME. Sahne tasarımı: (1) altyazı bandına (y 1060–1260) sahne yazısı/rakam/skor KOYMA, büyük başlıklar y≤1000'de, ikincil yazılar gerekiyorsa y 1300–1420 arasında; çizimler/karakterler bandın arkasında kalabilir. (2) y>1450 alanına önemli HİÇBİR şey koyma. (3) Sağ kenarda x>920'ye yazı koyma (beğen/yorum butonları).
+
+> SES (4 Kas): bip/pop/tık sesi YOK, sadece seslendirme.
+> SAÇ (6 Kas): karakter saçı tek parça şekil olarak kafanın tepesinin üstüne taşmalı (kel görünmesin), ayrı elips/silindir çizme.
+
 Hepsi 1080x1920, 30 fps canvas animasyonu. Bir video = `anim.html` (render.js ile sahne sahne MP4) + ses + sfx.
 
 ## Birleştirme sırası (build)
