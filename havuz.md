@@ -37,6 +37,59 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 ## Bekleyen
 
+### MÜNFERİT (SABAH, 7 Kasım): Babam gece odama geldi (komedi) — kullanıcı puanı 8/10
+- Kaynak: Reddit (kullanıcı gönderdi). Tam metin kopyalanmadı. Açıklamada "Reddit'ten uyarlanmıştır."
+- Anlatıcı: Emre (erkek, Emrullah). Karakter: babam.
+- Özet: Çocukken canavar korkusu yüzünden her gece babasından yatmadan önce odasını kontrol etmesini ister. Bir gece hâlâ uyanıktır, merdivenden babanın ayak seslerini duyar; uyanık yakalanırsa başı yanacağı için uyuyor taklidi yapar. Baba odaya girer, karanlıkta birkaç saniye ona bakar, yatağa yaklaşır, yorganı hafifçe kaldırır... yorganın altına osurur, döner ve çıkar. 15 yıl geçmiştir, baba hâlâ inkâr eder ama Emre ne olduğunu çok iyi bilir.
+- Uzatma (70–85 sn): canavar korkusu sahneleri (dolap kapağı, yatak altı), "kontrol et" ritüeli, merdiven gıcırtısı gerilimi (yarı korku tonu), yorgan kalkarken gerilim doruğu → komik çözülme, ertesi sabah kahvaltıda yüzleşme ve babanın inkârı.
+- Kanca: espriyi VERME. Öneri: "Babam her gece odama gelirdi. Bir gece neden geldiğini öğrendim." İlk kare: karanlık kapı aralığında baba silueti.
+- Ton: önce gerilim, sonra komedi; final soru: "Senin baban da böyle şeyler yapar mıydı?" Outro: "Takip et."
+
+### MÜNFERİT (SABAH, sıradaki): Mayonez babası (komedi) — kullanıcı puanı 9/10
+- Kaynak: Reddit (u/Narcolepsyinc, ön sayfa). Tam metin kopyalanmadı.
+- Özet: Baba, çocuklar bayram/Paskalya hediyelerini açarken kavanozdan kaşık kaşık mayonez yiyormuş gibi yapar; çocuklar dehşete düşer. Meğer kavanozdaki mayonezi önceden vanilyalı pudingle değiştirmiştir. (Türk uyarlaması: bayram sabahı, hediye/harçlık.)
+- Uzatma: babanın hazırlık sahnesi (gece mutfakta kavanoz değiştirme), çocukların tepkileri, annenin yüzü, sonunda çocuklardan birinin kavanozu deneyip... (ters köşe: hâlâ mayonez sanıp kusma taklidi / ya da asıl mayonezi babaya yedirme intikamı).
+- Kanca: "Babam bayram sabahı kavanozdan kaşık kaşık mayonez yedi." İlk kare: dev mayonez kavanozu + kaşık + çocukların şok yüzü.
+- Ton: komedi; ses Emrullah.
+
+## Kullanıldı" altına taşı ve stories.md'ye ekle.
+Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
+
+
+> REDDITSEL GÜNCELLEME 2 (kullanıcı isteği, 6 Kas 02:23 — önceki tüm kapanış/CTA notlarının YERİNE geçer):
+>  - "Kaydet" ve "arkadaşına gönder" CTA'ları KALDIRILDI. Platforma özel 2 sürüm YOK: tek render, tek gönderi (Instagram + TikTok + YouTube birlikte).
+>  - OUTRO 2–3 sn: seri (final değil): "[calm, intriguing] Devamı <n>. partta. Takip et." — ekranda "DEVAMI PART <n>'DE 👀" + küçük "+ TAKİP ET". Final part / münferit: "[warm] Takip et." — ekranda "+ TAKİP ET". Açıklama: seri ise "Devamı Part <n>'de 👀", hepsinde "Takip etmeyi unutma ✅".
+>  - SAÇ: tek parça şekil, kafa tepesinin üstüne taşar; ayrı elips/silindir ÇİZME (face() güncellendi).
+>  - 6 KASIM CUMA AKŞAMI = HACKER KEREM FİNALİ ("PART 6 — FİNAL"): seri bu bölümle BİTER. En az 120 sn (120–150 sn), havuzdaki Bölüm 6–8 özetlerindeki en iyi anları birleştirip tatmin edici bir son yaz: tüm açık uçları kapat (buzdolabı kilidi/annenin kutusu vb.), komik bir doruk + sıcak bir kapanış. Outroda "devamı" YOK, sadece "Takip et." Uzunluk kuralı (70–85 sn) bu bölüm için geçerli DEĞİL. Sabah slotu yine münferit hikâye.
+>  - CUMARTESİ'DEN İTİBAREN AKŞAMLAR: duruma göre seri. Kaan 0lm3k zorundaydı Part 1 ≥100 TikTok beğenisi aldıysa 7 Kasım akşamı Kaan Part 2 (final). Sonra havuzdaki "AKŞAM SERİSİ — SIRADAKİ" (Gizli Ajan) serisi Part 1 (Kaan Part 1 <100 beğeni ise 7 Kasım akşamı direkt bu), devam koşulu ≥100 beğeni. Koşul tutmazsa akşam slotuna münferit hikâye ya da yeni seri Part 1.
+
+> REDDITSEL YENİ FORMAT (kullanıcı isteği, 6 Kas 02:16 — aşağıdaki BEĞENİ EŞİĞİ, PLATFORMA ÖZEL KAPANIŞ, KAPANIŞ SESİ, GÜNCELLEME notlarındaki çelişen her şeyin YERİNE geçer):
+>  1) GÜNDE 1 SERİ BÖLÜMÜ + 1 MÜNFERİT (tek videoluk, bitmiş) HİKÂYE. AKŞAM slotu = seri, SABAH slotu = münferit hikâye.
+>  2) DEVAM KOŞULU: önceki bölüm/part ≥100 TikTok beğenisi → seri devam eder. Altında kalırsa seri biter, yerine yeni seri başlar. Bu sayı videoda/açıklamada SÖYLENMEZ.
+>  3) BEĞENİ HATIRLATMASI YOK: "… bin beğeni gelirse geliyor" ve "1K BEĞENİ" ekranı tamamen kalktı. Seri videosunun sonu: "[calm, intriguing] Devamı <n>. partta." (ekranda "DEVAMI PART <n>'DE 👀"), ardından platform CTA'sı (IG: "Bunu merak edecek bir arkadaşına gönder." / TT+YT: "Kaçırmamak için kaydet ve takip et."). Münferit hikâyede "devamı" cümlesi yok: hikâyenin sonu + kısa soru + platform CTA'sı.
+>  4) OUTRO ÖNCESİ SON SAHNE KISA: hikâyenin son sahnesi en fazla ~2 sn; cliffhanger cümlesi tek ve kısa. Outro (devamı + CTA) toplam ~4–5 sn.
+>  5) KANCA DAHA DİKKAT ÇEKİCİ: ilk cümle en çarpıcı an/çatışma, somut ve şaşırtıcı (rakam, yasak, tehlike, utanç, ihanet); "Bugün size…", "Bir gün…", "Merhaba" ile BAŞLAMA. İlk 1 sn: ekranın üst yarısında 3 satır dev yazı (orta satır sarı, 130px+), büyük şaşkın/öfkeli yüz yakın plan, hafif titreme/zoom hareketi. Kanca yazısı ile ilk cümle aynı merakı versin ama birebir aynı olmasın. 2 kanca seçeneği yazıp daha merak uyandıranı seç.
+>  6) SAÇ: karakterlerde saç kafanın tepesini TAMAMEN kapatmalı (kel görünmesin). tools/lib_karaoke.js ve örnek animasyonlardaki face() güncellendi; kendi çizim fonksiyonun varsa saçı kafa elipsinin üstüne taşacak şekilde çiz (tepe ≈ cy−1.1r) ve önizlemede kontrol et.
+>  Geçiş (6 Kasım): AKŞAM seri = "Kaan 0lm3k zorundaydı" Part 2 (Part 1 ≥100 beğeni ise; final part, sonunda "devamı" yok, seri biter) — değilse Hacker Kerem Bölüm 6. 7 Kasım'dan itibaren tek seri = Hacker Kerem (Bölüm 5 ≥100 beğeni aldıysa Bölüm 6'dan devam), bitince havuzdan yeni seri. SABAH = havuzdan/WebSearch'ten münferit hikâye.
+
+> PLATFORMA ÖZEL KAPANIŞ (kullanıcı isteği, 5 Kas 01:51 — KAPANIŞ SESİ / GÜNCELLEME notlarındaki "hatırlat yaz" kısmının yerine geçer): Her video İKİ sürüm render edilir, sadece kapanış ekranı ve 2. kapanış cümlesi farklıdır (hikâye bir kez render edilir, kapanış iki kez).
+>  - INSTAGRAM sürümü: 1) "[warm, playful] Part <n>... bin beğeni gelirse geliyor." 2) "[warm, playful] Bunu merak edecek bir arkadaşına gönder." Ekran: "1K BEĞENİ = PART <n>" + balon "ARKADAŞINA" / "GÖNDER ➤". IG açıklaması: "Part <n>, 1K beğeni gelirse geliyor 👀 Merak edecek bir arkadaşına gönder ➤"
+>  - TIKTOK + YOUTUBE sürümü: 1) aynı. 2) "[warm, playful] Kaçırmamak için kaydet ve takip et." Ekran: "1K BEĞENİ = PART <n>" + balon "KAYDET 🔖" / "+ TAKİP ET". Açıklama: "Part <n>, 1K beğeni gelirse geliyor 👀 Kaçırmamak için kaydet 🔖 takip et"
+>  - Planlama: aynı saatte İKİ ayrı gönderi: (a) sadece instagram + IG sürümü (dosya ..._ig.mp4), (b) tiktok + youtube + TT/YT sürümü (dosya ..._tt.mp4). Beğeni kapısı yine sadece TikTok beğenisine bakar.
+
+> SES EFEKTİ YASAĞI (kullanıcı isteği, 4 Kas 21:34 — promptta "SES EFEKTİ" maddesinin ÖNÜNE geçer): İzleyiciler bip/pop seslerinden şikâyet ediyor. Videolara HİÇBİR sentez bip, pop, tık, "ding" sesi KOYMA (karaoke kelime geçişlerinde, yazı pop'larında, sahne geçişlerinde dahil). Sadece seslendirme. İstersen gerilimde çok kısık (−20 dB) tek bir düşük "dum" ya da yumuşak whoosh, videoda en fazla 2–3 kez. Emin değilsen hiç efekt koyma.
+
+> BEĞENİ EŞİĞİ (kullanıcı isteği, 4 Kas 21:33 — diğer tüm notların ÖNÜNE geçer): TÜM kapılar 1K (bin) beğeni. Part 1 → 1K, Part 2 → 1K, devam bölümleri → 1K. Seslendirme: "[warm, playful] Part <n>... bin beğeni gelirse geliyor." Ekran: "1K BEĞENİ = PART <n>". Açıklama: "Part <n>, 1K beğeni gelirse geliyor 👀". Notlarda geçen 2K/3K ifadeleri ESKİDİR. (Bölüm 4 videosunda 3K yazıyor ama kontrol eşiği 1K sayılır.)
+
+> SÜRE KURALI (kullanıcı isteği, 4 Kas 17:00 — TÜM Redditsel videolar için geçerli): Videolar çok kısa kalıyordu (~40 sn). Bundan sonra her video kapanış dahil 70–85 sn olacak. Seslendirme metni ~190–230 kelime (atempo 1.1 sonrası ~65–78 sn konuşma + ~6.5 sn kapanış). Uzatmayı dolgu cümleyle değil, olayla yap: her bölüme 1 ekstra sahne/diyalog, 1 ara gerilim ya da komik an, karakterlere kısa replik. Hook ilk 2 sn'de kalır, tempo düşmez; sahne başına ~4–6 sn, aynı görsel 7 sn'den uzun durmaz. Seri dışı tek videolar da aynı süreye uyar.
+
+> **KAPANIŞ SESİ — KULLANICI GERİ BİLDİRİMİ (4 Kasım, günlük görevdeki kapanış cümlelerinin YERİNE geçer):** Beğeni kapısı kapanışında heyecanlı/bağıran ton KULLANMA. Seslendirme: "[warm, playful] Part <sonraki numara>... <iki/üç> bin beğeni gelirse geliyor." (ör. "Part beş... üç bin beğeni gelirse geliyor."). Ekranda: "3K BEĞENİ" + altında sarı "= PART <n>" (Part 1 için "2K BEĞENİ = PART 2"). Bu kısa klibin ses seviyesini hikâye sesinden YÜKSEK yapma (gerekirse -5 dB). Açıklamadaki satır: "Part <n>, 3K beğeni gelirse geliyor 👀 Hatırlatılmasını istiyorsan yorumlara \"hatırlat\" yaz 💬". Kapı cümlesinden sonra ikinci kısa klip: "[warm, playful] Hatırlatılmasını istiyorsan, yorumlara hatırlat yaz." + son sahnede beyaz konuşma balonu içinde "YORUMLARA \"HATIRLAT\" YAZ 💬" (ses -5 dB).
+
+> GÜNCELLEME (4 Kas 16:55): İki kapanış cümlesi AYRI ekranlarda değil, TEK EKRANDA arka arkaya: üstte "3K BEĞENİ = PART <n>" + kalp, altta "YORUMLARA "HATIRLAT" YAZ 💬" balonu; iki ses klibi arasında ~0.1 sn boşluk. Kapanış toplam ~6.5 sn.
+
+
+## Bekleyen
+
 > NOT (6 Kas 05:05 günlük görev): Kaan 0lm3k zorundaydı Part 1 TikTok beğenisi 6 Kas 05:00 itibarıyla 21 (eşik 100). 7 Kasım görevi tekrar kontrol etsin; <100 ise Kaan "Kullanıldı"ya "(devam koşulu sağlanmadı: N beğeni)" ile taşınır ve akşam Gizli Ajan Part 1 üretilir. Münferit havuz boşaldı → sabah slotu için WebSearch ile yeni hikâye bulunmalı.
 
 ### AKŞAM SERİSİ — SIRADAKİ (Kaan'dan sonra ilk yeni seri; 2 part): Mükemmel Sevgili Gizli Ajan Çıktı (gerilim + hafif komedi)
