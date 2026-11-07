@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="story.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,2.4,4);nightBg();x.save();zoom(540,900,1.05+0.04*t);
+ face(540,900,300,{...BABA_S,smile:0.75,eyeOpen:0.55,brow:-0.2,angry:0.3,look:-1.5});x.fillStyle='rgba(20,30,90,0.25)';x.fillRect(0,0,W,H);
+ x.fillStyle=BABA_S.skin;x.beginPath();x.ellipse(260,1330,90,60,-0.4,0,7);x.fill();x.fillStyle='#3d6fb0';rr(-60,1340,W+120,600,30);x.fill();x.restore();x.restore();vignette(0.55);
+ hook([['BABAM 15 YILDIR',112,'#fff'],['İNKÂR',190,YEL],['EDİYOR!',130,'#fff']],200);}});
+// 1 yorgan kalkıyor
+sc.push({a:W2(0,'yaptığı'),f(t,T){nightBg();x.save();zoom(540,1000,1.0+0.05*t);bedK(500,1050,1.15,{lift:0.35+0.15*Math.sin(t*2),face:{eyeOpen:0.05}});x.restore();
+ silh(860,640,140,true,T);vignette(0.5);bigText('NE YAPTI?',540,330,150,YEL,prog(t,0,0.25),-0.04);}});
+// 2 8 yaşında
+sc.push({a:mid(1),f(t,T){room();win(830,760,0.8);x.save();zoom(540,900,1.0+0.05*t);person(COCUK,540,880,190,{eyeBig:1.3,mouthOpen:0.3,brow:1,sad:0.6});x.restore();
+ bigText('8 YAŞINDA',540,330,140,'#fff',prog(t,0,0.25),-0.03);}});
+// 3 canavar
+sc.push({a:W2(1,'canavarlardan'),f(t,T){x.save();shake(t,0,0.6,6);x.fillStyle='#05050c';x.fillRect(0,0,W,H);closet(540,920,0.95,0.6,T,true);x.restore();vignette(0.6);
+ bigText('CANAVARLAR!',540,300,140,RED,prog(t,0,0.25),-0.04);}});
+// 4 dolap aralık
+sc.push({a:mid(2),f(t,T){room();x.save();zoom(540,900,1.0+0.08*t);closet(700,900,0.9,0.12,T,t>1);x.restore();person(COCUK,260,1050,120,{eyeBig:1.2,look:1,brow:1,sad:0.5});vignette(0.5);
+ bigText('DOLAP ARALIKSA',540,300,105,'#fff',prog(t,0,0.25),-0.03);bigText('UYKU YOK',540,430,120,YEL,prog(t,0.2,0.45),-0.03);}});
+// 5 yatak altı
+sc.push({a:W2(2,'yatağın'),f(t,T){room();x.save();zoom(540,1100,1.0+0.05*t);bedK(500,980,1.1,{hidden:true});x.fillStyle='#000';x.fillRect(130,1170,900,190);
+ const bl=Math.floor(T*1.5)%3===0?0.2:1;x.fillStyle='#ff4040';x.shadowColor='#f00';x.shadowBlur=24;[620,690].forEach(cx=>{x.beginPath();x.ellipse(cx,1260,18,13*bl,0,0,7);x.fill();});x.shadowBlur=0;x.restore();vignette(0.5);
+ bigText('YATAĞIN ALTI?',540,330,130,'#fff',prog(t,0,0.25),-0.03);}});
+// 6 ritüel
+sc.push({a:mid(3),f(t,T){room();win(180,760,0.7);x.save();zoom(540,950,1.0+0.04*t);bedK(470,1150,0.9,{face:{smile:0.6}});person(BABA_S,800,760,140,{smile:0.6,look:-1});x.restore();
+ bigText('HER GECE',540,330,120,'#fff',prog(t,0,0.25),-0.03);bigText('RİTÜEL',540,470,150,YEL,P(T,3,'ritüelimiz'),-0.03);}});
+// 7 fener
+sc.push({a:mid(4),f(t,T){x.fillStyle='#0a0d22';x.fillRect(0,0,W,H);x.save();zoom(540,900,1.0+0.05*t);person(BABA_S,380,820,170,{smile:0.5,look:1});torch(560,1050,-0.25+0.1*Math.sin(t*2),700,T);x.restore();
+ bigText('FENER',540,330,150,YEL,prog(t,0,0.25),-0.03);}});
+// 8 dolap açık
+sc.push({a:W2(4,'dolabı'),f(t,T){x.fillStyle='#05050c';x.fillRect(0,0,W,H);closet(540,900,0.95,1,T,false);x.fillStyle='rgba(255,240,170,0.35)';x.beginPath();x.ellipse(540+Math.sin(t*3)*80,900,200,150,0,0,7);x.fill();vignette(0.4);
+ bigText('DOLAP: BOŞ',540,300,130,'#fff',prog(t,0,0.25),-0.03);}});
+// 9 yatak altı kontrol
+sc.push({a:W2(4,'eğilir'),f(t,T){room();x.save();zoom(540,1100,1.0+0.04*t);bedK(450,950,1.0,{face:{look:1,smile:0.2}});x.save();x.translate(860,1100);x.rotate(0.6);face(0,0,110,{...BABA_S,look:-1});x.restore();torch(800,1260,3.1,500,T);x.restore();
+ bigText('YATAK ALTI: BOŞ',540,330,115,'#fff',prog(t,0,0.25),-0.03);}});
+// 10 temiz asker
+sc.push({a:W2(4,'"temiz'),f(t,T){room();x.save();zoom(540,950,1.0+0.04*t);person(BABA_S,540,860,190,{smile:0.9,brow:0.4});arm(700,1120,770,700,50,BABA_S.shirt,BABA_S.skin);x.restore();
+ bubble(540,400,820,190,'"TEMİZ, ASKER!"',86,'#fff',420);bigText('CANAVAR YOK',540,620,100,YEL,P(T,4,'canavar'),-0.03);}});
+// 11 saat 00:12
+sc.push({a:mid(5),f(t,T){x.fillStyle='#04050c';x.fillRect(0,0,W,H);x.save();zoom(540,800,1.0+0.06*t);clock(540,800,1.6,'00:12',T);x.restore();vignette(0.5);
+ bigText('GECE YARISI',540,330,130,'#fff',prog(t,0,0.25),-0.03);}});
+// 12 hâlâ uyanık
+sc.push({a:W2(5,'ben'),f(t,T){nightBg();x.save();zoom(470,900,1.15+0.05*t);bedK(540,1000,1.2,{face:{eyeOpen:1,eyeBig:1.4,look:Math.sin(t*3)}});x.restore();vignette(0.5);
+ bigText('HÂLÂ UYANIK',540,330,135,YEL,prog(t,0,0.25),-0.03);}});
+// 13 anne kural
+sc.push({a:mid(6),f(t,T){radial(540,800,1300,'#5a2a3a','#1a0a12');x.save();zoom(540,880,1.0+0.05*t);person(ANNE_S,540,860,200,{angry:1,brow:-0.5,smile:-0.6});arm(330,1130,250,800,50,ANNE_S.shirt,ANNE_S.skin);x.restore();
+ bigText('ANNEMİN KURALI',540,330,115,'#fff',prog(t,0,0.25),-0.03);}});
+// 14 1 hafta tv yok
+sc.push({a:W2(6,'televizyon')-0.5,f(t,T){radial(540,800,1300,'#3a1a2a','#0a0508');x.save();zoom(540,800,1.0+0.05*t);tv(540,800,1.3);cross(540,800,1.6*back(prog(T,wt(6,'göremezdi')-0.2,wt(6,'göremezdi')+0.1)));x.restore();
+ bigText('1 HAFTA',540,330,120,'#fff',prog(t,0,0.25),-0.03);bigText('TV YOK!',540,1350,110,RED,prog(T,wt(6,'göremezdi')-0.2,wt(6,'göremezdi')),-0.03);}});
+// 15 merdiven sesleri
+sc.push({a:mid(7),f(t,T){x.save();shake(t,0.3,1.6,5);x.fillStyle='#070815';x.fillRect(0,0,W,H);x.globalAlpha=0.5;stairs(-100,1500);x.globalAlpha=1;x.fillStyle='rgba(5,6,20,0.55)';x.fillRect(0,0,W,H);
+ [0,1,2].forEach(k=>{const p=prog(t,0.2+k*0.55,0.4+k*0.55);if(p>0)bigText('GICIRT',300+k*230,820-k*170,80,'#c9b8ff',p,-0.15+k*0.1);});x.restore();vignette(0.6);
+ bigText('AYAK SESLERİ',540,330,125,'#fff',prog(t,0,0.25),-0.03);}});
+// 16 gözlerimi kapattım
+sc.push({a:mid(8),f(t,T){nightBg();x.save();zoom(540,860,1.0+0.1*ease(t/1.5));face(540,860,280,{...COCUK,eyeOpen:0.02,brow:0.9,smile:-0.3});x.restore();vignette(0.5);
+ bigText('HEMEN!',540,330,150,YEL,prog(t,0,0.2),-0.04);}});
+// 17 uyuma taklidi
+sc.push({a:W2(8,'dünyanın'),f(t,T){nightBg();x.save();zoom(540,1000,1.0+0.04*t);bedK(520,1000,1.15,{face:{eyeOpen:0.02,smile:0.1,mouthOpen:0.25}});x.restore();
+ [0,1,2].forEach(k=>{const ph=(t*0.8+k/3)%1;x.globalAlpha=1-ph;txt('Z',420+ph*160+k*30,780-ph*260,70+k*20,'#c9b8ff',{lw:10});x.globalAlpha=1;});
+ bigText('EN İYİ',540,300,110,'#fff',prog(t,0,0.25),-0.03);bigText('UYUMA TAKLİDİ',540,430,115,YEL,prog(t,0.15,0.4),-0.03);}});
+// 18 kapı açıldı
+sc.push({a:mid(9),f(t,T){x.fillStyle='#0c1030';x.fillRect(0,0,W,H);x.fillStyle='#070a1e';x.fillRect(-60,1380,W+120,700);doorLight(540,0.9,0.7*ease(t/1.6));vignette(0.5);
+ bigText('KAPI AÇILDI',540,260,125,'#fff',prog(t,0,0.25),-0.03);}});
+// 19 ışık yüzüme
+sc.push({a:W2(9,'koridorun'),f(t,T){x.fillStyle='#070a1e';x.fillRect(0,0,W,H);x.save();zoom(540,860,1.05+0.05*t);face(540,860,270,{...COCUK,eyeOpen:0.02,brow:0.6});x.restore();
+ x.save();x.globalCompositeOperation='lighter';x.fillStyle='rgba(255,200,110,0.35)';x.beginPath();x.moveTo(0,560);x.lineTo(W,640);x.lineTo(W,900);x.lineTo(0,820);x.fill();x.restore();vignette(0.6);
+ bigText('IŞIK YÜZÜMDE',540,300,120,YEL,prog(t,0,0.25),-0.03);}});
+// 20 silüet kapıda
+sc.push({a:mid(10),f(t,T){x.fillStyle='#0c1030';x.fillRect(0,0,W,H);x.fillStyle='#070a1e';x.fillRect(-60,1380,W+120,700);doorLight(540,0.9,0.7);x.save();zoom(540,900,1.0+0.04*t);silh(540,700,150,false,T);x.restore();vignette(0.5);
+ bigText('BABAM',540,250,130,'#fff',prog(t,0,0.25),-0.03);}});
+// 21 kıpırdamadan baktı
+sc.push({a:W2(10,'birkaç'),f(t,T){x.fillStyle='#04050c';x.fillRect(0,0,W,H);x.save();zoom(540,800,1.0+0.15*ease(t/2));silh(540,820,260,true,T);x.restore();vignette(0.7);
+ bigText('KIPIRDAMADAN',540,300,115,'#fff',prog(t,0,0.25),-0.03);bigText('BAKIYOR',540,430,130,RED,P(T,10,'baktı'),-0.03);}});
+// 22 bir adım
+sc.push({a:mid(11),f(t,T){x.fillStyle='#070a1e';x.fillRect(0,0,W,H);doorLight(860,0.6,0.7);bedK(420,1180,0.85,{face:{eyeOpen:0.02}});silh(760,760,120,false,T);vignette(0.6);
+ bigText('BİR ADIM...',540,330,130,'#fff',prog(t,0,0.25),-0.03);}});
+// 23 bir adım daha
+sc.push({a:W2(11,'daha')-0.3,f(t,T){x.save();shake(t,0.2,0.6,6);x.fillStyle='#070a1e';x.fillRect(0,0,W,H);bedK(420,1180,0.85,{face:{eyeOpen:0.02}});silh(620,720,190,false,T);x.restore();vignette(0.7);
+ bigText('BİR ADIM DAHA',540,330,120,RED,prog(t,0.1,0.35),-0.03);}});
+// 24 kalp
+sc.push({a:mid(12),f(t,T){radial(540,860,1200,'#3a0a14','#05020a');const b=1+0.18*Math.abs(Math.sin(t*7));heart(540,780,4.2*b,'#ff2d55');x.save();zoom(540,860,1);face(540,1240,150,{...COCUK,eyeOpen:0.02,brow:1,sad:0.5});x.restore();vignette(0.5);
+ bigText('KALBİM',540,300,130,'#fff',prog(t,0,0.25),-0.03);}});
+// 25 yorganın ucu
+sc.push({a:mid(13),f(t,T){x.fillStyle='#070a1e';x.fillRect(0,0,W,H);x.save();zoom(700,1000,1.25+0.06*t);bedK(420,1000,1.1,{lift:0.05+0.1*prog(t,0.5,1.5),face:{eyeOpen:0.02}});x.fillStyle=BABA_S.skin;x.beginPath();x.ellipse(890,940-40*prog(t,0.5,1.5),70,50,0,0,7);x.fill();x.restore();vignette(0.65);
+ bigText('YORGANI TUTTU',540,300,115,'#fff',prog(t,0,0.25),-0.03);}});
+// 26 yavaşça kaldırdı
+sc.push({a:W2(13,'yavaşça'),f(t,T){x.save();shake(t,0,2,2);x.fillStyle='#120408';x.fillRect(0,0,W,H);x.save();zoom(540,1000,1.0+0.12*ease(t/2));bedK(420,1050,1.1,{lift:0.2+0.6*ease(t/1.6),face:{eyeOpen:0.02,brow:1}});silh(860,620,130,true,T);x.restore();x.restore();
+ x.fillStyle='rgba(255,0,40,0.12)';x.fillRect(0,0,W,H);vignette(0.7);bigText('YAVAŞÇA...',540,300,130,RED,prog(t,0,0.25),-0.03);}});
+// 27 ve...
+sc.push({a:mid(14),f(t,T){x.fillStyle='#04040a';x.fillRect(0,0,W,H);x.save();zoom(540,860,1.0+0.12*ease(t/1.5));face(540,860,290,{...BABA_S,smile:0.9,eyeOpen:0.45,angry:0.4,look:1});x.fillStyle='rgba(20,30,90,0.3)';x.fillRect(0,0,W,H);x.restore();vignette(0.75);
+ bigText('VE...',540,320,170,'#fff',prog(t,0,0.25),-0.03);}});
+// 28 PRRT
+sc.push({a:W2(14,'osurdu')-0.05,f(t,T){x.save();shake(t,0,1.2,14);radial(540,900,1300,'#2f4a1a','#071005');x.save();zoom(540,1000,1.0+0.06*t);bedK(420,1050,1.1,{lift:0.7,gas:1.2+0.6*eOut(t/0.8),T,face:{eyeOpen:1,eyeBig:1.5,mouthOpen:0.6,brow:1}});x.restore();x.restore();
+ burst(540,400,330,'rgba(155,227,106,0.35)',t);bigText('PRRRT!',540,400,190,GRN,prog(t,0,0.2),-0.08);}});
+// 29 yorganı kapattı
+sc.push({a:mid(15),f(t,T){radial(540,900,1300,'#24341a','#060a05');x.save();zoom(540,1000,1.0+0.04*t);bedK(420,1050,1.1,{lift:0.7*(1-eOut(t/0.8)),gas:t<0.8?1.2:0,T,face:{eyeOpen:1,eyeBig:1.4,brow:1,mouthOpen:0.3}});person(BABA_S,860,700,140,{smile:0.9,eyeOpen:0.5,look:-1});x.restore();
+ bigText('KAPATTI',540,320,140,YEL,prog(t,0,0.25),-0.03);}});
+// 30 çıkıp gitti
+sc.push({a:W2(15,'döndü'),f(t,T){x.fillStyle='#0c1030';x.fillRect(0,0,W,H);x.fillStyle='#070a1e';x.fillRect(-60,1380,W+120,700);doorLight(540,0.9,0.7*(1-ease(prog(t,1.2,2.4))));silh(540+120*ease(t/2),720,150,false,T);vignette(0.5);
+ bigText('...VE GİTTİ',540,250,130,'#fff',prog(t,0,0.25),-0.03);}});
+// 31 rehin
+sc.push({a:mid(16),f(t,T){radial(540,900,1300,'#2f4a1a','#071005');x.save();zoom(470,900,1.2+0.04*t);bedK(540,1000,1.2,{gas:0.9,T,face:{eyeOpen:1,eyeBig:1.4,brow:1,sad:0.8,red:0.2}});x.restore();
+ bigText('YORGANDA',540,300,130,'#fff',prog(t,0,0.25),-0.03);bigText('REHİN!',540,440,160,GRN,P(T,16,'rehin'),-0.05);}});
+// 32 kıpırdarsam
+sc.push({a:mid(17),f(t,T){radial(540,860,1300,'#1f2a5c','#05070f');x.save();zoom(540,860,1.0+0.05*t);face(540,860,260,{...COCUK,eyeOpen:1,eyeBig:1.3,look:-1.5,brow:1,sad:0.6});x.restore();
+ bigText('KIPIRDARSAM:',540,300,110,'#fff',prog(t,0,0.25),-0.03);bigText('YAKALANIRIM',540,430,120,RED,prog(t,0.2,0.45),-0.03);}});
+// 33 kıpırdamazsam
+sc.push({a:W2(17,'kıpırdamasam'),f(t,T){x.save();shake(T,wt(17,'boğulacaktım')-0.1,wt(17,'boğulacaktım')+0.6,8);radial(540,860,1300,'#2f4a1a','#071005');x.save();zoom(540,860,1.0+0.05*t);face(540,860,260,{...COCUK,skin:'#c8d89a',eyeOpen:0.4,brow:1,sad:1,mouthOpen:0.2});gas(540,1300,1.4,T);x.restore();x.restore();
+ bigText('KIPIRDAMAZSAM:',540,300,105,'#fff',prog(t,0,0.25),-0.03);bigText('BOĞULURUM',540,430,130,GRN,P(T,17,'boğulacaktım'),-0.03);}});
+// 34 ertesi sabah
+sc.push({a:mid(18),f(t,T){kitchenDay();x.save();zoom(540,900,1.0+0.04*t);person(COCUK,280,860,150,{angry:1,brow:-0.6,eyeOpen:0.6,look:1,smile:-0.4});person(BABA_S,800,860,150,{smile:0.4,look:-1});teaGlass(640,1120,0.6,T);x.restore();
+ bigText('ERTESİ SABAH',540,330,125,'#fff',prog(t,0,0.25),-0.03);}});
+// 35 soru
+sc.push({a:W2(18,'"baba'),f(t,T){kitchenDay();x.save();zoom(400,900,1.15+0.04*t);person(COCUK,380,880,190,{angry:1,brow:-0.6,eyeOpen:0.7,mouthOpen:0.4,look:1});x.restore();
+ bubble(540,420,900,240,'',10,'#fff',380);txt('"DÜN GECE',540,370,80,'#111',{stroke:false});txt('ODAMA GELDİN Mİ?"',540,470,80,'#ff2d55',{stroke:false});}});
+// 36 çayını yudumladı
+sc.push({a:mid(19),f(t,T){kitchenDay();x.save();zoom(600,900,1.1+0.04*t);person(BABA_S,600,820,190,{eyeOpen:0.3,smile:0.3});teaGlass(780,1000+(-40*Math.sin(prog(t,0.2,1.4)*Math.PI)),0.8,T);x.restore();
+ bigText('İSTİFİNİ BOZMADI',540,300,105,'#fff',prog(t,0,0.25),-0.03);}});
+// 37 rüya görmüşsün
+sc.push({a:W2(19,'"rüya'),f(t,T){kitchenDay();x.save();zoom(540,900,1.0+0.05*t);person(BABA_S,540,880,200,{eyeOpen:1,eyeBig:1.15,smile:0.5,brow:0.6});x.restore();
+ bubble(540,410,900,220,'"RÜYA GÖRMÜŞSÜN"',84,'#fff',540);}});
+// 38 15 yıl sonra
+sc.push({a:mid(20),f(t,T){radial(540,800,1300,'#f2d9b0','#9a6a40');x.save();zoom(540,900,1.0+0.04*t);person(EMRE_B,300,860,150,{angry:0.5,eyeOpen:0.6,smile:-0.3,look:1});person(BABA_OLD,790,860,150,{smile:0.6,brow:0.7,look:-1});arm(650,1080,560,900,40,BABA_OLD.shirt,BABA_OLD.skin);arm(930,1080,1010,900,40,BABA_OLD.shirt,BABA_OLD.skin);x.restore();
+ bigText('15 YIL SONRA',540,300,120,YEL,prog(t,0,0.25),-0.03);bigText('HÂLÂ İNKÂR',540,430,110,'#fff',P(T,20,'inkâr'),-0.03);}});
+// 39 canavar = babam
+sc.push({a:mid(21),f(t,T){x.fillStyle='#0a0d22';x.fillRect(0,0,W,H);x.save();zoom(540,900,1.0+0.05*t);x.globalAlpha=0.9;horns(540,820,220*(0.6+0.4*eOut(prog(T,wt(21,'canavar')-0.1,wt(21,'canavar')+0.3))));silh(540,820,220,true,T);x.globalAlpha=1;x.restore();vignette(0.6);
+ bigText('ODAMDAKİ',540,300,115,'#fff',prog(t,0,0.25),-0.03);bigText('CANAVAR',540,440,150,GRN,P(T,21,'canavar'),-0.03);}});
+// 40 soru (kısa)
+sc.push({a:mid(22),f(t,T){radial(540,860,1300,'#2a1a4a','#05040c');x.save();zoom(540,880,1.0+0.05*t);face(540,880,230,{...COCUK,eyeOpen:1,eyeBig:1.2,smile:0.4,brow:0.6,look:1});x.restore();
+ bigText('SENİN BABAN DA',540,320,110,'#fff',prog(t,0,0.25),-0.03);bigText('YAPAR MIYDI?',540,460,120,YEL,prog(t,0.15,0.4),-0.03);}});
+// 41 OUTRO
+const OA=en(22)+0.3, OE=OA+2.2;
+sc.push({a:en(22)+0.15,noCap:true,f(t,T){radial(540,900,1300,'#2a1a4a','#05040c');
+ bigText('SENİN BABAN DA?',540,560,90,'#fff',prog(t,0,0.25),-0.03);
+ followBtn(540,860,T,1.7*back(prog(t,0.1,0.45)));}});
+window.OA=OA;window.OE=OE;
+setup(sc,TIM,OE);
+</script></body></html>

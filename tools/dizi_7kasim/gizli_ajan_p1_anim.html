@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="story.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const RED='#ff4d5e',YEL='#ffd23f',PNK='#ff7aa8';
+// Seri karakterleri (Gizli Ajan)
+const MERT={skin:'#e8b48c',hair:'#2b1d16',shirt:'#d0663a',skinShade:'#cc9a72'};
+const ELIF={skin:'#f0d2bf',hair:'#1a1418',hairStyle:'long',shirt:'#2a2a3a',skinShade:'#d8b29c'};
+const BEN={skin:'#d9a880',hair:'#3a2a20',shirt:'#3a6a5a',skinShade:'#bf906a'};
+function shadowHalf(cx,cy,r,a){x.save();x.beginPath();x.ellipse(cx,cy,r*0.9,r*1.02,0,0,7);x.clip();const g=x.createLinearGradient(cx-r,0,cx+r*0.3,0);g.addColorStop(0,`rgba(5,5,15,${a})`);g.addColorStop(0.75,`rgba(5,5,15,${a})`);g.addColorStop(1,'rgba(5,5,15,0)');x.fillStyle=g;x.fillRect(cx-r,cy-r*1.1,r*1.4,r*2.2);x.restore();}
+function elif(cx,cy,r,o={},sh=0.85){person(ELIF,cx,cy,r,{eyeBig:1.1,...o});shadowHalf(cx,cy,r,sh);}
+function elifFace(cx,cy,r,o={},sh=0.85){face(cx,cy,r,{...ELIF,eyeBig:1.15,...o});shadowHalf(cx,cy,r,sh);}
+function bigBadge(T){x.save();x.translate(190,250);const k=1+0.05*Math.sin(T*8);x.scale(k,k);x.rotate(-0.08);x.fillStyle='#ff2d55';rr(-150,-62,300,124,26);x.fill();x.strokeStyle='#fff';x.lineWidth=8;x.stroke();x.font=`900 78px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#fff';x.fillText('PART 1',0,5,270);x.restore();}
+function nightBg(){radial(540,800,1300,'#1d2152','#04050d');}
+function warmBg(){radial(540,800,1300,'#f2d9b0','#9a6a40');}
+function barBg(){radial(540,700,1300,'#6a3a1a','#120804');x.fillStyle='#3a1f0e';x.fillRect(-60,1180,W+120,800);x.fillStyle='#5a3218';rr(-40,1150,W+80,60,10);x.fill();
+ for(let i=0;i<6;i++){x.fillStyle=['#c84','#4a8','#a46','#68c','#ca4','#8a4'][i];rr(120+i*150,640,60,150,14);x.fill();}x.fillStyle='#2a1508';x.fillRect(80,790,920,20);}
+function glass(cx,cy,s,col){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='rgba(255,255,255,0.3)';x.beginPath();x.moveTo(-50,-80);x.lineTo(50,-80);x.lineTo(40,80);x.lineTo(-40,80);x.fill();x.fillStyle=col||'#e8a33a';x.beginPath();x.moveTo(-44,-20);x.lineTo(44,-20);x.lineTo(40,74);x.lineTo(-40,74);x.fill();x.restore();}
+function phoneScr(cx,cy,s,lines,T,bg){phone(cx,cy,s,0,false,bg||'#1a1f3a');lines.forEach(([t,dy,sz,col])=>txt(t,cx,cy+dy*s,sz*s,col||'#fff',{stroke:false,w:900,maxW:180*s}));}
+function cash(T){const r=rng(11);for(let i=0;i<14;i++){const px=r()*1000+40,sp=300+r()*300,y=((T*sp+r()*2000)%1700)-100,rot=Math.sin(T*2+i)*0.6;x.save();x.translate(px,y);x.rotate(rot);x.fillStyle='#4caf6a';rr(-90,-45,180,90,10);x.fill();x.strokeStyle='#2e7d46';x.lineWidth=6;rr(-78,-34,156,68,8);x.stroke();txt('₺',0,2,52,'#e9ffe9',{stroke:false});x.restore();}}
+function hearts(T,n=6){const r=rng(4);for(let i=0;i<n;i++){const ph=(T*0.5+r())%1;x.globalAlpha=1-ph;heart(100+r()*880,1500-ph*900,0.4+r()*0.4,PNK);}x.globalAlpha=1;}
+function emptyRoom(){x.fillStyle='#d8d2c4';x.fillRect(-60,-60,W+120,H+120);x.fillStyle='#b8ae9a';x.fillRect(-60,1250,W+120,800);x.fillStyle='rgba(0,0,0,0.12)';x.fillRect(-60,1240,W+120,12);x.fillStyle='#e8f0ff';rr(640,430,280,360,8);x.fill();x.fillStyle='#b8ae9a';x.fillRect(775,430,10,360);x.fillRect(640,605,280,10);}
+function dashed(px,py,w,h){x.save();x.strokeStyle='rgba(80,70,60,0.6)';x.lineWidth=8;x.setLineDash([26,18]);rr(px,py,w,h,20);x.stroke();x.restore();}
+function idCard(cx,cy,s,T){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#eef1f6';rr(-330,-200,660,400,30);x.fill();x.fillStyle='#2a3a6a';rr(-330,-200,660,90,30);x.fill();x.fillRect(-330,-140,660,30);x.fillStyle='#c7cdd8';rr(-290,-80,200,240,16);x.fill();txt('?',-190,40,160,'#8a93a5',{stroke:false});
+ txt('DEPARTMAN:',-50,-40,40,'#2a3a6a',{stroke:false,align:'left'});txt('???',-50,20,54,RED,{stroke:false,align:'left'});txt('UNVAN:',-50,80,40,'#2a3a6a',{stroke:false,align:'left'});txt('???',-50,135,54,RED,{stroke:false,align:'left'});x.restore();}
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,2.5,4);nightBg();x.save();zoom(540,1000,1.04+0.04*t);
+ face(330,1170,260,{...BEN,eyeBig:1.4,eyeOpen:1,brow:1,mouthOpen:0.25,look:1.5});elifFace(800,1090,250,{eyeOpen:0.8,smile:0,look:-1.5,mouthOpen:0.15});x.restore();
+ whisper(T,600,900,'#c9b8ff');x.restore();vignette(0.55);
+ hook([['SEVGİLİSİ',118,'#fff'],['FISILDADI',172,YEL],['SONRA YOK OLDU',112,'#fff']],360);bigBadge(T);}});
+// 1 iki gün sonra yok
+sc.push({a:W2(0,'gün')-0.25,f(t,T){emptyRoom();x.save();zoom(540,900,1.0+0.05*t);dashed(120,950,520,260);x.restore();x.fillStyle='rgba(0,0,0,0.25)';x.fillRect(0,0,W,H);vignette(0.5);
+ bigText('2 GÜN SONRA',540,330,130,YEL,prog(t,0,0.25),-0.03);bigText('YOK OLDU',540,470,140,'#fff',P(T,0,'kayboldu'),-0.03);}});
+// 2 Mert
+sc.push({a:mid(1),f(t,T){warmBg();hearts(T,5);x.save();zoom(540,900,1.0+0.05*t);person(MERT,540,860,200,{smile:0.9,blush:true,brow:0.5});x.restore();
+ bigText('ARKADAŞIM MERT',540,330,110,'#fff',prog(t,0,0.25),-0.03);bigText('EN ROMANTİK',540,460,110,PNK,P(T,1,'romantik'),-0.03);}});
+// 3 kötü espri
+sc.push({a:W2(1,'kötü'),f(t,T){radial(540,800,1300,'#ffe08a','#c98a2a');x.save();zoom(540,900,1.0+0.04*t);person(MERT,380,880,170,{smile:0.9,mouthOpen:0.6,eyeOpen:0.4});person(BEN,800,900,150,{smile:-0.5,eyeOpen:0.4,brow:-0.3,look:-1});x.restore();
+ bigText('KÖTÜ ESPRİ',540,330,130,'#fff',prog(t,0,0.25),-0.03);bigText('KRALI',540,470,150,RED,prog(t,0.15,0.4),-0.03);}});
+// 4 uygulama eşleşme
+sc.push({a:mid(2),f(t,T){radial(540,800,1300,'#ff7aa8','#5a1030');hearts(T,8);x.save();zoom(540,860,1.0+0.04*t);phone(540,860,1.4,0,false,'#ff4d7e');heart(540,760,1.4*back(prog(t,0.2,0.6)),'#fff');txt('EŞLEŞTİNİZ!',540,1000,56,'#fff',{stroke:false});x.restore();
+ bigText('ELİF',540,300,150,YEL,P(T,2,'elif'),-0.03);}});
+// 5 ilk kez âşık
+sc.push({a:W2(2,'ilk'),f(t,T){warmBg();hearts(T,10);x.save();zoom(540,880,1.0+0.06*t);face(540,880,260,{...MERT,smile:1,blush:true,eyeOpen:0.4});heart(445,870,0.55+0.06*Math.sin(t*9),'#ff2d55');heart(635,870,0.55+0.06*Math.sin(t*9),'#ff2d55');x.restore();
+ bigText('İLK KEZ ÂŞIK',540,330,130,PNK,prog(t,0,0.25),-0.03);}});
+// 6 fazla mükemmel
+sc.push({a:mid(3),f(t,T){radial(540,800,1300,'#3a2a5a','#0a0614');x.save();zoom(540,880,1.0+0.05*t);elifFace(540,880,260,{smile:0.6},0.75);x.restore();
+ const r=rng(7);for(let i=0;i<10;i++){const ph=(T*0.8+r())%1;x.globalAlpha=Math.sin(ph*Math.PI);txt('✦',150+r()*780,500+r()*800,50+r()*30,YEL,{stroke:false});}x.globalAlpha=1;
+ bigText('FAZLA',540,300,120,'#fff',prog(t,0,0.25),-0.03);bigText('MÜKEMMEL',540,440,150,YEL,P(T,3,'mükemmeldi'),-0.03);}});
+// 7 aynı şarkılar
+sc.push({a:mid(4),f(t,T){radial(540,800,1300,'#4a3a8a','#120a2a');x.save();zoom(540,900,1.0+0.04*t);person(MERT,340,880,160,{smile:0.9,eyeOpen:0.3});elif(760,880,160,{smile:0.7,eyeOpen:0.4},0.7);x.restore();
+ for(let i=0;i<6;i++){const ph=(T*0.6+i/6)%1;x.globalAlpha=1-ph;txt(i%2?'♪':'♫',200+i*140,900-ph*500,90,'#c9b8ff',{stroke:false});}x.globalAlpha=1;
+ bigText('AYNI GARİP',540,300,120,'#fff',prog(t,0,0.25),-0.03);bigText('ŞARKILAR',540,440,140,YEL,prog(t,0.15,0.4),-0.03);}});
+// 8 berbat esprilere gülüyor
+sc.push({a:W2(4,'berbat'),f(t,T){radial(540,800,1300,'#ffe08a','#c98a2a');x.save();zoom(540,900,1.0+0.04*t);person(MERT,340,900,160,{smile:0.9,mouthOpen:0.5});const b=Math.abs(Math.sin(t*12))*14;elif(760,880-b,170,{smile:1,mouthOpen:0.8,eyeOpen:0.1},0.6);x.restore();
+ bigText('HAHAHA!',540,330,160,PNK,prog(t,0.1,0.35),-0.08);}});
+// 9 3 hafta
+sc.push({a:mid(5),f(t,T){radial(540,800,1300,'#ff9ab8','#7a1a40');x.save();zoom(540,880,1.0+0.04*t);x.fillStyle='#fff';rr(300,560,480,520,30);x.fill();x.fillStyle='#ff2d55';rr(300,560,480,130,30);x.fill();x.fillRect(300,640,480,50);txt('3 HAFTA',540,880,110,'#ff2d55',{stroke:false});heart(540,1000,0.5,'#ff2d55');x.restore();
+ bigText('AYRILMAZ İKİLİ',540,330,115,'#fff',prog(t,0,0.25),-0.03);}});
+// 10 ama tuhaflıklar
+sc.push({a:mid(6),f(t,T){nightBg();x.save();zoom(540,860,1.05+0.08*ease(t/2));face(540,860,260,{...BEN,eyeOpen:0.45,brow:-0.4,angry:0.5,look:1.5,smile:-0.2});x.restore();vignette(0.5);
+ bigText('AMA...',540,330,170,YEL,prog(t,0,0.25),-0.03);}});
+// 11 fotoğraf yok
+sc.push({a:mid(7),f(t,T){radial(540,800,1300,'#2a3a6a','#070a18');x.save();zoom(540,900,1.0+0.04*t);elif(540,880,200,{look:-2,smile:-0.2},0.9);x.restore();
+ x.strokeStyle='#fff';x.lineWidth=10;const k=40;[[160,600],[920,600],[160,1350],[920,1350]].forEach(([px,py],i)=>{const sx=i%2?-1:1,sy=i<2?1:-1;x.beginPath();x.moveTo(px,py+sy*90);x.lineTo(px,py);x.lineTo(px+sx*90,py);x.stroke();});
+ x.fillStyle=Math.floor(T*3)%2?'#ff2d2d':'#a00';x.beginPath();x.arc(860,660,18,0,7);x.fill();
+ bigText('FOTOĞRAF YOK',540,330,120,RED,prog(t,0,0.25),-0.03);}});
+// 12 yüzünü çeviriyordu
+sc.push({a:W2(7,'telefonu'),f(t,T){radial(540,800,1300,'#2a3a6a','#070a18');x.save();zoom(540,900,1.0+0.05*t);const tr=ease(prog(t,0.2,0.8));x.save();x.translate(540,880);x.scale(1-tr*0.6,1);x.translate(-540,-880);elif(540,880,220,{look:-3},0.95);x.restore();
+ x.fillStyle=ELIF.skin;x.beginPath();x.ellipse(690,880,55,75,0.3,0,7);x.fill();x.restore();phone(860,1000,0.8,0.2,false,'#334');
+ bigText('YÜZÜNÜ ÇEVİRDİ',540,320,110,'#fff',prog(t,0,0.25),-0.03);}});
+// 13 işin ne
+sc.push({a:mid(8),f(t,T){barBg();x.save();zoom(540,900,1.0+0.04*t);person(BEN,330,900,170,{brow:0.6,mouthOpen:0.3,look:1});elif(780,900,170,{smile:0.4,look:-1},0.75);x.restore();
+ bubble(380,330,560,170,'"İŞİN NE?"',80,'#fff',360);}});
+// 14 devlette çalışıyorum
+sc.push({a:W2(8,'"devlette'),f(t,T){barBg();x.save();zoom(700,900,1.12+0.04*t);elif(720,880,200,{smile:0.5,eyeOpen:0.7},0.8);x.restore();
+ bubble(540,360,880,190,'"DEVLETTE ÇALIŞIYORUM."',70,'#fff',700);}});
+// 15 kimlik
+sc.push({a:mid(9),f(t,T){radial(540,800,1300,'#2a3a6a','#070a18');x.save();zoom(540,860,1.0+0.05*t);idCard(540,770,1.3*back(prog(t,0,0.3)),T);x.restore();
+ bigText('NE DEPARTMAN',540,300,110,'#fff',prog(t,0,0.25),-0.03);bigText('NE UNVAN',540,430,120,RED,P(T,9,'unvan'),-0.03);}});
+// 16 nakit
+sc.push({a:mid(10),f(t,T){radial(540,800,1300,'#1f4a2a','#06120a');cash(T);vignette(0.4);
+ bigText('HEP NAKİT',540,380,160,'#9be36a',P(T,10,'nakit'),-0.04);if(T<wt(10,'nakit')-0.1)bigText('HER SEFERİNDE',540,380,110,'#fff',prog(t,0,0.25),-0.03);}});
+// 17 gizemli kadın
+sc.push({a:mid(11),f(t,T){radial(540,800,1300,'#ff9ab8','#7a1a40');hearts(T,9);x.save();zoom(540,880,1.0+0.05*t);face(540,880,250,{...MERT,smile:1,eyeOpen:0.3,blush:true,look:1});x.restore();
+ bigText('"GİZEMLİ KADIN"',540,330,115,'#fff',P(T,11,'"gizemli'),-0.03);}});
+// 18 bir gece barda
+sc.push({a:mid(12),f(t,T){barBg();x.save();zoom(540,950,1.0+0.04*t);person(BEN,220,930,130,{smile:0.4,look:1});person(MERT,540,910,140,{smile:0.8});elif(860,930,130,{smile:0.5,look:-1},0.75);glass(380,1110,0.6);glass(700,1110,0.6,'#c33');x.restore();
+ bigText('BİR GECE',540,300,120,'#fff',prog(t,0,0.25),-0.03);bigText('BARDA',540,430,140,YEL,prog(t,0.15,0.4),-0.03);}});
+// 19 mert dışarı
+sc.push({a:W2(12,'mert'),f(t,T){barBg();x.save();zoom(540,950,1.0+0.04*t);person(BEN,260,930,140,{look:1});const mx=540+500*ease(prog(t,0.4,2.2));person(MERT,mx,910,140,{smile:0.5,look:1});phone(mx+120,830,0.35,0.3,false,'#3a8');elif(820,930,140,{smile:0,look:-1},0.75);x.restore();
+ bigText('MERT DIŞARI ÇIKTI',540,320,105,'#fff',prog(t,0,0.25),-0.03);}});
+// 20 bardağı bıraktı
+sc.push({a:mid(13),f(t,T){radial(540,800,1300,'#4a2412','#0a0402');x.save();zoom(540,1000,1.1+0.05*t);elif(540,820,200,{smile:0,eyeOpen:0.8,lookDown:1},0.8);glass(540,1170-60*(1-ease(prog(t,0,0.8))),1.0);x.restore();vignette(0.6);
+ bigText('GÜLÜMSEMESİ GİTTİ',540,320,100,'#fff',prog(t,0,0.25),-0.03);}});
+// 21 gözlerimin içine
+sc.push({a:W2(13,'eğildi'),f(t,T){x.fillStyle='#070308';x.fillRect(0,0,W,H);x.save();zoom(540,860,1.05+0.18*ease(t/2.5));elifFace(540,860,290,{eyeOpen:1,eyeBig:1.3,smile:0,brow:-0.2},0.45);x.restore();vignette(0.75);
+ bigText('GÖZLERİMİN İÇİNE',540,300,100,'#fff',P(T,13,'gözlerimin'),-0.03);}});
+// 22 fısıltı 1
+sc.push({a:mid(14),f(t,T){x.fillStyle='#05030a';x.fillRect(0,0,W,H);x.save();zoom(600,900,1.0+0.05*t);face(330,1000,240,{...BEN,eyeBig:1.3,eyeOpen:1,brow:0.8,look:1.5});elifFace(820,900,230,{eyeOpen:0.7,look:-1.5,mouthOpen:0.15},0.85);x.restore();whisper(T,580,760);vignette(0.6);
+ bigText('"İYİ BİR ARKADAŞA',540,300,90,'#fff',prog(t,0,0.25),-0.03);bigText('BENZİYORSUN"',540,410,100,'#c9b8ff',prog(t,0.2,0.45),-0.03);}});
+// 23 fısıltı 2
+sc.push({a:W2(14,'mert'),f(t,T){x.save();shake(T,wt(14,'beladan')-0.05,wt(14,'beladan')+0.6,7);x.fillStyle='#14030a';x.fillRect(0,0,W,H);x.save();zoom(540,880,1.05+0.1*ease(t/2.5));elifFace(540,880,280,{eyeOpen:1,eyeBig:1.25,brow:-0.3,mouthOpen:0.2},0.5);x.restore();x.restore();vignette(0.75);
+ bigText('"MERT\'İN BAŞINI',540,300,95,'#fff',prog(t,0,0.25),-0.03);bigText('BELADAN UZAK TUT"',540,420,95,RED,P(T,14,'beladan'),-0.03);}});
+// 24 ne?!
+sc.push({a:mid(15),f(t,T){x.save();shake(t,0,0.5,8);nightBg();x.save();zoom(540,860,1.0+0.08*ease(t/1.5));face(540,860,270,{...BEN,eyeBig:1.5,eyeOpen:1,brow:1.2,mouthOpen:0.5});x.restore();x.restore();vignette(0.5);
+ bigText('NE DEMEK BU?!',540,320,125,YEL,prog(t,0,0.25),-0.04);}});
+// 25 Mert döndü, Elif gülümsüyor
+sc.push({a:W2(15,'mert'),f(t,T){barBg();x.save();zoom(540,950,1.0+0.04*t);person(BEN,220,930,130,{eyeBig:1.3,brow:1,look:1});person(MERT,540,910,140,{smile:0.9,mouthOpen:0.3});elif(860,930,130,{smile:0.8,look:-1},0.75);x.restore();
+ bigText('SANKİ HİÇBİR ŞEY',540,300,105,'#fff',prog(t,0,0.25),-0.03);bigText('OLMAMIŞ GİBİ',540,420,110,YEL,P(T,15,'gülümsemeye'),-0.03);}});
+// 26 mert arıyor
+sc.push({a:mid(16),f(t,T){x.fillStyle='#0b0c18';x.fillRect(0,0,W,H);const v=Math.sin(t*80)*6*(t<1.4?1:0);x.save();x.translate(v,0);phoneScr(540,780,2.1,[['MERT',-40,40,'#fff'],['arıyor...',10,26,'#9be36a']],T,'#152a1a');x.restore();
+ bigText('2 GÜN SONRA',540,300,130,YEL,prog(t,0,0.25),-0.03);}});
+// 27 sesi titriyordu
+sc.push({a:W2(16,'sesi'),f(t,T){radial(540,800,1300,'#24305a','#05070f');const j=Math.sin(t*40)*4;x.save();x.translate(j,0);zoom(540,860,1.0+0.05*t);face(540,860,260,{...MERT,sad:1,brow:0.8,eyeOpen:0.6,mouthOpen:0.2});x.fillStyle='rgba(140,200,255,0.85)';x.beginPath();x.ellipse(450,940+((t*300)%120),14,22,0,0,7);x.fill();x.restore();phone(800,880,0.6,0.2,false,'#152a1a');vignette(0.5);
+ bigText('SESİ TİTRİYORDU',540,320,115,'#fff',prog(t,0,0.25),-0.03);}});
+// 28 telefon kapalı
+sc.push({a:mid(17),f(t,T){x.fillStyle='#0b0c18';x.fillRect(0,0,W,H);phoneScr(540,780,2.1,[['ELİF',-110,40,'#fff'],['Mesaj',-30,30,'#ccd'],['iletilmedi',10,30,'#ff6b6b']],T);cross(540,1000,0.5*back(prog(t,0.2,0.5)));
+ bigText('TELEFON KAPALI',540,300,120,RED,prog(t,0,0.25),-0.03);}});
+// 29 evine gittik
+sc.push({a:mid(18),f(t,T){nightBg();x.fillStyle='#2a2440';rr(200,380,680,1100,10);x.fill();for(let r=0;r<4;r++)for(let c2=0;c2<3;c2++){x.fillStyle=(r*3+c2)%4===1?'#ffd98a':'#141026';rr(260+c2*210,440+r*230,150,150,8);x.fill();}
+ const wx=-200+700*ease(t/2);person(BEN,wx,1250,100,{look:1});person(MERT,wx+220,1240,105,{sad:0.6,look:1});
+ bigText('ELİF\'İN EVİ',540,280,120,'#fff',prog(t,0,0.25),-0.03);}});
+// 30 kapı aralık
+sc.push({a:W2(18,'kapı'),f(t,T){x.fillStyle='#120f20';x.fillRect(0,0,W,H);x.save();zoom(540,900,1.0+0.06*t);door(540,900,1.0,0.25+0.1*ease(t/1.5),'#5a3a2a');x.restore();vignette(0.6);
+ bigText('KAPI ARALIK',540,260,130,YEL,prog(t,0,0.25),-0.03);}});
+// 31 bomboş
+sc.push({a:mid(19),f(t,T){emptyRoom();x.save();zoom(540,900,1.0+0.05*t);person(BEN,330,1000,120,{eyeBig:1.4,mouthOpen:0.4,brow:1});person(MERT,700,990,125,{eyeBig:1.4,mouthOpen:0.5,brow:1,sad:0.5});x.restore();
+ bigText('BOMBOŞ',540,300,170,RED,prog(t,0,0.25),-0.03);}});
+// 32 ne koltuk ne tabak
+sc.push({a:W2(19,'koltuk')-0.3,f(t,T){emptyRoom();x.save();zoom(540,1000,1.0+0.04*t);dashed(100,950,560,280);dashed(720,1000,240,230);dashed(160,560,300,200);x.restore();
+ bigText('NE KOLTUK',540,300,120,'#fff',prog(t,0,0.25),-0.03);bigText('NE TABAK',540,420,120,'#fff',P(T,19,'tabak'),-0.03);bigText('NE FOTOĞRAF',540,1350,95,RED,P(T,19,'fotoğraf'),-0.03);}});
+// 33 hiç kimse yaşamamış
+sc.push({a:mid(20),f(t,T){emptyRoom();x.fillStyle='rgba(0,0,20,0.45)';x.fillRect(0,0,W,H);const r=rng(3);x.fillStyle='rgba(255,255,255,0.6)';for(let i=0;i<40;i++){x.beginPath();x.arc((r()*1080+t*20*r())%1080,(r()*1600+t*30)%1600,3+r()*4,0,7);x.fill();}vignette(0.6);
+ bigText('SANKİ HİÇ KİMSE',540,300,110,'#fff',prog(t,0,0.25),-0.03);bigText('YAŞAMAMIŞ',540,430,140,YEL,P(T,20,'yaşamamıştı'),-0.03);}});
+// 34 son umut
+sc.push({a:mid(21),f(t,T){emptyRoom();x.fillStyle='rgba(0,0,20,0.35)';x.fillRect(0,0,W,H);x.save();zoom(540,880,1.05+0.06*t);person(MERT,540,860,200,{sad:1,brow:0.8,eyeOpen:0.7,look:1});phone(720,800,0.55,0.25,false,'#152a1a');arm(700,1100,710,860,50,MERT.shirt,MERT.skin);x.restore();
+ bigText('SON BİR UMUT',540,300,125,'#fff',prog(t,0,0.25),-0.03);}});
+// 35 numara kullanılmamaktadır (kısa)
+sc.push({a:mid(22),f(t,T){x.save();shake(t,0,0.5,5);x.fillStyle='#08080f';x.fillRect(0,0,W,H);phoneScr(540,760,2.1,[['ELİF',-120,40,'#fff'],['BU NUMARA',-20,28,'#ff6b6b'],['KULLANIL-',20,28,'#ff6b6b'],['MAMAKTADIR',60,28,'#ff6b6b']],T,'#2a0a12');x.restore();vignette(0.5);
+ bigText('KULLANILMIYOR',540,300,120,RED,prog(t,0,0.2),-0.03);}});
+// 36 OUTRO
+const OA=en(22)+0.3, OE=OA+3.05;
+sc.push({a:en(22)+0.15,noCap:true,f(t,T){radial(540,900,1300,'#2a1a4a','#05040c');
+ bigText('DEVAMI',540,520,130,'#fff',prog(t,0,0.3),-0.05);bigText("PART 2'DE",540,700,170,YEL,prog(t,0.15,0.45),-0.05);if(t>0.35)eyesIcon(540,900,1.0,T);
+ if(t>0.5)followBtn(540,1360,T,1.2*back(prog(t,0.5,0.85)));}});
+window.OA=OA;window.OE=OE;
+setup(sc,TIM,OE);
+</script></body></html>

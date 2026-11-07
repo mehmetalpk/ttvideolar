@@ -38,15 +38,9 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 ## Bekleyen
 
-> NOT (6 Kas 05:05 günlük görev): Kaan 0lm3k zorundaydı Part 1 TikTok beğenisi 6 Kas 05:00 itibarıyla 21 (eşik 100). 7 Kasım görevi tekrar kontrol etsin; <100 ise Kaan "Kullanıldı"ya "(devam koşulu sağlanmadı: N beğeni)" ile taşınır ve akşam Gizli Ajan Part 1 üretilir. Münferit havuz boşaldı → sabah slotu için WebSearch ile yeni hikâye bulunmalı.
+> NOT (7 Kas günlük görev): Kaan Part 1 = 29 TikTok beğenisi (<100) → seri bitti, Gizli Ajan Part 1 7 Kas 18:00'e planlandı. Bilgi: Hacker Kerem finali 23K izlenme / 427 beğeni (en iyi video). Sabah münferit havuzunda sırada Mayonez babası var; ondan sonra WebSearch gerekir.
 
-### MÜNFERİT (SABAH, 7 Kasım): Babam gece odama geldi (komedi) — kullanıcı puanı 8/10
-- Kaynak: Reddit (kullanıcı gönderdi). Tam metin kopyalanmadı. Açıklamada "Reddit'ten uyarlanmıştır."
-- Anlatıcı: Emre (erkek, Emrullah). Karakter: babam.
-- Özet: Çocukken canavar korkusu yüzünden her gece babasından yatmadan önce odasını kontrol etmesini ister. Bir gece hâlâ uyanıktır, merdivenden babanın ayak seslerini duyar; uyanık yakalanırsa başı yanacağı için uyuyor taklidi yapar. Baba odaya girer, karanlıkta birkaç saniye ona bakar, yatağa yaklaşır, yorganı hafifçe kaldırır... yorganın altına osurur, döner ve çıkar. 15 yıl geçmiştir, baba hâlâ inkâr eder ama Emre ne olduğunu çok iyi bilir.
-- Uzatma (70–85 sn): canavar korkusu sahneleri (dolap kapağı, yatak altı), "kontrol et" ritüeli, merdiven gıcırtısı gerilimi (yarı korku tonu), yorgan kalkarken gerilim doruğu → komik çözülme, ertesi sabah kahvaltıda yüzleşme ve babanın inkârı.
-- Kanca: espriyi VERME. Öneri: "Babam her gece odama gelirdi. Bir gece neden geldiğini öğrendim." İlk kare: karanlık kapı aralığında baba silueti.
-- Ton: önce gerilim, sonra komedi; final soru: "Senin baban da böyle şeyler yapar mıydı?" Outro: "Takip et."
+> ESKİ NOT (6 Kas 05:05 günlük görev): Kaan 0lm3k zorundaydı Part 1 TikTok beğenisi 6 Kas 05:00 itibarıyla 21 (eşik 100). 7 Kasım görevi tekrar kontrol etsin; <100 ise Kaan "Kullanıldı"ya "(devam koşulu sağlanmadı: N beğeni)" ile taşınır ve akşam Gizli Ajan Part 1 üretilir. Münferit havuz boşaldı → sabah slotu için WebSearch ile yeni hikâye bulunmalı.
 
 ### MÜNFERİT (SABAH, sıradaki): Mayonez babası (komedi) — kullanıcı puanı 9/10
 - Kaynak: Reddit (u/Narcolepsyinc, ön sayfa). Tam metin kopyalanmadı.
@@ -55,17 +49,30 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Kanca: "Babam bayram sabahı kavanozdan kaşık kaşık mayonez yedi." İlk kare: dev mayonez kavanozu + kaşık + çocukların şok yüzü.
 - Ton: komedi; ses Emrullah.
 
-### AKŞAM SERİSİ — SIRADAKİ (Kaan'dan sonra ilk yeni seri; 2 part): Mükemmel Sevgili Gizli Ajan Çıktı (gerilim + hafif komedi)
+### AKŞAM SERİSİ — AKTİF (2 part): Mükemmel Sevgili Gizli Ajan Çıktı (gerilim + hafif komedi)
 - Kaynak: Reddit, "My Friend's 'Perfect' Relationship Was a Full-On FBI Operation" (muhtemelen kurgu — "gerçek/yaşanmış" deme; açıklamada "Reddit'ten uyarlanmıştır."). Tam metin kopyalanmadı.
 - Uyarlama: FBI YOK → "gizli ajan" (kurum adı verme; MİT/emniyet vb. gerçek kurum adı KULLANMA). Kara para aklama operasyonu. İsimler: Matt → Mert (romantik, kötü espri yapan, her sabah "günaydın" mesajı atan), Lisa → Elif, anlatıcı = Mert'in en yakın arkadaşı (erkek, Emrullah sesi). Marka/uygulama adı yok ("bir tanışma uygulaması").
 - Özet (kendi cümlelerimle): Mert uygulamada Elif'le tanışır; Elif fazla mükemmeldir — aynı garip müzikleri sever, Mert'in berbat esprilerine güler. Birkaç haftada ayrılmaz olurlar ama tuhaflıklar birikir: asla fotoğrafını çektirmez, işi sorulunca sadece "devlette çalışıyorum" der, hep nakit öder. Bir gece barda Mert telefonla dışarı çıkınca Elif anlatıcıya eğilip "İyi bir arkadaşa benziyorsun. Mert'in başını beladan uzak tut." der. İki gün sonra Elif yok olur: telefon kapalı, ev boşaltılmış. Mert yıkılır, terk edildiğini sanır. Bir ay sonra haberlerde Elif'i görürler — gerçek adı başka, büyük bir kara para operasyonunda ifade veren gizli ajan. Mert hedef bile değildi; sadece Elif'in kılıfıydı. O günden beri tanışma uygulamalarına girmiyor.
-- PART 1 (~75 sn): tanışma + "fazla mükemmel" + ipuçları (fotoğraf yok, "devlette çalışıyorum", nakit) + bardaki uyarı cümlesi + yok oluş (telefon kapalı, boş ev). Son kare: boş daire, Mert'in ekranında "bu numara kullanılmamaktadır". Outro: "Devamı 2. partta. Takip et."
+- PART 1 (~75 sn): tanışma + "fazla mükemmel" + ipuçları (fotoğraf yok, "devlette çalışıyorum", nakit) + bardaki uyarı cümlesi + yok oluş (telefon kapalı, boş ev). Son kare: boş daire, Mert'in ekranında "bu numara kullanılmamaktadır". Outro: "Devamı 2. partta. Takip et." ✅ 2026-11-07 (18:00)
 - PART 2 (FİNAL, ~75 sn): Mert'in çöküşü (komik-acı) → bir ay sonra TV haberi, Elif ekranda başka isimle → "hedef değildin, kılıftın" → kapanış: "O günden beri tanışma uygulamalarına girmiyor." + soru: "Sen olsan fark eder miydin?" Outro: "Takip et."
 - Kanca önerileri: P1 "En yakın arkadaşımın sevgilisi bana tek bir cümle fısıldadı. İki gün sonra ortadan kayboldu." / P2 "Bir ay sonra onu haberlerde gördük. Ama adı Elif değildi."
 - Görsel: Elif'in yüzü hep gölgede/yarım (fotoğraf vermeyen gizemli kadın); TV haberi sahnesinde gerçek logo/kanal adı YOK.
+- Karakterler (SABİT): Mert ten #e8b48c, kısa koyu saç #2b1d16, turuncu gömlek #d0663a · Elif ten #f0d2bf, uzun siyah saç #1a1418, koyu mont #2a2a3a, yüzünün sol yarısı hep gölgede (shadowHalf) · Anlatıcı (Ben) ten #d9a880, saç #3a2a20, yeşil tişört #3a6a5a. Çizim kodu: tools/dizi_7kasim/gizli_ajan_p1_anim.html
+- Part 2 koşulu: Part 1 (7 Kas 18:00) TikTok ≥100 beğeni → 8 Kas akşamı Part 2 (FİNAL). <100 → seri biter, akşam havuzdan yeni seri Part 1.
 - Ton: gerilim + hafif komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #gizliajan #ilişki #gerilim #keşfet #fyp
 
-### SERİ (2 part, SABAH SLOTU): Kaan 0lm3k zorundaydı (gerilim) — twist'li iki bakış açısı
+
+## Kullanıldı
+### MÜNFERİT (SABAH, 7 Kasım): Babam gece odama geldi (komedi) — kullanıcı puanı 8/10
+- Kaynak: Reddit (kullanıcı gönderdi). Tam metin kopyalanmadı. Açıklamada "Reddit'ten uyarlanmıştır."
+- Anlatıcı: Emre (erkek, Emrullah). Karakter: babam.
+- Özet: Çocukken canavar korkusu yüzünden her gece babasından yatmadan önce odasını kontrol etmesini ister. Bir gece hâlâ uyanıktır, merdivenden babanın ayak seslerini duyar; uyanık yakalanırsa başı yanacağı için uyuyor taklidi yapar. Baba odaya girer, karanlıkta birkaç saniye ona bakar, yatağa yaklaşır, yorganı hafifçe kaldırır... yorganın altına osurur, döner ve çıkar. 15 yıl geçmiştir, baba hâlâ inkâr eder ama Emre ne olduğunu çok iyi bilir.
+- Uzatma (70–85 sn): canavar korkusu sahneleri (dolap kapağı, yatak altı), "kontrol et" ritüeli, merdiven gıcırtısı gerilimi (yarı korku tonu), yorgan kalkarken gerilim doruğu → komik çözülme, ertesi sabah kahvaltıda yüzleşme ve babanın inkârı.
+- Kanca: espriyi VERME. Öneri: "Babam her gece odama gelirdi. Bir gece neden geldiğini öğrendim." İlk kare: karanlık kapı aralığında baba silueti.
+- Ton: önce gerilim, sonra komedi; final soru: "Senin baban da böyle şeyler yapar mıydı?" Outro: "Takip et."
+  (✅ kullanıldı 2026-11-07 SABAH, 13:50)
+
+### SERİ: Kaan 0lm3k zorundaydı (gerilim) — BİTTİ (devam koşulu sağlanmadı: 29 beğeni, 7 Kas kontrolü) — twist'li iki bakış açısı
 - SANSÜR (kullanıcı isteği, algoritma riski için): YAZILI her yerde (TikTok/YouTube başlığı, açıklama, ekrandaki büyük yazılar, karaoke altyazı) şu kelimeler sansürlü yazılır: ölmek→0lm3k, öldü→0ld0, öldürmek→0ld0rm3k, ölüm→0l0m, ceset→c3s3t, kan→k@n, cinayet→c1n@y3t, polis→p0l1s. SESLENDİRMEDE bu kelimeler HİÇ geçmez; yumuşak karşılık kullan: "Kaan'ın gitmesi gerekiyordu", "Kaan artık yoktu", "kocamın artık yaşamadığını", "ayakkabımdaki koyu lekeler", "kapının önü mavi-kırmızı ışıklarla doluydu". Karaoke altyazı seslendirmeyle aynı metni gösterir (sansürlü yazım gerekmez çünkü kelime seste yok); başlık ve büyük ekran yazılarında sansürlü yazım kullan.
 - YAYIN: AKŞAM slotu (BEĞENİ KAPISI KURALLARI). Part 1 → 5 Kasım akşamı; sonu "2K beğeni gelirse Part 2 gelecek 👀" kapısı. Part 2 SADECE Part 1 TikTok'ta ≥2.000 beğeni aldıysa ertesi akşam üretilir; Part 2 hikâyeyi bitirir, sonunda soru ("Sence kim daha kötü: Selim mi, Defne mi?") + "3K beğeni gelirse yeni bir gerilim serisi gelecek 👀". Part 1 2K almazsa seri durur, akşam slotuna havuzdan yeni seri gelir.
 - Kaynak: Reddit'te paylaşılan bir kısa öykü yarışması metni ("Patrick had to Die", New Age SSS – 1000 Words Or Less; kullanıcı gönderdi). Açıklamada: "Reddit'teki bir kısa öyküden uyarlanmıştır." Metni KOPYALAMA, kendi cümlelerinle baştan yaz.
@@ -74,7 +81,6 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - PART 2 (anlatıcı Defne, ses İrem): Kanca: "Ne kadar da uslu bir çocuk." Apartmanın önü mavi-kırmızı ışıklarla dolu; Defne yürürken aynada provasını yaptığı "yıkılmış eş" yüzünü takınıyor. Selim'in kasabaya kaçtığından emin — o hep öyle yapar, hep tahmin edilebilir, hep yönlendirilebilir. Çocukluktan beri ona tek bir gülümsemeyle her şeyi yaptırmıştır. Kaan'la evlenmesinin tek sebebi: otuz yaşında açılacak milyonlarca liralık miras; beş yıl âşık rolü, Kaan onu her şeyin tek varisi yapar. Yüzüğü, bahar düğününü, sağdıçlığı Selim'i kıskandırmak için bilerek yapmıştır. Son altı ayda Kaan'a "Selim beni rahatsız ediyor, bana bakışı tuhaf, sen erkek değil misin?" diye dolduruşa getirip buluşmayı Kaan'a ayarlatmıştır. Yaşlı komşu onu görüp ellerine kapanır; Defne bir anda endişeli yüzüne geçer, komşuya sarılır: "Ne oldu?" Final: "Hayatımın en önemli performansına hazırlandım. Ve kocamın sonunda öldüğünü... ve her şeyin artık bana kaldığını duymayı bekledim." + soru.
 - Ton: gerilim; koyu mavi/mor palet, gece treni, polis ışıkları (kırmızı-mavi), yavaş zoom, ani kesme, düşük "dum". Karakter renkleri: Selim koyu yeşil mont #2f4a3a, kısa koyu saç #2b1d16; Defne koyu kahve uzun saç #3a2418, bordo palto #6a1e2e, mavi gözler; Kaan lacivert gömlek #2a3a5a. Hashtag: #gerilim #twist #hikaye #reddithikayeleri #keşfet #fyp.
 
-## Kullanıldı
 ### 2. Kocasına benzeyen adam (gerilim)
 - Kaynak: r/stories, u/dannyy145 — "I hooked up with a stranger and the next morning she told me something that still haunts me." (Story-related)
 - Anlatıcı: erkek (ses: Emrullah Tuna)
