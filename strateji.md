@@ -1,40 +1,57 @@
 # Strateji (haftalık analiz görevi günceller)
 Günlük görev bu dosyayı OKUR ve buradaki "Uygulanacak kurallar"a uyar. Haftalık görev her pazar Metricool verisiyle günceller.
+Not: havuz.md başındaki KULLANICI notları (süre, outro, altyazı konumu, ses efekti yasağı, seri devam koşulu ≥100 beğeni) bu dosyadan ÖNCE gelir; çelişirse kullanıcı notu geçerlidir.
 
 ## Son güncelleme
-2026-11-01 (1. haftalık analiz — veri ÇOK AZ, hüküm yok, sadece eğilim)
+2026-11-08 (2. haftalık analiz — 13 video; komedi için eğilim artık güçlü, ses/saat için hâlâ veri az)
 
-## Veri özeti (Metricool, 25.10–01.11, Europe/Istanbul)
-Metricool'da bu hafta yalnızca 3 video var (hepsi 31.10, 15:17–15:44 arası, 27 dk içinde art arda). 01.11 videoları ("Kuşlarla intikam" vb.) Metricool'a henüz düşmemiş → gelecek hafta değerlendirilecek. Önceki 7 gün (18–24.10): video yok, kıyas yapılamadı.
+## Veri özeti (Metricool TikTok, 01.11–08.11, saatler Europe/Istanbul)
+8 Kasım'ın iki videosu (Mayonez babası 09:00, Park Yeri Savaşı P1 17:00) Metricool'a henüz düşmedi → gelecek hafta. Erişim (TKPO11) son 2 günün videolarında 0 (veri gecikmesi). Tam izleme oranı Metricool'da garip ölçekte geliyor (ör. 0,0011); aşağıda ham×10.000 = % olarak yorumlandı — videolar arası KIYAS için kullan, mutlak değere güvenme.
 
-| Yayın | Video | Tür | Ses | Format/süre | İzlenme | Beğeni | Ort. izleme | Tam izleme | Senin İçin |
-|---|---|---|---|---|---|---|---|---|---|
-| 31.10 15:17 | Babam 6 yıldır "balığa gidiyorum" | aile/ihanet | erkek (Emrullah) | eski uzun, 44 sn | 11 | 2 | 5 sn (%11) | ~%0 | %10,3 |
-| 31.10 15:38 | Partiye katılmadım… (Part 1) | romantik/aşk | ? | eski uzun, 52 sn | 9 | 2 | 6 sn (%12) | %0,1 | %5 |
-| 31.10 15:44 | Uçak modu… (Part 2) | romantik/komedi | ? | eski uzun, 49 sn | 2 | 1 | 3 sn (%6) | %0 | %0 |
+| Yayın | Video | Tür | Ses | Süre | İzlenme | Beğeni | Yorum | Paylaşım | Ort. izleme | Tam izl.* | Senin İçin |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 01.11 10:02 | Babam 6 yıl "balığa gidiyorum" | aile/ihanet | Emrullah | 44 | 2.485 | 37 | 1 | 0 | 11 sn (%25) | %15 | %27 |
+| 01.11 18:06 | Komşuya 12 kuş yemliği | intikam/komedi | İrem | 51 | 3.010 | 41 | 1 | 0 | 12 sn (%24) | %13 | %25 |
+| 02.11 17:02 | Babamın 214 sesli mesajı | duygusal | Emrullah | 36 | 4.607 | 57 | 0 | 2 | 11 sn (%31) | %11 | %18 |
+| 03.11 09:02 | Hacker Kerem P1 | komedi/seri | Emrullah | 41 | **176.397** | 3.413 | 28 | 183 | 19 sn (%46) | %11 | %96 |
+| 03.11 17:05 | Hacker Kerem P2 | komedi/seri | Emrullah | 42 | 89.540 | 1.547 | 55 | 35 | 21 sn (%50) | %14 | %71 |
+| 04.11 09:01 | Hacker Kerem B3 | komedi/seri | Emrullah | 40 | 72.308 | 1.263 | 33 | 32 | 19 sn (%48) | %10 | %79 |
+| 04.11 17:05 | Hacker Kerem B4 | komedi/seri | Emrullah | 44 | 15.017 | 570 | 57 | 14 | 23 sn (%52) | %5 | %36 |
+| 05.11 12:25 | Hacker Kerem B5 | komedi/seri | Emrullah | 84 | 9.719 | 232 | 15 | 2 | 35 sn (%42) | %3 | %63 |
+| 05.11 17:06 | Kaan 0lm3k zorundaydı P1 | gerilim/seri | Emrullah | 85 | 2.888 | 34 | 9 | 0 | 10 sn (%12) | %1 | %8 |
+| 06.11 09:01 | Gece 3'te başımda oturuyordu | gerilim | Emrullah | 84 | 1.892 | 17 | 1 | 0 | 8 sn (%10) | %2 | %20 |
+| 06.11 17:04 | Hacker Kerem FİNAL | komedi/seri | Emrullah | 141 | 37.551 | 702 | 15 | 19 | 50 sn (%35) | %6 | %95 |
+| 07.11 13:50 | Babam yorganımı kaldırdı | komedi | Emrullah | 85 | 4.214 | 77 | 2 | 4 | 24 sn (%28) | %4 | %93 |
+| 07.11 18:06 | Gizli Ajan P1 | gerilim/seri | Emrullah | 83 | 599 | 4 | 1 | 1 | 15 sn (%18) | %5 | %84 |
 
-- Hafta toplamı: 3 video, 22 izlenme, 5 beğeni, 0 yorum, 0 paylaşım. Takipçi: 1 (artış verisi yok/0).
-- Erişim (TKPO11) tüm videolarda 0 görünüyor → Metricool/TikTok veri gecikmesi olabilir, güvenilir değil.
-- Not (kullanıcı notu, Metricool dışı): 01.11 "Babamın sırrı" ilk 2,5 saatte ~400+ izlenme; izleyicilerin %50'si 1. sn'de çıktı, ort. %18 izlendi.
+\* tam izleme ölçeği belirsiz (yukarıdaki not).
 
-## Tür performansı (ort. izlenme / tam izleme oranı / ort. izleme süresi)
-- aile/ihanet (1 video): 11 / ~%0 / 5 sn — örneklem yetersiz
-- romantik (2 video, seri): 5,5 / ~%0 / 4,5 sn — örneklem yetersiz
-- komedi, gerilim, intikam, duygusal: henüz veri yok
-- Seri: Part 1 → Part 2 izlenme 9 → 2 (−%78). 3 dakika arayla yayınlandığı için seri etkisi ölçülemez; eğilim olumsuz.
+- Hafta toplamı: 13 video, **420.227 izlenme**, 7.994 beğeni, 218 yorum, 292 paylaşım. Önceki hafta (25–31.10): 3 video, 22 izlenme.
+- Takipçi: 1 → **1.358** (07.11 itibarıyla, +1.357; 08.11 verisi yok). En büyük sıçrama 03–04.11 (Hacker Kerem P1–B3: günde +397 / +700).
+- Profil görüntüleme: 03.11 11.476, 04.11 17.648 (seri izleyiciyi profile taşıyor).
+
+## Tür performansı (video sayısı · ort. izlenme · ort. izleme % · ort. Senin İçin)
+- **komedi (7: Kerem×6 + yorgan)**: 57.821 · %43 · %76 → açık ara en iyi. Eğilim güçlü (n=7), ama 6'sı aynı seri.
+- **gerilim (3: Kaan, Gece 3, Gizli Ajan)**: 1.793 · %13 · %37 → en kötü. 3/3 video zayıf; iki seri de devam koşulunu (≥100 beğeni) tutturamadı (34 ve 4 beğeni). Kaan ve Gece 3'te Senin İçin %8–20 → algoritma gerilimi itmedi.
+- intikam/komedi (1, İrem): 3.010 · %24 — örneklem yetersiz.
+- duygusal (1): 4.607 · %31 — örneklem yetersiz.
+- aile/ihanet (1): 2.485 · %25 — örneklem yetersiz (#gerçekhikaye kullanılmıştı).
+- Seri: Kerem P1→P2→B3→B4→B5: 176K → 90K (%51) → 72K (%81) → 15K (%21) → 9,7K (%65) → Final 37,5K. İlk 3 part güçlü, B4'ten itibaren düşüş; final yine toparladı. Komedi serisi İŞE YARIYOR; gerilim serisi yaramadı.
 
 ## Gözlemler
-- Ort. izleme süresi 3–6 sn: izleyici ilk saniyelerde kaçıyor → ilk 1–2 saniyedeki kanca en büyük sorun.
-- Senin İçin oranı %0–10: dağıtım neredeyse hiç FYP'ye çıkmamış. Olası nedenler: yeni hesap + kısa aralıkla toplu yükleme + açıklamalarda #gerçekhikaye (sabit kuralla yasak; 31.10 videolarında kullanılmıştı). Erişim kısıtlaması ŞÜPHESİ var, kesin değil.
+- Süre: 40–44 sn videolar ort. %46–52 izlendi; 84–85 sn'ye geçilince (kullanıcı kuralı 04.11) izlenme yüzdesi %10–42'ye, tam izleme %1–6'ya düştü. Komedide mutlak izleme süresi arttı (19–23 → 24–35 sn), gerilimde 8–15 sn'de kaldı. Etki tür ve seri yorgunluğuyla karışık — kesin değil, ama uzun format gerilimde açıkça kötü.
+- Kanca: en iyi kancalar somut + absürt aile çatışması ("12 yaşındaki kardeşim hacker olmaya karar verdi", "Babam modemi tamir edeyim derken…"). "Babam…" + komik/absürt eylem kalıbı tekrar iyi çalıştı (yorgan, FYP %93).
+- Yayın saati: sabah 09:00 (Kerem P1 176K, B3 72K) ile akşam 17:00 (P2 90K, B4 15K) arasında net fark yok; seri sırası etkisi baskın. Değişiklik yok.
+- Ses: 12/13 video Emrullah; İrem 1 video → kıyas yapılamaz.
+- Erişim kısıtlaması şüphesi YOK: 07.11 komedi videosu Senin İçin %93. Düşük FYP sadece gerilim videolarında (içerik kaynaklı).
 
 ## Uygulanacak kurallar
-- BEĞEN/TAKİP KAPANIŞI (SABİT KURAL — kullanıcı isteği 02.11; haftalık görev bu maddeyi SİLMEZ/DEĞİŞTİRMEZ): Tek parça her videonun sonunda, hikâyenin son cümlesi/sorusundan sonra seslendirmeye şu kapanış eklenir: "Yorumlara yaz. Ve bu tür hikâyeleri kaçırmamak için, videoyu beğenmeyi ve takip etmeyi unutma." Son ~4 sn ekranda atan kırmızı kalp + "+ TAKİP" butonu (nabız halkalı) ve büyük "BEĞEN & TAKİP ET" yazısı gösterilir. Bu kapanış süre hedefine dahil değildir (hikâye 25–38 sn + kapanış ~4 sn). SERİ/PART videolarında (Part 1, Part 2, …) bu kapanış KULLANILMAZ.
-- Video süresi hedefi: 25–38 sn (yeni kısa format). 44–52 sn'lik eski format 31.10'da %6–12 izlendi; devam etme. (değişmedi, veri destekliyor)
-- İlk kare/ilk cümle: hikâyenin en şok edici anı ilk 1,5 sn'de, büyük yazıyla ekranda; giriş/selam/bağlam cümlesi YOK. (yeni: ort. izleme 3–6 sn)
-- Aynı gün iki video arasında en az 4 saat; art arda toplu yükleme yapma. (yeni: 31.10'da 27 dk'da 3 video, FYP %0–10)
-- Açıklama ve hashtag'lerde #gerçekhikaye ve "gerçek/yaşanmış" ifadesi kesinlikle yok (sabit kural; 31.10 videolarında ihlal edilmişti, kontrol et).
-- Seri formatı: DENEME olarak devam, ama partlar arası en az 1 yayın aralığı (sabah/akşam) olsun ve Part 2+ ilk 2 sn'de tek cümle özetle başlasın. Part 2 izlenmesi Part 1'in %30'unun altında kalırsa seriler durdurulur. (yeni)
-- Türleri dönüşümlü dene (duygusal, komedi, gerilim, aile dramı, intikam) — en az 2 hafta veri toplanana kadar tek türe yüklenme. (korundu: tür başına <3 video)
-- Havuz boşalınca seçilecek tür: henüz verisi olmayanlar öncelikli → komedi, gerilim, duygusal (eşit sırayla). (korundu/netleşti)
-- Ses: kadın/erkek ses karşılaştırması için veri yok; hikâyenin anlatıcısının cinsiyetine uy.
+- BEĞEN/TAKİP KAPANIŞI (SABİT KURAL — kullanıcı isteği 02.11; haftalık görev bu maddeyi SİLMEZ/DEĞİŞTİRMEZ): Tek parça her videonun sonunda, hikâyenin son cümlesi/sorusundan sonra seslendirmeye şu kapanış eklenir: "Yorumlara yaz. Ve bu tür hikâyeleri kaçırmamak için, videoyu beğenmeyi ve takip etmeyi unutma." Son ~4 sn ekranda atan kırmızı kalp + "+ TAKİP" butonu (nabız halkalı) ve büyük "BEĞEN & TAKİP ET" yazısı gösterilir. Bu kapanış süre hedefine dahil değildir (hikâye 25–38 sn + kapanış ~4 sn). SERİ/PART videolarında (Part 1, Part 2, …) bu kapanış KULLANILMAZ. (Not: havuz.md'deki 06.11 "REDDITSEL GÜNCELLEME 2" outro kuralı daha yeni kullanıcı isteğidir; çelişirse o geçerli.)
+- Tür seçimi (havuz boşalınca / yeni hikâye ararken): **komedi 3/4** (aile/baba/kardeş komedisi öncelikli; komşu/iş yeri "malicious compliance" ikinci), **1/4 deneme** (duygusal veya intikam — dönüşümlü). **Gerilim/korku seçme** (yeni: 3/3 gerilim videosu ort. %13 izlendi, 1.8K izlenme; komedi %43 / 58K). Gerilim 2 hafta sonra en fazla 1 münferit denemeyle tekrar test edilebilir.
+- Seri formatı: **sadece komedi** türünde devam (yeni: Kerem serisi 6 partta 400K+ izlenme; gerilim serileri 34 ve 4 beğeniyle düştü). Devam koşulu kullanıcı kuralı (≥100 TikTok beğenisi) aynen geçerli. Part 2+ ilk 2 sn'de tek cümle özetle başlar. Seri karakterleri tekrar kullanılabilir (Kerem ailesi sevildi → yeni bir "Kerem ailesi" münferit bölümü düşünülebilir).
+- Video süresi: kullanıcı kuralı (havuz.md "SÜRE KURALI", 70–85 sn) geçerli — bu dosya değiştirmez. Veri notu: 40 sn videolar %46–52, 85 sn videolar %10–42 izlendi; uzun formatta sahne temposu sıkı tutulmalı (sahne ≤5 sn, ikinci 15. saniyede yeni çatışma/espri). Kullanıcıya 50–60 sn denemesi önerildi.
+- İlk kare/ilk cümle: en şok edici/absürt an ilk 1,5 sn'de, somut kişi + eylem ("Babam…", "12 yaşındaki kardeşim…"); giriş/selam YOK. (korundu; veriyle desteklendi)
+- Ses: Emrullah varsayılan; anlatıcı kadınsa İrem. Kıyas için veri yok (İrem 1 video). (korundu)
+- Aynı gün iki video arasında en az 4 saat; art arda toplu yükleme yapma. (korundu)
+- Açıklama ve hashtag'lerde #gerçekhikaye ve "gerçek/yaşanmış" ifadesi kesinlikle yok (sabit kural; 01.11 balık videosunda hâlâ #gerçekhikaye vardı — kontrol et).
 - Sabit kurallar (bu dosya değiştirmez): beğen/takip kapanışı (part videoları hariç), izlenme süresi önceliği, yayın saati = zirve −1 saat, #gerçekhikaye yasağı, yapay zekâ etiketi — skill'deki gibi uygulanır.

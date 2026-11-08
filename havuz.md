@@ -52,6 +52,54 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Part 2 koşulu: Part 1 (8 Kas 17:00) TikTok ≥100 beğeni → 9 Kas akşamı Part 2 (FİNAL). <100 → seri biter, akşam yeni seri Part 1 (havuzda yoksa WebSearch).
 - Ton: komedi/intikam; ses Emrullah; hashtag: #hikaye #reddithikayeleri #komşu #intikam #parkyeri #keşfet #fyp #shorts
 
+> NOT (8 Kas haftalık görev): strateji.md'ye göre komedi öncelikli, gerilim seçilmez. Aşağıdaki münferitler SABAH slotu için sırayla kullanılır (en üstteki önce). Hepsi r/MaliciousCompliance kaynaklı derleme sitelerinden; hiçbiri "Fiction" etiketli değil ama doğrulanmamış → açıklamada "Reddit'ten uyarlanmıştır.", "gerçek/yaşanmış" deme. İsimler/mekânlar Türkçeleştirilir, marka adı kullanılmaz. Park Yeri Savaşı ile art arda iki komşu hikâyesi gelmesin: Park P2 akşamı yayınlanırsa ertesi sabah "Kar küreme" yerine "Tam yarım kilo kanat" seçilir.
+
+### MÜNFERİT 1: Yarım kilo kanat — tartıyla intikam (komedi / malicious compliance)
+- Kaynak: r/MaliciousCompliance, u/advocatus_ebrius_est (başlık derlemede yok) — listverse.com "Top 10 Stories of Malicious Compliance" #10; ranker.com "Wanted An Exact Pound Of Wings".
+- Anlatıcı: aşçı (erkek) → Emrullah. Uyarlama: Amerikan "wing night" → Türkiye'de bir tavuk restoranının "kanat akşamı" (yarım kilo kanat indirimli). Gram yerine adet standardı (yarım kilo = 8 kanat). Restoran zinciri adı YOK.
+- Özet (kendi cümlelerimle): Mutfakta kanatlar tartılmaz, standart porsiyon 8 kanattır. Bir masada herkes yarım kilo sipariş eder; masadaki bir adam herkesin tabağında aynı sayıda kanat olmasını "şüpheli" bulur, garsonu çağırıp tabağının tartılmasını ister. Mutfak tabağı tartar: neredeyse 750 gram — fazla bile. Garson tek tek kanatları çöpe atar, tartı tam 500'ü gösterene kadar. Tabağı 5 kanatla, ifadesiz bir yüzle geri götürür: "Tarttık, fazlası vardı, onları attık." Adam ağzı açık kalır. Masadaki arkadaşları gülmekten yıkılır. Bir sonraki siparişte herkese yine 8 kanat gelir — adam bu kez tek kelime etmez.
+- Uzatma sahneleri: adamın garsonla tartışması ("Bunlar hep 8, yarım kilo olamaz!"), mutfakta aşçıların tartı başında toplanması, her atılan kanatta tartıya bakış (komik sayaç: 742… 680… 590… 500), masadaki arkadaşlarının telefonla çekmesi.
+- Kanca: "Müşteri kanatlarını tartmamızı istedi. Tarttık… ve üçünü çöpe attık." / alternatif: "Bir adam tabağındaki kanatları saydı ve garsonu çağırdı." Ekran: dev tartı + "500 g" + kanat görseli.
+- Kapanış sorusu: "Sence garson haklı mıydı?"
+- Ton: komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #komedi #restoran #garson #müşteri #keşfet #fyp #shorts
+
+### MÜNFERİT 2: Kar küremeyi istemeyen komşu (komedi / komşu)
+- Kaynak: r/MaliciousCompliance, u/sockfacekiller (başlık derlemede yok) — ranker.com "20 Times People Got Revenge By Doing EXACTLY What They Were Told" (malicious-compliance-stories/joshualee) #5.
+- Anlatıcı: erkek → Emrullah. Uyarlama: Wisconsin → Erzurum/Kars gibi bol karlı bir site; kar küreme makinesi marka adı YOK.
+- Özet: Anlatıcı her kış küçük kar küreme makinesiyle tüm sokağın kaldırımlarını gönüllü temizler; komşular sever. Bir komşu (çocuklara kaldırım tebeşiri yüzünden bağıran huysuz tip) "Ben sese çok hassasım, evimin önünü temizleme" der. Anlatıcı "Peki" der. Kışın ortasında yarım metreye yakın kar yağar; anlatıcı tüm sokağı temizler — o tek ev hariç. Komşu o hafta şehir dışındadır. Ardından iki gün ılık hava, sonra sert ayaz: o evin önündeki kar kalın bir buz tabakasına döner. Komşu döner, kapısının önünde buzul bulur; arabası çıkamaz, kürek kırılır. Anlatıcının sesi duyulmasın diye bir şey yapamaz — kendi isteği.
+- Uzatma: komşunun "hassasiyet" konuşması (komik abartı: "Kuş sesi bile rahatsız ediyor"), sokaktaki diğer komşuların teşekkür kurabiyeleri, komşunun buza kazmayla girişmesi, sonunda kapıyı çalıp kısık sesle "Makineyi… sessiz modda çalıştırabilir misin?" demesi.
+- Kanca: "Komşum kar küreme makinemin sesinden şikâyet etti. Ben de onun evini hiç temizlemedim." Ekran: tertemiz sokak + tek evin önünde dev buz bloğu.
+- Kapanış sorusu: "Sen olsan yine temizler miydin?"
+- Ton: komedi/hafif intikam; ses Emrullah; hashtag: #hikaye #reddithikayeleri #komşu #kar #intikam #komedi #keşfet #fyp #shorts
+
+### MÜNFERİT 3: Kapıyı kilitleyen hoca (komedi / okul)
+- Kaynak: r/MaliciousCompliance, u/Khromez (başlık derlemede yok) — listverse.com "Top 10 Stories of Malicious Compliance" #3.
+- Anlatıcı: üniversite öğrencisi (kadın → İrem; ses testi için iyi fırsat — strateji: İrem verisi az). Uyarlama: Türk üniversitesi, "Prof. Kemal Bey" gibi kurgusal isim; üniversite adı YOK.
+- Özet: Hoca dersin başlamasından 5 dakika sonra sınıf kapısını kilitler; geç kalan kim olursa olsun içeri giremez, o dersi kaçırır, devamsızlık yazılır. Öğrenciler aylarca otobüs/kar/trafik bahanesiyle kapıda kalır. Bir gün hoca 5 dakika geç kalır. Sınıf başkanı saate bakar, kalkar ve kapıyı içeriden kilitler. Hoca kapıyı çalar; içeriden "Kuralınız hocam" sesi gelir. Hoca bir saat koridorda bekler. Sonraki haftadan itibaren kapı bir daha hiç kilitlenmez.
+- Uzatma: hocanın kibirli kural konuşması ("Dakika beş, kapı kilit!"), anlatıcının yağmurda kapıda kaldığı gün, kilitlenme anında sınıfın sessizliği, kapı camından görünen hocanın yüz ifadesi, final: hocanın ertesi derste kapıyı ardına kadar açıp "Bugün… kapı açık kalsın" demesi.
+- Kanca: "Hocamız 5 dakika geç kalanı derse almıyordu. Bir gün o geç kaldı." Ekran: kilitli kapı + saat 09:05 + camdan bakan hoca.
+- Kapanış sorusu: "Sence sınıf fazla mı ileri gitti?"
+- Ton: komedi; ses İrem; hashtag: #hikaye #reddithikayeleri #okul #üniversite #hoca #komedi #keşfet #fyp #shorts
+
+### MÜNFERİT 4: Tuvalet için doktor raporu (komedi / iş yeri)
+- Kaynak: r/MaliciousCompliance, u/argash (başlık derlemede yok) — ranker.com "20 Times People Got Revenge By Doing EXACTLY What They Were Told" #3.
+- Anlatıcı: çağrı merkezi çalışanı (erkek) → Emrullah. Uyarlama: Türkiye'de bir çağrı merkezi; şirket adı YOK.
+- Özet: Anlatıcı sesi çatlamasın diye gün boyu çok su içer, bu yüzden sık sık 2–3 dakikalık tuvalet molası verir. Müdür, iki resmi mola dışındaki her tuvalet ziyareti için doktor raporu ister — getiremeyeceğini düşünerek. Anlatıcı doktora gider; doktor talebi o kadar saçma bulur ki "Bu kişinin tuvalete gitmesine izin verilmelidir; böbreklerini kullanmaya devam etmesi tıbben önerilir" tadında alaycı bir rapor yazar. Müdür raporu okurken kızarır. Ertesi hafta ekipten beş kişi aynı doktordan aynı raporu getirir. Anlatıcı o günden sonra her tuvalete gidişte müdürün masasının önünden gülümseyerek geçer.
+- Uzatma: müdürün "mola tablosu" ve kronometresi, doktorun muayenehanedeki şaşkınlığı, raporun ekranda büyük harflerle okunması, ofiste rapor kuyruğu.
+- Kanca: "Müdürüm tuvalete gitmem için doktor raporu istedi. Getirdim." Ekran: dev rapor kâğıdı + "TUVALETE GİDEBİLİR" damgası.
+- Kapanış sorusu: "Senin işyerinde de böyle bir müdür var mı?"
+- Ton: komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #işyeri #müdür #komedi #keşfet #fyp #shorts
+
+### AKŞAM SERİSİ — SIRADAKİ (2 part): Bahçe Sınırı Savaşı (komedi + intikam) — Park Yeri Savaşı biterse/koşulu tutmazsa başlar
+- Kaynak: r/MaliciousCompliance, u/BalloonUnderstudy (başlık derlemede yok) — listverse.com "Top 10 Stories of Malicious Compliance" #7. Doğrulanmamış; "Reddit'ten uyarlanmıştır."
+- Anlatıcı: aile çocuğu (kadın → İrem). Uyarlama: Türkiye'de müstakil ev; anne-baba yan bahçeye pahalı bir çiçek/çalı bahçesi yapar (mutfak penceresini görüntüden korumak için). Komşu "Hasan Bey" kurgusal. Kurum/firma adı YOK ("bir harita mühendisi").
+- Özet: Annemle babam yan bahçeye aylarca uğraşıp güzel bir bahçe yapar. Bir sabah komşu, bahçenin kendi arsasında olduğunu iddia edip hepsini söktürmüştür. Aile yeniden diker; birkaç hafta sonra yine sökülür. Bu sefer aile kavga etmez, lisanslı bir harita mühendisi çağırır. Ölçüm sonucu: sınır komşunun dediği yerde değil, onun bahçesinin yaklaşık 3,5 metre içindedir. Komşu çitini söküp geri çekmek zorunda kalır, arka bahçesinin dörtte birini kaybeder ve sökülen bahçenin zararını öder (tutarı belirsiz bırak, "bir servet" deme). Aile bahçesini yeniden kurar — bu kez komşunun eski bahçesinin olduğu yere kadar.
+- PART 1 (~75 sn): ilk bahçe + mutfak penceresi; sabah sökülmüş bahçe şoku; komşunun "Arsa benim!" çıkışı; ikinci dikim, ikinci söküm; babanın sakin cümlesi: "Tamam. Ölçtürelim." Son kare: harita mühendisinin kırmızı-beyaz sınır kazığını komşunun bahçesinin ortasına çakması. Outro: "Devamı 2. partta."
+- PART 2 (FİNAL, ~75 sn): tek cümle özet → ölçüm raporu, komşunun inkârı, resmî tutanak; çitin sökülmesi (komik: komşu kendi çitini söken ekibe çay getirmek zorunda), tazminat; final: yeni bahçe komşunun eski salıncağının yerinde. Soru: "Sen olsan komşuyla barışır mıydın?" Outro: "Takip et."
+- Kanca önerileri: P1 "Komşum bahçemizi iki kez söktürdü. Üçüncüsünde ölçüm yaptırdık." / P2 "Ölçüm çıktı. Sınır, komşunun salıncağının altından geçiyordu."
+- Devam koşulu: kullanıcı kuralı (Part 1 ≥100 TikTok beğenisi).
+- Ton: komedi/intikam; ses İrem; hashtag: #hikaye #reddithikayeleri #komşu #bahçe #intikam #komedi #keşfet #fyp #shorts
+
 ## Kullanıldı
 ### MÜNFERİT (SABAH, 8 Kasım): Mayonez babası (komedi) — kullanıcı puanı 9/10
 - Kaynak: Reddit (u/Narcolepsyinc, ön sayfa). Tam metin kopyalanmadı.
