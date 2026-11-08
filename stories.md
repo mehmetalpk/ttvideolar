@@ -15,3 +15,5 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-06 | Hacker Kerem – Part 6: FİNAL [Part 6 — FİNAL] | özgün devam (r/stories u/Chocolate_cerealpuff'tan ilham) | komedi/seri | erkek (Emrullah Tuna) | 141.9 | 17:00 | TikTok+YouTube+Instagram | AKŞAM
 - 2026-11-07 | Babam gece yarısı yorganımı kaldırdı (Babam gece odama geldi) | Reddit (kullanıcı gönderdi, havuz) | komedi/münferit | erkek (Emrullah Tuna) | 85.6 | 13:50 | TikTok+YouTube+Instagram | SABAH
 - 2026-11-07 | Mükemmel sevgili yok oldu (Gizli Ajan) [Part 1/2] | Reddit "My Friend's 'Perfect' Relationship Was a Full-On FBI Operation" (havuz) | gerilim/seri | erkek (Emrullah Tuna) | 83.5 | 18:00 | TikTok+YouTube+Instagram | AKŞAM
+- 2026-11-08 | Babam bayram sabahı mayonez yedi (Mayonez babası) | Reddit u/Narcolepsyinc (havuz) | komedi/münferit | erkek (Emrullah Tuna) | 85.9 | 09:00 | TikTok+YouTube+Instagram | SABAH
+- 2026-11-08 | Komşum arabamın önünü kapattı (Park Yeri Savaşı) [Part 1/2] | Reddit r/pettyrevenge tarzı komşu/park hikâyelerinden ilham (özgün) | komedi/seri | erkek (Emrullah Tuna) | 83.4 | 17:00 | TikTok+YouTube+Instagram | AKŞAM

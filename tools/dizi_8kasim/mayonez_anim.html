@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="story.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.25),-0.03);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,3,3);radial(540,1000,1300,'#ffe0a0','#d9862e');x.save();zoom(540,1050,1.04+0.035*t);
+ person(BABA_M,560,1050,250,{smile:0.2,mouthOpen:0.75,eyeOpen:0.5,brow:-0.2});spoon(690,1260,1.3,-1.2,true);jar(250,1420,1.1,{open:true,level:0.75});x.restore();x.restore();
+ burst(820,820,120,'rgba(255,255,255,0.5)',t);
+ hook([['BAYRAM SABAHI',112,'#fff'],['MAYONEZ',190,YEL],['KAŞIKLA YEDİ!',122,'#fff']],190);}});
+// 1 gözünü kırpmadı
+sc.push({a:W2(0,'gözünü'),f(t,T){radial(540,900,1300,'#ffe0a0','#d9862e');x.save();zoom(540,820,1.5+0.08*t);face(540,880,260,{...BABA_M,eyeOpen:1,eyeBig:1.25,smile:0.5,mouthOpen:0});x.restore();
+ B('GÖZÜNÜ BİLE',300,110,'#fff',t);B('KIRPMADI',430,150,YEL,t,0.15);}});
+// 2 ben 10 ela 7
+sc.push({a:mid(1),f(t,T){salon();x.save();zoom(540,900,1.0+0.04*t);person(BEN,330,880,170,{smile:0.6});person(ELA,760,940,140,{smile:0.7});x.restore();
+ B('BEN: 10',360,120,'#fff',t);bigText('ELA: 7',540,520,120,YEL,P(T,1,'Ela'),-0.03);}});
+// 3 bayram sabahı
+sc.push({a:mid(2),f(t,T){salon();x.save();zoom(540,950,1.0+0.04*t);person(BEN,300,900,150,{smile:0.9,shirt:'#fff'});person(ELA,560,950,125,{smile:0.9,shirt:'#ffd23f'});person(BABA_M,840,840,160,{smile:0.6});x.restore();
+ B('BAYRAM SABAHI',330,130,YEL,t);sparkle(300,900,200,T);}});
+// 4 el öpme
+sc.push({a:W2(2,'el'),f(t,T){salon();x.save();zoom(600,900,1.1+0.04*t);person(BABA_M,760,820,180,{smile:0.8,look:-1});const k=Math.sin(t*4)*20;person(BEN,350,950+k,150,{smile:0.4,eyeOpen:0.2});arm(600,1080,500,1000+k,50,BABA_M.shirt,BABA_M.skin);x.restore();
+ B('EL ÖPME',330,150,'#fff',t);}});
+// 5 harçlık
+sc.push({a:W2(2,'harçlık'),f(t,T){radial(540,900,1300,'#fff2c0','#e8a040');const r=rng(4);for(let i=0;i<9;i++){const a=r()*6.28;const d=150+eOut(t/1.2)*(250+r()*200);env(540+Math.cos(a)*d,900+Math.sin(a)*d*1.2,0.6+r()*0.3,r()-0.5+t*0.3,false);}env(540,900,1.3*back(prog(t,0,0.4)),-0.05,true);
+ B('HARÇLIK!',330,160,YEL,t);}});
+// 6 zarfları açıyorduk
+sc.push({a:mid(3),f(t,T){salon();x.save();zoom(540,1000,1.0+0.05*t);person(BEN,320,950,150,{smile:1,mouthOpen:0.4,lookDown:1});person(ELA,760,990,130,{smile:1,mouthOpen:0.5,lookDown:1});env(420,1250,0.8,0.1,true);env(700,1260,0.7,-0.1,true);x.restore();
+ B('ZARFLARI AÇIYORUZ',330,105,'#fff',t);}});
+// 7 babam geldi
+sc.push({a:mid(4),f(t,T){salon();door(540,900,1.0,ease(t/0.8)*0.6,'#8a5a3a');x.save();zoom(540,900,1.0+0.04*t);const dx=200*(1-eOut(t/1));person(BABA_M,540+dx,820,170,{smile:0.4,look:1,brow:0.3});jar(800+dx,1060,0.75,{});x.restore();
+ B('BABAM GİRDİ',330,130,'#fff',t);}});
+// 8 koca kavanoz
+sc.push({a:W2(4,'mayonez'),f(t,T){radial(540,900,1300,'#fff2c0','#e09040');x.save();zoom(540,880,1.0+0.06*t);jar(540,880,1.9*back(prog(t,0,0.35)),{});spoon(880,840,1.1,0.4,false);x.restore();
+ B('KOCA KAVANOZ',300,130,YEL,t);}});
+// 9 koltuğa kuruldu
+sc.push({a:mid(5),f(t,T){salon();x.save();zoom(540,1000,1.0+0.04*t);sofa(540,1150,1.1);person(BABA_M,540,840,170,{smile:0.5,eyeOpen:0.6});jar(760,1080,0.6,{});x.restore();
+ B('KOLTUĞA KURULDU',330,115,'#fff',t);}});
+// 10 kapak açılıyor
+sc.push({a:W2(5,'kapağı'),f(t,T){radial(540,900,1300,'#fff2c0','#e09040');x.save();zoom(540,900,1.0+0.08*t);const up=ease(prog(t,0.3,1.4));jar(540,980,1.8,{lidUp:up*220});x.restore();
+ B('YAVAŞÇA...',300,140,'#fff',t);}});
+// 11 tepeleme
+sc.push({a:mid(6),f(t,T){radial(540,900,1300,'#fff2c0','#e09040');x.save();zoom(540,900,1.0+0.06*t);jar(540,1100,1.6,{open:true,level:0.9});spoon(540,800-120*ease(t/1),1.7,0,true);x.restore();
+ B('TEPELEME!',300,160,YEL,t);}});
+// 12 ham
+sc.push({a:W2(6,'ağzına')-0.1,f(t,T){x.save();shake(t,0.1,0.8,10);radial(540,900,1300,'#ffe0a0','#d9862e');x.save();zoom(540,880,1.2+0.05*t);face(540,880,270,{...BABA_M,mouthOpen:t<0.4?1:0.2,eyeOpen:0.2,smile:0.6});spoon(780-140*eOut(t/0.4),1060,1.3,-0.9,t<0.4);x.restore();x.restore();
+ B('HAM!',300,190,YEL,t);}});
+// 13 zarf düştü
+sc.push({a:mid(7),f(t,T){salon();x.save();zoom(540,900,1.0+0.05*t);person(ELA,540,820,210,{eyeBig:1.45,mouthOpen:0.8,brow:1});env(700,1000+eOut(t/1.6)*400,0.8,t*1.5,false);x.restore();
+ B('ZARF YERE DÜŞTÜ',330,110,'#fff',t);}});
+// 14 ikinci kaşık
+sc.push({a:mid(8),f(t,T){salon();x.save();zoom(540,950,1.05+0.04*t);sofa(540,1200,1.1);person(BABA_M,540,880,180,{smile:0.6,eyeOpen:0.5});jar(780,1120,0.7,{open:true,level:0.75});spoon(780,950-80*Math.abs(Math.sin(t*2)),0.7,0,true);x.restore();
+ B('2. KAŞIK',330,160,YEL,t);B('İSTİFİNİ BOZMADI',480,90,'#fff',t,0.2);}});
+// 15 gelenek konuşması
+sc.push({a:mid(9),f(t,T){salon();x.save();zoom(540,1000,1.0+0.04*t);person(BABA_M,540,1000,170,{smile:0.8,mouthOpen:0.3*Math.abs(Math.sin(t*9)),brow:0.5});x.restore();
+ bubble(540,470,900,230,'"TATLI YERİNE BUNU YERİM"',70,'#fff',520);}});
+// 16 gelenek?!
+sc.push({a:W2(9,'dedemden'),f(t,T){salon();x.save();zoom(540,950,1.0+0.04*t);person(BEN,300,950,150,{eyeBig:1.4,mouthOpen:0.5,brow:1});person(ELA,780,980,130,{eyeBig:1.4,mouthOpen:0.6,brow:1});x.restore();
+ B('DEDEMDEN',330,120,'#fff',t);bigText('KALMA GELENEK?!',540,470,110,YEL,P(T,9,'gelenek'),-0.03);}});
+// 17 öğürme
+sc.push({a:mid(10),f(t,T){x.save();shake(t,0,1.5,5);radial(540,900,1300,'#d8f0b0','#5a8a30');x.save();zoom(540,880,1.15+0.05*t);face(540,880,260,{...BEN,skin:'#cfe0a0',skinShade:'#b0c080',eyeOpen:0.25,mouthOpen:0.6,mouthW:1.3,brow:1,sad:1});x.restore();x.restore();
+ B('ÖĞĞK!',300,190,GRN,t);}});
+// 18 ela ağlıyor
+sc.push({a:W2(10,'Ela'),f(t,T){salon();x.save();zoom(540,880,1.15+0.05*t);face(540,880,250,{...ELA,eyeOpen:0.1,mouthOpen:0.9,brow:1,sad:1});tears(540,880,250,T);x.restore();
+ B('BUAAAA!',300,170,'#6cc6ff',t);}});
+// 19 annem kapıda
+sc.push({a:mid(11),f(t,T){kitchen(false);x.fillStyle='#3a2a1a';x.fillRect(560,300,520,1300);x.fillStyle='#f6e7c8';x.fillRect(620,340,460,1260);x.save();zoom(700,800,1.0+0.05*t);person(ANNE_M,780,800,170,{look:-1.5,smile:0.3,eyeOpen:0.7});x.restore();
+ B('ANNEM İZLİYOR',330,120,'#fff',t);}});
+// 20 dudak ısırdı
+sc.push({a:W2(11,'tek'),f(t,T){radial(540,900,1300,'#ffe0c0','#d08a50');x.save();zoom(540,880,1.2+0.05*t);face(540,880,250,{...ANNE_M,smile:-0.5,eyeOpen:0.4,brow:0.8,red:0.3+0.2*Math.sin(t*6)});x.fillStyle='#fff';x.fillRect(500,990,80,16);x.restore();
+ B('TEK KELİME YOK',300,115,'#fff',t);bigText('GÜLMEMEK İÇİN...',540,1360,80,YEL,P(T,11,'dudağını'),-0.03);}});
+// 21 üçüncü kaşık
+sc.push({a:mid(12),f(t,T){radial(540,900,1300,'#fff2c0','#e09040');x.save();zoom(540,950,1.0+0.06*t);jar(540,1000,1.8,{open:true,level:0.45});const k=ease(prog(t,0.3,1.5));x.fillStyle=BABA_M.skin;x.beginPath();x.ellipse(320+k*420,690+Math.sin(k*3.14)*-40,46,70,0.4,0,7);x.fill();x.fillStyle=CREAM;x.beginPath();x.arc(330+k*420,640,24,0,7);x.fill();x.restore();
+ B('3. KAŞIK',300,160,YEL,t);}});
+// 22 yaladı
+sc.push({a:W2(12,'yaladı')-0.2,f(t,T){x.save();shake(t,0.1,1,7);radial(540,900,1300,'#ffe0a0','#d9862e');x.save();zoom(540,880,1.2+0.04*t);face(540,880,260,{...BABA_M,mouthOpen:0.6,eyeOpen:0.1,smile:0.9});x.fillStyle=BABA_M.skin;x.beginPath();x.ellipse(560,1000,40,90,0.2,0,7);x.fill();x.fillStyle=CREAM;x.beginPath();x.arc(550,930,22,0,7);x.fill();x.restore();x.restore();
+ B('PARMAĞINI YALADI',300,105,'#fff',t);}});
+// 23 ela bağırdı
+sc.push({a:mid(13),f(t,T){x.save();shake(t,0.2,1,8);salon();x.save();zoom(540,1000,1.0+0.05*t);person(ELA,540,1000,180,{mouthOpen:1,eyeBig:1.3,brow:1,sad:0.8});x.restore();x.restore();
+ bubble(540,460,940,260,'',10,'#fff',520);txt('"BABA,',540,400,90,'#111',{stroke:false});txt('HASTA OLACAKSIN!"',540,510,84,'#ff2d55',{stroke:false});}});
+// 24 size de vereyim mi
+sc.push({a:mid(14),f(t,T){salon();x.save();zoom(540,900,1.0+0.12*ease(t/2));person(BABA_M,540,780,170,{smile:0.9,brow:0.6});jar(540,1180,1.0+0.5*ease(t/2),{open:true,level:0.4});spoon(800,1050,0.9,0.5,true);x.restore();
+ B('SİZE DE',300,130,'#fff',t);B('VEREYİM Mİ?',430,130,YEL,t,0.15);}});
+// 25 harçlık unutuldu
+sc.push({a:mid(15),f(t,T){salon();x.save();zoom(540,1000,1.0+0.05*t);env(380,1250,0.8,0.2,true);env(700,1270,0.7,-0.3,true);const k=eOut(t/1);person(BEN,300-k*500,900,140,{eyeBig:1.3,mouthOpen:0.6,brow:1});person(ELA,780+k*500,940,120,{eyeBig:1.3,mouthOpen:0.6,brow:1});x.restore();
+ B('HARÇLIK?',330,140,'#fff',t);B('UNUTULDU',470,130,RED,t,0.2);}});
+// 26 yıllar geçti
+sc.push({a:mid(16),f(t,T){kitchen(false);x.save();zoom(540,950,1.0+0.04*t);person(BEN_B,360,880,170,{eyeOpen:0.6,brow:0.6,smile:-0.4,look:1});jar(800,1000,0.7,{});x.restore();
+ B('YILLAR SONRA',330,130,YEL,t);}});
+// 27 midem bulanıyor
+sc.push({a:W2(16,'mayonez'),f(t,T){x.save();shake(t,0,1.2,4);radial(540,900,1300,'#d8f0b0','#5a8a30');x.save();zoom(540,880,1.1+0.05*t);face(540,880,250,{...BEN_B,skin:'#cfe0a0',skinShade:'#b0c080',eyeOpen:0.3,mouthOpen:0.3,brow:1,sad:1});x.restore();x.restore();
+ B('HÂLÂ MİDEM',300,120,'#fff',t);B('BULANIYOR',430,140,GRN,t,0.15);}});
+// 28 geçen bayram çay
+sc.push({a:mid(17),f(t,T){salon();x.save();zoom(540,1000,1.0+0.04*t);person(ANNE_Y,360,860,160,{smile:0.6,lookDown:1});teapot(640,1040,0.6,0.25*Math.sin(t*1.5)+0.2);teaGlass(800,1180,0.55,T);x.restore();
+ B('GEÇEN BAYRAM',330,130,'#fff',t);}});
+// 29 kahkaha
+sc.push({a:W2(17,'kahkahayı'),f(t,T){x.save();shake(t,0,1.5,6);radial(540,900,1300,'#ffe0c0','#d08a50');x.save();zoom(540,880,1.1+0.05*t);face(540,880,250,{...ANNE_Y,mouthOpen:0.9,eyeOpen:0.1,smile:1,brow:0.8});x.restore();x.restore();
+ B('HAHAHAHA',300,160,YEL,t);}});
+// 30 fısıltı
+sc.push({a:mid(18),f(t,T){radial(540,900,1300,'#ffe0c0','#d08a50');x.save();zoom(600,950,1.2+0.05*t);person(ANNE_Y,620,950,170,{smile:0.7,eyeOpen:0.5,look:-1});x.restore();
+ bubble(540,430,880,210,'"BİLİYOR MUSUN..."',80,'#fff',600);}});
+// 31 mayonez yoktu
+sc.push({a:W2(18,'kavanozda'),f(t,T){x.save();shake(T,wt(18,'yoktu')-0.05,wt(18,'yoktu')+0.6,10);radial(540,900,1300,'#3a2a5a','#0a0614');x.save();zoom(540,900,1.0+0.06*t);jar(540,900,1.8,{});if(T>wt(18,'yoktu')-0.05)cross(540,900,1.6*back(prog(T,wt(18,'yoktu')-0.05,wt(18,'yoktu')+0.2)));x.restore();x.restore();
+ B('O KAVANOZDA',300,120,'#fff',t);bigText('MAYONEZ YOKTU!',540,1370,110,YEL,P(T,18,'yoktu'),-0.03);}});
+// 32 o gece
+sc.push({a:mid(19),f(t,T){nightKitchen();x.save();zoom(540,950,1.0+0.04*t);person(BABA_M,400,860,160,{smile:0.9,eyeOpen:0.5,look:1});jar(740,1080,0.8,{open:true,level:1-ease(prog(t,0.4,1.8))});x.restore();
+ B('BİR GECE ÖNCE',330,125,'#fff',t);}});
+// 33 vanilya puding
+sc.push({a:W2(19,'vanilyalı'),f(t,T){nightKitchen();x.save();zoom(540,950,1.0+0.05*t);pot(420,720,1.0,0.5);x.fillStyle='#fff3c0';x.beginPath();x.moveTo(560,780);x.quadraticCurveTo(620,850,600,950);x.lineTo(580,950);x.quadraticCurveTo(600,860,540,790);x.fill();jar(600,1100,1.0,{open:true,level:0.2+0.7*ease(t/1.8),fill:'#fff3c0'});x.restore();
+ B('VANİLYALI',300,130,YEL,t);B('PUDİNG!',430,150,'#fff',t,0.15);}});
+// 34 yarım gece
+sc.push({a:mid(20),f(t,T){nightKitchen();x.save();zoom(540,950,1.0+0.04*t);person(BABA_M,300,860,140,{smile:1,mouthOpen:0.5,eyeOpen:0.2});person(ANNE_M,780,860,140,{smile:1,mouthOpen:0.5,eyeOpen:0.2});clockS(540,620,0.9,'02:00',T);x.restore();
+ B('YARIM GECE',330,130,'#fff',t);}});
+// 35 kıvam
+sc.push({a:W2(20,'kıvamına'),f(t,T){nightKitchen();x.save();zoom(540,950,1.0+0.05*t);jar(540,1100,1.4,{open:true,level:0.9,fill:CREAM});spoon(540+60*Math.sin(t*5),820,1.2,0.3*Math.sin(t*5),true);x.restore();
+ B('MAYONEZ KIVAMI',300,120,YEL,t);}});
+// 36 intikam
+sc.push({a:mid(21),f(t,T){radial(540,900,1300,'#5a1020','#100206');x.save();zoom(540,880,1.15+0.06*t);face(540,880,260,{...BEN_B,smile:0.9,eyeOpen:0.4,angry:1,brow:-0.6,look:1});x.restore();vignette(0.5);
+ B('İNTİKAM',320,180,RED,t);}});
+// 37 hediye
+sc.push({a:mid(22),f(t,T){salon();x.save();zoom(540,950,1.0+0.04*t);person(BEN_B,300,860,150,{smile:0.9,look:1});person(BABA_Y,800,860,150,{smile:0.8,look:-1,brow:0.5});jar(560,1100,0.8,{label:'PUDİNG',labelBand:'#e07a20',labelTxtCol:'#a0501a',bow:true});x.restore();
+ B('BAYRAM HEDİYESİ',330,115,'#fff',t);}});
+// 38 puding etiketi
+sc.push({a:W2(22,'puding'),f(t,T){radial(540,900,1300,'#fff2c0','#e09040');x.save();zoom(540,900,1.0+0.06*t);jar(540,900,1.9,{label:'PUDİNG',labelBand:'#e07a20',labelTxtCol:'#a0501a',bow:true});x.restore();sparkle(540,900,380,T);
+ B('BİR KAVANOZ PUDİNG',300,100,YEL,t);}});
+// 39 sadece
+sc.push({a:mid(23),f(t,T){radial(540,900,1300,'#3a2a5a','#0a0614');x.save();zoom(540,900,1.0+0.1*t);jar(540,900,1.7,{label:'PUDİNG',labelBand:'#e07a20',labelTxtCol:'#a0501a'});x.restore();vignette(0.6);
+ B('SADECE...',300,160,'#fff',t);}});
+// 40 içinde puding yok
+sc.push({a:W2(23,'içinde')-0.1,f(t,T){x.save();shake(t,0.2,1,10);radial(540,900,1300,'#2a4a1a','#071005');x.save();zoom(540,900,1.0+0.05*t);const k=ease(prog(t,0.1,0.7));jar(540,900,1.7,{open:true,level:0.9,fill:CREAM,label:k<0.5?'PUDİNG':'MAYONEZ'});x.restore();x.restore();
+ B('İÇİNDE PUDİNG',290,110,'#fff',t);B('YOKTU!',420,170,GRN,t,0.25);}});
+// 41 bembeyaz
+sc.push({a:mid(24),f(t,T){x.save();shake(t,0.3,1.2,5);salon();x.save();zoom(540,900,1.1+0.05*t);const k=ease(prog(t,0.2,1.2));face(540,880,250,{...BABA_Y,skin:k>0.5?'#f2f2ec':BABA_Y.skin,skinShade:'#d8d8d0',eyeBig:1.4,mouthOpen:0.3,brow:1,sad:0.6});spoon(800,1080,1.0,-0.6,true);x.restore();x.restore();
+ B('BEMBEYAZ!',300,160,'#fff',t);}});
+// 42 hepsini bitirdi
+sc.push({a:W2(24,'gururundan'),f(t,T){salon();x.save();zoom(540,950,1.0+0.04*t);person(BABA_Y,540,840,170,{angry:0.6,eyeOpen:0.4,brow:-0.3,smile:-0.2,mouthOpen:0.3*Math.abs(Math.sin(t*6))});jar(800,1120,0.8,{open:true,level:0.6-0.55*ease(t/2.5)});x.restore();
+ B('GURURUNDAN',300,130,'#fff',t);B('HEPSİNİ BİTİRDİ',430,110,YEL,t,0.2);}});
+// 43 soru (kısa)
+sc.push({a:mid(25),f(t,T){radial(540,880,1300,'#2a1a4a','#05040c');x.save();zoom(540,900,1.0+0.05*t);jar(540,920,1.4,{open:true,level:0.3});x.restore();
+ B('HAK ETTİ Mİ?',320,150,YEL,t);}});
+// 44 OUTRO
+const OA=en(25)+0.3, OE=OA+0.6+1.0;
+sc.push({a:en(25)+0.15,noCap:true,f(t,T){radial(540,900,1300,'#2a1a4a','#05040c');
+ bigText('SENCE?',540,560,110,'#fff',prog(t,0,0.25),-0.03);
+ followBtn(540,860,T,1.7*back(prog(t,0.05,0.4)));}});
+window.OA=OA;window.OE=OE;
+setup(sc,TIM,OE);
+</script></body></html>

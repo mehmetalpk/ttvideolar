@@ -42,14 +42,26 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 > ESKİ NOT (6 Kas 05:05 günlük görev): Kaan 0lm3k zorundaydı Part 1 TikTok beğenisi 6 Kas 05:00 itibarıyla 21 (eşik 100). 7 Kasım görevi tekrar kontrol etsin; <100 ise Kaan "Kullanıldı"ya "(devam koşulu sağlanmadı: N beğeni)" ile taşınır ve akşam Gizli Ajan Part 1 üretilir. Münferit havuz boşaldı → sabah slotu için WebSearch ile yeni hikâye bulunmalı.
 
-### MÜNFERİT (SABAH, sıradaki): Mayonez babası (komedi) — kullanıcı puanı 9/10
+> NOT (8 Kas günlük görev): Gizli Ajan Part 1 = 4 TikTok beğenisi (<100) → seri bitti. "Babam gece odama geldi" = 77 beğeni / 4.2K izlenme (komedi iyi gidiyor). Akşam yeni seri "Park Yeri Savaşı" Part 1 başladı (8 Kas 17:00). Münferit havuz BOŞ → 9 Kas sabahı WebSearch gerekir (komedi tercih).
+
+### AKŞAM SERİSİ — AKTİF (2 part): Park Yeri Savaşı (komedi + intikam)
+- Kaynak: Reddit r/pettyrevenge tarzı "komşu park yerimi işgal etti / önümü kapattı" hikâyelerinden İLHAM (kaynak gönderi okunamadı) — açıklamada "Reddit'teki bir hikâyeden ilham alınmıştır." Hikâye özgün yazıldı.
+- Anlatıcı: Burak (erkek, Emrullah). Karakterler (SABİT): Burak ten #e8b48c, kısa koyu saç #2b1d16, mavi gömlek #3a6aa0 / takım #2a3242 + kırmızı kravat · Yılmaz Bey ten #d39a74, siyah gür saç #141414 (bigHair), bıyık, güneş gözlüğü (glasses:0), bordo gömlek #7a2a2a, simsiyah cip · Site yöneticisi gri saç #8a8a90, haki gömlek #7a7a4a (gözlüksüz) · Burak'ın arabası mavi #3d7be0, park yeri 12. Çizim kodu: tools/dizi_8kasim/park_p1_anim.html + park_story.js
+- PART 1 (✅ 2026-11-08, 17:00): Yılmaz Bey cipini 12 numaraya park eder; kibar not → "Erken kalkan yer kapar." notu geri döner; şikâyet → yazılı uyarı; intikam olarak iş görüşmesi sabahı Burak'ın önünü kapatır + "Şikâyet edenin arabası beklemeyi öğrenir." notu; görüşme kaçar ("Pozisyon doldu"), Yılmaz balkondan el sallar. Burak yönetime "Karşı daire kimin adına?" diye sorar → "Bu dairede Yılmaz diye biri oturmuyor." Outro: Devamı 2. partta.
+- PART 2 (FİNAL, ~75–85 sn): Kancadan sonra tek cümle özet. Dairenin sahibi Nermin Hanım yurt dışında; yönetim ona ulaşır. Yılmaz, Nermin Hanım'dan "çiçekleri sularım" diye anahtar almış, aylardır izinsiz oturuyormuş (aidat da ödememiş; cip de kendisinin değil). Nermin Hanım görüntülü aramada dehşete düşer, bir hafta içinde gelir; yönetim ve ev sahibi kapıyı çalar; Yılmaz'a 3 gün süre. Komik doruk: taşınma günü nakliye kamyonu manevra yapamıyor çünkü Burak'ın arabası 12 numarada kurallara uygun duruyor; Yılmaz kapıyı çalıyor — Burak camdan sakin bir not uzatıyor: "Erken kalkan yer kapar." Sıcak kapanış: Burak birkaç hafta sonra başka bir şirketten iş teklifi alır; 12 numara artık hep onun. Soru: "Sen olsan Yılmaz'a ne yapardın?" Outro: "[warm] Takip et."
+- Part 2 koşulu: Part 1 (8 Kas 17:00) TikTok ≥100 beğeni → 9 Kas akşamı Part 2 (FİNAL). <100 → seri biter, akşam yeni seri Part 1 (havuzda yoksa WebSearch).
+- Ton: komedi/intikam; ses Emrullah; hashtag: #hikaye #reddithikayeleri #komşu #intikam #parkyeri #keşfet #fyp #shorts
+
+## Kullanıldı
+### MÜNFERİT (SABAH, 8 Kasım): Mayonez babası (komedi) — kullanıcı puanı 9/10
 - Kaynak: Reddit (u/Narcolepsyinc, ön sayfa). Tam metin kopyalanmadı.
 - Özet: Baba, çocuklar bayram/Paskalya hediyelerini açarken kavanozdan kaşık kaşık mayonez yiyormuş gibi yapar; çocuklar dehşete düşer. Meğer kavanozdaki mayonezi önceden vanilyalı pudingle değiştirmiştir. (Türk uyarlaması: bayram sabahı, hediye/harçlık.)
 - Uzatma: babanın hazırlık sahnesi (gece mutfakta kavanoz değiştirme), çocukların tepkileri, annenin yüzü, sonunda çocuklardan birinin kavanozu deneyip... (ters köşe: hâlâ mayonez sanıp kusma taklidi / ya da asıl mayonezi babaya yedirme intikamı).
 - Kanca: "Babam bayram sabahı kavanozdan kaşık kaşık mayonez yedi." İlk kare: dev mayonez kavanozu + kaşık + çocukların şok yüzü.
 - Ton: komedi; ses Emrullah.
+  (✅ kullanıldı 2026-11-08 SABAH, 09:00 — ters köşe: oğul yıllar sonra "puding" etiketli kavanoza gerçek mayonez koyup babaya hediye etti)
 
-### AKŞAM SERİSİ — AKTİF (2 part): Mükemmel Sevgili Gizli Ajan Çıktı (gerilim + hafif komedi)
+### SERİ: Mükemmel Sevgili Gizli Ajan Çıktı (gerilim + hafif komedi) — BİTTİ (devam koşulu sağlanmadı: 4 beğeni, 8 Kas kontrolü; Part 1 599 izlenme)
 - Kaynak: Reddit, "My Friend's 'Perfect' Relationship Was a Full-On FBI Operation" (muhtemelen kurgu — "gerçek/yaşanmış" deme; açıklamada "Reddit'ten uyarlanmıştır."). Tam metin kopyalanmadı.
 - Uyarlama: FBI YOK → "gizli ajan" (kurum adı verme; MİT/emniyet vb. gerçek kurum adı KULLANMA). Kara para aklama operasyonu. İsimler: Matt → Mert (romantik, kötü espri yapan, her sabah "günaydın" mesajı atan), Lisa → Elif, anlatıcı = Mert'in en yakın arkadaşı (erkek, Emrullah sesi). Marka/uygulama adı yok ("bir tanışma uygulaması").
 - Özet (kendi cümlelerimle): Mert uygulamada Elif'le tanışır; Elif fazla mükemmeldir — aynı garip müzikleri sever, Mert'in berbat esprilerine güler. Birkaç haftada ayrılmaz olurlar ama tuhaflıklar birikir: asla fotoğrafını çektirmez, işi sorulunca sadece "devlette çalışıyorum" der, hep nakit öder. Bir gece barda Mert telefonla dışarı çıkınca Elif anlatıcıya eğilip "İyi bir arkadaşa benziyorsun. Mert'in başını beladan uzak tut." der. İki gün sonra Elif yok olur: telefon kapalı, ev boşaltılmış. Mert yıkılır, terk edildiğini sanır. Bir ay sonra haberlerde Elif'i görürler — gerçek adı başka, büyük bir kara para operasyonunda ifade veren gizli ajan. Mert hedef bile değildi; sadece Elif'in kılıfıydı. O günden beri tanışma uygulamalarına girmiyor.
@@ -61,8 +73,6 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Part 2 koşulu: Part 1 (7 Kas 18:00) TikTok ≥100 beğeni → 8 Kas akşamı Part 2 (FİNAL). <100 → seri biter, akşam havuzdan yeni seri Part 1.
 - Ton: gerilim + hafif komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #gizliajan #ilişki #gerilim #keşfet #fyp
 
-
-## Kullanıldı
 ### MÜNFERİT (SABAH, 7 Kasım): Babam gece odama geldi (komedi) — kullanıcı puanı 8/10
 - Kaynak: Reddit (kullanıcı gönderdi). Tam metin kopyalanmadı. Açıklamada "Reddit'ten uyarlanmıştır."
 - Anlatıcı: Emre (erkek, Emrullah). Karakter: babam.
