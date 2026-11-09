@@ -40,6 +40,9 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 ## Bekleyen
 
+> !!! YAYIN HATASI (9 Kas 17:05 kontrolü): Metricool "You have reached your Metricool account limit." hatası verdi. 8 Kas 17:00 Park Yeri P1, 9 Kas 09:00 Yarım kilo kanat ve 9 Kas 17:00 Park Yeri P2 HİÇBİR platformda yayınlanmadı. Günlük görev: ön kontrolde önceki gönderilerin providers[].status değerine bak. ERROR/limit varsa yeni video üretmeden ÖNCE kullanıcıyı bildirimle uyar. Limit çözülünce önce Park P1, sonra P2 yayınlanmalı (P2, P1'den önce çıkmasın).
+
+
 > NOT (7 Kas günlük görev): Kaan Part 1 = 29 TikTok beğenisi (<100) → seri bitti, Gizli Ajan Part 1 7 Kas 18:00'e planlandı. Bilgi: Hacker Kerem finali 23K izlenme / 427 beğeni (en iyi video). Sabah münferit havuzunda sırada Mayonez babası var; ondan sonra WebSearch gerekir.
 
 > ESKİ NOT (6 Kas 05:05 günlük görev): Kaan 0lm3k zorundaydı Part 1 TikTok beğenisi 6 Kas 05:00 itibarıyla 21 (eşik 100). 7 Kasım görevi tekrar kontrol etsin; <100 ise Kaan "Kullanıldı"ya "(devam koşulu sağlanmadı: N beğeni)" ile taşınır ve akşam Gizli Ajan Part 1 üretilir. Münferit havuz boşaldı → sabah slotu için WebSearch ile yeni hikâye bulunmalı.
