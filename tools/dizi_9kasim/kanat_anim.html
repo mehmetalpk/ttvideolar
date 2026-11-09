@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="lib.js"></script><script src="common.js"></script><script src="extra.js"></script><script src="timing.js"></script><script src="story.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.25),-0.03);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,3,3);radial(540,1000,1300,'#ffcf8a','#c8551c');x.save();zoom(540,1050,1.04+0.035*t);
+ adamFace(560,1080,280,{eyeBig:1.4,mouthOpen:0.8,brow:1,sad:0.4});plate(300,1480,0.9,5);x.restore();x.restore();
+ burst(860,860,110,'rgba(255,255,255,0.45)',t);
+ hook([['KANATLARINI',112,'#fff'],['TARTTIRDI',180,YEL],['ÜÇÜ ÇÖPE GİTTİ!',112,'#fff']],190);}});
+// 1 tarttık
+sc.push({a:W2(0,'Tarttık'),f(t,T){kitch();x.save();zoom(540,900,1.0+0.05*t);scaleObj(540,800,1.3,'742 g');plate(540,640,0.9,8);x.restore();
+ B('TARTTIK...',330,150,'#fff',t);}});
+// 2 çöpe attık
+sc.push({a:W2(0,'çöpe'),f(t,T){kitch();x.save();zoom(540,950,1.0+0.04*t);trash(540,1050,1.3,0.6);for(let k=0;k<3;k++){const [px,py,p]=fly(t,0.1+k*0.25,0.6+k*0.25,250+k*80,600,520+k*20,900,250);if(p<1)wing(px,py,1.2,t*8+k);}x.restore();
+ B('ÇÖPE!',330,190,RED,t);}});
+// 3 aşçıyım
+sc.push({a:mid(1),f(t,T){kitch();x.save();zoom(540,900,1.0+0.04*t);chef(ASCI,540,860,190,{smile:0.7});x.restore();
+ B('BEN AŞÇIYIM',330,130,'#fff',t);}});
+// 4 salı kanat akşamı
+sc.push({a:W2(1,'Salı'),f(t,T){resto();x.save();zoom(540,820,1.0+0.04*t);signBoard(540,780,1.1*back(prog(t,0,0.35)),'HER SALI','KANAT AKŞAMI');x.restore();}});
+// 5 yarım kilo yarı fiyat
+sc.push({a:W2(1,'yarım'),f(t,T){resto();x.save();zoom(540,900,1.0+0.04*t);plate(540,880,1.5,8);x.restore();
+ B('YARIM KİLO',330,140,YEL,t);bigText('YARI FİYATINA',540,1360,100,'#fff',P(T,1,'yarı'),-0.03);}});
+// 6 tartmayız
+sc.push({a:mid(2),f(t,T){kitch();x.save();zoom(540,900,1.0+0.04*t);scaleObj(540,850,1.2,'---');if(t>0.4)cross(540,850,1.6*back(prog(t,0.4,0.7)));x.restore();
+ B('TARTMAYIZ',330,150,'#fff',t);}});
+// 7 kural 8 kanat
+sc.push({a:W2(2,'Kural'),f(t,T){kitch();x.save();zoom(540,900,1.0+0.04*t);const n=Math.min(8,Math.floor(prog(T,wt(2,'sekiz')-0.6,wt(2,'sekiz')+0.2)*8));x.save();x.translate(540,880);x.scale(1.6,1.6);x.translate(-540,-880);plate(540,880,1,n);x.restore();x.restore();
+ B('KURAL:',330,120,'#fff',t);bigText('8 KANAT',540,470,160,YEL,P(T,2,'sekiz'),-0.03);}});
+// 8 6 kişilik masa
+sc.push({a:mid(3),f(t,T){resto();x.save();zoom(540,950,1.0+0.04*t);[[150,AR1],[330,ADAM],[510,AR2],[690,AR3],[870,AR1]].forEach(([px,Pp],i)=>{if(Pp===ADAM)adam(px,880,95,{smile:0.2});else person(Pp,px,880+(i%2)*20,90,{smile:0.6});});kTable(1080);x.restore();
+ B('6 KİŞİLİK MASA',330,120,'#fff',t);}});
+// 9 hepsi yarım kilo
+sc.push({a:W2(3,'Hepsi'),f(t,T){resto();x.save();zoom(540,900,1.0+0.04*t);for(let i=0;i<6;i++){const p=prog(t,i*0.12,i*0.12+0.3);if(p>0)plate(230+(i%3)*310,760+Math.floor(i/3)*330,0.55*back(p),8);}x.restore();
+ B('HEPSİ',300,120,'#fff',t);B('YARIM KİLO!',1380,110,YEL,t,0.2);}});
+// 10 tabaklar gitti
+sc.push({a:mid(4),f(t,T){resto();x.save();zoom(540,950,1.0+0.04*t);const dx=-200+300*eOut(t/1.2);person(SELIN,540+dx,860,170,{smile:0.7});plate(540+dx-170,1130,0.55,8);plate(540+dx+180,1130,0.55,8);x.restore();
+ B('TABAKLAR GİTTİ',330,120,'#fff',t);}});
+// 11 gözlüklü adam sayıyor
+sc.push({a:W2(4,'gözlüklü'),f(t,T){resto();x.save();zoom(540,880,1.15+0.05*t);adamFace(540,800,220,{lookDown:1,eyeOpen:0.8,brow:0.4});plate(540,1260,1.0,8);x.restore();
+ const n=Math.min(8,1+Math.floor(prog(T,wt(4,'saymaya')-0.4,en(4)+0.3)*8));txt(String(n),880,620,170,YEL,{lw:30});B('SAYIYOR...',330,120,'#fff',t);}});
+// 12 herkesin tabağında 8
+sc.push({a:mid(5),f(t,T){resto();x.save();zoom(540,950,1.0+0.04*t);adam(540,880,190,{angry:0.8,brow:-0.4,mouthOpen:0.4*Math.abs(Math.sin(t*9))});x.restore();
+ bubbleT(540,400,820,240,[['HERKESTE',80],['TAM 8 TANE?!',96,'#ff2d55']],620);}});
+// 13 yarım kilo değil
+sc.push({a:W2(5,'Bunlar'),f(t,T){x.save();shake(t,0,0.8,10);radial(540,900,1300,'#7a2a2a','#1a0608');x.save();zoom(540,900,1.2+0.06*t);adamFace(540,880,260,{angry:1,brow:-0.6,mouthOpen:0.8,red:0.5});x.restore();x.restore();
+ B('YARIM KİLO',300,130,'#fff',t);B('DEĞİL!',440,170,RED,t,0.15);}});
+// 14 selin kibarca
+sc.push({a:mid(6),f(t,T){resto();x.save();zoom(540,950,1.0+0.04*t);person(SELIN,330,880,160,{smile:0.6,look:1});adam(770,900,150,{angry:0.5,look:-1});x.restore();
+ B('KİBARCA',330,140,'#fff',t);B('AÇIKLADI',460,120,YEL,t,0.15);}});
+// 15 gözlüğünü indirdi
+sc.push({a:W2(6,'gözlüğünü'),f(t,T){radial(540,900,1300,'#ffe9c8','#c98f5a');x.save();zoom(540,880,1.25+0.05*t);adamFace(540,880,260,{eyeOpen:0.6,brow:-0.3,smile:0.15},0.25*ease(t/0.8));x.restore();
+ B('GÖZLÜĞÜNÜ İNDİRDİ',300,100,'#fff',t);}});
+// 16 muhasebeci
+sc.push({a:W2(6,'"Ben'),f(t,T){radial(540,900,1300,'#e0ecff','#7a8ab0');x.save();zoom(540,900,1.0+0.04*t);adam(380,900,170,{smile:0.4,brow:0.5},0.25);calc(800,880,1.1*back(prog(t,0.1,0.4)));x.restore();
+ B('"MUHASEBECİYİM"',300,105,YEL,t);bigText('RAKAMDAN ANLARIM',540,1360,80,'#fff',P(T,6,'rakamdan'),-0.03);}});
+// 17 dinlemedi
+sc.push({a:mid(7),f(t,T){resto();x.save();zoom(540,950,1.0+0.04*t);person(SELIN,330,880,160,{mouthOpen:0.3*Math.abs(Math.sin(t*10)),look:1,sad:0.3});adam(770,900,150,{look:-1,eyeOpen:0.15,smile:-0.3});arm(870,1080,700,960,46,ADAM.shirt,ADAM.skin);x.restore();
+ B('DİNLEMEDİ!',330,140,RED,t);}});
+// 18 götür tart
+sc.push({a:W2(7,'"Götür'),f(t,T){x.save();shake(t,0,0.5,6);radial(540,900,1300,'#ffcf8a','#c8551c');x.save();zoom(540,900,1.05+0.05*t);adam(540,880,200,{angry:0.9,brow:-0.5,mouthOpen:0.5});arm(700,1100,900,800,55,ADAM.shirt,ADAM.skin);x.restore();x.restore();
+ B('"MUTFAKTA TART!"',300,110,'#fff',t);bigText('TAM 500 GRAM!',540,1360,100,YEL,P(T,7,'yarım'),-0.03);}});
+// 19 selin getirdi
+sc.push({a:mid(8),f(t,T){kitch();door(540,900,0.8,0.5,'#8a9aa8');x.save();zoom(540,950,1.0+0.04*t);person(SELIN,540,880,170,{smile:-0.1,eyeOpen:0.7});plate(540,1150,0.7,8);x.restore();
+ B('MUTFAĞA',330,140,'#fff',t);}});
+// 20 aşçılar toplandı
+sc.push({a:W2(8,'bütün'),f(t,T){kitch();x.save();zoom(540,950,1.0+0.04*t);chef(ASCI2,220,800,120,{eyeBig:1.2,brow:0.5,look:1});chef(ASCI,540,740,130,{eyeBig:1.2,brow:0.5,lookDown:1});chef(ASCI3,860,800,120,{eyeBig:1.2,brow:0.5,look:-1});scaleObj(540,1300,1.0,'0 g');x.restore();
+ B('HERKES TOPLANDI',330,115,'#fff',t);}});
+// 21 fısıldadı
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#3a4a5a','#10161c');x.save();zoom(540,880,1.2+0.05*t);face(540,960,220,{...ASCI3,look:-1,eyeOpen:0.7,mouthOpen:0.2,brow:0.6});chefHat(540,960-238,220);x.restore();
+ B('"ABİ..."',330,140,'#fff',t);bigText('ADAM HAKLI MI?',540,1360,100,YEL,P(T,9,'haklı'),-0.03);}});
+// 22 tabağı koyduk -> 742
+sc.push({a:mid(10),f(t,T){kitch();x.save();zoom(540,950,1.0+0.06*t);const t0=wt(10,'yedi')-st(10)+0.0;const v=Math.round(742*eOut(prog(T,wt(10,'yedi')-0.3,wt(10,'gram'))));scaleObj(540,780,1.4,v+' g');plate(540,600,0.95,8);x.restore();
+ B('TABAĞI KOYDUK...',330,115,'#fff',t);}});
+// 23 üç çeyrek
+sc.push({a:mid(11),f(t,T){x.save();shake(t,0,0.8,10);radial(540,900,1300,'#fff2c0','#e09040');bigText('742 g',540,620,250,RED,prog(t,0,0.3),-0.04);x.save();zoom(540,1100,1.0+0.04*t);chef(ASCI,540,1180,170,{eyeBig:1.45,mouthOpen:0.8,brow:1});x.restore();x.restore();
+ B('YARIM KİLO DEĞİL!',300,110,'#fff',t);}});
+// 24 selin baktı
+sc.push({a:mid(12),f(t,T){radial(540,900,1300,'#ffe9c8','#c98f5a');x.save();zoom(540,880,1.2+0.04*t);face(540,880,250,{...SELIN,look:1,eyeOpen:0.8,brow:0.3});x.restore();
+ B('SELİN BANA BAKTI',330,110,'#fff',t);}});
+// 25 ben ona baktım
+sc.push({a:W2(12,'Ben'),f(t,T){radial(540,900,1300,'#ffe9c8','#c98f5a');x.save();zoom(540,880,1.2+0.04*t);face(540,960,220,{...ASCI,look:-1,eyeOpen:0.8,brow:0.3});chefHat(540,960-238,220);x.restore();
+ B('BEN ONA...',330,130,'#fff',t);}});
+// 26 kural kuraldı
+sc.push({a:W2(12,'Kural'),f(t,T){x.save();radial(540,900,1300,'#3a2a1a','#100804');x.save();zoom(540,880,1.15+0.05*t);face(540,960,220,{...ASCI,eyeOpen:0.55,smile:0.35,brow:-0.3});chefHat(540,960-238,220);x.restore();x.restore();
+ B('KURAL KURALDI.',330,130,YEL,t);}});
+// 27 ilk kanat 680
+sc.push({a:mid(13),f(t,T){kitch();x.save();zoom(540,950,1.0+0.04*t);const v=T>wt(13,'Altı')-0.1?'680 g':'742 g';scaleObj(320,800,1.0,v);plate(320,660,0.65,T>wt(13,'çöpe')?7:8);trash(800,860,0.9,0.7);const [px,py,p]=fly(t,0.1,0.8,320,600,800,680,280);if(p<1)wing(px,py,1.3,t*10);x.restore();
+ B('1. KANAT',330,140,'#fff',t);}});
+// 28 ikincisi 590
+sc.push({a:mid(14),f(t,T){kitch();x.save();zoom(540,950,1.0+0.04*t);const v=T>wt(14,'beş')-0.1?'590 g':'680 g';scaleObj(320,800,1.0,v);plate(320,660,0.65,T>wt(14,'beş')-0.2?6:7);trash(800,860,0.9,0.7);const [px,py,p]=fly(t,0.05,0.7,320,600,800,680,280);if(p<1)wing(px,py,1.3,t*10);x.restore();
+ B('2. KANAT',330,140,'#fff',t);}});
+// 29 üçüncüsü 500
+sc.push({a:mid(15),f(t,T){kitch();x.save();zoom(540,950,1.0+0.04*t);const ok=T>wt(15,'beş')-0.1;scaleObj(320,800,1.0,ok?'500 g':'590 g',ok?'#7dff6a':'#7dff6a');plate(320,660,0.65,ok?5:6);trash(800,860,0.9,0.7);const [px,py,p]=fly(t,0.05,0.7,320,600,800,680,280);if(p<1)wing(px,py,1.3,t*10);x.restore();
+ B('3. KANAT',330,140,'#fff',t);if(ok){check(700,560,1.4*back(prog(T,wt(15,'beş'),wt(15,'beş')+0.3)),GRN);}}});
+// 30 5 kanat
+sc.push({a:mid(16),f(t,T){resto();x.save();zoom(540,900,1.0+0.05*t);plate(540,880,1.6,5);x.restore();
+ B('5 KANATLA',330,150,YEL,t);}});
+// 31 hiç gülmeden
+sc.push({a:W2(16,'hiç'),f(t,T){resto();x.save();zoom(540,950,1.0+0.04*t);const k=Math.sin(t*10)*6;person(SELIN,340+160*t,880+k,170,{smile:0,eyeOpen:0.55,brow:-0.2});plate(340+160*t+170,1130+k,0.5,5);x.restore();
+ B('HİÇ GÜLMEDEN',330,130,'#fff',t);}});
+// 32 tarttık efendim
+sc.push({a:mid(17),f(t,T){resto();x.save();zoom(540,950,1.0+0.04*t);person(SELIN,540,920,190,{smile:0.1,eyeOpen:0.5,brow:-0.2});x.restore();
+ bubbleT(540,420,880,250,[['"FAZLASI VARDI,',80],['ATTIK."',100,'#ff2d55']],520);}});
+// 33 tam yarım kilo
+sc.push({a:W2(17,'Tam'),f(t,T){resto();x.save();zoom(540,900,1.0+0.04*t);kTable(1000);plate(540,960,1.2*back(prog(t,0,0.35)),5);x.restore();
+ B('"TAM YARIM KİLO."',330,115,YEL,t);}});
+// 34 ağzı açık
+sc.push({a:mid(18),f(t,T){x.save();shake(t,0,1,8);radial(540,900,1300,'#ffcf8a','#c8551c');x.save();zoom(540,880,1.2+0.05*t);adamFace(540,880,260,{eyeBig:1.4,mouthOpen:1,mouthW:1.3,brow:1});sweat(780,700,1.3,T);x.restore();x.restore();
+ B('AĞZI AÇIK KALDI',330,120,'#fff',t);}});
+// 35 arkadaşlar gülüyor
+sc.push({a:W2(18,'Arkadaşları'),f(t,T){resto();x.save();zoom(540,950,1.0+0.04*t);[[200,AR1],[540,AR2],[880,AR3]].forEach(([px,Pp],i)=>{const k=Math.sin(t*14+i)*14;x.save();x.translate(px,880);x.rotate(Math.sin(t*6+i)*0.12);x.translate(-px,-880);person(Pp,px,880+k,130,{smile:1,mouthOpen:0.9,eyeOpen:0.1});x.restore();});x.restore();
+ B('HAHAHA!',330,170,YEL,t);}});
+// 36 telefonla çekiyor
+sc.push({a:W2(18,'biri'),f(t,T){resto();x.save();zoom(540,900,1.0+0.04*t);phone(540,860,2.2,-0.05,false,'#f2dcb8');x.save();x.beginPath();rr(540-200,860-400,400,800,30);x.clip();adamFace(540,880,170,{eyeBig:1.3,mouthOpen:0.9,brow:1});x.restore();recCircle(360,520,0.8,T);x.restore();
+ B('KAYITTA!',330,140,RED,t);}});
+// 37 1 saat sonra
+sc.push({a:mid(19),f(t,T){radial(540,900,1300,'#e0ecff','#7a8ab0');x.save();zoom(540,900,1.0+0.04*t);clock(540,860,1.1,T);x.restore();
+ B('1 SAAT SONRA',330,130,'#fff',t);}});
+// 38 yine 8
+sc.push({a:W2(19,'Herkese'),f(t,T){resto();x.save();zoom(540,900,1.0+0.05*t);plate(540,880,1.6,8);x.restore();
+ B('YİNE 8 KANAT',330,140,YEL,t);}});
+// 39 tek kelime etmedi
+sc.push({a:mid(20),f(t,T){radial(540,900,1300,'#5a6a7a','#1a2028');x.save();zoom(540,880,1.2+0.05*t);adamFace(540,880,260,{eyeOpen:0.5,sad:0.6,lookDown:1});zipMouth(540,880,260);x.restore();
+ B('TEK KELİME',330,130,'#fff',t);B('ETMEDİ.',460,140,YEL,t,0.15);}});
+// 40 soru (kısa)
+sc.push({a:mid(21),f(t,T){radial(540,900,1300,'#ffcf8a','#c8551c');x.save();zoom(540,950,1.0+0.04*t);person(SELIN,540,920,190,{smile:0.6,brow:0.4});x.restore();
+ B('GARSON',300,140,'#fff',t);B('HAKLI MIYDI?',440,140,YEL,t,0.1);}});
+// 41 OUTRO
+const OA=en(21)+0.3, OE=OA+0.6+1.4;
+sc.push({a:en(21)+0.15,noCap:true,f(t,T){radial(540,900,1300,'#2a1a4a','#05040c');
+ bigText('SENCE?',540,560,110,'#fff',prog(t,0,0.3),-0.04);bigText('YORUMLARA YAZ',540,700,80,YEL,prog(t,0.1,0.4),-0.04);
+ followBtn(540,920,T,1.6*back(prog(t,0.1,0.45)));}});
+window.OA=OA;window.OE=OE;
+setup(sc,TIM,OE);
+</script></body></html>
