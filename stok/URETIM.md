@@ -3,8 +3,13 @@
 Redditsel BU DOSYANIN KAPSAMI DIŞINDA (o her gün ayrı görevle üretilir). Hayatsal İPTAL.
 Brand ID'ler: ../metricool_brandlar.md. Araçlar: ../tools/kanallar/README.md (pipe.py, ortak/, kanal klasörleri).
 
+## Her çalıştırmada İKİ İŞ (öncelik sırasıyla)
+1. YARINI DOLDUR: Redditsel hariç her aktif hesap için Metricool'da (getScheduledPosts) YARIN planlı video yoksa 1 video üret ve yarının saatine planla. Grup 3 (Psikolojik, Parasal, Kriminal) iki günde bir paylaşır: BUGÜN veya YARIN planlı/yayınlanmış videosu yoksa üret. Grup 1'de bu videolar hesabın serisinin sıradaki partı olur (seri yoksa Part 1 ile başlat); stok paketi kaldığı yerden devam eder.
+2. STOK: Rotasyondaki hesabın yarın+1 … yarın+7 arasındaki boş günlerini üret ve planla.
+Oturum limitine yaklaşılırsa önce iş 1 bitirilir. Birkaç gün içinde bütün hesaplar 7 gün dolu olur ve iş 1 kendiliğinden sıfıra iner.
+
 ## Rotasyon — her gün TEK hesabın 7 günlük içeriği
-Gün X'te üretilen paket X+1 … X+7 günlerine planlanır (bir sonraki paket X+7'de üretilip X+8'den başlar).
+Gün X'te üretilen paket X+2 … X+8 günlerinin boşlarına planlanır (X+1'i iş 1 doldurur).
 
 | Üretim günü | Hesap | Paket | Grup |
 |---|---|---|---|
