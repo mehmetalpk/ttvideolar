@@ -3,6 +3,8 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> MANUEL MOD BİTTİ (10 Kas 20:20, kullanıcı): Metricool ücretli hesaba geçildi. Artık videolar Metricool'a PLANLANIR (createScheduledPost, tüm platformlar tek gönderide). Brand ID'ler DEĞİŞTİ → metricool_brandlar.md (Redditsel = 8012068; eski 7781132 geçersiz). Hayatsal iptal. Yemeksel'de TikTok yok (sadece IG+YT). Kriminal'in Instagram'ı yanlış hesap (psikolojik) — Kriminal'de IG'ye gönderme. Kullanıcıya yine her videonun MP4'ünü SendUserFile ile gönder (kontrol için) ama yapıştırma paketi yerine planlanan saatleri + plannerUrl'leri bildir.
+
 > YENİ FORMAT 3 (kullanıcı isteği, 10 Kas 19:11 — 11 Kasım'dan itibaren; önceki süre/slot/outro kurallarının YERİNE geçer; KANCA KURALI 2, ALTYAZI KONUMU, SES EFEKTİ YASAĞI, SAÇ, MANUEL MOD geçerli kalır):
 >  - GÜNDE 4 VİDEO = 2 SERİ paralel: "Hacker Kerem — Sezon 2" (2 part/gün) + "Park Yeri Savaşı" (devam, 2 part/gün). Münferit hikâye YOK (seriler bitince havuzdan yeni seri: sıradaki "Bahçe Sınırı Savaşı").
 >  - SLOTLAR (İstanbul): 09:00 Hacker Kerem · 12:30 Park Yeri · 17:00 Hacker Kerem · 20:30 Park Yeri. MANUEL MOD sürdükçe her videoyu bu saatlerle paket olarak gönder.
