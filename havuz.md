@@ -40,6 +40,8 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 ## Bekleyen
 
+> !!! NOT (10 Kas 04:50 günlük görev): Ön kontrolde 8 Kas 17:00 Park P1, 9 Kas 09:00 Kanat, 9 Kas 17:00 Park P2 hâlâ ERROR ("You have reached your Metricool account limit."). Yeni video ÜRETİLMEDİ (ElevenLabs kredisi boşa gitmesin, seri sırası bozulmasın). Kanat gönderisi (uuid 6153419201610009076) updateScheduledPost ile 10 Kas 09:00'a taşındı = limit testi. Park P1'i (uuid 5490804217418040982) 10 Kas 17:00'ye taşıma denemesi otomatik izin kontrolünce REDDEDİLDİ; kullanıcıya bildirildi. 11 Kas görevi: önce Kanat'ın 10 Kas 09:00 provider status'una bak. PUBLISHED ise limit kalkmış → AKŞAM slotu Park P1 (eski medya ya da kullanıcı onayıyla), Park P2 ertesi akşam (P1 ≥100 beğeni koşulu); Bahçe Sınırı Savaşı ondan SONRA. Hâlâ ERROR ise yeni video üretme, kullanıcıyı tekrar uyar. Sabah münferit sırası değişmedi (MÜNFERİT 3 Kapıyı kilitleyen hoca).
+
 > !!! YAYIN HATASI (9 Kas 17:05 kontrolü): Metricool "You have reached your Metricool account limit." hatası verdi. 8 Kas 17:00 Park Yeri P1, 9 Kas 09:00 Yarım kilo kanat ve 9 Kas 17:00 Park Yeri P2 HİÇBİR platformda yayınlanmadı. Günlük görev: ön kontrolde önceki gönderilerin providers[].status değerine bak. ERROR/limit varsa yeni video üretmeden ÖNCE kullanıcıyı bildirimle uyar. Limit çözülünce önce Park P1, sonra P2 yayınlanmalı (P2, P1'den önce çıkmasın).
 
 
