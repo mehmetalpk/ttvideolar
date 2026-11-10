@@ -1,4 +1,6 @@
 # Bu depoya yeni gelen Claude için başlangıç
+
+> İLK İŞ: CLAUDE.md protokolü + HAFIZA.md (ortak hafıza).
 Bu depo "…sal Hikayeler" faceless video hesaplarının (TikTok + Instagram + YouTube Shorts) üretim hafızasıdır. Depo HERKESE AÇIK: API anahtarı, kişisel bilgi, kaynak hikâyelerin tam metni YAZILMAZ.
 
 ## Önce oku (sırayla)
