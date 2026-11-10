@@ -1,0 +1,30 @@
+function runner(cx,base,s,t,col='#1a1208',limp=0){x.save();x.translate(cx,base);x.scale(s,s);x.strokeStyle=col;x.lineCap='round';x.lineWidth=24;const a=limp?0.3*Math.sin(t*5):Math.sin(t*10);x.beginPath();x.moveTo(0,-160);x.lineTo(40*a,-80);x.lineTo(20*a+30*Math.max(0,a),0);x.moveTo(0,-160);if(limp){x.lineTo(-60,-110);x.lineTo(-90,-60);}else{x.lineTo(-40*a,-80);x.lineTo(-20*a-30*Math.max(0,-a),0);}x.stroke();x.lineWidth=30;x.beginPath();x.moveTo(0,-160);x.lineTo(8,-280);x.stroke();x.lineWidth=18;x.beginPath();x.moveTo(6,-260);x.lineTo(-50*a,-200);x.lineTo(-30*a,-150);x.moveTo(6,-260);x.lineTo(50*a,-200);x.lineTo(30*a,-150);x.stroke();x.fillStyle=col;x.beginPath();x.arc(10,-320,30,0,7);x.fill();x.restore();}
+function stand(t){night();flood(t);crowd(380,900,t,['#c8102e','#fff','#ffd23f','#2a5cff']);track(1000,0);}
+function lanes(off){night();flood(0);crowd(380,880,0,['#c8102e','#fff','#ffd23f','#2a5cff']);x.fillStyle='#b8452e';x.fillRect(0,900,W,H-900);x.strokeStyle='#fff';x.lineWidth=6;for(let i=0;i<6;i++){x.beginPath();x.moveTo(0,950+i*90);x.lineTo(W,950+i*90);x.stroke();}}
+function dad(cx,base,s,col='#0e0e14'){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;rr(-50,-300,100,200,30);x.fill();x.fillRect(-46,-110,36,110);x.fillRect(10,-110,36,110);x.beginPath();x.arc(0,-340,40,0,7);x.fill();x.fillStyle='#1a1a20';x.beginPath();x.ellipse(0,-372,48,16,0,0,7);x.fill();x.fillRect(-30,-400,60,30);x.restore();}
+// 0 kanca
+shot(0,0,t=>{zoomed(1+t*0.04,()=>{stand(t);runner(560,1000,1.5,t,'#0d0d12',1);});bigText('KOŞAMIYORDU',W/2,380,125,'#fff',1);bigText('AMA BİTİRDİ',W/2,560,120,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 1 1992 barselona
+shot(1,1,t=>{stand(t);bigText('1992',W/2,640,250,'#ffd23f',eOut(cl(t*3)));bigText('BARSELONA',W/2,380,120,'#fff',1);});
+// 2 400m yarı final
+shot(2,2,t=>{stand(t);for(let i=0;i<4;i++)runner(200+i*230,1000,0.9,t*1.3+i,'#0d0d12');bigText('400 M',W/2,380,170,'#fff',1);badge(540,600,'YARI FİNAL','#c8102e',(t-0.3)*3);});
+// 3 derek redmond favori
+shot(3,3,t=>{lanes();spot(540,800,450,0.3);runner(540,1050,1.6,t,'#0d0d12');bigText('DEREK REDMOND',W/2,380,105,'#ffd23f',1);badge(540,560,'FİNAL ADAYI','#2a5cff',(t-0.6)*3);});
+// 4 adale koptu
+shot(4,4,t=>{lanes();const sh=t<1?Math.sin(t*60)*8:0;runner(540+sh,1050,1.6,t,'#0d0d12',t>0.6);if(t>0.6){x.save();x.strokeStyle='#ff2d2d';x.lineWidth=12;for(let i=0;i<6;i++){const a=i*1.05;x.beginPath();x.moveTo(470+Math.cos(a)*40,920+Math.sin(a)*40);x.lineTo(470+Math.cos(a)*90,920+Math.sin(a)*90);x.stroke();}x.restore();}bigText('ADALE KOPTU',W/2,380,120,'#ff4d4d',eOut(cl((t-0.5)*3)));});
+// 5 yere çöktü, rakipler koştu
+shot(5,5,t=>{lanes();x.save();x.translate(320,1000);x.rotate(0.9);runner(0,0,1.2,0,'#0d0d12',1);x.restore();for(let i=0;i<3;i++)runner(620+t*240+i*130,1000-i*20,0.8,t*1.4+i,'#3a3a44');bigText('YERE ÇÖKTÜ',W/2,380,130,'#fff',1);});
+// 6 ayağa kalktı, sekerek
+shot(6,6,t=>{lanes();runner(300+t*90,1050,1.4,t,'#0d0d12',1);bigText('VAZGEÇMEDİ',W/2,380,130,'#ffd23f',eOut(cl(t*3)));});
+// 7 tribünden biri
+shot(7,7,t=>{stand(t);dad(200+cl(t/2)*300,880+cl(t/2)*120,1.3);bigText('TRİBÜNDEN',W/2,330,120,'#fff',1);bigText('BİRİ İNDİ',W/2,480,110,'#ffd23f',eOut(cl((t-0.5)*3)));});
+// 8 babası jim
+shot(8,8,t=>{lanes();spot(540,800,500,0.35);dad(540,1050,1.7);bigText('BABASI JIM',W/2,380,130,'#ffd23f',back(cl(t*2.5)));});
+// 9 kolunu omzuna
+shot(9,9,t=>{lanes();spot(540,800,500,0.3);dad(600,1050,1.6);runner(460,1050,1.6,t,'#0d0d12',1);x.strokeStyle='#0d0d12';x.lineWidth=22;x.beginPath();x.moveTo(470,1050-420);x.lineTo(590,1050-440);x.stroke();bigText('OMZUNA ALDI',W/2,380,120,'#fff',1);});
+// 10 65 bin ayağa kalktı
+shot(10,10,t=>{stand(t);for(let i=0;i<40;i++){const r=(i*97)%100/100;x.fillStyle='rgba(255,255,255,0.8)';x.fillRect(30+i*26,700-Math.abs(Math.sin(t*6+i))*60,8,40);}dad(600,1000,1.0);runner(520,1000,1.0,t,'#0d0d12',1);bigText(String(Math.round(cl(t/2)*65))+' BİN',W/2,380,170,'#ffd23f',1);bigText('AYAKTA',W/2,560,110,'#fff',eOut(cl((t-1.2)*3)));});
+// 11 kayıt: bitiremedi
+shot(11,11,t=>{bgDoc('#1a1a22','#06060a');x.fillStyle='#f3efe4';rr(240,520,600,420,20);x.fill();x.fillStyle='#222';x.font=`800 60px ${F}`;x.textAlign='center';x.fillText('REDMOND',540,640);stampT('BİTİREMEDİ',540,800,eOut(cl((t-0.3)*3)));if(t>2.2)bigText('AMA UNUTULMADI',W/2,380,110,'#ffd23f',eOut(cl((t-2.2)*3)));});
+// 12 outro
+shot(12,12,t=>outro(t,0,'#1a2a5c','#05081a'));
