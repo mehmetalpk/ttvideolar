@@ -1,0 +1,36 @@
+// Piri Reis serisi ortak çizimleri
+function parch(cx,cy,w,h,rot=0,p=1){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(p,p);x.fillStyle='#d9b98a';x.beginPath();x.moveTo(-w/2,-h/2+20);x.quadraticCurveTo(-w/4,-h/2-10,0,-h/2+10);x.quadraticCurveTo(w/4,-h/2+30,w/2,-h/2);x.lineTo(w/2-20,h/2);x.quadraticCurveTo(0,h/2+20,-w/2+10,h/2-10);x.closePath();x.fill();x.strokeStyle='#8a6a3a';x.lineWidth=6;x.stroke();x.restore();}
+function piriMap(cx,cy,s,p=1,t=0,half=0){x.save();x.translate(cx,cy);x.scale(s,s);parch(0,0,560,760);x.strokeStyle='rgba(160,60,40,0.35)';x.lineWidth=2;for(let i=0;i<16;i++){const a=i*Math.PI/8;x.beginPath();x.moveTo(-60,40);x.lineTo(-60+Math.cos(a)*500,40+Math.sin(a)*500);x.stroke();}x.save();x.beginPath();x.rect(-280,-380,560,760);x.clip();x.fillStyle='#6a8a4a';const k=cl(p);
+ x.beginPath();x.moveTo(140,-380);x.quadraticCurveTo(100,-200,180,-60);x.quadraticCurveTo(220,80,150,240*k+(-60)*(1-k));x.lineTo(280,240*k);x.lineTo(280,-380);x.fill();
+ x.beginPath();x.moveTo(-280,-300);x.quadraticCurveTo(-180,-260,-200,-120);x.quadraticCurveTo(-120,20,-180,180*k);x.quadraticCurveTo(-120,300,-260,380*k);x.lineTo(-280,380);x.fill();
+ x.fillStyle='#c98a4a';for(let i=0;i<5;i++){x.beginPath();x.arc(-40+i*30,-120+Math.sin(i)*60,8,0,7);x.fill();}x.restore();
+ if(half){x.fillStyle='rgba(20,12,6,0.85)';x.fillRect(80,-400,240,800);}
+ x.fillStyle='#8a2a1a';for(let i=0;i<3;i++){x.save();x.translate(-20+i*40,260);x.rotate(0.2);x.fillRect(-14,-6,28,12);x.restore();}x.restore();}
+function captain(cx,base,s,col='#1a0f08'){s*=1.7;sil(cx,base,s,col);x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#f3e6c4';x.beginPath();x.ellipse(0,-180,40,24,0,0,7);x.fill();x.fillStyle=col;x.beginPath();x.moveTo(-20,-140);x.quadraticCurveTo(0,-90,20,-140);x.fill();x.restore();}
+function compass(cx,cy,r,t){x.save();x.translate(cx,cy);x.rotate(Math.sin(t*2)*0.3);x.strokeStyle='#8a6a3a';x.lineWidth=6;x.beginPath();x.arc(0,0,r,0,7);x.stroke();x.fillStyle=PAL.red;x.beginPath();x.moveTo(0,-r*0.85);x.lineTo(r*0.15,0);x.lineTo(0,r*0.2);x.lineTo(-r*0.15,0);x.fill();x.restore();}
+function galley(cx,cy,s,t,col='#3a2414',flag=PAL.red,row=1){x.save();x.translate(cx,cy);x.scale(s,s);if(row){x.strokeStyle='#2b1d12';x.lineWidth=5;for(let i=0;i<9;i++){const a=Math.sin(t*5+i*0.3)*0.4*row;x.beginPath();x.moveTo(-200+i*50,10);x.lineTo(-200+i*50-60*Math.sin(a+0.6),90);x.stroke();}}x.fillStyle=col;x.beginPath();x.moveTo(-280,-10);x.lineTo(300,-10);x.lineTo(340,-40);x.lineTo(240,40);x.lineTo(-230,40);x.closePath();x.fill();x.fillRect(-6,-260,12,250);x.fillStyle='#efe2c2';x.beginPath();x.moveTo(0,-250);x.lineTo(150,-40);x.lineTo(-10,-60);x.fill();x.fillStyle=flag;x.beginPath();x.moveTo(6,-260);x.lineTo(70,-245+Math.sin(t*6)*5);x.lineTo(6,-225);x.fill();x.restore();}
+function sea(t,c1='#6a9ab8',c2='#d8e8ee',y=820){x.fillStyle=grad(0,y,[c1,c2]);x.fillRect(0,0,W,H);x.fillStyle='#2f6f8a';x.fillRect(0,y,W,H);waves(y+6,t,'#2a6580',8);}
+function topkapi(t){x.fillStyle=grad(0,H,['#f2b36a','#f6dcae']);x.fillRect(0,0,W,H);x.fillStyle='#3a2a1a';x.fillRect(100,820,880,360);for(let i=0;i<9;i++){x.fillRect(110+i*100,780,60,50);}x.beginPath();x.moveTo(380,820);x.lineTo(540,640);x.lineTo(700,820);x.fill();x.fillRect(520,560,40,100);x.fillStyle='#f6dcae';for(let i=0;i<7;i++){x.beginPath();x.moveTo(150+i*120,1180);x.lineTo(150+i*120,1000);x.quadraticCurveTo(190+i*120,950,230+i*120,1000);x.lineTo(230+i*120,1180);x.fill();}x.fillStyle='#2a1a0e';x.fillRect(0,1180,W,H-1180);}
+function shelf(t){bgDoc('#2a1e14','#0c0805');x.fillStyle='#5a3a22';for(let r=0;r<4;r++){x.fillRect(80,470+r*200,920,16);for(let i=0;i<14;i++){const h=110+((i*7+r*3)%4)*15;x.fillStyle=['#7a2a1a','#2a3a5a','#5a4a1a','#3a5a3a'][(i+r)%4];x.fillRect(100+i*64,486+r*200-h-16+16,54,h-16);}x.fillStyle='#5a3a22';}}
+// 0 kanca
+shot(0,0,t=>{topkapi(t);x.save();x.globalAlpha=eOut(cl(t*2));piriMap(540,820,0.55,1,t,1);x.restore();bigText('SARAYDA',W/2,330,140,'#fff',1);bigText('ORTAYA ÇIKTI',W/2,480,110,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 1 1929 topkapı
+shot(1,1,t=>{topkapi(t);bigText('1929',W/2,580,230,'#ffd23f',eOut(cl(t*3)));bigText('TOPKAPI SARAYI',W/2,340,100,'#fff',1);});
+// 2 müzeye dönüşüyor kitaplık
+shot(2,2,t=>{shelf(t);const k=Math.floor(t*2)%14;x.strokeStyle='#ffd23f';x.lineWidth=8;rr(96+k*64,560,62,130,6);x.stroke();bigText('MÜZE OLUYOR',W/2,330,120,'#fff',1);});
+// 3 deissmann parşömen buldu
+shot(3,3,t=>{shelf(t);spot(540,820,420,0.4);sil(300,1180,2.2,'#050302');parch(660,800+Math.sin(t*2)*6,300,220,-0.1,eOut(cl((t-0.4)*2)));dust(660,800,300,t);badge(540,1380,'G. A. DEISSMANN','#1f4f9a',(t-0.8)*3);bigText('BİR PARŞÖMEN',W/2,330,115,'#ffd23f',1);});
+// 4 piri reis'in haritası ama tamamı değil
+shot(4,4,t=>{paper(true);piriMap(540,800,1,1,t,0);if(t>1.6){x.save();x.globalAlpha=cl((t-1.6)*2);x.fillStyle='rgba(20,12,6,0.9)';x.fillRect(620,410,300,780);x.restore();}bigText('KAYIP HARİTA',W/2,330,120,'#ffd23f',1);vignette(0.5);});
+// 5 sadece batı parçası
+shot(5,5,t=>{paper(true);x.save();x.translate(-120*eOut(cl(t)),0);piriMap(540,800,1,1,t,1);x.restore();badge(540,1380,'SADECE BATI PARÇASI',PAL.red,(t-0.4)*3);bigText('YARIM',W/2,330,150,'#fff',1);vignette(0.5);});
+// 6 haber dünyaya yayıldı
+shot(6,6,t=>{bgDoc('#1a1a22','#06060a');for(let i=0;i<4;i++){const p=eOut(cl(t*2-i*0.25));newspaper(220+i*210,760,0.6*p+0.01,(i-1.5)*0.15,'PİRİ REİS');}bigText('DÜNYA DUYDU',W/2,330,120,'#ffd23f',1);});
+// 7 kolomb izi
+shot(7,7,t=>{paper(true);piriMap(540,800,1,1,t,1);x.strokeStyle='#ffd23f';x.lineWidth=10;x.beginPath();x.arc(370,760,90+Math.sin(t*5)*8,0,7);x.stroke();badge(540,1380,'KOLOMB’UN İZİ',PAL.red,(t-0.3)*3);bigText('NEDEN ÖNEMLİ?',W/2,330,115,'#fff',1);vignette(0.5);});
+// 8 antarktika iddiası
+shot(8,8,t=>{bgDoc('#0c1a2e','#2a4a6a');x.fillStyle='#e8f4ff';x.beginPath();x.ellipse(540,860,320*eOut(cl(t)),140,0,0,7);x.fill();bigText('?',540,620+Math.sin(t*4)*10,200,'#ffd23f',1);bigText('ANTARKTİKA?',W/2,340,130,'#fff',1);});
+// 9 tarihçiler kabul etmiyor
+shot(9,9,t=>{bgDoc('#0c1a2e','#2a4a6a');x.fillStyle='#e8f4ff';x.beginPath();x.ellipse(540,860,320,140,0,0,7);x.fill();stampX(540,860,1.6,cl((t-0.2)*3));bigText('İDDİA',W/2,340,150,'#ff6b5a',1);badge(540,1380,'KANIT YOK',PAL.red,(t-0.8)*3);});
+// 10 outro
+shot(10,10,t=>outro(t,3,'#3a2a1a','#120a05'));
