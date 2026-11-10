@@ -1,0 +1,12 @@
+[intense] Kayıp bir haritanın izini taşıyordu.
+
+[serious] Bin beş yüz on üç. Gelibolu. || 1513. Gelibolu.
+Osmanlı denizcisi Piri Reis, ceylan derisi üzerine bir dünya haritası çizdi.
+[curious] Kenarına notlar düştü: Haritayı yaklaşık yirmi kaynaktan derlemişti. || Kenarına notlar düştü: Haritayı yaklaşık 20 kaynaktan derlemişti.
+[intense] Ve kaynaklardan biri, Kristof Kolomb'un bir haritasıydı.
+[serious] Kolomb'un o haritası bugün kayıp.
+Ama izleri, Piri Reis'in haritasında yaşıyor.
+[intense] Harita; Avrupa, Afrika ve Amerika kıyılarını bir arada gösteriyordu.
+[serious] Sonra bu harita, yaklaşık dört yüz yıl boyunca ortadan kayboldu. || Sonra bu harita, yaklaşık 400 yıl boyunca ortadan kayboldu.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.
