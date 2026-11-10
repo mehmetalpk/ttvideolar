@@ -1,0 +1,15 @@
+[intense] Kaybetti, kaçtı ve düşmana sığındı.
+
+[serious] Yirmi Haziran bin dört yüz seksen bir. Yenişehir. || 20 Haziran 1481. Yenişehir.
+Cem'in ordusu, Bayezid'in ordusuna yenildi.
+[intense] Cem, Memlük Sultanlığı'na, Kahire'ye kaçtı.
+[serious] Orada hacca gitti. Hac yapan ilk Osmanlı şehzadesi oldu.
+[intense] Ama tahttan vazgeçmedi. Ertesi yıl Anadolu'ya döndü ve yeniden şansını denedi.
+Bu kez de başaramadı.
+
+[serious] Etrafı sarılmıştı. Geriye tek bir kapı kaldı:
+[lower] Osmanlı'nın düşmanı, Rodos Şövalyeleri.
+[intense] Bin dört yüz seksen iki yazında, onlara sığındı. || 1482 yazında, onlara sığındı.
+[serious] Bu kararın bedeli, ömrünün geri kalanı olacaktı.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.
