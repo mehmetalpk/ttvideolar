@@ -1,0 +1,30 @@
+function street(t){x.fillStyle=grad(0,H,['#2a1f5c','#0e0a24']);x.fillRect(0,0,W,H);x.fillStyle='#1a1440';for(let i=0;i<6;i++)x.fillRect(i*190,380-(i%3)*80,170,700);x.fillStyle='rgba(255,220,120,0.5)';for(let i=0;i<6;i++)for(let j=0;j<5;j++)if((i*7+j*3)%4)x.fillRect(i*190+30+(j%2)*70,460-(i%3)*80+j*110,40,50);x.fillStyle='#2a2a3a';x.fillRect(0,1080,W,H-1080);}
+function walker(cx,base,s,t,col){x.save();x.translate(cx,base);x.scale(s,s);x.strokeStyle=col;x.lineCap='round';x.lineWidth=26;const a=Math.sin(t*8);x.beginPath();x.moveTo(0,-150);x.lineTo(30*a,0);x.moveTo(0,-150);x.lineTo(-30*a,0);x.stroke();x.fillStyle=col;rr(-40,-320,80,180,30);x.fill();x.beginPath();x.arc(0,-360,40,0,7);x.fill();x.restore();}
+function lying(cx,cy,s,col='#ff9ad5'){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle=col;rr(-140,-35,230,70,30);x.fill();x.beginPath();x.arc(130,-5,42,0,7);x.fill();x.restore();}
+function room(cx,cy,w,h,lit,t,who=1){x.fillStyle=lit?'#3a2f7a':'#231c4a';rr(cx-w/2,cy-h/2,w,h,24);x.fill();x.strokeStyle='#7b6cff';x.lineWidth=6;rr(cx-w/2,cy-h/2,w,h,24);x.stroke();if(who){x.fillStyle='#0e0a24';x.beginPath();x.arc(cx,cy-20,h*0.14,0,7);x.fill();rr(cx-h*0.16,cy+h*0.04,h*0.32,h*0.3,h*0.08);x.fill();}}
+function soundW(cx,cy,t,col='#5fe08a'){x.strokeStyle=col;x.lineWidth=6;for(let k=0;k<3;k++){const ph=(t*1.5+k/3)%1;x.globalAlpha=1-ph;x.beginPath();x.arc(cx,cy,40+ph*120,-0.8,0.8);x.stroke();}x.globalAlpha=1;}
+// 0 kanca
+shot(0,0,t=>{street(t);lying(540,1060,1.4);for(let i=0;i<5;i++)walker(((i*240+t*260)%1400)-150,1110,0.9,t+i,'#0a0718');bigText('KALABALIKTA',W/2,360,120,'#fff',1);bigText('KİMSE',W/2,520,140,'#ff6b6b',eOut(cl((t-0.3)*3)));});
+// 1 tanıdık durum
+shot(1,1,t=>{street(t);lying(400,1060,1.2);walker(900-t*120,1110,1.3,t,'#0a0718');qmarks(820-t*120,520,t,3);x.save();x.globalAlpha=eOut(cl((t-1)*3));sbubble(620,400,640,150,'Biri yardım eder…',1,58);x.restore();});
+// 2 1968 new york
+shot(2,2,t=>{street(t);yearStamp('1968','NEW YORK',eOut(cl(t*2)),760);});
+// 3 iki psikolog
+shot(3,3,t=>{bgPsi();spot(540,760,500,0.3,'180,170,255');sil(380,1150,1.5,'#0a0718');sil(700,1150,1.5,'#0a0718');badge(380,560,'DARLEY','#5b6cff',(t-0.3)*3);badge(700,700,'LATANÉ','#ff9ad5',(t-0.8)*3);bigText('BİR DENEY',W/2,360,130,'#fff',1);});
+// 4 ayrı odalar, mikrofon
+shot(4,4,t=>{bgPsi();for(let i=0;i<6;i++){const cx=270+(i%2)*540,cy=560+Math.floor(i/2)*270;room(cx,cy,440,220,0,t);soundW(cx+150,cy,t+i*0.3);}bigText('AYRI ODALAR',W/2,330,120,'#fff',1);});
+// 5 nöbet
+shot(5,5,t=>{bgPsi('#5c1f2a','#24080e');const sh=Math.sin(t*40)*10;room(540+sh,760,620,420,1,t);soundW(860,760,t*2,'#ff6b6b');bigText('NÖBET!',W/2,350,170,'#ff6b6b',back(cl(t*2.5)));});
+// 6 yalnız %85
+shot(6,6,t=>{bgPsi();room(300,560,360,240,1,t);x.fillStyle='#5fe08a';for(let i=0;i<Math.min(6,Math.floor(t*2.5));i++){x.beginPath();x.moveTo(500+i*40,560);x.lineTo(530+i*40,540);x.lineTo(530+i*40,580);x.fill();}room(800,560,300,240,1,t);badge(540,360,'YALNIZ','#5b6cff',t*3);pct(0,85,cl((t-0.8)/1.6),820,'#5fe08a');});
+// 7 kalabalık %31
+shot(7,7,t=>{bgPsi();for(let i=0;i<5;i++)room(140+i*200,560,180,200,0,t);badge(540,360,'+4 KİŞİ','#ff9ad5',t*3);x.save();x.globalAlpha=0.5;bigText('%85',W/2,820,150,'#5fe08a',1);x.restore();stampX(540,820,1.1,cl((t-0.7)*3));if(t>1.2)pct(85,31,cl((t-1.2)/1.5),820,'#ff6b6b');});
+// 8 seyirci etkisi
+shot(8,8,t=>{bgPsi();bars2(t*1.5);bigText('SEYİRCİ ETKİSİ',W/2,340,110,'#ffd23f',eOut(cl(t*3)));for(let i=0;i<8;i++){const a=i*0.785+t;x.fillStyle='rgba(255,210,63,0.6)';x.beginPath();x.arc(540+Math.cos(a)*(80+t*120),500+Math.sin(a)*40,10,0,7);x.fill();}});
+// 9 tek cümle
+shot(9,9,t=>{bgPsi('#1f4a5a','#0b1a24');brainI(540,740,1.6);qmarks(820,620,t,3);bigText('TEK CÜMLE',W/2,350,140,'#5fe08a',back(cl(t*2.5)));});
+// 10 outro
+shot(10,10,t=>outro(t,2,'#2a1f5c','#0e0a24'));
+
+function pct(a,b,p,cy,col){bigText('%'+Math.round(a+(b-a)*eOut(p)),W/2,cy,230,col,1);}
+function bars2(p){[[0.85,'YALNIZ','#5fe08a',330,'%85'],[0.31,'KALABALIK','#ff6b6b',750,'%31']].forEach(([v,l,c,cx,tx])=>{const hh=420*v*eOut(cl(p));x.fillStyle=c;rr(cx-110,980-hh,220,hh,20);x.fill();bigText(tx,cx,980-hh-60,70,'#fff',cl(p));bigText(l,cx,1370,60,'#fff',1);});}
