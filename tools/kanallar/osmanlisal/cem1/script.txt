@@ -1,0 +1,13 @@
+[intense] İki kardeş, tek bir taht.
+
+[serious] Bin dört yüz seksen bir. Fatih Sultan Mehmed vefat etti. || 1481. Fatih Sultan Mehmed vefat etti.
+Geride iki oğlu kaldı: Bayezid ve Cem.
+[intense] Bayezid İstanbul'a önce ulaştı ve tahta çıktı.
+Ama Cem boş durmadı. Bursa'yı aldı ve kendini sultan ilan etti.
+[serious] Adına hutbe okundu, para bastırıldı.
+Sonra ağabeyine bir teklif gönderdi:
+[lower] Rumeli senin olsun, Anadolu benim.
+[intense] Rivayete göre Bayezid'in cevabı kısaydı: Padişahlar arasında akrabalık olmaz.
+[serious] Ve iki ordu, Yenişehir ovasında karşı karşıya geldi.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.
