@@ -8,7 +8,16 @@ steps: tts fast align build prev render mux all
 import sys, os, json, re, subprocess, base64, time, urllib.request, urllib.error
 D = os.path.abspath(sys.argv[1]); K = sys.argv[2]; STEPS = sys.argv[3:]
 R = '/home/claude/ttvideolar/tools/kanallar'
-WM = {'kriminal': '@kriminalhikayeler', 'hayatsal': '@hayatsalhikayeler', 'islamik': '@islamikhikayeler', 'osmanlisal': '@osmanlisalhikayeler'}
+WM = {'kriminal': '@kriminalhikayeler', 'hayatsal': '@hayatsalhikayeler', 'islamik': '@islamikhikayeler', 'osmanlisal': '@osmanlisalhikayeler',
+      'psikolojik': '@psikolojikhikayeler', 'parasal': '@parasalhikayeler', 'sanatsal': '@sanatsal.hikayeler', 'sporsal': '@sporsalhikayeler',
+      'motivasyonel': '@motivasyonelhikayeler', 'yemeksel': '@yemekselhikayeler'}
+EMR, IREM, ISMET = 'QftNgZhlSOYKrYbk7WR7', 'R0D8QjgVyRju4HRoCrIC', 'dCYGxgtXZ2SWEwZrYmkc'
+VOICE = {'psikolojik': IREM, 'motivasyonel': ISMET, 'parasal': ISMET}
+# kanal başına ek js parçaları (ortak/ altında), plus.js her zaman eklenir
+EXTRA = {'psikolojik': ['psi'], 'parasal': ['para', 'mot'], 'sanatsal': ['san', 'art2'], 'sporsal': ['spor'],
+         'motivasyonel': ['mot'], 'yemeksel': ['yem', 'yem2'], 'kriminal': [], 'islamik': [], 'hayatsal': [], 'osmanlisal': []}
+ATEMPO = 1.2  # URETIM.md (10 Kas 2026)
+KEYS = ['/home/claude/work/.el_key', '/home/claude/.el_key']
 TAG = re.compile(r'\[[^\]]*\]\s*')
 def sh(c, **kw): return subprocess.run(c, shell=True, check=True, capture_output=True, text=True, **kw)
 def rd(p): return open(p, encoding='utf-8').read()
@@ -30,13 +39,13 @@ def tts_text(): return '\n\n'.join(' '.join(s for s, _ in p) for p in phrases())
 
 def tts():
     if os.path.exists(f'{D}/voice.mp3'): return
-    key = open('/home/claude/.el_key').read().strip()
+    key = open(next(k for k in KEYS if os.path.exists(k))).read().strip()
     text = tts_text()
     json.dump({'text': text, 'model_id': 'eleven_v4'}, open(f'{D}/req.json', 'w'), ensure_ascii=False)
     body = json.dumps({'text': text, 'model_id': 'eleven_v4'}).encode()
     quota_hits = 0
     for attempt in range(6):
-        r = urllib.request.Request('https://api.elevenlabs.io/v1/text-to-speech/QftNgZhlSOYKrYbk7WR7/with-timestamps?output_format=mp3_44100_128', data=body, headers={'xi-api-key': key, 'Content-Type': 'application/json'})
+        r = urllib.request.Request('https://api.elevenlabs.io/v1/text-to-speech/' + VOICE.get(K, EMR) + '/with-timestamps?output_format=mp3_44100_128', data=body, headers={'xi-api-key': key, 'Content-Type': 'application/json'})
         try:
             d = json.load(urllib.request.urlopen(r, timeout=300)); break
         except urllib.error.HTTPError as e:
@@ -44,7 +53,7 @@ def tts():
             if e.code in (401, 402) or 'quota' in msg.lower() or 'credit' in msg.lower():
                 quota_hits += 1
                 if quota_hits >= 2: sys.exit(3)
-            time.sleep(30)
+            time.sleep(20)
         except Exception as e:
             print('ERR', e); time.sleep(20)
     else:
@@ -58,7 +67,7 @@ def fast():
     out = sh(f'ffmpeg -i "{D}/voice.mp3" -af silencedetect=noise=-40dB:d=0.05 -f null - ').stderr
     m = re.findall(r'silence_start: ([\d.]+)', out); e = re.findall(r'silence_end: ([\d.]+)', out)
     L = float(e[0]) if m and float(m[0]) < 0.02 and e else 0.0
-    sh(f'ffmpeg -y -i "{D}/voice.mp3" -af "silenceremove=start_periods=1:start_threshold=-40dB,atempo=1.1" -b:a 192k "{D}/voice_fast.mp3"')
+    sh(f'ffmpeg -y -i "{D}/voice.mp3" -af "silenceremove=start_periods=1:start_threshold=-40dB,atempo={ATEMPO}" -b:a 192k "{D}/voice_fast.mp3"')
     json.dump({'lead': L}, open(f'{D}/lead.json', 'w'))
 
 def align():
@@ -74,7 +83,7 @@ def align():
             i = text.find(body[:12], pos)
             if i < 0: raise SystemExit(f'not found: {body}')
             pos = i + max(12, int(len(body) * 0.8))
-            t = max(0.0, (st[i] - L) / 1.1)
+            t = max(0.0, (st[i] - L) / ATEMPO)
             near = [s for s in seg_starts if abs(s - t) < 0.3]
             if near: t = min(near, key=lambda s: abs(s - t))
             t = max(0.0, t - 0.06)
@@ -89,7 +98,7 @@ def align():
 
 def build():
     wm = WM[K]
-    common = rd(f'{R}/ortak/common.js.txt').replace('@islamikhikayeler', wm)
+    common = rd(f'{R}/ortak/common.js.txt').replace('@islamikhikayeler', wm).replace('@KANAL', wm)
     parts = [rd(f'{R}/ortak/head.js.txt'), rd(f'{R}/ortak/helpers.txt'), rd(f'{D}/shots.js.txt')]
     if K == 'osmanlisal':
         common = '\n'.join(l for l in common.splitlines() if not l.startswith('const VOW') and not l.startswith('const CAP'))
@@ -98,10 +107,10 @@ def build():
         parts += [common, osm, rd(f'{R}/osmanlisal/osm_extra.js.txt')]
     else:
         parts += [common]
-    parts += [rd(f'{R}/ortak/extra.js.txt'), rd(f'{R}/ortak/bio.js.txt'), rd(f'{R}/ortak/krim.js.txt'), rd(f'{R}/ortak/plus.js.txt'), rd(f'{D}/scenes.js.txt')]
+    parts += [rd(f'{R}/ortak/extra.js.txt'), rd(f'{R}/ortak/bio.js.txt'), rd(f'{R}/ortak/krim.js.txt'), rd(f'{R}/ortak/plus.js.txt')] + [rd(f'{R}/ortak/{e}.js.txt') for e in EXTRA.get(K, [])] + [rd(f'{R}/ortak/outro.js.txt'), (f'const PART={rd(D+"/part.txt").strip()};' if os.path.exists(f'{D}/part.txt') else 'const PART=0;'), rd(f'{D}/scenes.js.txt')]
     tail = """
 window.SCENES=S.map(s=>s.d);window.G0=S.map(s=>s.g0);
-window.draw=function(i,t){x.setTransform(1,0,0,1,0,0);x.globalAlpha=1;x.setLineDash([]);x.lineCap='round';S[i].f(t);karaoke(S[i].g0+t);watermark();};
+window.draw=function(i,t){x.setTransform(1,0,0,1,0,0);x.globalAlpha=1;x.setLineDash([]);x.lineCap='round';S[i].f(t);karaoke(S[i].g0+t);watermark();if(PART)partBadge(PART);};
 window.frame=function(i,t){draw(i,t);return c.toDataURL('image/jpeg',0.92).split(',')[1]};
 </script></body></html>
 """
@@ -142,11 +151,7 @@ def render():
     if 'ERR' in rd(f'{D}/render.log'): print(rd(f'{D}/render.log')[:500])
 
 def mux(name='final.mp4'):
-    info = json.load(open(f'{D}/scenes.json'))
-    starts = info['g'] + [info['g'][-1] + info['d'][-1]]
-    dums = rd(f'{D}/dums.json').strip() if os.path.exists(f'{D}/dums.json') else '[0.0]'
-    sh(f"python3 {R}/ortak/sfx.py '{json.dumps(starts)}' '{dums}' {D}/sfx.wav 0.8")
-    sh(f'cd {D} && ffmpeg -y -f concat -safe 0 -i out/list.txt -i voice_fast.mp3 -i sfx.wav -filter_complex "[1:a]apad[v];[2:a]volume=0.6[s];[v][s]amix=inputs=2:normalize=0:duration=first[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -shortest {name}')
+    sh(f'cd {D} && ffmpeg -y -f concat -safe 0 -i out/list.txt -i voice_fast.mp3 -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest {name}')
     print('final', round(dur(f'{D}/{name}'), 2), 's', os.path.getsize(f'{D}/{name}') // 1024 // 1024, 'MB')
 
 steps = {'tts': tts, 'fast': fast, 'align': align, 'build': build, 'prev': prev, 'render': render, 'mux': mux}

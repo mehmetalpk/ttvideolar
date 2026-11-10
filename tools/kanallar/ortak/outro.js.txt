@@ -1,0 +1,6 @@
+// outro (URETIM.md, 10 Kas 2026): beğen/yorum isteme yok. nxt>0 → "PART nxt" devamı; nxt=0 → sadece takip.
+function partBadge(n){x.save();x.font=`900 44px ${F}`;x.textAlign='center';x.textBaseline='middle';const w=x.measureText('PART '+n).width+56;x.fillStyle='#ff2d55';rr(40,158,w,66,33);x.fill();x.fillStyle='#fff';x.fillText('PART '+n,40+w/2,193);x.restore();}
+function outro(t,nxt,c1='#151026',c2='#05030c'){x.fillStyle=grad(0,H,[c1,c2]);x.fillRect(0,0,W,H);rays(540,640,t,'rgba(255,210,63,0.10)');
+ if(nxt){bigText('DEVAMI',W/2,470,110,'#fff',eOut(cl(t*3)));bigText('PART '+nxt,W/2,700,210,'#ffd23f',back(cl((t-0.2)*2.5)));}
+ else{bigText('KAÇIRMAMAK',W/2,520,110,'#fff',eOut(cl(t*3)));bigText('İÇİN',W/2,690,110,'#ffd23f',eOut(cl((t-0.2)*3)));}
+ const fb=eOut(cl((t-0.5)*3));if(fb>0){x.save();x.translate(540,1360);x.scale(fb*(1+0.06*Math.sin(t*7)),fb*(1+0.06*Math.sin(t*7)));x.fillStyle='#ff2d55';rr(-230,-70,460,140,70);x.fill();x.fillStyle='#fff';x.font=`900 66px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('+ TAKİP ET',0,4);x.restore();}}
