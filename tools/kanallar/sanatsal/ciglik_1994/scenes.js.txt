@@ -1,0 +1,28 @@
+function scr(cx,cy,s,a=1){x.save();x.globalAlpha=a;x.translate(cx,cy);x.scale(s,s);x.fillStyle='#6b4a22';x.fillRect(-170,-220,340,440);const g=x.createLinearGradient(0,-200,0,200);g.addColorStop(0,'#e0602a');g.addColorStop(0.35,'#f0a040');g.addColorStop(0.55,'#2a4a7a');g.addColorStop(1,'#3a3a2a');x.fillStyle=g;x.fillRect(-150,-200,300,400);x.strokeStyle='rgba(255,200,80,0.7)';x.lineWidth=8;for(let i=0;i<4;i++){x.beginPath();x.moveTo(-150,-170+i*40);x.bezierCurveTo(-60,-200+i*40,40,-130+i*40,150,-170+i*40);x.stroke();}x.strokeStyle='#8a5a2a';x.lineWidth=14;x.beginPath();x.moveTo(-150,200);x.lineTo(150,40);x.stroke();x.fillStyle='#d8c8a0';x.beginPath();x.ellipse(-30,60,26,38,0,0,7);x.fill();x.fillStyle='#1a1a1a';x.beginPath();x.ellipse(-30,74,8,12,0,0,7);x.fill();x.fillStyle='#2a2a2a';x.beginPath();x.moveTo(-60,100);x.quadraticCurveTo(-30,90,0,100);x.lineTo(10,200);x.lineTo(-70,200);x.fill();x.restore();}
+function wall(t){bgDoc('#2a3a4a','#0a1018');x.fillStyle='#3a4a5a';x.fillRect(0,1150,W,H-1150);x.fillStyle='#4a5a6a';for(let i=0;i<5;i++)x.fillRect(60+i*230,0,8,1150);}
+function ladder(cx,base,h,ang){x.save();x.translate(cx,base);x.rotate(ang);x.strokeStyle='#c9a46a';x.lineWidth=14;x.beginPath();x.moveTo(-50,0);x.lineTo(-50,-h);x.moveTo(50,0);x.lineTo(50,-h);for(let y=-40;y>-h;y-=70){x.moveTo(-50,y);x.lineTo(50,y);}x.stroke();x.restore();}
+function thief(cx,base,s,col='#05070c'){spot(cx,base-250*s,260*s,0.35,'200,220,255');sil(cx,base,s,col);}
+function snowy(t){const r=rng(5);x.fillStyle='#fff';for(let i=0;i<70;i++){const px=r()*W,py=(r()*H+t*120*(0.5+r()))%H;x.globalAlpha=0.7;x.beginPath();x.arc(px,py,3+r()*4,0,7);x.fill();}x.globalAlpha=1;}
+// 0 kanca
+shot(0,0,t=>{wall(t);x.save();x.translate(540,760);x.rotate(-0.05+Math.sin(t*2)*0.02);x.fillStyle='#f3efe4';rr(-300,-170,600,340,16);x.fill();x.fillStyle='#222';x.font=`700 italic 64px ${F}`;x.textAlign='center';x.fillText('Teşekkürler!',0,-20);x.font=`600 40px ${F}`;x.fillText('— hırsızlar',120,80);x.restore();bigText('HIRSIZLARIN',W/2,320,125,'#fff',1);bigText('NOTU',W/2,470,130,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 1 12 şubat 1994 norveç
+shot(1,1,t=>{bgDoc('#0c1a2e','#2a4a6a');snowy(t);yearStamp('1994','12 ŞUBAT · NORVEÇ',eOut(cl(t*2)),760);});
+// 2 olimpiyat açılışı
+shot(2,2,t=>{bgDoc('#0c1a2e','#2a4a6a');snowy(t);x.fillStyle='#8a8f99';x.beginPath();x.moveTo(500,1000);x.lineTo(580,1000);x.lineTo(600,820);x.lineTo(480,820);x.fill();fire(540,830,140,220,t);bigText('KIŞ OLİMPİYATLARI',W/2,350,92,'#fff',1);bigText('LILLEHAMMER',W/2,480,90,'#ffd23f',eOut(cl((t-0.4)*3)));});
+// 3 merdiven
+shot(3,3,t=>{wall(t);x.fillStyle='#5a6a7a';x.fillRect(560,420,340,300);x.fillStyle='rgba(180,220,255,0.35)';x.fillRect(580,440,300,260);ladder(560,1150,780*eOut(cl(t/1.2))+40,0.35);thief(300+cl(t/2)*60,1150,1.2);bigText('OSLO',W/2,320,130,'#ffd23f',1);badge(540,1380,'ULUSAL GALERİ','#2a5cff',(t-0.6)*3);});
+// 4 camı kırdılar, tabloyu aldılar
+shot(4,4,t=>{wall(t);if(t<1){x.fillStyle='rgba(180,220,255,0.35)';x.fillRect(380,440,320,400);}else{x.strokeStyle='#cfe8ff';x.lineWidth=5;for(let i=0;i<9;i++){x.beginPath();x.moveTo(540,640);x.lineTo(540+Math.cos(i*0.7)*260,640+Math.sin(i*0.7)*260);x.stroke();}}scr(540,640+cl((t-1.5)/1.5)*500,0.95);bigText('ÇIĞLIK',W/2,320,150,'#ff6b3c',eOut(cl(t*3)));});
+// 5 bir dakikadan kısa
+shot(5,5,t=>{bgDoc('#1a1a22','#06060a');clock(540,760,240,t*6);bigText('< 1 DAKİKA',W/2,330,130,'#ffd23f',back(cl(t*2.5)));});
+// 6 not bıraktılar
+shot(6,6,t=>{wall(t);x.fillStyle='#6b4a22';x.fillRect(370,420,340,440);x.fillStyle='#1a222a';x.fillRect(390,440,300,400);note(540,700,1.1,-0.08,'',eOut(cl(t*2)));bigText('BİR NOT',W/2,320,140,'#fff',1);});
+// 7 teşekkürler
+shot(7,7,t=>{bgDoc('#2a2216','#0a0805');x.save();x.translate(540,740);x.rotate(-0.04);x.scale(1+t*0.04,1+t*0.04);x.fillStyle='#f3efe4';rr(-380,-230,760,460,16);x.fill();x.fillStyle='#222';x.font=`700 italic 66px ${F}`;x.textAlign='center';const s='Zayıf güvenlik için teşekkürler.';const n=Math.floor(cl(t/1.8)*s.length);const w=wrap(s.slice(0,n),640);w.forEach((l,i)=>x.fillText(l,0,-50+i*90));x.restore();});
+// 8 polis iz sürdü
+shot(8,8,t=>{bgDoc('#0c1424','#1a2a44');cop(380,1180,1.4);x.save();x.strokeStyle='#ffd23f';x.lineWidth=14;x.beginPath();x.arc(700,760,110,0,7);x.stroke();x.lineWidth=26;x.beginPath();x.moveTo(780,840);x.lineTo(880,940);x.stroke();x.restore();footprintsT(t);bigText('AYLARCA',W/2,320,140,'#ffd23f',1);});
+// 9 7 mayıs, otelde bulundu
+shot(9,9,t=>{bgDoc('#3a2a1c','#0c0805');spot(540,720,520,0.4);scr(540,700,1.15*eOut(cl(t*1.5))+0.01);badge(540,1380,'7 MAYIS 1994','#1f6b5e',(t-0.6)*3);bigText('BULUNDU',W/2,320,140,'#5fe08a',1);});
+// 10 outro
+shot(10,10,t=>outro(t,0,'#3a1a10','#0a0503'));
+function footprintsT(t){x.fillStyle='rgba(255,255,255,0.25)';for(let i=0;i<Math.min(8,Math.floor(t*4));i++){x.beginPath();x.ellipse(160+i*100,1300-(i%2)*30,18,30,0.3,0,7);x.fill();}}
