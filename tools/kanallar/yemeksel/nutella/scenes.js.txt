@@ -1,0 +1,30 @@
+function nut(cx,cy,s,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#a8662a';x.beginPath();x.ellipse(0,10,46,50,0,0,7);x.fill();x.fillStyle='#d9a86a';x.beginPath();x.ellipse(0,-34,40,18,0,0,7);x.fill();x.fillStyle='rgba(255,255,255,0.25)';x.beginPath();x.ellipse(-16,4,10,22,0.3,0,7);x.fill();x.restore();}
+function nutRain(t,n=16){const r=rng(9);for(let i=0;i<n;i++){const px=r()*W,sp=250+r()*300,py=((r()*H+t*sp)%(H+200))-100;nut(px,py,0.9+r()*0.6,t*2+i);}}
+function cocoa(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#8a4a1a';x.beginPath();x.ellipse(0,0,70,130,0,0,7);x.fill();x.strokeStyle='#5a2a0a';x.lineWidth=6;for(let i=-2;i<=2;i++){x.beginPath();x.moveTo(i*22,-120);x.quadraticCurveTo(i*30,0,i*22,120);x.stroke();}x.restore();}
+function loaf(cx,cy,s,cut){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#5a3218';rr(-240,-90,480,180,30);x.fill();x.fillStyle='#7a4a24';rr(-240,-90,480,40,20);x.fill();if(cut){x.strokeStyle='#3a1e0c';x.lineWidth=6;for(let i=1;i<6;i++){x.beginPath();x.moveTo(-240+i*80,-90);x.lineTo(-240+i*80,90);x.stroke();}}x.restore();}
+function breadSl(cx,cy,s,spread){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#e8c48a';x.beginPath();x.moveTo(-150,120);x.lineTo(-150,-60);x.quadraticCurveTo(-150,-160,0,-160);x.quadraticCurveTo(150,-160,150,-60);x.lineTo(150,120);x.closePath();x.fill();x.fillStyle='#f7e6c4';x.beginPath();x.moveTo(-125,100);x.lineTo(-125,-55);x.quadraticCurveTo(-125,-135,0,-135);x.quadraticCurveTo(125,-135,125,-55);x.lineTo(125,100);x.closePath();x.fill();if(spread>0){x.fillStyle='#5a3218';x.beginPath();x.ellipse(0,-10,115*spread,100*spread,0,0,7);x.fill();}x.restore();}
+function jarN(cx,cy,s,txt){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='rgba(255,255,255,0.3)';rr(-130,-170,260,340,40);x.fill();x.fillStyle='#4a2810';rr(-118,-120,236,280,34);x.fill();x.fillStyle='#f3efe6';x.fillRect(-120,-215,240,60);x.fillStyle='#fff8e6';rr(-110,-40,220,110,16);x.fill();x.fillStyle='#3a2414';x.font=`900 56px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,0,15);x.restore();}
+// 0 kanca
+shot(0,0,t=>{bgWarm();nutRain(t);spot(540,760,500,0.3,'255,190,120');jarN(540,760,1.4+Math.sin(t*3)*0.03,'?');bigText('KAKAO BİTİNCE',W/2,340,110,'#fff',1);bigText('FINDIK!',W/2,500,140,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 1 savaş sonrası kakao pahalı
+shot(1,1,t=>{bgDoc('#2a2a2a','#0a0a0a');cocoa(540,760,1.6);badge(780,560,'₤₤₤','#c1121f',t*3);if(t>1.4)stampT('PAHALI',540,1390,eOut(cl((t-1.4)*3)));bigText('SAVAŞ SONRASI',W/2,330,115,'#fff',1);});
+// 2 alba pastane
+shot(2,2,t=>{bgDoc('#f2b36a','#f6dcae');shopFront(540,1180,1.1,'#7a3a1a','PASTANE');bigText('ALBA, İTALYA',W/2,330,110,'#7a3a1a',1);badge(540,500,'PIETRO FERRERO','#1f6b5e',(t-0.6)*3);});
+// 3 fındık + kakao + şeker
+shot(3,3,t=>{bgWarm();pot(540,820,1.5,t);for(let i=0;i<6;i++){const p=cl(t*1.5-i*0.15);nut(240+i*120,400+p*380,1,i+t);}bigText('FINDIK',220,1360,70,'#ffd23f',eOut(cl(t*3)));bigText('+ KAKAO',540,1360,70,'#c98a5a',eOut(cl((t-0.6)*3)));bigText('+ ŞEKER',860,1360,70,'#fff',eOut(cl((t-1.2)*3)));});
+// 4 1946 giandujot kalıp
+shot(4,4,t=>{bgWarm();loaf(540,760,1.4,t>1.5);bigText('1946',W/2,330,180,'#ffd23f',back(cl(t*2.5)));if(t>2)badge(540,1380,'GIANDUJOT','#7a3a1a',(t-2)*3);});
+// 5 ucuz ve sevildi
+shot(5,5,t=>{bgDoc('#f2b36a','#f6dcae');for(let i=0;i<5;i++){x.fillStyle='#2a1a10';x.beginPath();x.arc(140+i*200,1000,50,0,7);x.fill();rr(140+i*200-60,1050,120,200,40);x.fill();}loaf(540,700,0.9,1);bigText('UCUZ & SEVİLDİ',W/2,340,110,'#7a3a1a',1);});
+// 6 supercrema sürülebilir
+shot(6,6,t=>{bgWarm();breadSl(540,780,1.6,eOut(cl((t-0.4)/1.4)));knife(760,620,1.2,-0.6+Math.sin(t*3)*0.2);bigText('1951',W/2,330,150,'#ffd23f',1);badge(540,1380,'SUPERCREMA','#7a3a1a',(t-0.8)*3);});
+// 7 1964 michele yeni isim
+shot(7,7,t=>{bgDoc('#1a1a2a','#06060c');spot(540,760,520,0.35);sil(540,1150,1.6,'#050508');bigText('1964',W/2,330,180,'#ffd23f',back(cl(t*2.5)));badge(540,520,'MICHELE','#1f6b5e',(t-0.7)*3);});
+// 8 nutella
+shot(8,8,t=>{bgWarm();rays(540,760,t,'rgba(255,210,63,0.15)');jarN(540,760,1.6*back(cl(t*2.5)),'1964');bigText('NUTELLA',W/2,330,150,'#fff',1);});
+// 9 dünya kahvaltı
+shot(9,9,t=>{bgDoc('#f2b36a','#f6dcae');for(let i=0;i<3;i++)breadSl(240+i*300,760,0.8,1);nutRain(t,8);bigText('DÜNYA SOFRASI',W/2,330,110,'#7a3a1a',1);});
+// 10 kıtlıktan başladı
+shot(10,10,t=>{bgDoc('#2a2a2a','#0a0a0a');nut(540,760,3*eOut(cl(t*2)),Math.sin(t)*0.2);bigText('BİR KITLIKTAN',W/2,330,115,'#ffd23f',1);});
+// 11 outro
+shot(11,11,t=>outro(t,0,'#3a1c0e','#0f0704'));
