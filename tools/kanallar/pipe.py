@@ -15,7 +15,7 @@ EMR, IREM, ISMET = 'QftNgZhlSOYKrYbk7WR7', 'R0D8QjgVyRju4HRoCrIC', 'dCYGxgtXZ2SW
 VOICE = {'psikolojik': IREM, 'motivasyonel': ISMET, 'parasal': ISMET}
 # kanal başına ek js parçaları (ortak/ altında), plus.js her zaman eklenir
 EXTRA = {'psikolojik': ['psi'], 'parasal': ['para', 'mot'], 'sanatsal': ['san', 'art2'], 'sporsal': ['spor'],
-         'motivasyonel': ['mot'], 'yemeksel': ['yem', 'yem2'], 'kriminal': [], 'islamik': [], 'hayatsal': [], 'osmanlisal': []}
+         'motivasyonel': ['mot', 'psi'], 'yemeksel': ['yem', 'yem2'], 'kriminal': [], 'islamik': [], 'hayatsal': [], 'osmanlisal': []}
 ATEMPO = 1.2  # URETIM.md (10 Kas 2026)
 KEYS = ['/home/claude/work/.el_key', '/home/claude/.el_key']
 TAG = re.compile(r'\[[^\]]*\]\s*')

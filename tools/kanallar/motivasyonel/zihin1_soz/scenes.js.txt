@@ -1,0 +1,25 @@
+function mirror(cx,cy,s,crack){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#6a5a3a';x.beginPath();x.ellipse(0,0,230,320,0,0,7);x.fill();const g=x.createLinearGradient(-200,-300,200,300);g.addColorStop(0,'#9fb4c8');g.addColorStop(1,'#3a4a5a');x.fillStyle=g;x.beginPath();x.ellipse(0,0,200,290,0,0,7);x.fill();x.fillStyle='rgba(0,0,0,0.75)';x.beginPath();x.arc(0,-60,60,0,7);x.fill();rr(-80,10,160,200,50);x.fill();if(crack>0){x.strokeStyle='#fff';x.lineWidth=5;for(let i=0;i<7;i++){x.beginPath();x.moveTo(40,-120);x.lineTo(40+Math.cos(i*0.9)*220*crack,-120+Math.sin(i*0.9)*220*crack);x.stroke();}}x.restore();}
+function sign(p){x.save();x.strokeStyle='#ffd23f';x.lineWidth=14;x.lineCap='round';x.beginPath();const n=Math.floor(60*cl(p));for(let i=0;i<=n;i++){const u=i/60;const px=220+u*640,py=760+Math.sin(u*18)*60*Math.sin(u*3.1)-u*40;i?x.lineTo(px,py):x.moveTo(px,py);}x.stroke();x.restore();}
+function pushup(cx,base,s,t){const d=Math.abs(Math.sin(t*3))*30;x.save();x.translate(cx,base);x.scale(s,s);x.strokeStyle='#ffd23f';x.lineCap='round';x.lineWidth=26;x.beginPath();x.moveTo(-220,0);x.lineTo(80,-60+d*0.5);x.stroke();x.lineWidth=20;x.beginPath();x.moveTo(60,-60+d*0.5);x.lineTo(70,0);x.stroke();x.fillStyle='#ffd23f';x.beginPath();x.arc(140,-80+d*0.6,34,0,7);x.fill();x.restore();}
+// 0 kanca
+shot(0,0,t=>{blk();mirror(540,720,1.0,0);slam('EN ÇOK',330,120,'#fff',t);if(t>0.5)slam('KENDİNE',470,140,'#ff2d2d',t-0.5);});
+// 1 yarın başlayacağım
+shot(1,1,t=>{blk();calendar(540,760,t,1);if(t>1.2)stampX(540,760,1.4,cl((t-1.2)*3));bigText('"YARIN"',W/2,330,140,'#fff',1);});
+// 2 bu hafta bırakacağım
+shot(2,2,t=>{blk();calendar(540,760,t,4);if(t>1.2)stampX(540,760,1.4,cl((t-1.2)*3));bigText('"BU HAFTA"',W/2,330,130,'#fff',1);});
+// 3 güvenilmez
+shot(3,3,t=>{blk();brainI(540,760,1.5,'#ff6b6b');if(t>1.6)stampT('GÜVENİLMEZ',540,760,eOut(cl((t-1.6)*3)));slam('BEYNİN DUYAR',330,110,'#fff',t);});
+// 4 kendine inanmıyorsun
+shot(4,4,t=>{blk();mirror(540,720,1.0,eOut(cl(t/1.2)));bigText('NEDEN?',W/2,330,150,'#ff2d2d',back(cl(t*2.5)));});
+// 5 özgüven değildir
+shot(5,5,t=>{blk();mirror(540,720,1.0,0);x.save();x.globalAlpha=eOut(cl(t*3));sbubble(540,420,560,150,'Sen harikasın!',1,60);x.restore();if(t>1.6)stampX(540,720,1.4,cl((t-1.6)*3));});
+// 6 söz tutmak
+shot(6,6,t=>{blk();rays(540,760,t,'rgba(255,210,63,0.12)');slam('ÖZGÜVEN =',330,120,'#fff',t);if(t>0.8)slam('SÖZ TUTMAK',600,140,'#ffd23f',t-0.8);});
+// 7 küçük ver ama tut
+shot(7,7,t=>{blk();['BÜYÜK SÖZ','KÜÇÜK SÖZ','AMA TUT'].forEach((w,i)=>{if(t>i*1.1){bigText(w,W/2,420+i*220,i==2?150:110,i==0?'#666':i==1?'#fff':'#ffd23f',eOut(cl((t-i*1.1)*3)));}});if(t>0.9)stampX(540,420,1,cl((t-0.9)*3));});
+// 8 10 şınav 11
+shot(8,8,t=>{blk();pushup(540,1000,1.6,t);bigText(t<1.5?'10':'11',W/2,420,240,'#ffd23f',back(cl((t%1.5)*3)));bigText(t<1.5?'BUGÜN':'YARIN',W/2,640,80,'#fff',1);});
+// 9 imza
+shot(9,9,t=>{blk();x.fillStyle='#f3efe4';rr(160,560,760,420,20);x.fill();x.fillStyle='#bbb';x.fillRect(220,860,640,6);sign(t/1.8);slam('İMZA',330,170,'#ffd23f',t);});
+// 10 outro
+shot(10,10,t=>outro(t,2,'#2a0606','#050000'));
