@@ -40,3 +40,10 @@ Her kanal klasöründe build.sh.example (hangi ortak/ parçaların hangi sırayl
 - Parasal: para tarihi / büyük kayıp-büyük fırsat hikâyeleri, rakamlar doğrulanır, "yatırım tavsiyesi değildir" tonu.
 - Sanatsal: sanat/müzik/heykel eserlerinin arkasındaki hikâyeler; gerçek kişilerin yüzü çizilmez (siluet), telifli eser kopyalanmaz.
 - Sporsal: unutulmaz maçlar/sporcular; skor ve tarihler doğrulanır; gerçek kişi yüzü yok, takım logosu yok.
+
+## pipe.py güncellemesi (10 Kas 2026, URETIM.md'ye uyum)
+- Tüm kanallar: WM/VOICE/EXTRA sözlükleri (Psikolojik İrem, Motivasyonel/Parasal İsmet, diğerleri Emrullah); kanal ek parçaları otomatik eklenir (psi, para+mot, san+art2, spor, mot+psi, yem+yem2).
+- atempo 1.2; mux SADECE seslendirme (sfx yok). Anahtar /home/claude/work/.el_key veya /home/claude/.el_key.
+- `ortak/outro.js.txt`: `outro(t,nxt)` (nxt>0 → "DEVAMI PART nxt" + TAKİP ET; 0 → "Kaçırmamak için takip et") ve `partBadge(n)`. Videonun klasörüne `part.txt` (ör. `2`) koyulursa sol üstte PART rozeti çıkar.
+- Sahne arka planı HER ZAMAN tüm kanvası boyamalı (yoksa önceki kare görünür). `sil()` küçük (~190 birim): şapka/taç için kafa üstü −190.
+- .gitignore: video klasörlerinde sadece script/scenes/shots/req/part/spoken kalır.
