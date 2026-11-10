@@ -1,7 +1,7 @@
 # ORTAK HAFIZA — …sal Hikayeler
 (Kural: CLAUDE.md. Her oturum başında oku, her üretim mesajından sonra güncelle ve push et.)
 
-## Güncel durum (son güncelleme: 2026-11-10 22:25)
+## Güncel durum (son güncelleme: 2026-11-10 22:48)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
 - **Redditsel formatı (YENİ FORMAT 3, 11 Kas'tan):** günde 4 video, 2 seri: 09:00 + 17:00 Hacker Kerem Sezon 2 "Akıllı Ev", 12:30 + 20:30 Park Yeri Savaşı (P3'ten). ≤40 sn, hızlı outro "kaçırmamak için takip et". 12:30 videosu parkur (bölünmüş ekran) testi.
@@ -9,7 +9,7 @@
 - **Küçük hesaplar planı (10 Kas kararı):** Grup 1 seri (İslamik, Osmanlısal, Motivasyonel) günde 1 part; Grup 2 (Sporsal, Sanatsal, Yemeksel) günde 1, TikTok'a da devam; Grup 3 (Psikolojik, Parasal, Kriminal) iki günde 1 ama daha kaliteli. Saat testi Redditsel hariç: A 09:00 / B 16:00, 23 Kas'ta yer değiştir. Ayrıntı: stok/URETIM.md.
 - **Stok:** 10 Kas itibarıyla bitmişti (eski brand'ler silinince planlılar gitti). Gece görevi her gün önce yarını doldurur, sonra rotasyon hesabının 7 gününü stoklar; ~10 günde oturur.
 - **Otomatik görevler:** 01:47 Redditsel, 03:17 küçük hesaplar, Pazar 21:37 analiz (gorevler.md). Gece çalışması kullanıcının gündüz limitini korumak için.
-- **Arkadaş:** kendi Claude'uyla depo üzerinden yardım edecek (collaborator izni 10 Kas 22:41'de verildi). Metricool'a planlamaz; MP4 + stok.md satırını stok/<hesap>/ altına push eder, gece görevi planlar.
+- **Arkadaş:** kendi Claude'uyla depo üzerinden yardım ediyor (collaborator izni 10 Kas 22:41; Claude'u 22:47'de bağlandı, protokolü okudu). Metricool'a planlamaz; MP4 + stok.md satırını stok/<hesap>/ altına push eder, gece görevi planlar.
 
 ## Performans özeti (1–10 Kas Metricool raporu)
 - Redditsel TikTok izlenmenin %96'sı. Hacker Kerem P1 191K, P2 92K, P3 75K, final 47K → seri formatı çalışıyor. Uzun (85 sn) videolarda izleme oranı düştü; ≤40 sn kuralı bu yüzden.
@@ -25,6 +25,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-10 22:48 | arkadaş | Arkadaşın Claude'u depoya bağlandı, CLAUDE.md/HAFIZA/BASLANGIC okundu; Metricool'a planlamadan MP4 + stok.md satırı push edecek.
 - 2026-11-10 22:41 | mehmetalp | Arkadaşa GitHub collaborator izni verildi; ona başlangıç promptu ve Claude–GitHub bağlama adımları verildi.
 - 2026-11-10 22:36 | mehmetalp | 19:11 satırındaki ifade netleştirildi: "korkunç video pompalayalım" = çok sayıda video at, korku türü değil.
 - 2026-11-10 22:25 | mehmetalp | Ortak hafıza sistemi kuruldu (CLAUDE.md + HAFIZA.md); her üretim mesajından sonra güncellenip push edilecek, arkadaşın Claude'u da aynı dosyayı kullanacak.
