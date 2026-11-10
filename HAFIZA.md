@@ -25,6 +25,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-10 22:36 | mehmetalp | 19:11 satırındaki ifade netleştirildi: "korkunç video pompalayalım" = çok sayıda video at, korku türü değil.
 - 2026-11-10 22:25 | mehmetalp | Ortak hafıza sistemi kuruldu (CLAUDE.md + HAFIZA.md); her üretim mesajından sonra güncellenip push edilecek, arkadaşın Claude'u da aynı dosyayı kullanacak.
 - 2026-11-10 22:13 | mehmetalp | Sohbet paylaşımı yerine depo üzerinden ortak çalışma; BASLANGIC.md, gorevler.md, HK S2 paketi eklendi.
 - 2026-11-10 20:59 | mehmetalp | Redditsel görevi 01:47'ye, küçük hesaplar 03:17'ye alındı (gece çalışsın, gündüz limiti kullanıcıda kalsın).
@@ -34,5 +35,5 @@
 - 2026-11-10 20:36 | mehmetalp | Kriminal Instagram şimdilik kapalı.
 - 2026-11-10 20:20 | mehmetalp | Metricool ücretli hesap; Hayatsal iptal; yeni brand ID'ler; manuel mod bitti.
 - 2026-11-10 19:24 | mehmetalp | HK S2 P1 elle üretildi ve verildi; 11 Kas planı P2/P3'e kaydırıldı.
-- 2026-11-10 19:11 | mehmetalp | YENİ FORMAT 3: Redditsel günde 4 video / 2 seri, ≤40 sn, hızlı "takip et" outro, parkur sadece bazı videolarda test. "Korkunç video pompalayalım."
+- 2026-11-10 19:11 | mehmetalp | YENİ FORMAT 3: Redditsel günde 4 video / 2 seri, ≤40 sn, hızlı "takip et" outro, parkur sadece bazı videolarda test. Amaç: bol takipçi için ÇOK SAYIDA video atmak (hacim artışı). Tür değişmedi: komedi/aile; korku/gerilim içerik YOK.
 - (10 Kas öncesi kararlar: havuz.md üst notları ve strateji.md)
