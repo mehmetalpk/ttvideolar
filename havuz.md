@@ -3,6 +3,13 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> KANCA KURALI 2 (kullanıcı isteği, 10 Kas 11:52 — önceki kanca kurallarının YERİNE geçer; Redditsel'deki TÜM videolar):
+>  - Kanca = 4–7 kelimelik TEK kısa cümle. Kalıp: [tanıdık kişi] + [somut, absürt/utanç verici eylem]. "…", sır, belirsiz merak YOK; olayın kendisini söyle.
+>  - Örnekler (kullanıcı onaylı): "Babam bir kavanoz mayonezi kaşıkladı." / "En yakın arkadaşım ajanla birlikteymiş." / "Babam yorganımın altına osurdu." / "Komşum hayatımı kararttı." / "Kardeşim evin Wi-Fi şifresini değiştirdi."
+>  - İlk karedeki dev yazı = kancanın aynısı ya da 3–5 kelimelik özeti (ör. BABAM / MAYONEZİ / KAŞIKLADI); ilk seslendirme cümlesi de bu kısa cümle olsun, ayrıntı ikinci cümlede gelir.
+>  - Açıklamanın ilk satırı da aynı kısa kanca + emoji (uzun cümle yok).
+>  - Veri (1–9 Kas): en iyi videolar somut ev içi eylemli kancalar (178K, 91K, 74K izlenme); "fısıldadı…", "asıl sır…" gibi belirsiz kancalar 0,9–3K'da kaldı.
+
 > SÜRE KURALI 2 (kullanıcı onayı, 9 Kas — 4 Kas "SÜRE KURALI"nın YERİNE geçer, 10 Kasım videolarından itibaren, 1 haftalık deneme): Her video (münferit ve seri partları) kapanış/outro dahil 50–60 sn. Seslendirme metni ~140–170 kelime (atempo 1.1 sonrası ~47–57 sn konuşma + ~3 sn outro). Kısaltırken olay/espri sayısını değil dolgu ve geçiş cümlelerini at; kanca ilk 1,5 sn, sahne başına ~4–5 sn. Gerekçe: 40 sn videolar ort. %46–52 izlendi, 85 sn videolar %10–42 (haftalık analiz 8 Kas). Hacker Kerem finali gibi istisnalar sadece kullanıcı isterse.
 
 > ALTYAZI KONUMU (kullanıcı isteği, 5 Kas 17:08 — TÜM kanallar, TÜM yeni videolar): Altyazı ALTTA OLMAYACAK; platform yazıları (açıklama, kullanıcı adı, butonlar) alt kısmı kapatıyor. Karaoke altyazı merkezi y=1150 (bant ≈ y 1060–1260, en fazla 2 satır); karaoke fonksiyonları y'yi en fazla 1250'ye izin verir — capY/y ile aşağı ÇEKME. Sahne tasarımı: (1) altyazı bandına (y 1060–1260) sahne yazısı/rakam/skor KOYMA, büyük başlıklar y≤1000'de, ikincil yazılar gerekiyorsa y 1300–1420 arasında; çizimler/karakterler bandın arkasında kalabilir. (2) y>1450 alanına önemli HİÇBİR şey koyma. (3) Sağ kenarda x>920'ye yazı koyma (beğen/yorum butonları).
