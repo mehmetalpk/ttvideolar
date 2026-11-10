@@ -1,0 +1,13 @@
+[intense] Ölümü bile bir pazarlıktı.
+
+[serious] Bin dört yüz seksen dokuz. Cem, Roma'ya, Papa'nın sarayına getirildi. || 1489. Cem, Roma'ya, Papa'nın sarayına getirildi.
+Avrupa, onu Osmanlı'ya karşı bir haçlı seferinde kullanmayı planlıyordu.
+[intense] Bayezid ise bu kez Papa'ya altın göndermeye başladı.
+
+[serious] Bin dört yüz doksan beşte, Fransa Kralı Sekizinci Charles İtalya'ya girdi ve Cem'i yanına aldı. || 1495'te, Fransa Kralı VIII. Charles İtalya'ya girdi ve Cem'i yanına aldı.
+[intense] Ama Napoli'de Cem birden hastalandı.
+Yirmi beş Şubat'ta, otuz beş yaşında hayatını kaybetti. || 25 Şubat'ta, 35 yaşında hayatını kaybetti.
+[serious] Zehirlendiği söylendi, ama bu hiçbir zaman kesin olarak kanıtlanamadı.
+[lower] Cenazesi dört yıl sonra Bursa'ya getirildi ve Muradiye'ye defnedildi. || Cenazesi 4 yıl sonra Bursa'ya getirildi ve Muradiye'ye defnedildi.
+
+[softly] Kaçırmamak için takip et.

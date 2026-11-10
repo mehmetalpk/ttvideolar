@@ -1,0 +1,34 @@
+// Cem Sultan serisi ortak çizimleri (siluet; gerçek yüz yok)
+function tSil(cx,base,s,col='#1a0f08',tur='#f3e6c4'){s*=1.7;sil(cx,base,s,col);x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=tur;x.beginPath();x.ellipse(0,-182,38,26,0,0,7);x.fill();x.beginPath();x.ellipse(0,-204,24,18,0,0,7);x.fill();x.fillStyle=PAL.red;x.fillRect(-4,-222,8,14);x.restore();}
+function throneO(cx,base,s,glow=0){x.save();x.translate(cx,base);x.scale(s,s);if(glow)spot(0,-200,380,0.35*glow,'255,215,120');x.fillStyle='#8a5a1a';rr(-150,-420,300,420,30);x.fill();x.fillStyle=PAL.red;rr(-110,-370,220,230,24);x.fill();x.fillStyle=PAL.gold;x.fillRect(-190,-150,380,50);rr(-200,-30,400,30,8);x.fill();x.restore();}
+function fortress(cx,base,s,col='#5a5048'){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;x.fillRect(-320,-260,640,260);for(let i=0;i<9;i++)x.fillRect(-320+i*76,-300,44,44);x.fillRect(-380,-420,120,420);x.fillRect(260,-420,120,420);for(let k of [-380,260])for(let i=0;i<3;i++)x.fillRect(k+i*44,-460,30,40);x.fillStyle='#1a1410';x.beginPath();x.moveTo(-60,0);x.lineTo(-60,-120);x.quadraticCurveTo(0,-180,60,-120);x.lineTo(60,0);x.fill();x.fillStyle='rgba(255,210,120,0.6)';x.fillRect(-340,-360,30,40);x.fillRect(300,-360,30,40);x.restore();}
+function armyRow(base,n,s,t,col,dir=0){for(let i=0;i<n;i++)janissary(80+i*(W-160)/(n-1)+Math.sin(t*4+i)*3+dir*t*40,base,s,col);}
+function mapO(t){paper(false);x.fillStyle='rgba(120,100,60,0.3)';[[300,640,260,170],[700,620,240,150],[560,900,300,140],[820,1000,180,200]].forEach(([a,b,c,d])=>{x.beginPath();x.ellipse(a,b,c,d,0.2,0,7);x.fill();});x.fillStyle='rgba(60,110,150,0.25)';x.fillRect(0,760,W,60);}
+function dot(cx,cy,lab,col=PAL.red,p=1){if(p<=0)return;x.fillStyle=col;x.beginPath();x.arc(cx,cy,18,0,7);x.fill();bigText(lab,cx,cy-60,62,'#fff',eOut(cl(p)));}
+function seaN(t){x.fillStyle=grad(0,H,['#0a1428','#1a3050']);x.fillRect(0,0,W,H);crescent(820,420,60,'#f3e6c4');x.fillStyle='#16324f';x.fillRect(0,1060,W,H-1060);waves(1066,t,'#24486a',8);}
+function chains(cx,cy,t){x.strokeStyle='#888';x.lineWidth=10;for(let i=0;i<7;i++){x.beginPath();x.ellipse(cx-150+i*50,cy+Math.sin(t*3+i)*6,26,16,0,0,7);x.stroke();}}
+function goldStack(cx,base,n){for(let i=0;i<n;i++){x.fillStyle=i%2?'#e0b640':'#c99a2a';x.beginPath();x.ellipse(cx,base-i*22,90,26,0,0,7);x.fill();x.strokeStyle='#8a6a12';x.lineWidth=3;x.stroke();}}
+function pope(cx,base,s){s*=1.7;x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#f3efe4';x.beginPath();x.moveTo(-46,0);x.lineTo(-38,-120);x.quadraticCurveTo(0,-150,38,-120);x.lineTo(46,0);x.fill();x.fillStyle='#e8dcc0';x.beginPath();x.arc(0,-160,30,0,7);x.fill();x.fillStyle=PAL.gold;x.beginPath();x.moveTo(-26,-182);x.quadraticCurveTo(0,-260,26,-182);x.fill();x.restore();}
+function rome(t){x.fillStyle=grad(0,H,['#2a1f3a','#7a4a5a']);x.fillRect(0,0,W,H);x.fillStyle='#1a1220';x.beginPath();x.arc(540,900,200,Math.PI,0);x.fill();x.fillRect(340,900,400,280);x.fillRect(520,640,40,80);for(let i=0;i<6;i++)x.fillRect(80+i*170,960,60,220);x.fillStyle='#120c18';x.fillRect(0,1180,W,H-1180);}
+function cross(cx,cy,s,col){x.fillStyle=col;x.fillRect(cx-10*s,cy-60*s,20*s,120*s);x.fillRect(cx-40*s,cy-30*s,80*s,20*s);}
+function kingF(cx,base,s){spot(cx,base-110*s*1.7,200*s,0.35,'160,180,255');sil(cx,base,s*1.7,'#000');x.fillStyle=PAL.gold;const h=base-190*s*1.7;x.beginPath();x.moveTo(cx-36*s,h+8);x.lineTo(cx-36*s,h-34*s);x.lineTo(cx-14*s,h-12*s);x.lineTo(cx,h-40*s);x.lineTo(cx+14*s,h-12*s);x.lineTo(cx+36*s,h-34*s);x.lineTo(cx+36*s,h+8);x.fill();}
+// 0 kanca
+shot(0,0,t=>{rome(t);goldStack(300,1100,8);tSil(700,1180,1.3);bigText('ÖLÜMÜ BİLE',W/2,340,130,'#fff',1);bigText('PAZARLIK',W/2,500,150,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 1 1489 roma papa
+shot(1,1,t=>{rome(t);pope(320,1180,1.2);tSil(760,1180,1.2);bigText('1489',W/2,620,220,'#ffd23f',eOut(cl(t*3)));bigText('ROMA',W/2,360,140,'#fff',1);});
+// 2 haçlı seferi planı
+shot(2,2,t=>{mapO(t);for(let i=0;i<5;i++)cross(200+i*80,560,0.7,PAL.red);mapArrow(300,600,800,760,cl(t/1.8),PAL.red);dot(800,760,'OSMANLI',PAL.navy,(t-1.2)*3);bigText('HAÇLI PLANI',W/2,340,130,'#fff',1);});
+// 3 bayezid papa'ya altın
+shot(3,3,t=>{bgDoc('#2a1e10','#0a0703');goldStack(540,1000,Math.min(12,1+Math.floor(t*4)));mapArrow(200,700,880,700,cl(t/1.2),PAL.gold);bigText('PAPA’YA ALTIN',W/2,340,120,'#ffd23f',1);});
+// 4 1495 charles
+shot(4,4,t=>{x.fillStyle=grad(0,H,['#1a2a5c','#05081a']);x.fillRect(0,0,W,H);kingF(320,1180,1.1);tSil(760,1180,1.1);banners(1180,5,1,t,'#1f4f9a');bigText('1495',W/2,620,220,'#ffd23f',eOut(cl(t*3)));badge(540,380,'VIII. CHARLES','#1f4f9a',(t-0.6)*3);});
+// 5 napoli hastalandı
+shot(5,5,t=>{x.fillStyle=grad(0,H,['#3a2a3a','#120a12']);x.fillRect(0,0,W,H);x.fillStyle='#2a1a2a';x.beginPath();x.moveTo(600,1100);x.lineTo(820,620);x.lineTo(1040,1100);x.fill();x.fillStyle='rgba(255,120,60,0.6)';x.beginPath();x.arc(820,610,30+Math.sin(t*5)*6,0,7);x.fill();x.fillStyle='#5a3a2a';rr(160,960,520,80,20);x.fill();x.save();x.translate(420,940);x.fillStyle='#000';rr(-180,-40,300,60,24);x.fill();x.fillStyle='#f3e6c4';x.beginPath();x.ellipse(150,-20,40,30,0,0,7);x.fill();x.restore();bigText('NAPOLİ',W/2,340,150,'#fff',1);});
+// 6 25 şubat 35 yaşında
+shot(6,6,t=>{paper(true);for(let i=0;i<3;i++)candle(320+i*220,1050,1.2,t+i);bigText('35',W/2,620,260,'#ffd23f',back(cl(t*2.5)));bigText('25 ŞUBAT 1495',W/2,360,100,'#fff',1);vignette(0.6);});
+// 7 zehir mi?
+shot(7,7,t=>{bgDoc('#0e1a10','#020602');x.save();x.translate(540,780);x.fillStyle='#2a5a2a';rr(-70,-40,140,240,30);x.fill();x.fillRect(-26,-120,52,90);x.fillStyle='#5fe08a';x.globalAlpha=0.6+0.3*Math.sin(t*4);rr(-60,40,120,150,24);x.fill();x.restore();bigText('ZEHİR Mİ?',W/2,360,150,'#5fe08a',eOut(cl(t*3)));if(t>2)stampT('KANITLANAMADI',540,1380,eOut(cl((t-2)*3)));});
+// 8 bursa muradiye
+shot(8,8,t=>{x.fillStyle=grad(0,H,['#9ac0d8','#e8eef0']);x.fillRect(0,0,W,H);x.fillStyle='#5a7a5a';x.beginPath();x.moveTo(0,900);x.lineTo(300,600);x.lineTo(560,820);x.lineTo(800,560);x.lineTo(W,880);x.lineTo(W,H);x.lineTo(0,H);x.fill();for(let i=0;i<4;i++)tree(120+i*280,1180,0.8,t,null);mosque(540,1180,0.9,'#3a2a1a');bigText('BURSA',W/2,340,150,'#fff',1);badge(540,500,'MURADİYE',PAL.teal,(t-1)*3);});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#3a2a1a','#120a05'));
