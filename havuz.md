@@ -3,6 +3,12 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> MANUEL MOD (kullanıcı isteği, 10 Kas 17:25 — kullanıcı "MANUEL MOD BİTTİ" diyene kadar geçerli; ADIM 4'teki Metricool PLANLAMASININ yerine geçer):
+>  - Metricool hesap limiti doldu ("You have reached your Metricool account limit"), gönderiler yayınlanmıyor. createScheduledPost/updateScheduledPost ÇAĞIRMA; videoyu depoya push etmeye de gerek yok.
+>  - Videoları yine üret. Her video için SendUserFile ile MP4'ü gönder ve SendUserMessage ile kopyala-yapıştır paketi ver: (1) önerilen yayın saati (getBestTimeToPostByNetwork'e göre), (2) TikTok açıklaması (kısa kanca + soru + seri satırı + "Takip etmeyi unutma ✅" + kaynak satırı + hashtagler), (3) YouTube başlığı (#shorts ile) ve etiketler, (4) Instagram açıklaması. Hatırlatma satırı: "Yüklerken 'Yapay zekâ ile oluşturuldu' etiketini aç."
+>  - Beğeni kontrolü için Metricool ANALİTİĞİ (getAnalyticsDataByMetrics) çalışıyorsa kullanmaya devam et; çalışmıyorsa seriyi durdurma, devam et.
+>  - stories.md satırında platform yerine "manuel" yaz.
+
 > KANCA KURALI 2 (kullanıcı isteği, 10 Kas 11:52 — önceki kanca kurallarının YERİNE geçer; Redditsel'deki TÜM videolar):
 >  - Kanca = 4–7 kelimelik TEK kısa cümle. Kalıp: [tanıdık kişi] + [somut, absürt/utanç verici eylem]. "…", sır, belirsiz merak YOK; olayın kendisini söyle.
 >  - Örnekler (kullanıcı onaylı): "Babam bir kavanoz mayonezi kaşıkladı." / "En yakın arkadaşım ajanla birlikteymiş." / "Babam yorganımın altına osurdu." / "Komşum hayatımı kararttı." / "Kardeşim evin Wi-Fi şifresini değiştirdi."
