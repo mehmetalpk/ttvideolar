@@ -7,7 +7,7 @@ Eski ID'ler (7781132, 7825272, 7846664, 7828876, 7824666, 7831322, 7829005 …) 
 | Osmanlısal Hikayeler | 7804913 | osmanlisalhikayeler | osmanlisalhikayeler | ✓ |
 | İslamik Hikayeler | 8012137 | ✓ | islamikhikayeler | ✓ |
 | Psikolojik Hikayeler | 8012261 | psikolojikhikayeler | psikolojikhikayeleroffical | ✓ |
-| Kriminal Hikayeler | 8012351 | kriminalhikayeler | ⚠ psikolojikhikayeleroffical (yanlış hesap bağlı — kullanıcı düzeltene kadar Kriminal'de Instagram'a GÖNDERME) | ✓ |
+| Kriminal Hikayeler | 8012351 | kriminalhikayeler | — KAPALI (kullanıcı hesaba giremiyor; "Kriminal IG açıldı" diyene kadar SADECE TikTok + YT) | ✓ |
 | Parasal Hikayeler | 8012406 | parasalhikayeler | parasalhikayeler | ✓ |
 | Sanatsal Hikayeler | 8012480 | sanatsal.hikayeler | sanatsal.hikayeler | ✓ |
 | Sporsal Hikayeler | 8012559 | sporsalhikayeler | sporsalhikayeler | ✓ |
