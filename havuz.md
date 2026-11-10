@@ -3,6 +3,14 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> YENİ FORMAT 3 (kullanıcı isteği, 10 Kas 19:11 — 11 Kasım'dan itibaren; önceki süre/slot/outro kurallarının YERİNE geçer; KANCA KURALI 2, ALTYAZI KONUMU, SES EFEKTİ YASAĞI, SAÇ, MANUEL MOD geçerli kalır):
+>  - GÜNDE 4 VİDEO = 2 SERİ paralel: "Hacker Kerem — Sezon 2" (2 part/gün) + "Park Yeri Savaşı" (devam, 2 part/gün). Münferit hikâye YOK (seriler bitince havuzdan yeni seri: sıradaki "Bahçe Sınırı Savaşı").
+>  - SLOTLAR (İstanbul): 09:00 Hacker Kerem · 12:30 Park Yeri · 17:00 Hacker Kerem · 20:30 Park Yeri. MANUEL MOD sürdükçe her videoyu bu saatlerle paket olarak gönder.
+>  - SÜRE: her video EN FAZLA 40 sn (outro dahil). Hızlı anlatım: atempo 1.2 (1.1 değil), seslendirme ~85–100 kelime, kısa cümleler, dolgu yok. Part başında en fazla 1 kısa özet cümlesi ("Geçen partta: …" DEME; doğrudan kanca + yarım cümle bağlam).
+>  - OUTRO ~1.5–2 sn, hızlı: seri devam ediyorsa "[fast, warm] Devamı <n+1>. partta, kaçırmamak için takip et." (ekran: "PART <n+1> 👀" + "+ TAKİP ET"); final partta "[fast, warm] Kaçırmamak için takip et." Son hikâye sahnesi ≤1.5 sn.
+>  - PARKUR TESTİ: her gün SADECE 12:30 Park Yeri partı bölünmüş ekran (üst hikâye 1016 px + alt özgün çöp adam parkuru 904 px, 60 fps) — tools/parkur/README.md. Her videoda farklı seed. Diğer 3 video tam ekran. Bildirimde hangisinin parkurlu olduğunu yaz (karşılaştırma için).
+>  - DEVAM KOŞULU (≥100 TikTok beğenisi) bu iki seride UYGULANMAZ; bölüm planlarını sonuna kadar yürüt.
+
 > 11 KASIM ÖZEL (kullanıcı isteği, 10 Kas 17:28): 11 Kasım SABAH slotu için video ÜRETME — kullanıcı 10 Kasım'da yayınlanamayan "Müşteri kanatlarını tarttırdı" (garson) videosunu sabah elle yükleyecek. 11 Kasım'da sadece AKŞAM seri bölümünü üret ve manuel paket olarak gönder. Bildirimde kullanıcıya garson videosunun açıklamasını da hatırlat: "Müşteri kanatlarını tarttırdı… tarttık ve üçünü çöpe attık 🍗⚖️ Sence garson haklı mıydı? 👇 / Takip etmeyi unutma ✅ / Reddit'ten uyarlanmıştır. / #hikaye #reddithikayeleri #komedi #restoran #garson #müşteri #keşfet #fyp". stories.md'ye garson videosunu "2026-11-11 | ... | manuel | SABAH" olarak işle. Bu not 12 Kasım'da geçersizdir.
 
 > MANUEL MOD (kullanıcı isteği, 10 Kas 17:25 — kullanıcı "MANUEL MOD BİTTİ" diyene kadar geçerli; ADIM 4'teki Metricool PLANLAMASININ yerine geçer):
@@ -54,6 +62,26 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 > GÜNCELLEME (4 Kas 16:55): İki kapanış cümlesi AYRI ekranlarda değil, TEK EKRANDA arka arkaya: üstte "3K BEĞENİ = PART <n>" + kalp, altta "YORUMLARA "HATIRLAT" YAZ 💬" balonu; iki ses klibi arasında ~0.1 sn boşluk. Kapanış toplam ~6.5 sn.
 
 ## Bekleyen
+
+### SERİ (aktif, 2 part/gün): Hacker Kerem — SEZON 2 "Akıllı Ev" (komedi) — 11 Kas'tan itibaren 09:00 ve 17:00
+- Karakterler/renkler Sezon 1 ile AYNI (anlatıcı abi Emre = Emrullah sesi; Kerem 12, güneş gözlüklü; hacker kurslu baba; "gerçek hacker" anne; anneanne). Rozet: "SEZON 2 · PART n". Açıklama satırı: "Hacker Kerem Sezon 2 — Part n 👀".
+- P1: Babam hacker kursundan sonra evi akıllı eve çevirdi: ışıklar, perde, konuşan buzdolabı. Sistem şifresini gururla açıkladı… "Kerem123". Kanca: "Babam evin şifresini Kerem123 yaptı." Cliff: Kerem gülümsüyor.
+- P2: Kerem gece sistemi ele geçirdi; sabah 6'da disko ışıkları ve son ses marşla babamı uyandırdı. Babam yataktan düştü. Cliff: Annem sakin: "Ben de sisteme bir şey ekledim."
+- P3: Annemin eklediği: ödev bitmeden Wi-Fi açılmıyor, buzdolabı "önce matematik" diyor. Kerem ilk kez yenik. Cliff: Kerem anneanneyi müttefik yapar.
+- P4: Anneanne sesli asistana "Çay demle" diye bağırdı; sistem çöktü, ev karardı, perdeler kapandı. Cliff: Kapı kilitlendi, herkes dışarıda kaldı.
+- P5: Aile kapının önünde, yağmur başlar. Kerem telefonla girmeye çalışır; sistemin tek açılış komutu babamın kendi kaydettiği bir şey. Cliff: "Kapı sadece babamın ninni sesiyle açılıyormuş."
+- P6: Babam kapıya utana utana ninni söyler, kapı açılır. Cliff: Ertesi gün video mahalle grubunda!
+- P7: Herkes Kerem'den şüphelenir; asıl yayan, annemin açtığı "aile anıları" özelliği: sistem her şeyi kaydedip gruba atıyormuş. Cliff: Sistem son 1 haftanın tüm videolarını yüklemek üzere…
+- P8 (FİNAL): Aile toplantısı: akıllı ev iptal, eski anahtara dönüş. Son sahne: Kerem anahtarın kopyasını çoktan çıkarmış. Soru: "Sizin evde gerçek hacker kim?"
+
+### SERİ (aktif, 2 part/gün): Park Yeri Savaşı — DEVAM (komedi) — 11 Kas'tan itibaren 12:30 ve 20:30
+- P1 ve P2 (açık uçlu) hazır; Metricool limiti yüzünden yayınlanmadıysa kullanıcıya önce P1 → P2'yi yüklemesini hatırlat. Anlatıcı erkek (Emrullah). Komşu: Yılmaz. Yeni karakter: kuzen Tarık (simsiyah cip, takım elbise, gergin gülümseme). Rozet "PART n".
+- P3: Cipten inen kuzen Tarık: "Bu park yeri 40 yıldır ailemizin." Elinde sararmış bir kâğıt. Kanca: "Komşunun kuzeni park yerini tapuyla istedi." Cliff: Kâğıtta benim dedemin imzası var.
+- P4: Dedeme gittim. 40 yıl önce Tarık'ın dedesiyle tavla iddiasına girmiş, kaybeden park yerini verecekmiş… dedem kaybetmiş. Cliff: Dedem tavlayı kaptı: "Rövanş!"
+- P5: Sitede tavla turnuvası; bütün apartman balkonlarda, çekirdekler hazır. Tarık önde. Cliff: Dedem fısıldıyor: "Zarlar hileli."
+- P6: Hile ortaya çıkar (zar her seferinde 6-6, içinde mıknatıs). Dedem son elde kazanır, site ayakta alkışlar. Cliff: Yılmaz koşarak gelir, elinde belediye yazısı.
+- P7 (FİNAL): Yazı: park yeri kaldırılıp çocuk parkı yapılacak. Kimse kazanamadı… ama park açılınca salıncağın yanındaki bankta dedem ile Tarık'ın dedesi tavla oynuyor; Yılmaz çay taşıyor. Soru: "Park yeri mi, barış mı?"
+
 
 > NOT (10 Kas, kullanıcı isteği): Park Yeri Savaşı Part 2'nin sonu AÇIK UÇLU olarak yeniden üretildi (65,4 sn, Emrullah; kanca KANCA KURALI 2 ile "Komşum oturduğu evi de çalmış!"; çizim tools/dizi_10kasim/park_p2_acik_uc_anim.html). Mutlu son (iş teklifi, "12 artık benim") ÇIKARILDI; yerine: koliler 100 m öteden taşınır → "Ama ertesi sabah 12 numarada yine o simsiyah cip duruyordu. İçinden inen Yılmaz değildi. Kuzeniydi. Ve bana doğru yürüyordu." Outro "Devamı üçüncü partta. Takip et." + "DEVAMI PART 3'TE". Açıklama: "Part 2 — devamı Part 3'te 👀" (FİNAL değil). Seri artık 3+ part; Part 3 = cipin asıl sahibi kuzen (karakter henüz tanımsız, sadece siluet gösterildi). Metricool limiti nedeniyle P1 ve yeni P2 HENÜZ PLANLANMADI; eski P2 gönderisi (uuid -5644512209763809518, kapalı final) KULLANILMAMALI, yerine bu yeni video planlanmalı. Sıra: P1 → yeni P2 → P3.
 
