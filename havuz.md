@@ -3,6 +3,8 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> 11 KASIM ÖZEL (kullanıcı isteği, 10 Kas 17:28): 11 Kasım SABAH slotu için video ÜRETME — kullanıcı 10 Kasım'da yayınlanamayan "Müşteri kanatlarını tarttırdı" (garson) videosunu sabah elle yükleyecek. 11 Kasım'da sadece AKŞAM seri bölümünü üret ve manuel paket olarak gönder. Bildirimde kullanıcıya garson videosunun açıklamasını da hatırlat: "Müşteri kanatlarını tarttırdı… tarttık ve üçünü çöpe attık 🍗⚖️ Sence garson haklı mıydı? 👇 / Takip etmeyi unutma ✅ / Reddit'ten uyarlanmıştır. / #hikaye #reddithikayeleri #komedi #restoran #garson #müşteri #keşfet #fyp". stories.md'ye garson videosunu "2026-11-11 | ... | manuel | SABAH" olarak işle. Bu not 12 Kasım'da geçersizdir.
+
 > MANUEL MOD (kullanıcı isteği, 10 Kas 17:25 — kullanıcı "MANUEL MOD BİTTİ" diyene kadar geçerli; ADIM 4'teki Metricool PLANLAMASININ yerine geçer):
 >  - Metricool hesap limiti doldu ("You have reached your Metricool account limit"), gönderiler yayınlanmıyor. createScheduledPost/updateScheduledPost ÇAĞIRMA; videoyu depoya push etmeye de gerek yok.
 >  - Videoları yine üret. Her video için SendUserFile ile MP4'ü gönder ve SendUserMessage ile kopyala-yapıştır paketi ver: (1) önerilen yayın saati (getBestTimeToPostByNetwork'e göre), (2) TikTok açıklaması (kısa kanca + soru + seri satırı + "Takip etmeyi unutma ✅" + kaynak satırı + hashtagler), (3) YouTube başlığı (#shorts ile) ve etiketler, (4) Instagram açıklaması. Hatırlatma satırı: "Yüklerken 'Yapay zekâ ile oluşturuldu' etiketini aç."
