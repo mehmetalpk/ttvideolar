@@ -20,3 +20,8 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-09 | Müşteri kanatlarını tarttırdı (Yarım kilo kanat) | r/MaliciousCompliance u/advocatus_ebrius_est (havuz) | komedi/münferit | erkek (Emrullah Tuna) | 85.6 | 09:00 | TikTok+YouTube+Instagram | SABAH
 - 2026-11-09 | Park yerimi kapan komşu evi de kapmış (Park Yeri Savaşı) [Part 2 — FİNAL] | Reddit r/pettyrevenge tarzı komşu/park hikâyelerinden ilham (özgün) | komedi/seri | erkek (Emrullah Tuna) | 84.5 | 17:00 | TikTok+YouTube+Instagram | AKŞAM
 - 2026-11-10 | Hacker Kerem S2: Akıllı Ev [Part 1] | kendi kurgu | komedi/seri | Emrullah | 30.7 sn | — | manuel | elle verildi | parkur:hayır
+- 2026-11-11 | Müşteri kanatlarını tarttırdı (Yarım kilo kanat) | r/MaliciousCompliance (havuz) | komedi/münferit | Emrullah | — | — | manuel | SABAH | parkur:hayır
+- 2026-11-11 | Kardeşim babamı diskoyla uyandırdı (Hacker Kerem S2) [Part 2] | kendi kurgu | komedi/seri | Emrullah | 32.9 sn | 09:00 | -52149131046535003 | SABAH | parkur:hayır
+- 2026-11-11 | Komşunun kuzeni park yerimi tapuyla istedi (Park Yeri Savaşı) [Part 3] | özgün devam (r/pettyrevenge tarzı) | komedi/seri | Emrullah | 28.4 sn | 12:30 | 1989063157716241612 | ÖĞLE | parkur:evet (seed 1111)
+- 2026-11-11 | Annem buzdolabına matematik sorusu koydu (Hacker Kerem S2) [Part 3] | kendi kurgu | komedi/seri | Emrullah | 34.8 sn | 17:00 | -3392938939315827719 | AKŞAM | parkur:hayır
+- 2026-11-11 | Dedem park yerini tavlada kaybetmiş (Park Yeri Savaşı) [Part 4] | özgün devam (r/pettyrevenge tarzı) | komedi/seri | Emrullah | 26.5 sn | 20:30 | 4720021240125673317 | GECE | parkur:hayır

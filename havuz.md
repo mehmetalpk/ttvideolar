@@ -68,8 +68,8 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 ### SERİ (aktif, 2 part/gün): Hacker Kerem — SEZON 2 "Akıllı Ev" (komedi) — 11 Kas'tan itibaren 09:00 ve 17:00
 - Karakterler/renkler Sezon 1 ile AYNI (anlatıcı abi Emre = Emrullah sesi; Kerem 12, güneş gözlüklü; hacker kurslu baba; "gerçek hacker" anne; anneanne). Rozet: "SEZON 2 · PART n". Açıklama satırı: "Hacker Kerem Sezon 2 — Part n 👀".
 - P1: Babam hacker kursundan sonra evi akıllı eve çevirdi: ışıklar, perde, konuşan buzdolabı. Sistem şifresini gururla açıkladı… "Kerem123". Kanca: "Babam evin şifresini Kerem123 yaptı." Cliff: Kerem gülümsüyor. ✅ 2026-11-10 (elle, kullanıcıya verildi; 30,7 sn)
-- P2: Kerem gece sistemi ele geçirdi; sabah 6'da disko ışıkları ve son ses marşla babamı uyandırdı. Babam yataktan düştü. Cliff: Annem sakin: "Ben de sisteme bir şey ekledim."
-- P3: Annemin eklediği: ödev bitmeden Wi-Fi açılmıyor, buzdolabı "önce matematik" diyor. Kerem ilk kez yenik. Cliff: Kerem anneanneyi müttefik yapar.
+- P2: Kerem gece sistemi ele geçirdi; sabah 6'da disko ışıkları ve son ses marşla babamı uyandırdı. Babam yataktan düştü. Cliff: Annem sakin: "Ben de sisteme bir şey ekledim." ✅ 2026-11-11 (09:00, 32,9 sn)
+- P3: Annemin eklediği: ödev bitmeden Wi-Fi açılmıyor, buzdolabı "önce matematik" diyor. Kerem ilk kez yenik. Cliff: Kerem anneanneyi müttefik yapar. ✅ 2026-11-11 (17:00, 34,8 sn; Kerem akşam anneanneye "bana yardım eder misin?" der)
 - P4: Anneanne sesli asistana "Çay demle" diye bağırdı; sistem çöktü, ev karardı, perdeler kapandı. Cliff: Kapı kilitlendi, herkes dışarıda kaldı.
 - P5: Aile kapının önünde, yağmur başlar. Kerem telefonla girmeye çalışır; sistemin tek açılış komutu babamın kendi kaydettiği bir şey. Cliff: "Kapı sadece babamın ninni sesiyle açılıyormuş."
 - P6: Babam kapıya utana utana ninni söyler, kapı açılır. Cliff: Ertesi gün video mahalle grubunda!
@@ -78,8 +78,8 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 ### SERİ (aktif, 2 part/gün): Park Yeri Savaşı — DEVAM (komedi) — 11 Kas'tan itibaren 12:30 ve 20:30
 - P1 ve P2 (açık uçlu) hazır; Metricool limiti yüzünden yayınlanmadıysa kullanıcıya önce P1 → P2'yi yüklemesini hatırlat. Anlatıcı erkek (Emrullah). Komşu: Yılmaz. Yeni karakter: kuzen Tarık (simsiyah cip, takım elbise, gergin gülümseme). Rozet "PART n".
-- P3: Cipten inen kuzen Tarık: "Bu park yeri 40 yıldır ailemizin." Elinde sararmış bir kâğıt. Kanca: "Komşunun kuzeni park yerini tapuyla istedi." Cliff: Kâğıtta benim dedemin imzası var.
-- P4: Dedeme gittim. 40 yıl önce Tarık'ın dedesiyle tavla iddiasına girmiş, kaybeden park yerini verecekmiş… dedem kaybetmiş. Cliff: Dedem tavlayı kaptı: "Rövanş!"
+- P3: Cipten inen kuzen Tarık: "Bu park yeri 40 yıldır ailemizin." Elinde sararmış bir kâğıt. Kanca: "Komşunun kuzeni park yerini tapuyla istedi." Cliff: Kâğıtta benim dedemin imzası var. ✅ 2026-11-11 (12:30, parkurlu, 28,4 sn; kâğıtta "12 NUMARA KAZIM BEY'E AİTTİR", Kazım = Tarık'ın dedesi)
+- P4: Dedeme gittim. 40 yıl önce Tarık'ın dedesiyle tavla iddiasına girmiş, kaybeden park yerini verecekmiş… dedem kaybetmiş. Cliff: Dedem tavlayı kaptı: "Rövanş!" ✅ 2026-11-11 (20:30, 26,5 sn; kahve flashback, "Kırk yıldır kimseye söylememiş", son: "Rövanş!")
 - P5: Sitede tavla turnuvası; bütün apartman balkonlarda, çekirdekler hazır. Tarık önde. Cliff: Dedem fısıldıyor: "Zarlar hileli."
 - P6: Hile ortaya çıkar (zar her seferinde 6-6, içinde mıknatıs). Dedem son elde kazanır, site ayakta alkışlar. Cliff: Yılmaz koşarak gelir, elinde belediye yazısı.
 - P7 (FİNAL): Yazı: park yeri kaldırılıp çocuk parkı yapılacak. Kimse kazanamadı… ama park açılınca salıncağın yanındaki bankta dedem ile Tarık'ın dedesi tavla oynuyor; Yılmaz çay taşıyor. Soru: "Park yeri mi, barış mı?"

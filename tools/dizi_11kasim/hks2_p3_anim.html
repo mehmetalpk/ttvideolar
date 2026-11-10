@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,2.2,6);x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T,GRN,3);burst(540,860,640,'rgba(255,210,63,0.10)',t);
+ x.save();zoom(540,950,1.04+0.03*t);sunglassesKerem(540,950,180,{glasses:-1.8,mouthOpen:0.8,eyeBig:1.3,brow:0.8});x.restore();x.restore();
+ hook([['BUZDOLABI:',100,'#fff'],['ÖNCE',120,'#fff'],['MATEMATİK!',150,YEL]],260);s2Badge(t,3);}});
+// 1 mutfağa koştu
+sc.push({a:mid(1),f(t,T){kitchen(false);speedL(T);fridgeFace(820,900,0.75,T,false);const k=Math.sin(t*16)*10;sunglassesKerem(200+180*eOut(cl(t/1.5)),860+k,130,{glasses:0,smile:0.5});
+ bigText('KEREM MUTFAĞA KOŞTU',540,300,90,'#fff',prog(t,0,0.2),-0.03);}});
+// 2 buzdolabı konuştu
+sc.push({a:mid(2),f(t,T){kitchen(false);x.save();zoom(540,950,1.0+0.04*t);fridgeFace(540,1000,1.0,T,T<en(2),'#ff5a5a');x.restore();
+ if(T>W2(2,'Önce')-0.1)bubble2(540,380,820,240,'ÖNCE MATEMATİK!','12 × 7 = ?',72,T);}});
+// 3 donakaldı
+sc.push({a:mid(3),f(t,T){radial(540,860,1100,'#3a5a8a','#0a1022');x.save();zoom(540,860,1.1+0.04*t);sunglassesKerem(540,860,220,{glasses:-1.8,eyeOpen:1.3,eyeBig:1.4,mouthOpen:0.4,brow:0.9});x.restore();
+ bigText('DONAKALDI',540,320,140,'#7fd8ff',prog(t,0,0.2),-0.03);}});
+// 4 wifi yok
+sc.push({a:mid(4),f(t,T){x.fillStyle='#1a1f3a';x.fillRect(0,0,W,H);x.save();zoom(540,800,1.0+0.05*t);phone(540,760,1.6,Math.sin(t*20)*0.02,false,'#0d1117');wifi(540,820,1.1,'#9aa4b5',T>st(4)+0.6);x.restore();
+ bigText('WI-FI YOK!',540,300,140,RED,prog(T,W2(4,'Wi-Fi')-0.1,W2(4,'Wi-Fi')+0.15),-0.03);}});
+// 5 ödev bitmeden internet yok
+sc.push({a:mid(5),f(t,T){x.save();shake(T,W2(5,'Ödev')-0.05,W2(5,'Ödev')+0.4,8);x.fillStyle='#0d0610';x.fillRect(0,0,W,H);x.save();zoom(540,700,1.0+0.04*t);bigPanel(540,700,900,420,'ÖDEV BİTMEDEN','İNTERNET YOK',RED,T);x.restore();x.restore();
+ bigText('EKRANDA:',540,300,110,'#fff',prog(t,0,0.2),-0.03);}});
+// 6 annemin kuralı
+sc.push({a:mid(6),f(t,T){salon();x.save();zoom(540,860,1.0+0.04*t);person(ANNE,480,820,180,{smile:0.7,brow:-0.3});teaCup(800,1000,1.1,T);x.restore();
+ bigText('ANNEMİN KURALI',540,300,110,PINK2,prog(t,0,0.2),-0.03);if(T>W2(6,'Ödev')-0.1)bigText('ÖDEV YOKSA EV KAPALI',540,1370,80,'#fff',PP(T,6,'Ödev'),0);}});
+// 7 kırmaya çalıştı
+sc.push({a:mid(7),f(t,T){x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T*2,GRN,5);x.save();zoom(540,900,1.0+0.04*t);sunglassesKerem(540,760,150,{brow:-0.8,angry:0.6});laptop(540,1300,1.2,()=>{x.fillStyle='#04120a';x.fillRect(0,0,480,300);matrix(T*3,GRN,7);});x.restore();
+ bigText('HACK DENEMESİ',540,300,115,'#fff',prog(t,0,0.2),-0.03);}});
+// 7b şifre değil ödev
+sc.push({a:W2(7,'Sistem')-0.1,f(t,T){x.fillStyle='#160408';x.fillRect(0,0,W,H);x.save();zoom(540,700,1.0+0.04*t);bigPanel(540,700,900,420,'ŞİFRE DEĞİL,','ÖDEV!',RED,T);x.restore();
+ bigText('SİSTEM:',540,300,110,'#fff',prog(t,0,0.2),-0.03);}});
+// 8 ilk kez yenildi
+sc.push({a:mid(8),f(t,T){radial(540,860,1100,'#3a3a4a','#0a0a12');x.save();zoom(540,860,1.0+0.04*t);sunglassesKerem(540,780,170,{glasses:-1.8,sad:1,brow:0.6,eyeOpen:0.7});notebook(540,1350,1.0,-0.04);x.restore();
+ bigText('İLK KEZ YENİLDİ',540,300,115,'#7fd8ff',prog(t,0,0.2),-0.03);}});
+// 9 akşam anneanne odası
+sc.push({a:mid(9),f(t,T){x.fillStyle='#1a1a33';x.fillRect(0,0,W,H);x.fillStyle='#2a2448';x.fillRect(-60,1350,W+120,700);x.save();zoom(540,900,1.0+0.04*t);door(700,900,0.9,ease(prog(T,st(9),W2(9,'Kapıyı'))),'#6a4a32');sunglassesKerem(330,880,140,{look:1,smile:0.3,brow:-0.6});x.restore();
+ bigText('AMA AKŞAM...',540,300,120,YEL,prog(t,0,0.2),-0.03);}});
+// 10 anneanne
+sc.push({a:mid(10),f(t,T){room('#5a4a6a','#3a2a3a');x.save();zoom(540,880,1.0+0.04*t);person(ANNEANNE,640,860,170,{smile:0.5,look:-1});sunglassesKerem(280,920,120,{look:1,smile:0.6,brow:-0.6});x.restore();
+ bigText('ANNEANNE...',540,300,120,'#fff',prog(t,0,0.2),-0.03);}});
+// 10b yardım (son sahne kısa)
+sc.push({a:W2(10,'yardım')-0.1,f(t,T){x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T,GRN,9);burst(540,820,700,'rgba(57,211,83,0.12)',t);x.save();zoom(540,820,1.1+0.1*t);person(ANNEANNE,540,820,210,{smile:0.4+0.5*ease(cl(t/0.8)),brow:-0.5,eyeOpen:0.6});x.restore();
+ bigText('YENİ MÜTTEFİK?',540,320,120,GRN,prog(t,0,0.2),-0.03);}});
+// OUTRO
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T,GRN,11);
+ bigText('DEVAMI',540,520,90,'#fff',prog(t,0.05,0.3),-0.03);bigText('PART 4 👀',540,700,170,YEL,prog(t,0,0.25),-0.04);followBtn(540,1000,T,1.3*back(prog(t,0.2,0.5)));}});
+setup(sc,TIM,en(10)+0.1+2.35);
+</script></body></html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="../story.js"></script><script src="../story2.js"></script><script src="../p34.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.25),-0.03);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,2,4);radial(540,900,1300,'#6a4a1a','#140c04');x.save();zoom(540,1000,1.04+0.035*t);dede(540,1040,170,{blush:true,smile:-0.3,brow:0.6,eyeOpen:0.7});tavla(540,1480,0.7,T);die(250,1300,0.8,6,0.3+t);die(850,1320,0.8,1,-0.2-t);x.restore();x.restore();vignette(0.4);
+ hook([['DEDEM',115,'#fff'],['TAVLADA',160,YEL],['KAYBETMİŞ!',115,'#fff']],270);x.save();x.translate(215,215);x.scale(0.9,0.9);partBadgeN(4,0,0,T);x.restore();}});
+// 1 dedeme koştum
+sc.push({a:mid(1),f(t,T){sky('#9fd0ff','#e6f3ff');speedL(T);const k=Math.sin(t*16)*12;person(BURAK,300+260*eOut(cl(t/1.5)),860+k,140,{brow:0.4,mouthOpen:0.4});oldPaper(470+260*eOut(cl(t/1.5)),980+k,0.3,0.3,[['TAPU',90]]);
+ B('DEDEME KOŞTUM',300,115,'#fff',t);}});
+// 2 bu imza senin mi
+sc.push({a:mid(2),f(t,T){x.fillStyle='#e8d8b8';x.fillRect(0,0,W,H);x.fillStyle='#a87a4a';x.fillRect(-60,1350,W+120,700);x.save();zoom(540,900,1.0+0.04*t);person(BURAK,260,900,140,{brow:-0.3,angry:0.5});oldPaper(470,960,0.35,-0.1,[['TAPU',90]],1);dede(780,880,150,{smile:0.3,look:-1});x.restore();
+ bubbleT(540,430,860,220,[['"BU İMZA',80],['SENİN Mİ?"',80,'#c0263a']],340);}});
+// 3 dedem gözlüğünü taktı
+sc.push({a:mid(3),f(t,T){x.fillStyle='#e8d8b8';x.fillRect(0,0,W,H);x.save();zoom(540,860,1.05+0.05*t);const d2=1-ease(prog(t,0.2,1.2));dede(540,840,200,{brow:0.3,eyeOpen:0.6},d2*0.6);x.restore();
+ if(T>W2(3,'Çayını'))teaGl(820,1400,1.1);B('DEDEM...',300,140,'#fff',t);}});
+// 4 40 yıl önce kahvede
+sc.push({a:mid(4),f(t,T){coffeeHouse();x.save();zoom(540,900,1.0+0.04*t);person(DEDE_GENC,250,820,130,{smile:0.8,look:1});person(KAZIM,830,820,130,{smile:0.6,look:-1});table(1050);tavla(540,1000,0.45,T);teaGl(380,980,0.5);teaGl(700,980,0.5);x.restore();sepia(0.25);vignette(0.5);
+ B('40 YIL ÖNCE',300,130,YEL,t);}});
+// 5 kaybeden park yerini verecek
+sc.push({a:mid(5),f(t,T){coffeeHouse();sepia(0.3);x.save();zoom(540,850,1.0+0.05*t);tavla(540,800,1.0,T);die(380+30*Math.sin(t*9),760,1.0,5,t*4);die(700,820,1.0,3,-t*4);x.restore();vignette(0.5);
+ B('KAYBEDEN',300,130,'#fff',t);B('PARK YERİNİ VERİR',1380,85,YEL,t,0.2);}});
+// 6 kim kaybetti
+sc.push({a:mid(6),f(t,T){x.fillStyle='#e8d8b8';x.fillRect(0,0,W,H);x.save();zoom(540,860,1.0+0.05*t);person(BURAK,540,860,190,{brow:0.6,smile:0.3});qmark(840,520,1,T);x.restore();
+ B('"KİM KAYBETTİ?"',300,110,YEL,t);}});
+// 7 öksürdü... ben
+sc.push({a:mid(7),f(t,T){x.save();shake(T,W2(7,'Ben'),W2(7,'Ben')+0.5,10);x.fillStyle='#e8d8b8';x.fillRect(0,0,W,H);x.save();zoom(540,860,1.1+0.05*t);dede(540,860,210,{blush:true,eyeOpen:0.2,smile:-0.4,brow:0.7,red:0.3});sweat(760,700,1.0,T);x.restore();x.restore();
+ B('*ÖHÖ ÖHÖ*',300,110,'#fff',t);bigText('"BEN."',540,440,170,RED,P(T,7,'Ben'),-0.03);}});
+// 8 40 yıl saklamış
+sc.push({a:mid(8),f(t,T){radial(540,860,1100,'#3a5a8a','#0a1022');x.save();zoom(540,860,1.1+0.04*t);person(BURAK,540,860,210,{mouthOpen:0.9,eyeOpen:1.3,eyeBig:1.3,brow:0.9});x.restore();
+ B('40 YIL SAKLAMIŞ!',300,110,'#7fd8ff',t);}});
+// 9 tavlayı kaptı
+sc.push({a:mid(9),f(t,T){x.fillStyle='#e8d8b8';x.fillRect(0,0,W,H);x.fillStyle='#a87a4a';x.fillRect(-60,1350,W+120,700);x.save();zoom(540,880,1.0+0.05*t);const up=ease(prog(t,0,0.6));dede(540,900-90*up,180,{brow:-0.6,angry:0.8,smile:0.2});const g=ease(prog(T,W2(9,'tavlayı')-0.2,W2(9,'kaptı')));tavla(540-0*g,1500-300*g,0.55,T);x.restore();
+ B('TAVLAYI KAPTI!',300,120,'#fff',t);}});
+// 10 RÖVANŞ (kısa son sahne)
+sc.push({a:W2(10,'Rövanş')-0.1,f(t,T){x.save();shake(t,0,0.8,16);radial(540,860,1100,'#c0401a','#2a0804');burst(540,860,800,'rgba(255,210,63,0.18)',t);x.save();zoom(540,860,1.1+0.12*t);dede(540,820,200,{angry:1,brow:-0.7,mouthOpen:1});tavla(540,1350,0.6,T);x.restore();x.restore();
+ bigText('"RÖVANŞ!"',540,330,190,YEL,prog(t,0,0.15),-0.05);}});
+// OUTRO
+sc.push({a:en(10)+0.15,noCap:true,f(t,T){radial(540,900,1300,'#2a1a4a','#05040c');devami(0,t,5);followBtn(540,1360,T,1.2*back(prog(t,0.4,0.75)));}});
+setup(sc,TIM,en(10)+0.15+2.3+0.35);
+</script></body></html>
