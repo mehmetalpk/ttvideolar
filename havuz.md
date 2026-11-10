@@ -11,7 +11,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 >  - PARKUR TESTİ: her gün SADECE 12:30 Park Yeri partı bölünmüş ekran (üst hikâye 1016 px + alt özgün çöp adam parkuru 904 px, 60 fps) — tools/parkur/README.md. Her videoda farklı seed. Diğer 3 video tam ekran. Bildirimde hangisinin parkurlu olduğunu yaz (karşılaştırma için).
 >  - DEVAM KOŞULU (≥100 TikTok beğenisi) bu iki seride UYGULANMAZ; bölüm planlarını sonuna kadar yürüt.
 
-> 11 KASIM ÖZEL (güncellendi 10 Kas 19:20 — YENİ FORMAT 3 geçerli): 11 Kasım'da 4 videonun HEPSİNİ üret (09:00 HK S2 P1, 12:30 Park P3, 17:00 HK S2 P2, 20:30 Park P4). Kullanıcı ayrıca garson videosunu elle yükleyebilir; ona da hatırlat. Bildirimde kullanıcıya garson videosunun açıklamasını da hatırlat: "Müşteri kanatlarını tarttırdı… tarttık ve üçünü çöpe attık 🍗⚖️ Sence garson haklı mıydı? 👇 / Takip etmeyi unutma ✅ / Reddit'ten uyarlanmıştır. / #hikaye #reddithikayeleri #komedi #restoran #garson #müşteri #keşfet #fyp". stories.md'ye garson videosunu "2026-11-11 | ... | manuel | SABAH" olarak işle. Bu not 12 Kasım'da geçersizdir.
+> 11 KASIM ÖZEL (güncellendi 10 Kas 19:20 — YENİ FORMAT 3 geçerli): 11 Kasım'da 4 videonun HEPSİNİ üret (09:00 HK S2 P2, 12:30 Park P3, 17:00 HK S2 P3, 20:30 Park P4 — HK S2 P1 10 Kas akşamı elle üretildi ve kullanıcıya verildi, TEKRAR ÜRETME). Kullanıcı ayrıca garson videosunu elle yükleyebilir; ona da hatırlat. Bildirimde kullanıcıya garson videosunun açıklamasını da hatırlat: "Müşteri kanatlarını tarttırdı… tarttık ve üçünü çöpe attık 🍗⚖️ Sence garson haklı mıydı? 👇 / Takip etmeyi unutma ✅ / Reddit'ten uyarlanmıştır. / #hikaye #reddithikayeleri #komedi #restoran #garson #müşteri #keşfet #fyp". stories.md'ye garson videosunu "2026-11-11 | ... | manuel | SABAH" olarak işle. Bu not 12 Kasım'da geçersizdir.
 
 > MANUEL MOD (kullanıcı isteği, 10 Kas 17:25 — kullanıcı "MANUEL MOD BİTTİ" diyene kadar geçerli; ADIM 4'teki Metricool PLANLAMASININ yerine geçer):
 >  - Metricool hesap limiti doldu ("You have reached your Metricool account limit"), gönderiler yayınlanmıyor. createScheduledPost/updateScheduledPost ÇAĞIRMA; videoyu depoya push etmeye de gerek yok.
@@ -65,7 +65,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 ### SERİ (aktif, 2 part/gün): Hacker Kerem — SEZON 2 "Akıllı Ev" (komedi) — 11 Kas'tan itibaren 09:00 ve 17:00
 - Karakterler/renkler Sezon 1 ile AYNI (anlatıcı abi Emre = Emrullah sesi; Kerem 12, güneş gözlüklü; hacker kurslu baba; "gerçek hacker" anne; anneanne). Rozet: "SEZON 2 · PART n". Açıklama satırı: "Hacker Kerem Sezon 2 — Part n 👀".
-- P1: Babam hacker kursundan sonra evi akıllı eve çevirdi: ışıklar, perde, konuşan buzdolabı. Sistem şifresini gururla açıkladı… "Kerem123". Kanca: "Babam evin şifresini Kerem123 yaptı." Cliff: Kerem gülümsüyor.
+- P1: Babam hacker kursundan sonra evi akıllı eve çevirdi: ışıklar, perde, konuşan buzdolabı. Sistem şifresini gururla açıkladı… "Kerem123". Kanca: "Babam evin şifresini Kerem123 yaptı." Cliff: Kerem gülümsüyor. ✅ 2026-11-10 (elle, kullanıcıya verildi; 30,7 sn)
 - P2: Kerem gece sistemi ele geçirdi; sabah 6'da disko ışıkları ve son ses marşla babamı uyandırdı. Babam yataktan düştü. Cliff: Annem sakin: "Ben de sisteme bir şey ekledim."
 - P3: Annemin eklediği: ödev bitmeden Wi-Fi açılmıyor, buzdolabı "önce matematik" diyor. Kerem ilk kez yenik. Cliff: Kerem anneanneyi müttefik yapar.
 - P4: Anneanne sesli asistana "Çay demle" diye bağırdı; sistem çöktü, ev karardı, perdeler kapandı. Cliff: Kapı kilitlendi, herkes dışarıda kaldı.

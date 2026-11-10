@@ -19,3 +19,4 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-08 | Komşum arabamın önünü kapattı (Park Yeri Savaşı) [Part 1/2] | Reddit r/pettyrevenge tarzı komşu/park hikâyelerinden ilham (özgün) | komedi/seri | erkek (Emrullah Tuna) | 83.4 | 17:00 | TikTok+YouTube+Instagram | AKŞAM
 - 2026-11-09 | Müşteri kanatlarını tarttırdı (Yarım kilo kanat) | r/MaliciousCompliance u/advocatus_ebrius_est (havuz) | komedi/münferit | erkek (Emrullah Tuna) | 85.6 | 09:00 | TikTok+YouTube+Instagram | SABAH
 - 2026-11-09 | Park yerimi kapan komşu evi de kapmış (Park Yeri Savaşı) [Part 2 — FİNAL] | Reddit r/pettyrevenge tarzı komşu/park hikâyelerinden ilham (özgün) | komedi/seri | erkek (Emrullah Tuna) | 84.5 | 17:00 | TikTok+YouTube+Instagram | AKŞAM
+- 2026-11-10 | Hacker Kerem S2: Akıllı Ev [Part 1] | kendi kurgu | komedi/seri | Emrullah | 30.7 sn | — | manuel | elle verildi | parkur:hayır
