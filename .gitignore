@@ -1,0 +1,12 @@
+# video build artifacts (sadece script/scenes/shots/req/part kalır)
+tools/kanallar/*/*/out/
+tools/kanallar/*/*/prev/
+tools/kanallar/*/*/*.mp3
+tools/kanallar/*/*/*.mp4
+tools/kanallar/*/*/anim.html
+tools/kanallar/*/*/align.json
+tools/kanallar/*/*/lead.json
+tools/kanallar/*/*/contact.jpg
+tools/kanallar/*/*/render.log
+tools/kanallar/*/*/scenes.json
+tools/kanallar/*/*/prev.js
