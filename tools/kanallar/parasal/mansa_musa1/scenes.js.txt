@@ -1,0 +1,29 @@
+function desert(t){x.fillStyle=grad(0,H,['#f2a040','#f8d890']);x.fillRect(0,0,W,H);sun(820,430,110);x.fillStyle='#d99a4a';x.beginPath();x.moveTo(0,1000);for(let i=0;i<=12;i++)x.lineTo(i*90,980+Math.sin(i*0.9+1)*50);x.lineTo(W,H);x.lineTo(0,H);x.fill();x.fillStyle='#c4823a';x.fillRect(0,1150,W,H-1150);}
+function camel(cx,base,s,t,gold=1){x.save();x.translate(cx,base);x.scale(s,s);const a=Math.sin(t*5)*12;x.strokeStyle='#5a3418';x.lineWidth=16;x.lineCap='round';[[-70,a],[-40,-a],[50,a],[80,-a]].forEach(([lx,d])=>{x.beginPath();x.moveTo(lx,-120);x.lineTo(lx+d,0);x.stroke();});x.fillStyle='#8a5a2a';x.beginPath();x.ellipse(0,-150,120,55,0,0,7);x.fill();x.beginPath();x.ellipse(-10,-200,55,45,0,0,7);x.fill();x.lineWidth=26;x.strokeStyle='#8a5a2a';x.beginPath();x.moveTo(100,-160);x.quadraticCurveTo(150,-220,160,-270);x.stroke();x.fillStyle='#8a5a2a';x.beginPath();x.ellipse(180,-275,40,22,0.2,0,7);x.fill();if(gold){x.fillStyle='#e0b640';rr(-110,-180,60,70,10);x.fill();rr(40,-180,60,70,10);x.fill();x.fillStyle='#fff3a0';x.fillRect(-100,-170,12,50);x.fillRect(50,-170,12,50);}x.restore();}
+function king(cx,base,s){spot(cx,base-250*s,320*s,0.4,'255,215,100');sil(cx,base,s,'#1a0e05');x.fillStyle='#ffd23f';x.save();x.translate(cx,base-372*s);x.beginPath();x.moveTo(-48*s,0);x.lineTo(-48*s,-55*s);x.lineTo(-24*s,-22*s);x.lineTo(0,-65*s);x.lineTo(24*s,-22*s);x.lineTo(48*s,-55*s);x.lineTo(48*s,0);x.fill();x.restore();}
+function goldRain(t,n=26){const r=rng(4);for(let i=0;i<n;i++){const px=r()*W,sp=300+r()*400,py=((r()*H+t*sp)%(H+200))-100;x.save();x.translate(px,py);x.scale(Math.max(0.1,Math.abs(Math.cos(t*4+i))),1);x.fillStyle='#e0b640';x.beginPath();x.arc(0,0,26,0,7);x.fill();x.strokeStyle='#a07a20';x.lineWidth=5;x.beginPath();x.arc(0,0,17,0,7);x.stroke();x.restore();}}
+function cairo(t){x.fillStyle=grad(0,H,['#f6c27a','#f8e2b0']);x.fillRect(0,0,W,H);city(1150,'#b07a4a',true);mosque(300,1150,0.7,'#8a5a32');mosque(800,1150,0.6,'#8a5a32');x.fillStyle='#d9b07a';x.fillRect(0,1150,W,H-1150);}
+// 0 kanca
+shot(0,0,t=>{zoomed(1+t*0.04,()=>{cairo(t);goldRain(t);});bigText('O KADAR ZENGİNDİ',W/2,350,95,'#fff',1);bigText('Kİ...',W/2,500,130,'#ffd23f',eOut(cl((t-0.4)*3)));});
+// 1 1324
+shot(1,1,t=>{desert(t);yearStamp('1324','MALİ İMPARATORLUĞU',eOut(cl(t*2)),760);});
+// 2 mansa musa hacca
+shot(2,2,t=>{bgMoney();king(540,1180,1.7);bigText('MANSA MUSA',W/2,340,130,'#ffd23f',eOut(cl(t*3)));badge(540,520,'HAC YOLCULUĞU','#1f6b5e',(t-1)*3);});
+// 3 binlerce kişilik kervan
+shot(3,3,t=>{desert(t);for(let i=0;i<7;i++)camel(((i*230+t*120)%1500)-200,1120-(i%2)*30,0.75,t+i);for(let i=0;i<12;i++){x.fillStyle='#3a2410';x.beginPath();x.arc(((i*110+t*120+60)%1400)-150,1050,14,0,7);x.fill();}bigText('BİNLERCE KİŞİ',W/2,340,120,'#7a3a10',1);});
+// 4 tonlarca altın
+shot(4,4,t=>{desert(t);camel(540,1120,1.6,t);bigText('TONLARCA',W/2,340,140,'#ffd23f',back(cl(t*2.5)));bigText('ALTIN',W/2,500,120,'#fff',eOut(cl((t-0.5)*3)));});
+// 5 sahra aşıp kahire
+shot(5,5,t=>{x.fillStyle=grad(0,H,['#e8d3a6','#cdb07a']);x.fillRect(0,0,W,H);x.fillStyle='rgba(120,90,50,0.35)';x.beginPath();x.ellipse(540,820,420,300,0,0,7);x.fill();mapArrow(220,960,860,560,cl(t/1.6));bigText('MALİ',220,1020,60,'#7a3a10',1);bigText('KAHİRE',860,500,80,'#c1121f',eOut(cl((t-1.4)*3)));bigText('SAHRA',W/2,340,130,'#7a3a10',1);});
+// 6 altın dağıtmaya başladı
+shot(6,6,t=>{cairo(t);king(540,1180,1.4);for(let i=0;i<10;i++){const p=((t*0.9+i/10)%1);x.fillStyle='#e0b640';x.beginPath();x.arc(540+Math.cos(i*0.63)*p*480,800-Math.sin(i*0.63)*p*300+p*p*300,22,0,7);x.fill();}bigText('ALTIN DAĞITTI',W/2,340,115,'#ffd23f',1);});
+// 7 görevliler fakirler tüccarlar
+shot(7,7,t=>{cairo(t);['GÖREVLİLER','FAKİRLER','TÜCCARLAR'].forEach((w,i)=>badge(540,480+i*170,w,['#1f6b5e','#2a5cff','#c1121f'][i],(t-i*0.6)*3));for(let i=0;i<3;i++)sil(240+i*300,1180,0.9,'#3a2410');});
+// 8 sokaklar altınla doldu
+shot(8,8,t=>{cairo(t);goldRain(t,40);x.fillStyle='#e0b640';x.fillRect(0,1150-cl(t/2)*120,W,200);bigText('ALTIN SELİ',W/2,350,140,'#ffd23f',back(cl(t*2.5)));});
+// 9 herkes zengin sandı
+shot(9,9,t=>{cairo(t);for(let i=0;i<5;i++){const j=Math.abs(Math.sin(t*5+i))*40;sil(140+i*200,1180-j,0.8,'#3a2410');}bigText('HERKES ZENGİN',W/2,350,120,'#fff',1);bigText('Mİ?',W/2,500,130,'#ffd23f',eOut(cl((t-0.8)*3)));});
+// 10 değeri yerle bir
+shot(10,10,t=>{bgDoc('#2a0a0a','#0a0202');downChart(t,cl(t/2));bigText('DEĞERİ',W/2,340,130,'#fff',1);bigText('ÇÖKECEKTİ',W/2,500,130,'#ff3b3b',eOut(cl((t-0.8)*3)));});
+// 11 outro
+shot(11,11,t=>outro(t,2,'#13261c','#060d09'));
