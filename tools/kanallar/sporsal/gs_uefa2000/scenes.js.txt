@@ -1,0 +1,29 @@
+const GS='#a90432',GY='#fdb912',AR='#e30613';
+function redCard(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#e30613';rr(-70,-100,140,200,12);x.fill();x.strokeStyle='#fff';x.lineWidth=6;rr(-70,-100,140,200,12);x.stroke();x.restore();}
+function keeper(cx,base,s,dive,col='#2a2a2a'){x.save();x.translate(cx,base);x.rotate(dive);player(0,0,s,col,'#111',0);x.restore();}
+function goalScene(t,col,miss){night();flood(t);crowd(380,820,t,[GS,GY,AR,'#fff']);pitch(1000,0);goalNet(540,1000,1.3,miss?0:Math.max(0,1-t*2));}
+function cupBig(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#d9dde3';x.beginPath();x.moveTo(-130,-200);x.quadraticCurveTo(-140,40,-30,80);x.lineTo(-40,160);x.lineTo(40,160);x.lineTo(30,80);x.quadraticCurveTo(140,40,130,-200);x.closePath();x.fill();x.fillStyle='#9aa3ad';rr(-110,160,220,50,10);x.fill();x.strokeStyle='#d9dde3';x.lineWidth=18;x.beginPath();x.arc(-150,-100,60,1.6,4.6);x.stroke();x.beginPath();x.arc(150,-100,60,-1.4,1.5);x.stroke();x.fillStyle='rgba(255,255,255,0.5)';x.fillRect(-90,-180,20,180);x.restore();}
+// 0 kanca
+shot(0,0,t=>{zoomed(1+t*0.04,()=>{night();flood(t);crowd(380,900,t,[GS,GY]);rays(540,820,t,'rgba(253,185,18,0.15)');cupBig(540,900,1.2,t);});bigText('10 KİŞİ KALDILAR',W/2,330,105,'#fff',1);bigText('KUPAYI ALDILAR',W/2,480,105,GY,1);});
+// 1 tarih
+shot(1,1,t=>{stadium(t,[GS,GY,AR,'#fff']);bigText('17 MAYIS 2000',W/2,640,120,GY,eOut(cl(t*3)));bigText('KOPENHAG',W/2,330,130,'#fff',1);badge(540,800,'UEFA KUPASI FİNALİ','#1a3a8a',(t-0.6)*3);});
+// 2 arsenal
+shot(2,2,t=>{night();flood(t);pitch(1000,0);for(let i=0;i<3;i++){player(250+i*290,1250,1.1,GS,GY,Math.sin(t*4+i)>0?1:0);}bigText('GALATASARAY',W/2,330,110,GY,1);bigText('vs ARSENAL',W/2,480,110,AR,eOut(cl((t-0.3)*3)));});
+// 3 hiçbir türk takımı
+shot(3,3,t=>{bgDoc('#2a0410','#0a0004');trFlag(540,760,520,t);bigText('AVRUPA\'DA KUPA',W/2,330,105,'#fff',1);if(t>1)stampT('HİÇ YOK',540,1380,eOut(cl((t-1)*3)),'#e30613',96);});
+// 4 90 dk 0-0
+shot(4,4,t=>{night();flood(t);crowd(380,900,t,[GS,GY,AR]);score(0,0,'GS','ARS',eOut(cl(t*3)),640);bigText('90 DAKİKA',W/2,330,130,'#fff',1);});
+// 5 hagi kırmızı
+shot(5,5,t=>{night();flood(t);pitch(1000,0);player(540,1250,1.4,GS,GY,0);if(t>0.8)redCard(760,640,1.3*back(cl((t-0.8)*2.5)),0.15);bigText('UZATMA',W/2,300,110,'#fff',1);bigText('KIRMIZI KART',W/2,440,100,AR,eOut(cl((t-0.8)*3)));});
+// 6 10 kişi direndi
+shot(6,6,t=>{night();flood(t);pitch(1000,0);for(let i=0;i<10;i++){player(110+(i%5)*215,i<5?1000:1300,0.75,GS,GY,0);}bigText('10 KİŞİ',W/2,330,150,GY,1);badge(540,500,'PENALTILAR','#1a3a8a',(t-1.2)*3);});
+// 7 arsenal iki atış direk
+shot(7,7,t=>{goalScene(t,AR,1);const p=cl(t/0.7);ballS(540+p*300,1450-p*480,40,t*10);if(t>0.7){x.save();x.strokeStyle='#fff';x.lineWidth=8;for(let i=0;i<5;i++){x.beginPath();x.moveTo(840,970);x.lineTo(840+Math.cos(i*1.3)*80,970+Math.sin(i*1.3)*80);x.stroke();}x.restore();}bigText('DİREK!',W/2,330,150,AR,back(cl((t-0.7)*2.5)));badge(540,500,'2 KAÇAN','#e30613',(t-1)*3);});
+// 8 GS ilk üç gol
+shot(8,8,t=>{goalScene(t,GS,0);for(let i=0;i<3;i++){const on=t>0.4+i*0.5;x.fillStyle=on?'#2bd36b':'#444';x.beginPath();x.arc(340+i*200,520,60,0,7);x.fill();if(on){x.strokeStyle='#fff';x.lineWidth=14;x.beginPath();x.moveTo(310+i*200,520);x.lineTo(335+i*200,548);x.lineTo(375+i*200,494);x.stroke();}}bigText('3 / 3',W/2,330,150,GY,1);});
+// 9 popescu gol
+shot(9,9,t=>{goalScene(t,GS,0);keeper(380,1000,1.1,t>0.6?-0.9:0);const p=cl(t/0.6);ballS(540+p*180,1450-p*560,40,t*10);bigText('SON ATIŞ',W/2,330,130,'#fff',1);if(t>0.7)bigText('GOL!',W/2,500,180,GY,back(cl((t-0.7)*2.5)));});
+// 10 4-1 kupa
+shot(10,10,t=>{night();flood(t);confetti(t,60);rays(540,820,t,'rgba(253,185,18,0.18)');cupBig(540,860,1.2,t);score(4,1,'GS','ARS',eOut(cl(t*3)),330);bigText('İLK KUPA',W/2,560,110,GY,eOut(cl((t-0.8)*3)));});
+// 11 outro
+shot(11,11,t=>outro(t,0,'#3a0414','#0a0004'));

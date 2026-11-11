@@ -1,0 +1,24 @@
+function bedM(cx,base,s,t){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#3a2a1a';rr(-300,-60,600,60,10);x.fill();x.fillStyle='#e8e2d4';rr(-290,-130,580,80,20);x.fill();x.fillStyle='#ff9f5a';rr(-120,-190+Math.sin(t*2)*4,400,100,40);x.fill();x.fillStyle='#fff';rr(-280,-180,150,70,30);x.fill();x.fillStyle='#ffd23f';x.font=`900 60px ${F}`;x.textAlign='center';x.fillText('Z',200,-260-((t*60)%80));x.fillText('z',260,-330-((t*60)%80));x.restore();}
+function bubbleZone(cx,cy,r,t,col){x.save();x.strokeStyle=col;x.lineWidth=10;x.setLineDash([24,16]);x.lineDashOffset=-t*40;x.beginPath();x.arc(cx,cy,r,0,7);x.stroke();x.restore();}
+function muscle(cx,cy,s,g){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#ffd23f';x.beginPath();x.moveTo(-200,120);x.quadraticCurveTo(-180,-40,-60,-60);x.quadraticCurveTo(0,-150-g*60,80,-90);x.quadraticCurveTo(140,-40,100,20);x.quadraticCurveTo(40,60,-40,40);x.lineTo(-90,140);x.closePath();x.fill();x.restore();}
+function shower(cx,cy,t){x.save();x.fillStyle='#9fb4c8';rr(cx-90,cy-40,180,40,20);x.fill();x.strokeStyle='rgba(120,200,255,0.8)';x.lineWidth=6;for(let i=0;i<12;i++){const ox=cx-80+i*15,oy=((t*600+i*70)%360);x.beginPath();x.moveTo(ox,cy+oy);x.lineTo(ox-4,cy+oy+30);x.stroke();}x.restore();}
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);bubbleZone(540,820,300-cl(t/2)*60,t,'#ffd23f');couch(540,950,t);bigText('KONFOR ALANIN',W/2,330,100,'#fff',1);bigText('SENİ ÖLDÜRÜYOR',W/2,480,100,'#ff2d2d',1);});
+// 1 yatak ekran
+shot(1,1,t=>{blk();if(t<1.4)bedM(540,1000,1.3,t);else phone(540,800,1.3,t);bigText(t<1.4?'SICAK YATAK':t<2.8?'SONSUZ EKRAN':'AYNI GÜN',W/2,330,120,'#fff',1);});
+// 2 enerji harcamamak
+shot(2,2,t=>{blk();brainI(540,780,1.5,'#ff9ad5');badge(540,1380,'ENERJİ HARCAMA','#c1121f',(t-1.2)*3);slam('BEYNİN İSTER',330,110,'#fff',t);});
+// 3 kas zorlanınca büyür
+shot(3,3,t=>{blk();rays(540,760,t,'rgba(255,210,63,0.12)');dumbbell(540,820-Math.abs(Math.sin(t*3))*120,1.8);slam('ZORLANINCA',300,110,'#fff',t);if(t>0.6)slam('BÜYÜR',460,150,'#ffd23f',t-0.6);});
+// 4 orada büyümez
+shot(4,4,t=>{blk();bubbleZone(540,780,280,t,'#5fe08a');x.fillStyle='#2a6a3a';x.beginPath();x.ellipse(540,930,120,30,0,0,7);x.fill();x.strokeStyle='#5fe08a';x.lineWidth=10;x.beginPath();x.moveTo(540,930);x.lineTo(540,860);x.stroke();if(t>1.2)stampX(540,800,1.2,cl((t-1.2)*3));slam('HİÇBİR ŞEY BÜYÜMEZ',330,90,'#fff',t);});
+// 5 bir adım geride
+shot(5,5,t=>{blk();stepsUp(6,Math.max(0,4-Math.floor(t)),t);slam('HER GÜN',300,110,'#fff',t);if(t>0.6)slam('1 ADIM GERİ',450,130,'#ff2d2d',t-0.6);});
+// 6 canını sıkan
+shot(6,6,t=>{blk();shk(t,3);rays(540,760,t,'rgba(255,45,45,0.10)');slam('HER GÜN',330,120,'#fff',t);if(t>0.5)slam('CANINI SIKAN',520,120,'#ffd23f',t-0.5);if(t>1)slam('BİR ŞEY YAP',700,120,'#fff',t-1);});
+// 7 duş, erken, konuşma
+shot(7,7,t=>{blk();const k=Math.min(2,Math.floor(t/0.9));if(k==0)shower(540,620,t);else if(k==1)alarm(540,800,1.4,t,'05:00');else{sbubble(540,780,600,180,'Konuşmamız lazım.',1,56);}bigText(['SOĞUK DUŞ','ERKEN KALKIŞ','ZOR KONUŞMA'][k],W/2,330,120,'#ffd23f',back(cl(((t%0.9))*4)));});
+// 8 rahatsızlık kanıt
+shot(8,8,t=>{blk();rays(540,760,t,'rgba(255,210,63,0.14)');slam('RAHATSIZLIK',330,130,'#fff',t);if(t>0.7)slam('= BÜYÜME',560,150,'#ffd23f',t-0.7);});
+// 9 outro
+shot(9,9,t=>outro(t,3,'#2a0606','#050000'));
