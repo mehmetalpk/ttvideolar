@@ -1,0 +1,32 @@
+function desert(t){x.fillStyle=grad(0,H,['#f2b36a','#f7dca8']);x.fillRect(0,0,W,H);x.fillStyle='#e0b070';x.beginPath();x.moveTo(0,1250);x.quadraticCurveTo(300,1150,600,1240);x.quadraticCurveTo(850,1300,W,1200);x.lineTo(W,H);x.lineTo(0,H);x.fill();}
+function pyr(cx,base,s,col='#d9a85a'){x.fillStyle=col;x.beginPath();x.moveTo(cx-200*s,base);x.lineTo(cx,base-200*s);x.lineTo(cx+200*s,base);x.fill();x.fillStyle='rgba(0,0,0,0.12)';x.beginPath();x.moveTo(cx,base-200*s);x.lineTo(cx+200*s,base);x.lineTo(cx+40*s,base);x.fill();}
+function wellY(cx,base,s,t){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#8a7a6a';rr(-160,-140,320,140,10);x.fill();x.fillStyle='#6a5a4a';for(let i=0;i<4;i++)x.fillRect(-160+i*80,-140,6,140);x.fillStyle='#2a1a10';x.beginPath();x.ellipse(0,-140,150,30,0,0,7);x.fill();x.fillStyle='#5a3a1a';x.fillRect(-170,-380,20,240);x.fillRect(150,-380,20,240);x.fillRect(-180,-390,360,20);x.strokeStyle='#c9a46a';x.lineWidth=5;x.beginPath();x.moveTo(0,-380);x.lineTo(0,-140+Math.sin(t*2)*10);x.stroke();x.restore();}
+function bucket(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#7a5228';x.beginPath();x.moveTo(-50,-40);x.lineTo(50,-40);x.lineTo(40,50);x.lineTo(-40,50);x.fill();x.strokeStyle='#c9a46a';x.lineWidth=5;x.beginPath();x.arc(0,-40,50,Math.PI,0);x.stroke();x.restore();}
+function egHall(c1,c2){x.fillStyle=grad(0,H,[c1,c2]);x.fillRect(0,0,W,H);for(let i=0;i<4;i++){x.fillStyle='rgba(255,215,120,0.18)';rr(90+i*260,260,90,1300,20);x.fill();x.fillStyle='rgba(255,215,120,0.25)';x.fillRect(70+i*260,240,130,40);}x.fillStyle='rgba(0,0,0,0.35)';x.fillRect(0,1500,W,420);}
+function prison(t){x.fillStyle=grad(0,H,['#2a2a30','#0a0a0e']);x.fillRect(0,0,W,H);x.fillStyle='#3a3a42';for(let r=0;r<12;r++)for(let c=0;c<6;c++){rr((r%2?-90:0)+c*190,r*160,180,150,8);x.fill();}x.fillStyle='rgba(255,230,160,0.25)';x.beginPath();x.moveTo(700,200);x.lineTo(860,200);x.lineTo(1000,1400);x.lineTo(500,1400);x.fill();x.fillStyle='#1a1a1e';for(let i=0;i<4;i++)x.fillRect(715+i*40,190,12,150);}
+function cow(cx,base,s,thin,col){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;const w=thin?70:120,h=thin?50:80;x.beginPath();x.ellipse(0,-110,w,h,0,0,7);x.fill();x.fillRect(-w+15,-110,14,110);x.fillRect(w-30,-110,14,110);x.beginPath();x.ellipse(w+20,-150,30,36,0,0,7);x.fill();x.fillStyle='#f2e6c8';x.beginPath();x.moveTo(w+5,-182);x.lineTo(w-10,-210);x.lineTo(w+15,-185);x.moveTo(w+35,-182);x.lineTo(w+50,-210);x.lineTo(w+25,-185);x.fill();if(thin){x.strokeStyle='rgba(0,0,0,0.35)';x.lineWidth=4;for(let i=-2;i<=2;i++){x.beginPath();x.moveTo(i*18,-150);x.lineTo(i*18,-80);x.stroke();}}x.restore();}
+function wheat(cx,base,s,t,dry){x.save();x.translate(cx,base);x.rotate(Math.sin(t*2+cx)*0.05);x.scale(s,s);x.strokeStyle=dry?'#8a6a3a':'#d9a83a';x.lineWidth=6;x.beginPath();x.moveTo(0,0);x.lineTo(0,-220);x.stroke();x.fillStyle=dry?'#8a6a3a':'#f2c14e';for(let i=0;i<6;i++){x.beginPath();x.ellipse(-12,-220-i*22,10,18,-0.5,0,7);x.fill();x.beginPath();x.ellipse(12,-220-i*22,10,18,0.5,0,7);x.fill();}x.restore();}
+function shirt(cx,cy,s,rot,torn){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#f2ead8';x.beginPath();x.moveTo(-70,-120);x.lineTo(-170,-60);x.lineTo(-130,10);x.lineTo(-80,-20);x.lineTo(-80,150);x.lineTo(80,150);x.lineTo(80,-20);x.lineTo(130,10);x.lineTo(170,-60);x.lineTo(70,-120);x.quadraticCurveTo(0,-80,-70,-120);x.fill();if(torn){x.strokeStyle='#8a1a1a';x.lineWidth=6;x.beginPath();x.moveTo(-10,-40);x.lineTo(15,0);x.lineTo(-12,40);x.lineTo(18,90);x.lineTo(-5,150);x.stroke();}x.restore();}
+function doorY(cx,base,s,open,locked){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#3a2410';rr(-130,-420,260,420,14);x.fill();x.fillStyle='#7a4a20';rr(-115-open*60,-405,230*(1-open*0.6),405,10);x.fill();if(locked){x.fillStyle='#ffd23f';rr(-30,-230,60,50,8);x.fill();x.strokeStyle='#ffd23f';x.lineWidth=10;x.beginPath();x.arc(0,-230,22,Math.PI,0);x.stroke();}x.restore();}
+// 0 kanca
+shot(0,0,t=>{egHall('#3a0a0a','#100202');doorY(540,1300,1.5,cl((t-1)/1),t<1);orb(540-cl((t-0.6)/1.2)*20,900,100,t);bigText('KAPILARI KİLİTLEDİ',W/2,330,100,'#fff',1);bigText('AMA O KAÇTI',W/2,480,110,'#ffd23f',1);});
+// 1 büyüdü, göz koydu
+shot(1,1,t=>{egHall('#4a3410','#140a04');orb(340,900,110,t);sil(760,1400,1.4,'#2a1018');x.fillStyle='#c1121f';x.globalAlpha=0.8;x.beginPath();x.arc(620,820,20,0,7);x.arc(650,820,20,0,7);x.fill();x.beginPath();x.moveTo(602,828);x.lineTo(635,870);x.lineTo(668,828);x.fill();x.globalAlpha=1;bigText('EVİN HANIMI',W/2,330,120,'#fff',eOut(cl(t*3)));});
+// 2 kilitledi haydi gel
+shot(2,2,t=>{egHall('#3a0a0a','#100202');for(let i=0;i<3;i++)doorY(240+i*300,1300,0.8,0,t>0.3+i*0.4);sbubble(540,500,560,160,'Haydi gel!',eOut(cl((t-0.8)*3)),66);});
+// 3 allah'a sığınırım
+shot(3,3,t=>{egHall('#1f3a2e','#06120c');rays(540,800,t,'rgba(255,230,140,0.15)');orb(540-cl(t/2)*200,820,130,t);doorY(860,1300,1,0,1);bigText('ALLAH\'A SIĞINIRIM',W/2,330,95,'#ffd23f',eOut(cl(t*3)));});
+// 4 gömleği yırttı
+shot(4,4,t=>{egHall('#3a0a0a','#100202');shirt(540,820,1.8,0,t>0.6);if(t>0.6){x.save();x.globalAlpha=1-cl((t-0.6)*2);x.fillStyle='#fff';x.fillRect(0,0,W,H);x.restore();}bigText('GÖMLEK YIRTILDI',W/2,330,100,'#fff',eOut(cl((t-0.5)*3)));});
+// 5 kocasıyla karşılaştılar
+shot(5,5,t=>{egHall('#4a3410','#140a04');doorY(540,1300,1.4,1,0);sil(540,1400,1.4,'#140a04');orb(240,900,90,t);sil(860,1400,1.2,'#2a1018');if(t>1.2)mapArrow(800,700,320,820,cl((t-1.2)*2),'#c1121f');bigText('SUÇU ATTI',W/2,330,140,'#c1121f',eOut(cl((t-1)*3)));});
+// 6 şahit: arkadan mı
+shot(6,6,t=>{egHall('#1f3a2e','#06120c');shirt(330,820,1.1,0,0);shirt(760,820,1.1,0,0);bigText('ÖNDEN?',330,560,70,'#fff',1);bigText('ARKADAN?',760,560,70,'#ffd23f',1);bigText('BİR ŞAHİT',W/2,330,130,'#fff',eOut(cl(t*3)));badge(540,1380,'ARKADANSA → DOĞRU','#1f6b5e',(t-2.5)*3);});
+// 7 arkadan yırtılmıştı
+shot(7,7,t=>{egHall('#1f3a2e','#06120c');zoomed(1+t*0.05,()=>shirt(540,820,1.9,0,1));if(t>0.5)stampT('ARKADAN',540,560,eOut(cl((t-0.5)*3)),'#1f6b5e',100);});
+// 8 masum ama zindan
+shot(8,8,t=>{prison(t);orb(540,900,110,t);badge(540,500,'MASUM','#1f6b5e',t*3);if(t>1.2)bigText('ZİNDAN',W/2,330,170,'#c1121f',back(cl((t-1.2)*2.5)));});
+// 9 zindan daha sevimli
+shot(9,9,t=>{prison(t);rays(780,300,t,'rgba(255,230,140,0.12)');orb(540,900,120,t);bigText('ZİNDAN',W/2,330,150,'#fff',1);bigText('DAHA SEVİMLİ',W/2,490,110,'#ffd23f',eOut(cl((t-0.8)*3)));});
+// 10 outro
+shot(10,10,t=>outro(t,3,'#2a2a30','#0a0a0e'));
