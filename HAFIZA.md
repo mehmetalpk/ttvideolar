@@ -27,6 +27,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-11 09:55 | mehmetalp | HK S2 P2'nin 09:00 Instagram kopyası KALIYOR (iyi izlenmiş); 17:00 tekrar yayını sadece TikTok + YouTube. Kullanıcı 09:00 P2'yi sadece TikTok ve YouTube'dan silecek.
 - 2026-11-11 09:55 | mehmetalp | HK S2 sırası düzeltildi: 09:00'da yanlışlıkla çıkan P2'yi kullanıcı platformlardan elle silecek. Yeni sıra: 11.11 10:00 P1, 11.11 17:00 P2 (P3 yerine), 12.11 09:00 P3. 12.11 gece görevi HK için SADECE 17:00'ye P4 üretir. Park Yeri doğru: P1 (9.11) ve P2 (10.11) TikTok'ta yayınlanmış; P3 12:30, P4 20:30 normal.
 - 2026-11-11 09:50 | mehmetalp | HATA: HK S2 P1 elle atılmamıştı, 09:00'da P2 yayınlandı. P1 Metricool'a 11.11 10:00'a planlandı (uuid -5263305204779824488). DERS: "elle verildi" videolar yayınlanmış sayılmaz; seri devamı planlamadan önce önceki partın Metricool'da/platformda YAYINLANDIĞINI doğrula, yoksa önce onu planla.
 - 2026-11-11 03:40 | gece görevi (Claude) | İş 2 (Çarşamba İslamik): 13–19 Kas 7 video planlandı (09:00): Sebe P3, P4 final; yeni seri Hz. Yusuf kuyudan saraya P1–P5 (final 19.11). Hepsi ≤34 sn.
