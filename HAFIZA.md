@@ -19,7 +19,6 @@
 - Instagram zayıf (çoğu Reel 120–250). Sporsal TikTok neredeyse hiç dağıtılmıyor (muhtemelen maç görüntüsü kısıtı).
 
 ## Açık konular
-- Park P2 (açık uçlu) Instagram'a atılacak + ardından IG P3 → kullanıcının MP4'ü göndermesi bekleniyor (11.11 11:56).
 - Parkur (bölünmüş ekran) tam ekrana göre daha mı iyi? → birkaç gün veri sonra karşılaştır.
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
@@ -28,6 +27,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-11 12:05 | mehmetalp | Park P2 (açık uç, 65 sn) Instagram'a 11.11 12:10'a, Park P3 Instagram'a 12:40'a ayrı gönderi olarak planlandı (TT/YT P3 12:30). P2 MP4'ü 10 Kas günlük görev oturumunda üretilmişti; dosya kullanıcıdan alındı.
 - 2026-11-11 11:56 | mehmetalp | Park P2 Instagram'da hiç paylaşılmamış. IG sırası bozulmasın diye 12:30 Park P3'ten Instagram çıkarıldı (sadece TT+YT). Açık uçlu P2 MP4'ü depoda/çalışma alanında YOK; kullanıcıdan dosya istendi. Gelince: IG'ye P2 hemen, ardından IG'ye P3 ayrı gönderi.
 - 2026-11-11 09:55 | mehmetalp | HK S2 P2'nin 09:00 Instagram kopyası KALIYOR (iyi izlenmiş); 17:00 tekrar yayını sadece TikTok + YouTube. Kullanıcı 09:00 P2'yi sadece TikTok ve YouTube'dan silecek.
 - 2026-11-11 09:55 | mehmetalp | HK S2 sırası düzeltildi: 09:00'da yanlışlıkla çıkan P2'yi kullanıcı platformlardan elle silecek. Yeni sıra: 11.11 10:00 P1, 11.11 17:00 P2 (P3 yerine), 12.11 09:00 P3. 12.11 gece görevi HK için SADECE 17:00'ye P4 üretir. Park Yeri doğru: P1 (9.11) ve P2 (10.11) TikTok'ta yayınlanmış; P3 12:30, P4 20:30 normal.
