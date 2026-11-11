@@ -1,0 +1,30 @@
+function tableP(cx,base,w){x.fillStyle='#6b4a2a';x.fillRect(cx-w/2,base-160,w,30);x.fillRect(cx-w/2+20,base-130,20,130);x.fillRect(cx+w/2-40,base-130,20,130);}
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
+function potato(cx,cy,s,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#c8964f';x.beginPath();x.ellipse(0,0,120,80,0.2,0,7);x.fill();x.fillStyle='#8a6230';[[-50,-20],[30,10],[60,-30],[-10,40]].forEach(([a,b])=>{x.beginPath();x.arc(a,b,7,0,7);x.fill();});x.restore();}
+function chip(cx,cy,s,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#f2c14e';x.beginPath();x.moveTo(-60,0);x.bezierCurveTo(-60,-50,50,-60,62,-6);x.bezierCurveTo(70,40,-30,60,-60,0);x.fill();x.fillStyle='rgba(200,120,30,0.5)';x.beginPath();x.arc(10,-10,8,0,7);x.arc(-25,10,6,0,7);x.fill();x.restore();}
+function wedge(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#e8b45a';rr(-90,-22,180,44,12);x.fill();x.restore();}
+function fryer(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#2a2a2e';rr(-220,-40,440,160,30);x.fill();x.fillStyle='#d9a23a';x.beginPath();x.ellipse(0,-40,200,40,0,0,7);x.fill();for(let i=0;i<10;i++){x.fillStyle='rgba(255,255,255,0.6)';x.beginPath();x.arc(-160+((i*37+t*90)%320),-40+Math.sin(t*9+i)*8,6,0,7);x.fill();}x.fillStyle='#555';x.fillRect(200,-30,180,24);x.restore();}
+function chef(cx,base,s,angry,t){spot(cx,base-180*s,260*s,0.55,'255,200,140');sil(cx,base,s,'#1a1208');x.save();x.translate(cx,base-212*s);x.fillStyle='#f4f1ea';rr(-50*s,-90*s,100*s,90*s,30*s);x.fill();x.beginPath();x.ellipse(0,-90*s,70*s,40*s,0,0,7);x.fill();x.restore();if(angry){x.save();x.strokeStyle='#ff3b3b';x.lineWidth=10;for(let i=0;i<3;i++){const a=-0.6+i*0.6;x.beginPath();x.moveTo(cx+Math.sin(a)*170*s,base-330*s-Math.cos(a)*150*s);x.lineTo(cx+Math.sin(a)*230*s,base-330*s-Math.cos(a)*210*s);x.stroke();}x.restore();}}
+function salt(t){x.fillStyle='#fff';for(let i=0;i<40;i++){const px=380+((i*53)%300),py=500+((t*500+i*41)%500);x.fillRect(px,py,6,6);}}
+// 0 kanca
+shot(0,0,t=>{bgWarm();chef(300,1300,1.4,1,t);for(let i=0;i<6;i++)chip(700+Math.cos(i)*140,820+Math.sin(i*1.7)*160+Math.sin(t*3+i)*12,1.3,i+t);bigText('KIZGIN AŞÇI',W/2,320,130,'#fff',1);bigText('CİPSİ Mİ BULDU?',W/2,480,105,'#ffd23f',1);});
+// 1 1853 saratoga
+shot(1,1,t=>{bgShop();house(540,1300,620,520,'#8a5a3a');bigText('1853',W/2,330,200,'#ffd23f',eOut(cl(t*3)));badge(540,540,'SARATOGA, NEW YORK','#2f6fa8',(t-0.8)*3);badge(540,1380,'EFSANEYE GÖRE','#7a1d1d',(t-0.3)*3);});
+// 2 müşteri geri gönderdi
+shot(2,2,t=>{bgWarm();tableP(540,1250,700);const p=cl((t-1)/1.2);plateD(540-p*500,1150,1.1,1);for(let i=0;i<4;i++)wedge(540-p*500+(i-1.5)*40,1120,0.6,0.3*i);sil(820,1450,1.3,'#1a1208');sbubble(700,560,600,170,'Çok kalın!',eOut(cl(t*3)),70);});
+// 3 crum sinirlendi
+shot(3,3,t=>{bgShop();zoomed(1+t*0.08,()=>chef(540,1400,1.9,1,t));bigText('GEORGE CRUM',W/2,330,120,'#fff',1);badge(540,500,'SİNİRLENDİ','#c1121f',(t-0.4)*3);});
+// 4 ince dilim, kızart, tuzla
+shot(4,4,t=>{bgWarm();const k=Math.min(2,Math.floor(t/1.4));if(k==0){potato(540,800,1.8,0);knife(540+Math.sin(t*14)*40,700,1.3,0.3);for(let i=0;i<5;i++)chip(300+i*120,1000+Math.sin(i)*20,0.8,i);}else if(k==1){fryer(540,900,1.6,t);for(let i=0;i<5;i++)chip(380+i*80,830+Math.sin(t*8+i)*10,0.8,i+t);}else{for(let i=0;i<7;i++)chip(240+i*100,900+Math.sin(i*2)*60,1.0,i);salt(t);}bigText(['KÂĞIT İNCE','ÇITIR ÇITIR','BOL TUZ'][k],W/2,330,130,'#ffd23f',back(cl((t%1.4)*3)));});
+// 5 amacı kızdırmak
+shot(5,5,t=>{bgShop();chef(540,1400,1.6,0,t);sbubble(540,520,640,170,'Al bakalım!',eOut(cl(t*3)),70);});
+// 6 müşteri bayıldı
+shot(6,6,t=>{bgWarm();rays(540,800,t,'rgba(255,220,120,0.2)');for(let i=0;i<14;i++)chip(540+Math.cos(i*0.9+t)*300*cl(t),800+Math.sin(i*0.9+t)*300*cl(t),1.1,i+t*2);bigText('BAYILDI!',W/2,330,150,'#fff',1);badge(540,1380,'SARATOGA CİPSİ','#2f6fa8',(t-1)*3);});
+// 7 gerçek mi
+shot(7,7,t=>{bgDoc('#2a1e16','#120c08');chip(540,800,3,0);qmarks(540,760,t,3);bigText('GERÇEK Mİ?',W/2,330,140,'#ffd23f',eOut(cl(t*3)));});
+// 8 1817 kitap
+shot(8,8,t=>{bgDoc('#3a2a1a','#120c08');spot(540,820,500,0.4);bookOld(540,720,1.1,eOut(cl(t*1.5)),'1817');bigText('1817',W/2,330,180,'#ffd23f',eOut(cl(t*3)));badge(540,1380,'İNGİLİZ YEMEK KİTABI','#7a1d1d',(t-1.2)*3);});
+// 9 meşhur oldu
+shot(9,9,t=>{bgWarm();for(let i=0;i<20;i++){const r=rng(i*7+3);r();r();chip(80+((i*197)%920),((r()*H+t*300)%(H+200))-100,1+r(),t+i);}stampX(540,500,1.2,cl((t-0.4)*3));bigText('İCAT',W/2,500,120,'#fff',1);if(t>1.3)bigText('MEŞHUR OLDU',W/2,760,120,'#ffd23f',back(cl((t-1.3)*2.5)));});
+// 10 outro
+shot(10,10,t=>outro(t,0,'#3a2412','#0c0804'));
