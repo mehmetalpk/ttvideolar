@@ -3,6 +3,8 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> 12 KASIM ÖZEL (11 Kas sıra düzeltmesi): 12.11 09:00'da HK S2 P3 ZATEN PLANLI (uuid -7287343222471831941). HK için sadece 17:00'ye P4 üret. Park için normal: 12:30 P5, 20:30 P6. HK S2 P2 11.11 17:00'de yeniden yayınlanıyor (09:00'daki kopya kullanıcı tarafından silinecek).
+
 > SERİ SIRASI KONTROLÜ (11 Kas, hata sonrası): Bir serinin Part n'ini planlamadan önce Part n−1'in Metricool'da (getScheduledPosts/analitik) YAYINLANDIĞINI doğrula. "Elle verildi/manuel" kaydı yayın kanıtı DEĞİLDİR. Yayınlanmamışsa önce eksik partı (gerekirse yeniden üretip) planla, sırayı kaydır.
 
 > MANUEL MOD BİTTİ (10 Kas 20:20, kullanıcı): Metricool ücretli hesaba geçildi. Artık videolar Metricool'a PLANLANIR (createScheduledPost, tüm platformlar tek gönderide). Brand ID'ler DEĞİŞTİ → metricool_brandlar.md (Redditsel = 8012068; eski 7781132 geçersiz). Hayatsal iptal. Yemeksel'de TikTok yok (sadece IG+YT). Kriminal'in Instagram'ı yanlış hesap (psikolojik) — Kriminal'de IG'ye gönderme. Kullanıcıya yine her videonun MP4'ünü SendUserFile ile gönder (kontrol için) ama yapıştırma paketi yerine planlanan saatleri + plannerUrl'leri bildir.
