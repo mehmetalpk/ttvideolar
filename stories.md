@@ -25,3 +25,4 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-11 | Komşunun kuzeni park yerimi tapuyla istedi (Park Yeri Savaşı) [Part 3] | özgün devam (r/pettyrevenge tarzı) | komedi/seri | Emrullah | 28.4 sn | 12:30 | 1989063157716241612 | ÖĞLE | parkur:evet (seed 1111)
 - 2026-11-11 | Annem buzdolabına matematik sorusu koydu (Hacker Kerem S2) [Part 3] | kendi kurgu | komedi/seri | Emrullah | 34.8 sn | 17:00 | -3392938939315827719 | AKŞAM | parkur:hayır
 - 2026-11-11 | Dedem park yerini tavlada kaybetmiş (Park Yeri Savaşı) [Part 4] | özgün devam (r/pettyrevenge tarzı) | komedi/seri | Emrullah | 26.5 sn | 20:30 | 4720021240125673317 | GECE | parkur:hayır
+- 2026-11-11 | Hacker Kerem S2: Akıllı Ev [Part 1] | kendi kurgu | komedi/seri | Emrullah | 30.7 sn | 10:00 | -5263305204779824488 | geç yayın (P2'den sonra) | parkur:hayır

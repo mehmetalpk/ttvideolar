@@ -3,6 +3,8 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> SERİ SIRASI KONTROLÜ (11 Kas, hata sonrası): Bir serinin Part n'ini planlamadan önce Part n−1'in Metricool'da (getScheduledPosts/analitik) YAYINLANDIĞINI doğrula. "Elle verildi/manuel" kaydı yayın kanıtı DEĞİLDİR. Yayınlanmamışsa önce eksik partı (gerekirse yeniden üretip) planla, sırayı kaydır.
+
 > MANUEL MOD BİTTİ (10 Kas 20:20, kullanıcı): Metricool ücretli hesaba geçildi. Artık videolar Metricool'a PLANLANIR (createScheduledPost, tüm platformlar tek gönderide). Brand ID'ler DEĞİŞTİ → metricool_brandlar.md (Redditsel = 8012068; eski 7781132 geçersiz). Hayatsal iptal. Yemeksel'de TikTok yok (sadece IG+YT). Kriminal'in Instagram'ı yanlış hesap (psikolojik) — Kriminal'de IG'ye gönderme. Kullanıcıya yine her videonun MP4'ünü SendUserFile ile gönder (kontrol için) ama yapıştırma paketi yerine planlanan saatleri + plannerUrl'leri bildir.
 
 > YENİ FORMAT 3 (kullanıcı isteği, 10 Kas 19:11 — 11 Kasım'dan itibaren; önceki süre/slot/outro kurallarının YERİNE geçer; KANCA KURALI 2, ALTYAZI KONUMU, SES EFEKTİ YASAĞI, SAÇ, MANUEL MOD geçerli kalır):

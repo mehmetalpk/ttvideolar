@@ -19,6 +19,7 @@
 - Instagram zayıf (çoğu Reel 120–250). Sporsal TikTok neredeyse hiç dağıtılmıyor (muhtemelen maç görüntüsü kısıtı).
 
 ## Açık konular
+- Park Yeri P1/P2 yayınlandı mı? (HK P1 gibi atlanmış olabilir — 12:30'da P3 çıkacak) → kullanıcıya soruldu 11.11 09:50.
 - Parkur (bölünmüş ekran) tam ekrana göre daha mı iyi? → birkaç gün veri sonra karşılaştır.
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
@@ -27,6 +28,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-11 09:50 | mehmetalp | HATA: HK S2 P1 elle atılmamıştı, 09:00'da P2 yayınlandı. P1 Metricool'a 11.11 10:00'a planlandı (uuid -5263305204779824488). DERS: "elle verildi" videolar yayınlanmış sayılmaz; seri devamı planlamadan önce önceki partın Metricool'da/platformda YAYINLANDIĞINI doğrula, yoksa önce onu planla.
 - 2026-11-11 03:40 | gece görevi (Claude) | İş 2 (Çarşamba İslamik): 13–19 Kas 7 video planlandı (09:00): Sebe P3, P4 final; yeni seri Hz. Yusuf kuyudan saraya P1–P5 (final 19.11). Hepsi ≤34 sn.
 - 2026-11-11 03:30 | gece görevi (Claude) | İş 1: 12.11 için İslamik Sebe P2 (09:00), Sporsal GS 2000 UEFA (09:00), Sanatsal Sistina (09:00), Motivasyonel Zihin P2 (16:00), Yemeksel cips (16:00) planlandı. Grup 3 bugün dolu olduğu için atlandı. İş 2 (Çarşamba İslamik) sürüyor.
 - 2026-11-11 02:05 | gece görevi (Claude) | 11 Kas 4 video üretildi ve Metricool'a planlandı: 09:00 HK S2 P2, 12:30 Park P3 (parkur), 17:00 HK S2 P3, 20:30 Park P4; hepsi ≤35 sn.
