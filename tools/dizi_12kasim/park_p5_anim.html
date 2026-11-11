@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="../story.js"></script><script src="../story2.js"></script><script src="../p34.js"></script><script src="../p56x.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.25),-0.03);
+// PARKUR: önemli her şey y 150–1300
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,4);radial(540,900,1300,'#1a5a3a','#04140c');burst(540,1000,800,'rgba(255,210,63,0.12)',t);x.save();zoom(540,1000,1.04+0.035*t);dede(540,1020,170,{smile:0.9,mouthOpen:0.6,brow:0.5,eyeOpen:0.9});die(220,1230,0.8,6,0.3+t);die(860,1230,0.8,6,-0.2-t);x.restore();x.restore();vignette(0.4);
+ hook([['DEDEM',110,'#fff'],['TAVLA TURNUVASI',105,YEL],['KURDU!',120,'#fff']],280);x.save();x.translate(215,215);x.scale(0.9,0.9);partBadgeN(5,0,0,T);x.restore();}});
+// 1 ödül 12
+sc.push({a:mid(1),f(t,T){lot();x.save();zoom(540,900,1.0+0.04*t);x.fillStyle='rgba(255,210,63,0.9)';rr(330,650,420,420,40);x.fill();txt('12',540,870,260,'#1a1a1a',{stroke:false,w:900});x.restore();
+ B('ÖDÜL:',300,120,'#fff',t);B('PARK YERİ!',440,120,YEL,t,0.15);}});
+// 2 Tarık kabul etti
+sc.push({a:mid(2),f(t,T){radial(540,850,1100,'#4a4f5a','#101218');x.save();zoom(540,860,1.05+0.05*t);tarik(540,860,190,{smile:1,brow:0.5,eyeOpen:0.8});x.restore();
+ B('TARIK',300,140,YEL,t);B('KABUL ETTİ',440,105,'#fff',t,0.15);}});
+// 3 balkonlar
+sc.push({a:mid(3),f(t,T){balconyCrowd(T,3);if(T>W2(3,'Çekirdekler'))seeds(540,600,T);
+ B('BÜTÜN SİTE',300,110,'#fff',t);if(T>W2(3,'Çekirdekler')-0.1)bigText('ÇEKİRDEKLER HAZIR',540,430,72,YEL,P(T,3,'Çekirdekler'),0);}});
+// 4 yılmaz pencereden
+sc.push({a:mid(4),f(t,T){x.fillStyle='#e9d7bd';x.fillRect(0,0,W,H);x.save();zoom(540,860,1.05+0.05*t);x.fillStyle='#7fb6e0';rr(240,560,600,620,16);x.fill();yilmaz(540,880,170,{smile:0.4,look:1,brow:0.3});x.strokeStyle='#fff';x.lineWidth=24;rr(240,560,600,620,16);x.stroke();x.restore();
+ B('YILMAZ BİLE!',300,120,'#fff',t);}});
+// 5 ilk el, ikinci el
+sc.push({a:mid(5),f(t,T){coffeeHouse();x.save();zoom(540,900,1.0+0.04*t);tarik(250,800,120,{smile:0.9,look:1});dede(830,800,120,{brow:0.4,look:-1});tavla(540,1000,0.5,T);x.restore();
+ const two=T>W2(5,'İkinci');score(two?2:1,0,330,prog(t,0,0.2));}});
+// 6 düşeş
+sc.push({a:mid(6),f(t,T){radial(540,850,1100,'#2a1a4a','#08040e');x.save();zoom(540,860,1.0+0.06*t);const r=T<W2(6,'düşeş')?T*12:0;die(360,860,1.6,6,r);die(720,860,1.6,6,-r*1.1);x.restore();
+ B('HER ATIŞTA...',290,100,'#fff',t);if(T>W2(6,'düşeş')-0.1)bigText('DÜŞEŞ!',540,480,140,YEL,P(T,6,'düşeş'),0);}});
+// 7 üç el üst üste
+sc.push({a:mid(7),f(t,T){x.save();shake(t,0,0.6,8);radial(540,850,1100,'#5a1a1a','#140404');for(let i=0;i<3;i++){const p=back(prog(t,i*0.2,i*0.2+0.3));x.save();x.translate(540,520+i*230);x.scale(p,p);die(-110,0,0.9,6,0.1);die(110,0,0.9,6,-0.1);x.restore();}x.restore();
+ B('ÜST ÜSTE 3 DÜŞEŞ!',300,95,RED,t);}});
+// 8 dedemin elleri titriyor
+sc.push({a:mid(8),f(t,T){x.fillStyle='#e8cfa0';x.fillRect(0,0,W,H);x.save();zoom(540,860,1.1+0.05*t);x.translate(Math.sin(T*50)*5,0);dede(540,860,200,{brow:0.8,sad:0.8,eyeOpen:0.8,smile:-0.4});sweat(760,700,1.0,T);x.restore();
+ score(3,0,330,1);}});
+// 9 kulağıma eğildi
+sc.push({a:mid(9),f(t,T){radial(540,860,1100,'#3a3a4a','#0a0a12');const p=ease(prog(t,0,1.0));x.save();zoom(540,880,1.0+0.05*t);person(BURAK,320,880,160,{look:1,brow:0.3});dede(780-120*p,860,160,{look:-1,brow:-0.4,smile:0.1});x.restore();
+ B('KULAĞIMA EĞİLDİ...',300,100,'#fff',t);}});
+// 10 zarlar hileli (kısa son)
+sc.push({a:mid(10),f(t,T){x.save();shake(t,0.1,0.6,10);radial(540,860,1100,'#c0401a','#2a0804');x.save();zoom(540,860,1.1+0.1*t);dede(320,860,160,{brow:-0.6,angry:0.6,mouthOpen:0.3,look:1});die(760,860,1.4,6,0.2);qmark(840,620,0.8,T);x.restore();x.restore();
+ bigText('"ZARLAR HİLELİ!"',540,330,120,YEL,prog(T,W2(10,'Zarlar')-0.05,W2(10,'Zarlar')+0.2),-0.04);}});
+// OUTRO
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,6,()=>{radial(540,900,1300,'#2a1a4a','#05040c');});}});
+setup(sc,TIM,en(10)+0.1+2.45);
+</script></body></html>

@@ -3,7 +3,9 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
-> 12 KASIM ÖZEL (11 Kas sıra düzeltmesi): 12.11 09:00'da HK S2 P3 ZATEN PLANLI (uuid -7287343222471831941). HK için sadece 17:00'ye P4 üret. Park için normal: 12:30 P5, 20:30 P6. HK S2 P2 11.11 17:00'de sadece TikTok+YouTube'da yeniden yayınlanıyor (Instagram'daki 09:00 kopyası kalıyor).
+> 13 KASIM (12 Kas gece görevi notu): Sıradaki partlar HK S2 P5 (09:00) + P6 (17:00), Park Yeri P7 FİNAL (12:30, parkurlu) → 20:30 boşalır: havuzdaki sıradaki seri "Bahçe Sınırı Savaşı" Part 1 başlar (YENİ FORMAT 3 kurallarıyla, ≤40 sn). Park P6 skoru: 3–3 sonrası dede kazandı (4–3); belediye yazısı açılmadı.
+
+> 12 KASIM ÖZEL (GEÇERSİZ, 12 Kas üretildi) (11 Kas sıra düzeltmesi): 12.11 09:00'da HK S2 P3 ZATEN PLANLI (uuid -7287343222471831941). HK için sadece 17:00'ye P4 üret. Park için normal: 12:30 P5, 20:30 P6. HK S2 P2 11.11 17:00'de sadece TikTok+YouTube'da yeniden yayınlanıyor (Instagram'daki 09:00 kopyası kalıyor).
 
 > SERİ SIRASI KONTROLÜ (11 Kas, hata sonrası): Bir serinin Part n'ini planlamadan önce Part n−1'in Metricool'da (getScheduledPosts/analitik) YAYINLANDIĞINI doğrula. "Elle verildi/manuel" kaydı yayın kanıtı DEĞİLDİR. Yayınlanmamışsa önce eksik partı (gerekirse yeniden üretip) planla, sırayı kaydır.
 
@@ -74,7 +76,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P1: Babam hacker kursundan sonra evi akıllı eve çevirdi: ışıklar, perde, konuşan buzdolabı. Sistem şifresini gururla açıkladı… "Kerem123". Kanca: "Babam evin şifresini Kerem123 yaptı." Cliff: Kerem gülümsüyor. ✅ 2026-11-10 (elle, kullanıcıya verildi; 30,7 sn)
 - P2: Kerem gece sistemi ele geçirdi; sabah 6'da disko ışıkları ve son ses marşla babamı uyandırdı. Babam yataktan düştü. Cliff: Annem sakin: "Ben de sisteme bir şey ekledim." ✅ 2026-11-11 (09:00, 32,9 sn)
 - P3: Annemin eklediği: ödev bitmeden Wi-Fi açılmıyor, buzdolabı "önce matematik" diyor. Kerem ilk kez yenik. Cliff: Kerem anneanneyi müttefik yapar. ✅ 2026-11-11 (17:00, 34,8 sn; Kerem akşam anneanneye "bana yardım eder misin?" der)
-- P4: Anneanne sesli asistana "Çay demle" diye bağırdı; sistem çöktü, ev karardı, perdeler kapandı. Cliff: Kapı kilitlendi, herkes dışarıda kaldı.
+- P4: Anneanne sesli asistana "Çay demle" diye bağırdı; sistem çöktü, ev karardı, perdeler kapandı. Cliff: Kapı kilitlendi, herkes dışarıda kaldı. ✅ 2026-11-12 (17:00, 29,3 sn; acil durum anonsu → bahçeye kaçış, kapı "çat" kilitlendi)
 - P5: Aile kapının önünde, yağmur başlar. Kerem telefonla girmeye çalışır; sistemin tek açılış komutu babamın kendi kaydettiği bir şey. Cliff: "Kapı sadece babamın ninni sesiyle açılıyormuş."
 - P6: Babam kapıya utana utana ninni söyler, kapı açılır. Cliff: Ertesi gün video mahalle grubunda!
 - P7: Herkes Kerem'den şüphelenir; asıl yayan, annemin açtığı "aile anıları" özelliği: sistem her şeyi kaydedip gruba atıyormuş. Cliff: Sistem son 1 haftanın tüm videolarını yüklemek üzere…
@@ -84,8 +86,8 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P1 ve P2 (açık uçlu) hazır; Metricool limiti yüzünden yayınlanmadıysa kullanıcıya önce P1 → P2'yi yüklemesini hatırlat. Anlatıcı erkek (Emrullah). Komşu: Yılmaz. Yeni karakter: kuzen Tarık (simsiyah cip, takım elbise, gergin gülümseme). Rozet "PART n".
 - P3: Cipten inen kuzen Tarık: "Bu park yeri 40 yıldır ailemizin." Elinde sararmış bir kâğıt. Kanca: "Komşunun kuzeni park yerini tapuyla istedi." Cliff: Kâğıtta benim dedemin imzası var. ✅ 2026-11-11 (12:30, parkurlu, 28,4 sn; kâğıtta "12 NUMARA KAZIM BEY'E AİTTİR", Kazım = Tarık'ın dedesi)
 - P4: Dedeme gittim. 40 yıl önce Tarık'ın dedesiyle tavla iddiasına girmiş, kaybeden park yerini verecekmiş… dedem kaybetmiş. Cliff: Dedem tavlayı kaptı: "Rövanş!" ✅ 2026-11-11 (20:30, 26,5 sn; kahve flashback, "Kırk yıldır kimseye söylememiş", son: "Rövanş!")
-- P5: Sitede tavla turnuvası; bütün apartman balkonlarda, çekirdekler hazır. Tarık önde. Cliff: Dedem fısıldıyor: "Zarlar hileli."
-- P6: Hile ortaya çıkar (zar her seferinde 6-6, içinde mıknatıs). Dedem son elde kazanır, site ayakta alkışlar. Cliff: Yılmaz koşarak gelir, elinde belediye yazısı.
+- P5: Sitede tavla turnuvası; bütün apartman balkonlarda, çekirdekler hazır. Tarık önde. Cliff: Dedem fısıldıyor: "Zarlar hileli." ✅ 2026-11-12 (12:30, parkurlu seed 1112, 24,8 sn; ödül = 12 numara, Tarık 3–0 önde, üç el düşeş)
+- P6: Hile ortaya çıkar (zar her seferinde 6-6, içinde mıknatıs). Dedem son elde kazanır, site ayakta alkışlar. Cliff: Yılmaz koşarak gelir, elinde belediye yazısı. ✅ 2026-11-12 (20:30, 28,2 sn; dede anahtarla mıknatısı yakaladı, 3–3 sonra son elde gerçek düşeş)
 - P7 (FİNAL): Yazı: park yeri kaldırılıp çocuk parkı yapılacak. Kimse kazanamadı… ama park açılınca salıncağın yanındaki bankta dedem ile Tarık'ın dedesi tavla oynuyor; Yılmaz çay taşıyor. Soru: "Park yeri mi, barış mı?"
 
 

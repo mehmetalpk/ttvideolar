@@ -1,11 +1,11 @@
 # ORTAK HAFIZA — …sal Hikayeler
 (Kural: CLAUDE.md. Her oturum başında oku, her üretim mesajından sonra güncelle ve push et.)
 
-## Güncel durum (son güncelleme: 2026-11-11 03:40)
+## Güncel durum (son güncelleme: 2026-11-12 02:10)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
 - **Redditsel formatı (YENİ FORMAT 3, 11 Kas'tan):** günde 4 video, 2 seri: 09:00 + 17:00 Hacker Kerem Sezon 2 "Akıllı Ev", 12:30 + 20:30 Park Yeri Savaşı (P3'ten). ≤40 sn, hızlı outro "kaçırmamak için takip et". 12:30 videosu parkur (bölünmüş ekran) testi.
-- **Redditsel seri durumu:** HK S2 P1 (10 Kas elle), P2+P3 11 Kas 09:00/17:00 planlandı → 12 Kas: HK P4/P5. Park P2 10 Kas 14:21'de TikTok'ta yayınlanmış (13,3K izlenme); P3 (parkurlu) + P4 11 Kas 12:30/20:30 planlandı → 12 Kas: Park P5/P6. Çizim/yardımcılar: tools/dizi_11kasim/.
+- **Redditsel seri durumu:** 12 Kas planlı: 09:00 HK S2 P3 (11 Kas planlandı), 12:30 Park P5 (parkur), 17:00 HK S2 P4, 20:30 Park P6. → 13 Kas: HK P5 (09:00) + P6 (17:00), Park P7 FİNAL (12:30, parkur), 20:30 yeni seri Bahçe Sınırı Savaşı P1. Çizim/yardımcılar: tools/dizi_12kasim/.
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
 - **Küçük hesaplar planı (10 Kas kararı):** Grup 1 seri (İslamik, Osmanlısal, Motivasyonel) günde 1 part; Grup 2 (Sporsal, Sanatsal, Yemeksel) günde 1, TikTok'a da devam; Grup 3 (Psikolojik, Parasal, Kriminal) iki günde 1 ama daha kaliteli. Saat testi Redditsel hariç: A 09:00 / B 16:00, 23 Kas'ta yer değiştir. Ayrıntı: stok/URETIM.md.
 - **Küçük hesap seri durumu (11 Kas gece):** İslamik 19 Kas'a kadar dolu (Sebe P2–P4 12–14.11, Hz. Yusuf kuyudan saraya P1–P5 15–19.11, seri bitti → sonraki paket yeni seri). Motivasyonel Zihnini yeniden kur P2 12.11 → sıradaki P3 çevren. Osmanlısal 18 Kas'a kadar dolu. Grup 3 (Psi/Para/Krim) son video 11.11 → sıradaki 13.11 (Seyirci P2, Mansa Musa P2, Hatton Garden P2).
@@ -27,6 +27,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-12 02:10 | gece görevi (Claude) | 12 Kas 3 video üretildi ve planlandı: 12:30 Park P5 (parkur, seed 1112, 24,8 sn), 17:00 HK S2 P4 (29,3 sn), 20:30 Park P6 (28,2 sn). 09:00 HK P3 zaten planlıydı. TikTok 11 Kas: HK P1 20,1K, Park P3 (parkur) 8,1K, HK P2 tekrar 7,2K, Park P4 2,2K (yeni); ort. izleme süresi Metricool'da boş.
 - 2026-11-11 12:05 | mehmetalp | Park P2 (açık uç, 65 sn) Instagram'a 11.11 12:10'a, Park P3 Instagram'a 12:40'a ayrı gönderi olarak planlandı (TT/YT P3 12:30). P2 MP4'ü 10 Kas günlük görev oturumunda üretilmişti; dosya kullanıcıdan alındı.
 - 2026-11-11 11:56 | mehmetalp | Park P2 Instagram'da hiç paylaşılmamış. IG sırası bozulmasın diye 12:30 Park P3'ten Instagram çıkarıldı (sadece TT+YT). Açık uçlu P2 MP4'ü depoda/çalışma alanında YOK; kullanıcıdan dosya istendi. Gelince: IG'ye P2 hemen, ardından IG'ye P3 ayrı gönderi.
 - 2026-11-11 09:55 | mehmetalp | HK S2 P2'nin 09:00 Instagram kopyası KALIYOR (iyi izlenmiş); 17:00 tekrar yayını sadece TikTok + YouTube. Kullanıcı 09:00 P2'yi sadece TikTok ve YouTube'dan silecek.

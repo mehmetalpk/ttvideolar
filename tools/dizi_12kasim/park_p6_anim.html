@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="../story.js"></script><script src="../story2.js"></script><script src="../p34.js"></script><script src="../p56x.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.25),-0.03);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.9,5);radial(540,900,1300,'#5a1a1a','#140404');x.save();zoom(540,960,1.05+0.035*t);tarik(540,960,180,{red:0.5,eyeBig:1.3,eyeOpen:1.2,mouthOpen:0.6,brow:0.8});magnetIcon(870,1380,0.55);die(220,1380,0.9,6,0.2+t);x.restore();x.restore();vignette(0.4);
+ hook([['ZARDA',115,'#fff'],['MIKNATIS',165,YEL],['VARMIŞ!',120,'#fff']],270);x.save();x.translate(215,215);x.scale(0.9,0.9);partBadgeN(6,0,0,T);x.restore();}});
+// 1 anahtar çıkardı
+sc.push({a:mid(1),f(t,T){coffeeHouse();x.save();zoom(540,900,1.0+0.04*t);dede(300,820,140,{brow:-0.5,smile:0.4,look:1});const p=ease(prog(T,W2(1,'anahtar'),W2(1,'yaklaştırdı')));key(420+260*p,1000,0.6,-0.3);die(820,1000,0.8,6,0.1);die(930,1060,0.8,6,-0.2);x.restore();
+ B('DEDEMİN PLANI:',300,105,'#fff',t);B('ANAHTAR!',430,130,YEL,t,0.15);}});
+// 2 zarlar yapıştı
+sc.push({a:mid(2),f(t,T){radial(540,860,1100,'#2a3a5a','#080c16');x.save();zoom(540,860,1.0+0.06*t);key(470,860,0.9,0);const p=back(prog(T,W2(2,'zıplayıp'),W2(2,'yapıştı')+0.1));die(780-130*p,1100-200*p,0.9,6,0.6*(1-p));die(820-60*p,1180-190*p,0.9,6,-0.6*(1-p));x.restore();
+ B('ZARLAR ZIPLADI',300,110,'#fff',t);if(T>W2(2,'yapıştı')-0.1)bigText('YAPIŞTI!',540,1380,120,RED,P(T,2,'yapıştı'),0);}});
+// 3 çekirdek yağmuru
+sc.push({a:mid(3),f(t,T){balconyCrowd(T,5);shells(T,4);
+ B('ÇEKİRDEK YAĞMURU!',300,95,YEL,t);}});
+// 4 Tarık kıpkırmızı
+sc.push({a:mid(4),f(t,T){radial(540,850,1100,'#8a2a2a','#200606');x.save();zoom(540,860,1.08+0.05*t);tarik(540,860,200,{red:0.9,blush:true,sad:0.5,brow:0.7,smile:-0.3});sweat(760,700,1.0,T);x.restore();
+ B('KIPKIRMIZI!',300,140,'#fff',t);if(T>W2(4,'Yeni')-0.1)bigText('YENİ ZARLAR',540,1370,85,YEL,P(T,4,'Yeni'),0);}});
+// 5 skor 3-3 son el
+sc.push({a:mid(5),f(t,T){coffeeHouse();x.save();zoom(540,900,1.0+0.04*t);tarik(250,860,120,{sad:0.6,look:1,brow:0.6});dede(830,860,120,{smile:0.9,look:-1});tavla(540,1050,0.5,T);x.restore();
+ const n=T<W2(5,'Skor')?Math.min(3,1+Math.floor((T-st(5))/0.5)):3;score(3,n,330,prog(t,0,0.2));if(T>W2(5,'Son')-0.1)bigText('SON EL!',540,1370,110,RED,P(T,5,'Son'),0);}});
+// 6 salladı öptü attı
+sc.push({a:mid(6),f(t,T){radial(540,860,1100,'#3a2a5a','#0a0614');x.save();zoom(540,860,1.1+0.05*t);dede(540,820,190,{eyeOpen:0.2,smile:0.6,brow:-0.3,mouthW:0.6});const thr=T>W2(6,'attı');if(!thr){const k=Math.sin(T*30)*20;die(470+k,1120,0.7,3,T*3);die(610-k,1130,0.7,5,-T*3);}else{const p=eOut(prog(T,W2(6,'attı'),en(6)+0.4));die(470-200*p,1120+150*p,0.7,4,T*15);die(610+200*p,1130+140*p,0.7,2,-T*15);}x.restore();
+ B('SALLADI...',300,110,'#fff',t);if(T>W2(6,'öptü')-0.1)bigText('ÖPTÜ...',540,440,110,'#ff5fa2',P(T,6,'öptü'),0);}});
+// 7 düşeş gerçek
+sc.push({a:mid(7),f(t,T){x.save();shake(t,0,0.6,10);radial(540,860,1100,'#1a6a3a','#04140c');burst(540,860,800,'rgba(255,210,63,0.2)',t);x.save();zoom(540,860,1.0+0.08*t);die(380,860,1.6,6,0);die(700,860,1.6,6,0);x.restore();x.restore();
+ bigText('DÜŞEŞ!',540,330,180,YEL,prog(t,0,0.15),-0.05);if(T>W2(7,'gerçek')-0.1)bigText('BU SEFER GERÇEK',540,1370,80,'#fff',P(T,7,'gerçek'),0);}});
+// 8 site ayakta
+sc.push({a:mid(8),f(t,T){balconyCrowd(T*3,6);burst(540,700,900,'rgba(255,210,63,0.15)',t);x.save();x.translate(0,Math.abs(Math.sin(T*6))*-20);dede(540,1400,130,{smile:1,mouthOpen:0.7,eyeOpen:0.4});x.restore();
+ B('SİTE AYAKTA!',300,120,YEL,t);}});
+// 9 Yılmaz koşarak
+sc.push({a:mid(9),f(t,T){lot();speedL(T);const k=Math.sin(t*16)*12;yilmaz(160+380*eOut(cl(t/1.4)),860+k,150,{mouthOpen:0.6,brow:0.6,eyeBig:1.2});paperLetter(160+380*eOut(cl(t/1.4))+220,1000+k,0.3,0.2);
+ B('YILMAZ KOŞARAK',300,105,'#fff',t);B('GELDİ!',430,130,YEL,t,0.15);}});
+// 10 belediye yazısı (kısa son)
+sc.push({a:mid(10),f(t,T){x.save();shake(t,0.1,0.5,8);radial(540,860,1100,'#1b3a6a','#040814');x.save();zoom(540,820,1.05+0.1*t);paperLetter(540,820,1.0,-0.05);x.restore();x.restore();
+ bigText('BELEDİYE YAZISI!',540,330,110,YEL,prog(T,W2(10,'belediyeden')-0.1,W2(10,'belediyeden')+0.15),-0.04);}});
+// OUTRO
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,7,()=>{radial(540,900,1300,'#2a1a4a','#05040c');});}});
+setup(sc,TIM,en(10)+0.1+2.45);
+</script></body></html>

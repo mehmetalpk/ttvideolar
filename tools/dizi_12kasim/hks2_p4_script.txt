@@ -1,0 +1,11 @@
+[shocked] Anneannem akıllı evi çökertti.
+Kerem ona sesli asistanı öğretmişti.
+[amused] Anneannem mutfağa geçti, var gücüyle bağırdı:
+[shouting] Çay demle!
+[robotic] Asistan cevap verdi: Komut anlaşılamadı.
+[annoyed] Anneannem daha da yüksek bağırdı: Çay demle dedim!
+[dramatic] Bir anda ışıklar söndü. Perdeler kapandı. Buzdolabı sustu.
+[robotic] Sonra bir anons geldi: Acil durum. Evi boşaltın.
+[laughing] Babam pijamayla, annem havluyla, hepimiz bahçeye koştuk.
+[dramatic] Kapı arkamızdan çat diye kapandı.
+[whispering] Ve kilitlendi.
