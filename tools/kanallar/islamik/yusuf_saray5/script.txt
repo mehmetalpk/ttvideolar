@@ -1,0 +1,13 @@
+[intense] Bir gömlek, kör gözleri açtı.
+
+[serious] Babaları Yakup, Yusuf'un hasretinden ağlamaktan gözlerine ak düşmüştü.
+Kardeşler yine Mısır'a geldiğinde, Yusuf sordu: Yusuf'a ne yaptığınızı biliyor musunuz?
+[intense] Yoksa sen, sen Yusuf musun?
+Ben Yusuf'um, dedi.
+[calm] Bugün size kınama yok. Allah sizi bağışlasın.
+[emotional] Bu gömleğimi götürün, babamın yüzüne koyun.
+Gömlek yüzüne konunca, Yakup'un gözleri açıldı.
+
+[serious] Kuyuya atılan çocuk, sonunda ailesine kavuştu.
+
+[softly] Kaçırmamak için takip et.

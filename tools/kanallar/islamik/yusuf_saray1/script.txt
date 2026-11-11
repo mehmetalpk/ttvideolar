@@ -1,0 +1,13 @@
+[intense] Kuyudan çıktı, köle olarak satıldı.
+
+[serious] Bir kervan su için kuyuya kova sarkıttı.
+Kovaya tutunan bir çocuk çıktı: Yusuf.
+[intense] Onu birkaç dirheme, değersiz bir fiyata sattılar.
+
+[serious] Mısır'da onu satın alan adam, karısına dedi ki:
+Ona iyi bak. Belki bize faydası olur, ya da onu evlat ediniriz.
+[calm] Kuyuya atılan çocuk, şimdi Mısır'ın en güçlü adamlarından birinin evindeydi.
+Yusuf o evde büyüdü. Allah ona hüküm ve ilim verdi.
+[intense] Ama aynı evde, onu büyük bir sınav bekliyordu.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.
