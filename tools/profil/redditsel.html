@@ -75,7 +75,19 @@ const DRAW=[
  txt('RH',465,405,250,'#16171d',{stroke:false,w:900});
  speech(690,750,360,220,'#ffd23f','right',80);
  txt('?!',690,752,150,'#16171d',{stroke:false,w:900});},
+// 11 — 2'nin düz turuncu zeminli hâli (degrade yok)
+()=>{orange(false);rays(C,C,800,'rgba(255,255,255,0.07)',20,0.05);
+ speech(C,475,690,470,'#fff','left',140);
+ txt('RH',535,485,300,'#1d1a22',{stroke:false,w:900});
+ sticker(820,250,200,140,0.2,'#ffd23f','?!',100,'#1d1a22');
+ txt('HİKAYELER',C,905,82,'#fff',{w:900,lw:16,maxW:560});},
+
+// 12 — 7'nin turuncu zeminli hâli (kullanıcı isteği, 12 Kas)
+()=>{orange(true);
+ sticker(C,445,600,400,-0.07,'#ff2d55','RH',320,'#fff');
+ sticker(C,765,640,160,0.05,'#ffd23f','HİKAYELER',112,'#16171d');},
 ];
+function orange(dots){bg('#ff8a1a');if(dots){x.fillStyle='rgba(255,255,255,0.12)';for(let i=0;i<14;i++)for(let j=0;j<14;j++){x.beginPath();x.arc(40+i*80,40+j*80,7,0,7);x.fill();}}}
 function dark(){bg('#16171d');x.fillStyle='rgba(255,255,255,0.05)';for(let i=0;i<14;i++)for(let j=0;j<14;j++){x.beginPath();x.arc(40+i*80,40+j*80,7,0,7);x.fill();}}
 function speech(cx,cy,w,h,fill,side='left',tl=140){const r=Math.min(90,h*0.25);
  const draw=(ox,oy,col)=>{x.fillStyle=col;rr(cx-w/2+ox,cy-h/2+oy,w,h,r);x.fill();const by=cy+h/2-10+oy;x.beginPath();

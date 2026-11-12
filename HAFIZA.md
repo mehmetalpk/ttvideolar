@@ -20,7 +20,7 @@
 - 12 Kas Metricool raporu (1–12 Kas, PDF): raporlar/2026-11-12_metricool_analiz.pdf · özet raporlar/2026-11-12_metricool_analiz.md (YouTube bölümleri geçersiz).
 
 ## Açık konular
-- Redditsel profil fotoğrafı: arkadaş 2 ve 5'i beğendi, türevleri 6–10 (marka/redditsel/). Son seçim bekleniyor (arkadaş + mehmetalp).
+- Redditsel profil fotoğrafı: arkadaş 2 ve 5'i beğendi, türevleri 6–10, turuncu zeminli 11–12 (marka/redditsel/). Son seçim bekleniyor (arkadaş + mehmetalp).
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
 - Sporsal TikTok kısıtı (hesap düzeyi şüphesi): kullanıcı uygulamada Ayarlar > Hesap > Hesap durumu ve videoların 'Senin İçin'e uygun değil' uyarısını kontrol edecek. Sonuca göre: ihlal varsa itiraz; yoksa birkaç gün TikTok'u durdurup YT+IG'ye devam veya yeni hesap.
@@ -29,6 +29,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-12 16:10 | arkadaş | Profil fotoğrafı: "2'nin arka planı turuncu" istendi; 2 ve 7 için düz turuncu zeminli sürümler yapıldı (11 = 2 turuncu, 12 = 7 turuncu). Seçim hâlâ bekleniyor.
 - 2026-11-12 16:08 | arkadaş | Profil fotoğrafı: 5 seçenekten 2 (RH konuşma balonu) ve 5 (yazı çıkartması) beğenildi; bunlardan türetilen 5 yeni seçenek yapıldı (6 koyu balon+çıkartma, 7 RH çıkartması, 8 balonda iki satır, 9 sarı zemin siyah balon, 10 sohbet balonları). marka/redditsel/profil_6–10.png. Seçim bekleniyor.
 - 2026-11-12 16:05 | arkadaş | Redditsel Hikayeler için 5 profil fotoğrafı seçeneği yapıldı (1080×1080, videolardaki karakter çizimleriyle): 1 Kerem, 2 RH konuşma balonu, 3 Aile, 4 Şok yüz (Baba), 5 yazı çıkartması. PNG'ler marka/redditsel/, kaynak tools/profil/. Henüz seçilmedi, yüklenmedi.
 - 2026-11-12 15:52 | mehmetalp | Parkur (alttaki oyun videosu, bölünmüş ekran) KALDIRILDI: 13.11'den itibaren tüm Redditsel videoları tam ekran (Park P7 finali dahil). Parkur karşılaştırma açık konusu kapandı.
