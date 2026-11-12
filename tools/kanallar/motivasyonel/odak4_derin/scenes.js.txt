@@ -9,8 +9,8 @@ shot(3,3,t=>{blk();brainI(540,780,1.4,'#ff9ad5');sbubble(780,560,380,130,'Bir ba
 // 4 dayan saat akar
 shot(4,4,t=>{blk();rays(540,780,t,'rgba(95,224,138,0.14)');clock(540,800,220,t*20);slam('DAYAN',330,150,'#5fe08a',t);});
 // 5 8 saat vs 1 saat
-shot(5,5,t=>{blk();const p=eOut(cl(t/1.5));x.fillStyle='#444';rr(180,1050-300*p,280,300*p,20);x.fill();x.fillStyle='#ffd23f';rr(620,1050-560*p,280,560*p,20);x.fill();bigText('8 SAAT',320,1120,60,'#aaa',1);bigText('1 SAAT',760,1120,60,'#ffd23f',1);bigText('DAĞINIK',320,1000-300*p,44,'#fff',p);bigText('DERİN',760,1000-560*p,50,'#111',p);slam('HANGİSİ?',330,130,'#fff',t);});
+shot(5,5,t=>{blk();x.save();x.translate(0,-200);const p=eOut(cl(t/1.5));x.fillStyle='#444';rr(180,1050-300*p,280,300*p,20);x.fill();x.fillStyle='#ffd23f';rr(620,1050-560*p,280,560*p,20);x.fill();bigText('8 SAAT',320,1120,60,'#aaa',1);bigText('1 SAAT',760,1120,60,'#ffd23f',1);bigText('DAĞINIK',320,1000-300*p,44,'#fff',p);bigText('DERİN',760,1000-560*p,50,'#111',p);x.restore();slam('HANGİSİ?',330,130,'#fff',t);});
 // 6 aynı saat randevu
-shot(6,6,t=>{blk();calendar(540,760,t,Math.floor(t*2.5)%7);alarm(880,1080,0.5,t,'09:00');slam('RANDEVU',330,140,'#ffd23f',t);});
+shot(6,6,t=>{blk();x.save();x.translate(540,780);x.scale(0.8,0.8);calendar(0,0,t,Math.floor(t*2.5)%7);x.restore();alarm(880,1000,0.5,t,'09:00');slam('RANDEVU',330,140,'#ffd23f',t);});
 // 7 outro
 shot(7,7,t=>outro(t,5,'#2a0606','#050000'));

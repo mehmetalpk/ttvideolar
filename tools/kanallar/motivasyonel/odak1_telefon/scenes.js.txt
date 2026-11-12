@@ -1,7 +1,7 @@
 function strings(cx,cy,t){x.strokeStyle='rgba(255,255,255,0.6)';x.lineWidth=4;[-120,0,120].forEach((o,i)=>{x.beginPath();x.moveTo(cx+o,cy);x.lineTo(cx+o*1.6,1000+Math.sin(t*3+i)*20);x.stroke();});}
 function notif(cx,cy,p,txt){if(p<=0)return;const s=back(cl(p));x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#fff';rr(-300,-60,600,120,30);x.fill();x.fillStyle='#c1121f';x.beginPath();x.arc(-230,0,34,0,7);x.fill();x.fillStyle='#111';x.font=`800 44px ${F}`;x.textAlign='left';x.textBaseline='middle';x.fillText(txt,-180,0);x.restore();}
 // 0 kanca
-shot(0,0,t=>{blk();shk(t,4);phone(540,520,0.9,t);strings(540,720,t);sil(540,1200,2.4,'#3a3a3a');bigText('TELEFONUN',W/2,330,120,'#fff',1);bigText('SENİ YÖNETİYOR',W/2,470,110,'#ff2d2d',1);});
+shot(0,0,t=>{blk();shk(t,4);phone(540,700,0.6,t);strings(540,840,t);sil(540,1200,2.4,'#3a3a3a');bigText('TELEFONUN',W/2,330,120,'#fff',1);bigText('SENİ YÖNETİYOR',W/2,470,110,'#ff2d2d',1);});
 // 1 uyanıyorsun ekran
 shot(1,1,t=>{blk();alarm(300,760,0.8,t,'07:00');phone(760,800,1.1,t);slam('İLK DOKUNUŞ',330,120,'#fff',t);if(t>0.6)slam('EKRAN',470,140,'#ff2d2d',t-0.6);});
 // 2 bildirim el uzanıyor
@@ -13,7 +13,7 @@ shot(4,4,t=>{blk();clock(540,780,230,t*6);slam('SAATLERİN',330,130,'#fff',t);if
 // 5 ilk bir saat
 shot(5,5,t=>{blk();phone(540,800,1.2,t);stampX(540,800,1.6,cl((t-0.4)*3));slam('İLK 1 SAAT',330,130,'#ffd23f',t);if(t>0.6)slam('DOKUNMA',470,130,'#fff',t-0.6);});
 // 6 bildirim kapat başka oda
-shot(6,6,t=>{blk();const k=Math.min(1,Math.floor(t/1.3));if(k==0){phone(540,800,1.2,t);badge(540,1000,'BİLDİRİM: KAPALI','#555',(t-0.3)*3);}else{doorP(540,1050,1.3,0.6,1);phone(820,980,0.5,t);}slam(k?'BAŞKA ODAYA':'KAPAT',330,130,'#fff',k?(t-1.3):t);});
+shot(6,6,t=>{blk();const k=Math.min(1,Math.floor(t/1.3));if(k==0){phone(540,800,1.2,t);badge(540,1000,'BİLDİRİM: KAPALI','#555',(t-0.3)*3);}else{doorP(540,1050,1.3,0.6,1);phone(820,980,0.5,t);}slam(k?'BAŞKA ODAYA':'KAPAT',330,105,'#fff',k?(t-1.3):t);});
 // 7 dikkat en değerli
 shot(7,7,t=>{blk();rays(540,780,t,'rgba(255,210,63,0.14)');diamondM(540,780,1.0,t);slam('DİKKATİN',330,130,'#ffd23f',t);if(t>0.6)slam('EN DEĞERLİ ŞEY',470,100,'#fff',t-0.6);});
 // 8 outro

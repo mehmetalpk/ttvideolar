@@ -12,6 +12,6 @@ shot(4,4,t=>{blk();x.save();x.translate(0,-200);stepsUp(6,Math.min(6,Math.floor(
 // 5 doğru yolda yavaş
 shot(5,5,t=>{blk();road(t*2,'#3a1a1a',300);road(t*0.6,'#1a3a1a',780);bigText('YANLIŞ',300,1380,60,'#ff2d2d',1);bigText('DOĞRU',780,1380,60,'#5fe08a',1);slam('DOĞRU YOLDA YAVAŞ',330,90,'#5fe08a',t);});
 // 6 bir yıl sonra keşke
-shot(6,6,t=>{blk();calendar(540,780,t,0);slam('BİR YIL SONRA',330,110,'#fff',t);if(t>0.7)slam('"KEŞKE" YOK',470,120,'#ffd23f',t-0.7);});
+shot(6,6,t=>{blk();x.save();x.translate(540,860);x.scale(0.75,0.75);calendar(0,0,t,0);x.restore();slam('BİR YIL SONRA',330,110,'#fff',t);if(t>0.7)slam('"KEŞKE" YOK',470,120,'#ffd23f',t-0.7);});
 // 7 outro
 shot(7,7,t=>outro(t,2,'#2a0606','#050000'));
