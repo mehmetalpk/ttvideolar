@@ -39,9 +39,48 @@ const DRAW=[
  txt('?!',820,265,190,'#ffd23f',{w:900,lw:30,rot:0.18});},
 
 // 5 — Tipografik: iki çıkartma (videolardaki PART rozeti stili), koyu zemin
-()=>{bg('#16171d');x.fillStyle='rgba(255,255,255,0.05)';for(let i=0;i<14;i++)for(let j=0;j<14;j++){x.beginPath();x.arc(40+i*80,40+j*80,7,0,7);x.fill();}
+()=>{dark();
  sticker(C,445,860,230,-0.07,'#ff2d55','REDDİTSEL',170,'#fff');
  sticker(C,690,700,190,0.05,'#ffd23f','HİKAYELER',125,'#16171d');},
+
+// ---- 6–10: kullanıcının beğendiği 2 (balon) ve 5 (çıkartma) referans alınarak ----
+// 6 — 2'nin koyu sürümü: koyu noktalı zemin, beyaz balon RH, sarı ?! ve HİKAYELER çıkartması
+()=>{dark();speech(C,420,690,440,'#fff','left',130);
+ txt('RH',535,425,280,'#16171d',{stroke:false,w:900});
+ sticker(825,225,190,135,0.2,'#ffd23f','?!',95,'#16171d');
+ sticker(C,860,580,135,-0.04,'#ffd23f','HİKAYELER',100,'#16171d');},
+
+// 7 — RH çıkartması: 5'in stiliyle dev kırmızı RH rozeti + sarı HİKAYELER
+()=>{dark();
+ sticker(C,445,600,400,-0.07,'#ff2d55','RH',320,'#fff');
+ sticker(C,765,640,160,0.05,'#ffd23f','HİKAYELER',112,'#16171d');},
+
+// 8 — Balonun içinde iki satır yazı: turuncu→kırmızı zemin, ?! çıkartması
+()=>{diag('#ff9a1f','#ff2d55');rays(C,C,800,'rgba(255,255,255,0.06)',20,0.05);
+ speech(C,470,800,500,'#fff','left',130);
+ txt('REDDİTSEL',C,400,150,'#ff2d55',{stroke:false,w:900,maxW:680});
+ txt('HİKAYELER',C,555,118,'#16171d',{stroke:false,w:900,maxW:600});
+ sticker(835,215,190,135,0.2,'#ffd23f','?!',95,'#16171d');},
+
+// 9 — Sarı zemin, siyah balon, sarı RH, kırmızı ?! ve HİKAYELER çıkartmaları
+()=>{bg('#ffd23f');rays(C,C,800,'rgba(255,255,255,0.3)',18,0.1);
+ speech(C,430,690,440,'#16171d','right',130);
+ txt('RH',545,435,280,'#ffd23f',{stroke:false,w:900});
+ sticker(255,230,190,135,-0.2,'#ff2d55','?!',95,'#fff');
+ sticker(C,860,580,135,0.04,'#ff2d55','HİKAYELER',100,'#fff');},
+
+// 10 — Sohbet: beyaz RH balonu + sarı ?! cevap balonu
+()=>{diag('#ff9a1f','#ff2d55');rays(C,C,800,'rgba(255,255,255,0.06)',20,0.05);
+ speech(470,400,620,400,'#fff','left',120);
+ txt('RH',465,405,250,'#16171d',{stroke:false,w:900});
+ speech(690,750,360,220,'#ffd23f','right',80);
+ txt('?!',690,752,150,'#16171d',{stroke:false,w:900});},
 ];
+function dark(){bg('#16171d');x.fillStyle='rgba(255,255,255,0.05)';for(let i=0;i<14;i++)for(let j=0;j<14;j++){x.beginPath();x.arc(40+i*80,40+j*80,7,0,7);x.fill();}}
+function speech(cx,cy,w,h,fill,side='left',tl=140){const r=Math.min(90,h*0.25);
+ const draw=(ox,oy,col)=>{x.fillStyle=col;rr(cx-w/2+ox,cy-h/2+oy,w,h,r);x.fill();const by=cy+h/2-10+oy;x.beginPath();
+  if(side==='left'){x.moveTo(cx-w/2+125+ox,by);x.lineTo(cx-w/2+80+ox,by+tl);x.lineTo(cx-w/2+265+ox,by);}
+  else{x.moveTo(cx+w/2-125+ox,by);x.lineTo(cx+w/2-80+ox,by+tl);x.lineTo(cx+w/2-265+ox,by);}x.fill();};
+ draw(15,22,'rgba(0,0,0,0.22)');draw(0,0,fill);}
 function render(i){x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,SZ,SZ);DRAW[i]();return c.toDataURL('image/png');}
 </script></body></html>
