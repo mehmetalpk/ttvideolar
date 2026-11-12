@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1080"></canvas>
+<script src="../lib_karaoke.js"></script>
+<script>
+// Redditsel Hikayeler profil fotoğrafı seçenekleri (1080x1080, platformda yuvarlak kırpılır).
+// Önemli her şey merkezden ~440 px içinde kalır. Karakterler videolardaki lib_karaoke.js çizimleri.
+const SZ=1080, C=540;
+function bg(col){x.setTransform(1,0,0,1,0,0);x.fillStyle=col;x.fillRect(0,0,SZ,SZ);}
+function diag(c1,c2){const g=x.createLinearGradient(0,0,SZ,SZ);g.addColorStop(0,c1);g.addColorStop(1,c2);x.fillStyle=g;x.fillRect(0,0,SZ,SZ);}
+function rays(cx,cy,r,col,n=18,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.fillStyle=col;for(let i=0;i<n;i++){const a=i*2*Math.PI/n;x.beginPath();x.moveTo(0,0);x.arc(0,0,r,a,a+Math.PI/n);x.closePath();x.fill();}x.restore();}
+function sticker(cx,cy,w,h,rot,fill,label,sz,tcol){x.save();x.translate(cx,cy);x.rotate(rot);x.fillStyle='rgba(0,0,0,0.35)';rr(-w/2+10,-h/2+14,w,h,30);x.fill();x.fillStyle=fill;rr(-w/2,-h/2,w,h,30);x.fill();x.strokeStyle='#fff';x.lineWidth=12;x.stroke();x.font=`900 ${sz}px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle=tcol;x.fillText(label,0,sz*0.06,w-70);x.restore();}
+
+const DRAW=[
+// 1 — Kerem (Hacker Kerem'in yıldızı): koyu yeşil matrix, güneş gözlüğü, sırıtış
+()=>{bg('#04120a');const g=x.createRadialGradient(C,C,40,C,C,620);g.addColorStop(0,'#0f4a22');g.addColorStop(1,'#04120a');x.fillStyle=g;x.fillRect(0,0,SZ,SZ);
+ matrix(1.7,'#39d353',5);rays(C,500,760,'rgba(57,211,83,0.07)',16,0.1);
+ person(KEREM,C,500,250,{smile:0.75,brow:-0.35,glasses:0});},
+
+// 2 — Konuşma balonu + RH monogramı: turuncu→kırmızı
+()=>{diag('#ff9a1f','#ff2d55');rays(C,C,800,'rgba(255,255,255,0.06)',20,0.05);
+ x.save();x.fillStyle='rgba(0,0,0,0.22)';rr(205,262,690,470,90);x.fill();
+ x.beginPath();x.moveTo(330,720);x.lineTo(285,860);x.lineTo(470,720);x.fill();x.restore();
+ x.fillStyle='#fff';rr(190,240,690,470,90);x.fill();x.beginPath();x.moveTo(315,700);x.lineTo(270,840);x.lineTo(455,700);x.fill();
+ txt('RH',535,485,300,'#1d1a22',{stroke:false,w:900});
+ sticker(820,250,200,140,0.2,'#ffd23f','?!',100,'#1d1a22');
+ txt('HİKAYELER',C,905,82,'#fff',{w:900,lw:16,maxW:560});},
+
+// 3 — Aile: Baba şokta, Anne gülüyor, Kerem sırıtıyor; sarı zemin
+()=>{bg('#ffd23f');rays(C,620,800,'rgba(255,255,255,0.28)',18,0.12);
+ person(BABA,280,560,150,{mouthOpen:0.85,brow:0.9,eyeBig:1.3});
+ person(ANNE,800,560,150,{mouthOpen:0.85,mouthW:1.2,smile:1,eyeOpen:0.25,brow:0.2});
+ person(KEREM,C,650,175,{smile:0.8,brow:-0.3,glasses:-0.95});
+ txt('REDDİTSEL',C,215,118,'#fff',{w:900,lw:24,maxW:760});},
+
+// 4 — Şok yüz (Baba): kırmızı zemin, sarı patlama, ?!
+()=>{bg('#ff2d55');rays(C,560,820,'rgba(255,210,63,0.55)',20,0.08);burst(C,520,400,'#ffd23f',0.4);
+ person(BABA,C,540,250,{mouthOpen:1,mouthW:1.15,brow:1.1,eyeBig:1.5});
+ txt('?!',820,265,190,'#ffd23f',{w:900,lw:30,rot:0.18});},
+
+// 5 — Tipografik: iki çıkartma (videolardaki PART rozeti stili), koyu zemin
+()=>{bg('#16171d');x.fillStyle='rgba(255,255,255,0.05)';for(let i=0;i<14;i++)for(let j=0;j<14;j++){x.beginPath();x.arc(40+i*80,40+j*80,7,0,7);x.fill();}
+ sticker(C,445,860,230,-0.07,'#ff2d55','REDDİTSEL',170,'#fff');
+ sticker(C,690,700,190,0.05,'#ffd23f','HİKAYELER',125,'#16171d');},
+];
+function render(i){x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,SZ,SZ);DRAW[i]();return c.toDataURL('image/png');}
+</script></body></html>
