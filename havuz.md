@@ -11,9 +11,9 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 >  - Park Yeri Savaşı istisna: başladığı için P7 FİNAL 13.11 12:30'da biter. 13.11 20:30 = "Bahçe Sınırı Savaşı" P1 (3 parta bölündü, aşağıda).
 >  - Konu ve kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)" bölümüne göre.
 >  - SÜRE: varsayılan ≤40 sn. GÜÇLÜ KANCALI videolarda (strateji.md'deki 4 maddelik kontrolün hepsi geçiyorsa) seri P1'i veya tek video 85 sn'ye kadar olabilir. Hacker Kerem günlük partları ve seri P2–P3 ≤40 sn kalır. Gerekçe: Park Yeri P1 83 sn'de 129K izlendi.
->  - Parkur testi 12:30'da sürer.
+>  - PARKUR (alttaki oyun videosu / bölünmüş ekran) KALDIRILDI (kullanıcı, 12 Kas 15:50): 13.11'den itibaren TÜM videolar tam ekran. tools/parkur/ kullanılmaz.
 
-> 13 KASIM (12 Kas gece görevi notu; FORMAT 4 ile uyumlu): Sıradaki partlar HK S2 P5 (09:00) + P6 (17:00), Park Yeri P7 FİNAL (12:30, parkurlu) → 20:30 boşalır: havuzdaki sıradaki seri "Bahçe Sınırı Savaşı" Part 1 başlar (YENİ FORMAT 3 kurallarıyla, ≤40 sn). Park P6 skoru: 3–3 sonrası dede kazandı (4–3); belediye yazısı açılmadı.
+> 13 KASIM (12 Kas gece görevi notu; FORMAT 4 ile uyumlu): Sıradaki partlar HK S2 P5 (09:00) + P6 (17:00), Park Yeri P7 FİNAL (12:30, TAM EKRAN — parkur kaldırıldı) → 20:30 boşalır: havuzdaki sıradaki seri "Bahçe Sınırı Savaşı" Part 1 başlar (YENİ FORMAT 3 kurallarıyla, ≤40 sn). Park P6 skoru: 3–3 sonrası dede kazandı (4–3); belediye yazısı açılmadı.
 
 > 12 KASIM ÖZEL (GEÇERSİZ, 12 Kas üretildi) (11 Kas sıra düzeltmesi): 12.11 09:00'da HK S2 P3 ZATEN PLANLI (uuid -7287343222471831941). HK için sadece 17:00'ye P4 üret. Park için normal: 12:30 P5, 20:30 P6. HK S2 P2 11.11 17:00'de sadece TikTok+YouTube'da yeniden yayınlanıyor (Instagram'daki 09:00 kopyası kalıyor).
 
@@ -26,7 +26,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 >  - SLOTLAR (İstanbul): 09:00 Hacker Kerem · 12:30 Park Yeri · 17:00 Hacker Kerem · 20:30 Park Yeri. MANUEL MOD sürdükçe her videoyu bu saatlerle paket olarak gönder.
 >  - SÜRE: her video EN FAZLA 40 sn (outro dahil). Hızlı anlatım: atempo 1.2 (1.1 değil), seslendirme ~85–100 kelime, kısa cümleler, dolgu yok. Part başında en fazla 1 kısa özet cümlesi ("Geçen partta: …" DEME; doğrudan kanca + yarım cümle bağlam).
 >  - OUTRO ~1.5–2 sn, hızlı: seri devam ediyorsa "[fast, warm] Devamı <n+1>. partta, kaçırmamak için takip et." (ekran: "PART <n+1> 👀" + "+ TAKİP ET"); final partta "[fast, warm] Kaçırmamak için takip et." Son hikâye sahnesi ≤1.5 sn.
->  - PARKUR TESTİ: her gün SADECE 12:30 Park Yeri partı bölünmüş ekran (üst hikâye 1016 px + alt özgün çöp adam parkuru 904 px, 60 fps) — tools/parkur/README.md. Her videoda farklı seed. Diğer 3 video tam ekran. Bildirimde hangisinin parkurlu olduğunu yaz (karşılaştırma için).
+>  - (GEÇERSİZ — 12 Kas parkur kaldırıldı) PARKUR TESTİ: her gün SADECE 12:30 Park Yeri partı bölünmüş ekran (üst hikâye 1016 px + alt özgün çöp adam parkuru 904 px, 60 fps) — tools/parkur/README.md. Her videoda farklı seed. Diğer 3 video tam ekran. Bildirimde hangisinin parkurlu olduğunu yaz (karşılaştırma için).
 >  - DEVAM KOŞULU (≥100 TikTok beğenisi) bu iki seride UYGULANMAZ; bölüm planlarını sonuna kadar yürüt.
 
 > 11 KASIM ÖZEL (güncellendi 10 Kas 19:20 — YENİ FORMAT 3 geçerli): 11 Kasım'da 4 videonun HEPSİNİ üret (09:00 HK S2 P2, 12:30 Park P3, 17:00 HK S2 P3, 20:30 Park P4 — HK S2 P1 10 Kas akşamı elle üretildi ve kullanıcıya verildi, TEKRAR ÜRETME). Kullanıcı ayrıca garson videosunu elle yükleyebilir; ona da hatırlat. Bildirimde kullanıcıya garson videosunun açıklamasını da hatırlat: "Müşteri kanatlarını tarttırdı… tarttık ve üçünü çöpe attık 🍗⚖️ Sence garson haklı mıydı? 👇 / Takip etmeyi unutma ✅ / Reddit'ten uyarlanmıştır. / #hikaye #reddithikayeleri #komedi #restoran #garson #müşteri #keşfet #fyp". stories.md'ye garson videosunu "2026-11-11 | ... | manuel | SABAH" olarak işle. Bu not 12 Kasım'da geçersizdir.

@@ -4,7 +4,7 @@
 ## Güncel durum (son güncelleme: 2026-11-12 15:50)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
-- **Redditsel formatı (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla (12:30 parkurlu). Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
+- **Redditsel formatı (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
 - **Redditsel seri durumu:** HK S2 10 part'a uzatıldı: P5+P6 13.11, P7+P8 14.11, P9 + P10 FİNAL 15.11 Pazar. HK S3 16.11 Pazartesi 09:00 başlar (planı Pazar 21:37 haftalık görev yazar). Park Yeri P7 FİNAL 13.11 12:30 (istisna, zaten başlamıştı). Bahçe Sınırı Savaşı 3 part: P1 13.11 20:30, P2 14.11 12:30, P3 14.11 20:30. Çizim/yardımcılar: tools/dizi_12kasim/.
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
 - **Küçük hesaplar planı (10 Kas kararı):** Grup 1 seri (İslamik, Osmanlısal, Motivasyonel) günde 1 part; Grup 2 (Sporsal, Sanatsal, Yemeksel) günde 1, TikTok'a da devam; Grup 3 (Psikolojik, Parasal, Kriminal) iki günde 1 ama daha kaliteli. Saat testi Redditsel hariç: A 09:00 / B 16:00, 23 Kas'ta yer değiştir. Ayrıntı: stok/URETIM.md.
@@ -20,7 +20,6 @@
 - 12 Kas Metricool raporu (1–12 Kas, PDF): raporlar/2026-11-12_metricool_analiz.pdf · özet raporlar/2026-11-12_metricool_analiz.md (YouTube bölümleri geçersiz).
 
 ## Açık konular
-- Parkur (bölünmüş ekran) tam ekrana göre daha mı iyi? → birkaç gün veri sonra karşılaştır.
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
 - Sporsal TikTok kısıtı (hesap düzeyi şüphesi): kullanıcı uygulamada Ayarlar > Hesap > Hesap durumu ve videoların 'Senin İçin'e uygun değil' uyarısını kontrol edecek. Sonuca göre: ihlal varsa itiraz; yoksa birkaç gün TikTok'u durdurup YT+IG'ye devam veya yeni hesap.
@@ -29,6 +28,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-12 15:52 | mehmetalp | Parkur (alttaki oyun videosu, bölünmüş ekran) KALDIRILDI: 13.11'den itibaren tüm Redditsel videoları tam ekran (Park P7 finali dahil). Parkur karşılaştırma açık konusu kapandı.
 - 2026-11-12 15:50 | mehmetalp | KARARLAR: (1) YouTube verisi hatalı → YouTube'a göre hiçbir şey yapılmaz. (2) Seriler 3 partta biter (FORMAT 4; küçük hesaplarda yeni seriler de 3 part, planlı İslamik Yusuf ve Motivasyonel Odaklan P1–P5 aynen kalır). (3) Hacker Kerem haftalık sezon: günde 2 part, Pazartesi başlar Pazar biter; S2 10 part, FİNAL 15.11, S3 16.11. (4) Diğer Redditsel serileri 3'er video; Bahçe Sınırı 3 parta bölündü, Park P7 final istisna. (5) Tutan videolara göre kanca/konu seçimi strateji.md'ye yazıldı. (6) Güçlü kancalı seri P1/tek video 85 sn'ye kadar. Güncellenen dosyalar: havuz.md (FORMAT 4), strateji.md, stok/URETIM.md, BASLANGIC.md, gorevler.md. 12 Kas analiz raporu raporlar/ altına eklendi. NOT: gece görevlerinin kendi prompt metni bu dosyaları okuduğu için ayrıca değişiklik gerekmiyor.
 - 2026-11-12 15:40 | mehmetalp | Sporsal kontrolü: Metricool'da TikTok gönderileri PUBLISHED + PUBLIC_TO_EVERYONE (teknik sorun yok, ayarlar diğer hesaplarla aynı). 12 videonun 7'si 1 izlenme; YT'de de çoğu 1–43 (Leicester 1,2K istisna), IG diğer küçük hesaplar gibi ~130. Telifli görüntü kullanılmadığı için 'maç görüntüsü' açıklaması zayıf; hesap düzeyi kısıt şüphesi. Kullanıcıdan TikTok Hesap durumu kontrolü istendi. Karar bekleniyor.
 - 2026-11-12 15:19 | arkadaş | Planlı videolar soruldu (depo kayıtlarından): 12.11 15:17 sonrası 32 video, 20.11'e kadar. Redditsel 13.11'den itibaren boş (bu gece 01:47 doldurur); Sporsal/Sanatsal/Yemeksel 14.11'den, Grup 3 15.11'den boş (İş 1 doldurur). Karar yok.
