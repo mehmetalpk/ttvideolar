@@ -27,6 +27,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-12 15:19 | arkadaş | Planlı videolar soruldu (depo kayıtlarından): 12.11 15:17 sonrası 32 video, 20.11'e kadar. Redditsel 13.11'den itibaren boş (bu gece 01:47 doldurur); Sporsal/Sanatsal/Yemeksel 14.11'den, Grup 3 15.11'den boş (İş 1 doldurur). Karar yok.
 - 2026-11-12 03:45 | gece görevi (Claude) | Küçük hesaplar: İş 1 13.11 için 7 video (Motivasyonel Zihin P3 16:00, Psikolojik Seyirci P2 09:00, Parasal Mansa Musa P2 16:00, Kriminal Hatton Garden P2 16:00 TT+YT, Sporsal Buz mucizesi 09:00, Sanatsal Eyfel 09:00, Yemeksel Ketçap 16:00). İş 2 (Perşembe Motivasyonel) 14–20.11 7 video 16:00: Zihin P4 final, yeni seri Odaklan P1–P5, Yeniden başla P1/3. Hepsi 22–31 sn. Kanca ikinci satırı artık t=0'da tam görünür (fade yok).
 - 2026-11-12 02:10 | gece görevi (Claude) | 12 Kas 3 video üretildi ve planlandı: 12:30 Park P5 (parkur, seed 1112, 24,8 sn), 17:00 HK S2 P4 (29,3 sn), 20:30 Park P6 (28,2 sn). 09:00 HK P3 zaten planlıydı. TikTok 11 Kas: HK P1 20,1K, Park P3 (parkur) 8,1K, HK P2 tekrar 7,2K, Park P4 2,2K (yeni); ort. izleme süresi Metricool'da boş.
 - 2026-11-11 12:05 | mehmetalp | Park P2 (açık uç, 65 sn) Instagram'a 11.11 12:10'a, Park P3 Instagram'a 12:40'a ayrı gönderi olarak planlandı (TT/YT P3 12:30). P2 MP4'ü 10 Kas günlük görev oturumunda üretilmişti; dosya kullanıcıdan alındı.
