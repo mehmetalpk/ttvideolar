@@ -1,11 +1,11 @@
 # ORTAK HAFIZA — …sal Hikayeler
 (Kural: CLAUDE.md. Her oturum başında oku, her üretim mesajından sonra güncelle ve push et.)
 
-## Güncel durum (son güncelleme: 2026-11-12 15:50)
+## Güncel durum (son güncelleme: 2026-11-13 02:05)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
 - **Redditsel formatı (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
-- **Redditsel seri durumu:** HK S2 10 part'a uzatıldı: P5+P6 13.11, P7+P8 14.11, P9 + P10 FİNAL 15.11 Pazar. HK S3 16.11 Pazartesi 09:00 başlar (planı Pazar 21:37 haftalık görev yazar). Park Yeri P7 FİNAL 13.11 12:30 (istisna, zaten başlamıştı). Bahçe Sınırı Savaşı 3 part: P1 13.11 20:30, P2 14.11 12:30, P3 14.11 20:30. Çizim/yardımcılar: tools/dizi_12kasim/.
+- **Redditsel seri durumu (13 Kas gece):** 13.11 dolu: HK S2 P5 09:00, Park Yeri P7 FİNAL 12:30 (seri bitti), HK S2 P6 17:00, Bahçe Sınırı P1 20:30 (İrem, 43 sn). Sırada 14.11: HK P7 09:00 + P8 17:00, Bahçe P2 12:30 + P3 FİNAL 20:30. 15.11: HK P9 + P10 FİNAL; 12:30/20:30 için havuzda yeni 3 partlık seri YOK → 14.11 gecesi görevi strateji.md'ye göre yeni seri seçmeli. HK S3 16.11 Pazartesi 09:00 (planı Pazar 21:37 haftalık görev yazar). Çizim/yardımcılar: tools/dizi_13kasim/.
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
 - **Küçük hesaplar planı (10 Kas kararı):** Grup 1 seri (İslamik, Osmanlısal, Motivasyonel) günde 1 part; Grup 2 (Sporsal, Sanatsal, Yemeksel) günde 1, TikTok'a da devam; Grup 3 (Psikolojik, Parasal, Kriminal) iki günde 1 ama daha kaliteli. Saat testi Redditsel hariç: A 09:00 / B 16:00, 23 Kas'ta yer değiştir. Ayrıntı: stok/URETIM.md.
 - **Küçük hesap seri durumu (12 Kas gece):** İslamik 19 Kas'a kadar dolu (sonraki paket yeni seri). Osmanlısal 18 Kas'a kadar dolu. Motivasyonel 20 Kas'a kadar dolu: Zihin P3 13.11, P4 final 14.11; Odaklan P1–P5 15–19.11; Yeniden başla P1/3 20.11 → sıradaki P2 (ilk adım küçük olsun). Grup 3 (Psi/Para/Krim) 13.11'de mini serileri bitirdi (Seyirci P2, Mansa Musa P2, Hatton Garden P2) → sıradaki 15.11, yeni konular. Sporsal/Sanatsal/Yemeksel 13.11'e tek video (Buz mucizesi, Eyfel protestosu, Ketçap ilaç); 14.11 boş → İş 1 doldurur.
@@ -29,6 +29,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-13 02:05 | gece görevi (Claude) | 13 Kas 4 video üretildi ve planlandı (hepsi tam ekran): 09:00 HK S2 P5 (29,7 sn), 12:30 Park Yeri P7 FİNAL (30,8 sn, seri bitti), 17:00 HK S2 P6 (30,6 sn), 20:30 Bahçe Sınırı P1 (43,1 sn, İrem; güçlü kanca istisnası). TikTok 12 Kas: HK P4 5,3K izlenme/82 beğeni, Park P5 (parkurlu) 2,9K/31, Park P6 1,4K/20 (ilk saatler); ort. izleme süresi Metricool'da boş.
 - 2026-11-12 16:10 | arkadaş | Profil fotoğrafı: "2'nin arka planı turuncu" istendi; 2 ve 7 için düz turuncu zeminli sürümler yapıldı (11 = 2 turuncu, 12 = 7 turuncu). Seçim hâlâ bekleniyor.
 - 2026-11-12 16:08 | arkadaş | Profil fotoğrafı: 5 seçenekten 2 (RH konuşma balonu) ve 5 (yazı çıkartması) beğenildi; bunlardan türetilen 5 yeni seçenek yapıldı (6 koyu balon+çıkartma, 7 RH çıkartması, 8 balonda iki satır, 9 sarı zemin siyah balon, 10 sohbet balonları). marka/redditsel/profil_6–10.png. Seçim bekleniyor.
 - 2026-11-12 16:05 | arkadaş | Redditsel Hikayeler için 5 profil fotoğrafı seçeneği yapıldı (1080×1080, videolardaki karakter çizimleriyle): 1 Kerem, 2 RH konuşma balonu, 3 Aile, 4 Şok yüz (Baba), 5 yazı çıkartması. PNG'ler marka/redditsel/, kaynak tools/profil/. Henüz seçilmedi, yüklenmedi.

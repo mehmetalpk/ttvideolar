@@ -29,3 +29,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-12 | Dedem siteye tavla turnuvası kurdu (Park Yeri Savaşı) [Part 5] | özgün devam (r/pettyrevenge tarzı) | komedi/seri | Emrullah | 24.8 sn | 12:30 | 4623481763509781523 | ÖĞLE | parkur:evet (seed 1112)
 - 2026-11-12 | Anneannem akıllı evi çökertti (Hacker Kerem S2) [Part 4] | kendi kurgu | komedi/seri | Emrullah | 29.3 sn | 17:00 | -6626213889487125568 | AKŞAM | parkur:hayır
 - 2026-11-12 | Kuzen zarın içine mıknatıs koymuş (Park Yeri Savaşı) [Part 6] | özgün devam (r/pettyrevenge tarzı) | komedi/seri | Emrullah | 28.2 sn | 20:30 | 3947271344108489132 | GECE | parkur:hayır
+- 2026-11-13 | Akıllı ev bizi yağmurda dışarıda bıraktı (Hacker Kerem S2) [Part 5] | kendi kurgu | komedi/seri | Emrullah | 29.7 sn | 09:00 | 3556205525214118907 | SABAH | parkur:hayır
+- 2026-11-13 | Belediye park yerimizi çocuk parkı yaptı (Park Yeri Savaşı) [Part 7 — FİNAL] | özgün devam (r/pettyrevenge tarzı) | komedi/seri | Emrullah | 30.8 sn | 12:30 | 6616552241253139120 | ÖĞLE | parkur:hayır
+- 2026-11-13 | Babam kapıya ninni söylemek zorunda kaldı (Hacker Kerem S2) [Part 6] | kendi kurgu | komedi/seri | Emrullah | 30.6 sn | 17:00 | -3409891716002591195 | AKŞAM | parkur:hayır
+- 2026-11-13 | Komşum bahçemizi iki kez söktürdü (Bahçe Sınırı Savaşı) [Part 1] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 43.1 sn | 20:30 | 1821659481305072083 | GECE | parkur:hayır

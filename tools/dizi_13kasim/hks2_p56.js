@@ -1,0 +1,11 @@
+// HK S2 P5/P6 yardımcılar
+function rain(T,a){x.save();x.strokeStyle=`rgba(180,200,255,${a==null?0.55:a})`;x.lineWidth=5;const r=rng(11);for(let i=0;i<90;i++){const sx=r()*1300-100,sp=900+r()*500,ph=(T*sp/1900+r())%1;const yy=-100+ph*2100,xx=sx-ph*120;x.beginPath();x.moveTo(xx,yy);x.lineTo(xx-18,yy+70);x.stroke();}x.restore();}
+function puddles(){x.fillStyle='rgba(120,150,220,0.35)';[[250,1650,180],[760,1700,220]].forEach(([a,b,w])=>{x.beginPath();x.ellipse(a,b,w,30,0,0,7);x.fill();});}
+function doorPanel(cx,cy,s,T,l1,col){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#14161d';rr(-130,-180,260,360,30);x.fill();x.strokeStyle=col||'#39d6ff';x.lineWidth=8;x.shadowColor=col||'#39d6ff';x.shadowBlur=25;rr(-130,-180,260,360,30);x.stroke();x.shadowBlur=0;
+ x.fillStyle='#000';x.beginPath();x.arc(0,-110,34,0,7);x.fill();x.fillStyle=Math.floor(T*3)%2?'#ff2d2d':'#600';x.beginPath();x.arc(0,-110,12,0,7);x.fill();
+ x.fillStyle='#0b1a22';rr(-105,-50,210,200,16);x.fill();if(l1){x.font=`900 34px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle=col||'#39d6ff';l1.split('|').forEach((l,i,a)=>x.fillText(l,0,50+(i-(a.length-1)/2)*42,190));}x.restore();}
+function notes(cx,cy,T,col){x.save();for(let i=0;i<5;i++){const ph=(T*0.6+i/5)%1;const xx=cx+Math.sin(ph*6+i)*120+(i-2)*60,yy=cy-ph*420;x.globalAlpha=Math.sin(ph*Math.PI);x.fillStyle=col||'#ffd23f';x.beginPath();x.ellipse(xx,yy,26,20,-0.4,0,7);x.fill();x.fillRect(xx+18,yy-90,9,90);x.fillRect(xx+18,yy-90,40,14);}x.restore();}
+function moon(cx,cy,r){x.save();x.fillStyle='#ffe9a8';x.beginPath();x.arc(cx,cy,r,0,7);x.fill();x.fillStyle='#0b1030';x.beginPath();x.arc(cx+r*0.45,cy-r*0.2,r*0.9,0,7);x.fill();x.restore();}
+function camLens(cx,cy,s,T){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#14161d';rr(-220,-150,440,300,50);x.fill();x.fillStyle='#000';x.beginPath();x.arc(0,0,110,0,7);x.fill();x.fillStyle='#1b3a6a';x.beginPath();x.arc(0,0,70,0,7);x.fill();x.fillStyle='rgba(255,255,255,0.6)';x.beginPath();x.arc(-25,-25,20,0,7);x.fill();x.fillStyle=Math.floor(T*3)%2?'#ff2d2d':'#600';x.beginPath();x.arc(160,-100,16,0,7);x.fill();x.restore();}
+function umbrellaless(){}
+function sweat(cx,cy,s,T){x.save();x.translate(cx,cy+((T*80)%60));x.scale(s,s);x.fillStyle='#8fd0ff';x.beginPath();x.moveTo(0,-30);x.quadraticCurveTo(24,10,0,22);x.quadraticCurveTo(-24,10,0,-30);x.fill();x.restore();}

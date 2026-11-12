@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.9,7);nightSky();rain(T,0.5);x.save();zoom(540,980,1.05+0.035*t);person(BABA,540,980,200,{mouthOpen:0.9,blush:true,red:0.5,brow:0.6,sad:0.5,shirt:BS});notes(540,820,T);x.restore();x.restore();vignette(0.45);
+ hook([['BABAM KAPIYA',105,'#fff'],['NİNNİ',175,YEL],['SÖYLEDİ!',120,'#fff']],270);s2Badge(t,6);}});
+// 1 sırılsıklam
+sc.push({a:mid(1),f(t,T){nightSky();rain(T,0.7);const k=Math.sin(T*50)*4;x.save();zoom(540,860,1.0+0.04*t);
+ person(BABA,190+k,860,95,{sad:0.7,shirt:BS});person(ANNE,410-k,870,90,{sad:0.6});towel(410-k,870,90);person(ANNEANNE,630+k,860,92,{sad:0.5,brow:0.5});sunglassesKerem(850-k,890,82,{smile:0.2});x.restore();puddles();
+ B('SIRILSIKLAM!',300,125,'#8ab8ff',t);}});
+// 2 kameraya eğildi
+sc.push({a:mid(2),f(t,T){nightSky();rain(T,0.3);x.save();zoom(540,820,1.0+0.05*t);camLens(540,520,0.9,T);const p=ease(prog(T,st(2),W2(2,'eğildi',1)));person(BABA,540,1000-60*p,200+30*p,{brow:0.5,sad:0.3,mouthOpen:T>W2(2,'boğazını')?0.3:0,shirt:BS});x.restore();
+ B('KAMERAYA EĞİLDİ',300,100,'#fff',t);}});
+// 3 dandini
+sc.push({a:mid(3),f(t,T){nightSky();moon(880,640,90);x.save();zoom(540,880,1.05+0.05*t);person(BABA,540,880,190,{mouthOpen:0.5+0.3*Math.sin(T*6),eyeOpen:0.5,blush:true,brow:0.4,shirt:BS});notes(540,720,T);x.restore();
+ B('♪ DANDİNİ',300,120,YEL,t);B('DANDİNİ... ♪',430,110,YEL,t,0.15);}});
+// 4 ses tanınmadı, daha duygulu
+sc.push({a:mid(4),f(t,T){x.fillStyle='#10131a';x.fillRect(0,0,W,H);const no=T>W2(4,'tanınmadı')-0.1;x.save();if(no)shake(T,W2(4,'tanınmadı'),W2(4,'tanınmadı')+0.4,10);zoom(540,720,1.0+0.04*t);doorPanel(540,720,1.5,T,no?'SES|TANINMADI':'...',no?RED:'#39d6ff');x.restore();
+ if(T>W2(4,'Daha')-0.1)bubble2(540,380,820,230,'DAHA','DUYGULU! 🎭',80,T);else B('KAPI:',320,120,'#39d6ff',t);}});
+// 5 annem çamura oturdu
+sc.push({a:mid(5),f(t,T){nightSky();rain(T,0.3);x.fillStyle='#5a3a1e';x.beginPath();x.ellipse(540,1420,380,70,0,0,7);x.fill();const p=eOut(cl(t/0.5));x.save();zoom(540,900,1.05+0.05*t);
+ person(ANNE,540,760+180*p,190,{smile:1,mouthOpen:0.9,eyeOpen:0.25,blush:true});towel(540,760+180*p,190);x.restore();
+ B('GÜLMEKTEN',290,105,'#fff',t);B('ÇAMURA OTURDU!',410,105,'#c98a4a',t,0.12);}});
+// 6 bütün kalbiyle
+sc.push({a:mid(6),f(t,T){radial(540,900,1200,'#3a1a4a','#0b0614');x.save();zoom(540,900,1.1+0.06*t);person(BABA,540,900,210,{eyeOpen:0.08,smile:0.2,brow:0.5,shirt:BS});heart(540+300,700+Math.sin(T*6)*10,1.0,'#ff2d55');x.restore();
+ B('GÖZLERİNİ KAPATTI',300,95,'#fff',t);if(T>W2(6,'kalbiyle')-0.15)bigText('BÜTÜN KALBİYLE',540,430,105,'#ff5fa2',PP(T,6,'kalbiyle'),-0.03);}});
+// 7 danalar girmiş bostana
+sc.push({a:mid(7),f(t,T){radial(540,900,1300,'#5a2a6a','#120818');burst(540,900,900,'rgba(255,95,162,0.13)',t);x.save();zoom(540,900,1.08+0.08*t);person(BABA,540,900,210,{mouthOpen:0.6+0.3*Math.sin(T*5),eyeOpen:0.1,sad:0.6,blush:true,shirt:BS});notes(540,740,T,'#ff9ac4');x.restore();
+ B('♪ DANALAR GİRMİŞ',300,100,YEL,t);B('BOSTANA... ♪',420,115,YEL,t,0.15);}});
+// 8 kapı açıldı, alkış
+sc.push({a:mid(8),f(t,T){const o=T>W2(8,'açıldı')-0.1;x.save();shake(T,W2(8,'açıldı'),W2(8,'açıldı')+0.4,10);nightSky();burst(540,780,900,'rgba(255,226,122,0.18)',t);x.save();zoom(540,800,1.0+0.04*t);door(540,800,0.6,o?0.9*ease(prog(T,W2(8,'açıldı')-0.1,W2(8,'açıldı')+0.4)):0,'#7a4a2a');if(o){x.fillStyle='rgba(255,226,122,0.5)';x.fillRect(420,460,240,680);}x.restore();x.restore();
+ if(o)bigText('AÇILDI!',540,330,180,GRN,PP(T,8,'açıldı'),-0.05);if(T>W2(8,'alkışladı')-0.1)bigText('👏 ALKIŞ 👏',540,1380,90,'#fff',PP(T,8,'alkışladı'),0);}});
+// 9 Kerem kaydetmişti
+sc.push({a:mid(9),f(t,T){nightSky();x.save();zoom(540,860,1.05+0.05*t);sunglassesKerem(360,860,160,{smile:1,brow:-0.5});phone(780,880,1.1,0.1,false,'#1a1f3a');recCircle(780,830,0.8,T);x.restore();
+ B('KEREM HER ŞEYİ',300,100,'#fff',t);if(T>W2(9,'kaydetmişti')-0.1)bigText('KAYDETMİŞ!',540,430,130,RED,PP(T,9,'kaydetmişti'),-0.03);}});
+// 10 mahalle grubu (kısa son)
+sc.push({a:mid(10),f(t,T){x.save();shake(t,0.2,0.6,8);radial(540,900,1300,'#1b3a6a','#040814');x.save();zoom(540,640,1.0+0.05*t);phoneUI(540,640,0.74,'MAHALLE GRUBU 🏘️',[{n:'Nermin H.',t:'😂😂😂 Dandini!',p:prog(T,st(10)+0.2,st(10)+0.6)},{n:'Site Yönetimi',t:'Bu ses kimin? 👀',p:prog(T,st(10)+0.7,st(10)+1.1),nc:'#ffd23f'},{n:'Yılmaz',t:'Tekrar tekrar|izliyorum',p:prog(T,st(10)+1.2,st(10)+1.6),nc:'#ff5fa2'}],T);x.restore();x.restore();
+ bigText('MAHALLE GRUBUNDA!',540,1370,92,YEL,prog(t,0,0.2),-0.03);}});
+// OUTRO
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,7,()=>{nightSky();});}});
+setup(sc,TIM,en(10)+0.1+2.45);
+</script></body></html>

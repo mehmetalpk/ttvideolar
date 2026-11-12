@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="../story.js"></script><script src="../story2.js"></script><script src="../p23.js"></script><script src="../p56x.js"></script><script src="../bahce.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.25),-0.03);
+const hasan=(cx,cy,r,o)=>person(HASAN,cx,cy,r,o);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.9,6);dirt(0,1920);x.fillStyle=`rgba(255,40,40,${0.2+0.15*Math.sin(T*14)})`;x.fillRect(-60,-60,W+120,H+120);rose(170,1500,0.9,T,true);rose(900,1450,0.9,T,true);
+ x.save();zoom(540,980,1.05+0.035*t);hasan(540,980,195,{mouthOpen:0.9,angry:1,brow:-0.7,red:0.3});x.restore();x.restore();vignette(0.4);
+ hook([['KOMŞUM',115,'#fff'],['BAHÇEMİZİ',150,YEL],['SÖKTÜRDÜ!',125,'#fff']],270);partBadge1(T,1);}});
+// 1 üç ay emek
+sc.push({a:mid(1),f(t,T){yard();x.save();zoom(540,950,1.0+0.04*t);person(B_ANNE,330,900,110,{smile:0.7,look:1});person(B_BABA,760,900,115,{smile:0.6,look:-1});wcan(470,1000,0.55,0.3,T);x.restore();
+ B('ANNEMLE BABAM',300,100,'#fff',t);if(T>W2(1,'üç'))bigText('3 AY EMEK!',540,430,125,YEL,P(T,1,'üç'),-0.03);}});
+// 2 güller lavanta çit
+sc.push({a:mid(2),f(t,T){yard();x.save();zoom(540,1300,1.0+0.04*t);gardenFull(T,1380);x.restore();
+ B('GÜLLER',290,105,'#e8344a',t);if(T>W2(2,'lavantalar'))bigText('LAVANTALAR',540,400,100,'#b48aff',P(T,2,'lavantalar'),-0.03);if(T>W2(2,'çit'))bigText('+ SIK BİR ÇİT',540,1380,85,'#fff',P(T,2,'çit'),0);}});
+// 3 annemin kahvesi
+sc.push({a:mid(3),f(t,T){room('#f6e4c4','#c08a5a');x.fillStyle='#fff';rr(320,420,440,420,14);x.fill();x.save();x.beginPath();x.rect(340,440,400,380);x.clip();sky('#8fd0ff','#e8f6ff');x.translate(540,630);x.scale(0.4,0.4);x.translate(-540,-1100);gardenFull(T,1150);x.restore();
+ x.save();zoom(540,950,1.0+0.04*t);person(B_ANNE,540,930,140,{smile:0.9,eyeOpen:0.4,blush:true});mug(720,1000,0.8,T);x.restore();
+ B('ANNEMİN',290,100,'#fff',t);B('SABAH KAHVESİ',400,105,YEL,t,0.12);}});
+// 4 perdeyi açtık — bahçe yoktu
+sc.push({a:mid(4),f(t,T){const ok=T>W2(4,'Bahçe');x.save();if(ok)shake(T,W2(4,'Bahçe'),W2(4,'Bahçe')+0.5,12);room('#f6e4c4','#c08a5a');x.fillStyle='#fff';rr(250,350,580,620,14);x.fill();x.save();x.beginPath();x.rect(270,370,540,580);x.clip();sky('#b8c8d8','#e8eef4');x.translate(540,660);x.scale(0.55,0.55);x.translate(-540,-1000);gardenRuined(T,1000);x.restore();
+ const o=ease(prog(T,W2(4,'perdeyi'),W2(4,'açtık',1)+0.2)),w=270*(1-o*0.85);x.fillStyle='#c0506a';rr(260,360,w,600,8);x.fill();rr(820-w,360,w,600,8);x.fill();x.fillStyle='#7a4a2a';x.fillRect(230,340,620,26);
+ x.save();zoom(540,1000,1);person(B_ANNE,540,1330,115,{eyeBig:ok?1.4:1,mouthOpen:ok?0.8:0,brow:ok?0.8:0});x.restore();x.restore();
+ if(!ok)B('PERDEYİ AÇTIK...',260,100,'#fff',t);else{x.fillStyle='rgba(255,40,40,0.15)';x.fillRect(0,0,W,H);bigText('BAHÇE YOKTU!',540,260,120,RED,P(T,4,'Bahçe'),-0.04);}}});
+// 5 her şey sökülmüş
+sc.push({a:mid(5),f(t,T){sky('#b8c8d8','#e8eef4');x.save();zoom(540,1100,1.0+0.05*t);gardenRuined(T,1000);x.restore();
+ B('HER ŞEY SÖKÜLMÜŞ',300,100,'#fff',t);if(T>W2(5,'dümdüz'))bigText('DÜMDÜZ!',540,430,130,RED,P(T,5,'dümdüz'),-0.03);}});
+// 6 kapıda Hasan Bey elleri belinde
+sc.push({a:mid(6),f(t,T){yard();x.fillStyle='#8a5a30';x.fillRect(-60,1100,W+120,900);x.save();zoom(540,950,1.0+0.05*t);hands(HASAN,540,880,150);hasan(540,880,150,{brow:-0.5,smile:0.3,angry:0.4,look:0});x.restore();
+ B('KOMŞUMUZ',290,100,'#fff',t);B('HASAN BEY',405,130,YEL,t,0.12);}});
+// 7 burası benim arsam
+sc.push({a:mid(7),f(t,T){x.save();shake(t,0,0.9,12);radial(540,900,1200,'#8a2a2a','#200606');burst(540,880,800,'rgba(255,90,90,0.2)',t);x.save();zoom(540,880,1.12+0.08*t);hasan(540,880,210,{mouthOpen:1,angry:1,brow:-0.8,red:0.5});x.restore();x.restore();
+ bigText('"BURASI BENİM',540,290,100,'#fff',prog(t,0,0.15),-0.04);bigText('ARSAM!"',540,420,150,RED,prog(t,0.05,0.2),-0.04);if(T>W2(7,'ekmeyin'))bigText('BİR DAHA EKMEYİN!',540,1380,80,YEL,P(T,7,'ekmeyin'),0);}});
+// 8 baştan diktik
+sc.push({a:mid(8),f(t,T){yard();x.save();zoom(540,950,1.0+0.04*t);const n=Math.min(5,Math.floor((t)/0.4)+1);for(let i=0;i<n;i++)rose(560+i*110,1290,0.8*back(cl((t-i*0.4)/0.3)),T);person(B_BABA,300,900,120,{smile:0.2,brow:-0.2});person(B_KIZ,470,960,85,{smile:0.5});x.restore();
+ B('BABAM TARTIŞMADI',300,95,'#fff',t);if(T>W2(8,'baştan'))bigText('BAŞTAN DİKTİK!',540,430,115,GRN,P(T,8,'baştan'),-0.03);}});
+// 9 fide + hortum
+sc.push({a:mid(9),f(t,T){yard();x.save();zoom(540,950,1.0+0.04*t);gardenFull(T,1300);person(B_ANNE,280,880,110,{smile:0.6,lookDown:1});person(B_BABA,800,880,110,{smile:0.5,look:-1});if(T>W2(9,'babam'))hose(640,1040,0.7,T);x.restore();
+ B('FİDE FİDE...',300,110,'#fff',t);if(T>W2(9,'hortumu'))bigText('+ HORTUM',540,430,110,'#8ab8ff',P(T,9,'hortumu'),-0.03);}});
+// 10 üç hafta sonra yine sökülmüş
+sc.push({a:mid(10),f(t,T){const y2=T>W2(10,'yine');x.save();if(y2)shake(T,W2(10,'yine'),W2(10,'yine')+0.5,14);if(!y2){radial(540,900,1200,'#2a2a3a','#08080c');bigNum3('3 HAFTA',800,t);}else{sky('#b8c8d8','#e8eef4');gardenRuined(T,1000);x.fillStyle='rgba(255,40,40,0.15)';x.fillRect(0,0,W,H);}x.restore();
+ if(!y2)B('SONRA...',300,110,'#fff',t);else bigText('YİNE SÖKÜLMÜŞ!',540,300,115,RED,P(T,10,'yine'),-0.04);}});
+// 11 özel mülk tabelası
+sc.push({a:mid(11),f(t,T){sky('#b8c8d8','#e8eef4');dirt(1000);x.save();zoom(540,900,1.0+0.04*t);const p=back(prog(T,W2(11,'tabela'),W2(11,'tabela')+0.4));if(p>0)signPost(700,820,0.8*p,'ÖZEL MÜLK');hands(HASAN,270,860,110);hasan(270,860,110,{smile:0.8,brow:-0.6,look:1});x.restore();
+ B('HASAN BEY',300,100,'#fff',t);B('TABELA DİKTİ!',420,115,YEL,t,0.12);}});
+// 12 annem ağlamak, ben bağırmak üzere
+sc.push({a:mid(12),f(t,T){radial(540,900,1200,'#3a2a3a','#0c080c');x.save();zoom(540,880,1.05+0.04*t);person(B_ANNE,300,860,140,{sad:1,brow:0.8,eyeOpen:0.7,smile:-0.5});x.fillStyle='#8ab8ff';x.beginPath();x.ellipse(270,900+((T*120)%60),9,14,0,0,7);x.fill();person(B_KIZ,780,860,135,{angry:1,brow:-0.8,mouthOpen:0.5,red:0.4});x.restore();
+ B('ANNEM AĞLAMAK',290,95,'#8ab8ff',t);if(T>W2(12,'Ben'))bigText('BEN BAĞIRMAK ÜZERE',540,410,85,RED,P(T,12,'Ben'),-0.03);}});
+// 13 babam gülümsedi
+sc.push({a:mid(13),f(t,T){sky('#ffb27a','#ffe2b8');dirt(1150);x.save();zoom(540,880,1.05+0.05*t);signPost(830,800,0.55,'ÖZEL MÜLK');person(B_BABA,400,880,170,{smile:ease(prog(T,W2(13,'gülümsedi'),W2(13,'gülümsedi')+0.4)),brow:-0.3,look:1});x.restore();
+ B('AMA BABAM...',300,110,'#fff',t);if(T>W2(13,'gülümsedi'))bigText('GÜLÜMSEDİ 🙂',540,430,105,YEL,P(T,13,'gülümsedi'),-0.03);}});
+// 14 tamam ölçtürelim (kısa son)
+sc.push({a:mid(14),f(t,T){x.save();shake(t,0.3,0.7,6);radial(540,900,1300,'#1b3a6a','#040814');x.save();zoom(540,880,1.08+0.08*t);person(B_BABA,540,860,200,{smile:0.7,brow:-0.5,eyeOpen:0.8});x.restore();tape(160,1380,0.9,T,700*eOut(cl(t/0.8)));x.restore();
+ bigText('"TAMAM.',540,290,120,'#fff',prog(t,0,0.15),-0.04);if(T>W2(14,'Ölçtürelim'))bigText('ÖLÇTÜRELİM."',540,430,130,YEL,P(T,14,'Ölçtürelim'),-0.04);}});
+// OUTRO
+sc.push({a:en(14)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#1a4a2a','#04100a');});}});
+function bigNum3(tx,y,t){bigText(tx,540,y,220,YEL,prog(t,0,0.2),-0.04);}
+setup(sc,TIM,en(14)+0.1+2.5);
+</script></body></html>

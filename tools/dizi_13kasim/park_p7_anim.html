@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="../story.js"></script><script src="../story2.js"></script><script src="../p34.js"></script><script src="../p56x.js"></script><script src="../p7x.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.25),-0.03);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.9,5);radial(540,900,1300,'#1b3a6a','#040814');x.save();zoom(540,980,1.05+0.035*t);dede(540,980,190,{eyeBig:1.4,eyeOpen:1.2,mouthOpen:0.9,brow:0.8});x.restore();x.restore();vignette(0.4);
+ hook([['PARK YERİ',110,'#fff'],['ÇOCUK PARKI',150,YEL],['OLDU!',125,'#fff']],270);finalBadge7(T);}});
+// 1 Yılmaz okudu
+sc.push({a:mid(1),f(t,T){lot();x.save();zoom(540,880,1.0+0.04*t);yilmaz(330,860,140,{mouthOpen:0.5+0.3*Math.sin(T*12),brow:0.4,look:1});paperLetter(760,780,0.7,0.08);x.restore();
+ B('YILMAZ OKUDU:',300,100,'#fff',t);if(T>W2(1,'Otopark'))bigText('OTOPARK KALDIRILIYOR!',540,440,82,RED,P(T,1,'Otopark'),-0.03);}});
+// 2 donup kaldı
+sc.push({a:mid(2),f(t,T){lot();x.save();zoom(540,880,1.0+0.03*t);dede(200,860,100,{eyeBig:1.3,mouthOpen:0.6});tarik(540,860,105,{eyeBig:1.3,mouthOpen:0.6});yilmaz(880,860,100,{eyeBig:1.3,mouthOpen:0.6});x.restore();x.fillStyle='rgba(120,180,255,0.25)';x.fillRect(0,0,W,H);
+ B('ÜÇÜ DE',290,105,'#fff',t);B('DONUP KALDI!',410,120,'#8ab8ff',t,0.12);}});
+// 3 kırk yıllık kavga
+sc.push({a:mid(3),f(t,T){radial(540,900,1200,'#5a3a1a','#140a04');sepia(0.0);x.save();zoom(540,900,1.0+0.05*t);bigNum('40 YIL',720,YEL,prog(t,0,0.2));x.restore();
+ B('KIRK YILLIK KAVGA',300,95,'#fff',t);if(T>W2(3,'kâğıtla'))bigText('TEK KÂĞITLA BİTTİ',540,1380,82,RED,P(T,3,'kâğıtla'),0);}});
+// 4 iş makineleri
+sc.push({a:mid(4),f(t,T){lot();x.save();shake(T,W2(4,'söktüler'),W2(4,'söktüler')+0.5,6);zoom(540,860,1.0+0.04*t);digger(430,860,1.2,T);x.restore();
+ B('İŞ MAKİNELERİ!',300,115,'#ffb21e',t);if(T>W2(4,'kum'))bigText('ASFALT GİTTİ, KUM GELDİ',540,1380,70,'#fff',P(T,4,'kum'),0);}});
+// 5 salıncak kaydırak çay bahçesi
+sc.push({a:mid(5),f(t,T){park();x.save();zoom(540,900,1.0+0.04*t);swing(320,860,0.75,T);slide(800,880,0.75);teaGl(540,1180,0.8);x.restore();
+ B('SALINCAK',290,100,'#fff',t);if(T>W2(5,'kaydırak'))B('KAYDIRAK',400,100,'#fff',T-W2(5,'kaydırak'));if(T>W2(5,'çay'))bigText('+ ÇAY BAHÇESİ',540,510,90,YEL,P(T,5,'çay'),-0.03);}});
+// 6 açılış günü, bank
+sc.push({a:mid(6),f(t,T){park();x.save();zoom(540,920,1.0+0.05*t);swing(250,860,0.6,T);bench(680,960,0.8);dede(590,850,62,{smile:0.6});person(KAZIM_Y,770,850,62,{smile:0.6});x.restore();
+ B('AÇILIŞ GÜNÜ',300,110,'#fff',t);if(T>W2(6,'ihtiyar'))bigText('İKİ İHTİYAR...',540,430,95,YEL,P(T,6,'ihtiyar'),-0.03);}});
+// 7 dedem + Tarık'ın dedesi, tavla
+sc.push({a:mid(7),f(t,T){park();x.save();zoom(540,900,1.06+0.05*t);dede(280,800,130,{smile:0.9,look:1});person(KAZIM_Y,800,800,130,{smile:0.9,look:-1});tavla(540,1370,0.42,T,true);x.restore();
+ B('DEDEM + KAZIM BEY',300,95,'#fff',t);if(T>W2(7,'tavla'))bigText('YİNE TAVLA!',540,430,115,YEL,P(T,7,'tavla'),-0.03);}});
+// 8 Yılmaz çay, Tarık zar
+sc.push({a:mid(8),f(t,T){park();x.save();zoom(540,900,1.0+0.04*t);const p=eOut(cl(t/1.2));yilmaz(130+170*p,860,110,{smile:1,mouthOpen:0.4});teaGl(260+170*p,1010,0.6);tarik(800,860,110,{smile:0.8});die(900,1010,0.55,6,T*2);die(980,1030,0.55,5,-T*2);x.restore();
+ B('YILMAZ ÇAY TAŞIYOR',300,92,'#fff',t);if(T>W2(8,'Tarık'))bigText('TARIK ZAR TUTUYOR',540,430,85,YEL,P(T,8,'Tarık'),-0.03);}});
+// 9 soru
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#2a1a4a','#05040c');burst(540,820,800,'rgba(255,210,63,0.12)',t);x.save();zoom(540,820,1.0+0.05*t);dede(330,820,110,{smile:1,look:1});person(KAZIM_Y,750,820,110,{smile:1,look:-1});heart(540,760,0.7,'#ff2d55');x.restore();
+ bigText('PARK YERİ Mİ?',540,320,105,'#fff',prog(t,0,0.2),-0.03);if(T>W2(9,'barış'))bigText('BARIŞ MI?',540,450,130,YEL,P(T,9,'barış'),-0.03);}});
+// OUTRO
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){finalOutro(t,T,()=>{radial(540,900,1300,'#2a1a4a','#05040c');});}});
+setup(sc,TIM,en(9)+0.1+1.4);
+</script></body></html>

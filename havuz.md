@@ -3,6 +3,8 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> 14 KASIM (13 Kas gece görevi notu; FORMAT 4): 09:00 HK S2 P7, 12:30 Bahçe Sınırı P2 (≤40 sn, İrem), 17:00 HK S2 P8, 20:30 Bahçe Sınırı P3 FİNAL (≤40 sn) → 15.11 12:30'dan itibaren havuzdaki ilk uygun yeni 3 partlık seri (havuzda SERİ yok; strateji.md "KANCA + KONU SEÇİMİ"ne göre seç/yaz). Park Yeri bitti (P7 13.11). Çizimler: tools/dizi_13kasim/.
+
 > FORMAT 4 (kullanıcı kararı, 12 Kas 15:44 — 13 Kasım'dan itibaren; YENİ FORMAT 3'ün SERİ/SLOT ve SÜRE maddelerinin YERİNE geçer, diğer maddeleri geçerli):
 >  - HACKER KEREM = HAFTALIK SEZON: Pazartesi Part 1 başlar, Pazar 17:00 FİNAL. Günde 2 part (09:00 + 17:00) → bir sezon 14 part. Sezon ortasında bitirme, uzatma yok.
 >  - Sezon 2 istisnası (Çarşamba başladı): 10 part, FİNAL 15.11 Pazar 17:00. Plan aşağıda (P5–P10). Sezon 3 = 16.11 Pazartesi 09:00 P1 … 22.11 Pazar 17:00 P14.
@@ -13,7 +15,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 >  - SÜRE: varsayılan ≤40 sn. GÜÇLÜ KANCALI videolarda (strateji.md'deki 4 maddelik kontrolün hepsi geçiyorsa) seri P1'i veya tek video 85 sn'ye kadar olabilir. Hacker Kerem günlük partları ve seri P2–P3 ≤40 sn kalır. Gerekçe: Park Yeri P1 83 sn'de 129K izlendi.
 >  - PARKUR (alttaki oyun videosu / bölünmüş ekran) KALDIRILDI (kullanıcı, 12 Kas 15:50): 13.11'den itibaren TÜM videolar tam ekran. tools/parkur/ kullanılmaz.
 
-> 13 KASIM (12 Kas gece görevi notu; FORMAT 4 ile uyumlu): Sıradaki partlar HK S2 P5 (09:00) + P6 (17:00), Park Yeri P7 FİNAL (12:30, TAM EKRAN — parkur kaldırıldı) → 20:30 boşalır: havuzdaki sıradaki seri "Bahçe Sınırı Savaşı" Part 1 başlar (YENİ FORMAT 3 kurallarıyla, ≤40 sn). Park P6 skoru: 3–3 sonrası dede kazandı (4–3); belediye yazısı açılmadı.
+> 13 KASIM (GEÇERSİZ, 13 Kas üretildi) (12 Kas gece görevi notu; FORMAT 4 ile uyumlu): Sıradaki partlar HK S2 P5 (09:00) + P6 (17:00), Park Yeri P7 FİNAL (12:30, TAM EKRAN — parkur kaldırıldı) → 20:30 boşalır: havuzdaki sıradaki seri "Bahçe Sınırı Savaşı" Part 1 başlar (YENİ FORMAT 3 kurallarıyla, ≤40 sn). Park P6 skoru: 3–3 sonrası dede kazandı (4–3); belediye yazısı açılmadı.
 
 > 12 KASIM ÖZEL (GEÇERSİZ, 12 Kas üretildi) (11 Kas sıra düzeltmesi): 12.11 09:00'da HK S2 P3 ZATEN PLANLI (uuid -7287343222471831941). HK için sadece 17:00'ye P4 üret. Park için normal: 12:30 P5, 20:30 P6. HK S2 P2 11.11 17:00'de sadece TikTok+YouTube'da yeniden yayınlanıyor (Instagram'daki 09:00 kopyası kalıyor).
 
@@ -87,8 +89,8 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P2: Kerem gece sistemi ele geçirdi; sabah 6'da disko ışıkları ve son ses marşla babamı uyandırdı. Babam yataktan düştü. Cliff: Annem sakin: "Ben de sisteme bir şey ekledim." ✅ 2026-11-11 (09:00, 32,9 sn)
 - P3: Annemin eklediği: ödev bitmeden Wi-Fi açılmıyor, buzdolabı "önce matematik" diyor. Kerem ilk kez yenik. Cliff: Kerem anneanneyi müttefik yapar. ✅ 2026-11-11 (17:00, 34,8 sn; Kerem akşam anneanneye "bana yardım eder misin?" der)
 - P4: Anneanne sesli asistana "Çay demle" diye bağırdı; sistem çöktü, ev karardı, perdeler kapandı. Cliff: Kapı kilitlendi, herkes dışarıda kaldı. ✅ 2026-11-12 (17:00, 29,3 sn; acil durum anonsu → bahçeye kaçış, kapı "çat" kilitlendi)
-- P5: Aile kapının önünde, yağmur başlar. Kerem telefonla girmeye çalışır; sistemin tek açılış komutu babamın kendi kaydettiği bir şey. Cliff: "Kapı sadece babamın ninni sesiyle açılıyormuş."
-- P6: Babam kapıya utana utana ninni söyler, kapı açılır. Cliff: Ertesi gün video mahalle grubunda!
+- P5: Aile kapının önünde, yağmur başlar. Kerem telefonla girmeye çalışır; sistemin tek açılış komutu babamın kendi kaydettiği bir şey. Cliff: "Kapı sadece babamın ninni sesiyle açılıyormuş." ✅ 2026-11-13 (09:00, 29,7 sn; şifre denemeleri başarısız, kapı ekranı "Sesli kimlik gerekli")
+- P6: Babam kapıya utana utana ninni söyler, kapı açılır. Cliff: Ertesi gün video mahalle grubunda! ✅ 2026-11-13 (17:00, 30,6 sn; "Dandini dandini dastana", kapı "daha duygulu" istedi, Kerem her şeyi telefona kaydetmişti → P7'de herkes Kerem'den şüphelenir)
 - P5 (13.11 09:00), P6 (13.11 17:00): yukarıdaki gibi.
 - P7 (14.11 09:00): Herkes Kerem'den şüphelenir; asıl yayan, annemin açtığı "aile anıları" özelliği: sistem her şeyi kaydedip gruba atıyormuş. Cliff: Sistem son 1 haftanın tüm videolarını yüklemek üzere…
 - P8 (14.11 17:00, YENİ): Kerem ile annem ilk kez aynı takımda, yüklemeyi durdurmaya çalışırlar; ilk yüklenen video babamın gece 3'te buzdolabıyla konuşması. Cliff: Sıradaki video anneanneye ait.
@@ -98,13 +100,6 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 ### SIRADAKİ: Hacker Kerem — SEZON 3 (16.11 Pazartesi 09:00 → 22.11 Pazar 17:00, 14 part)
 - Planı Pazar 21:37 haftalık analiz görevi yazar (karakterler aynı; yeni tema; her part bir mini olay + cliff; P14 kapanış). Rozet "SEZON 3 · PART n".
 
-### SERİ (aktif, 2 part/gün): Park Yeri Savaşı — DEVAM (komedi) — 11 Kas'tan itibaren 12:30 ve 20:30
-- P1 ve P2 (açık uçlu) hazır; Metricool limiti yüzünden yayınlanmadıysa kullanıcıya önce P1 → P2'yi yüklemesini hatırlat. Anlatıcı erkek (Emrullah). Komşu: Yılmaz. Yeni karakter: kuzen Tarık (simsiyah cip, takım elbise, gergin gülümseme). Rozet "PART n".
-- P3: Cipten inen kuzen Tarık: "Bu park yeri 40 yıldır ailemizin." Elinde sararmış bir kâğıt. Kanca: "Komşunun kuzeni park yerini tapuyla istedi." Cliff: Kâğıtta benim dedemin imzası var. ✅ 2026-11-11 (12:30, parkurlu, 28,4 sn; kâğıtta "12 NUMARA KAZIM BEY'E AİTTİR", Kazım = Tarık'ın dedesi)
-- P4: Dedeme gittim. 40 yıl önce Tarık'ın dedesiyle tavla iddiasına girmiş, kaybeden park yerini verecekmiş… dedem kaybetmiş. Cliff: Dedem tavlayı kaptı: "Rövanş!" ✅ 2026-11-11 (20:30, 26,5 sn; kahve flashback, "Kırk yıldır kimseye söylememiş", son: "Rövanş!")
-- P5: Sitede tavla turnuvası; bütün apartman balkonlarda, çekirdekler hazır. Tarık önde. Cliff: Dedem fısıldıyor: "Zarlar hileli." ✅ 2026-11-12 (12:30, parkurlu seed 1112, 24,8 sn; ödül = 12 numara, Tarık 3–0 önde, üç el düşeş)
-- P6: Hile ortaya çıkar (zar her seferinde 6-6, içinde mıknatıs). Dedem son elde kazanır, site ayakta alkışlar. Cliff: Yılmaz koşarak gelir, elinde belediye yazısı. ✅ 2026-11-12 (20:30, 28,2 sn; dede anahtarla mıknatısı yakaladı, 3–3 sonra son elde gerçek düşeş)
-- P7 (FİNAL): Yazı: park yeri kaldırılıp çocuk parkı yapılacak. Kimse kazanamadı… ama park açılınca salıncağın yanındaki bankta dedem ile Tarık'ın dedesi tavla oynuyor; Yılmaz çay taşıyor. Soru: "Park yeri mi, barış mı?"
 
 
 > NOT (10 Kas, kullanıcı isteği): Park Yeri Savaşı Part 2'nin sonu AÇIK UÇLU olarak yeniden üretildi (65,4 sn, Emrullah; kanca KANCA KURALI 2 ile "Komşum oturduğu evi de çalmış!"; çizim tools/dizi_10kasim/park_p2_acik_uc_anim.html). Mutlu son (iş teklifi, "12 artık benim") ÇIKARILDI; yerine: koliler 100 m öteden taşınır → "Ama ertesi sabah 12 numarada yine o simsiyah cip duruyordu. İçinden inen Yılmaz değildi. Kuzeniydi. Ve bana doğru yürüyordu." Outro "Devamı üçüncü partta. Takip et." + "DEVAMI PART 3'TE". Açıklama: "Part 2 — devamı Part 3'te 👀" (FİNAL değil). Seri artık 3+ part; Part 3 = cipin asıl sahibi kuzen (karakter henüz tanımsız, sadece siluet gösterildi). Metricool limiti nedeniyle P1 ve yeni P2 HENÜZ PLANLANMADI; eski P2 gönderisi (uuid -5644512209763809518, kapalı final) KULLANILMAMALI, yerine bu yeni video planlanmalı. Sıra: P1 → yeni P2 → P3.
@@ -151,11 +146,11 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Kapanış sorusu: "Senin işyerinde de böyle bir müdür var mı?"
 - Ton: komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #işyeri #müdür #komedi #keşfet #fyp #shorts
 
-### SERİ — SIRADAKİ (3 part, FORMAT 4): Bahçe Sınırı Savaşı (komedi + intikam) — P1 13.11 20:30, P2 14.11 12:30, P3 FİNAL 14.11 20:30
+### SERİ (aktif, 3 part, FORMAT 4): Bahçe Sınırı Savaşı (komedi + intikam) — P1 13.11 20:30, P2 14.11 12:30, P3 FİNAL 14.11 20:30
 - Kaynak: r/MaliciousCompliance, u/BalloonUnderstudy (başlık derlemede yok) — listverse.com "Top 10 Stories of Malicious Compliance" #7. Doğrulanmamış; "Reddit'ten uyarlanmıştır."
 - Anlatıcı: aile çocuğu (kadın → İrem). Uyarlama: Türkiye'de müstakil ev; anne-baba yan bahçeye pahalı bir çiçek/çalı bahçesi yapar (mutfak penceresini görüntüden korumak için). Komşu "Hasan Bey" kurgusal. Kurum/firma adı YOK ("bir harita mühendisi").
 - Özet: Annemle babam yan bahçeye aylarca uğraşıp güzel bir bahçe yapar. Bir sabah komşu, bahçenin kendi arsasında olduğunu iddia edip hepsini söktürmüştür. Aile yeniden diker; birkaç hafta sonra yine sökülür. Bu sefer aile kavga etmez, lisanslı bir harita mühendisi çağırır. Ölçüm sonucu: sınır komşunun dediği yerde değil, onun bahçesinin yaklaşık 3,5 metre içindedir. Komşu çitini söküp geri çekmek zorunda kalır, arka bahçesinin dörtte birini kaybeder ve sökülen bahçenin zararını öder (tutarı belirsiz bırak, "bir servet" deme). Aile bahçesini yeniden kurar — bu kez komşunun eski bahçesinin olduğu yere kadar.
-- PART 1 (güçlü kanca → 85 sn'ye kadar serbest): ilk bahçe + mutfak penceresi; sabah sökülmüş bahçe şoku; komşunun "Arsa benim!" çıkışı; ikinci dikim, ikinci söküm. Cliff: babanın sakin cümlesi: "Tamam. Ölçtürelim."
+- PART 1 (güçlü kanca → 85 sn'ye kadar serbest): ilk bahçe + mutfak penceresi; sabah sökülmüş bahçe şoku; komşunun "Arsa benim!" çıkışı; ikinci dikim, ikinci söküm. Cliff: babanın sakin cümlesi: "Tamam. Ölçtürelim." ✅ 2026-11-13 (20:30, 43,1 sn, İrem; Hasan Bey ikinci sökümde çite "ÖZEL MÜLK" tabelası dikti; anlatıcı = kızları)
 - PART 2 (≤40 sn): harita mühendisi gelir, komşu balkondan alay eder; ölçüm; kırmızı-beyaz kazık komşunun bahçesinin ortasına çakılır. Cliff: Sınır, komşunun salıncağının altından geçiyor.
 - PART 3 (FİNAL, ≤40 sn): komşu inkâr eder, resmî tutanak; çit sökülür (komik: komşu söken ekibe çay getirmek zorunda), zararı öder; yeni bahçe komşunun eski salıncağının yerinde. Soru: "Sen olsan komşuyla barışır mıydın?" Outro: "Kaçırmamak için takip et."
 - Kanca önerileri: P1 "Komşum bahçemizi iki kez söktürdü." / P2 "Babam komşuya harita mühendisi getirdi." / P3 "Sınır komşunun salıncağının altındaymış."
@@ -163,6 +158,14 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Ton: komedi/intikam; ses İrem; hashtag: #hikaye #reddithikayeleri #komşu #bahçe #intikam #komedi #keşfet #fyp #shorts
 
 ## Kullanıldı
+### SERİ: Park Yeri Savaşı — DEVAM (komedi) — BİTTİ ✅ 2026-11-13 (P7 FİNAL)
+- P1 ve P2 (açık uçlu) hazır; Metricool limiti yüzünden yayınlanmadıysa kullanıcıya önce P1 → P2'yi yüklemesini hatırlat. Anlatıcı erkek (Emrullah). Komşu: Yılmaz. Yeni karakter: kuzen Tarık (simsiyah cip, takım elbise, gergin gülümseme). Rozet "PART n".
+- P3: Cipten inen kuzen Tarık: "Bu park yeri 40 yıldır ailemizin." Elinde sararmış bir kâğıt. Kanca: "Komşunun kuzeni park yerini tapuyla istedi." Cliff: Kâğıtta benim dedemin imzası var. ✅ 2026-11-11 (12:30, parkurlu, 28,4 sn; kâğıtta "12 NUMARA KAZIM BEY'E AİTTİR", Kazım = Tarık'ın dedesi)
+- P4: Dedeme gittim. 40 yıl önce Tarık'ın dedesiyle tavla iddiasına girmiş, kaybeden park yerini verecekmiş… dedem kaybetmiş. Cliff: Dedem tavlayı kaptı: "Rövanş!" ✅ 2026-11-11 (20:30, 26,5 sn; kahve flashback, "Kırk yıldır kimseye söylememiş", son: "Rövanş!")
+- P5: Sitede tavla turnuvası; bütün apartman balkonlarda, çekirdekler hazır. Tarık önde. Cliff: Dedem fısıldıyor: "Zarlar hileli." ✅ 2026-11-12 (12:30, parkurlu seed 1112, 24,8 sn; ödül = 12 numara, Tarık 3–0 önde, üç el düşeş)
+- P6: Hile ortaya çıkar (zar her seferinde 6-6, içinde mıknatıs). Dedem son elde kazanır, site ayakta alkışlar. Cliff: Yılmaz koşarak gelir, elinde belediye yazısı. ✅ 2026-11-12 (20:30, 28,2 sn; dede anahtarla mıknatısı yakaladı, 3–3 sonra son elde gerçek düşeş)
+- P7 (FİNAL): Yazı: park yeri kaldırılıp çocuk parkı yapılacak. Kimse kazanamadı… ama park açılınca salıncağın yanındaki bankta dedem ile Tarık'ın dedesi tavla oynuyor; Yılmaz çay taşıyor. Soru: "Park yeri mi, barış mı?" ✅ 2026-11-13 (12:30, TAM EKRAN, 30,8 sn; Tarık zarları tutuyor) — SERİ BİTTİ
+
 ### MÜNFERİT 1: Yarım kilo kanat — tartıyla intikam (komedi / malicious compliance)
 - Kaynak: r/MaliciousCompliance, u/advocatus_ebrius_est (başlık derlemede yok) — listverse.com "Top 10 Stories of Malicious Compliance" #10; ranker.com "Wanted An Exact Pound Of Wings".
 - Anlatıcı: aşçı (erkek) → Emrullah. Uyarlama: Amerikan "wing night" → Türkiye'de bir tavuk restoranının "kanat akşamı" (yarım kilo kanat indirimli). Gram yerine adet standardı (yarım kilo = 8 kanat). Restoran zinciri adı YOK.

@@ -1,0 +1,15 @@
+[angry] Komşum bahçemizi iki kez söktürdü.
+Annemle babam yan bahçeye tam üç ay emek vermişti.
+Güller, lavantalar, bir de mutfak penceresinin önüne sık bir çit.
+[warm] Annem her sabah kahvesini o pencerenin önünde içerdi.
+[shocked] Bir sabah perdeyi açtık... Bahçe yoktu.
+Her şey sökülmüş, toprak dümdüz edilmişti.
+Kapıda komşumuz Hasan Bey duruyordu, elleri belinde.
+[mocking, loud] Burası benim arsam! Bir daha ekmeyin!
+[sighs] Babam tartışmadı. Bahçeyi baştan diktik.
+Annem her fideyi tek tek sardı, babam hortumu çekti.
+[tense] Üç hafta sonra... yine sökülmüş.
+Bu sefer Hasan Bey çitin yanına bir tabela dikmişti: Özel mülk.
+[upset] Annem ağlamak üzereydi. Ben bağırmak üzereydim.
+[calm] Ama babam sadece tabelaya baktı ve gülümsedi.
+[calm, confident] Tamam. Ölçtürelim.
