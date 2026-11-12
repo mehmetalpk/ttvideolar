@@ -1,0 +1,22 @@
+function king(cx,base,s){spot(cx,base-250*s,320*s,0.4,'255,215,100');sil(cx,base,s,'#1a0e05');x.fillStyle='#ffd23f';x.save();x.translate(cx,base-372*s);x.beginPath();x.moveTo(-48*s,0);x.lineTo(-48*s,-55*s);x.lineTo(-24*s,-22*s);x.lineTo(0,-65*s);x.lineTo(24*s,-22*s);x.lineTo(48*s,-55*s);x.lineTo(48*s,0);x.fill();x.restore();}
+function goldRain(t,n=26){const r=rng(4);for(let i=0;i<n;i++){const px=r()*W,sp=300+r()*400,py=((r()*H+t*sp)%(H+200))-100;x.save();x.translate(px,py);x.scale(Math.max(0.1,Math.abs(Math.cos(t*4+i))),1);x.fillStyle='#e0b640';x.beginPath();x.arc(0,0,26,0,7);x.fill();x.strokeStyle='#a07a20';x.lineWidth=5;x.beginPath();x.arc(0,0,17,0,7);x.stroke();x.restore();}}
+function cairo(t){x.fillStyle=grad(0,H,['#f6c27a','#f8e2b0']);x.fillRect(0,0,W,H);city(1050,'#b07a4a',true);mosque(300,1050,0.7,'#8a5a32');mosque(800,1050,0.6,'#8a5a32');x.fillStyle='#d9b07a';x.fillRect(0,1050,W,H-1050);}
+function scale2(t,tilt){x.save();x.translate(540,760);x.strokeStyle='#5a3418';x.lineWidth=14;x.beginPath();x.moveTo(0,-200);x.lineTo(0,260);x.stroke();x.rotate(tilt);x.beginPath();x.moveTo(-300,-200);x.lineTo(300,-200);x.stroke();x.restore();const ly=760-200-Math.sin(tilt)*300,ry=760-200+Math.sin(tilt)*300;x.fillStyle='#e0b640';for(let i=0;i<6;i++){x.beginPath();x.arc(240+(i%3)*60-60,ly+60-Math.floor(i/3)*40,26,0,7);x.fill();}x.fillStyle='#8a5a2a';rr(780,ry+20,120,90,10);x.fill();bigText('ALTIN',240,ly+150,50,'#7a3a10',1);bigText('MAL',840,ry+150,50,'#7a3a10',1);}
+// 0 kanca
+shot(0,0,t=>{zoomed(1+t*0.04,()=>{cairo(t);goldRain(t,40);});bigText('ALTIN ÇOĞALDI',W/2,350,110,'#fff',1);bigText('DEĞERİ ÇÖKTÜ',W/2,500,110,'#c1121f',1);});
+// 1 piyasayı doldurdu
+shot(1,1,t=>{cairo(t);king(540,1050,1.3);money_pile(540,1040,Math.floor(cl(t/2)*14),t);bigText('PİYASA DOLDU',W/2,350,115,'#7a3a10',1);});
+// 2 bolsa değeri düşer
+shot(2,2,t=>{bgMoney();scale2(t,-0.35*eOut(cl(t/1.5)));bigText('BOL = UCUZ',W/2,330,130,'#ffd23f',1);});
+// 3 el-Ömerî 12 yıl
+shot(3,3,t=>{bgDoc('#3a2a14','#120a04');scroll(540,780,1.2,cl(t),'EL-ÖMERÎ');bigText('12 YIL',W/2,330,170,'#ffd23f',back(cl((t-0.6)*2.5)));badge(540,1360,'DEĞERİ DÖNMEDİ','#c1121f',(t-1.6)*3);});
+// 4 pahalandı
+shot(4,4,t=>{bgDoc('#2a0a0a','#0a0202');downChart(t,cl(t/2));priceTag(800,980,'↑ FİYAT',64);bigText('EKONOMİ',W/2,330,130,'#fff',1);bigText('SARSILDI',W/2,480,130,'#ff3b3b',eOut(cl((t-0.6)*3)));});
+// 5 dönüşte parası tükendi
+shot(5,5,t=>{x.fillStyle=grad(0,H,['#f2a040','#f8d890']);x.fillRect(0,0,W,H);sun(820,430,110);x.fillStyle='#c4823a';x.fillRect(0,1040,W,H-1040);king(540-t*40,1040,1.3);x.fillStyle='#6a4a2a';rr(720,880,140,150,30);x.fill();bigText('0',790,960,70,'#fff',cl((t-0.8)*3));bigText('PARA BİTTİ',W/2,340,130,'#7a3a10',eOut(cl((t-0.5)*3)));});
+// 6 borç aldı faiz
+shot(6,6,t=>{cairo(t);king(330,1050,1.2);sil(760,1050,1.4,'#3a2410');note(760,640,1.0,0.08,'BORÇ + FAİZ',cl(t*2));bigText('EN ZENGİNİ',W/2,330,120,'#fff',1);bigText('BORÇ ALDI',W/2,470,120,'#c1121f',eOut(cl((t-0.8)*3)));});
+// 7 bilinçli hamle
+shot(7,7,t=>{bgMoney();bulb(540,720,1.3,t);const k=eOut(cl((t-0.5)/1.5));for(let i=0;i<8;i++){x.fillStyle='#e0b640';x.beginPath();x.arc(140+i*115+(540-140-i*115)*k,1000-k*240,24,0,7);x.fill();}bigText('BİLİNÇLİ',W/2,330,130,'#ffd23f',1);bigText('BİR HAMLE Mİ?',W/2,480,110,'#fff',eOut(cl((t-0.6)*3)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#13261c','#060d09'));

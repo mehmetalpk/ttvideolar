@@ -1,0 +1,22 @@
+function tomato(cx,cy,r){x.fillStyle='#e0302a';x.beginPath();x.arc(cx,cy,r,0,7);x.fill();x.fillStyle='rgba(255,255,255,0.3)';x.beginPath();x.ellipse(cx-r*0.35,cy-r*0.35,r*0.25,r*0.15,-0.6,0,7);x.fill();x.fillStyle='#2f8a3a';for(let i=0;i<5;i++){x.save();x.translate(cx,cy-r*0.9);x.rotate(i*1.256);x.beginPath();x.ellipse(0,-r*0.18,r*0.08,r*0.25,0,0,7);x.fill();x.restore();}}
+function bottleK(cx,cy,s,label='KETÇAP',med=0){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#b81d18';rr(-90,-120,180,320,40);x.fill();rr(-40,-220,80,120,16);x.fill();x.fillStyle=med?'#2a5cff':'#fff';rr(-40,-250,80,40,10);x.fill();x.fillStyle='#f3ead8';rr(-80,-20,160,110,12);x.fill();x.fillStyle='#3a1a10';x.font=`900 ${med?30:34}px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(label,0,35);x.restore();}
+function pills(cx,cy,n,t){const r=rng(9);for(let i=0;i<n;i++){x.save();x.translate(cx+(r()-0.5)*600,cy+(r()-0.5)*260);x.rotate(r()*3+t);x.fillStyle=i%2?'#e0302a':'#f3ead8';rr(-40,-18,80,36,18);x.fill();x.fillStyle=i%2?'#f3ead8':'#e0302a';rr(0,-18,40,36,18);x.fill();x.restore();}}
+function shelf(cx,cy){x.fillStyle='#5a3a22';x.fillRect(cx-380,cy,760,24);x.fillRect(cx-380,cy-340,760,24);x.fillRect(cx-380,cy-340,24,364);x.fillRect(cx+356,cy-340,24,364);}
+// 0 kanca
+shot(0,0,t=>{bgWarm();spot(540,800,420,0.4);bottleK(540,860,1.8,'İLAÇ',1);x.save();x.translate(760,600);x.rotate(0.3);x.fillStyle='#fff';rr(-60,-60,120,120,16);x.fill();x.fillStyle='#c1121f';x.fillRect(-14,-40,28,80);x.fillRect(-40,-14,80,28);x.restore();bigText('KETÇAP',W/2,330,150,'#ff4d4d',1);bigText('BİR İLAÇTI',W/2,480,120,'#fff',1);});
+// 1 1834 bennett
+shot(1,1,t=>{bgDoc('#3a2a14','#120a04');yearStamp('1834','DR. JOHN COOK BENNETT',eOut(cl(t*2)),560);sil(540,1300,1.8,'#000');tomato(780,1000,70+Math.sin(t*4)*6);});
+// 2 ishal hazımsızlık sarılık
+shot(2,2,t=>{bgWarm();tomato(540,820,170);['İSHAL','HAZIMSIZLIK','SARILIK'].forEach((w,i)=>badge(540,330+i*140,w+' ✓','#2f8a3a',(t-i*0.9)*3));});
+// 3 hap haline getirdi
+shot(3,3,t=>{bgWarm();tomato(320,760,110);mapArrow(450,760,640,760,cl(t*1.5),'#ffd23f');pills(820,760,6,0);bigText('DOMATES HAPI',W/2,330,115,'#ffd23f',eOut(cl(t*3)));});
+// 4 piyasa doldu
+shot(4,4,t=>{bgShop();shelf(540,1000);for(let i=0;i<Math.min(8,Math.floor(t*4)+1);i++)jar(240+(i%4)*200,890-Math.floor(i/4)*0,0.8,'#e0302a','HAP');pills(540,560,Math.floor(cl(t/2)*14),t);bigText('PİYASA DOLDU',W/2,330,115,'#fff',1);});
+// 5 içinde domates yok müshil
+shot(5,5,t=>{bgDoc('#1f2a1a','#0a0f08');x.save();x.translate(540,760);x.scale(3,3);x.fillStyle='#f3ead8';rr(-80,-36,160,72,36);x.fill();x.restore();tomato(400,760,70);stampX(400,760,1.0,cl((t-0.5)*3));badge(700,760,'MÜSHİL','#7a5a2a',(t-1)*3);bigText('DOMATES YOK!',W/2,330,120,'#ff4d4d',eOut(cl(t*3)));});
+// 6 hile ortaya çıktı
+shot(6,6,t=>{bgDoc('#3a2a14','#120a04');newspaper(540,880,1.0,0.05,'HİLE!');bigText('ÇILGINLIK',W/2,330,130,'#fff',1);bigText('SÖNDÜ',W/2,480,130,'#ff4d4d',eOut(cl((t-0.5)*3)));});
+// 7 masaya geçti
+shot(7,7,t=>{bgWarm();x.fillStyle='#7a4a2a';x.fillRect(0,1000,W,40);plateD(400,960,1.0,1);bottleK(760,860,1.3,'KETÇAP',0);bigText('İLAÇ DOLABINDAN',W/2,330,95,'#fff',1);bigText('MASAYA',W/2,480,140,'#ffd23f',eOut(cl((t-0.5)*3)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1c0e','#0f0704'));

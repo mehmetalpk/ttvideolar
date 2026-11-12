@@ -1,0 +1,20 @@
+function tabsM(cx,cy,n,hi){for(let i=0;i<n;i++){x.fillStyle=i===hi?'#ffd23f':'#333';rr(cx-420+i*(840/n),cy,840/n-10,80,16);x.fill();}}
+function pingpong(t){const k=(Math.sin(t*9)+1)/2;x.fillStyle='#2a5cff';rr(160,640,300,300,30);x.fill();x.fillStyle='#c1121f';rr(620,640,300,300,30);x.fill();bigText('İŞ 1',310,790,70,'#fff',1);bigText('İŞ 2',770,790,70,'#fff',1);x.fillStyle='#ffd23f';x.beginPath();x.arc(310+k*460,600-Math.sin(k*Math.PI)*120,30,0,7);x.fill();}
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);pingpong(t);bigText('AYNI ANDA',W/2,330,130,'#fff',1);bigText('İKİ İŞ YOK',W/2,470,130,'#ff2d2d',1);});
+// 1 müzik ders mesaj
+shot(1,1,t=>{blk();bookI(540,820,1.1);phone(870,700,0.5,t);notes(540,800,t,4,380);tabsM(540,1300,5,Math.floor(t*3)%5);slam('HER ŞEY AYNI ANDA',330,90,'#fff',t);});
+// 2 çok iş sanıyorsun
+shot(2,2,t=>{blk();sil(540,1050,2.4,'#3a3a3a');qmarks(700,620,t,3);slam('ÇOK İŞ',330,140,'#ffd23f',t);if(t>0.5)slam('SANIYORSUN',470,120,'#fff',t-0.5);});
+// 3 beyin gidip gelir
+shot(3,3,t=>{blk();pingpong(t);slam('GİDİP GELİR',330,130,'#ffd23f',t);});
+// 4 her geçişte kayıp
+shot(4,4,t=>{blk();const v=Math.max(0,1-t/3);x.fillStyle='#333';rr(240,700,600,140,30);x.fill();x.fillStyle=v>0.4?'#5fe08a':'#ff2d2d';rr(250,710,580*v,120,24);x.fill();bigText('ENERJİ %'+Math.round(v*100),W/2,960,70,'#fff',1);slam('HER GEÇİŞ',330,130,'#fff',t);if(t>0.6)slam('KAYIP',470,140,'#ff2d2d',t-0.6);});
+// 5 tek iş kuralı
+shot(5,5,t=>{blk();rays(540,780,t,'rgba(255,210,63,0.12)');x.fillStyle='#ffd23f';rr(390,630,300,300,30);x.fill();bigText('1',540,790,200,'#111',1);slam('TEK İŞ KURALI',330,110,'#ffd23f',t);});
+// 6 başka şeye dokunma
+shot(6,6,t=>{blk();phone(320,800,0.7,t);stampX(320,800,1.1,cl((t-0.3)*3));notes(760,800,0,3,120);stampX(760,800,1.1,cl((t-0.8)*3));slam('DOKUNMA',330,140,'#ff2d2d',t);});
+// 7 az iş derin odak
+shot(7,7,t=>{blk();for(let k=0;k<4;k++){x.strokeStyle='rgba(255,210,63,'+(0.8-k*0.18)+')';x.lineWidth=12;x.beginPath();x.arc(540,800,60+k*80+Math.sin(t*3)*6,0,7);x.stroke();}slam('AZ İŞ',330,140,'#fff',t);if(t>0.6)slam('DERİN ODAK',470,130,'#ffd23f',t-0.6);});
+// 8 outro
+shot(8,8,t=>outro(t,3,'#2a0606','#050000'));

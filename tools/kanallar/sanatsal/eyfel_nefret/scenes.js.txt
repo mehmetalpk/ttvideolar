@@ -1,0 +1,23 @@
+function eiffel(cx,base,s,p=1,col='#5a3a22'){x.save();x.translate(cx,base);x.scale(s,s);x.beginPath();x.rect(-400,-1000*p,800,1000*p+10);x.clip();x.strokeStyle=col;x.fillStyle=col;x.lineWidth=14;x.beginPath();x.moveTo(-260,0);x.quadraticCurveTo(-120,-300,-40,-700);x.lineTo(-14,-900);x.lineTo(14,-900);x.lineTo(40,-700);x.quadraticCurveTo(120,-300,260,0);x.stroke();x.beginPath();x.moveTo(-180,0);x.quadraticCurveTo(0,-200,180,0);x.stroke();x.fillRect(-170,-300,340,22);x.fillRect(-80,-560,160,18);x.lineWidth=5;for(let i=0;i<14;i++){const y=-20-i*48,w=250-i*16;x.beginPath();x.moveTo(-w,y);x.lineTo(w*0.8,y-48);x.moveTo(w,y);x.lineTo(-w*0.8,y-48);x.stroke();}x.fillRect(-6,-1000,12,100);x.restore();}
+function paris(t){x.fillStyle=grad(0,H,['#9cc3e0','#f1dcc0']);x.fillRect(0,0,W,H);city(1060,'#b8a48c',false);x.fillStyle='#8a7a66';x.fillRect(0,1060,W,H-1060);}
+function antenna(cx,cy,t){x.strokeStyle='#ffd23f';x.lineWidth=7;for(let k=0;k<3;k++){const ph=(t*1.2+k/3)%1;x.globalAlpha=1-ph;x.beginPath();x.arc(cx,cy,40+ph*260,-2.6,-0.5);x.stroke();}x.globalAlpha=1;}
+// 0 kanca
+shot(0,0,t=>{paris(t);eiffel(540,1060,0.75,1);for(let i=0;i<4;i++)sil(180+i*240,1060,1.5,'#2a1a10');bigText('SANATÇILAR',W/2,330,130,'#fff',1);bigText('NEFRET ETTİ',W/2,480,120,'#c1121f',1);});
+// 1 1887 yükseliyor
+shot(1,1,t=>{paris(t);scaffold(540,1060,500,300);eiffel(540,1060,0.75,0.2+cl(t/3)*0.25);yearStamp('1887','PARİS',eOut(cl(t*2)),560);});
+// 2 protesto mektubu
+shot(2,2,t=>{bgDoc('#3a2a14','#120a04');newspaper(540,820,1.05,-0.04,'PROTESTO!');for(let i=0;i<5;i++)sil(160+i*190,1300,1.0,'#000');bigText('SANATÇILARIN MEKTUBU',W/2,330,80,'#ffd23f',1);});
+// 3 işe yaramaz canavarca
+shot(3,3,t=>{paris(t);eiffel(540,1060,0.75,1,'#3a2414');stampT('CANAVAR!',540,700,cl(t*3),'#c1121f',110,-0.15);bigText('"İŞE YARAMAZ"',W/2,330,105,'#fff',eOut(cl(t*3)));});
+// 4 maupassant
+shot(4,4,t=>{bgDoc('#2a2014','#0c0804');spot(540,800,400,0.4);sil(540,1050,3.2,'#000');letterP(800,520,1.0,0.1);badge(540,330,'GUY DE MAUPASSANT','#2a5cff',t*3);});
+// 5 restoranda yemek
+shot(5,5,t=>{paris(t);eiffel(540,1500,1.6,1,'#3a2414');x.fillStyle='rgba(20,12,6,0.85)';rr(220,680,640,300,30);x.fill();sil(400,960,1.3,'#000');x.fillStyle='#fff';x.beginPath();x.ellipse(640,900,110,34,0,0,7);x.fill();x.fillStyle='#c97a3a';x.beginPath();x.ellipse(640,890,60,18,0,0,7);x.fill();bigText('KULEDE YEMEK',W/2,330,110,'#fff',1);});
+// 6 görmediğim tek yer
+shot(6,6,t=>{bgDoc('#2a2014','#0c0804');sil(300,1150,2.4,'#000');sbubble(620,560,700,220,'Kuleyi görmediğim tek yer!',t*2.5,52);if(t>1.2)bigText('😏',800,900,120,'#fff',1);});
+// 7 20 yıl sonra sökülecekti
+shot(7,7,t=>{paris(t);eiffel(540,1060,0.75,1);bigText('20 YIL',W/2,330,160,'#ffd23f',back(cl(t*2.5)));stampX(540,700,1.4,cl((t-0.7)*3));});
+// 8 radyo kurtardı
+shot(8,8,t=>{x.fillStyle=grad(0,H,['#0b1630','#2a3a6a']);x.fillRect(0,0,W,H);eiffel(540,1060,0.75,1,'#c9a46a');antenna(540,320,t);bigText('RADYO',W/2,330,150,'#ffd23f',eOut(cl(t*3)));bigText('KURTARDI',W/2,1340,90,'#fff',eOut(cl((t-0.6)*3)));});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#2a2014','#0c0804'));

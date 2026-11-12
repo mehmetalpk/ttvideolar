@@ -1,0 +1,26 @@
+function rink(t){x.fillStyle=grad(0,H,['#0b1630','#14244a']);x.fillRect(0,0,W,H);crowd(140,620,t,['#c8d0e0','#ff4d4d','#5b8cff','#fff']);x.fillStyle='#e8f2fb';x.fillRect(0,640,W,H-640);x.fillStyle='#c1121f';x.fillRect(0,900,W,10);x.fillStyle='#2a5cff';x.fillRect(0,760,W,8);x.fillRect(0,1060,W,8);x.strokeStyle='#c1121f';x.lineWidth=6;x.beginPath();x.arc(540,905,110,0,7);x.stroke();}
+function skater(cx,base,s,col,t,stick=1){x.save();x.translate(cx,base);x.scale(s,s);const k=Math.sin(t*6)*0.5;x.strokeStyle='#1a1a22';x.lineWidth=24;x.lineCap='round';x.beginPath();x.moveTo(-10,-110);x.lineTo(-40-30*k,0);x.moveTo(10,-110);x.lineTo(40+30*k,0);x.stroke();x.fillStyle='#ddd';x.fillRect(-70-30*k,0,60,8);x.fillRect(10+30*k,0,60,8);x.fillStyle=col;rr(-46,-260,92,160,30);x.fill();x.fillStyle='#1a1a22';x.beginPath();x.arc(0,-296,38,0,7);x.fill();x.fillStyle=col;x.beginPath();x.arc(0,-305,40,Math.PI,0);x.fill();if(stick){x.strokeStyle='#6a4a2a';x.lineWidth=12;x.beginPath();x.moveTo(30,-200);x.lineTo(120,-10);x.lineTo(170,-6);x.stroke();}x.restore();}
+function puck(cx,cy){x.fillStyle='#111';x.beginPath();x.ellipse(cx,cy,28,12,0,0,7);x.fill();}
+function goalH(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.strokeStyle='#c1121f';x.lineWidth=12;x.beginPath();x.moveTo(-120,0);x.lineTo(-120,-120);x.lineTo(120,-120);x.lineTo(120,0);x.stroke();x.strokeStyle='rgba(255,255,255,0.7)';x.lineWidth=3;for(let i=-110;i<=110;i+=22){x.beginPath();x.moveTo(i,-115);x.lineTo(i,0);x.stroke();}x.restore();}
+// 0 kanca
+shot(0,0,t=>{rink(t);skater(380+t*30,1040,1.5,'#2a5cff',t);skater(720-t*20,1040,1.5,'#c1121f',t+1);bigText('ÜNİVERSİTELİLER',W/2,330,105,'#fff',1);bigText('DEVİ YENDİ',W/2,470,130,'#ffd23f',1);});
+// 1 1980 lake placid
+shot(1,1,t=>{night();for(let i=0;i<60;i++){const r=rng(i+3);x.fillStyle='#fff';x.globalAlpha=0.7;x.beginPath();x.arc(r()*W,(r()*H+t*80)%H,4,0,7);x.fill();}x.globalAlpha=1;yearStamp('1980','LAKE PLACID',eOut(cl(t*2)),760);});
+// 2 sovyetler yenilmez
+shot(2,2,t=>{rink(t);for(let i=0;i<3;i++)skater(260+i*280,1040,1.3,'#c1121f',t+i);trophy(540,560,0.9);bigText('YENİLMEZ',W/2,330,150,'#ff4d4d',eOut(cl(t*3)));});
+// 3 10-3
+shot(3,3,t=>{night();score(3,Math.round(10*eOut(cl(t/1.6))),'ABD','SSCB',t*2,700);badge(540,330,'2 HAFTA ÖNCE','#c1121f',t*3);});
+// 4 amatör üniversiteliler
+shot(4,4,t=>{rink(t);for(let i=0;i<4;i++)skater(200+i*230,1040,1.15,'#2a5cff',t+i*0.7);badge(540,520,'ÜNİVERSİTELİ','#2a5cff',(t-0.6)*3);bigText('AMATÖRLER',W/2,330,140,'#5b8cff',eOut(cl(t*3)));});
+// 5 22 şubat sovyet öne
+shot(5,5,t=>{rink(t);score(0,1,'ABD','SSCB',t*2,420);skater(540,1040,1.6,'#c1121f',t);badge(540,700,'22 ŞUBAT','#2a5cff',(t-0.3)*3);});
+// 6 her seferinde geri
+shot(6,6,t=>{rink(t);const k=Math.min(2,Math.floor(t/0.9));score([1,2,3][k],[1,2,3][k],'ABD','SSCB',1,420);skater(540,1040,1.6,'#2a5cff',t);bigText('GERİ DÖNDÜ',W/2,700,110,'#fff',eOut(cl(t*3)));});
+// 7 eruzione gol 4-3
+shot(7,7,t=>{rink(t);goalH(860,1000,1.4);skater(380,1040,1.6,'#2a5cff',t);const k=cl((t-0.8)/0.8);puck(520+k*340,1010-k*60);if(t>1.7){score(4,3,'ABD','SSCB',(t-1.7)*3,420);confetti(t);}bigText('ERUZIONE',W/2,700,110,'#ffd23f',cl(t*3));});
+// 8 son saniyeler
+shot(8,8,t=>{night();crowd(900,1500,t*3,['#fff','#c1121f','#2a5cff']);clockBig(Math.max(0,5-Math.floor(t*2.2)),560,'#ff4d4d');if(t>2.2)confetti(t);});
+// 9 buz üzerindeki mucize
+shot(9,9,t=>{rink(t);for(let i=0;i<5;i++)skater(160+i*190,1040-Math.abs(Math.sin(t*6+i))*40,1.0,'#2a5cff',t+i,0);confetti(t);bigText('BUZ ÜZERİNDEKİ',W/2,330,105,'#fff',1);bigText('MUCİZE',W/2,480,160,'#ffd23f',back(cl((t-0.3)*2.5)));});
+// 10 outro
+shot(10,10,t=>outro(t,0,'#0b1630','#060a14'));

@@ -1,0 +1,19 @@
+function bench(cx,base){x.fillStyle='#5a3a22';x.fillRect(cx-200,base-110,400,24);x.fillRect(cx-180,base-86,20,86);x.fillRect(cx+160,base-86,20,86);}
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);bench(540,1050);sil(540,960,2.0,'#3a3a3a');bigText('SIKILMAYI ÖĞREN',W/2,330,105,'#ffd23f',1);bigText('YOKSA ODAK YOK',W/2,470,110,'#fff',1);});
+// 1 sırada asansör yemek telefon
+shot(1,1,t=>{blk();const k=Math.min(2,Math.floor(t/0.9));phone(540,800,1.2,t);slam(['SIRADA','ASANSÖRDE','YEMEKTE'][k],330,130,'#fff',t%0.9);});
+// 2 boşluk yok
+shot(2,2,t=>{blk();brainI(540,780,1.4,'#ff9ad5');for(let i=0;i<14;i++){const r=rng(i+1);x.fillStyle=['#ff2d2d','#ffd23f','#2a5cff'][i%3];rr(200+r()*600,560+r()*420,80,50,10);x.fill();}slam('BOŞLUK YOK',330,140,'#ff2d2d',t);});
+// 3 zor işler sıkıcı
+shot(3,3,t=>{blk();bookI(540,800,1.2);sbubble(800,560,300,120,'Zzz…',(t-0.5)*3,56);slam('ZOR İŞLER',330,130,'#fff',t);if(t>0.6)slam('SIKICIDIR',470,130,'#ffd23f',t-0.6);});
+// 4 beyin kaçar
+shot(4,4,t=>{blk();brainI(540-cl(t/1.5)*300,780,1.2,'#ff9ad5');doorP(860,1050,1.1,1,1);slam('KAÇAR',330,150,'#ff2d2d',t);});
+// 5 10 dakika otur
+shot(5,5,t=>{blk();bench(540,1050);sil(540,960,2.0,'#ffd23f');clock(540,560,120,t*2);slam('10 DAKİKA',330,130,'#ffd23f',t);});
+// 6 odak senin
+shot(6,6,t=>{blk();rays(540,780,t,'rgba(255,210,63,0.16)');for(let k=0;k<3;k++){x.strokeStyle='rgba(255,210,63,'+(0.8-k*0.2)+')';x.lineWidth=12;x.beginPath();x.arc(540,800,80+k*90,0,7);x.stroke();}slam('ODAK SENİN',330,140,'#ffd23f',t);});
+// 7 özet 5
+shot(7,7,t=>{blk();['TELEFONU YÖNET','TEK İŞ','HAYIR DE','DERİN ÇALIŞ','SIKILMAYI ÖĞREN'].forEach((w,i)=>badge(540,320+i*135,w,['#c1121f','#ff6a00','#2a5cff','#2f8a3a','#8a2be2'][i],(t-i*0.7)*3));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#2a0606','#050000'));

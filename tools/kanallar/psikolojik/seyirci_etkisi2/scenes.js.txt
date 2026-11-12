@@ -1,0 +1,25 @@
+function street(t){x.fillStyle=grad(0,H,['#2a1f5c','#0e0a24']);x.fillRect(0,0,W,H);x.fillStyle='#1a1440';for(let i=0;i<6;i++)x.fillRect(i*190,380-(i%3)*80,170,700);x.fillStyle='rgba(255,220,120,0.5)';for(let i=0;i<6;i++)for(let j=0;j<5;j++)if((i*7+j*3)%4)x.fillRect(i*190+30+(j%2)*70,460-(i%3)*80+j*110,40,50);x.fillStyle='#2a2a3a';x.fillRect(0,1040,W,H-1040);}
+function lying(cx,cy,s,col='#ff9ad5'){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle=col;rr(-140,-35,230,70,30);x.fill();x.beginPath();x.arc(130,-5,42,0,7);x.fill();x.restore();}
+function crowdS(t,hi,col='#0a0718'){for(let i=0;i<7;i++){const px=110+i*143;sil(px,1030+(i%2)*14,1.5,i===hi?'#2a5cff':col);}}
+function eyeLine(ax,ay,bx,by,p){x.strokeStyle='#ffd23f';x.lineWidth=10;x.setLineDash([26,16]);x.lineDashOffset=-p*80;x.beginPath();x.moveTo(ax,ay);x.lineTo(ax+(bx-ax)*cl(p),ay+(by-ay)*cl(p));x.stroke();x.setLineDash([]);}
+function arrowDown(cx,cy,t){const b=Math.sin(t*8)*14;x.fillStyle='#ffd23f';x.beginPath();x.moveTo(cx-50,cy-70+b);x.lineTo(cx+50,cy-70+b);x.lineTo(cx,cy+b);x.fill();}
+// 0 kanca
+shot(0,0,t=>{street(t);lying(540,980,1.4);crowdS(t,-1);bigText('TEK BİR CÜMLE',W/2,360,120,'#fff',1);bigText('HAYAT KURTARIR',W/2,520,105,'#5fe08a',1);});
+// 1 hatırla
+shot(1,1,t=>{street(t);lying(540,980,1.2);crowdS(t,-1);for(let i=0;i<7;i++)qmarks(110+i*143,760,t+i,1);badge(540,360,'SEYİRCİ ETKİSİ','#5b6cff',t*3);bigText('"BİRİ YARDIM EDER"',W/2,540,80,'#ffd23f',eOut(cl((t-0.8)*3)));});
+// 2 fark et, acil
+shot(2,2,t=>{bgPsi();check(540,560,1.2,t>1.0,'1. FARK ET');check(540,760,1.2,t>2.6,'2. ACİL Mİ?');bigText('DARLEY & LATANÉ',W/2,330,90,'#fff',1);});
+// 3 sorumluluk
+shot(3,3,t=>{bgPsi('#5c1f2a','#24080e');brainI(540,760,1.4,'#ffd23f');bigText('KIRILMA NOKTASI',W/2,330,100,'#fff',1);badge(540,1000,'SORUMLULUK','#c1121f',(t-0.9)*3);});
+// 4 biri yardım etsin bağırma
+shot(4,4,t=>{street(t);crowdS(t,-1);lying(540,1000,1.0);sbubble(540,560,700,160,'Biri yardım etsin!',t*3,64);stampX(540,560,1.6,cl((t-1.2)*3));});
+// 5 tek kişiyi seç
+shot(5,5,t=>{street(t);crowdS(t,4);eyeLine(540,300,682,830,t/1.2);arrowDown(682,760,t);bigText('TEK KİŞİ SEÇ',W/2,360,120,'#ffd23f',1);});
+// 6 sen mavi montlu
+shot(6,6,t=>{bgPsi();spot(540,760,420,0.4,'120,150,255');sil(540,1030,3.2,'#2a5cff');sbubble(540,420,880,190,'Sen, mavi montlu!',t*3,70);badge(540,1330,'AMBULANS ÇAĞIR!','#c1121f',(t-0.9)*3);});
+// 7 sorumluluk tek kişiye
+shot(7,7,t=>{bgPsi();for(let i=0;i<7;i++){const on=i===3;const px=110+i*143;sil(px,1000,1.5,on?'#2a5cff':'#3a3460');}const k=eOut(cl(t/1.4));for(let i=0;i<7;i++){if(i===3)continue;const sx=110+i*143;x.fillStyle='#ffd23f';x.beginPath();x.arc(sx+(539-sx)*k,560+k*200,18,0,7);x.fill();}bigText('TEK KİŞİYE DÜŞER',W/2,350,100,'#ffd23f',1);});
+// 8 o seyirci sen olma
+shot(8,8,t=>{street(t);lying(540,980,1.2);sil(700-cl(t)*120,1030,1.8,'#5fe08a');bigText('O SEYİRCİ',W/2,360,130,'#fff',1);bigText('SEN OLMA',W/2,520,130,'#5fe08a',eOut(cl((t-0.5)*3)));});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#2a1f5c','#0e0a24'));

@@ -1,0 +1,12 @@
+[intense] Telefonun, seni yönetiyor.
+
+[serious] Uyanıyorsun. İlk dokunduğun şey, ekran.
+Bir bildirim geliyor, elin kendiliğinden uzanıyor.
+[curious] Çünkü her bildirim, beynine küçük bir ödül sözü veriyor.
+[intense] Ve sen o ödül için, saatlerini veriyorsun.
+
+[serious] Sabah ilk bir saat telefona dokunma.
+Bildirimleri kapat. Telefonu başka odaya koy.
+[intense] Dikkatin, sahip olduğun en değerli şey. Onu bedavaya verme.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

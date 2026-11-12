@@ -1,0 +1,11 @@
+[intense] Sıfırdan başlamaktan korkma.
+
+[serious] Bölüm değiştirmek. İşten ayrılmak. Yeni bir şehre taşınmak.
+İnsanlar hemen sorar: "Bu yaştan sonra mı?"
+[curious] Ama sen sıfırdan başlamıyorsun. Tecrübeden başlıyorsun.
+[intense] Her düşüş sana bir şey öğretti. Hepsi şimdi yanında.
+
+[serious] Yanlış yolda hızlı gitmektense, doğru yolda yavaş başlamak daha iyidir.
+[intense] Bugün başlarsan, bir yıl sonra "keşke" demezsin.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

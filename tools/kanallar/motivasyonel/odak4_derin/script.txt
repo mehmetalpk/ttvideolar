@@ -1,0 +1,11 @@
+[intense] Günde bir saat, hayatını değiştirebilir. || Günde 1 saat, hayatını değiştirebilir.
+
+[serious] Telefon başka odada. Kapı kapalı. Önünde tek bir iş.
+Buna derin çalışma denir.
+[curious] İlk on dakika zor geçer. Beynin kaçmak için bahane arar. || İlk 10 dakika zor geçer. Beynin kaçmak için bahane arar.
+[intense] Dayan. Çünkü sonra odak gelir ve saat akmaya başlar.
+
+[serious] Dağınık geçen sekiz saatten, derin geçen bir saat daha değerlidir. || Dağınık geçen 8 saatten, derin geçen 1 saat daha değerlidir.
+[intense] Her gün aynı saatte, aynı yerde. Beynin bunu bir randevu gibi bekleyecek.
+
+[softly] Devamı beşinci partta. Kaçırmamak için takip et. || Devamı 5. partta. Kaçırmamak için takip et.

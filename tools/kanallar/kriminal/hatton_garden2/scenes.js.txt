@@ -1,0 +1,25 @@
+function oldman(cx,base,s,col='#000'){s*=1.7;spot(cx,base-110*s,190*s,0.4,'170,190,230');sil(cx,base,s,col);x.fillStyle=col;x.save();x.translate(cx,base);x.scale(s,s);x.fillRect(-42,-190,84,8);x.fillRect(-26,-222,52,34);x.strokeStyle=col;x.lineWidth=6;x.beginPath();x.moveTo(52,-90);x.lineTo(68,0);x.stroke();x.restore();}
+function merc(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#f2f2f2';rr(-260,-60,520,110,40);x.fill();x.beginPath();x.moveTo(-150,-60);x.lineTo(-90,-140);x.lineTo(110,-140);x.lineTo(180,-60);x.fill();x.fillStyle='#22324a';x.beginPath();x.moveTo(-125,-66);x.lineTo(-80,-125);x.lineTo(0,-125);x.lineTo(0,-66);x.fill();x.beginPath();x.moveTo(15,-66);x.lineTo(15,-125);x.lineTo(100,-125);x.lineTo(155,-66);x.fill();x.fillStyle='#111';[-150,150].forEach(w=>{x.beginPath();x.arc(w,50,48,0,7);x.fill();});x.fillStyle='#ffd23f';x.fillRect(240,-30,24,20);x.restore();}
+function cctv(t,sc){x.fillStyle='#0b0d10';x.fillRect(0,0,W,H);x.fillStyle='#1d2228';x.fillRect(0,880,W,300);x.fillStyle='#2a2f36';for(let i=0;i<5;i++)x.fillRect(i*240,300,200,580);sc();x.fillStyle='rgba(120,255,140,0.06)';for(let y=0;y<H;y+=6)x.fillRect(0,y,W,2);x.fillStyle='#ff3b3b';if(Math.floor(t*2)%2){x.beginPath();x.arc(120,1330,16,0,7);x.fill();}x.font=`800 44px monospace`;x.fillStyle='#d8ffd8';x.textAlign='left';x.fillText('CAM 07  04.2015',150,1345);}
+function bug(cx,cy,t){x.fillStyle='#222';rr(cx-50,cy-30,100,60,12);x.fill();x.fillStyle='#ff3b3b';x.beginPath();x.arc(cx+30,cy,8,0,7);x.fill();x.strokeStyle='#5fe08a';x.lineWidth=6;for(let k=0;k<3;k++){const ph=(t*1.5+k/3)%1;x.globalAlpha=1-ph;x.beginPath();x.arc(cx,cy,60+ph*140,-0.9,0.9);x.stroke();}x.globalAlpha=1;}
+function waveRec(cy,t){x.strokeStyle='#5fe08a';x.lineWidth=6;x.beginPath();for(let i=0;i<=80;i++){const px=140+i*10;const a=Math.sin(i*0.7+t*14)*Math.sin(i*0.13+t*3)*70;i?x.lineTo(px,cy+a):x.moveTo(px,cy+a);}x.stroke();}
+// 0 kanca
+shot(0,0,t=>{noir();spot(540,820,520,0.35,'200,220,255');merc(540,900,1.4,t);bigText('ONLARI',W/2,330,140,'#fff',1);bigText('ARABALARI ELE VERDİ',W/2,480,86,'#ffd23f',1);});
+// 1 kamera kayıtları
+shot(1,1,t=>{cctv(t,()=>{for(let i=0;i<3;i++)sil(((t*120+i*360)%1200)-60,960,1.3,'#3a4048');});bigText('KAMERALAR',W/2,180+150,110,'#fff',1);});
+// 2 beyaz mercedes
+shot(2,2,t=>{cctv(t,()=>merc(260+t*120,960,1.1,t));x.strokeStyle='#ff3b3b';x.lineWidth=8;const bx=260+t*120;rr(bx-310,780,620,260,10);x.stroke();bigText('BEYAZ MERCEDES',W/2,330,96,'#ffd23f',eOut(cl(t*3)));});
+// 3 kenny collins
+shot(3,3,t=>{noir();merc(540,1000,1.1,t);oldman(540,820,0.9);badge(540,330,'KENNY COLLINS','#2a5cff',t*3);});
+// 4 dinleme cihazı
+shot(4,4,t=>{noir();merc(540,900,1.4,t);bug(540,780,t);bigText('DİNLEME CİHAZI',W/2,330,100,'#5fe08a',eOut(cl(t*3)));});
+// 5 övündüler kaydedildi
+shot(5,5,t=>{noir();oldman(260,1040,1.0);oldman(820,1040,1.0);sbubble(260,560,300,120,'Hah!',t*3,60);sbubble(820,640,360,120,'Başardık!',(t-0.7)*3,54);waveRec(860,t);if(Math.floor(t*2)%2){x.fillStyle='#ff3b3b';x.beginPath();x.arc(420,330,22,0,7);x.fill();}bigText('REC',W/2+40,330,90,'#ff3b3b',1);});
+// 6 19 mayıs baskın
+shot(6,6,t=>{noir();x.fillStyle=Math.floor(t*4)%2?'rgba(255,40,40,0.25)':'rgba(40,80,255,0.25)';x.fillRect(0,0,W,H);yearStamp('2015','19 MAYIS · BASKIN',eOut(cl(t*2)),760);});
+// 7 tutuklandı hapis
+shot(7,7,t=>{noir();oldman(400,1040,1.0);oldman(680,1040,1.0);bars(t);bigText('HAPİS',W/2,330,170,'#ff4d4d',back(cl(t*2.5)));});
+// 8 ganimet bulunamadı
+shot(8,8,t=>{noir();rain(t);for(let i=0;i<5;i++)diamond(220+i*160,820+Math.sin(t*2+i)*30,0.6,t+i);x.fillStyle='rgba(5,5,6,'+cl(t/2)*0.8+')';x.fillRect(0,600,W,500);bigText('KAYIP',W/2,330,170,'#ffd23f',1);bigText('?',W/2,560,200,'#fff',cl(t*2));});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#14161a','#050506'));

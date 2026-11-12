@@ -1,0 +1,12 @@
+[intense] Sıkılmayı öğrenmeden, odaklanamazsın.
+
+[serious] Sırada telefon. Asansörde telefon. Yemekte telefon.
+Beynine bir saniye bile boşluk bırakmıyorsun.
+[curious] Ama zor işler, ilk başta hep sıkıcıdır.
+[intense] Sıkılmaya dayanamayan beyin, her zorlukta kaçar.
+
+[serious] Bugün on dakika hiçbir şey yapmadan otur. Ekran yok. Sadece düşüncelerin. || Bugün 10 dakika hiçbir şey yapmadan otur. Ekran yok. Sadece düşüncelerin.
+[intense] Sıkıntıya dayanmayı öğrendiğinde, odak senin olur.
+[serious] Telefonu yönet, tek iş yap, hayır de, derin çalış ve sıkılmayı öğren.
+
+[softly] Kaçırmamak için takip et.

@@ -1,0 +1,11 @@
+[intense] Ketçap bir zamanlar ilaç olarak satıldı.
+
+[serious] Bin sekiz yüz otuz dörtte Amerikalı bir doktor, John Cook Bennett, domatesin mucize olduğunu iddia etti. || 1834'te Amerikalı bir doktor, John Cook Bennett, domatesin mucize olduğunu iddia etti.
+İshale, hazımsızlığa, hatta sarılığa iyi geldiğini söyledi.
+[intense] Sonra domates ketçabı tarifini hap haline getirdi.
+[serious] Kısa sürede piyasa domates haplarıyla doldu.
+[curious] Bazılarının içinde domates bile yoktu, sadece müshil vardı.
+[serious] Hile ortaya çıkınca, bu çılgınlık söndü.
+[intense] Ve ketçap, ilaç dolabından yemek masasına geçti.
+
+[softly] Kaçırmamak için takip et.

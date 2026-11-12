@@ -1,0 +1,11 @@
+[intense] Her şeye evet diyen, hiçbir şey başaramaz.
+
+[serious] Her davete evet. Her ricaya evet. Her plana evet.
+Sonra gün bitiyor ve kendi hedefin için tek bir dakikan kalmıyor.
+[intense] Her evet, başka bir şeye hayırdır.
+[serious] Başkasının planına evet dediğinde, kendi planına hayır diyorsun.
+
+[intense] Hayır demek kabalık değil. Önceliktir.
+[serious] Bugün bir şeye, kibarca ama net bir şekilde hayır de.
+
+[softly] Devamı dördüncü partta. Kaçırmamak için takip et. || Devamı 4. partta. Kaçırmamak için takip et.

@@ -1,0 +1,12 @@
+[intense] Altın o kadar çoğaldı ki, değeri çöktü.
+
+[serious] Mansa Musa'nın Kahire'de dağıttığı altın, piyasayı doldurdu.
+Bir şey bolsa, değeri düşer. Altın da öyle.
+[curious] Tarihçi el-Ömerî, ziyaretten on iki yıl sonra bile altının eski değerine dönmediğini yazdı. || Tarihçi el-Ömerî, ziyaretten 12 yıl sonra bile altının eski değerine dönmediğini yazdı.
+[intense] Altınla alınan her şey pahalandı, Kahire'nin ekonomisi sarsıldı.
+
+[serious] Ve işin en ilginç yanı: Dönüş yolunda Musa'nın parası tükendi.
+[intense] Tarihin en zengini denen hükümdar, Kahireli tüccarlardan faizle borç aldı.
+[curious] Bazı tarihçilere göre bu bilinçli bir hamleydi: Piyasadaki altını geri çekmek.
+
+[softly] Kaçırmamak için takip et.
