@@ -3,7 +3,17 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
-> 13 KASIM (12 Kas gece görevi notu): Sıradaki partlar HK S2 P5 (09:00) + P6 (17:00), Park Yeri P7 FİNAL (12:30, parkurlu) → 20:30 boşalır: havuzdaki sıradaki seri "Bahçe Sınırı Savaşı" Part 1 başlar (YENİ FORMAT 3 kurallarıyla, ≤40 sn). Park P6 skoru: 3–3 sonrası dede kazandı (4–3); belediye yazısı açılmadı.
+> FORMAT 4 (kullanıcı kararı, 12 Kas 15:44 — 13 Kasım'dan itibaren; YENİ FORMAT 3'ün SERİ/SLOT ve SÜRE maddelerinin YERİNE geçer, diğer maddeleri geçerli):
+>  - HACKER KEREM = HAFTALIK SEZON: Pazartesi Part 1 başlar, Pazar 17:00 FİNAL. Günde 2 part (09:00 + 17:00) → bir sezon 14 part. Sezon ortasında bitirme, uzatma yok.
+>  - Sezon 2 istisnası (Çarşamba başladı): 10 part, FİNAL 15.11 Pazar 17:00. Plan aşağıda (P5–P10). Sezon 3 = 16.11 Pazartesi 09:00 P1 … 22.11 Pazar 17:00 P14.
+>  - Sonraki sezonun 14 partlık planını Pazar 21:37 haftalık analiz görevi havuz.md'ye yazar. Pazartesi 01:47 görevi plan bulamazsa önce planı yazar, sonra P1'i üretir.
+>  - DİĞER SERİLER = TAM 3 PART. 12:30 ve 20:30 slotlarını tek seri sırayla kullanır (P1 12:30, P2 20:30, P3 ertesi gün 12:30; sıradaki seri P1 aynı gün 20:30). 4. part YOK, uzatma YOK; P3 hikâyeyi kapatır.
+>  - Park Yeri Savaşı istisna: başladığı için P7 FİNAL 13.11 12:30'da biter. 13.11 20:30 = "Bahçe Sınırı Savaşı" P1 (3 parta bölündü, aşağıda).
+>  - Konu ve kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)" bölümüne göre.
+>  - SÜRE: varsayılan ≤40 sn. GÜÇLÜ KANCALI videolarda (strateji.md'deki 4 maddelik kontrolün hepsi geçiyorsa) seri P1'i veya tek video 85 sn'ye kadar olabilir. Hacker Kerem günlük partları ve seri P2–P3 ≤40 sn kalır. Gerekçe: Park Yeri P1 83 sn'de 129K izlendi.
+>  - Parkur testi 12:30'da sürer.
+
+> 13 KASIM (12 Kas gece görevi notu; FORMAT 4 ile uyumlu): Sıradaki partlar HK S2 P5 (09:00) + P6 (17:00), Park Yeri P7 FİNAL (12:30, parkurlu) → 20:30 boşalır: havuzdaki sıradaki seri "Bahçe Sınırı Savaşı" Part 1 başlar (YENİ FORMAT 3 kurallarıyla, ≤40 sn). Park P6 skoru: 3–3 sonrası dede kazandı (4–3); belediye yazısı açılmadı.
 
 > 12 KASIM ÖZEL (GEÇERSİZ, 12 Kas üretildi) (11 Kas sıra düzeltmesi): 12.11 09:00'da HK S2 P3 ZATEN PLANLI (uuid -7287343222471831941). HK için sadece 17:00'ye P4 üret. Park için normal: 12:30 P5, 20:30 P6. HK S2 P2 11.11 17:00'de sadece TikTok+YouTube'da yeniden yayınlanıyor (Instagram'daki 09:00 kopyası kalıyor).
 
@@ -71,7 +81,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 ## Bekleyen
 
-### SERİ (aktif, 2 part/gün): Hacker Kerem — SEZON 2 "Akıllı Ev" (komedi) — 11 Kas'tan itibaren 09:00 ve 17:00
+### SERİ (aktif, 2 part/gün): Hacker Kerem — SEZON 2 "Akıllı Ev" (komedi) — 11 Kas'tan itibaren 09:00 ve 17:00 — 10 PART, FİNAL 15.11 Pazar 17:00 (FORMAT 4)
 - Karakterler/renkler Sezon 1 ile AYNI (anlatıcı abi Emre = Emrullah sesi; Kerem 12, güneş gözlüklü; hacker kurslu baba; "gerçek hacker" anne; anneanne). Rozet: "SEZON 2 · PART n". Açıklama satırı: "Hacker Kerem Sezon 2 — Part n 👀".
 - P1: Babam hacker kursundan sonra evi akıllı eve çevirdi: ışıklar, perde, konuşan buzdolabı. Sistem şifresini gururla açıkladı… "Kerem123". Kanca: "Babam evin şifresini Kerem123 yaptı." Cliff: Kerem gülümsüyor. ✅ 2026-11-10 (elle, kullanıcıya verildi; 30,7 sn)
 - P2: Kerem gece sistemi ele geçirdi; sabah 6'da disko ışıkları ve son ses marşla babamı uyandırdı. Babam yataktan düştü. Cliff: Annem sakin: "Ben de sisteme bir şey ekledim." ✅ 2026-11-11 (09:00, 32,9 sn)
@@ -79,8 +89,14 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P4: Anneanne sesli asistana "Çay demle" diye bağırdı; sistem çöktü, ev karardı, perdeler kapandı. Cliff: Kapı kilitlendi, herkes dışarıda kaldı. ✅ 2026-11-12 (17:00, 29,3 sn; acil durum anonsu → bahçeye kaçış, kapı "çat" kilitlendi)
 - P5: Aile kapının önünde, yağmur başlar. Kerem telefonla girmeye çalışır; sistemin tek açılış komutu babamın kendi kaydettiği bir şey. Cliff: "Kapı sadece babamın ninni sesiyle açılıyormuş."
 - P6: Babam kapıya utana utana ninni söyler, kapı açılır. Cliff: Ertesi gün video mahalle grubunda!
-- P7: Herkes Kerem'den şüphelenir; asıl yayan, annemin açtığı "aile anıları" özelliği: sistem her şeyi kaydedip gruba atıyormuş. Cliff: Sistem son 1 haftanın tüm videolarını yüklemek üzere…
-- P8 (FİNAL): Aile toplantısı: akıllı ev iptal, eski anahtara dönüş. Son sahne: Kerem anahtarın kopyasını çoktan çıkarmış. Soru: "Sizin evde gerçek hacker kim?"
+- P5 (13.11 09:00), P6 (13.11 17:00): yukarıdaki gibi.
+- P7 (14.11 09:00): Herkes Kerem'den şüphelenir; asıl yayan, annemin açtığı "aile anıları" özelliği: sistem her şeyi kaydedip gruba atıyormuş. Cliff: Sistem son 1 haftanın tüm videolarını yüklemek üzere…
+- P8 (14.11 17:00, YENİ): Kerem ile annem ilk kez aynı takımda, yüklemeyi durdurmaya çalışırlar; ilk yüklenen video babamın gece 3'te buzdolabıyla konuşması. Cliff: Sıradaki video anneanneye ait.
+- P9 (15.11 09:00, YENİ): Anneannenin videosu: sistemi o gün yanlışlıkla değil BİLEREK çökertmiş, "Kerem biraz dışarı çıksın" diye. Herkes şok. Cliff: Anneanne gözlüğünü takar: "Bu evin ilk hacker'ı benim."
+- P10 (FİNAL, 15.11 17:00): Aile toplantısı: akıllı ev iptal, eski anahtara dönüş. Son sahne: Kerem anahtarın kopyasını çoktan çıkarmış; anneanne göz kırpar. Soru: "Sizin evde gerçek hacker kim?" Outro: "Sezon 3 pazartesi! Kaçırmamak için takip et."
+
+### SIRADAKİ: Hacker Kerem — SEZON 3 (16.11 Pazartesi 09:00 → 22.11 Pazar 17:00, 14 part)
+- Planı Pazar 21:37 haftalık analiz görevi yazar (karakterler aynı; yeni tema; her part bir mini olay + cliff; P14 kapanış). Rozet "SEZON 3 · PART n".
 
 ### SERİ (aktif, 2 part/gün): Park Yeri Savaşı — DEVAM (komedi) — 11 Kas'tan itibaren 12:30 ve 20:30
 - P1 ve P2 (açık uçlu) hazır; Metricool limiti yüzünden yayınlanmadıysa kullanıcıya önce P1 → P2'yi yüklemesini hatırlat. Anlatıcı erkek (Emrullah). Komşu: Yılmaz. Yeni karakter: kuzen Tarık (simsiyah cip, takım elbise, gergin gülümseme). Rozet "PART n".
@@ -135,13 +151,14 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Kapanış sorusu: "Senin işyerinde de böyle bir müdür var mı?"
 - Ton: komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #işyeri #müdür #komedi #keşfet #fyp #shorts
 
-### AKŞAM SERİSİ — SIRADAKİ (2 part): Bahçe Sınırı Savaşı (komedi + intikam) — 10 Kas akşamı Part 1 ile başlar (Park Yeri Savaşı bitti)
+### SERİ — SIRADAKİ (3 part, FORMAT 4): Bahçe Sınırı Savaşı (komedi + intikam) — P1 13.11 20:30, P2 14.11 12:30, P3 FİNAL 14.11 20:30
 - Kaynak: r/MaliciousCompliance, u/BalloonUnderstudy (başlık derlemede yok) — listverse.com "Top 10 Stories of Malicious Compliance" #7. Doğrulanmamış; "Reddit'ten uyarlanmıştır."
 - Anlatıcı: aile çocuğu (kadın → İrem). Uyarlama: Türkiye'de müstakil ev; anne-baba yan bahçeye pahalı bir çiçek/çalı bahçesi yapar (mutfak penceresini görüntüden korumak için). Komşu "Hasan Bey" kurgusal. Kurum/firma adı YOK ("bir harita mühendisi").
 - Özet: Annemle babam yan bahçeye aylarca uğraşıp güzel bir bahçe yapar. Bir sabah komşu, bahçenin kendi arsasında olduğunu iddia edip hepsini söktürmüştür. Aile yeniden diker; birkaç hafta sonra yine sökülür. Bu sefer aile kavga etmez, lisanslı bir harita mühendisi çağırır. Ölçüm sonucu: sınır komşunun dediği yerde değil, onun bahçesinin yaklaşık 3,5 metre içindedir. Komşu çitini söküp geri çekmek zorunda kalır, arka bahçesinin dörtte birini kaybeder ve sökülen bahçenin zararını öder (tutarı belirsiz bırak, "bir servet" deme). Aile bahçesini yeniden kurar — bu kez komşunun eski bahçesinin olduğu yere kadar.
-- PART 1 (~75 sn): ilk bahçe + mutfak penceresi; sabah sökülmüş bahçe şoku; komşunun "Arsa benim!" çıkışı; ikinci dikim, ikinci söküm; babanın sakin cümlesi: "Tamam. Ölçtürelim." Son kare: harita mühendisinin kırmızı-beyaz sınır kazığını komşunun bahçesinin ortasına çakması. Outro: "Devamı 2. partta."
-- PART 2 (FİNAL, ~75 sn): tek cümle özet → ölçüm raporu, komşunun inkârı, resmî tutanak; çitin sökülmesi (komik: komşu kendi çitini söken ekibe çay getirmek zorunda), tazminat; final: yeni bahçe komşunun eski salıncağının yerinde. Soru: "Sen olsan komşuyla barışır mıydın?" Outro: "Takip et."
-- Kanca önerileri: P1 "Komşum bahçemizi iki kez söktürdü. Üçüncüsünde ölçüm yaptırdık." / P2 "Ölçüm çıktı. Sınır, komşunun salıncağının altından geçiyordu."
+- PART 1 (güçlü kanca → 85 sn'ye kadar serbest): ilk bahçe + mutfak penceresi; sabah sökülmüş bahçe şoku; komşunun "Arsa benim!" çıkışı; ikinci dikim, ikinci söküm. Cliff: babanın sakin cümlesi: "Tamam. Ölçtürelim."
+- PART 2 (≤40 sn): harita mühendisi gelir, komşu balkondan alay eder; ölçüm; kırmızı-beyaz kazık komşunun bahçesinin ortasına çakılır. Cliff: Sınır, komşunun salıncağının altından geçiyor.
+- PART 3 (FİNAL, ≤40 sn): komşu inkâr eder, resmî tutanak; çit sökülür (komik: komşu söken ekibe çay getirmek zorunda), zararı öder; yeni bahçe komşunun eski salıncağının yerinde. Soru: "Sen olsan komşuyla barışır mıydın?" Outro: "Kaçırmamak için takip et."
+- Kanca önerileri: P1 "Komşum bahçemizi iki kez söktürdü." / P2 "Babam komşuya harita mühendisi getirdi." / P3 "Sınır komşunun salıncağının altındaymış."
 - Devam koşulu: kullanıcı kuralı (Part 1 ≥100 TikTok beğenisi).
 - Ton: komedi/intikam; ses İrem; hashtag: #hikaye #reddithikayeleri #komşu #bahçe #intikam #komedi #keşfet #fyp #shorts
 

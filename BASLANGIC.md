@@ -10,7 +10,7 @@ Bu depo "…sal Hikayeler" faceless video hesaplarının (TikTok + Instagram + Y
 4. Küçük hesaplar için: stok/URETIM.md, stok/README.md ("Kullanılan konular" — tekrar etme), stok/<hesap>/stok.md, tools/kanallar/README.md.
 
 ## Ortak kurallar (özet)
-- Video ≤40 sn, dikey 1080x1920, canvas animasyonu + ElevenLabs (eleven_v4) seslendirme, atempo 1.2.
+- Video ≤40 sn (güçlü kancalı seri P1/tek video 85 sn'ye kadar — havuz.md FORMAT 4), seriler 3 part (Hacker Kerem haftalık sezon), dikey 1080x1920, canvas animasyonu + ElevenLabs (eleven_v4) seslendirme, atempo 1.2.
 - Kanca 4–7 kelime, ilk karede dev yazı; altyazı y≈1150 (altta değil); ses efekti yok; saç tek parça; filigran @hesap.
 - Sonda kısa "Devamı X. partta, kaçırmamak için takip et" (beğeni/yorum isteme, başka hesaba yönlendirme yok).
 - #gerçekhikaye ve "gerçek/yaşanmış" yasak; gerçek kişi yüzü/logo/telifli görüntü yok; yapay zekâ etiketi her platformda açık.

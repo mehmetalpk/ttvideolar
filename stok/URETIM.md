@@ -24,12 +24,14 @@ Gün X'te üretilen paket X+2 … X+8 günlerinin boşlarına planlanır (X+1'i 
 Bir hesabın klasöründe (stok/<hesap>/) başkasının (ör. kullanıcının arkadaşının) bıraktığı, henüz planlanmamış MP4 + stok.md satırı varsa önce onları planla, eksik kalan günleri üret.
 
 ## Gruplar
-- Grup 1 (İslamik, Osmanlısal, Motivasyonel): SERİ. Bir konu 3–5 parta bölünür, günde 1 part. Paket bir serinin ortasında bitebilir; sonraki paket kaldığı yerden devam eder (stok.md'ye "seri: <ad> Pn/N" yaz).
-- Grup 2 (Sporsal, Sanatsal, Yemeksel): günde 1 video; tek video ya da 2–3 partlık mini seri serbest. TikTok'a da gönder (Yemeksel'de TikTok yok).
-- Grup 3 (Psikolojik, Parasal, Kriminal): iki günde 1 video, KALİTE ÖNCELİKLİ: 2–3 partlık mini seri, daha güçlü kanca, daha zengin animasyon (her 1.5–2 sn görsel değişim, karakter/nesne hareketi), rakam ve tarih iki kaynaktan doğrulanır. Kriminal'de Instagram KAPALI.
+- SERİ UZUNLUĞU (12 Kas kullanıcı kararı): yeni başlayan her seri TAM 3 part (4. part yok). Zaten planlanmış seriler (İslamik Hz. Yusuf P1–P5, Motivasyonel Odaklan P1–P5) olduğu gibi kalır; sonrakiler 3 part.
+- Grup 1 (İslamik, Osmanlısal, Motivasyonel): SERİ. Bir konu 3 parta bölünür, günde 1 part. Paket bir serinin ortasında bitebilir; sonraki paket kaldığı yerden devam eder (stok.md'ye "seri: <ad> Pn/N" yaz).
+- Grup 2 (Sporsal, Sanatsal, Yemeksel): günde 1 video; tek video ya da 3 partlık mini seri. TikTok'a da gönder (Yemeksel'de TikTok yok).
+- Grup 3 (Psikolojik, Parasal, Kriminal): iki günde 1 video, KALİTE ÖNCELİKLİ: 3 partlık mini seri, daha güçlü kanca, daha zengin animasyon (her 1.5–2 sn görsel değişim, karakter/nesne hareketi), rakam ve tarih iki kaynaktan doğrulanır. Kriminal'de Instagram KAPALI.
 
 ## Video kuralları (hepsi)
-- ≤40 sn (outro dahil), atempo 1.2, ~80–100 kelime.
+- ≤40 sn (outro dahil), atempo 1.2, ~80–100 kelime. İSTİSNA (12 Kas): strateji.md'deki güçlü kanca kontrolünü 4/4 geçen seri P1'i veya tek video 85 sn'ye kadar olabilir.
+- Konu ve kanca: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)" bölümündeki hesap bazlı tiplerden seç.
 - Kanca 4–7 kelime, tek somut cümle; ilk karede dev yazı; ses 0.0 sn'de başlar; t=0 tam görünür.
 - Seride üstte "PART n" rozeti; outro ~2 sn: "Devamı <n+1>. partta, kaçırmamak için takip et." (seri değilse/finalde: "Kaçırmamak için takip et."). Beğen/yorum isteme. Redditsel'e yönlendirme YOK.
 - Altyazı y≈1150 (altta değil), ses efekti yok, saç kuralı, filigran @<hesap>.

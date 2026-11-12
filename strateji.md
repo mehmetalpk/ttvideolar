@@ -45,11 +45,36 @@ Not: havuz.md başındaki KULLANICI notları (süre, outro, altyazı konumu, ses
 - Ses: 12/13 video Emrullah; İrem 1 video → kıyas yapılamaz.
 - Erişim kısıtlaması şüphesi YOK: 07.11 komedi videosu Senin İçin %93. Düşük FYP sadece gerilim videolarında (içerik kaynaklı).
 
+## KANCA + KONU SEÇİMİ (12 Kas kullanıcı kararı — SABİT; haftalık görev veriyle günceller ama silmez)
+Veri: Metricool TikTok 1–12 Kas. YouTube verisi HATALI (kullanıcı 12 Kas) → YouTube rakamlarıyla karar VERME, yorumlama.
+
+### Güçlü kanca kontrolü (4/4 geçerse "güçlü": seri P1 / tek video 85 sn'ye kadar uzayabilir)
+1. İlk cümle ≤8 kelime, ilk karede dev yazıyla aynı.
+2. Somut kişi/nesne + şaşırtıcı eylem ya da sonuç (olayın kendisi söylenir).
+3. İzleyicinin kendi hayatına bağlanır (aile, komşu, gündelik an) ya da absürt bir zıtlık içerir.
+4. Belirsiz merak yok: "…", "sır", "fısıldadı", "asıl gerçek" kullanılmaz.
+
+### Redditsel — konu tipi öncelik sırası
+1. Aile + teknoloji/ev komedisi (Hacker Kerem evreni): Kerem P1 197K, P2 105K, B3 85K. Kalıp: [aile bireyi] + [teknolojiyle absürt eylem] ("12 yaşındaki kardeşim hacker olmaya karar verdi").
+2. Komşu/site çatışması + haklı çıkma: Park Yeri P1 129K. Kalıp: [komşu] + [bana somut zarar] + [kişisel bedel] ("Komşum önümü kapattı, iş görüşmesini kaçırdım").
+3. Baba/aile absürt ev içi alışkanlık: Mayonez 11K, Yorgan 5,7K (orta; seri araları için iyi).
+- YAPMA: gerilim/korku (Kaan 4K, Gece 3 3K, Gizli Ajan 2K), duygusal tek video, belirsiz kanca.
+- Seri ara partları her partta düşüyor (Park P1→P3 %6'ya indi) → P1 kancası en kritik; P2–P3 kancası yeni somut çatışma getirir ("Komşunun kuzeni park yerimi tapuyla istedi").
+
+### Küçük hesaplar — işe yarayan kanca tipleri (TikTok, örneklem küçük)
+- "Sen de yaşadın mı?" tanıdık gündelik an + adı konmuş etki (Psikolojik: Pratfall 1.980, Zeigarnik 1.330, Spot ışığı 945).
+- "X = absürt değer" eşitliği (Parasal: "Bir lale soğanı = bir ev" 1.119).
+- Küçük canlı/hayvan + mucize (İslamik: Süleyman ve karınca 1.451).
+- Rakamlı kural (Motivasyonel: 66 gün 931, %1 kuralı 878).
+- Kriminal'de dolandırıcılık > soygun (Eyfel'i satan adam 738, Ponzi 567; soygunlar 60–220).
+- Osmanlısal'da efsane/folklor ve "imkânsız iş" (Karakoncolos 917, Don-Volga 579, gemiler karadan 518).
+- ZAYIF: soyut motivasyon sloganı ("Çoğu insan bahane bulur" 1), salt tarih/isimle açılış. Sporsal TikTok hesap kısıtı şüphesi nedeniyle değerlendirme dışı.
+
 ## Uygulanacak kurallar
 - BEĞEN/TAKİP KAPANIŞI (SABİT KURAL — kullanıcı isteği 02.11; haftalık görev bu maddeyi SİLMEZ/DEĞİŞTİRMEZ): Tek parça her videonun sonunda, hikâyenin son cümlesi/sorusundan sonra seslendirmeye şu kapanış eklenir: "Yorumlara yaz. Ve bu tür hikâyeleri kaçırmamak için, videoyu beğenmeyi ve takip etmeyi unutma." Son ~4 sn ekranda atan kırmızı kalp + "+ TAKİP" butonu (nabız halkalı) ve büyük "BEĞEN & TAKİP ET" yazısı gösterilir. Bu kapanış süre hedefine dahil değildir (hikâye 25–38 sn + kapanış ~4 sn). SERİ/PART videolarında (Part 1, Part 2, …) bu kapanış KULLANILMAZ. (Not: havuz.md'deki 06.11 "REDDITSEL GÜNCELLEME 2" outro kuralı daha yeni kullanıcı isteğidir; çelişirse o geçerli.)
 - Tür seçimi (havuz boşalınca / yeni hikâye ararken): **komedi 3/4** (aile/baba/kardeş komedisi öncelikli; komşu/iş yeri "malicious compliance" ikinci), **1/4 deneme** (duygusal veya intikam — dönüşümlü). **Gerilim/korku seçme** (yeni: 3/3 gerilim videosu ort. %13 izlendi, 1.8K izlenme; komedi %43 / 58K). Gerilim 2 hafta sonra en fazla 1 münferit denemeyle tekrar test edilebilir.
-- Seri formatı: **sadece komedi** türünde devam (yeni: Kerem serisi 6 partta 400K+ izlenme; gerilim serileri 34 ve 4 beğeniyle düştü). Devam koşulu kullanıcı kuralı (≥100 TikTok beğenisi) aynen geçerli. Part 2+ ilk 2 sn'de tek cümle özetle başlar. Seri karakterleri tekrar kullanılabilir (Kerem ailesi sevildi → yeni bir "Kerem ailesi" münferit bölümü düşünülebilir).
-- Video süresi: **50–60 sn** (kapanış dahil; ~140–170 kelime) — kullanıcı 9 Kas onayıyla 1 haftalık deneme, havuz.md "SÜRE KURALI 2". (değişti: 40 sn videolar %46–52, 85 sn videolar %10–42 izlendi.) Gelecek haftalık analizde 50–60 sn videoların ort. izleme %'si 85 sn'liklerle kıyaslanır.
+- Seri formatı: sadece komedi. Hacker Kerem haftalık sezon (Pzt–Paz, 14 part); diğer tüm seriler TAM 3 part (FORMAT 4, 12 Kas kullanıcı kararı). Part 2+ ilk 2 sn'de tek cümle özetle başlar.
+- Video süresi: GEÇERSİZ (eski 50–60 sn denemesi). Güncel: havuz.md FORMAT 4 — varsayılan ≤40 sn, güçlü kancalı seri P1/tek video 85 sn'ye kadar.
 - İlk kare/ilk cümle: en şok edici/absürt an ilk 1,5 sn'de, somut kişi + eylem ("Babam…", "12 yaşındaki kardeşim…"); giriş/selam YOK. (korundu; veriyle desteklendi)
 - Ses: Emrullah varsayılan; anlatıcı kadınsa İrem. Kıyas için veri yok (İrem 1 video). (korundu)
 - Aynı gün iki video arasında en az 4 saat; art arda toplu yükleme yapma. (korundu)
