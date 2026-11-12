@@ -16,17 +16,18 @@
 ## Performans özeti (1–10 Kas Metricool raporu)
 - Redditsel TikTok izlenmenin %96'sı. Hacker Kerem P1 191K, P2 92K, P3 75K, final 47K → seri formatı çalışıyor. Uzun (85 sn) videolarda izleme oranı düştü; ≤40 sn kuralı bu yüzden.
 - Küçük hesaplarda YouTube Shorts > TikTok (65,8K vs 19,2K). En iyi küçük video 34 sn (İslamik, Süleyman ve karınca).
-- Instagram zayıf (çoğu Reel 120–250). Sporsal TikTok neredeyse hiç dağıtılmıyor (muhtemelen maç görüntüsü kısıtı).
+- Instagram zayıf (çoğu Reel 120–250). Sporsal TikTok neredeyse hiç dağıtılmıyor: 12 videoda 159 izlenme, 7'si tam 1 izlenme, 12 günde takipçi 2, profil görüntüleme 0. Maç görüntüsü YOK (kendi animasyon, siluet) → içerik değil HESAP düzeyinde kısıt şüphesi (12.11 kontrolü).
 
 ## Açık konular
 - Parkur (bölünmüş ekran) tam ekrana göre daha mı iyi? → birkaç gün veri sonra karşılaştır.
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
-- Sporsal TikTok kısıtı: telifsiz kendi animasyonuyla dağıtım düzelir mi?
+- Sporsal TikTok kısıtı (hesap düzeyi şüphesi): kullanıcı uygulamada Ayarlar > Hesap > Hesap durumu ve videoların 'Senin İçin'e uygun değil' uyarısını kontrol edecek. Sonuca göre: ihlal varsa itiraz; yoksa birkaç gün TikTok'u durdurup YT+IG'ye devam veya yeni hesap.
 - ElevenLabs kredisi günde ~11–15 videoya yetiyor mu? İlk günlerde izle.
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-12 15:40 | mehmetalp | Sporsal kontrolü: Metricool'da TikTok gönderileri PUBLISHED + PUBLIC_TO_EVERYONE (teknik sorun yok, ayarlar diğer hesaplarla aynı). 12 videonun 7'si 1 izlenme; YT'de de çoğu 1–43 (Leicester 1,2K istisna), IG diğer küçük hesaplar gibi ~130. Telifli görüntü kullanılmadığı için 'maç görüntüsü' açıklaması zayıf; hesap düzeyi kısıt şüphesi. Kullanıcıdan TikTok Hesap durumu kontrolü istendi. Karar bekleniyor.
 - 2026-11-12 15:19 | arkadaş | Planlı videolar soruldu (depo kayıtlarından): 12.11 15:17 sonrası 32 video, 20.11'e kadar. Redditsel 13.11'den itibaren boş (bu gece 01:47 doldurur); Sporsal/Sanatsal/Yemeksel 14.11'den, Grup 3 15.11'den boş (İş 1 doldurur). Karar yok.
 - 2026-11-12 03:45 | gece görevi (Claude) | Küçük hesaplar: İş 1 13.11 için 7 video (Motivasyonel Zihin P3 16:00, Psikolojik Seyirci P2 09:00, Parasal Mansa Musa P2 16:00, Kriminal Hatton Garden P2 16:00 TT+YT, Sporsal Buz mucizesi 09:00, Sanatsal Eyfel 09:00, Yemeksel Ketçap 16:00). İş 2 (Perşembe Motivasyonel) 14–20.11 7 video 16:00: Zihin P4 final, yeni seri Odaklan P1–P5, Yeniden başla P1/3. Hepsi 22–31 sn. Kanca ikinci satırı artık t=0'da tam görünür (fade yok).
 - 2026-11-12 02:10 | gece görevi (Claude) | 12 Kas 3 video üretildi ve planlandı: 12:30 Park P5 (parkur, seed 1112, 24,8 sn), 17:00 HK S2 P4 (29,3 sn), 20:30 Park P6 (28,2 sn). 09:00 HK P3 zaten planlıydı. TikTok 11 Kas: HK P1 20,1K, Park P3 (parkur) 8,1K, HK P2 tekrar 7,2K, Park P4 2,2K (yeni); ort. izleme süresi Metricool'da boş.
