@@ -1,0 +1,23 @@
+function chute(t){x.fillStyle=grad(0,H,['#cfe6f7','#f4f8fb']);x.fillRect(0,0,W,H);for(let i=0;i<5;i++){x.fillStyle='#e8eef5';x.beginPath();x.moveTo(-100+i*300,700);x.lineTo(100+i*300,380);x.lineTo(300+i*300,700);x.fill();}x.fillStyle='#fff';x.fillRect(0,700,W,H-700);x.strokeStyle='#9fc4e0';x.lineWidth=40;x.beginPath();x.moveTo(-50,760);x.quadraticCurveTo(540,1050,1130,820);x.stroke();for(let i=0;i<50;i++){const r=rng(i+21);x.fillStyle='#fff';x.globalAlpha=0.8;x.beginPath();x.arc(r()*W,(r()*H+t*80)%H,4,0,7);x.fill();}x.globalAlpha=1;}
+function sled(cx,cy,s,rot=0,n=4,col='#0b8a3b'){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);for(let i=0;i<n;i++){x.fillStyle='#ffd23f';x.beginPath();x.arc(-120+i*70,-90,30,0,7);x.fill();x.fillStyle='#111';x.fillRect(-150+i*70,-95,60,14);}x.fillStyle=col;x.beginPath();x.moveTo(-220,-60);x.lineTo(150,-60);x.quadraticCurveTo(240,-50,240,0);x.lineTo(-220,0);x.closePath();x.fill();x.fillStyle='#ffd23f';x.fillRect(-220,-36,420,10);x.fillStyle='#111';x.fillRect(-210,4,430,8);x.restore();}
+function jmFlag(cx,cy,w){const h=w/2;x.save();x.translate(cx-w/2,cy-h/2);x.fillStyle='#0b8a3b';x.fillRect(0,0,w,h);x.fillStyle='#111';x.beginPath();x.moveTo(0,0);x.lineTo(w/2,h/2);x.lineTo(0,h);x.fill();x.beginPath();x.moveTo(w,0);x.lineTo(w/2,h/2);x.lineTo(w,h);x.fill();x.strokeStyle='#ffd23f';x.lineWidth=h*0.16;x.beginPath();x.moveTo(0,0);x.lineTo(w,h);x.moveTo(w,0);x.lineTo(0,h);x.stroke();x.restore();}
+// 0 kanca
+shot(0,0,t=>{chute(t);x.fillStyle='rgba(255,210,63,0.9)';x.beginPath();x.arc(860,200,80,0,7);x.fill();sled(200+t*120,880,1.2,0.12);bigText('KAR YAĞMAYAN ÜLKE',W/2,330,78,'#0b8a3b',1);bigText('KIZAKLA YARIŞTI',W/2,450,100,'#111',1);});
+// 1 1988 calgary
+shot(1,1,t=>{chute(t);yearStamp('1988','CALGARY',eOut(cl(t*2)),620);});
+// 2 ilk kış olimpiyatı
+shot(2,2,t=>{x.fillStyle=grad(0,H,['#ffd27a','#f29c38']);x.fillRect(0,0,W,H);x.fillStyle='#ffef9a';x.beginPath();x.arc(540,560,140,0,7);x.fill();for(let i=0;i<4;i++){x.fillStyle='#2f8a3a';x.save();x.translate(150+i*260,1000);x.fillStyle='#6a4422';x.fillRect(-8,-260,16,260);x.fillStyle='#2f8a3a';for(let k=0;k<5;k++){x.save();x.translate(0,-260);x.rotate(-1.2+k*0.6+Math.sin(t*2)*0.05);x.beginPath();x.ellipse(70,0,80,20,0,0,7);x.fill();x.restore();}x.restore();}jmFlag(540,820,360);badge(540,330,'İLK KIŞ OLİMPİYATI','#0b8a3b',t*3);});
+// 3 askerler atletler
+shot(3,3,t=>{chute(t);for(let i=0;i<4;i++)player(240+i*200,1000,1.0,'#0b8a3b','#111',i<2?0:t*6);badge(540,330,'ASKERLER + ATLETLER','#0b8a3b',t*3);bigText('BİRKAÇ AY ÖNCE',W/2,470,90,'#111',eOut(cl((t-0.4)*3)));});
+// 4 ödünç kızak
+shot(4,4,t=>{chute(t);sled(540,880,1.5,0,0,'#7a8a9a');x.save();x.translate(760,700);x.rotate(-0.15);x.fillStyle='#efe6d2';rr(-120,-50,240,100,10);x.fill();x.fillStyle='#c1121f';x.font=`900 50px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('ÖDÜNÇ',0,4);x.restore();bigText('ÖDÜNÇ KIZAK',W/2,330,120,'#111',eOut(cl(t*3)));});
+// 5 devrildi
+shot(5,5,t=>{chute(t);const r=cl(t/1.2);sled(300+r*360,860+r*40,1.3,r*2.6);if(t>0.9)bigText('DEVRİLDİ!',W/2,330,150,'#c1121f',back(cl((t-0.9)*3)));dust(700,900,300,t);});
+// 6 iterek yürüdü
+shot(6,6,t=>{chute(t);sled(380+t*50,900,1.1,0,0);for(let i=0;i<4;i++)player(560+i*110+t*50,950,0.7,'#0b8a3b','#111',t*3);x.fillStyle='#c1121f';x.fillRect(960,600,14,380);bigText('YÜRÜDÜLER',W/2,330,130,'#111',eOut(cl(t*3)));});
+// 7 alkış
+shot(7,7,t=>{x.fillStyle=grad(0,H,['#1a2a50','#0a1020']);x.fillRect(0,0,W,H);crowd(300,1000,t*2,['#ffd23f','#0b8a3b','#fff','#c1121f']);confetti(t,40);bigText('ALKIŞ!',W/2,330,160,'#ffd23f',back(cl(t*2.5)));});
+// 8 film
+shot(8,8,t=>{bgDoc('#1a1010','#050202');filmstrip(700,t);reel(300,980,110,t);reel(780,980,110,-t);badge(540,330,'5 YIL SONRA: FİLM','#c1121f',t*3);});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#0b3a1c','#03140a'));

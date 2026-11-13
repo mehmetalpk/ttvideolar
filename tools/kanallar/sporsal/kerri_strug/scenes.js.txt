@@ -1,0 +1,23 @@
+function arena(t){x.fillStyle=grad(0,H,['#1a1a3a','#0a0a18']);x.fillRect(0,0,W,H);crowd(200,620,t,['#fff','#5b8cff','#c1121f','#ffd23f']);x.fillStyle='#2a5cff';x.fillRect(0,1000,W,H-1000);x.fillStyle='#1a3aa8';x.fillRect(0,1000,W,20);}
+function vault(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#555';x.fillRect(-14,-240,28,240);x.fillStyle='#e8e8e8';rr(-120,-290,240,60,30);x.fill();x.fillStyle='#c1121f';x.fillRect(-120,-262,240,8);x.restore();}
+function gym(cx,base,s,t,pose=0,rot=0,col='#c1121f'){x.save();x.translate(cx,base);x.rotate(rot);x.translate(-cx,-base);player(cx,base,s,col,col,pose);x.restore();}
+// 0 kanca
+shot(0,0,t=>{arena(t);vault(380,1000,1.2);x.save();x.translate(720,1000);x.fillStyle='#c1121f';x.beginPath();x.arc(0,-200,30,0,7);x.fill();x.restore();gym(720,1000,1.1,t,0,0);x.strokeStyle='#ff4d4d';x.lineWidth=8;x.beginPath();x.arc(735,985,40+8*Math.sin(t*8),0,7);x.stroke();bigText('BİLEĞİ SAKATKEN',W/2,300,100,'#fff',1);bigText('ATLADI',W/2,430,140,'#ffd23f',1);});
+// 1 1996 atlanta
+shot(1,1,t=>{arena(t);yearStamp('1996','ATLANTA',eOut(cl(t*2)),640);});
+// 2 ilk atlayış düştü
+shot(2,2,t=>{arena(t);vault(380,1000,1.2);const k=cl(t/2);gym(160+k*600,1000-Math.sin(k*Math.PI)*380,1.0,t,t*8,k*6.28);if(k>=1)stampT('DÜŞTÜ',700,700,cl((t-2)*3),'#c1121f',100);badge(540,330,'KERRI STRUG','#2a5cff',t*3);});
+// 3 bileği zedelendi
+shot(3,3,t=>{arena(t);gym(540,1000,1.4,t,0);x.strokeStyle='#ff4d4d';x.lineWidth=10;for(let k=0;k<3;k++){const p=(t*1.5+k/3)%1;x.globalAlpha=1-p;x.beginPath();x.arc(565,985,30+p*90,0,7);x.stroke();}x.globalAlpha=1;bigText('BİLEK SAKAT',W/2,330,130,'#ff4d4d',eOut(cl(t*3)));});
+// 4 ikinci kez koştu
+shot(4,4,t=>{arena(t);vault(820,1000,1.2);gym(160+t*150,1000,1.1,t,t*9);bigText('İKİNCİ DENEME',W/2,330,115,'#ffd23f',eOut(cl(t*3)));bigText('ALTIN ONA BAĞLI?',W/2,470,80,'#fff',eOut(cl((t-1)*3)));});
+// 5 tek ayakla indi selam
+shot(5,5,t=>{arena(t);vault(300,1000,1.0);x.save();x.translate(640,1000);x.strokeStyle='#c1121f';x.lineWidth=24;x.lineCap='round';x.beginPath();x.moveTo(0,-120);x.lineTo(0,0);x.moveTo(10,-120);x.lineTo(60,-80);x.stroke();x.fillStyle='#c1121f';rr(-50,-300,100,180,20);x.fill();x.strokeStyle='#c1121f';x.lineWidth=22;x.beginPath();x.moveTo(-40,-280);x.lineTo(-120,-400);x.moveTo(40,-280);x.lineTo(120,-400);x.stroke();x.fillStyle='#2a1a10';x.beginPath();x.arc(0,-340,38,0,7);x.fill();x.restore();bigText('TEK AYAK',W/2,330,140,'#fff',back(cl(t*2.5)));});
+// 6 çöktü takım altın
+shot(6,6,t=>{arena(t);gym(540,1000,1.2,0,0,1.4*cl(t*1.5));if(t>0.9){medal(540,620,140,t,'ALTIN');confetti(t);}bigText('TAKIM ALTINI',W/2,330,110,'#ffd23f',eOut(cl((t-0.9)*3)));});
+// 7 aslında gerek yoktu
+shot(7,7,t=>{bgDoc('#13213f','#060b18');board(540,780,800,480);x.fillStyle='#fff';x.font=`800 64px ${F}`;x.textAlign='center';x.fillText('O ATLAYIŞ OLMADAN DA:',540,700);x.fillStyle='#ffd23f';x.font=`900 110px ${F}`;x.fillText('1. ABD',540,860);bigText('SONRADAN ANLAŞILDI',W/2,330,85,'#ffd23f',eOut(cl(t*3)));});
+// 8 kollarında kürsüye
+shot(8,8,t=>{arena(t);rays(540,600,t,'rgba(255,210,63,0.15)');sil(540,1000,2.6,'#111');x.save();x.translate(470,560);x.rotate(-1.45);player(0,0,0.75,'#c1121f','#c1121f',0);x.restore();medal(820,560,90,t,'ALTIN');confetti(t,30);bigText('KOLLARINDA',W/2,330,130,'#fff',eOut(cl(t*3)));});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#13213f','#060b18'));

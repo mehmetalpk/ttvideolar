@@ -1,0 +1,21 @@
+function hrJ(cx,base,s,t,p=0){player(cx,base,s,'#f2f2f2','#2a4aa8',p);x.save();x.fillStyle='#d81e2a';for(let i=0;i<3;i++)for(let j=0;j<4;j++)if((i+j)%2)x.fillRect(cx-50*s+i*33*s,base-300*s+j*37*s,33*s,37*s);x.restore();}
+// 0 kanca
+shot(0,0,t=>{stadium(t,['#e30a17','#fff','#111']);bigText("119'",W/2,620,220,'#ff4d4d',1);trFlag(540,860,220,t);bigText('119. DAKİKADA YENİK',W/2,300,90,'#fff',1);bigText('YARI FİNALE ÇIKTILAR',W/2,410,80,'#ffd23f',1);});
+// 1 viyana 2008
+shot(1,1,t=>{night();flood(t);yearStamp('2008','20 HAZİRAN · VİYANA',eOut(cl(t*2)),640);});
+// 2 çeyrek final
+shot(2,2,t=>{stadium(t,['#e30a17','#fff','#d81e2a']);player(330,1000,1.2,'#e30a17','#fff',t*2);hrJ(750,1000,1.2,t,t*2+1);badge(540,330,'ÇEYREK FİNAL','#2a5cff',t*3);bigText('TÜRKİYE - HIRVATİSTAN',W/2,470,72,'#fff',eOut(cl((t-0.3)*3)));});
+// 3 90 dk golsüz
+shot(3,3,t=>{stadium(t,['#e30a17','#fff','#d81e2a']);score(0,0,'TÜRKİYE','HIRVAT.',1,560);badge(540,330,'90 DAKİKA','#111',t*3);bigText('UZATMA',W/2,800,110,'#ffd23f',eOut(cl((t-1)*3)));});
+// 4 119 hırvat gol
+shot(4,4,t=>{stadium(t,['#e30a17','#fff','#d81e2a']);goalNet(540,1000,1.3,cl(t-0.8));const k=cl(t/0.8);ballS(540,640+k*220,40,t*6);hrJ(300,1000,1.1,t,0);score(0,1,'TÜRKİYE','HIRVAT.',(t-1)*3,420);});
+// 5 bitti görünüyordu
+shot(5,5,t=>{night();x.fillStyle='rgba(0,0,0,0.4)';x.fillRect(0,0,W,H);trFlag(540,700,320,t*0.3);x.save();x.globalAlpha=0.6;x.fillStyle='#000';x.fillRect(0,0,W,H);x.restore();bigText('BİTTİ Mİ?',W/2,360,150,'#fff',eOut(cl(t*3)));bigText("120'",W/2,960,170,'#ff4d4d',eOut(cl((t-0.5)*3)));});
+// 6 rüştü uzun top
+shot(6,6,t=>{stadium(t,['#e30a17','#fff','#111']);player(200,1000,1.0,'#ffd23f','#111',0);const k=cl(t/2.4);ballS(220+k*700,940-Math.sin(k*Math.PI)*520,34,t*8);badge(540,330,'RÜŞTÜ','#e30a17',t*3);bigText('UZUN TOP',W/2,470,100,'#fff',eOut(cl((t-0.3)*3)));});
+// 7 semih 1-1
+shot(7,7,t=>{stadium(t,['#e30a17','#fff','#111']);goalNet(540,1000,1.3,cl(t-1));player(420,1000,1.2,'#e30a17','#fff',t*3);const k=cl((t-0.4)/0.6);ballS(460+k*120,900-k*120,36,t*8);if(t>1.1){score(1,1,'TÜRKİYE','HIRVAT.',(t-1.1)*3,420);confetti(t);}badge(540,600,'SEMİH ŞENTÜRK','#e30a17',(t-1.4)*3);});
+// 8 penaltılar 3-1
+shot(8,8,t=>{stadium(t,['#e30a17','#fff','#111']);trFlag(540,820,360,t);confetti(t);score(3,1,'TÜRKİYE','HIRVAT.',t*3,420);bigText('PENALTILAR',W/2,250,90,'#fff',1);});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#3a0508','#120102'));
