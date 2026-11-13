@@ -1,0 +1,23 @@
+function road(t,hot=1){x.fillStyle=grad(0,H,hot?['#f2c46b','#e8a24a']:['#9cc3e0','#f1dcc0']);x.fillRect(0,0,W,H);x.fillStyle='#fff3c0';x.beginPath();x.arc(860,230,90+6*Math.sin(t*3),0,7);x.fill();x.fillStyle='#b98a4e';x.fillRect(0,1000,W,H-1000);x.fillStyle='#c99a5e';x.beginPath();x.moveTo(380,1000);x.lineTo(700,1000);x.lineTo(1080,1920);x.lineTo(0,1920);x.fill();for(let i=0;i<5;i++)tree(80+i*240,1000,0.6,t,0);}
+function dustC(cx,cy,t,n=10){for(let i=0;i<n;i++){const r=rng(i+40);const ph=(t*0.8+r())%1;x.fillStyle=`rgba(220,190,140,${0.5*(1-ph)})`;x.beginPath();x.arc(cx-ph*260+r()*60,cy-ph*80,30+ph*60,0,7);x.fill();}}
+function oldCar(cx,base,s,t,smoke=0){x.save();x.translate(cx,base);x.scale(s,s);const wh=(px)=>{x.strokeStyle='#222';x.lineWidth=10;x.beginPath();x.arc(px,-60,60,0,7);x.stroke();for(let k=0;k<6;k++){const a=k*1.047+t*6;x.beginPath();x.moveTo(px,-60);x.lineTo(px+Math.cos(a)*56,-60+Math.sin(a)*56);x.stroke();}};x.fillStyle='#1d3b2a';rr(-200,-200,400,110,16);x.fill();x.fillStyle='#2a5a3e';rr(-60,-300,170,110,10);x.fill();x.fillStyle='#111';x.fillRect(-60,-310,170,14);wh(-130);wh(140);x.restore();if(smoke)dustC(cx-220*s,base-60*s,t,6);}
+function runner(cx,base,s,col,t,num=''){player(cx,base,s,col,'#f2f2f2',t*9);if(num){x.save();x.fillStyle='#fff';x.font=`900 ${34*s}px ${F}`;x.textAlign='center';x.fillText(num,cx,base-220*s);x.restore();}}
+function stad(t){x.fillStyle=grad(0,H,['#87b5d8','#e0d2b0']);x.fillRect(0,0,W,H);crowd(380,900,t,['#3a2a20','#fff','#7a4a2a','#c9a46a']);x.fillStyle='#b44a2a';x.fillRect(0,900,W,H-900);x.strokeStyle='#fff';x.lineWidth=6;for(let i=0;i<4;i++){x.beginPath();x.moveTo(0,960+i*60);x.lineTo(W,960+i*60);x.stroke();}}
+// 0 kanca
+shot(0,0,t=>{road(t);runner(540,1000,1.1,'#c1121f',t*0.4,'20');x.save();x.translate(820,700);x.rotate(0.2);x.fillStyle='#4a6a3a';rr(-55,-110,110,220,16);x.fill();x.fillStyle='#efe6d2';x.fillRect(-45,-40,90,70);x.fillStyle='#111';x.font=`900 50px ${F}`;x.textAlign='center';x.fillText('☠',0,15);x.restore();bigText('ŞAMPİYONA',W/2,300,120,'#fff',1);bigText('FARE ZEHİRİ',W/2,440,130,'#5fe08a',1);});
+// 1 gerçek birinci hicks
+shot(1,1,t=>{stad(t);stampX(260,700,1,cl(t*3));badge(260,520,'LORZ','#2a5cff',1);runner(720,1000,1.1,'#c1121f',t,'20');badge(760,620,'THOMAS HICKS','#c1121f',(t-0.8)*3);});
+// 2 normal değildi
+shot(2,2,t=>{road(t);runner(540,1000,1.2,'#c1121f',t*0.6,'20');bigText('NORMAL DEĞİL',W/2,330,120,'#ffd23f',eOut(cl(t*3)));});
+// 3 striknin verdi
+shot(3,3,t=>{road(t);x.save();x.translate(420,1000);x.rotate(0.2*Math.sin(t*2));x.translate(-420,-1000);player(420,1000,1.1,'#c1121f','#f2f2f2',0.3);x.restore();sil(780,1000,2.2,'#2a1a10');x.save();x.translate(640,640+Math.sin(t*4)*10);x.fillStyle='#4a6a3a';rr(-40,-80,80,160,12);x.fill();x.restore();badge(540,330,'STRİKNİN','#0b7a3b',t*3);});
+// 4 fare zehiri + yumurta + konyak
+shot(4,4,t=>{bgDoc('#2a3a20','#0a1006');const it=[['☠','FARE ZEHİRİ','#5fe08a'],['🥚','YUMURTA AKI','#fff'],['🍷','KONYAK','#ffb15e']];it.forEach(([e,l,c],i)=>{const p=cl((t-i*1.2)*3);if(p<=0)return;x.save();x.globalAlpha=p;x.fillStyle='rgba(0,0,0,0.35)';rr(140,500+i*170,800,140,20);x.fill();x.font=`80px ${F}`;x.textAlign='left';x.textBaseline='middle';x.fillText(e,180,570+i*170);x.fillStyle=c;x.font=`900 70px ${F}`;x.fillText(l,300,575+i*170);x.restore();});bigText('UYARICI SANILDI',W/2,330,100,'#ffd23f',1);});
+// 5 kendinden geçmişti
+shot(5,5,t=>{road(t);zoomed(1+0.03*Math.sin(t*3),()=>{x.save();x.translate(540,1000);x.rotate(0.25*Math.sin(t*2.5));x.translate(-540,-1000);player(540,1000,1.2,'#c1121f','#f2f2f2',t*2);x.restore();});for(let i=0;i<5;i++){x.fillStyle='#ffd23f';x.font=`900 60px ${F}`;x.textAlign='center';x.fillText('★',540+Math.cos(t*3+i*1.26)*120,560+Math.sin(t*3+i*1.26)*40);}bigText('ZOR YÜRÜYOR',W/2,330,120,'#fff',eOut(cl(t*3)));});
+// 6 destekle geçti altın
+shot(6,6,t=>{stad(t);sil(400,1000,2.2,'#2a1a10');sil(680,1000,2.2,'#2a1a10');player(540,1000,1.1,'#c1121f','#f2f2f2',t*3);x.fillStyle='#fff';x.fillRect(880,700,12,340);if(t>1.5){medal(540,560,120,t,'ALTIN');confetti(t,30);}});
+// 7 en tuhafı o değil
+shot(7,7,t=>{road(t);for(let i=0;i<3;i++)sil(260+i*280,1000,1.8,'#2a1a10');x.fillStyle='#ffd23f';x.font=`900 220px ${F}`;x.textAlign='center';x.fillText('?',540+Math.sin(t*4)*10,720);bigText('EN TUHAFI KİM?',W/2,330,115,'#fff',eOut(cl(t*3)));});
+// 8 outro
+shot(8,8,t=>outro(t,3,'#5a4020','#1a1006'));

@@ -1,0 +1,11 @@
+[intense] Yarışın ortasında elma yedi, uyuyakaldı.
+
+[serious] Kübalı postacı Andarín Carvajal, bu maraton için Amerika'ya geldi.
+Yolda kumarda bütün parasını kaybetti.
+[curious] St. Louis'e otostopla ulaştı. Yarışa kesilmiş pantolon ve sokak ayakkabısıyla çıktı.
+[intense] Yolda bir bahçeden elma kopardı. Elmalar çürüktü, midesi kramp girdi.
+[serious] Yol kenarına uzandı ve biraz uyudu.
+[intense] Sonra kalktı, koşmaya devam etti ve yine dördüncü oldu.
+[curious] Otuz iki koşucudan sadece on dördü yarışı bitirebildi. || 32 koşucudan sadece 14'ü yarışı bitirebildi.
+
+[softly] Kaçırmamak için takip et.

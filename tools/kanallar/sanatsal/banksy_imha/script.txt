@@ -1,0 +1,11 @@
+[intense] Satıldığı an, tablo kendini parçaladı.
+
+[serious] Beş Ekim iki bin on sekiz, Londra'da bir müzayede salonu. || 5 Ekim 2018, Londra'da bir müzayede salonu.
+Kimliği gizli sokak sanatçısı Banksy'nin bir eseri satılıyordu.
+[intense] Çekiç indi: bir virgül sıfır dört milyon sterlin. || Çekiç indi: 1,04 milyon sterlin.
+[curious] Tam o anda çerçeveden bir ses geldi.
+[intense] Tablo, çerçeveye gizlenmiş bir kâğıt öğütücüden şerit şerit aşağı kaydı.
+[serious] Ama makine yarıda takıldı. Eser, yarısı parçalanmış halde kaldı.
+[curious] Üç yıl sonra yeniden satıldı. Bu kez on sekiz virgül altı milyon sterline. || Üç yıl sonra yeniden satıldı: 18,6 milyon sterlin.
+
+[softly] Kaçırmamak için takip et.

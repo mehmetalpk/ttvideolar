@@ -1,0 +1,12 @@
+[intense] Maratonda arabaya bindi, birinci geldi.
+
+[serious] Bin dokuz yüz dört, St. Louis Olimpiyatları. || 1904, St. Louis Olimpiyatları.
+Maraton, otuz iki derece sıcakta başladı. || Maraton, 32 derece sıcakta başladı.
+Yollar tozluydu, yol boyunca neredeyse hiç su yoktu.
+[curious] Amerikalı koşucu Fred Lorz, yaklaşık on beşinci kilometrede pes etti. || Amerikalı koşucu Fred Lorz, yaklaşık 15. kilometrede pes etti.
+[intense] Sonra bir arabaya bindi ve on sekiz kilometre kadar arabayla gitti. || Sonra bir arabaya bindi ve 18 kilometre kadar arabayla gitti.
+[serious] Araba bozulunca indi ve yeniden koşmaya başladı.
+[intense] Stadyuma birinci girdi. Kalabalık onu şampiyon diye alkışladı.
+[curious] Madalyayı almak üzereyken, biri gerçeği söyledi.
+
+[softly] Devamı ikinci partta, kaçırmamak için takip et.

@@ -1,0 +1,25 @@
+function road(t,hot=1){x.fillStyle=grad(0,H,hot?['#f2c46b','#e8a24a']:['#9cc3e0','#f1dcc0']);x.fillRect(0,0,W,H);x.fillStyle='#fff3c0';x.beginPath();x.arc(860,230,90+6*Math.sin(t*3),0,7);x.fill();x.fillStyle='#b98a4e';x.fillRect(0,1000,W,H-1000);x.fillStyle='#c99a5e';x.beginPath();x.moveTo(380,1000);x.lineTo(700,1000);x.lineTo(1080,1920);x.lineTo(0,1920);x.fill();for(let i=0;i<5;i++)tree(80+i*240,1000,0.6,t,0);}
+function dustC(cx,cy,t,n=10){for(let i=0;i<n;i++){const r=rng(i+40);const ph=(t*0.8+r())%1;x.fillStyle=`rgba(220,190,140,${0.5*(1-ph)})`;x.beginPath();x.arc(cx-ph*260+r()*60,cy-ph*80,30+ph*60,0,7);x.fill();}}
+function oldCar(cx,base,s,t,smoke=0){x.save();x.translate(cx,base);x.scale(s,s);const wh=(px)=>{x.strokeStyle='#222';x.lineWidth=10;x.beginPath();x.arc(px,-60,60,0,7);x.stroke();for(let k=0;k<6;k++){const a=k*1.047+t*6;x.beginPath();x.moveTo(px,-60);x.lineTo(px+Math.cos(a)*56,-60+Math.sin(a)*56);x.stroke();}};x.fillStyle='#1d3b2a';rr(-200,-200,400,110,16);x.fill();x.fillStyle='#2a5a3e';rr(-60,-300,170,110,10);x.fill();x.fillStyle='#111';x.fillRect(-60,-310,170,14);wh(-130);wh(140);x.restore();if(smoke)dustC(cx-220*s,base-60*s,t,6);}
+function runner(cx,base,s,col,t,num=''){player(cx,base,s,col,'#f2f2f2',t*9);if(num){x.save();x.fillStyle='#fff';x.font=`900 ${34*s}px ${F}`;x.textAlign='center';x.fillText(num,cx,base-220*s);x.restore();}}
+function stad(t){x.fillStyle=grad(0,H,['#87b5d8','#e0d2b0']);x.fillRect(0,0,W,H);crowd(380,900,t,['#3a2a20','#fff','#7a4a2a','#c9a46a']);x.fillStyle='#b44a2a';x.fillRect(0,900,W,H-900);x.strokeStyle='#fff';x.lineWidth=6;for(let i=0;i<4;i++){x.beginPath();x.moveTo(0,960+i*60);x.lineTo(W,960+i*60);x.stroke();}}
+// 0 kanca
+shot(0,0,t=>{road(t);oldCar(560+t*40,1000,1.3,t,1);runner(450+t*40,800,0.55,'#2a5cff',t,'31');bigText('MARATONDA',W/2,330,120,'#fff',1);bigText('ARABAYA BİNDİ',W/2,470,110,'#c1121f',1);});
+// 1 1904
+shot(1,1,t=>{bgDoc('#5a4020','#1a1006');yearStamp('1904','ST. LOUIS',eOut(cl(t*2)),700);});
+// 2 32 derece
+shot(2,2,t=>{road(t);for(let i=0;i<5;i++)runner(220+i*160+t*20,1000,0.8,['#2a5cff','#c1121f','#fff','#0b7a3b','#ff8c1a'][i],t+i);counter(20,32,cl(t/1.2),540,360,170,'#c1121f','°C');});
+// 3 toz su yok
+shot(3,3,t=>{road(t);dustC(700,950,t,14);runner(540,1000,1.1,'#2a5cff',t);x.save();x.translate(820,620);x.fillStyle='rgba(120,180,255,0.6)';x.beginPath();x.moveTo(0,-90);x.quadraticCurveTo(70,10,0,60);x.quadraticCurveTo(-70,10,0,-90);x.fill();x.restore();stampX(820,610,0.9,cl((t-0.5)*3));bigText('SU YOK',W/2,330,140,'#fff',eOut(cl(t*3)));});
+// 4 lorz pes etti
+shot(4,4,t=>{road(t);x.save();x.translate(540,1000);x.rotate(-0.25*cl(t*2));x.translate(-540,-1000);player(540,1000,1.2,'#2a5cff','#f2f2f2',0);x.restore();badge(540,330,'FRED LORZ','#2a5cff',t*3);bigText('15. KM',W/2,480,110,'#fff',eOut(cl((t-0.3)*3)));});
+// 5 arabaya bindi 18 km
+shot(5,5,t=>{road(t);oldCar(200+t*170,1000,1.4,t,1);x.fillStyle='#2a5cff';x.beginPath();x.arc(200+t*170+20,1000-330,30,0,7);x.fill();counter(0,18,cl(t/2.6),540,360,170,'#ffd23f',' KM');bigText('ARABAYLA',W/2,500,90,'#fff',1);});
+// 6 bozuldu yeniden koştu
+shot(6,6,t=>{road(t);oldCar(360,1000,1.2,0,0);for(let i=0;i<6;i++){const r=rng(i+60);x.fillStyle=`rgba(80,80,80,${0.6-((t*0.7+r())%1)*0.6})`;x.beginPath();x.arc(300+r()*120,700-((t*0.7+r())%1)*250,40,0,7);x.fill();}runner(640+t*90,1000,1.0,'#2a5cff',t);bigText('BOZULDU!',W/2,330,130,'#c1121f',back(cl(t*2.5)));});
+// 7 stadyuma birinci
+shot(7,7,t=>{stad(t);runner(300+t*120,1000,1.1,'#2a5cff',t,'31');x.fillStyle='#fff';x.fillRect(820,700,12,340);if(t>1.5)confetti(t,30);bigText('BİRİNCİ!',W/2,280,140,'#ffd23f',back(cl(t*2.5)));});
+// 8 biri gerçeği söyledi
+shot(8,8,t=>{stad(t);medal(540,680,150,t,'ALTIN');sil(280,1000,2,'#1a1410');sbubble(700,420,560,150,'DUR! HİLE!',cl((t-0.6)*3),70);});
+// 9 outro
+shot(9,9,t=>outro(t,2,'#5a4020','#1a1006'));

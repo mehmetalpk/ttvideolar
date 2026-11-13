@@ -1,0 +1,20 @@
+function ice(t){x.fillStyle=grad(0,H,['#0b1630','#1a2c55']);x.fillRect(0,0,W,H);crowd(150,560,t,['#c8d0e0','#ffd23f','#5b8cff','#fff']);x.fillStyle='#e8f2fb';x.fillRect(0,580,W,H-580);x.strokeStyle='#5b8cff';x.lineWidth=8;x.beginPath();x.ellipse(540,860,470,230,0,0,7);x.stroke();x.fillStyle='#ff4d4d';for(let i=0;i<10;i++){const a=i/10*6.283;x.beginPath();x.arc(540+Math.cos(a)*470,860+Math.sin(a)*230,12,0,7);x.fill();}}
+function sk(cx,base,s,col,t,fall=0){x.save();x.translate(cx,base);x.scale(s,s);if(fall){x.rotate(-1.35*fall);}const k=Math.sin(t*7)*0.5;x.strokeStyle='#1a1a22';x.lineWidth=24;x.lineCap='round';x.beginPath();x.moveTo(-10,-110);x.lineTo(-50-30*k,0);x.moveTo(10,-110);x.lineTo(50+30*k,0);x.stroke();x.fillStyle='#ccc';x.fillRect(-90-30*k,0,70,7);x.fillRect(20+30*k,0,70,7);x.save();x.translate(0,-110);x.rotate(0.55);x.fillStyle=col;rr(-44,-150,88,150,30);x.fill();x.fillStyle=col;x.beginPath();x.arc(0,-185,40,0,7);x.fill();x.fillStyle='#111';x.fillRect(-36,-198,72,18);x.restore();x.restore();}
+// 0 kanca
+shot(0,0,t=>{ice(t);[[300,'#c1121f'],[480,'#2a5cff'],[650,'#0bbfa8'],[820,'#ff8c1a']].forEach(([px,c],i)=>sk(px,950,1.0,c,t+i,cl(t*2-i*0.2)));sk(140+t*60,1010,1.1,'#ffd23f',t);bigText('HERKES DÜŞTÜ',W/2,330,120,'#fff',1);bigText('SONUNCU ALTIN ALDI',W/2,470,90,'#ffd23f',1);});
+// 1 2002
+shot(1,1,t=>{night();for(let i=0;i<70;i++){const r=rng(i+9);x.fillStyle='#fff';x.globalAlpha=0.7;x.beginPath();x.arc(r()*W,(r()*H+t*90)%H,4,0,7);x.fill();}x.globalAlpha=1;yearStamp('2002','SALT LAKE CITY',eOut(cl(t*2)),760);});
+// 2 1000m final
+shot(2,2,t=>{ice(t);for(let i=0;i<5;i++)sk(200+i*170+t*30,950,1.0,['#c1121f','#2a5cff','#0bbfa8','#ff8c1a','#ffd23f'][i],t+i);badge(540,330,'1000 METRE FİNALİ','#2a5cff',t*3);bigText('BRADBURY',W/2,470,100,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 3 rakipler hızlı
+shot(3,3,t=>{ice(t);[0,1,2,3].forEach(i=>sk(380+i*140+t*120,950,1.0,['#c1121f','#2a5cff','#0bbfa8','#ff8c1a'][i],t+i));sk(160+t*40,1010,1.1,'#ffd23f',t);mapArrow(300,720,900,720,cl(t*1.5),'#ff4d4d');bigText('ÇOK DAHA HIZLI',W/2,360,110,'#fff',eOut(cl(t*3)));});
+// 4 plan
+shot(4,4,t=>{bgDoc('#13213f','#060b18');board(540,820,820,560);x.fillStyle='#fff';x.font=`800 70px ${F}`;x.textAlign='center';x.fillText('PLAN:',540,640);x.font=`700 58px ${F}`;x.fillText('1. GERİDE KAL',540,760);if(t>1)x.fillText('2. BEKLE',540,860);if(t>2)x.fillText('3. FIRSATI YAKALA',540,960);bigText('BİR PLANI VARDI',W/2,330,100,'#ffd23f',eOut(cl(t*3)));});
+// 5 son viraj düştü
+shot(5,5,t=>{ice(t);const f=cl((t-1.2)/0.8);[[360,'#c1121f'],[500,'#2a5cff'],[640,'#0bbfa8'],[780,'#ff8c1a']].forEach(([px,c],i)=>sk(px+(1-f)*40,930+f*i*20,1.0,c,t+i,cl(f*1.3-i*0.1)));sk(140+t*40,1010,1.1,'#ffd23f',t);if(f>0.5)bigText('ÇARPIŞMA!',W/2,360,140,'#ff4d4d',back(cl((t-1.6)*3)));else bigText('SON VİRAJ',W/2,360,130,'#fff',1);});
+// 6 süzüldü ilk geçti
+shot(6,6,t=>{ice(t);[[360,'#c1121f'],[500,'#2a5cff'],[640,'#0bbfa8'],[780,'#ff8c1a']].forEach(([px,c],i)=>sk(px,960,0.9,c,0,1));x.fillStyle='#111';x.fillRect(820,620,16,420);sk(200+t*230,1010,1.15,'#ffd23f',t*0.3);if(t>2.2)confetti(t);bigText('İLK O GEÇTİ',W/2,360,120,'#ffd23f',eOut(cl(t*3)));});
+// 7 ilk altın
+shot(7,7,t=>{night();rays(540,700,t,'rgba(255,210,63,0.18)');medal(540,720,200,t,'ALTIN');confetti(t);badge(540,330,'AVUSTRALYA İÇİN BİR İLK','#0b7a3b',t*3);});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#0b1630','#060a14'));
