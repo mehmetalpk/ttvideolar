@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.9,7);kitchen(true);x.fillStyle='rgba(120,200,255,0.12)';x.fillRect(0,0,W,H);x.save();zoom(540,980,1.05+0.035*t);person(BABA,380,980,190,{sad:0.9,brow:0.8,eyeOpen:0.6,mouthOpen:0.4,shirt:BS});pajama(380,980,190);fridgeFace(860,1150,0.75,T,false);x.restore();x.restore();vignette(0.45);
+ hook([['BABAM GECE 3\'TE',95,'#fff'],['BUZDOLABIYLA',140,YEL],['DERTLEŞMİŞ!',115,'#fff']],270);s2Badge(t,8);}});
+// 1 önce yüklemeyi durdurmalıyız
+sc.push({a:mid(1),f(t,T){radial(540,900,1300,'#3a1a1a','#100404');x.save();zoom(540,900,1.0+0.04*t);fridgeFace(540,980,0.8,T,false,'#ff5a5a');x.restore();upBar(540,1380,620,92+3*cl(t/2),'YÜKLENİYOR...');
+ B('ÖNCE BUNU',300,105,'#fff',t);B('DURDURMALIYIZ!',420,110,RED,t,0.12);}});
+// 2 annemle Kerem aynı takım
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#1b3a6a','#040814');burst(540,880,900,'rgba(255,226,122,0.14)',t);x.save();zoom(540,900,1.0+0.04*t);person(ANNE,330,900,160,{brow:-0.6,smile:0.3,look:1});sunglassesKerem(750,920,150,{brow:-0.7,smile:0.4,look:-1});x.restore();
+ B('İLK KEZ',300,105,'#fff',t);B('AYNI TAKIM! 🤝',420,110,YEL,t,0.12);}});
+// 3 Kerem klavyeye annem fişe
+sc.push({a:mid(3),f(t,T){kitchen(false);speedL(T);const p=eOut(cl(t/1.0));x.save();zoom(540,900,1.0+0.03*t);sunglassesKerem(160+120*p,820,110,{brow:-0.7});keyboardK(330,1080,0.7,T);person(ANNE,920-170*p,820,110,{brow:-0.6,look:1});socket(900,1080,0.8,0);x.restore();
+ B('KEREM → KLAVYE',300,90,GRN,t);if(T>W2(3,'annem')-0.1)bigText('ANNEM → FİŞ',540,420,95,'#ff8aa8',PP(T,3,'annem'),-0.03);}});
+// 4 buzdolabı: dondurmalar erir
+sc.push({a:mid(4),f(t,T){kitchen(false);x.save();zoom(540,950,1.05+0.05*t);fridgeFace(400,1080,0.95,T,T<en(4),'#ff9a3a');iceCream(830,820,1.1,T,T>W2(4,'dondurmalar'));x.restore();
+ if(T>W2(4,'Fişimi')-0.1)bubble2(540,380,880,230,'FİŞİMİ ÇEKERSENİZ','DONDURMALAR ERİR!',66,T);else B('BUZDOLABI:',320,110,'#39d6ff',t);}});
+// 5 annem durdu kıyamadı
+sc.push({a:mid(5),f(t,T){kitchen(false);x.save();zoom(540,900,1.08+0.06*t);person(ANNE,400,880,180,{sad:0.8,brow:0.8,eyeOpen:0.9,smile:-0.3,look:1});iceCream(820,900,1.2,T,true);heart(820,640+Math.sin(T*5)*10,0.6,'#ff2d55');x.restore();
+ B('ANNEM DURDU...',300,100,'#fff',t);if(T>W2(5,'kıyamadı')-0.15)bigText('KIYAMADI 🍦',540,420,115,'#ffb0c8',PP(T,5,'kıyamadı'),-0.03);}});
+// 6 Kerem yazdı ama bir video kaçtı
+sc.push({a:mid(6),f(t,T){const k=T>W2(6,'kaçtı')-0.1;x.save();if(k)shake(T,W2(6,'kaçtı'),W2(6,'kaçtı')+0.4,12);x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T*4,GRN,5);x.save();zoom(540,900,1.0+0.04*t);sunglassesKerem(540,760,150,{brow:-0.8,angry:0.5,sweat:true});sweat(640,650,0.9,T);keyboardK(540,1080,1.1,T);if(k){const q=prog(T,W2(6,'kaçtı'),W2(6,'kaçtı')+0.6);vidThumb(540+380*q,1380-500*q,0.9,'',RED);}x.restore();x.restore();
+ B('YAZDI, YAZDI...',300,100,GRN,t);if(k)bigText('1 VİDEO KAÇTI!',540,420,110,RED,PP(T,6,'kaçtı'),-0.03);}});
+// 7 gece üç babam pijamayla
+sc.push({a:mid(7),f(t,T){kitchen(true);x.fillStyle='rgba(160,220,255,0.18)';x.beginPath();x.moveTo(620,700);x.lineTo(1080,1700);x.lineTo(200,1700);x.fill();x.save();zoom(540,950,1.0+0.04*t);person(BABA,330,950,140,{sad:0.6,eyeOpen:0.5,shirt:BS});pajama(330,950,140);fridgeFace(800,1120,0.8,T,false);x.restore();
+ x.fillStyle='rgba(0,0,0,0.7)';rr(60,520,300,90,20);x.fill();txt('● REC 03:00',210,566,40,'#ff4040',{stroke:false,w:900});
+ B('GRUBA DÜŞEN',300,105,'#fff',t);if(T>W2(7,'üç')-0.1)bigText('GECE 03:00',540,420,120,YEL,PP(T,7,'üç'),-0.03);}});
+// 8 kimse beni anlamıyor buzdolabı
+sc.push({a:mid(8),f(t,T){kitchen(true);x.save();zoom(600,950,1.12+0.06*t);person(BABA,420,920,180,{sad:1,brow:1,eyeOpen:0.6,smile:-0.6,shirt:BS});pajama(420,920,180);x.fillStyle='#8ab8ff';x.beginPath();x.ellipse(380,960+((T*120)%60),10,15,0,0,7);x.fill();fridgeFace(880,1150,0.75,T,false);x.restore();
+ bubble2(540,380,880,230,'KİMSE BENİ ANLAMIYOR','BUZDOLABI 😢',62,T);}});
+// 9 mahalle grubu kahkaha
+sc.push({a:mid(9),f(t,T){x.save();shake(t,0.1,0.6,8);radial(540,900,1300,'#1b3a6a','#040814');x.save();zoom(540,700,1.0+0.04*t);phoneUI(540,700,0.72,'MAHALLE GRUBU 🏘️',[{n:'Nermin H.',t:'😂😂😂😂',p:prog(T,st(9)+0.1,st(9)+0.4)},{n:'Yılmaz',t:'Buzdolabı da|haklı ama',p:prog(T,st(9)+0.5,st(9)+0.9),nc:'#ff5fa2'},{n:'Site Yönetimi',t:'Grup çöktü 😂',p:prog(T,st(9)+1.0,st(9)+1.4),nc:'#ffd23f'}],T);x.restore();x.restore();
+ bigText('KAHKAHADAN ÇÖKTÜ!',540,1380,88,YEL,prog(t,0,0.2),-0.03);}});
+// 10 sıradaki dosya anneanne (kısa son)
+sc.push({a:mid(10),f(t,T){radial(540,900,1300,'#3a0a2a','#0c0208');x.fillStyle=`rgba(255,40,80,${0.08+0.08*Math.sin(T*12)})`;x.fillRect(0,0,W,H);x.save();zoom(540,900,1.0+0.06*t);person(ANNEANNE,540,860,170,{brow:-0.3,smile:0.2,eyeOpen:0.6});x.restore();
+ fileCard(540,400,1.0,T>W2(10,'Anneanne')-0.1?'ANNEANNE 👵':'...',RED,prog(t,0,0.25));}});
+// OUTRO
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,9,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

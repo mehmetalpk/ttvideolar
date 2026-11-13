@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="timing.js"></script><script src="../story.js"></script><script src="../story2.js"></script><script src="../p23.js"></script><script src="../p56x.js"></script><script src="../bahce.js"></script><script src="../bahce2.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w)-0.08;
+const P=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.25),-0.03);
+const hasan=(cx,cy,r,o)=>person(HASAN,cx,cy,r,o);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.9,6);dirt(0,1920);x.fillStyle='rgba(255,200,40,0.15)';x.fillRect(0,0,W,H);x.save();zoom(540,980,1.05+0.035*t);person(B_BABA,380,980,190,{smile:0.8,brow:-0.6});muh(820,1000,150,{smile:0.2,brow:-0.3});x.restore();x.restore();vignette(0.4);
+ hook([['BABAM KOMŞUYA',100,'#fff'],['HARİTA',165,YEL],['MÜHENDİSİ GETİRDİ!',85,'#fff']],270);partBadge1(T,2);}});
+// 1 sabah dokuzda kapıda, alet
+sc.push({a:mid(1),f(t,T){yard();x.save();zoom(540,950,1.0+0.04*t);const p=eOut(cl(t/1.2));muh(1000-300*p,880,120,{smile:0.2});theodolite(420,1000,0.9,T);x.restore();
+ B('SABAH 09:00',300,110,'#fff',t);if(T>W2(1,'dev'))bigText('DEV ÖLÇÜM ALETİ',540,420,95,YEL,P(T,1,'dev'),-0.03);}});
+// 2 Hasan balkondan bağırdı
+sc.push({a:mid(2),f(t,T){hasanHouse();balcony(780,700,0.9);x.save();zoom(780,600,1.0+0.05*t);hasan(780,570,120,{mouthOpen:0.9,smile:0.6,brow:-0.5});x.restore();x.fillStyle='#d9c6e0';x.fillRect(560,880,580,190);x.fillStyle='#7cc46a';x.fillRect(-60,1050,W+120,1000);balcony(780,700,0.9);
+ if(T>W2(2,'Boşuna'))bubble2(450,380,780,230,'BOŞUNA PARA','VERİYORSUNUZ! 😂',70,T);else B('HASAN BEY:',320,110,YEL,t);}});
+// 3 çay yudumlayıp kahkaha
+sc.push({a:mid(3),f(t,T){radial(540,900,1200,'#6a4a8a','#1a1024');x.save();zoom(540,880,1.1+0.06*t);const lg=T>W2(3,'kahkaha');hasan(540,880,200,{mouthOpen:lg?1:0.2,smile:1,eyeOpen:lg?0.2:0.8,brow:-0.3});teaGl(800,1000,1.3);x.restore();
+ B('ÇAY + KAHKAHA',300,105,'#fff',t);if(lg)bigText('HA HA HA!',540,420,120,YEL,P(T,3,'kahkaha'),-0.06);}});
+// 4 ölçtü, yazdı, bir daha ölçtü
+sc.push({a:mid(4),f(t,T){yard();x.save();zoom(540,950,1.0+0.04*t);theodolite(380,980,0.9,T);muh(640,860,120,{lookDown:1,look:-1});x.restore();
+ const w=[['ÖLÇTÜ',W2(4,'Ölçtü')],['YAZDI',W2(4,'yazdı')],['BİR DAHA ÖLÇTÜ',W2(4,'daha')]];B('MÜHENDİS SESSİZ 🤐',300,90,'#fff',t);let k=-1;w.forEach(([s,a],i)=>{if(T>a)k=i;});if(k>=0)bigText(w[k][0],540,1340,100,[YEL,'#fff',GRN][k],prog(T,w[k][1],w[k][1]+0.2),0);}});
+// 5 kırmızı beyaz kazık
+sc.push({a:mid(5),f(t,T){radial(540,900,1200,'#2a2a3a','#08080c');x.save();zoom(540,900,1.05+0.05*t);stake(540,1150,1.6*back(prog(T,W2(5,'kazık'),W2(5,'kazık')+0.4)));x.restore();
+ B('KIRMIZI BEYAZ',300,100,'#fff',t);if(T>W2(5,'kazık'))bigText('BİR KAZIK...',540,420,115,RED,P(T,5,'kazık'),-0.03);}});
+// 6 Hasan Bey'in bahçesine yürüdü
+sc.push({a:mid(6),f(t,T){sky('#8fd0ff','#e8f6ff');x.fillStyle='#7cc46a';x.fillRect(-60,1050,W+120,1000);fence(1150,500,580);x.save();zoom(540,950,1);const p=ease(prog(T,W2(6,'bahçesine')-0.6,en(6)));muh(260+520*p,880+Math.abs(Math.sin(T*8))*-12,110,{smile:0.2});stake(260+520*p+130,980,0.5);x.restore();
+ txt('BİZİM',250,1400,60,'#fff');txt('HASAN BEY',740,1400,60,YEL,{maxW:300});
+ B('AMA BİZE DEĞİL...',300,100,'#fff',t);if(T>W2(6,'Hasan'))bigText('HASAN BEY\'İN BAHÇESİNE!',540,420,80,YEL,P(T,6,'Hasan'),-0.03);}});
+// 7 kazığı ortaya çaktı
+sc.push({a:mid(7),f(t,T){const c=T>W2(7,'çaktı');x.save();if(c)shake(T,W2(7,'çaktı'),W2(7,'çaktı')+0.5,14);hasanHouse();swing(800,1180,0.7,T);x.save();const d=c?0:-200*(1-prog(T,st(7),W2(7,'çaktı')));stake(430,1380+d,1.7);x.restore();x.restore();
+ if(c)bigText('TAM ORTAYA!',540,320,130,RED,P(T,7,'çaktı'),-0.04);else B('VE...',320,120,'#fff',t);}});
+// 8 çay bardağı kaydı
+sc.push({a:mid(8),f(t,T){hasanHouse();balcony(780,700,0.9);x.save();zoom(780,600,1.02+0.04*t);hasan(780,570,120,{mouthOpen:0.7,eyeBig:1.5,brow:0.9});x.restore();x.fillStyle='#d9c6e0';x.fillRect(560,880,580,190);x.fillStyle='#7cc46a';x.fillRect(-60,1050,W+120,1000);balcony(780,700,0.9);cupFall(620,780,0.9,ease(prog(T,W2(8,'kaydı')-0.2,W2(8,'kaydı')+0.5)));
+ B('ÇAY BARDAĞI',300,105,'#fff',t);if(T>W2(8,'kaydı'))bigText('ŞANGIRR!',540,420,120,RED,P(T,8,'kaydı'),-0.06);}});
+// 9 ip gerildi: sınır salıncağın altından (kısa son)
+sc.push({a:mid(9),f(t,T){const s=T>W2(9,'salıncağının');x.save();if(s)shake(T,W2(9,'salıncağının'),W2(9,'salıncağının')+0.5,10);hasanHouse();x.save();zoom(700,1200,1.0+0.05*t);swing(700,1150,0.85,T);stake(160,1420,0.7);stake(1000,1420,0.7);rope(160,1400,1000,1400,ease(prog(T,W2(9,'gerdi'),W2(9,'gerdi')+0.8)));x.restore();x.restore();
+ if(s){x.fillStyle='rgba(255,40,40,0.12)';x.fillRect(0,0,W,H);bigText('SINIR SALINCAĞIN',540,290,95,'#fff',P(T,9,'salıncağının'),-0.03);bigText('ALTINDAN! 😱',540,420,120,YEL,P(T,9,'salıncağının'),-0.03);}else B('İP GERİLDİ...',300,110,'#fff',t);}});
+// OUTRO
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{radial(540,900,1300,'#1a4a2a','#04100a');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>

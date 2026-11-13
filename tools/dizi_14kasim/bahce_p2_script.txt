@@ -1,0 +1,10 @@
+[confident] Babam komşuya harita mühendisi getirdi.
+Sabah dokuzda kapıdaydı, elinde dev bir ölçüm aletiyle.
+[mocking, loud] Hasan Bey balkondan bağırdı: Boşuna para veriyorsunuz!
+Çayını yudumlayıp kahkaha atıyordu.
+Mühendis hiç konuşmadı. Ölçtü, yazdı, bir daha ölçtü.
+[tense] Sonra kırmızı beyaz bir kazık aldı...
+ve bizim bahçeye değil, Hasan Bey'in bahçesine yürüdü.
+[surprised] Kazığı tam ortaya çaktı.
+Hasan Bey'in çay bardağı elinden kaydı.
+[shocked] Mühendis ipi gerdi. Sınır, Hasan Bey'in salıncağının tam altından geçiyordu.

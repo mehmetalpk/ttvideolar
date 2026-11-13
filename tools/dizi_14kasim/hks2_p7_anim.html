@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.9,7);radial(540,900,1300,'#1b3a6a','#040814');x.save();zoom(540,980,1.05+0.035*t);person(BABA,540,980,200,{mouthOpen:0.9,blush:true,red:0.6,brow:0.7,sad:0.6,eyeBig:1.3,shirt:BS});notes(540,780,T);x.restore();x.restore();vignette(0.45);
+ hook([['BABAMIN NİNNİSİ',95,'#fff'],['MAHALLE',165,YEL],['GRUBUNDA!',120,'#fff']],270);s2Badge(t,7);}});
+// 1 kahvaltı herkes Kerem'e bakıyor
+sc.push({a:mid(1),f(t,T){kitchen(false);x.save();zoom(540,900,1.0+0.04*t);person(BABA,200,820,105,{look:1,brow:-0.6,angry:0.4,shirt:BS});person(ANNE,420,830,100,{look:1,brow:-0.4});person(ANNEANNE,880,830,100,{look:-1,brow:-0.5});sunglassesKerem(650,850,95,{smile:-0.2,sweat:true});sweat(700,760,0.8,T);table(1300);x.restore();
+ B('HERKES',300,110,'#fff',t);B("KEREM'E BAKIYOR",420,90,YEL,t,0.12);}});
+// 2 babam masaya vurdu
+sc.push({a:mid(2),f(t,T){const h=T>W2(2,'vurdu')-0.05;x.save();if(h)shake(T,W2(2,'vurdu'),W2(2,'vurdu')+0.4,14);kitchen(false);x.save();zoom(540,880,1.1+0.06*t);person(BABA,540,860,200,{mouthOpen:0.8,angry:1,brow:-0.8,red:0.4,shirt:BS});x.restore();table(1320);x.restore();
+ if(h)bigText('BAM!',220,1380,110,RED,PP(T,2,'vurdu'),-0.1);if(T>W2(2,'Sen')-0.1){bigText('"SEN ATTIN,',540,290,105,'#fff',PP(T,2,'Sen'),-0.03);bigText('DEĞİL Mİ?!"',540,420,115,RED,PP(T,2,'Sen'),-0.03);}else B('BABAM:',320,110,'#fff',t);}});
+// 3 Kerem: hacker'ım ispiyoncu değil
+sc.push({a:mid(3),f(t,T){x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T*2,GRN,5);x.save();zoom(540,880,1.05+0.05*t);const g=ease(prog(T,W2(3,'indirdi')-0.2,W2(3,'indirdi')+0.3));sunglassesKerem(540,880,200,{brow:-0.7,smile:0.1,glassesDown:g});x.restore();
+ if(T>W2(3,'Ben')-0.1){bigText("HACKER'IM",540,290,125,GRN,PP(T,3,'Ben'),-0.03);if(T>W2(3,'ispiyoncu')-0.1)bigText('İSPİYONCU DEĞİL!',540,420,95,'#fff',PP(T,3,'ispiyoncu'),-0.03);}else B('KEREM:',320,110,GRN,t);}});
+// 4 anneanne kaşlarını çattı
+sc.push({a:mid(4),f(t,T){kitchen(false);x.save();zoom(540,900,1.1+0.06*t);person(ANNEANNE,540,880,200,{brow:-0.9,angry:0.8,eyeOpen:0.5,smile:-0.4});x.restore();
+ B('ANNEANNEM BİLE',300,100,'#fff',t);if(T>W2(4,'çattı')-0.15)bigText('😠 ŞÜPHELİ!',540,420,110,RED,PP(T,4,'çattı'),-0.03);}});
+// 5 kayıtlara girdi
+sc.push({a:mid(5),f(t,T){x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T*3,GRN,7);x.save();zoom(540,900,1.0+0.04*t);sunglassesKerem(540,700,140,{brow:-0.8,angry:0.4});laptop(540,1350,1.2,()=>{x.fillStyle='#04120a';x.fillRect(0,0,480,300);x.font=`700 26px monospace`;x.fillStyle=GRN;for(let i=0;i<Math.min(8,Math.floor(t*6));i++)x.fillText('> log_'+(1000+i*37)+' ... OK',20,40+i*32);});x.restore();
+ B('SİSTEM KAYITLARI',300,100,GRN,t);}});
+// 6 videoyu atan buzdolabı
+sc.push({a:mid(6),f(t,T){const r=T>W2(6,'buzdolabıymış')-0.1;x.save();if(r)shake(T,W2(6,'buzdolabıymış'),W2(6,'buzdolabıymış')+0.5,12);kitchen(false);if(r){x.fillStyle='rgba(255,40,40,0.15)';x.fillRect(0,0,W,H);}x.save();zoom(540,950,1.0+(r?0.1:0.03)*t);fridgeFace(540,1100,0.95,T,r,r?'#ff5a5a':'#39d6ff');x.restore();x.restore();
+ if(!r)B('VİDEOYU ATAN...',300,105,'#fff',t);else bigText('BUZDOLABI!',540,330,150,RED,PP(T,6,'buzdolabıymış'),-0.04);}});
+// 7 annem kızardı, aile anıları
+sc.push({a:mid(7),f(t,T){kitchen(false);const f2=T>W2(7,'Aile')-0.1;x.save();zoom(540,900,1.05+0.05*t);person(ANNE,f2?330:540,880,f2?150:190,{blush:true,red:0.5,smile:0.3,eyeOpen:0.5,brow:0.6,look:f2?1:0});if(f2)phone(790,900,1.0,0.1,false,'#1a1f3a');x.restore();
+ if(f2){x.save();x.translate(790,880);x.font=`900 38px ${F}`;x.textAlign='center';x.fillStyle=YEL;x.fillText('AİLE',0,-20);x.fillText('ANILARI',0,30);x.fillStyle=GRN;x.fillText('● AÇIK',0,90);x.restore();}
+ B('ANNEM KIZARDI',290,90,'#ff8aa8',t);if(f2)bigText('"AİLE ANILARI"',540,420,105,YEL,PP(T,7,'Aile'),-0.03);}});
+// 8 buzdolabı: güzel anılar paylaşılmalı
+sc.push({a:mid(8),f(t,T){kitchen(false);x.save();zoom(540,950,1.05+0.05*t);fridgeFace(540,1080,1.0,T,T<en(8),'#39d6ff');heart(800,620+Math.sin(T*5)*12,0.8,'#ff2d55');x.restore();
+ bubble2(540,380,860,230,'GÜZEL ANILAR','PAYLAŞILMALI 💕',72,T);}});
+// 9 son 1 haftanın videoları yükleniyor
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#3a1a1a','#100404');x.save();zoom(540,800,1.0+0.04*t);fridgeFace(540,1000,0.7,T,false,'#ff5a5a');x.restore();
+ const p=prog(T,W2(9,'Son'),en(9));[[180,640],[880,640],[180,880],[880,880]].forEach(([a,b],i)=>{if(p>i/4)vidThumb(a,b,0.9*back(cl((p-i/4)*6)),'',['#2a3a6a','#6a2a3a','#2a6a4a','#5a4a1a'][i]);});
+ B('SON 1 HAFTANIN',290,100,'#fff',t);if(T>W2(9,'videoları')-0.1)bigText('TÜM VİDEOLARI!',540,420,110,RED,PP(T,9,'videoları'),-0.03);if(T>W2(9,'yükleniyor')-0.1)upBar(540,1380,620,40+30*prog(T,W2(9,'yükleniyor'),en(9)+0.4),'YÜKLENİYOR...');}});
+// 10 yüzde 99 (kısa son)
+sc.push({a:mid(10),f(t,T){x.save();shake(t,0.1,0.9,9);radial(540,900,1300,'#5a0a0a','#140202');x.fillStyle=`rgba(255,40,40,${0.12+0.12*Math.sin(T*16)})`;x.fillRect(0,0,W,H);x.save();zoom(540,900,1.08+0.08*t);sunglassesKerem(300,900,140,{eyeBig:1.5,mouthOpen:0.9,brow:0.8});person(BABA,780,900,140,{eyeBig:1.5,mouthOpen:0.9,brow:0.9,red:0.4,shirt:BS});x.restore();x.restore();
+ bigText('%99',540,400,240,RED,prog(t,0,0.2),-0.04);upBar(540,1380,620,90+9*cl(t/0.8),'YÜKLENİYOR...');}});
+// OUTRO
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,8,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

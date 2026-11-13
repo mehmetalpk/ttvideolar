@@ -33,3 +33,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-13 | Belediye park yerimizi çocuk parkı yaptı (Park Yeri Savaşı) [Part 7 — FİNAL] | özgün devam (r/pettyrevenge tarzı) | komedi/seri | Emrullah | 30.8 sn | 12:30 | 6616552241253139120 | ÖĞLE | parkur:hayır
 - 2026-11-13 | Babam kapıya ninni söylemek zorunda kaldı (Hacker Kerem S2) [Part 6] | kendi kurgu | komedi/seri | Emrullah | 30.6 sn | 17:00 | -3409891716002591195 | AKŞAM | parkur:hayır
 - 2026-11-13 | Komşum bahçemizi iki kez söktürdü (Bahçe Sınırı Savaşı) [Part 1] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 43.1 sn | 20:30 | 1821659481305072083 | GECE | parkur:hayır
+- 2026-11-14 | Babamın ninnisi mahalle grubuna düştü (Hacker Kerem S2) [Part 7] | kendi kurgu | komedi/seri | Emrullah | 29.4 sn | 09:00 | 8934788280038278531 | SABAH | parkur:hayır
+- 2026-11-14 | Babam komşuya harita mühendisi getirdi (Bahçe Sınırı Savaşı) [Part 2] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 29.5 sn | 12:30 | -7614471527112750708 | ÖĞLE | parkur:hayır
+- 2026-11-14 | Babam gece 3'te buzdolabıyla dertleşmiş (Hacker Kerem S2) [Part 8] | kendi kurgu | komedi/seri | Emrullah | 29.7 sn | 17:00 | -9080091451105983481 | AKŞAM | parkur:hayır
+- 2026-11-14 | Sınır komşunun salıncağının altındaymış (Bahçe Sınırı Savaşı) [Part 3 — FİNAL] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 32.6 sn | 20:30 | 7528907784797765640 | GECE | parkur:hayır
