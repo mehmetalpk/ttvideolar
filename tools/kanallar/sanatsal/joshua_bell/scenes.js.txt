@@ -1,0 +1,26 @@
+function metro(t){x.fillStyle=grad(0,H,['#3a3f4a','#14161b']);x.fillRect(0,0,W,H);x.fillStyle='#4a505c';for(let i=0;i<5;i++){x.beginPath();x.arc(540,1300,700-i*20+i*0,Math.PI,0);x.fill();}x.fillStyle='#5a606c';for(let i=0;i<9;i++)x.fillRect(i*135,300,110,10);x.fillStyle='#2a2d34';x.fillRect(0,1300,W,H-1300);x.fillStyle='#8a8f99';x.fillRect(0,1300,W,8);}
+function violinist(cx,base,s,t){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#111';x.beginPath();x.moveTo(-50,0);x.lineTo(-44,-150);x.quadraticCurveTo(0,-185,44,-150);x.lineTo(50,0);x.fill();x.beginPath();x.arc(0,-205,38,0,7);x.fill();x.fillStyle='#1d2a4a';x.beginPath();x.arc(0,-218,40,Math.PI,0);x.fill();x.fillRect(-4,-224,60,10);
+ x.fillStyle='#8a4a1c';x.save();x.translate(-30,-150);x.rotate(-0.6);x.beginPath();x.ellipse(0,0,26,46,0,0,7);x.fill();x.restore();x.strokeStyle='#ddd';x.lineWidth=4;const a=Math.sin(t*5)*30;x.beginPath();x.moveTo(-90+a,-200);x.lineTo(60+a,-110);x.stroke();x.restore();}
+function caseO(cx,cy,s,n){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#222';x.beginPath();x.ellipse(0,0,140,48,0,0,7);x.fill();x.fillStyle='#7a1022';x.beginPath();x.ellipse(0,4,120,36,0,0,7);x.fill();for(let i=0;i<n;i++){x.fillStyle='#e0b640';x.beginPath();x.arc(-80+i*18,0+(i%2)*10,9,0,7);x.fill();}x.restore();}
+function walkers(t,n,y,sp=1){const r=rng(7);for(let i=0;i<n;i++){const s=0.9+r()*0.4;const px=((r()*W+t*(220+r()*160)*sp*(i%2?1:-1))%(W+300)+W+300)%(W+300)-150;sil(px,y+r()*60,s*1.3,'#0a0b0e');}}
+// 0 kanca
+shot(0,0,t=>{metro(t);walkers(t,9,1180);violinist(540,1300,2.2,t);musN(540,700,t,6,300);bigText('METRODA ÇALDI',W/2,260,110,'#fff',1);bigText('KİMSE DURMADI',W/2,390,105,'#ff4d4d',1);});
+// 1 12 ocak 2007
+shot(1,1,t=>{metro(t);walkers(t,12,1200,1.4);yearStamp('2007','12 OCAK · WASHINGTON',eOut(cl(t*2)),640);clock(860,1420,90,t*4);});
+// 2 kasket, metro
+shot(2,2,t=>{metro(t);walkers(t,6,1220);spot(540,900,420,0.3);violinist(540,1300,2.6,t);caseO(820,1340,0.9,0);badge(540,330,'JOSHUA BELL','#2a5cff',t*3);if(t>2)badge(540,480,'KASKETLE','#444',(t-2)*3);});
+// 3 stradivarius
+shot(3,3,t=>{bgDoc('#3a2210','#0e0804');rays(540,760,t,'rgba(255,210,120,0.12)');x.save();x.translate(540,780);x.rotate(-0.2+Math.sin(t)*0.04);x.fillStyle='#9a4f1a';x.beginPath();x.ellipse(0,140,170,210,0,0,7);x.fill();x.beginPath();x.ellipse(0,-150,140,170,0,0,7);x.fill();x.fillStyle='#6a3410';x.fillRect(-18,-520,36,260);x.fillStyle='#111';x.fillRect(-28,-330,56,560);x.restore();bigText('STRADIVARIUS',W/2,260,100,'#ffd23f',back(cl(t*2.5)));bigText('~300 YILLIK',W/2,1400,80,'#fff',eOut(cl((t-1)*3)));});
+// 4 1097 kişi
+shot(4,4,t=>{metro(t);walkers(t,16,1200,1.8);violinist(540,1300,1.6,t);counter(0,1097,t/2.2,W/2,420,170,'#fff');badge(540,600,'43 DAKİKA','#c1121f',t*3);});
+// 5 7 kişi, 32 dolar
+shot(5,5,t=>{metro(t);violinist(540,1300,1.6,t);if(t<1.8){people(7,540,1120,1.3,'#0a0b0e',110);bigText('7 KİŞİ',W/2,360,170,'#ffd23f',back(cl(t*2.5)));}else{caseO(540,800,2.2,12);bigText('32 $',W/2,360,190,'#5fe08a',back(cl((t-1.8)*2.5)));}});
+// 6 Boston salon
+shot(6,6,t=>{opera();curtains(t);crowd(1000,1500,t,['#d9b45a','#a8823a','#f2e2b0']);violinist(540,960,1.5,t);badge(540,330,'BOSTON','#2a5cff',t*3);bigText('SALON DOLU',W/2,500,110,'#ffd23f',eOut(cl((t-0.8)*3)));});
+// 7 soru
+shot(7,7,t=>{metro(t);walkers(t,8,1200);violinist(540,1300,1.8,t);qmarks(540,600,t,3);bigText('SEN DURUR',W/2,280,120,'#fff',1);bigText('MUYDUN?',W/2,420,130,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a3f4a','#14161b'));
+function musN(cx,cy,t,n=6,R=260){x.fillStyle='#ffd23f';x.strokeStyle='#ffd23f';x.lineWidth=8;for(let i=0;i<n;i++){const a=t*1.2+i*Math.PI*2/n,px=cx+Math.cos(a)*R,py=cy+Math.sin(a)*R*0.5;x.beginPath();x.ellipse(px,py,22,16,-0.4,0,7);x.fill();x.beginPath();x.moveTo(px+20,py-4);x.lineTo(px+20,py-90);x.lineTo(px+50,py-70);x.stroke();}}
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
+function crowd(y0,y1,t,cols){const r=rng(31);for(let i=0;i<260;i++){const px=r()*W,py=y0+r()*(y1-y0);x.fillStyle=cols[i%cols.length];x.globalAlpha=0.6+0.4*r();x.beginPath();x.arc(px,py+Math.sin(t*6+i)*4,9,0,7);x.fill();}x.globalAlpha=1;}

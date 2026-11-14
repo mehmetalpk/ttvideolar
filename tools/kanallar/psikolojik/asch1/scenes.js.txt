@@ -1,0 +1,19 @@
+function cards(cx,cy,s,hi=-1,p=1){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#f4f1ea';rr(-430,-230,360,460,20);x.fill();rr(30,-230,400,460,20);x.fill();x.fillStyle='#111';x.fillRect(-260,-170,22,320*p);
+ const L=[230,320,180];for(let i=0;i<3;i++){const px=110+i*120;x.fillStyle=i===hi?'#e63946':'#111';x.fillRect(px,150-L[i]*p,22,L[i]*p);x.font=`900 56px ${F}`;x.textAlign='center';x.fillText('ABC'[i],px+11,200);}x.restore();}
+function tableSeats(t,hiFake,talk){x.fillStyle='#4a3a6a';rr(110,880,860,90,30);x.fill();for(let i=0;i<8;i++){const cx=170+i*106;const real=i===6;sil(cx,880,1.05,real?'#ffd23f':(hiFake?'#a8324a':'#0a0718'));if(talk>=0&&!real&&i<=talk){bigText('A',cx,640-Math.sin(t*6+i)*8,70,'#ff6b6b',1);}}}
+// 0 kanca
+shot(0,0,t=>{bgPsi();cards(540,700,1.0,0,1);for(let i=0;i<3;i++){sil(220+i*320,1500,1.1,'#0a0718');}stampX(760,720,0.9,cl((t-0.9)*3));bigText('DOĞRUYU BİLDİN',W/2,300,105,'#fff',1);bigText('YANLIŞ SÖYLEDİN',W/2,430,95,'#ff6b6b',1);});
+// 1 tanıdık an
+shot(1,1,t=>{bgPsi();people(5,540,1000,1.5,'#0a0718',150,2);qmarks(540,560,t,3);x.save();x.globalAlpha=eOut(cl((t-1.2)*3));sbubble(540,360,700,140,'Herkes öyle diyor…',1,58);x.restore();});
+// 2 1951 Asch
+shot(2,2,t=>{bgPsi();if(t<1.6){yearStamp('1951','SOLOMON ASCH',eOut(cl(t*2)),700);}else{spot(540,700,520,0.3,'180,170,255');sil(540,1000,2.2,'#0a0718');badge(540,420,'GÖRME TESTİ',"#5b6cff",(t-1.7)*3);x.save();x.globalAlpha=0.9;x.strokeStyle='#ffd23f';x.lineWidth=10;x.beginPath();x.arc(500,640,34,0,7);x.arc(580,640,34,0,7);x.stroke();x.restore();}});
+// 3 soru kolay
+shot(3,3,t=>{bgPsi();cards(540,640,1.1,-1,eOut(cl(t*1.5)));if(t>1.8){const k=Math.floor((t-1.8)*2.5)%3;x.strokeStyle='#5fe08a';x.lineWidth=10;x.beginPath();x.arc(540+(110+k*120-0)*1.1+11,780,46,0,7);x.stroke();}bigText('HANGİSİ AYNI?',W/2,280,110,'#ffd23f',back(cl(t*2.5)));});
+// 4 7 kişi oyuncu
+shot(4,4,t=>{bgPsi();tableSeats(t,t>1,-1);bigText('7 KİŞİ',W/2,300,140,'#fff',back(cl(t*2.5)));if(t>1)badge(540,470,'HEPSİ OYUNCU','#e63946',(t-1)*3);});
+// 5 yanlış cevap
+shot(5,5,t=>{bgPsi('#5c1f2a','#24080e');cards(540,380,0.75,0,1);tableSeats(t,false,Math.floor(t*2.6));if(t>2.6)bigText('YANLIŞ!',W/2,1380,120,'#ff6b6b',back(cl((t-2.6)*3)));});
+// 6 sıra sende
+shot(6,6,t=>{bgPsi();spot(540,760,420,0.45,'255,210,63');zoomed(1+t*0.12,()=>{sil(540,1050,2.6,'#ffd23f');});for(let i=0;i<6;i++){const a=i/6*6.28;x.fillStyle='rgba(255,107,107,0.85)';x.beginPath();x.arc(540+Math.cos(a)*420,700+Math.sin(a)*260,26,0,7);x.fill();}bigText('SIRA SENDE',W/2,330,130,'#ffd23f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,2,'#2a1f5c','#0e0a24'));

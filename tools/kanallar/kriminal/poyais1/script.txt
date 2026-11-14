@@ -1,0 +1,10 @@
+[intense] Var olmayan bir ülkeyi sattı.
+
+[serious] Bin sekiz yüz yirmi iki, Londra. || 1822, Londra.
+İskoç asker Gregor MacGregor, kendini bir ülkenin prensi ilan etti.
+[curious] Adı Poyais'ydi. Orta Amerika'da, verimli toprakları ve başkenti olan bir ülke. || Adı Poyais'ydi: Orta Amerika'da, verimli toprakları ve başkenti olan bir ülke.
+[serious] Rehber kitap bastırdı, haritalar çizdirdi, hatta kendi parasını bastırdı.
+[intense] Londra'da Poyais tahvilleri satıldı, insanlar oradan toprak aldı.
+[curious] Tek bir sorun vardı: Poyais diye bir ülke yoktu.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

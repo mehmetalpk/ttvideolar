@@ -1,0 +1,10 @@
+[intense] Doğruyu bildin, yine de yanlış söyledin.
+
+[serious] Hiç herkes aynı şeyi söyleyince, kendi cevabını yuttun mu?
+[curious] Bin dokuz yüz elli bir. Psikolog Solomon Asch, öğrencileri bir görme testine çağırdı. || 1951. Psikolog Solomon Asch, öğrencileri bir "görme testine" çağırdı.
+Soru çok kolaydı: Bu üç çizgiden hangisi, soldakiyle aynı boyda?
+[serious] Ama masadaki diğer yedi kişi aslında oyuncuydu. || Ama masadaki diğer 7 kişi aslında oyuncuydu.
+[intense] Ve bir noktada, hepsi aynı yanlış cevabı yüksek sesle söyledi.
+[curious] Sıra, gerçek katılımcıya geldi.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

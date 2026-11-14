@@ -1,0 +1,11 @@
+[intense] Patatesi çaldırmak için tarlaya asker dikti.
+
+[serious] On sekizinci yüzyıl Fransa'sında patates çoğu yerde hayvan yemi sayılıyordu. || 18. yüzyıl Fransa'sında patates çoğu yerde hayvan yemi sayılıyordu.
+Birçok kişi hastalık yaptığına inanıyordu.
+[curious] Eczacı Antoine Parmentier ise savaşta esir düşmüş, esirlikte patatesle hayatta kalmıştı.
+[serious] Anlatılana göre halkı ikna etmek için bir hile yaptı.
+Kraldan aldığı tarlaya gündüz silahlı nöbetçiler dikti.
+[intense] Gece ise nöbetçiler çekildi. Bu kadar korunan bir şey değerli olmalıydı. Halk tarlayı yağmaladı.
+[curious] Sen patatesi en çok nasıl seversin?
+
+[softly] Kaçırmamak için takip et.

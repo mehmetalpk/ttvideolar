@@ -1,0 +1,24 @@
+function potato(cx,cy,s,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#c8945a';x.beginPath();x.ellipse(0,0,90,62,0.2,0,7);x.fill();x.fillStyle='#8a5e30';for(const [a,b] of [[-40,-10],[20,20],[45,-25],[-10,30]]){x.beginPath();x.arc(a,b,6,0,7);x.fill();}x.restore();}
+function field(t,night){x.fillStyle=night?grad(0,H,['#0b1030','#04060f']):grad(0,H,['#8ec5ff','#dff0ff']);x.fillRect(0,0,W,H);if(night){x.fillStyle='#fff';const r=rng(3);for(let i=0;i<40;i++)x.fillRect(r()*W,r()*700,3,3);x.fillStyle='#f4f1d0';x.beginPath();x.arc(850,260,60,0,7);x.fill();}
+ x.fillStyle=night?'#1a2a12':'#5a8a2a';x.fillRect(0,900,W,H-900);for(let r=0;r<6;r++)for(let i=0;i<9;i++){const py=960+r*90,px=60+i*120+(r%2)*60;x.fillStyle=night?'#2a4a1a':'#3f7a1f';x.beginPath();x.arc(px,py+Math.sin(t*2+i)*3,28,0,7);x.fill();x.fillStyle=night?'#bbb':'#fff';x.beginPath();x.arc(px+8,py-18,7,0,7);x.fill();}}
+function guard(cx,base,s,t){sil(cx,base,s,'#1d2a6a');x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#111';x.fillRect(-38,-200,76,16);x.fillRect(-24,-232,48,34);x.strokeStyle='#333';x.lineWidth=8;x.beginPath();x.moveTo(44,-20);x.lineTo(54,-260);x.stroke();x.fillStyle='#ccc';x.beginPath();x.moveTo(50,-260);x.lineTo(58,-300);x.lineTo(62,-258);x.fill();x.restore();}
+function cow(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#f2f2f2';rr(-130,-170,260,120,50);x.fill();x.fillStyle='#222';x.beginPath();x.arc(-40,-130,26,0,7);x.arc(50,-110,20,0,7);x.fill();x.fillStyle='#f2f2f2';x.fillRect(-110,-60,26,60);x.fillRect(80,-60,26,60);rr(110,-210,80,80,30);x.fill();x.restore();}
+// 0 kanca
+shot(0,0,t=>{field(t,0);guard(320,1000,2.2,t);guard(780,1000,2.2,t+1);potato(540,760,1.4,Math.sin(t*2)*0.2);bigText('PATATESİ',W/2,260,120,'#fff',1);bigText('ASKERLE KORUDU',W/2,400,100,'#ffd23f',1);});
+// 1 18. yy hayvan yemi
+shot(1,1,t=>{bgWarm();cow(540,1000,2.4);for(let i=0;i<4;i++)potato(260+i*180,1060,0.6,i);bigText('18. YÜZYIL',W/2,300,110,'#fff',eOut(cl(t*3)));badge(540,460,'HAYVAN YEMİ','#c1121f',(t-0.7)*3);});
+// 2 hastalık
+shot(2,2,t=>{bgDoc('#2a1a2a','#0c060c');people(4,540,1050,1.8,'#0a0508',220);potato(540,640,1.6,t*0.3);stampX(540,640,1.4,cl((t-0.6)*3));bigText('HASTALIK YAPAR!',W/2,300,105,'#ff4d4d',back(cl(t*2.5)));});
+// 3 parmentier esir
+shot(3,3,t=>{bgDoc('#2a2a30','#0a0a0e');for(let i=0;i<9;i++){x.fillStyle='#4a4a52';x.fillRect(120+i*100,420,22,700);}sil(540,1100,2.6,'#0a0a0e');if(t>1.8){potato(380,960,0.9,0.3);potato(700,980,0.8,-0.2);}badge(540,300,'PARMENTIER','#2a5cff',t*3);if(t>1.6)badge(540,1380,'PATATESLE HAYATTA','#2f8a3a',(t-1.6)*3);});
+// 4 hile
+shot(4,4,t=>{bgWarm();spot(540,720,500,0.35);sil(540,1100,2.4,'#0a0705');bulb(540,480,1.2,t);bigText('BİR HİLE',W/2,260,130,'#ffd23f',back(cl(t*2.5)));});
+// 5 gündüz nöbetçiler
+shot(5,5,t=>{field(t,0);palace(540,620,0.5);for(let i=0;i<4;i++)guard(170+i*250,1060,1.6,t+i);badge(540,280,'GÜNDÜZ','#ff9f1c',t*3);bigText('NÖBETÇİLER',W/2,430,110,'#fff',eOut(cl((t-0.6)*3)));});
+// 6 gece yağma
+shot(6,6,t=>{field(t,1);if(t<1.6){for(let i=0;i<4;i++)guard(170+i*250-t*400*(i<2?1:-1),1060,1.6,t+i);bigText('GECE',W/2,300,150,'#fff',back(cl(t*2.5)));}else{const r=rng(9);for(let i=0;i<8;i++){const px=((r()*W+(t-1.6)*200*(i%2?1:-1))%W+W)%W;sil(px,1150+r()*80,1.3,'#000');potato(px+30,1020+r()*60,0.35,t);}bigText('YAĞMA!',W/2,300,160,'#ffd23f',back(cl((t-1.6)*2.5)));}});
+// 7 soru
+shot(7,7,t=>{bgWarm();x.fillStyle='#f3e2a0';for(let i=0;i<12;i++){x.save();x.translate(320+i%4*140,760+Math.floor(i/4)*60);x.rotate(i*0.4);x.fillRect(-12,-70,24,140);x.restore();}plateD(780,820,1.1);potato(780,780,0.9,0);qmarks(540,520,t,3);bigText('SEN NASIL',W/2,260,120,'#fff',1);bigText('SEVERSİN?',W/2,400,120,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1c0e','#0f0704'));
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
