@@ -1,0 +1,11 @@
+[intense] Ölmeden önce sattığı bilinen tek tablo.
+
+[serious] Vincent van Gogh, yaklaşık on yılda sekiz yüz elliden fazla tablo yaptı. || Vincent van Gogh, yaklaşık 10 yılda 850'den fazla tablo yaptı.
+Geçimini büyük ölçüde kardeşi Theo'nun gönderdiği parayla sağladı.
+[curious] Bin sekiz yüz doksan, Brüksel. Bir sergide Kırmızı Bağ adlı tablosu satıldı. || 1890, Brüksel. Bir sergide "Kırmızı Bağ" adlı tablosu satıldı.
+[intense] Fiyatı dört yüz franktı. Alan kişi, ressam Anna Boch'tu. || Fiyatı 400 franktı. Alan kişi, ressam Anna Boch'tu.
+[serious] Aynı yılın Temmuz ayında Van Gogh hayatını kaybetti.
+[curious] Bugün tablolarından bazıları yüz milyon doları aşan fiyatlara satılıyor. || Bugün tablolarından bazıları 100 milyon doları aşan fiyatlara satılıyor.
+Sence o dört yüz frank, tarihin en iyi yatırımı mıydı? || Sence o 400 frank, tarihin en iyi yatırımı mıydı?
+
+[softly] Kaçırmamak için takip et.

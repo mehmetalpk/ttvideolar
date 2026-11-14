@@ -1,0 +1,11 @@
+[intense] Sahte heykel, ona kariyer kazandırdı.
+
+[serious] Bin dört yüz doksan altı. Genç Michelangelo, uyuyan bir Aşk Tanrısı heykeli yaptı. || 1496. Genç Michelangelo, uyuyan bir Aşk Tanrısı heykeli yaptı.
+[curious] Anlatılana göre heykel, antik görünsün diye eskitildi.
+[intense] Bir aracı onu antik eser diye Roma'da bir kardinale sattı: iki yüz duka. || Bir aracı onu antik eser diye Roma'da bir kardinale sattı: 200 duka.
+[serious] Michelangelo'nun eline sadece otuz duka geçti. || Michelangelo'nun eline sadece 30 duka geçti.
+[curious] Kardinal hileyi fark edip parasını geri istedi. Ama heykeli yapanı merak etti ve onu Roma'ya getirtti.
+[intense] Birkaç yıl sonra Michelangelo, Roma'da Pietà'yı yonttu.
+Sence bu bir hile mi, yetenek kanıtı mı?
+
+[softly] Kaçırmamak için takip et.

@@ -1,0 +1,11 @@
+[intense] Kırk beş sterlinlik tablo, dört yüz elli milyon dolar oldu. || 45 sterlinlik tablo, 450 milyon dolar oldu.
+
+[serious] Bin dokuz yüz elli sekiz, Londra. Bir müzayedede Salvator Mundi adlı eski bir tablo satıldı. || 1958, Londra. Bir müzayedede "Salvator Mundi" adlı eski bir tablo satıldı.
+Leonardo'nun bir takipçisine ait sanılıyordu. Fiyatı: kırk beş sterlin. || Leonardo'nun bir takipçisine ait sanılıyordu. Fiyatı: 45 sterlin.
+[curious] İki bin beşte, üstü boyalarla kaplı halde iki sanat tüccarı onu ucuza aldı ve restore ettirdi. || 2005'te, üstü boyalarla kaplı halde iki sanat tüccarı onu ucuza aldı ve restore ettirdi.
+[intense] Bazı uzmanlar dedi ki: Bu, Leonardo da Vinci'nin kendisi.
+[serious] İki bin on yedide New York'ta, dört yüz elli virgül üç milyon dolara satıldı. Tarihin en pahalı tablosu. || 2017'de New York'ta 450,3 milyon dolara satıldı. Tarihin en pahalı tablosu.
+[curious] Ama gerçekten Leonardo'nun olup olmadığı hâlâ tartışılıyor.
+Sence bu tablo o parayı eder mi?
+
+[softly] Kaçırmamak için takip et.
