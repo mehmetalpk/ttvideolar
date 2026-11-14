@@ -1,7 +1,7 @@
 # ORTAK HAFIZA — …sal Hikayeler
 (Kural: CLAUDE.md. Her oturum başında oku, her üretim mesajından sonra güncelle ve push et.)
 
-## Güncel durum (son güncelleme: 2026-11-14 02:05)
+## Güncel durum (son güncelleme: 2026-11-14 03:45)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
 - **Redditsel formatı (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
@@ -9,6 +9,7 @@
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
 - **Küçük hesaplar planı (10 Kas kararı):** Grup 1 seri (İslamik, Osmanlısal, Motivasyonel) günde 1 part; Grup 2 (Sporsal, Sanatsal, Yemeksel) günde 1, TikTok'a da devam; Grup 3 (Psikolojik, Parasal, Kriminal) iki günde 1 ama daha kaliteli. Saat testi Redditsel hariç: A 09:00 / B 16:00, 23 Kas'ta yer değiştir. Ayrıntı: stok/URETIM.md.
 - **Küçük hesap seri durumu (13 Kas gece):** İslamik 19 Kas'a kadar dolu (sonraki paket yeni seri). Osmanlısal 18 Kas'a kadar dolu. Motivasyonel 20 Kas'a kadar dolu (Yeniden başla P1/3 20.11 → sıradaki P2). Grup 3 (Psi/Para/Krim) 13.11'de mini serileri bitirdi → sıradaki 15.11, yeni konular (14.11 gecesi İş 1 doldurur). Sporsal 21 Kas'a kadar dolu (14.11 Bradbury; 15–17.11 mini seri 1904 maratonu P1–P3 bitti; 18 Jamaika bobsled, 19 EURO 2008 Hırvatistan, 20 Kerri Strug, 21 Lasse Virén). Sanatsal 14.11 (Banksy) ve Yemeksel 14.11 (çubuklu buz) dolu; 15.11'den boş → İş 1.
+- **Küçük hesap seri durumu (14 Kas gece):** Grup 3 yeni 3 partlık seriler başladı (15.11 P1): Psikolojik Asch uyum deneyi (09:00), Parasal Zimbabve 100 trilyon $ (16:00), Kriminal Poyais (16:00, TT+YT) → P2/P3'ü Pazar (15.11 gecesi) rotasyonu üretir, iki günde bir (17 ve 19.11). Sanatsal 22.11'e kadar dolu (15 Joshua Bell, 16–22 tek videolar). Yemeksel 15.11 Parmentier; 16.11'den boş (İş 1 / Pazartesi rotasyonu). Osmanlısal 19.11'den boş (Salı rotasyonu). İslamik 19, Motivasyonel 20, Sporsal 21.11'e kadar dolu.
 - **Stok:** 10 Kas itibarıyla bitmişti (eski brand'ler silinince planlılar gitti). Gece görevi her gün önce yarını doldurur, sonra rotasyon hesabının 7 gününü stoklar; ~10 günde oturur.
 - **Otomatik görevler:** 01:47 Redditsel, 03:17 küçük hesaplar, Pazar 21:37 analiz (gorevler.md). Gece çalışması kullanıcının gündüz limitini korumak için.
 - **Arkadaş:** kendi Claude'uyla depo üzerinden yardım ediyor (collaborator izni 10 Kas 22:41; Claude'u 22:47'de bağlandı, protokolü okudu). Metricool'a planlamaz; MP4 + stok.md satırını stok/<hesap>/ altına push eder, gece görevi planlar.
@@ -29,6 +30,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-14 03:45 | gece görevi (Claude) | Küçük hesaplar İş 1 (15.11): Psikolojik Asch P1/3 09:00, Parasal Zimbabve P1/3 16:00, Kriminal Poyais P1/3 16:00 (TT+YT), Sanatsal Joshua Bell metro 09:00, Yemeksel Parmentier patates 16:00 (IG+YT). İş 2 (Cumartesi Sanatsal) 16–22.11 7 video 09:00: Salvator Mundi, Duchamp Çeşme, Gece Devriyesi, Van Gogh Kırmızı Bağ, Bahar Ayini, Monet İzlenim, Michelangelo Cupid. Hepsi 22–34 sn; MP4'ler depodan silindi.
 - 2026-11-14 02:05 | gece görevi (Claude) | Redditsel 14.11: HK S2 P7 (09:00, 29,4 sn), Bahçe P2 (12:30, 29,5 sn, İrem), HK S2 P8 (17:00, 29,7 sn), Bahçe P3 FİNAL (20:30, 32,6 sn) Metricool'a planlandı; MP4'ler depodan silindi. 13.11 TikTok: Bahçe P1 8,9K / 129 beğeni, HK P5 7,4K, Park P7 3,0K, HK P6 2,1K (birkaç saatlik).
 - 2026-11-13 13:13 | mehmetalp | Bugün (13.11) Redditsel 17:00 ↔ 20:30 yer değiştirdi: Bahçe Sınırı P1 17:00, HK S2 P6 20:30 (Metricool güncellendi). Tek seferlik; FORMAT 4 saatleri değişmedi.
 - 2026-11-13 03:40 | gece görevi (Claude) | Küçük hesaplar: İş 1 14.11 için Sporsal Steven Bradbury 2002 (09:00), Sanatsal Banksy'nin kendini parçalayan eseri (09:00), Yemeksel çubuklu buz/Frank Epperson (16:00 IG+YT). Grup 3 bugün dolu, Grup 1 dolu → atlandı. İş 2 (Cuma Sporsal) 15–21.11 7 video 09:00: mini seri 1904 maratonu P1–P3 (Lorz arabayla, Hicks striknin, Carvajal elma), Jamaika bobsled 1988, Türkiye–Hırvatistan EURO 2008, Kerri Strug 1996, Lasse Virén 1972. Hepsi 23–28 sn.
