@@ -1,11 +1,12 @@
 # ORTAK HAFIZA — …sal Hikayeler
 (Kural: CLAUDE.md. Her oturum başında oku, her üretim mesajından sonra güncelle ve push et.)
 
-## Güncel durum (son güncelleme: 2026-11-15 05:15)
+## Güncel durum (son güncelleme: 2026-11-15 21:55)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
 - **Redditsel formatı (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
 - **Redditsel seri durumu (15 Kas gece):** 15.11 dolu: HK S2 P9 09:00, Tuvalet Raporu P1 12:30, HK S2 P10 FİNAL 17:00 (Sezon 2 bitti), Tuvalet Raporu P2 20:30. Sırada 16.11: HK S3 P1 09:00 + P2 17:00 (planı Pazar 21:37 görevi yazar), Tuvalet Raporu P3 FİNAL 12:30, 20:30 yeni seri P1 (öneri: Kapıyı kilitleyen hoca, İrem). Çizim/yardımcılar: tools/dizi_15kasim/.
+- **Redditsel sıradaki (15 Kas haftalık analiz):** HK SEZON 3 "Babamın YouTube Kanalı" 14 partlık plan havuz.md'de (16–22.11). 3 partlık seri sırası: Tuvalet Raporu P3 (16.11 12:30) → Kapıyı Kilitleyen Hoca (İrem, P1 16.11 20:30) → Amcanın Gürültülü Hediyeleri → Kar Küremeyi İstemeyen Komşu → Görümcemin Kek Topları (İrem).
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
 - **Küçük hesaplar planı (10 Kas kararı):** Grup 1 seri (İslamik, Osmanlısal, Motivasyonel) günde 1 part; Grup 2 (Sporsal, Sanatsal, Yemeksel) günde 1, TikTok'a da devam; Grup 3 (Psikolojik, Parasal, Kriminal) iki günde 1 ama daha kaliteli. Saat testi Redditsel hariç: A 09:00 / B 16:00, 23 Kas'ta yer değiştir. Ayrıntı: stok/URETIM.md.
 - **Küçük hesap seri durumu (13 Kas gece):** İslamik 19 Kas'a kadar dolu (sonraki paket yeni seri). Osmanlısal 18 Kas'a kadar dolu. Motivasyonel 20 Kas'a kadar dolu (Yeniden başla P1/3 20.11 → sıradaki P2). Grup 3 (Psi/Para/Krim) 13.11'de mini serileri bitirdi → sıradaki 15.11, yeni konular (14.11 gecesi İş 1 doldurur). Sporsal 21 Kas'a kadar dolu (14.11 Bradbury; 15–17.11 mini seri 1904 maratonu P1–P3 bitti; 18 Jamaika bobsled, 19 EURO 2008 Hırvatistan, 20 Kerri Strug, 21 Lasse Virén). Sanatsal 14.11 (Banksy) ve Yemeksel 14.11 (çubuklu buz) dolu; 15.11'den boş → İş 1.
@@ -14,6 +15,9 @@
 - **Stok:** 10 Kas itibarıyla bitmişti (eski brand'ler silinince planlılar gitti). Gece görevi her gün önce yarını doldurur, sonra rotasyon hesabının 7 gününü stoklar; ~10 günde oturur.
 - **Otomatik görevler:** 01:47 Redditsel, 03:17 küçük hesaplar, Pazar 21:37 analiz (gorevler.md). Gece çalışması kullanıcının gündüz limitini korumak için.
 - **Arkadaş:** kendi Claude'uyla depo üzerinden yardım ediyor (collaborator izni 10 Kas 22:41; Claude'u 22:47'de bağlandı, protokolü okudu). Metricool'a planlamaz; MP4 + stok.md satırını stok/<hesap>/ altına push eder, gece görevi planlar.
+
+## Performans özeti (8–14 Kas haftalık analiz — ayrıntı strateji.md)
+- 19 video, 373,8K TikTok izlenme (önceki hafta 13 video 498K), takipçi 1.358 → 1.896 (+~540). En iyi Park P1 138,6K (83 sn), en zayıf HK S2 P8 1,6K (genç). Metricool yeni brand'de izleme süresi/tam izleme/Senin İçin alanları BOŞ. Günde 4 video toplam izlenmeyi belirgin artırmadı (eğilim; 22.11'de tekrar bak).
 
 ## Performans özeti (1–10 Kas Metricool raporu)
 - Redditsel TikTok izlenmenin %96'sı. Hacker Kerem P1 191K, P2 92K, P3 75K, final 47K → seri formatı çalışıyor. Uzun (85 sn) videolarda izleme oranı düştü; ≤40 sn kuralı bu yüzden.
@@ -26,11 +30,13 @@
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
 - Sporsal TikTok kısıtı (hesap düzeyi şüphesi): kullanıcı uygulamada Ayarlar > Hesap > Hesap durumu ve videoların 'Senin İçin'e uygun değil' uyarısını kontrol edecek. Sonuca göre: ihlal varsa itiraz; yoksa birkaç gün TikTok'u durdurup YT+IG'ye devam veya yeni hesap.
-- FORMAT 4 ilk sonuç: HK haftalık sezon + 3 partlık seriler video başı izlenmeyi ve takipçi artışını toparlıyor mu? → 16.11 haftalık analiz.
+- FORMAT 4 ilk sonuç (15.11): video başı izlenme ~38K → ~20K, takipçi ~70/gün; hacim toplamı artırmadı (eğilim). 22.11 analizinde kesinleştir; kullanıcıya 3/gün önerisi raporda iletildi (karar kullanıcıda).
+- Metricool izleme süresi / Senin İçin verisi boş → kullanıcıdan TikTok Studio değerleri istendi (15.11 rapor).
 - ElevenLabs kredisi günde ~11–15 videoya yetiyor mu? İlk günlerde izle.
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-15 21:55 | haftalık analiz (Claude) | 08–14.11: 19 video 373,8K izlenme, +~540 takipçi; izleme süresi/FYP verisi boş. strateji.md güncellendi (güçlü kancalı seri P1 55–85 sn, ara part kancası yeni somut olay, HK sezonunda düzenli 'yeni felaket' partı, her 3 seriden 1'i İrem, P1 tercihen 12:30). havuz.md: HK S3 14 part planı + 4 yeni 3 partlık seri (Kapıyı Kilitleyen Hoca, Amcanın Gürültülü Hediyeleri, Kar Küreme, Görümcemin Kek Topları).
 - 2026-11-15 05:15 | gece görevi (Claude) | Küçük hesaplar İş 1 (16.11): sadece Yemeksel boştu → Nachos/Ignacio Anaya 1943 (16:00 IG+YT, 30 sn); Grup 3 bugün dolu, diğerleri dolu. İş 2 (Pazar Grup 3) 9 video: Psikolojik Asch P2 (17.11) + P3 final (19.11) + Milgram P1 (21.11) 09:00; Parasal Zimbabve P2 + P3 final + John Law P1 16:00; Kriminal Poyais P2 + P3 final + Louvre 2025 P1 16:00 (TT+YT). Hepsi 23–33 sn; MP4'ler depodan silindi.
 - 2026-11-15 04:35 | gece görevi (Claude) | Redditsel 15.11: HK S2 P9 (09:00, 29,1 sn), yeni seri Tuvalet Raporu P1 (12:30, 27,5 sn; eski MÜNFERİT 4 3 parta bölündü), HK S2 P10 FİNAL (17:00, 28,6 sn; Sezon 2 bitti), Tuvalet Raporu P2 (20:30, 29,6 sn) Metricool'a planlandı; MP4'ler depodan silindi. 14.11 TikTok: Bahçe P2 8,8K/165 beğeni, HK P7 7,4K/111, Bahçe P3 2,4K/48, HK P8 1,6K/23 (ilk saatler); ort. izleme süresi Metricool'da boş.
 - 2026-11-14 03:45 | gece görevi (Claude) | Küçük hesaplar İş 1 (15.11): Psikolojik Asch P1/3 09:00, Parasal Zimbabve P1/3 16:00, Kriminal Poyais P1/3 16:00 (TT+YT), Sanatsal Joshua Bell metro 09:00, Yemeksel Parmentier patates 16:00 (IG+YT). İş 2 (Cumartesi Sanatsal) 16–22.11 7 video 09:00: Salvator Mundi, Duchamp Çeşme, Gece Devriyesi, Van Gogh Kırmızı Bağ, Bahar Ayini, Monet İzlenim, Michelangelo Cupid. Hepsi 22–34 sn; MP4'ler depodan silindi.

@@ -3,7 +3,7 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
-> 16 KASIM (15 Kas gece görevi notu; FORMAT 4): 09:00 + 17:00 Hacker Kerem SEZON 3 P1 + P2 (planı Pazar 21:37 haftalık görev yazar; yoksa önce 14 partlık planı yaz, rozet "SEZON 3 · PART n"). 12:30 = Tuvalet Raporu P3 FİNAL (≤40 sn, Emrullah; plan aşağıda "SERİ: Tuvalet Raporu"). 20:30 = sıradaki yeni 3 partlık seri P1: münferitlerden "Kapıyı kilitleyen hoca" (İrem, okul) 3 parta bölünerek önerilir (art arda komşu olmasın diye Kar küreme sonra). Çizimler: tools/dizi_15kasim/ (tuv.js = Necati Bey, doktor, anlatıcı kulaklıklı).
+> 16 KASIM (15 Kas gece görevi notu; FORMAT 4): 09:00 + 17:00 Hacker Kerem SEZON 3 P1 + P2 (14 partlık plan YAZILDI — aşağıda "SEZON 3 'Babamın YouTube Kanalı'", haftalık analiz 15.11). 12:30 = Tuvalet Raporu P3 FİNAL (≤40 sn, Emrullah; plan aşağıda "SERİ: Tuvalet Raporu"). 20:30 = "SERİ: Kapıyı Kilitleyen Hoca" P1 (İrem; 3 partlık plan aşağıda). Sonraki seri sırası: Amcanın Gürültülü Hediyeleri → Kar Küremeyi İstemeyen Komşu → Görümcemin Kek Topları (haftalık analiz 15.11; strateji.md 15.11 kuralları: güçlü kancalı P1 55–85 sn, ara part kancası yeni somut olay). Çizimler: tools/dizi_15kasim/ (tuv.js = Necati Bey, doktor, anlatıcı kulaklıklı).
 
 > 15 KASIM (GEÇERSİZ, 15 Kas üretildi) (14 Kas gece görevi notu; FORMAT 4): 09:00 HK S2 P9 (anneannenin videosu: sistemi BİLEREK çökertmiş), 17:00 HK S2 P10 FİNAL (Sezon 2 biter; outro "Sezon 3 pazartesi! Kaçırmamak için takip et."). Bahçe Sınırı Savaşı BİTTİ (P3 14.11 20:30) → 15.11 12:30 P1 + 20:30 P2 için YENİ 3 partlık seri gerekli; havuzda SERİ YOK → strateji.md "KANCA + KONU SEÇİMİ (12 Kas)"e göre seç/yaz (münferit havuzundaki Kar küreme / Kapıyı kilitleyen hoca / Tuvalet raporu 3 parta bölünebilir). Çizimler: tools/dizi_14kasim/.
 
@@ -109,8 +109,55 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - PART 3 (FİNAL, 16.11 12:30, ≤40 sn): Beş rapor masaya dizilir; Necati Bey tabloyu yırtar, mola kuralı kalkar. Komik son: o günden sonra her tuvalete gidişte müdürün masasının önünden gülümseyerek geçiyorum; bir gün Necati Bey'in kendisi tuvalet kuyruğunda, ben çekmeceden kronometreyi çıkarıp şaka yollu başlatıyorum. Kanca önerisi: "Beş arkadaşım aynı raporu getirdi." Soru: "Senin işyerinde de böyle bir müdür var mı?" Outro: "[fast, warm] Kaçırmamak için takip et."
 - Hashtag: #hikaye #reddithikayeleri #işyeri #müdür #komedi #keşfet #fyp (+ #doktor / #çağrımerkezi)
 
-### SIRADAKİ: Hacker Kerem — SEZON 3 (16.11 Pazartesi 09:00 → 22.11 Pazar 17:00, 14 part)
-- Planı Pazar 21:37 haftalık analiz görevi yazar (karakterler aynı; yeni tema; her part bir mini olay + cliff; P14 kapanış). Rozet "SEZON 3 · PART n".
+### SERİ (sıradaki, 2 part/gün 09:00 + 17:00): Hacker Kerem — SEZON 3 "Babamın YouTube Kanalı" (komedi / aile + teknoloji) — 16.11 Pzt 09:00 P1 → 22.11 Paz 17:00 P14 FİNAL (FORMAT 4; plan: haftalık analiz 15.11)
+- Karakterler/renkler S1–S2 ile AYNI (anlatıcı abi Emre = Emrullah; Kerem 12, güneş gözlüklü; baba; anne; anneanne). Rozet "SEZON 3 · PART n". Açıklama satırı: "Hacker Kerem Sezon 3 — Part n 👀". Her part ≤40 sn, tek olay + cliff. Marka/platform logosu çizme (sadece kırmızı "▶" benzeri genel oynat simgesi, kanal adı yazıları).
+- Yeni felaket partları (strateji: yeni somut olaylı kanca): P1, P3, P5, P9, P11, P13.
+- P1 (16.11 09:00): Babam "ünlü olacağım" diye video kanalı açar, salonu stüdyoya çevirir (halka ışık, mikrofon, yazı tahtasında "1 MİLYON ABONE"). Kanca: "Babam 45 yaşında YouTuber oldu." Cliff: Montajı Kerem'e verir; Kerem gözlüğünü indirir: "Ücretim var."
+- P2 (16.11 17:00): İlk video babamın menemen tarifi; Kerem her "ııı"yı keser, video 9 saniyeye iner. 3 izlenme: annem, anneanne, babam. Kanca: "Babamın ilk videosu 3 izlenme aldı." Cliff: Kerem videonun arka planında bir şey fark eder: dans eden anneanne.
+- P3 (17.11 09:00): Kerem anneannenin 4 saniyelik dansını ayrı paylaşır; sabah 200 bin izlenme. Babam kıskançlıktan menemeni yakar. Kanca: "Anneannem bir gecede ünlü oldu." Cliff: Yorumların hepsi aynı: "Teyzeyi geri getirin!"
+- P4 (17.11 17:00): Babam anneanneyi konuk ister; anneanne şartlarını sayar: kendi çay bardağı, öğlen uykusu, menajeri Kerem. Kanca: "Anneannem babama sözleşme imzalattı." Cliff: Kanalın adı bir gecede değişmiş: "Anneanne ve Damadı".
+- P5 (18.11 09:00): Babam ilk canlı yayını açar; kamera ters, 40 dakika tavanı yayınlar, izleyiciler tavandaki lekeye isim koyar. Kanca: "Babam 40 dakika tavanı canlı yayınladı." Cliff: Yayın hâlâ açıkken mutfaktan annemin sesi: "Bulaşıkları kim yıkayacak?!"
+- P6 (18.11 17:00): Annem ev kuralı koyar: bulaşık yıkamayan video çekemez. Babam bulaşığı çekip "bulaşık meydan okuması" yapar; komşular da katılır. Kanca: "Annem kanala bulaşık kuralı koydu." Cliff: Kanala ilk iş birliği teklifi gelir — ama Kerem'in adına.
+- P7 (19.11 09:00): Bir çorap firması (adı YOK) reklam ister; babam tek cümlelik reklamı 27 kez çeker, her seferinde "çorap" yerine başka kelime söyler. Kanca: "Babam bir cümleyi 27 kez çekti." Cliff: Kerem anneanneyle gizlice tek çekimde bitirip gönderir.
+- P8 (19.11 17:00): Babam reklamda kendisinin olmadığını görür; "Bu kanal kimin?" kavgası, herkes şifreyi değiştirmeye koşar. Kanca: "Evde kanal kimin kavgası çıktı." Cliff: En son babam değiştirir… ve yeni şifreyi unutur.
+- P9 (20.11 09:00): Babam kendi kanalından kilitlenir; kurtarma sorusu "İlk evcil hayvanınızın adı?" Babamın hiç hayvanı olmadığına yemin eder. Kanca: "Babam kendi kanalından kilitlendi." Cliff: Anneanne: "Senin bir kaplumbağan vardı. Adını ben koymuştum."
+- P10 (20.11 17:00): Kaplumbağanın adı için eski albümler, kasetler açılır; Kerem cevabı bulur ("Şimşek"). Kanca: "Babamın gizli kaplumbağası ortaya çıktı." Cliff: Albümün içinden etiketli bir kaset düşer: "1989 — Şimşek'e şarkı". Kerem: "Bu altın."
+- P11 (21.11 09:00): Kaset dijitale aktarılır: 8 yaşındaki babam kaplumbağaya şarkı söylüyor. Kerem paylaşır, kanal patlar; babam utançtan dolaba saklanır. Kanca: "Babamın çocukluk kaseti viral oldu." Cliff: Telefon çalar: bir TV programı aileyi stüdyoya çağırıyor.
+- P12 (21.11 17:00): Herkes hazırlanır: anneanne kuaföre, annem en iyi tencereyi paketler, babam şarkı provası. Kanca: "Ailemiz televizyona çağrıldı." Cliff: Stüdyoda yapımcı Kerem'e döner: "Biz aslında 12 yaşındaki dahiyi çağırdık."
+- P13 (22.11 09:00): Kerem canlı yayında mikrofonu babasına uzatır: "Asıl yıldız babam." Babam duygulanır. Kanca: "Kardeşim canlı yayında mikrofonu babama verdi." Cliff: Stüdyoda babamın 8 yaşındaki kaset şarkısı çalmaya başlar.
+- P14 FİNAL (22.11 17:00): Babam şarkıyı canlı söyler, anneanne arkada dans eder, stüdyo alkışlar. Eve dönünce babam kanalı Kerem'e devreder, tek şart: ödevler. Son sahne: Kerem kanalın adını "Hacker Kerem" yapar, anneanne göz kırpar. Soru: "Sizin evde kim YouTuber olurdu?" Outro: "Sezon 4 pazartesi! Kaçırmamak için takip et."
+- Hashtag: #hikaye #reddithikayeleri #hackerkerem #komedi #youtuber #aile #keşfet #fyp
+
+### SERİ (3 part, İrem — okul): Kapıyı Kilitleyen Hoca (komedi / okul) — Tuvalet Raporu bittikten sonra ilk seri (öneri: 16.11 20:30 P1)
+- Kaynak: r/MaliciousCompliance, u/Khromez — listverse.com "Top 10 Stories of Malicious Compliance" #3 (eski MÜNFERİT 3). Doğrulanmamış; "Reddit'teki bir hikâyeden ilham alınmıştır."
+- Anlatıcı: üniversite öğrencisi kız → İrem. Hoca: Prof. Kemal Bey (kurgusal; gri sakal, papyon, kol saati). Sınıf başkanı: Burak. Üniversite adı YOK.
+- PART 1 (güçlü kanca adayı → 55–85 sn olabilir): Kemal Bey ilk derste kural koyar: "Dakika beş, kapı kilit." Geç kalan devamsız sayılır. Anlatıcı yağmurda otobüs kaçırınca kapının dışında kalır; camdan hocanın gülümsemesi. Bütün dönem 5'i geçen herkes kapıda. Kanca: "Hocamız geç kalanı derse almıyordu." Cliff: Bir sabah saat 09:05… kürsü boş.
+- PART 2 (≤40 sn): Sınıf saate bakar; Burak ayağa kalkar, sakin sakin kapıyı içeriden kilitler: "Kural kuraldır." Koridordan ayak sesleri, kapı kolu oynar, camda Kemal Bey'in şaşkın yüzü. Kanca: "Bir gün hocamız geç kaldı." Cliff: Kapı çalınır; içeriden hep bir ağızdan: "Kuralınız hocam!"
+- PART 3 FİNAL (≤40 sn): Hoca dersin sonuna kadar koridorda bekler; sınıf kendi kendine konuyu çalışır. Ertesi hafta kapı ardına kadar açık, kapıya bir takoz: "Bugün kapı açık kalsın." Son espri: o günden sonra hoca derse 10 dk erken gelip kapıda öğrencileri karşılıyor. Kanca: "Sınıf hocayı kapıda bıraktı." Soru: "Sence sınıf fazla mı ileri gitti?"
+- Hashtag: #hikaye #reddithikayeleri #okul #üniversite #hoca #komedi #keşfet #fyp
+
+### SERİ (3 part, Emrullah — aile): Amcanın Gürültülü Hediyeleri (komedi / aile) — sonraki seri
+- Kaynak: r/pettyrevenge, u/PrinceGuti — ranker.com "petty-revenge-jun-2022/miguelgr" #3 ("More Gifts, More Problems"). Doğrulanmamış; uyarlama, kendi cümlelerimizle.
+- Anlatıcı: bekâr amca (erkek) → Emrullah. Ağabey: Murat (yeğenlerin babası), yenge: Sevgi, yeğenler: Ali (7) ve Zeynep (5). Mağaza/oyuncak markası YOK.
+- PART 1 (güçlü kanca adayı → 55–85 sn olabilir): Ağabeyim bayramda "Sen bekârsın, paran bol; çocuklara doğru dürüst hediye al, yoksa bir dahakine görmezsin" diye laf sokar. Ertesi gün oyuncakçıda tezgâhtara tek soru: "En gürültülü ne var?" Kanca: "Ağabeyim hediyelerimi beğenmedi." Cliff: Bagaj ağzına kadar: davul, iki trompet, org, ksilofon ve bir kova sim.
+- PART 2 (≤40 sn): Ağabeyim ve yengem kutuları sevinçle içeri taşır. Paketler açıldıkça yüzleri düşer: önce davul, sonra trompetler, en son sim kovası halıya devrilir. Çocuklar konser başlatır. Kanca: "Yeğenlerime davul ve trompet aldım." Cliff: Ben çıkarken ağabeyim kulaklarını kapatarak bağırır: "Bunun pilleri ne zaman biter?!"
+- PART 3 FİNAL (≤40 sn): Haftalar sonra Zeynep'in doğum günü; ağabeyim telefonda yalvarır: "Bu sefer basit bir şey olsun." Ben: "Merak etme, kitap alacağım." Son espri: kitabın adı "Evde Davul Yapımı". Soru: "Sen olsan bu amcayı bir daha davet eder miydin?"
+- Hashtag: #hikaye #reddithikayeleri #aile #amca #hediye #komedi #keşfet #fyp
+
+### SERİ (3 part, Emrullah — komşu): Kar Küremeyi İstemeyen Komşu (komedi / komşu) — aile serisinden sonra
+- Kaynak ve özet: aşağıdaki "MÜNFERİT 2" (r/MaliciousCompliance, u/sockfacekiller). Mekân: Erzurum'da bir site; makine markası YOK.
+- PART 1 (≤40 sn ya da güçlü kancayla 55–85 sn): Her kış küçük makineyle bütün sokağın kaldırımını gönüllü temizliyorum; komşular kurabiye getiriyor. Tek istisna Hikmet Bey: "Sese çok hassasım, kuş sesi bile rahatsız ediyor; benim önümü temizleme." Ben: "Peki." Kanca: "Komşum kar makinemden şikâyet etti." Cliff: O hafta yarım metre kar yağar ve Hikmet Bey şehir dışındadır.
+- PART 2 (≤40 sn): Bütün sokak tertemiz, tek bir evin önü dağ gibi. İki gün ılık hava, sonra sert ayaz: kar buz bloğuna dönüyor. Kanca: "Bütün sokağı temizledim, bir ev hariç." Cliff: Hikmet Bey'in arabası döner, kapısının önünde buzul.
+- PART 3 FİNAL (≤40 sn): Hikmet Bey kürekle, sonra kazmayla girişir; kürek kırılır. Akşam kapımı çalar, kısık sesle: "Makineyi… sessiz modda çalıştırabilir misin?" Ben: "Kuşlar rahatsız olmasın, ilkbaharı bekleyelim." (sonra yardım eder). Soru: "Sen olsan yine temizler miydin?"
+- Hashtag: #hikaye #reddithikayeleri #komşu #kar #komedi #keşfet #fyp
+
+### SERİ (3 part, İrem — aile): Görümcemin Kek Topları (komedi / aile) — sonraki seri
+- Kaynak: r/pettyrevenge, u/throwra_sipitk — ranker.com "petty-revenge-jun-2022/miguelgr" #9 ("Let Them Eat Cake Pops"). Doğrulanmamış; uyarlama.
+- Anlatıcı: gelin (kadın) → İrem. Görümce: Selin. Kaynana: Nermin Hanım. Eşi: Can. Marka YOK.
+- PART 1 (≤40 sn): Kocamın ailesinde ne yapsam dokunulmuyor; görümcemin kek topları ise her toplantıda alkışlanıyor, kaynanam fotoğrafını herkese yolluyor. Benim kurabiyelerim her seferinde masada kalıyor. Kanca: "Kaynanam kurabiyelerime hiç dokunmadı." Cliff: Bir gece görümcemin tarifinin fotoğrafını büyütüp mutfağa geçiyorum.
+- PART 2 (≤40 sn): Bayram sofrası. Görümcemin tabağının yanına birebir aynı kek toplarını koyuyorum; kimseye bir şey demiyorum. Herkes benim tabağa saldırıyor, kaynanam: "Selin'inkiler fotoğraftakinden de güzel olmuş!" Kanca: "Görümcemin tatlısının aynısını yaptım." Cliff: Görümcem dolu tabağına bakıp soruyor: "Benimkileri neden kimse yemiyor?"
+- PART 3 FİNAL (≤40 sn): Gülümseyerek: "Yediğiniz benimkilerdi, beğendiğinize sevindim." Sofrada çatal sesleri durur, kaynanam çayını yarıda bırakır. Can mutfakta "Biraz acımasızdı" der ama son kek topunu da o yer. Son espri: ertesi bayram kaynanam ilk kez benden tarif ister. Soru: "Sence fazla mı ileri gittim?"
+- Hashtag: #hikaye #reddithikayeleri #aile #kaynana #görümce #komedi #keşfet #fyp
 
 
 
@@ -131,7 +178,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 
 > NOT (8 Kas haftalık görev): strateji.md'ye göre komedi öncelikli, gerilim seçilmez. Aşağıdaki münferitler SABAH slotu için sırayla kullanılır (en üstteki önce). Hepsi r/MaliciousCompliance kaynaklı derleme sitelerinden; hiçbiri "Fiction" etiketli değil ama doğrulanmamış → açıklamada "Reddit'ten uyarlanmıştır.", "gerçek/yaşanmış" deme. İsimler/mekânlar Türkçeleştirilir, marka adı kullanılmaz. Park Yeri Savaşı ile art arda iki komşu hikâyesi gelmesin: Park P2 akşamı yayınlanırsa ertesi sabah "Kar küreme" yerine "Tam yarım kilo kanat" seçilir.
 
-### MÜNFERİT 2: Kar küremeyi istemeyen komşu (komedi / komşu)
+### MÜNFERİT 2 (→ yukarıdaki "SERİ: Kar Küremeyi İstemeyen Komşu", 15.11): Kar küremeyi istemeyen komşu (komedi / komşu)
 - Kaynak: r/MaliciousCompliance, u/sockfacekiller (başlık derlemede yok) — ranker.com "20 Times People Got Revenge By Doing EXACTLY What They Were Told" (malicious-compliance-stories/joshualee) #5.
 - Anlatıcı: erkek → Emrullah. Uyarlama: Wisconsin → Erzurum/Kars gibi bol karlı bir site; kar küreme makinesi marka adı YOK.
 - Özet: Anlatıcı her kış küçük kar küreme makinesiyle tüm sokağın kaldırımlarını gönüllü temizler; komşular sever. Bir komşu (çocuklara kaldırım tebeşiri yüzünden bağıran huysuz tip) "Ben sese çok hassasım, evimin önünü temizleme" der. Anlatıcı "Peki" der. Kışın ortasında yarım metreye yakın kar yağar; anlatıcı tüm sokağı temizler — o tek ev hariç. Komşu o hafta şehir dışındadır. Ardından iki gün ılık hava, sonra sert ayaz: o evin önündeki kar kalın bir buz tabakasına döner. Komşu döner, kapısının önünde buzul bulur; arabası çıkamaz, kürek kırılır. Anlatıcının sesi duyulmasın diye bir şey yapamaz — kendi isteği.
@@ -140,7 +187,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Kapanış sorusu: "Sen olsan yine temizler miydin?"
 - Ton: komedi/hafif intikam; ses Emrullah; hashtag: #hikaye #reddithikayeleri #komşu #kar #intikam #komedi #keşfet #fyp #shorts
 
-### MÜNFERİT 3: Kapıyı kilitleyen hoca (komedi / okul)
+### MÜNFERİT 3 (→ yukarıdaki "SERİ: Kapıyı Kilitleyen Hoca", 15.11): Kapıyı kilitleyen hoca (komedi / okul)
 - Kaynak: r/MaliciousCompliance, u/Khromez (başlık derlemede yok) — listverse.com "Top 10 Stories of Malicious Compliance" #3.
 - Anlatıcı: üniversite öğrencisi (kadın → İrem; ses testi için iyi fırsat — strateji: İrem verisi az). Uyarlama: Türk üniversitesi, "Prof. Kemal Bey" gibi kurgusal isim; üniversite adı YOK.
 - Özet: Hoca dersin başlamasından 5 dakika sonra sınıf kapısını kilitler; geç kalan kim olursa olsun içeri giremez, o dersi kaçırır, devamsızlık yazılır. Öğrenciler aylarca otobüs/kar/trafik bahanesiyle kapıda kalır. Bir gün hoca 5 dakika geç kalır. Sınıf başkanı saate bakar, kalkar ve kapıyı içeriden kilitler. Hoca kapıyı çalar; içeriden "Kuralınız hocam" sesi gelir. Hoca bir saat koridorda bekler. Sonraki haftadan itibaren kapı bir daha hiç kilitlenmez.
