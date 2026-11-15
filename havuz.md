@@ -3,7 +3,9 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
-> 15 KASIM (14 Kas gece görevi notu; FORMAT 4): 09:00 HK S2 P9 (anneannenin videosu: sistemi BİLEREK çökertmiş), 17:00 HK S2 P10 FİNAL (Sezon 2 biter; outro "Sezon 3 pazartesi! Kaçırmamak için takip et."). Bahçe Sınırı Savaşı BİTTİ (P3 14.11 20:30) → 15.11 12:30 P1 + 20:30 P2 için YENİ 3 partlık seri gerekli; havuzda SERİ YOK → strateji.md "KANCA + KONU SEÇİMİ (12 Kas)"e göre seç/yaz (münferit havuzundaki Kar küreme / Kapıyı kilitleyen hoca / Tuvalet raporu 3 parta bölünebilir). Çizimler: tools/dizi_14kasim/.
+> 16 KASIM (15 Kas gece görevi notu; FORMAT 4): 09:00 + 17:00 Hacker Kerem SEZON 3 P1 + P2 (planı Pazar 21:37 haftalık görev yazar; yoksa önce 14 partlık planı yaz, rozet "SEZON 3 · PART n"). 12:30 = Tuvalet Raporu P3 FİNAL (≤40 sn, Emrullah; plan aşağıda "SERİ: Tuvalet Raporu"). 20:30 = sıradaki yeni 3 partlık seri P1: münferitlerden "Kapıyı kilitleyen hoca" (İrem, okul) 3 parta bölünerek önerilir (art arda komşu olmasın diye Kar küreme sonra). Çizimler: tools/dizi_15kasim/ (tuv.js = Necati Bey, doktor, anlatıcı kulaklıklı).
+
+> 15 KASIM (GEÇERSİZ, 15 Kas üretildi) (14 Kas gece görevi notu; FORMAT 4): 09:00 HK S2 P9 (anneannenin videosu: sistemi BİLEREK çökertmiş), 17:00 HK S2 P10 FİNAL (Sezon 2 biter; outro "Sezon 3 pazartesi! Kaçırmamak için takip et."). Bahçe Sınırı Savaşı BİTTİ (P3 14.11 20:30) → 15.11 12:30 P1 + 20:30 P2 için YENİ 3 partlık seri gerekli; havuzda SERİ YOK → strateji.md "KANCA + KONU SEÇİMİ (12 Kas)"e göre seç/yaz (münferit havuzundaki Kar küreme / Kapıyı kilitleyen hoca / Tuvalet raporu 3 parta bölünebilir). Çizimler: tools/dizi_14kasim/.
 
 > 14 KASIM (GEÇERSİZ, 14 Kas üretildi) (13 Kas gece görevi notu; FORMAT 4): 09:00 HK S2 P7, 12:30 Bahçe Sınırı P2 (≤40 sn, İrem), 17:00 HK S2 P8, 20:30 Bahçe Sınırı P3 FİNAL (≤40 sn) → 15.11 12:30'dan itibaren havuzdaki ilk uygun yeni 3 partlık seri (havuzda SERİ yok; strateji.md "KANCA + KONU SEÇİMİ"ne göre seç/yaz). Park Yeri bitti (P7 13.11). Çizimler: tools/dizi_13kasim/.
 
@@ -96,8 +98,16 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P5 (13.11 09:00), P6 (13.11 17:00): yukarıdaki gibi.
 - P7 (14.11 09:00): Herkes Kerem'den şüphelenir; asıl yayan, annemin açtığı "aile anıları" özelliği: sistem her şeyi kaydedip gruba atıyormuş. Cliff: Sistem son 1 haftanın tüm videolarını yüklemek üzere… ✅ 2026-11-14 (09:00, 29,4 sn; kanca "Babamın ninnisi mahalle grubuna düştü"; yayan buzdolabı, cliff "%99 yükleniyor")
 - P8 (14.11 17:00, YENİ): Kerem ile annem ilk kez aynı takımda, yüklemeyi durdurmaya çalışırlar; ilk yüklenen video babamın gece 3'te buzdolabıyla konuşması. Cliff: Sıradaki video anneanneye ait. ✅ 2026-11-14 (17:00, 29,7 sn; annem fişi çekemedi çünkü "dondurmalar erir"; ilk video babamın "Kimse beni anlamıyor buzdolabı"; cliff "Sıradaki dosya: ANNEANNE")
-- P9 (15.11 09:00, YENİ): Anneannenin videosu: sistemi o gün yanlışlıkla değil BİLEREK çökertmiş, "Kerem biraz dışarı çıksın" diye. Herkes şok. Cliff: Anneanne gözlüğünü takar: "Bu evin ilk hacker'ı benim."
-- P10 (FİNAL, 15.11 17:00): Aile toplantısı: akıllı ev iptal, eski anahtara dönüş. Son sahne: Kerem anahtarın kopyasını çoktan çıkarmış; anneanne göz kırpar. Soru: "Sizin evde gerçek hacker kim?" Outro: "Sezon 3 pazartesi! Kaçırmamak için takip et."
+- P9 (15.11 09:00, YENİ): Anneannenin videosu: sistemi o gün yanlışlıkla değil BİLEREK çökertmiş, "Kerem biraz dışarı çıksın" diye. Herkes şok. Cliff: Anneanne gözlüğünü takar: "Bu evin ilk hacker'ı benim." ✅ 2026-11-15 (09:00, 29,1 sn; kâğıttan kendi komutunu okudu, kameraya göz kırptı, "Kerem dışarı çıksın, güneş görsün")
+- P10 (FİNAL, 15.11 17:00): Aile toplantısı: akıllı ev iptal, eski anahtara dönüş. Son sahne: Kerem anahtarın kopyasını çoktan çıkarmış; anneanne göz kırpar. Soru: "Sizin evde gerçek hacker kim?" Outro: "Sezon 3 pazartesi! Kaçırmamak için takip et." ✅ 2026-11-15 (17:00, 28,6 sn; babam fişi çekti, buzdolabı "Beni unutmayın", demir kilit, kopyayı anneanne yaptırmış) — SEZON 2 BİTTİ
+
+### SERİ (aktif, 12:30/20:30): Tuvalet Raporu (komedi / iş yeri) — 3 PART (FORMAT 4)
+- Kaynak: r/MaliciousCompliance, u/argash — ranker.com "20 Times People Got Revenge By Doing EXACTLY What They Were Told" #3 (eski MÜNFERİT 4). Doğrulanmamış; "Reddit'teki bir hikâyeden ilham alınmıştır."
+- Anlatıcı: çağrı merkezi çalışanı (erkek, kulaklıklı, yeşil gömlek) → Emrullah. Müdür: Necati Bey (gözlük, bıyık, beyaz gömlek + kırmızı kravat, elinde kronometre). Doktor: gri saç, önlük, steteskop. Rozet "PART n". Çizim: tools/dizi_15kasim/tuv.js.
+- PART 1: Günde üç litre su → sık tuvalet; Necati Bey kronometre + mola tablosu; "Günde iki mola, fazlası için doktor raporu getir." Ben: "Peki." Cliff: Ertesi sabah doktordayım. ✅ 2026-11-15 (12:30, 27,5 sn)
+- PART 2: Doktor önce güler sonra ciddileşir; rapor: "Hastanın tuvalete gitmesine izin verilmelidir. Böbreklerini kullanmaya devam etmesi tıbben önerilir." + ONAYLI mührü. Necati Bey domates gibi kızarır, kronometreyi çekmeceye koyar. Cliff: Ertesi sabah masasının önünde kuyruk: beş arkadaşımın elinde aynı rapor. ✅ 2026-11-15 (20:30, 29,6 sn)
+- PART 3 (FİNAL, 16.11 12:30, ≤40 sn): Beş rapor masaya dizilir; Necati Bey tabloyu yırtar, mola kuralı kalkar. Komik son: o günden sonra her tuvalete gidişte müdürün masasının önünden gülümseyerek geçiyorum; bir gün Necati Bey'in kendisi tuvalet kuyruğunda, ben çekmeceden kronometreyi çıkarıp şaka yollu başlatıyorum. Kanca önerisi: "Beş arkadaşım aynı raporu getirdi." Soru: "Senin işyerinde de böyle bir müdür var mı?" Outro: "[fast, warm] Kaçırmamak için takip et."
+- Hashtag: #hikaye #reddithikayeleri #işyeri #müdür #komedi #keşfet #fyp (+ #doktor / #çağrımerkezi)
 
 ### SIRADAKİ: Hacker Kerem — SEZON 3 (16.11 Pazartesi 09:00 → 22.11 Pazar 17:00, 14 part)
 - Planı Pazar 21:37 haftalık analiz görevi yazar (karakterler aynı; yeni tema; her part bir mini olay + cliff; P14 kapanış). Rozet "SEZON 3 · PART n".
@@ -139,7 +149,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Kapanış sorusu: "Sence sınıf fazla mı ileri gitti?"
 - Ton: komedi; ses İrem; hashtag: #hikaye #reddithikayeleri #okul #üniversite #hoca #komedi #keşfet #fyp #shorts
 
-### MÜNFERİT 4: Tuvalet için doktor raporu (komedi / iş yeri)
+### MÜNFERİT 4 (KULLANILDI → yukarıdaki "SERİ: Tuvalet Raporu", 15.11): Tuvalet için doktor raporu (komedi / iş yeri)
 - Kaynak: r/MaliciousCompliance, u/argash (başlık derlemede yok) — ranker.com "20 Times People Got Revenge By Doing EXACTLY What They Were Told" #3.
 - Anlatıcı: çağrı merkezi çalışanı (erkek) → Emrullah. Uyarlama: Türkiye'de bir çağrı merkezi; şirket adı YOK.
 - Özet: Anlatıcı sesi çatlamasın diye gün boyu çok su içer, bu yüzden sık sık 2–3 dakikalık tuvalet molası verir. Müdür, iki resmi mola dışındaki her tuvalet ziyareti için doktor raporu ister — getiremeyeceğini düşünerek. Anlatıcı doktora gider; doktor talebi o kadar saçma bulur ki "Bu kişinin tuvalete gitmesine izin verilmelidir; böbreklerini kullanmaya devam etmesi tıbben önerilir" tadında alaycı bir rapor yazar. Müdür raporu okurken kızarır. Ertesi hafta ekipten beş kişi aynı doktordan aynı raporu getirir. Anlatıcı o günden sonra her tuvalete gidişte müdürün masasının önünden gülümseyerek geçer.

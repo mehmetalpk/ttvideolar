@@ -37,3 +37,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-14 | Babam komşuya harita mühendisi getirdi (Bahçe Sınırı Savaşı) [Part 2] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 29.5 sn | 12:30 | -7614471527112750708 | ÖĞLE | parkur:hayır
 - 2026-11-14 | Babam gece 3'te buzdolabıyla dertleşmiş (Hacker Kerem S2) [Part 8] | kendi kurgu | komedi/seri | Emrullah | 29.7 sn | 17:00 | -9080091451105983481 | AKŞAM | parkur:hayır
 - 2026-11-14 | Sınır komşunun salıncağının altındaymış (Bahçe Sınırı Savaşı) [Part 3 — FİNAL] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 32.6 sn | 20:30 | 7528907784797765640 | GECE | parkur:hayır
+- 2026-11-15 | Anneannem sistemi bilerek çökertmiş (Hacker Kerem S2) [Part 9] | kendi kurgu | komedi/seri | Emrullah | 29.1 sn | 09:00 | -915024131945510867 | SABAH | parkur:hayır
+- 2026-11-15 | Müdürüm tuvalet için rapor istedi (Tuvalet Raporu) [Part 1] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 27.5 sn | 12:30 | -7066753366164027132 | ÖĞLE | parkur:hayır
+- 2026-11-15 | Babam akıllı evi fişten çekti (Hacker Kerem S2) [Part 10 — FİNAL] | kendi kurgu | komedi/seri | Emrullah | 28.6 sn | 17:00 | -1738909288624272626 | AKŞAM | parkur:hayır
+- 2026-11-15 | Doktorum müdürüme alaycı rapor yazdı (Tuvalet Raporu) [Part 2] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 29.6 sn | 20:30 | -2903166034579667473 | GECE | parkur:hayır
