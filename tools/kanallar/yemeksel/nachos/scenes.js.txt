@@ -1,0 +1,29 @@
+function chip(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#f0b84a';x.beginPath();x.moveTo(0,-70);x.lineTo(62,46);x.lineTo(-62,46);x.closePath();x.fill();x.fillStyle='#d9962c';for(const [a,b] of [[-15,0],[18,20],[0,-25]]){x.beginPath();x.arc(a,b,5,0,7);x.fill();}x.restore();}
+function jala(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#2f8a3a';x.beginPath();x.arc(0,0,26,0,7);x.fill();x.fillStyle='#bfe3a0';x.beginPath();x.arc(0,0,17,0,7);x.fill();x.fillStyle='#f4f1d0';for(let i=0;i<4;i++){x.beginPath();x.arc(Math.cos(i*1.57)*8,Math.sin(i*1.57)*8,3,0,7);x.fill();}x.restore();}
+function nachoPlate(cx,cy,s,t,melt=1){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#f4f1ea';x.beginPath();x.ellipse(0,40,300,110,0,0,7);x.fill();x.fillStyle='#d8d2c4';x.beginPath();x.ellipse(0,40,230,80,0,0,7);x.fill();const r=rng(5);for(let i=0;i<11;i++){chip(-170+r()*340,-10+r()*80,0.95,r()*6);}
+ if(melt>0){x.globalAlpha=cl(melt);x.fillStyle='#ffcf3a';for(let i=0;i<7;i++){x.beginPath();x.ellipse(-150+i*50,10+Math.sin(i*2)*24,46,22,0.3,0,7);x.fill();}x.globalAlpha=1;for(let i=0;i<5;i++)jala(-130+i*65,Math.cos(i*3)*30,0.9);}x.restore();}
+function border(t){x.fillStyle=grad(0,H,['#ffb35c','#ffe2b0']);x.fillRect(0,0,W,H);sun(800,330,90);x.fillStyle='#c98a4a';x.fillRect(0,1000,W,H-1000);x.fillStyle='#3a6ea5';x.beginPath();x.moveTo(0,1080);for(let i=0;i<=12;i++)x.lineTo(i*90,1080+Math.sin(t*2+i)*10);x.lineTo(W,1200);x.lineTo(0,1200);x.fill();house(240,1000,180,140,'#e8d2a8');house(520,1000,220,170,'#f0c890');house(820,1000,160,130,'#e0b884');}
+function victory(t){x.fillStyle=grad(0,H,['#5a2a14','#1a0a04']);x.fillRect(0,0,W,H);x.fillStyle='#8a4a22';x.fillRect(120,560,840,520);x.fillStyle='#ffd23f';rr(200,600,680,120,20);x.fill();x.fillStyle='#5a2a14';x.font=`900 70px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('VICTORY CLUB',540,662);for(let i=0;i<3;i++){x.fillStyle='rgba(255,220,140,'+(0.6+0.3*Math.sin(t*3+i))+')';rr(190+i*250,780,180,160,12);x.fill();}}
+function chefHat(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#fff';x.beginPath();x.arc(-40,-40,50,0,7);x.arc(40,-40,50,0,7);x.arc(0,-70,55,0,7);x.fill();x.fillRect(-60,-30,120,60);x.restore();}
+// 0 kanca
+shot(0,0,t=>{bgWarm();spot(540,820,500,0.35);nachoPlate(540,820,1.5,t,1);bigText('MUTFAK BOŞTU',W/2,300,115,'#fff',1);bigText('NACHOS DOĞDU',W/2,440,110,'#ffd23f',1);});
+// 1 1943 piedras negras
+shot(1,1,t=>{border(t);x.fillStyle='rgba(0,0,0,0.25)';x.fillRect(0,0,W,H);yearStamp('1943','PİEDRAS NEGRAS',eOut(cl(t*2)),640);});
+// 2 victory club, asker eşleri
+shot(2,2,t=>{victory(t);people(4,540,1440,1.4,'#e8b47a',150);badge(540,300,'ASKER EŞLERİ','#2a5cff',(t-1.2)*3);});
+// 3 aşçı yok
+shot(3,3,t=>{bgDoc('#3a2a20','#0e0906');x.fillStyle='#6a6a70';x.fillRect(160,820,760,40);pot(380,760,1,t);chefHat(700,700,1.3);stampX(700,700,1.2,cl((t-0.4)*3));bigText('AŞÇI YOK!',W/2,330,140,'#ff4d4d',back(cl(t*2.5)));});
+// 4 anaya
+shot(4,4,t=>{bgWarm();spot(540,720,480,0.4);sil(540,1100,2.5,'#2a1206');x.save();x.translate(540,980);x.fillStyle='#fff';x.beginPath();x.moveTo(-30,-160);x.lineTo(0,-120);x.lineTo(30,-160);x.fill();x.restore();badge(540,300,'IGNACIO ANAYA','#c1121f',t*3);if(t>1.5)badge(540,1380,'NE VARSA ONUNLA','#2f8a3a',(t-1.5)*3);});
+// 5 tortilla, peynir, jalapeño, fırın
+shot(5,5,t=>{bgWarm();const k=t<1.4?0:t<2.8?1:2;if(k===0){x.fillStyle='#f0d08a';x.beginPath();x.arc(540,760,260,0,7);x.fill();x.strokeStyle='#8a5e30';x.lineWidth=8;for(let i=0;i<3;i++){const a=i*1.047+t*0.2;x.beginPath();x.moveTo(540-Math.cos(a)*260,760-Math.sin(a)*260);x.lineTo(540+Math.cos(a)*260,760+Math.sin(a)*260);x.stroke();}}else if(k===1){nachoPlate(540,780,1.5,t,cl((t-1.4)*1.5));}else{stove(540,1050,1.3,t);nachoPlate(540,700,1.0,t,1);fire(540,960,300,80,t,0.8);}bigText(['ÜÇGEN KESTİ','PEYNİR + JALAPEÑO','FIRINA!'][k],W/2,300,k===1?90:120,'#ffd23f',back(cl((t-[0,1.4,2.8][k])*3)));});
+// 6 adını sordu
+shot(6,6,t=>{victory(t);nachoPlate(540,880,0.9,t,1);sbubble(540,420,720,150,'BUNUN ADI NE?',eOut(cl(t*3)),70);});
+// 7 nacho's especiales
+shot(7,7,t=>{bgWarm();rays(540,700,t);x.save();x.translate(540,700);x.rotate(-0.04);x.fillStyle='#f4f1ea';rr(-330,-220,660,440,20);x.fill();x.strokeStyle='#8a4a22';x.lineWidth=8;rr(-305,-195,610,390,14);x.stroke();x.restore();bigText('MENÜ',540,560,70,'#8a4a22',1);bigText("NACHO'S",540,690,100,'#c1121f',back(cl((t-0.8)*2.5)));bigText('ESPECIALES',540,800,90,'#c1121f',back(cl((t-1.1)*2.5)));bigText('TAKMA ADI: NACHO',W/2,300,90,'#fff',eOut(cl(t*3)));});
+// 8 soru
+shot(8,8,t=>{bgWarm();nachoPlate(540,860,1.3,t,1);qmarks(540,760,t,3);bigText('SEN NEYLE',W/2,260,120,'#fff',1);bigText('YERSİN?',W/2,400,120,'#ffd23f',back(cl(t*2.5)));});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#3a1c0e','#0f0704'));
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
+function stove(cx,base,s,t){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#3a3a40';rr(-260,-420,520,420,20);x.fill();x.fillStyle='#111';rr(-210,-330,420,250,14);x.fill();x.fillStyle='rgba(255,140,40,'+(0.35+0.15*Math.sin(t*6))+')';rr(-200,-320,400,230,12);x.fill();x.restore();}
