@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function finB(T){x.save();x.translate(540,215);const s=0.82+0.04*Math.sin(T*8);x.scale(s,s);x.rotate(-0.04);x.fillStyle='#ff2d55';rr(-290,-58,580,116,26);x.fill();x.strokeStyle='#fff';x.lineWidth=7;x.stroke();x.font=`900 54px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#fff';x.fillText('SEZON 2 · PART 10 · FİNAL',0,4,540);x.restore();}
+function wink(P,cx,cy,r){const ey=cy-r*0.02;x.fillStyle=P.skin;x.beginPath();x.ellipse(cx-r*0.33,ey,r*0.13,r*0.16,0,0,7);x.fill();x.strokeStyle='#1d1a22';x.lineWidth=r*0.05;x.beginPath();x.arc(cx-r*0.33,ey-r*0.03,r*0.1,0.2,Math.PI-0.2);x.stroke();}
+function key(cx,cy,s,rot,col,glow){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);if(glow){x.shadowColor='#ffe27a';x.shadowBlur=60;}x.fillStyle=col||'#d4a838';x.strokeStyle='#7a5a10';x.lineWidth=8;x.beginPath();x.arc(-120,0,70,0,7);x.fill();x.stroke();x.shadowBlur=0;x.fillStyle='#000';x.globalAlpha=0.6;x.beginPath();x.arc(-120,0,28,0,7);x.fill();x.globalAlpha=1;x.fillStyle=col||'#d4a838';rr(-60,-20,240,40,8);x.fill();x.stroke();rr(130,20,26,50,4);x.fill();rr(80,20,26,40,4);x.fill();x.restore();}
+function bigLock(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.strokeStyle='#5a5f68';x.lineWidth=34;x.beginPath();x.arc(0,-80,90,Math.PI,0);x.lineTo(90,0);x.moveTo(-90,0);x.lineTo(-90,-80);x.stroke();x.fillStyle='#3a3f48';rr(-150,-20,300,240,30);x.fill();x.fillStyle='#22262e';x.beginPath();x.arc(0,80,30,0,7);x.fill();x.fillRect(-12,90,24,70);x.restore();}
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,7);radial(540,900,1300,'#1b3a6a','#040814');x.save();zoom(540,900,1.05+0.04*t);person(BABA,420,840,190,{brow:-0.8,angry:0.7,smile:-0.2,shirt:BS});socket(860,1000,1.0,40+60*cl(t/0.6));x.restore();x.restore();vignette(0.45);
+ hook([['BABAM AKILLI EVİ',95,'#fff'],['FİŞTEN',170,YEL],['ÇEKTİ!',130,'#fff']],270);finB(t);}});
+// 1 aile toplantısı: akıllı ev iptal
+sc.push({a:mid(1),f(t,T){salon();x.save();zoom(540,900,1.0+0.03*t);board(540,560,700,330,[['AİLE TOPLANTISI',56,'#222',prog(T,st(1),st(1)+0.3)],['AKILLI EV:',62,'#222',prog(T,W2(1,'akıllı')-0.1,W2(1,'akıllı')+0.2)],['İPTAL ❌',80,RED,prog(T,W2(1,'iptal')-0.1,W2(1,'iptal')+0.2)]],T);person(BABA,220,940,105,{brow:-0.6,shirt:BS,look:1});person(ANNE,420,960,100,{look:1});person(ANNEANNE,660,960,100,{smile:0.3,look:-1});sunglassesKerem(870,960,95,{smile:-0.3});table(1100);x.restore();}});
+// 2 buzdolabı son kez: beni unutmayın
+sc.push({a:mid(2),f(t,T){kitchen(true);x.fillStyle='rgba(80,140,255,0.18)';x.fillRect(0,0,W,H);x.save();zoom(540,950,1.05+0.05*t);fridgeFace(540,1000,1.0,T,T<en(2),'#6ab0ff');x.restore();
+ if(T>W2(2,'Beni')-0.15)bubble2(540,330,800,220,'BENİ','UNUTMAYIN 🥺',72,T);else B('SON KEZ...',330,105,'#39d6ff',t);}});
+// 3 kapıya eski demir kilit
+sc.push({a:mid(3),f(t,T){room('#e9d7bd','#8a5a3a');x.save();zoom(540,950,1.0+0.04*t);door(540,1000,0.8,0,'#7a4a2a');const p=back(prog(T,W2(3,'kilit')-0.2,W2(3,'kilit')+0.2));if(p>0)bigLock(540,860,0.8*p);x.restore();
+ B('ESKİ USUL',300,100,'#fff',t);B('DEMİR KİLİT 🔒',420,110,YEL,t,0.12);}});
+// 4 tek anahtar babamda, gururla cebine
+sc.push({a:mid(4),f(t,T){salon();x.save();zoom(540,950,1.05+0.05*t);person(BABA,480,880,190,{smile:0.7,brow:-0.3,eyeOpen:0.6,shirt:BS});const q=ease(prog(T,W2(4,'Gururla'),W2(4,'koydu')+0.2));key(820-180*q,860+360*q,0.9-0.4*q,-0.6+0.6*q,null,q<0.5);x.restore();
+ B('TEK ANAHTAR',300,100,'#fff',t);B('BABAMDA 😎',420,115,YEL,t,0.12);}});
+// 5 ev sessiz, babam rahat uyudu
+sc.push({a:mid(5),f(t,T){nightSky();x.save();zoom(540,950,1.0+0.03*t);bed(540,1000,1.1,'#5a7ac0');person(BABA,450,860,130,{eyeOpen:0.05,smile:0.6,shirt:BS});zz(700,700,T);x.restore();
+ B('SONUNDA',300,100,'#fff',t);B('SESSİZLİK 😴',420,110,'#9fd0ff',t,0.12);}});
+// 6 o gece Kerem'in elinde bir şey parladı
+sc.push({a:mid(6),f(t,T){x.fillStyle='#05060c';x.fillRect(0,0,W,H);const g=0.5+0.5*Math.sin(T*10);x.fillStyle=`rgba(255,226,122,${0.25+0.2*g})`;x.beginPath();x.arc(780,840,150+30*g,0,7);x.fill();x.save();zoom(540,950,1.05+0.05*t);sunglassesKerem(480,880,180,{smile:0.6,brow:-0.6});x.fillStyle='#fff6c0';x.beginPath();x.arc(780,840,40+10*g,0,7);x.fill();x.restore();
+ B('AMA O GECE...',330,110,'#fff',t);}});
+// 7 anahtarın kopyası
+sc.push({a:mid(7),f(t,T){x.save();shake(t,0,0.5,10);radial(540,900,1300,'#3a2a0a','#0c0802');burst(540,820,900,'rgba(255,226,122,0.2)',t);key(560,820,1.6*back(prog(t,0,0.3)),-0.2,null,true);x.restore();
+ B('KOPYA',300,110,'#fff',t);B('ANAHTAR! 🔑',430,130,YEL,t,0.1);}});
+// 8 kapıdan anneanne göz kırptı, kopyayı o yaptırmış
+sc.push({a:mid(8),f(t,T){room('#e9d7bd','#8a5a3a');x.save();zoom(540,950,1.08+0.05*t);door(300,1000,0.8,0.7,'#7a4a2a');person(ANNEANNE,600,880,190,{smile:0.8,brow:-0.3});if(T>W2(8,'göz')-0.05)wink(ANNEANNE,600,880,190);x.restore();
+ if(T>W2(8,'Kopyayı')-0.15){B('KOPYAYI',300,100,'#fff',t,0);bigText('ANNEANNEM YAPTIRDI!',540,440,90,YEL,PP(T,8,'Kopyayı'),-0.03);}else B('ANNEANNEM 😉',330,110,'#fff',t);}});
+// 9 soru
+sc.push({a:mid(9),f(t,T){x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T*3,GRN,6);x.save();zoom(540,950,1.0+0.04*t);sunglassesKerem(330,900,150,{smile:0.6,brow:-0.6});person(ANNEANNE,750,900,150,{smile:0.6,brow:-0.6,glasses:0});x.restore();
+ B('SİZCE GERÇEK',300,95,'#fff',t);B('HACKER KİM? 🤔',430,115,YEL,t,0.12);}});
+// OUTRO
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){radial(540,900,1300,'#1b3a6a','#040814');bigText('SEZON 3',540,540,170,YEL,prog(t,0,0.25),-0.04);bigText('PAZARTESİ!',540,720,110,'#fff',prog(t,0.1,0.35),-0.03);eyesIcon(540,880,1.0,T);followBtn(540,1060,T,1.3*back(prog(t,0.2,0.5)));}});
+setup(sc,TIM,en(9)+0.1+2.4);
+</script></body></html>

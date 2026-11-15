@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function wink(P,cx,cy,r){const ey=cy-r*0.02;x.fillStyle=P.skin;x.beginPath();x.ellipse(cx-r*0.33,ey,r*0.13,r*0.16,0,0,7);x.fill();x.strokeStyle='#1d1a22';x.lineWidth=r*0.05;x.beginPath();x.arc(cx-r*0.33,ey-r*0.03,r*0.1,0.2,Math.PI-0.2);x.stroke();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function nanaMain(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);}
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,7);radial(540,900,1300,'#3a0a2a','#0c0208');burst(540,1000,900,'rgba(255,90,90,0.12)',t);x.save();zoom(540,900,1.05+0.04*t);nanaMain(540,900,205,{smile:0.7,brow:-0.5,eyeOpen:0.75,look:-0.5});wink(ANNEANNE,540,900,205);x.restore();x.restore();vignette(0.45);
+ hook([['ANNEANNEM SİSTEMİ',90,'#fff'],['BİLEREK',165,YEL],['ÇÖKERTMİŞ!',125,'#fff']],270);s2Badge(t,9);}});
+// 1 gruba düşen ikinci video
+sc.push({a:mid(1),f(t,T){radial(540,900,1300,'#1b3a6a','#040814');x.save();zoom(540,800,1.0+0.04*t);phoneUI(540,760,0.7,'MAHALLE GRUBU 🏘️',[{n:'Akıllı Ev',t:'🎬 Video 2 / 2',p:prog(T,st(1),st(1)+0.3),nc:'#39d6ff'},{n:'Nermin H.',t:'Bu da kimin? 👀',p:prog(T,st(1)+0.7,st(1)+1.0),nc:'#ff5fa2'}],T);x.restore();
+ fileCard(540,330,0.9,'ANNEANNE 👵',RED,prog(t,0,0.25));}});
+// 2 anneanne mutfakta yalnız asistana bakıyor
+sc.push({a:mid(2),f(t,T){kitchen(false);x.save();zoom(540,900,1.0+0.04*t);nanaMain(380,880,165,{look:1,brow:-0.2});speaker(820,900,1.0,T,'#39d6ff',false);x.restore();
+ x.fillStyle='rgba(0,0,0,0.7)';rr(60,420,330,90,20);x.fill();txt('● REC 07:42',225,466,40,'#ff4040',{stroke:false,w:900});
+ B('MUTFAKTA YALNIZ',300,100,'#fff',t);}});
+// 3 etrafına bakmış
+sc.push({a:mid(3),f(t,T){kitchen(false);const lk=Math.sin(T*5)>0?-1.4:1.4;x.save();zoom(540,950,1.12+0.05*t);nanaMain(540,920,200,{look:lk,brow:-0.6,eyeOpen:0.7,smile:0.1});teaCup(860,1000,1.0,T);x.restore();
+ B('ÖNCE ETRAFA',300,100,'#fff',t);B('BAKTI 👀',420,120,YEL,t,0.12);}});
+// 4 kameraya göz kırpmış
+sc.push({a:mid(4),f(t,T){radial(540,900,1300,'#2a1a3a','#08040c');x.save();zoom(540,950,1.15+0.07*t);nanaMain(540,900,240,{smile:0.8,brow:-0.3});if(T>W2(4,'göz')-0.05)wink(ANNEANNE,540,900,240);x.restore();camLens(890,520,0.6,T);
+ B('KAMERAYA',300,100,'#fff',t);if(T>W2(4,'göz')-0.1)bigText('GÖZ KIRPTI 😉',540,420,115,YEL,PP(T,4,'göz'),-0.03);}});
+// 5 kâğıttan kendi komutunu okumuş
+sc.push({a:mid(5),f(t,T){kitchen(false);x.save();zoom(540,900,1.0+0.04*t);nanaMain(330,900,150,{lookDown:1,brow:-0.6,smile:0.2});nanaSpecs(330,900,150);paper(720,820,420,500,0.06,[['KOMUT',54,RED,900],['1) SİSTEMİ',44,'#222',900],['KAPAT',44,'#222',900],['2) KAPILARI',44,'#222',900],['KİLİTLE 🔒',44,'#222',900]]);x.restore();
+ B('KENDİ YAZDIĞI',300,100,'#fff',t);B('KOMUT!',420,130,YEL,t,0.12);}});
+// 6 sistem kapatılıyor kapılar kilitleniyor
+sc.push({a:mid(6),f(t,T){x.save();shake(T,W2(6,'kilitleniyor')-0.05,W2(6,'kilitleniyor')+0.5,12);radial(540,900,1300,'#3a0a0a','#100202');x.fillStyle=`rgba(255,40,40,${0.1+0.1*Math.sin(T*14)})`;x.fillRect(0,0,W,H);
+ bigPanel(540,520,900,380,'SİSTEM','KAPATILIYOR...',RED,T);if(T>W2(6,'kilitleniyor')-0.1){const p=back(prog(T,W2(6,'kilitleniyor')-0.1,W2(6,'kilitleniyor')+0.2));x.save();x.translate(540,860);x.scale(p,p);lock(0,0,1.0,RED,false);x.restore();}x.restore();}});
+// 7 Kerem ağzı açık, annem çayı döktü
+sc.push({a:mid(7),f(t,T){salon();x.save();zoom(540,900,1.0+0.04*t);sunglassesKerem(300,860,140,{mouthOpen:1,brow:0.9,eyeBig:1.2});const sp=T>W2(7,'Annem')-0.05;person(ANNE,770,860,140,{mouthOpen:sp?0.8:0.3,brow:0.9,eyeBig:1.2,look:-1});if(sp){const q=prog(T,W2(7,'Annem'),W2(7,'Annem')+0.6);x.save();x.translate(900,1000);x.rotate(1.2*q);teaCup(0,0,0.8,T);x.restore();x.fillStyle='rgba(160,70,20,0.75)';x.beginPath();x.ellipse(940,1000+120*q,30+60*q,14+10*q,0,0,7);x.fill();}x.restore();
+ B('AĞZIMIZ',300,105,'#fff',t);B('AÇIK KALDI!',420,120,RED,t,0.12);}});
+// 8 babam: ama neden?
+sc.push({a:mid(8),f(t,T){salon();x.save();zoom(540,950,1.1+0.06*t);person(BABA,540,880,210,{brow:0.9,sad:0.6,eyeBig:1.2,mouthOpen:0.5,shirt:BS});x.restore();
+ bubble2(540,400,760,220,'AMA','NEDEN?! 😩',80,T);}});
+// 9 Kerem dışarı çıksın güneş görsün
+sc.push({a:mid(9),f(t,T){sky('#8fd3ff','#e8f7ff');sun(880,560,1.0,T);x.save();zoom(540,950,1.0+0.04*t);nanaMain(380,920,175,{smile:0.6,brow:-0.2,eyeOpen:0.7});x.restore();
+ if(T>W2(9,'Kerem')-0.15)bubble2(540,330,900,230,'KEREM DIŞARI ÇIKSIN,','GÜNEŞ GÖRSÜN ☀️',60,T);else B('OMUZ SİLKTİ 🤷',330,100,'#fff',t);}});
+// 10 gözlüğünü taktı: ilk hacker benim
+sc.push({a:mid(10),f(t,T){const g=ease(prog(T,W2(10,'taktı')-0.3,W2(10,'taktı')+0.2));const hk=T>W2(10,'Bu')-0.1;x.save();if(hk)shake(T,W2(10,'Bu'),W2(10,'Bu')+0.4,8);x.fillStyle='#04120a';x.fillRect(0,0,W,H);matrix(T*3,GRN,6);x.save();zoom(540,960,1.1+0.06*t);nanaMain(540,900,230,{smile:0.6,brow:-0.7,glasses:-2.6*(1-g)});x.restore();x.restore();
+ if(hk){bigText('İLK HACKER',540,300,120,GRN,PP(T,10,'Bu'),-0.03);bigText('BENİM 😎',540,440,125,YEL,prog(T,W2(10,'hacker')-0.1,W2(10,'hacker')+0.15),-0.03);}else B('GÖZLÜĞÜ TAKTI',330,100,'#fff',t);}});
+// OUTRO
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,10,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

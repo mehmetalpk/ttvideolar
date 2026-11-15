@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.6,7);radial(540,900,1300,'#3a1a1a','#100404');burst(540,900,900,'rgba(255,90,90,0.12)',t);x.save();zoom(540,880,1.05+0.04*t);nec(450,820,170,{brow:-0.9,angry:0.9,smile:-0.4});stopwatch(850,950,0.8,T,true);x.restore();x.restore();vignette(0.45);
+ hook([['MÜDÜRÜM TUVALET İÇİN',82,'#fff'],['RAPOR',175,YEL],['İSTEDİ!',130,'#fff']],270);tBadge(t,1);}});
+// 1 çağrı merkezi
+sc.push({a:mid(1),f(t,T){office();x.save();zoom(540,900,1.0+0.04*t);nar(540,880,180,{mouthOpen:0.3+0.3*Math.abs(Math.sin(T*12)),smile:0.4});x.restore();
+ B('ÇAĞRI MERKEZİ 🎧',330,100,'#fff',t);}});
+// 2 günde üç litre su
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#1b4a7a','#06101c');x.save();zoom(540,900,1.0+0.03*t);[0,1,2].forEach(i=>{const p=back(prog(T,W2(2,'üç')-0.2+i*0.15,W2(2,'üç')+0.1+i*0.15));if(p>0)bottle(260+i*280,860,1.1*p,1);});x.restore();
+ B('GÜNDE',300,100,'#fff',t);if(T>W2(2,'üç')-0.15)bigText('3 LİTRE SU 💧',540,430,120,'#7fd0ff',PP(T,2,'üç'),-0.03);}});
+// 3 su giriyorsa çıkacak -> WC
+sc.push({a:mid(3),f(t,T){office();speedL(T);x.save();zoom(540,900,1.0+0.03*t);wcDoor(820,950,0.75,0.2);const p=eOut(cl(t/1.2));nar(180+300*p,880,130,{brow:0.8,sad:0.5,mouthOpen:0.4,noSet:false});x.restore();
+ B('SU GİRİYORSA...',300,95,'#fff',t);if(T>W2(3,'çıkacak')-0.15)bigText('ÇIKACAK! 🏃',540,420,120,YEL,PP(T,3,'çıkacak'),-0.03);}});
+// 4 Necati Bey kronometre
+sc.push({a:mid(4),f(t,T){office();x.save();zoom(540,900,1.05+0.05*t);nec(400,860,170,{brow:-0.7,eyeOpen:0.6,smile:-0.2,look:1});stopwatch(820,880,0.9,T,true);x.restore();
+ B('NECATİ BEY',300,105,'#fff',t);if(T>W2(4,'kronometre')-0.15)bigText('⏱️ KRONOMETRE',540,420,100,RED,PP(T,4,'kronometre'),-0.03);}});
+// 5 mola tablosu
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#2a2a3a','#08080c');board(540,700,820,640,[['MOLA TABLOSU 📋',64,'#1b2a6a',1],['WC 1 · 2:15',60,'#333',prog(T,st(5)+0.3,st(5)+0.6)],['WC 2 · 3:05',60,'#333',prog(T,st(5)+0.9,st(5)+1.2)],['WC 3 · 2:40 ❗',62,RED,prog(T,W2(5,'İki')-0.1,W2(5,'İki')+0.2)]],T);}});
+// 6 masasına çağırdı
+sc.push({a:mid(6),f(t,T){office();x.save();zoom(540,900,1.0+0.04*t);nec(740,820,150,{brow:-0.8,angry:0.6,smile:-0.3,look:-1});nar(260,880,130,{sad:0.6,brow:0.6,look:1});desk(1000);x.restore();
+ B('MASAMA GEL! ☝️',330,105,RED,t);}});
+// 7 iki mola hakkın var, fazlası doktor raporu
+sc.push({a:mid(7),f(t,T){office();x.save();zoom(600,900,1.1+0.05*t);nec(540,840,190,{brow:-0.9,angry:0.9,mouthOpen:0.5,look:-0.5});x.restore();
+ if(T>W2(7,'Fazlası')-0.15)bubble2(540,360,900,230,'FAZLASI İÇİN','DOKTOR RAPORU! 📄',66,T);else bubble2(540,360,800,230,'GÜNDE','2 MOLA! ✌️',76,T);}});
+// 8 getiremeyeceğimi sanıyordu
+sc.push({a:mid(8),f(t,T){office();x.save();zoom(540,900,1.1+0.05*t);nec(540,880,210,{smile:0.8,brow:-0.6,eyeOpen:0.5});x.restore();
+ B('GETİREMEZ',300,110,'#fff',t);B('SANIYORDU 😏',420,105,YEL,t,0.12);}});
+// 9 Peki
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#1b3a3a','#040c0c');x.save();zoom(540,900,1.1+0.05*t);nar(540,900,210,{smile:0.3,eyeOpen:0.6,brow:-0.2});x.restore();
+ if(T>W2(9,'Peki')-0.15)bubble2(540,380,600,200,'','"PEKİ."',100,T);else B('BEN SADECE...',330,100,'#fff',t);}});
+// 10 ertesi sabah doktordaydım
+sc.push({a:mid(10),f(t,T){room('#e8f2f4','#9ab0b8');x.fillStyle='#fff';rr(60,520,200,140,14);x.fill();x.fillStyle='#e03040';rr(140,540,40,100,6);x.fill();rr(110,570,100,40,6);x.fill();x.save();zoom(540,900,1.0+0.05*t);doc(760,880,140,{smile:0.4,look:-1});nar(300,900,130,{smile:0.6,brow:-0.4,look:1,noSet:true});x.restore();
+ B('ERTESİ SABAH',300,95,'#fff',t);B('DOKTORDAYIM 🩺',420,100,YEL,t,0.1);}});
+// OUTRO
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>
