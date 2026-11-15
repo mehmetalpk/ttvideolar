@@ -1,0 +1,20 @@
+function cards(cx,cy,s,hi=-1,p=1){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#f4f1ea';rr(-430,-230,360,460,20);x.fill();rr(30,-230,400,460,20);x.fill();x.fillStyle='#111';x.fillRect(-260,-170,22,320*p);
+ const L=[230,320,180];for(let i=0;i<3;i++){const px=110+i*120;x.fillStyle=i===hi?'#e63946':'#111';x.fillRect(px,150-L[i]*p,22,L[i]*p);x.font=`900 56px ${F}`;x.textAlign='center';x.fillText('ABC'[i],px+11,200);}x.restore();}
+function tableSeats(t,hiFake,talk){x.fillStyle='#4a3a6a';rr(110,880,860,90,30);x.fill();for(let i=0;i<8;i++){const cx=170+i*106;const real=i===6;sil(cx,880,1.05,real?'#ffd23f':(hiFake?'#a8324a':'#0a0718'));if(talk>=0&&!real&&i<=talk){bigText('A',cx,640-Math.sin(t*6+i)*8,70,'#ff6b6b',1);}}}
+function row(n,ally,base,col){const g=Math.min(150,860/(n+1));const x0=540-(n)*g/2;for(let i=0;i<=n;i++){const real=i===n;sil(x0+i*g,base,1.2,real?'#ffd23f':(i===ally?'#5fe08a':col));}}
+// 0 kanca
+shot(0,0,t=>{bgPsi();row(6,2,1050,'#0a0718');x.strokeStyle='#5fe08a';x.lineWidth=10;x.beginPath();x.arc(540-6*150/2+2*150*1,820,70,0,7);x.stroke();bigText('TEK BİR DOST',W/2,300,120,'#5fe08a',1);bigText('BASKIYI KIRDI',W/2,440,110,'#fff',1);});
+// 1 tekrarladı
+shot(1,1,t=>{bgPsi();loopArrows(540,720,240,t);cards(540,720,0.45,-1,1);bigText('YENİ DENEYLER',W/2,300,105,'#ffd23f',back(cl(t*2.5)));});
+// 2 1 oyuncu %3
+shot(2,2,t=>{bgTeal();row(1,-1,1000,'#08231f');bigText('1 OYUNCU',W/2,300,120,'#fff',back(cl(t*2.5)));bigText('%3',W/2,520,170,'#5fe08a',back(cl((t-1.2)*2.5)));});
+// 3 2 oyuncu, 3+ %32
+shot(3,3,t=>{bgPsi('#5c1f2a','#24080e');const k=t<1.6?2:4;row(k,-1,1000,'#0a0718');bigText(k===2?'2 OYUNCU':'3+ OYUNCU',W/2,300,115,'#fff',back(cl((t-(k===2?0:1.6))*2.5)));bigText(k===2?'%13':'%32',W/2,520,170,'#ff6b6b',back(cl((t-(k===2?0.6:2))*2.5)));});
+// 4 bir müttefik
+shot(4,4,t=>{bgPsi();row(6,2,1050,'#0a0718');const p=cl((t-1.2)*2);if(p>0){spot(540-6*150/2+2*150*1,900,200,0.5*p,'95,224,138');sbubble(540-6*150/2+300,560,300,120,'B!',p,80);}bigText('BİRİ DOĞRUYU',W/2,280,105,'#fff',eOut(cl(t*3)));bigText('SÖYLEDİ',W/2,400,105,'#5fe08a',eOut(cl((t-0.4)*3)));});
+// 5 %32 -> %5
+shot(5,5,t=>{bgTeal();const v=Math.round(32-27*eOut(cl((t-0.6)/1.4)));bigText('%'+v,W/2,700,260,v>10?'#ff6b6b':'#5fe08a',1);bigText('UYMA ORANI',W/2,320,110,'#fff',eOut(cl(t*3)));if(t>2.2)bigText('↓ 6 KAT',W/2,1380,90,'#ffd23f',back(cl((t-2.2)*2.5)));});
+// 6 tek kişinin hayırı
+shot(6,6,t=>{bgPsi();rays(540,800,t);sil(540,1080,2.6,'#5fe08a');bigText('"HAYIR"',W/2,320,150,'#ffd23f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#2a1f5c','#0e0a24'));

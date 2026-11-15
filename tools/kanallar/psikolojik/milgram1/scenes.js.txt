@@ -1,0 +1,22 @@
+function shockBox(cx,cy,s,lit,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#3a3f4a';rr(-440,-170,880,340,24);x.fill();x.fillStyle='#22252c';rr(-410,-140,820,90,14);x.fill();x.fillStyle='#ffd23f';x.font=`900 44px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('ŞOK ÜRETECİ',0,-95);
+ for(let i=0;i<30;i++){const px=-405+i*28,on=i<lit;x.fillStyle=on?(i>20?'#ff2d2d':'#ffb000'):'#555';x.fillRect(px,10,20,46);x.fillStyle=on?'#fff':'#999';x.beginPath();x.arc(px+10,90,8,0,7);x.fill();}
+ x.fillStyle='#fff';x.font=`800 30px ${F}`;x.fillText('15 V',-380,140);x.fillText('450 V',370,140);x.restore();}
+function bolt(cx,cy,s,a){x.save();x.globalAlpha=a;x.translate(cx,cy);x.scale(s,s);x.fillStyle='#ffd23f';x.beginPath();x.moveTo(10,-90);x.lineTo(-40,10);x.lineTo(0,10);x.lineTo(-15,90);x.lineTo(45,-15);x.lineTo(5,-15);x.closePath();x.fill();x.restore();}
+function coat(cx,base,s){sil(cx,base,s,'#0a0718');x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e8e8f0';x.beginPath();x.moveTo(-70,-150);x.lineTo(70,-150);x.lineTo(84,0);x.lineTo(-84,0);x.closePath();x.fill();x.fillStyle='#0a0718';x.beginPath();x.moveTo(-14,-150);x.lineTo(14,-150);x.lineTo(0,-90);x.fill();x.restore();}
+function wallSplit(){x.fillStyle='#14102a';x.fillRect(530,500,20,700);}
+// 0 kanca
+shot(0,0,t=>{bgPsi('#3a1030','#12040e');shockBox(540,760,0.95,Math.floor(10+t*6),t);bolt(860,560,1.2,0.6+0.4*Math.sin(t*12));bolt(220,560,0.9,0.6+0.4*Math.cos(t*10));bigText('BİR YABANCIYA',W/2,280,110,'#fff',1);bigText('ELEKTRİK VERDİLER',W/2,410,95,'#ffd23f',1);});
+// 1 1961 yale
+shot(1,1,t=>{bgDoc('#1c2440','#070a14');x.fillStyle='#2a3352';for(let i=0;i<5;i++){rr(140+i*170,820,120,280,60);x.fill();}x.fillStyle='#2a3352';x.fillRect(100,1100,880,30);yearStamp('1961','YALE ÜNİVERSİTESİ',eOut(cl(t*2)),620);});
+// 2 gazete ilanı
+shot(2,2,t=>{bgDoc('#2a2016','#0c0906');newspaper(540,700,0.72,-0.04,'GÖNÜLLÜ!');badge(540,270,'HAFIZA DENEYİ','#2a5cff',t*3);if(t>2.6)bigText('4,50 $',W/2,1380,120,'#5fe08a',back(cl((t-2.6)*2.5)));});
+// 3 öğretmen / öğrenci
+shot(3,3,t=>{bgPsi();wallSplit();sil(300,1050,1.9,'#ffd23f');sil(800,1050,1.9,'#0a0718');x.fillStyle='#5b6cff';rr(720,880,160,60,12);x.fill();badge(300,560,'ÖĞRETMEN','#e6a100',t*3);badge(800,560,'ÖĞRENCİ','#5b6cff',(t-0.6)*3);if(t>2.4){bolt(800,760,1.1,0.5+0.5*Math.sin(t*14));}bigText('HER HATAYA ŞOK',W/2,300,95,'#fff',eOut(cl(t*3)));});
+// 4 30 düğme
+shot(4,4,t=>{bgPsi('#3a1030','#12040e');shockBox(540,760,1.05,Math.floor(t*12),t);bigText('30 DÜĞME',W/2,300,130,'#fff',back(cl(t*2.5)));bigText('15 → 450 VOLT',W/2,1380,90,'#ff6b6b',eOut(cl((t-1.2)*3)));});
+// 5 sır: oyuncu
+shot(5,5,t=>{bgPsi();spot(540,760,420,0.4);sil(540,1080,2.5,'#0a0718');if(t>1.4){x.save();x.translate(540,640);x.fillStyle='#f4f1ea';x.beginPath();x.ellipse(0,0,95,115,0,0,7);x.fill();x.fillStyle='#0a0718';x.beginPath();x.arc(-35,-20,16,0,7);x.arc(35,-20,16,0,7);x.fill();x.lineWidth=10;x.strokeStyle='#0a0718';x.beginPath();x.arc(0,30,40,0.2,2.9);x.stroke();x.restore();}bigText('BİR SIR',W/2,280,130,'#ffd23f',back(cl(t*2.5)));if(t>1.4)badge(540,420,'ÖĞRENCİ = OYUNCU','#e63946',(t-1.4)*3);if(t>2.8)stampT('ŞOK YOK',540,1390,cl((t-2.8)*3),'#c1121f',90);});
+// 6 devam edin
+shot(6,6,t=>{bgPsi('#3a1030','#12040e');wallSplit();const sh=Math.sin(t*40)*6*(t>0.5);sil(300+sh,1060,1.8,'#ffd23f');coat(160,1060,1.7);if(t>1.2){bigText('AAAH!',800,720+Math.sin(t*30)*8,120,'#ff4d4d',back(cl((t-1.2)*3)));}if(t>2.6)sbubble(380,440,620,140,'DEVAM EDİN.',eOut(cl((t-2.6)*3)),76);});
+// 7 outro
+shot(7,7,t=>outro(t,2,'#3a1030','#12040e'));

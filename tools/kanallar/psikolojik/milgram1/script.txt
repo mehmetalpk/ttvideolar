@@ -1,0 +1,10 @@
+[intense] Sıradan insanlar, bir yabancıya elektrik verdi.
+
+[serious] Bin dokuz yüz altmış bir, Yale Üniversitesi. || 1961, Yale Üniversitesi.
+Psikolog Stanley Milgram gazeteye ilan verdi: Hafıza deneyine gönüllü aranıyor, ücret dört buçuk dolar. || Psikolog Stanley Milgram gazeteye ilan verdi: Hafıza deneyine gönüllü aranıyor, ücret 4,50 dolar.
+[curious] Gelen kişi öğretmen oldu. Yan odadaki öğrenci her hata yaptığında, ona elektrik şoku verecekti.
+[serious] Önündeki makinede otuz düğme vardı: On beş volttan dört yüz elli volta kadar. || Önündeki makinede 30 düğme vardı: 15 volttan 450 volta kadar.
+[intense] Ama bir sır vardı: Öğrenci aslında oyuncuydu ve hiçbir şok gerçek değildi.
+[curious] Öğretmen bunu bilmiyordu. Çığlıklar başladığında, beyaz önlüklü adam sadece "devam edin" dedi.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

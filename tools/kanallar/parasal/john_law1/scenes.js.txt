@@ -1,0 +1,22 @@
+function card(cx,cy,s,rot,txt,red){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#f4f1ea';rr(-80,-115,160,230,14);x.fill();x.fillStyle=red?'#c1121f':'#111';x.font=`900 90px Georgia,serif`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,0,4);x.restore();}
+function gamblingTable(t){x.fillStyle=grad(0,H,['#0f3a22','#04140a']);x.fillRect(0,0,W,H);x.fillStyle='#1f6a3a';x.beginPath();x.ellipse(540,860,480,260,0,0,7);x.fill();x.strokeStyle='#6a4a20';x.lineWidth=30;x.beginPath();x.ellipse(540,860,480,260,0,0,7);x.stroke();}
+function sword(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#d8dce4';x.beginPath();x.moveTo(-8,-300);x.lineTo(8,-300);x.lineTo(4,60);x.lineTo(-4,60);x.fill();x.fillStyle='#c9a46a';x.fillRect(-60,60,120,16);x.fillRect(-10,76,20,80);x.restore();}
+function frNote(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#efe4c8';rr(-260,-120,520,240,8);x.fill();x.strokeStyle='#3a4a8a';x.lineWidth=6;rr(-240,-100,480,200,6);x.stroke();x.fillStyle='#3a4a8a';x.font=`900 44px Georgia,serif`;x.textAlign='center';x.fillText('BANQUE GÉNÉRALE',0,-20);x.font=`900 60px Georgia,serif`;x.fillText('100 LIVRES',0,60);x.restore();}
+function goldBar(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#e0a800';x.beginPath();x.moveTo(-120,40);x.lineTo(120,40);x.lineTo(90,-40);x.lineTo(-90,-40);x.closePath();x.fill();x.fillStyle='#ffd23f';x.fillRect(-80,-36,160,20);x.restore();}
+// 0 kanca
+shot(0,0,t=>{gamblingTable(t);card(380,860,1.3,-0.2,'A',1);card(540,840,1.3,0,'K');card(700,860,1.3,0.2,'Q',1);frNote(540,600,0.7,Math.sin(t*2)*0.05);bigText('BİR KUMARBAZ',W/2,260,115,'#fff',1);bigText("FRANSA'NIN PARASI",W/2,390,90,'#ffd23f',1);});
+// 1 kumar masaları
+shot(1,1,t=>{gamblingTable(t);sil(540,1000,2.2,'#04140a');for(let i=0;i<5;i++){const a=t*2+i*1.26;card(540+Math.cos(a)*320,700+Math.sin(a)*120,0.7,a,'AKQJ1'[i],i%2);}badge(540,300,'JOHN LAW','#c1121f',t*3);});
+// 2 düello, idam
+shot(2,2,t=>{noir();city(1250,'#0b0b12',0);sil(330,1050,2.0,'#000');sil(750,1050,2.0,'#000');sword(420,800,1,-0.9+Math.sin(t*6)*0.2);sword(660,800,1,0.9-Math.sin(t*6)*0.2);yearStamp('1694','LONDRA · DÜELLO',eOut(cl(t*2)),360);if(t>2.4)stampT('İDAM',540,1390,cl((t-2.4)*3),'#c1121f',110);});
+// 3 hapisten kaçış
+shot(3,3,t=>{noir();bars(t);const p=cl((t-0.6)/1.4);sil(540+p*500,1100,2.0,'#000');bigText('KAÇTI!',W/2,320,160,'#ffd23f',back(cl((t-0.6)*2.5)));});
+// 4 altın yerine kağıt
+shot(4,4,t=>{bgDoc('#2a2016','#0c0906');goldBar(300,780,1.3);stampX(300,780,1.0,cl((t-0.8)*3));frNote(760,780,0.75,0.05);bigText('ALTIN YERİNE',W/2,280,105,'#fff',eOut(cl(t*3)));bigText('KÂĞIT PARA',W/2,410,115,'#ffd23f',back(cl((t-0.5)*2.5)));});
+// 5 1716 paris banka
+shot(5,5,t=>{bgDoc('#1c2440','#070a14');palace(540,1040,0.9);yearStamp('1716','PARİS',eOut(cl(t*2)),360);if(t>2){for(let i=0;i<4;i++){const p=cl((t-2-i*0.25)*1.5);if(p>0)frNote(200+i*230,1380-p*40,0.35,(i-1.5)*0.1);}}});
+// 6 mississippi
+shot(6,6,t=>{x.fillStyle='#1b4f72';x.fillRect(0,0,W,H);x.fillStyle='#c9b27a';x.beginPath();x.moveTo(0,300);x.quadraticCurveTo(500,280,620,600);x.quadraticCurveTo(560,900,700,1100);x.lineTo(0,1100);x.closePath();x.fill();x.strokeStyle='#2a6fb0';x.lineWidth=14;x.beginPath();x.moveTo(380,320);x.quadraticCurveTo(300,600,420,800);x.quadraticCurveTo(470,950,430,1090);x.stroke();const p=cl((t-0.4)/1.2);mapArrow(980,600,560,700,p,'#ffd23f');bigText('MISSISSIPPI',W/2,300,120,'#ffd23f',back(cl((t-0.6)*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,2,'#13261c','#060d09'));
+function palace(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#d8cfb8';x.fillRect(-420,-300,840,300);x.fillStyle='#4a5a7a';x.beginPath();x.moveTo(-440,-300);x.lineTo(0,-420);x.lineTo(440,-300);x.fill();x.fillStyle='#7a8aa8';for(let i=0;i<7;i++)x.fillRect(-370+i*110,-250,60,140);x.fillStyle='#5a3418';x.fillRect(-50,-120,100,120);x.restore();}

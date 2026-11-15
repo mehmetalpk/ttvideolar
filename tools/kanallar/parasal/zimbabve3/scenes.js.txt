@@ -1,0 +1,24 @@
+function zwNote(cx,cy,s,rot,txt){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#e8b4c8';rr(-300,-130,600,260,10);x.fill();x.strokeStyle='#8a3a5a';x.lineWidth=8;rr(-280,-110,560,220,8);x.stroke();x.fillStyle='#8a3a5a';x.font=`900 64px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,0,-20);x.font=`700 34px ${F}`;x.fillText('ZİMBABVE DOLARI',0,60);x.restore();}
+function wallet(cx,cy,s,open){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#5a3418';rr(-240,-150,480,300,30);x.fill();x.fillStyle='#3e220e';rr(-240,-20*open,480,170,30);x.fill();x.restore();}
+function zwRain(t){const r=rng(4);for(let i=0;i<12;i++){const px=r()*W,sp=0.3+r()*0.5,py=((r()*H+t*500*sp)%(H+300))-150;zwNote(px,py,0.32,Math.sin(t*2+i)*0.6,'100 TRİLYON');}}
+function usd(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#b8d8a8';rr(-260,-110,520,220,10);x.fill();x.strokeStyle='#2f5a2a';x.lineWidth=7;rr(-240,-92,480,184,8);x.stroke();x.fillStyle='#2f5a2a';x.beginPath();x.arc(0,0,60,0,7);x.fill();x.fillStyle='#b8d8a8';x.font=`900 70px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('$',0,4);x.fillStyle='#2f5a2a';x.font=`900 54px ${F}`;x.fillText('10',-180,-50);x.fillText('10',180,50);x.restore();}
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
+function shopFront(cx,base,s,col,label){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e8dcc0';x.fillRect(-300,-380,600,380);x.fillStyle=col;x.fillRect(-320,-440,640,90);x.fillStyle='#fff';x.font=`900 56px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(label,0,-395);x.fillStyle='#5a3418';x.fillRect(-80,-260,160,260);x.fillStyle='#9ac8e8';x.fillRect(-260,-300,140,140);x.fillRect(120,-300,140,140);x.restore();}
+function frameBox(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#6a4a20';rr(-360,-200,720,400,16);x.fill();x.fillStyle='#f4ecd8';rr(-320,-160,640,320,8);x.fill();x.restore();zwNote(cx,cy,0.95*s,0,'100 TRİLYON');}
+function coinR(cx,cy,r,txt){x.fillStyle='#c9a46a';x.beginPath();x.arc(cx,cy,r,0,7);x.fill();x.strokeStyle='#8a6a30';x.lineWidth=8;x.beginPath();x.arc(cx,cy,r-12,0,7);x.stroke();bigText(txt,cx,cy+6,r*0.7,'#5a3a10',1);}
+// 0 kanca
+shot(0,0,t=>{bgDoc('#2a2016','#0c0906');spot(540,740,480,0.4);frameBox(540,760,1.05,t);bigText('PARA ÖLDÜ',W/2,280,125,'#ff4d4d',1);bigText('HATIRA OLDU',W/2,420,115,'#ffd23f',1);});
+// 1 12 nisan 2009 askıya
+shot(1,1,t=>{bgMoney();yearStamp('2009','12 NİSAN',eOut(cl(t*2)),480);zwNote(540,860,0.85,-0.04,'100 TRİLYON');if(t>1.6)stampT('ASKIDA',540,860,cl((t-1.6)*3),'#c1121f',110);});
+// 2 yabancı paralar
+shot(2,2,t=>{bgMoney();for(let i=0;i<5;i++){const p=cl((t-i*0.3)*2);if(p>0)usd(240+i*150,980-p*380+i*20,0.55,(i-2)*0.12);}bigText('DOLARA GEÇTİ',W/2,300,115,'#5fe08a',back(cl(t*2.5)));});
+// 3 2015 35 katrilyon = 1$
+shot(3,3,t=>{bgDoc('#1c2430','#06090d');bigText('2015',W/2,280,120,'#fff',eOut(cl(t*3)));const z='35.000.000.000.000.000';const n=Math.min(z.length,Math.floor(Math.max(0,t-0.6)*12));bigText(z.slice(0,n),W/2,560,76,'#ffd23f',1);bigText('ZİMBABVE DOLARI',W/2,660,58,'#fff',eOut(cl((t-1)*3)));bigText('=',W/2,800,110,'#fff',eOut(cl((t-2.4)*3)));if(t>2.6)usd(540,960,0.6*back(cl((t-2.6)*2.5)),0);bigText('1 DOLAR',W/2,1380,100,'#5fe08a',back(cl((t-3)*2.5)));});
+// 4 40 sent
+shot(4,4,t=>{bgMoney();zwNote(540,600,1.0,-0.04,'100 TRİLYON');bigText('=',540,800,110,'#fff',1);coinR(470,920,80,'¢');coinR(620,940,70,'¢');bigText('40 SENT',W/2,1380,110,'#ffd23f',back(cl((t-0.6)*2.5)));});
+// 5 koleksiyoncular
+shot(5,5,t=>{bgDoc('#2a2016','#0c0906');frameBox(540,700,0.9,t);priceTag(540,930,'KOLEKSİYON',70,'#2f8a3a');const v=Math.floor(eOut(cl(t/2))*5);for(let i=0;i<v;i++)bigText('↑',200+i*170,1390,90,'#5fe08a',1);bigText('KOLEKSİYONCULAR',W/2,300,90,'#ffd23f',back(cl(t*2.5)));});
+// 6 ders
+shot(6,6,t=>{bgMoney();rays(540,760,t);frameBox(540,760,1.0,t);bigText('DEĞERSİZ PARA',W/2,280,105,'#fff',eOut(cl(t*3)));bigText('DEĞERLİ HATIRA',W/2,410,105,'#ffd23f',back(cl((t-0.8)*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#13261c','#060d09'));

@@ -1,0 +1,26 @@
+function paris(t){x.fillStyle=grad(0,H,['#9ac8f0','#e8f2ff']);x.fillRect(0,0,W,H);x.fillStyle='#c8b896';x.fillRect(0,1000,W,H-1000);}
+function facade(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e6dcc4';x.fillRect(-520,-520,1040,520);x.fillStyle='#5a6a80';x.fillRect(-540,-580,1080,70);for(let r=0;r<2;r++)for(let i=0;i<7;i++){x.fillStyle='#4a5a74';rr(-470+i*140,-470+r*230,80,170,30);x.fill();}x.fillStyle='#b8ac90';x.fillRect(-520,-290,1040,24);x.restore();}
+function pyramid(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='rgba(120,170,210,0.85)';x.beginPath();x.moveTo(-220,0);x.lineTo(0,-200);x.lineTo(220,0);x.fill();x.strokeStyle='rgba(255,255,255,0.6)';x.lineWidth=3;for(let i=1;i<6;i++){x.beginPath();x.moveTo(-220+i*36,0);x.lineTo(0,-200);x.stroke();}x.restore();}
+function truck(cx,base,s,ext,t){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e8e8ea';x.fillRect(-260,-160,360,140);x.fillStyle='#c1121f';x.fillRect(100,-140,140,120);x.fillStyle='#9ac8e8';x.fillRect(140,-125,80,50);x.fillStyle='#222';for(const p of [-180,-40,170]){x.beginPath();x.arc(p,-12,36,0,7);x.fill();}
+ x.strokeStyle='#888';x.lineWidth=26;x.beginPath();x.moveTo(-200,-170);x.lineTo(-200+ext*300,-170-ext*560);x.stroke();x.strokeStyle='#555';x.lineWidth=6;for(let i=1;i<10;i++){const k=i/10*ext;x.beginPath();x.moveTo(-215+k*300,-170-k*560);x.lineTo(-185+k*300,-170-k*560);x.stroke();}
+ if(ext>0.95){x.fillStyle='#ff9f1c';x.fillRect(60,-780,140,70);}x.restore();}
+function vitrine(cx,cy,s,broken,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#3a2a18';x.fillRect(-180,60,360,200);x.fillStyle='rgba(180,220,255,0.35)';x.fillRect(-180,-200,360,260);x.strokeStyle='#c9a46a';x.lineWidth=8;x.strokeRect(-180,-200,360,260);if(!broken){diamond(0,-60,0.9,t);}else{x.strokeStyle='#fff';x.lineWidth=4;for(let i=0;i<7;i++){const a=i*0.9;x.beginPath();x.moveTo(0,-70);x.lineTo(Math.cos(a)*170,-70+Math.sin(a)*120);x.stroke();}}x.restore();}
+function tiara(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#ffd23f';x.beginPath();x.moveTo(-140,40);x.lineTo(-150,-30);x.lineTo(-80,10);x.lineTo(-40,-70);x.lineTo(0,-10);x.lineTo(40,-70);x.lineTo(80,10);x.lineTo(150,-30);x.lineTo(140,40);x.closePath();x.fill();x.fillStyle='#e8f6ff';for(let i=-3;i<=3;i++){x.beginPath();x.arc(i*40,20,12,0,7);x.fill();}x.fillStyle='#ffd23f';x.beginPath();x.arc(0,-90,26,0,7);x.fill();x.fillStyle='#2f8a3a';x.beginPath();x.arc(0,-90,12,0,7);x.fill();x.restore();}
+function timer(cx,cy,sec){x.fillStyle='rgba(0,0,0,0.6)';rr(cx-200,cy-70,400,140,30);x.fill();const m=Math.floor(sec/60),s=Math.floor(sec%60);bigText(String(m).padStart(2,'0')+':'+String(s).padStart(2,'0'),cx,cy+6,100,'#ff4d4d',1);}
+// 0 kanca
+shot(0,0,t=>{paris(t);facade(540,1040,0.8);truck(540,1040,0.8,0.8,t);timer(540,1380,400+Math.min(20,t*8));bigText('LOUVRE',W/2,270,140,'#c1121f',1);bigText('7 DAKİKADA SOYULDU',W/2,410,80,'#111',1);});
+// 1 19 ekim 2025 pazar sabahı
+shot(1,1,t=>{paris(t);sun(820,380,80);pyramid(540,1000,1.6);people(6,540,1080,0.9,'#3a3a44',150);yearStamp('2025','19 EKİM · PAZAR',eOut(cl(t*2)),330);if(t>2.4)badge(540,1380,'MÜZE YENİ AÇILDI','#2a5cff',(t-2.4)*3);});
+// 2 asansörlü merdiven balkon
+shot(2,2,t=>{paris(t);facade(540,1020,1.0);truck(560,1020,1.0,eOut(cl((t-0.4)/1.8)),t);badge(540,300,'APOLLON GALERİSİ','#c9a46a',(t-1.6)*3);});
+// 3 cam kesildi, iki vitrin
+shot(3,3,t=>{x.fillStyle=grad(0,H,['#3a2a4a','#120a18']);x.fillRect(0,0,W,H);for(let i=0;i<3;i++){x.fillStyle='rgba(255,210,63,0.12)';x.fillRect(100+i*320,420,240,560);}vitrine(310,820,0.85,t>1.4,t);vitrine(770,820,0.85,t>2.4,t);if(t<1.4){x.save();x.translate(540,600);x.rotate(t*20);x.fillStyle='#bbb';x.beginPath();x.arc(0,0,60,0,7);x.fill();x.restore();}bigText('2 VİTRİN',W/2,300,130,'#fff',back(cl((t-1)*2.5)));});
+// 4 8 parça 88 milyon
+shot(4,4,t=>{noir();for(let i=0;i<8;i++){const p=cl((t-i*0.18)*2.5);if(p>0)diamond(160+(i%4)*250,560+Math.floor(i/4)*240,1.0*p,t+i);}bigText('8 PARÇA',W/2,300,140,'#ffd23f',back(cl(t*2.5)));if(t>2)bigText('88 MİLYON €',W/2,1380,110,'#5fe08a',back(cl((t-2)*2.5)));});
+// 5 eugénie tacı düştü
+shot(5,5,t=>{noir();const p=eOut(cl((t-0.4)/1));tiara(540,500+p*420,1.4,p*0.5);if(p>=1){x.fillStyle='rgba(255,255,255,0.4)';for(let i=0;i<6;i++){x.beginPath();x.arc(540+Math.cos(i)*200,960,8,0,7);x.fill();}}bigText('DÜŞÜRDÜLER',W/2,280,120,'#ff4d4d',back(cl(t*2.5)));if(t>1.6)badge(540,1380,'EUGÉNIE\'NİN TACI','#c9a46a',(t-1.6)*3);});
+// 6 kim yaptı
+shot(6,6,t=>{noir();rain(t,0.25);for(let i=0;i<4;i++)sil(240+i*200,1080,1.6,'#000');qmarks(540,720,t,3);bigText('KİMLER YAPTI?',W/2,300,120,'#ffd23f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,2,'#16161c','#050508'));
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}

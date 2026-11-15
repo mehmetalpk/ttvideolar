@@ -1,0 +1,10 @@
+[intense] Louvre, yedi dakikada soyuldu. || Louvre, 7 dakikada soyuldu.
+
+[serious] On dokuz Ekim iki bin yirmi beş, Pazar sabahı. Müze kapılarını yeni açmıştı. || 19 Ekim 2025, Pazar sabahı. Müze kapılarını yeni açmıştı.
+[curious] Bir kamyonun üstündeki asansörlü merdiven, Apollon Galerisi'nin balkonuna uzandı.
+[intense] Hırsızlar camı kesici aletle açtı ve iki vitrini kırdı.
+[serious] Fransız tacının mücevherlerinden sekiz parça aldılar. Değeri seksen sekiz milyon avro olarak tahmin edildi. || Fransız tacının mücevherlerinden 8 parça aldılar. Değeri 88 milyon avro olarak tahmin edildi.
+[curious] Kaçarken bir şey düşürdüler: İmparatoriçe Eugénie'nin tacı.
+[intense] Peki yedi dakikada bunu kimler yaptı? || Peki 7 dakikada bunu kimler yaptı?
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

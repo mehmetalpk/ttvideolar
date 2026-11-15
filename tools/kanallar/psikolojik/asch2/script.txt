@@ -1,0 +1,10 @@
+[intense] Dört kişiden üçü yanlışa uydu.
+
+[serious] Asch'ın deneyinde elli üniversite öğrencisi vardı. || Asch'ın deneyinde 50 üniversite öğrencisi vardı.
+Her biri on sekiz turun on ikisinde, grubun yanlış cevabıyla karşılaştı. || Her biri 18 turun 12'sinde, grubun yanlış cevabıyla karşılaştı.
+[curious] Tek başına cevap verenler neredeyse hiç hata yapmadı: yüzde birden az. || Tek başına cevap verenler neredeyse hiç hata yapmadı: %1'den az.
+[intense] Ama grup varken, katılımcıların yaklaşık yüzde yetmiş beşi en az bir kez yanlışa uydu. || Ama grup varken, katılımcıların yaklaşık %75'i en az bir kez yanlışa uydu.
+[serious] Kritik cevapların yaklaşık üçte biri yanlıştı. Sadece dörtte biri hiç boyun eğmedi.
+[curious] Peki bu baskıyı kırmak için ne gerekiyordu? Cevap şaşırtıcı derecede basit.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

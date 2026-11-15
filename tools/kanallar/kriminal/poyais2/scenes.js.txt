@@ -1,0 +1,25 @@
+function mapCA(t,p){x.fillStyle='#1b4f72';x.fillRect(0,0,W,H);x.fillStyle='#c9b27a';x.beginPath();x.moveTo(80,300);x.quadraticCurveTo(400,380,560,640);x.quadraticCurveTo(700,820,980,880);x.lineTo(1000,1060);x.quadraticCurveTo(700,1000,560,1120);x.quadraticCurveTo(380,900,60,820);x.closePath();x.fill();
+ if(p>0){x.save();x.globalAlpha=cl(p);x.strokeStyle='#ffd23f';x.lineWidth=8;x.setLineDash([20,14]);x.beginPath();x.ellipse(720,860,150,90,0.3,0,7);x.stroke();x.restore();bigText('POYAIS',720,860,64,'#ffd23f',cl(p));}}
+function prince(cx,base,s,t){sil(cx,base,s,'#0e0e14');x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#c1121f';x.fillRect(-36,-118,72,26);x.fillStyle='#ffd23f';x.fillRect(-40,-115,10,60);x.fillRect(30,-115,10,60);x.restore();crown(cx,base-215*s,0.35*s);}
+function poyaisNote(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#d8e4c8';rr(-240,-110,480,220,8);x.fill();x.strokeStyle='#2f5a2a';x.lineWidth=6;rr(-222,-92,444,184,6);x.stroke();x.fillStyle='#2f5a2a';x.font=`900 46px Georgia,serif`;x.textAlign='center';x.fillText('BANK OF POYAIS',0,-20);x.font=`900 64px Georgia,serif`;x.fillText('1 $',0,60);x.restore();}
+function crown(cx,cy,s,col='#ffd23f'){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle=col;x.beginPath();x.moveTo(-120,60);x.lineTo(-130,-60);x.lineTo(-65,0);x.lineTo(0,-90);x.lineTo(65,0);x.lineTo(130,-60);x.lineTo(120,60);x.closePath();x.fill();x.fillStyle='#c1121f';[[-70,30],[0,30],[70,30]].forEach(([a,b])=>{x.beginPath();x.arc(a,b,14,0,7);x.fill();});x.restore();}
+function sea(t){x.fillStyle=grad(0,H,['#2a3a5a','#0a1424']);x.fillRect(0,0,W,H);waves(1000,t,'#123a5a');waves(1060,t+1,'#0e2e4a');}
+function jungle(t){x.fillStyle=grad(0,H,['#1a3a2a','#06140c']);x.fillRect(0,0,W,H);forest(1000,'#0f3a1a',5);forest(1100,'#082a12',9);x.fillStyle='#3a2a18';x.fillRect(0,1100,W,H-1100);}
+function deed(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#f0e6c8';rr(-170,-220,340,440,8);x.fill();x.fillStyle='#8a6a30';x.font=`900 40px Georgia,serif`;x.textAlign='center';x.fillText('TAPU',0,-150);x.fillStyle='#c9b48a';for(let i=0;i<6;i++)x.fillRect(-120,-100+i*40,240,12);x.fillStyle='#c1121f';x.beginPath();x.arc(80,150,36,0,7);x.fill();x.restore();}
+// 0 kanca
+shot(0,0,t=>{jungle(t);for(let i=0;i<6;i++){const r=rng(i+3);x.fillStyle='rgba(255,255,255,0.08)';x.beginPath();x.arc(r()*W,600+r()*400,120,0,7);x.fill();}people(4,540,1080,1.4,'#000',150);bigText('CENNET DİYE',W/2,290,120,'#fff',1);bigText('ORMAN BULDULAR',W/2,430,105,'#5fe08a',1);});
+// 1 1822 gemi 70 göçmen
+shot(1,1,t=>{sea(t);ship(540+Math.sin(t)*20,880,1.4,Math.sin(t*1.5)*0.04);yearStamp('1822','EYLÜL',eOut(cl(t*2)),330);if(t>2.4)badge(540,1380,'70 GÖÇMEN','#2a5cff',(t-2.4)*3);});
+// 2 para ve tapu
+shot(2,2,t=>{bgDoc('#2a2016','#0c0906');poyaisNote(340,760,0.85,-0.1);deed(760,760,0.9,0.08);bigText('PARA + TAPU',W/2,300,120,'#ffd23f',back(cl(t*2.5)));});
+// 3 hiçbir şey, sadece orman
+shot(3,3,t=>{jungle(t);const items=['BAŞKENT','LİMAN','KARŞILAMA'];for(let i=0;i<3;i++){const p=cl((t-0.4-i*0.8)*3);if(p>0){badge(540,330+i*140,items[i],'#444',1);stampX(760,330+i*140,0.5,p);}}if(t>3)bigText('SADECE ORMAN',W/2,1380,90,'#5fe08a',back(cl((t-3)*2.5)));});
+// 4 1823 ikinci gemi 200
+shot(4,4,t=>{sea(t);ship(380+t*60,880,1.1,Math.sin(t*1.5)*0.04);yearStamp('1823','OCAK',eOut(cl(t*2)),330);if(t>2)badge(540,1380,'~200 KİŞİ DAHA','#2a5cff',(t-2)*3);});
+// 5 hastalık 180
+shot(5,5,t=>{jungle(t);x.fillStyle='rgba(60,0,0,0.35)';x.fillRect(0,0,W,H);const n=Math.min(180,Math.floor(eOut(cl(t/2.4))*180));bigText(String(n),W/2,600,240,'#ff4d4d',1);bigText('EN AZ',W/2,380,90,'#fff',eOut(cl(t*3)));bigText('HAYATINI KAYBETTİ',W/2,1380,76,'#fff',eOut(cl((t-1.4)*3)));});
+// 6 macgregor nerede
+shot(6,6,t=>{noir();spot(540,720,460,0.4);prince(540,1150,2.3,t);qmarks(540,760,t,3);bigText('MacGREGOR',W/2,300,120,'#ffd23f',back(cl(t*2.5)));bigText('NEREDEYDİ?',W/2,430,100,'#fff',eOut(cl((t-0.5)*3)));});
+// 7 outro
+shot(7,7,t=>outro(t,3,'#16161c','#050508'));
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}

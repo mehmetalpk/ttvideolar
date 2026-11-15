@@ -1,0 +1,21 @@
+function zwNote(cx,cy,s,rot,txt){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#e8b4c8';rr(-300,-130,600,260,10);x.fill();x.strokeStyle='#8a3a5a';x.lineWidth=8;rr(-280,-110,560,220,8);x.stroke();x.fillStyle='#8a3a5a';x.font=`900 64px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,0,-20);x.font=`700 34px ${F}`;x.fillText('ZİMBABVE DOLARI',0,60);x.restore();}
+function wallet(cx,cy,s,open){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#5a3418';rr(-240,-150,480,300,30);x.fill();x.fillStyle='#3e220e';rr(-240,-20*open,480,170,30);x.fill();x.restore();}
+function zwRain(t){const r=rng(4);for(let i=0;i<12;i++){const px=r()*W,sp=0.3+r()*0.5,py=((r()*H+t*500*sp)%(H+300))-150;zwNote(px,py,0.32,Math.sin(t*2+i)*0.6,'100 TRİLYON');}}
+function usd(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#b8d8a8';rr(-260,-110,520,220,10);x.fill();x.strokeStyle='#2f5a2a';x.lineWidth=7;rr(-240,-92,480,184,8);x.stroke();x.fillStyle='#2f5a2a';x.beginPath();x.arc(0,0,60,0,7);x.fill();x.fillStyle='#b8d8a8';x.font=`900 70px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('$',0,4);x.fillStyle='#2f5a2a';x.font=`900 54px ${F}`;x.fillText('10',-180,-50);x.fillText('10',180,50);x.restore();}
+function shelf(t,empty){x.fillStyle='#d8d0c0';x.fillRect(120,480,840,540);x.fillStyle='#8a7a60';for(let r=0;r<3;r++)x.fillRect(120,640+r*160,840,18);if(!empty){const cs=['#e63946','#ffd23f','#2a5cff','#2f8a3a'];for(let r=0;r<3;r++)for(let i=0;i<8;i++){x.fillStyle=cs[(i+r)%4];rr(150+i*100,540+r*160,70,100,8);x.fill();}}}
+// 0 kanca
+shot(0,0,t=>{bgMoney();zwNote(540,620,1.0,-0.05,'100 TRİLYON');bigText('=',540,800,110,'#fff',1);usd(400,920,0.5,0.05);usd(680,920,0.5,-0.05);bigText('100 TRİLYON',W/2,280,115,'#ffd23f',1);bigText('= 30 DOLAR',W/2,410,110,'#5fe08a',1);});
+// 1 16 ocak 2009
+shot(1,1,t=>{bgDoc('#3a2a10','#100a04');yearStamp('2009','16 OCAK · ZİMBABVE',eOut(cl(t*2)),520);zwNote(540,860,0.9*eOut(cl((t-1.4)*2)),0,'100 TRİLYON');});
+// 2 BBC 30 dolar
+shot(2,2,t=>{bgMoney();zwNote(540,600,0.95,-0.04,'100 TRİLYON');x.fillStyle='#fff';x.font=`900 140px ${F}`;x.textAlign='center';x.fillText('↓',540,900);const v=Math.round(30*eOut(cl((t-0.8)/1.2)));bigText('~'+v+' $',W/2,1400,140,'#5fe08a',1);bigText('İLK GÜN',W/2,280,110,'#fff',eOut(cl(t*3)));});
+// 3 maaşı hemen harca
+shot(3,3,t=>{bgDoc('#2a1a0e','#0c0704');const k=Math.min(4,Math.floor(t*1.6));priceTag(300,560,['1 MİLYAR','5 MİLYAR','30 MİLYAR','200 MİLYAR','1 TRİLYON'][k]+' $',62);bread(300,860,1.0);sil(780,1060,2.0,'#0c0704');for(let i=0;i<4;i++){const p=cl((t-0.6-i*0.4)*1.5);if(p>0&&p<1)zwNote(780-p*300,800-Math.sin(p*3)*120,0.3,p*3,'');}bigText('HEMEN HARCA!',W/2,280,115,'#ff4d4d',back(cl(t*2.5)));});
+// 4 raflar boş, dolar iste
+shot(4,4,t=>{bgDoc('#1c2430','#06090d');if(t<1.8){shelf(t,true);bigText('RAFLAR BOŞ',W/2,320,120,'#ff4d4d',back(cl(t*2.5)));}else{shopFront(540,1000,1.1,'#2f6fa8','DÜKKAN');usd(540,600,0.8,Math.sin(t*3)*0.05);bigText('SADECE DOLAR',W/2,300,105,'#5fe08a',back(cl((t-1.8)*2.5)));}});
+// 5 tek seçenek
+shot(5,5,t=>{bgMoney();spot(540,760,450,0.4);sil(540,1080,2.4,'#06120a');bigText('TEK SEÇENEK',W/2,300,120,'#ffd23f',back(cl(t*2.5)));qmarks(540,720,t,3);});
+// 6 outro
+shot(6,6,t=>outro(t,3,'#13261c','#060d09'));
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
+function shopFront(cx,base,s,col,label){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e8dcc0';x.fillRect(-300,-380,600,380);x.fillStyle=col;x.fillRect(-320,-440,640,90);x.fillStyle='#fff';x.font=`900 56px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(label,0,-395);x.fillStyle='#5a3418';x.fillRect(-80,-260,160,260);x.fillStyle='#9ac8e8';x.fillRect(-260,-300,140,140);x.fillRect(120,-300,140,140);x.restore();}

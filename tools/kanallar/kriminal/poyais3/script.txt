@@ -1,0 +1,9 @@
+[intense] Yakalandı, yargılandı, yine de beraat etti.
+
+[serious] Haber Londra'ya ulaşınca MacGregor Fransa'ya geçti ve aynı oyunu yeniden kurdu.
+[curious] Bu kez Fransız göçmenler aradı. Ama Poyais'e pasaport isteyenler yetkilileri şüphelendirdi.
+[intense] Aralık bin sekiz yüz yirmi beşte tutuklandı. || Aralık 1825'te tutuklandı.
+[serious] Bin sekiz yüz yirmi altıdaki davada ortağı hapis cezası aldı. MacGregor ise tüm suçlamalardan beraat etti. || 1826'daki davada ortağı hapis cezası aldı. MacGregor ise tüm suçlamalardan beraat etti.
+[curious] Son yıllarını Venezuela'da geçirdi. Bin sekiz yüz kırk beşte Karakas'ta öldü ve katedrale gömüldü. || Son yıllarını Venezuela'da geçirdi. 1845'te Karakas'ta öldü ve katedrale gömüldü.
+
+[softly] Kaçırmamak için takip et.
