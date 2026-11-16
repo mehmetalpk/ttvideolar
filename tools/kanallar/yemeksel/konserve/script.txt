@@ -1,0 +1,12 @@
+[intense] Bir şekerci, yemeği şişeye hapsetti.
+
+[serious] Bin yedi yüz doksan beş, Fransa. Askerler savaşta düşmandan çok açlıkla boğuşuyordu. || 1795, Fransa. Askerler savaşta düşmandan çok açlıkla boğuşuyordu.
+Hükümet, yemeği bozulmadan saklayacak kişiye on iki bin frank ödül koydu. || Hükümet, yemeği bozulmadan saklayacak kişiye 12.000 frank ödül koydu.
+[curious] Parisli şekerci Nicolas Appert yıllarca denedi.
+[serious] Yemeği cam şişelere koydu, ağzını mantarla kapattı ve şişeleri kaynar suda pişirdi.
+[intense] Aylar sonra açılan şişelerdeki yemek bozulmamıştı.
+Bin sekiz yüz onda ödülü aldı. Ama nedenini kendisi de bilmiyordu. || 1810'da ödülü aldı. Ama nedenini kendisi de bilmiyordu.
+[serious] Yarım asır sonra Louis Pasteur açıkladı: kaynatmak mikropları öldürüyordu.
+[curious] Sen konserve yiyeceklerden en çok neyi seversin?
+
+[softly] Kaçırmamak için takip et.

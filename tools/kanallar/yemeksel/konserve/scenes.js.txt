@@ -1,0 +1,23 @@
+function bottle(cx,cy,s,col='#c0562a',cork=1){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='rgba(180,230,200,0.35)';x.beginPath();x.moveTo(-70,180);x.lineTo(-70,-40);x.quadraticCurveTo(-70,-110,-26,-140);x.lineTo(-26,-210);x.lineTo(26,-210);x.lineTo(26,-140);x.quadraticCurveTo(70,-110,70,-40);x.lineTo(70,180);x.closePath();x.fill();x.fillStyle=col;rr(-60,-20,120,190,14);x.fill();x.fillStyle='#e8c070';for(const [a,b] of [[-25,30],[20,80],[-10,130],[30,10]]){x.beginPath();x.arc(a,b,14,0,7);x.fill();}x.strokeStyle='rgba(255,255,255,0.6)';x.lineWidth=8;x.beginPath();x.moveTo(-48,-30);x.lineTo(-48,150);x.stroke();if(cork){x.fillStyle='#b5834a';rr(-30,-250,60,60,8);x.fill();}x.restore();}
+function bubblesW(cx,cy,w,t){x.fillStyle='rgba(255,255,255,0.6)';const r=rng(9);for(let i=0;i<22;i++){const bx=cx-w/2+r()*w,by=cy-((t*200+r()*400)%400);x.beginPath();x.arc(bx,by,6+r()*10,0,7);x.fill();}}
+function germ(cx,cy,s,t,dead=0){x.save();x.translate(cx,cy);x.rotate(t*0.8);x.scale(s,s);x.fillStyle=dead?'#777':'#5fd36a';x.beginPath();x.arc(0,0,40,0,7);x.fill();x.strokeStyle=dead?'#777':'#5fd36a';x.lineWidth=8;for(let i=0;i<8;i++){const a=i*0.785;x.beginPath();x.moveTo(Math.cos(a)*40,Math.sin(a)*40);x.lineTo(Math.cos(a)*62,Math.sin(a)*62);x.stroke();}x.fillStyle='#111';x.beginPath();x.arc(-13,-8,7,0,7);x.arc(13,-8,7,0,7);x.fill();x.restore();}
+// 0 kanca
+shot(0,0,t=>{bgWarm();spot(540,800,480,0.4);bottle(540,820,1.9+0.04*Math.sin(t*4));bigText('ŞEKERCİ, YEMEĞİ',W/2,250,110,'#fff',1);bigText('ŞİŞEYE HAPSETTİ',W/2,400,105,'#ffd23f',1);});
+// 1 1795 açlık
+shot(1,1,t=>{bgDoc('#3a3020','#0e0b06');x.fillStyle='#5a4a30';x.fillRect(0,1100,W,H);people(5,540,1100,1.6,'#1a1408',150);yearStamp('1795','FRANSA',eOut(cl(t*2)),520);if(t>2.2)badge(540,1360,'AÇLIK!','#c1121f',(t-2.2)*3);});
+// 2 ödül 12000 frank
+shot(2,2,t=>{bgWarm();coins(t,16,4);x.fillStyle='rgba(0,0,0,0.35)';x.fillRect(0,0,W,H);bigText('ÖDÜL',W/2,330,120,'#fff',eOut(cl(t*3)));counter(0,12000,t/1.6,540,620,190,'#ffd23f');bigText('FRANK',W/2,820,100,'#ffd23f',cl(t*2));badge(540,1360,'BOZULMAYAN YEMEK','#2a5cff',(t-1)*3);});
+// 3 appert şekerci
+shot(3,3,t=>{bgShop();spot(540,760,460,0.4);baker(540,1100,2.4,'#2a1206');for(let i=0;i<3;i++)bottle(250+i*290,1330,0.55,'#c0562a',i<2);badge(540,300,'NICOLAS APPERT','#c1121f',t*3);if(t>1)badge(540,450,'ŞEKERCİ','#2f8a3a',(t-1)*3);});
+// 4 şişe + mantar + kaynar su
+shot(4,4,t=>{bgWarm();const k=t<1.5?0:t<3?1:2;if(k===0){bottle(540,760,1.7,'#c0562a',0);}else if(k===1){bottle(540,760,1.7,'#c0562a',0);x.save();const yy=380+300*(1-eOut(cl((t-1.5)*2)));x.fillStyle='#b5834a';rr(489,yy-50,102,100,12);x.fill();x.restore();}else{x.fillStyle='#7a7a7a';x.fillRect(180,620,720,420);x.fillStyle='#4aa0d0';x.fillRect(200,700,680,320);bubblesW(540,1010,620,t);for(let i=0;i<3;i++)bottle(330+i*210,840,0.8);fire(540,1040,640,90,t,0.9);}bigText(['CAM ŞİŞE','MANTAR TIPA','KAYNAR SU'][k],W/2,300,120,'#ffd23f',back(cl((t-[0,1.5,3][k])*3)));});
+// 5 aylar sonra bozulmamış
+shot(5,5,t=>{bgDoc('#1e2a3a','#070a10');clock(780,520,140,t*6);bottle(400,820,1.6);bigText('AYLAR SONRA',W/2,250,110,'#fff',1);if(t>1.2){x.save();x.globalAlpha=cl((t-1.2)*3);x.fillStyle='#2f8a3a';x.beginPath();x.arc(760,880,90,0,7);x.fill();x.strokeStyle='#fff';x.lineWidth=18;x.beginPath();x.moveTo(715,880);x.lineTo(750,920);x.lineTo(810,840);x.stroke();x.restore();badge(540,1370,'BOZULMADI!','#2f8a3a',(t-1.2)*3);}});
+// 6 1810 ödül / bilmiyordu
+shot(6,6,t=>{bgWarm();if(t<1.6){rays(540,700,t);medal(540,700,170,t,'1810');bigText('ÖDÜLÜ ALDI',W/2,300,120,'#ffd23f',eOut(cl(t*3)));}else{sil(540,1100,2.6,'#2a1206');for(let i=0;i<3;i++)bigText('?',380+i*160,520-Math.sin(t*4+i)*30,140,'#ffd23f',1,Math.sin(t*3+i)*0.3);bigText('AMA NEDEN?',W/2,300,120,'#fff',back(cl((t-1.6)*3)));}});
+// 7 pasteur mikrop
+shot(7,7,t=>{bgDoc('#10261a','#030a06');x.save();x.strokeStyle='#cfe';x.lineWidth=14;x.beginPath();x.arc(540,720,300,0,7);x.stroke();x.restore();const dead=t>2;const r=rng(3);for(let i=0;i<7;i++){germ(400+r()*280,600+r()*240,0.9,t,dead);}if(dead)stampX(540,720,1.6,cl((t-2)*3));badge(540,300,'LOUIS PASTEUR','#2a5cff',t*3);if(t>2)badge(540,1370,'MİKROPLAR ÖLÜYOR','#c1121f',(t-2)*3);});
+// 8 soru
+shot(8,8,t=>{bgWarm();for(let i=0;i<3;i++)bottle(300+i*240,800,0.9,['#c0562a','#7a9a3a','#d8a020'][i]);bigText('SEN EN ÇOK',W/2,260,110,'#fff',1);bigText('NEYİ SEVERSİN?',W/2,400,100,'#ffd23f',back(cl(t*2.5)));});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#3a1c0e','#0f0704'));
