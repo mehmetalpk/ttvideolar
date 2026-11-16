@@ -1,0 +1,11 @@
+[intense] Padişah, askerlerine tepsi tepsi baklava gönderirdi.
+
+[serious] Osmanlı'da Ramazan'ın on beşinci günü padişah, Hırka-i Şerif'i ziyaret ederdi. || Osmanlı'da Ramazan'ın 15. günü padişah, Hırka-i Şerif'i ziyaret ederdi.
+Ardından saray mutfağında pişen baklavalar Yeniçerilere dağıtılırdı.
+[curious] Her on Yeniçeriye bir tepsi düşerdi. || Her 10 Yeniçeriye bir tepsi düşerdi.
+[serious] Tepsiler bir peştamala sarılır, iki Yeniçeri onu bir sırığa asıp omuzlardı.
+[intense] Saraydan kışlaya uzanan bu yürüyüşe Baklava Alayı denirdi.
+Halk yollara dökülür, tepsilerin geçişini izlerdi.
+[curious] Sence en güzel baklava hangi şehirde yapılır?
+
+[softly] Kaçırmamak için takip et.

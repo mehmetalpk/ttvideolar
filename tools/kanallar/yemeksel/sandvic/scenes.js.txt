@@ -1,0 +1,18 @@
+function cards(cx,cy,t){for(let i=0;i<5;i++){x.save();x.translate(cx-160+i*80,cy+Math.sin(t*2+i)*6);x.rotate(-0.3+i*0.15);x.fillStyle='#fff';rr(-50,-75,100,150,10);x.fill();x.fillStyle=i%2?'#c1121f':'#111';x.font=`900 50px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(['A','K','Q','J','10'][i],0,0);x.restore();}}
+function gtable(t){x.fillStyle=grad(0,H,['#2a1a10','#0c0704']);x.fillRect(0,0,W,H);x.fillStyle='#1f6a3a';x.beginPath();x.ellipse(540,980,460,170,0,0,7);x.fill();x.strokeStyle='#5a3a22';x.lineWidth=24;x.stroke();}
+// 0 kanca
+shot(0,0,t=>{gtable(t);sandwich(540,820,1.5,0);bigText('MASADAN KALKMADI',W/2,250,86,'#fff',1);bigText('SANDVİÇ DOĞDU',W/2,400,110,'#ffd23f',1);});
+// 1 1762 londra gezgin
+shot(1,1,t=>{x.fillStyle=grad(0,H,['#5a6a7a','#2a3038']);x.fillRect(0,0,W,H);for(let i=0;i<6;i++)house(90+i*180,1000,150,220+(i%3)*60,'#4a3a30');x.fillStyle='#222';x.fillRect(0,1000,W,H);if(t<2.3){x.fillStyle='rgba(0,0,0,0.4)';x.fillRect(0,0,W,H);yearStamp('1762','LONDRA',eOut(cl(t*2)),560);}else{bookOld(540,700,1.4,1,'');badge(540,330,'FRANSIZ GEZGİN','#2a5cff',(t-2.3)*3);}});
+// 2 24 saat oyun masası
+shot(2,2,t=>{gtable(t);cards(540,900,t);sil(540,820,2.0,'#111');clock(860,560,80,t*14);counter(0,24,t/1.5,540,330,150,'#ffd23f',' SAAT');badge(540,1370,'SANDWICH KONTU','#c1121f',(t-1)*3);});
+// 3 ekmek arası et
+shot(3,3,t=>{bgWarm();const p=eOut(cl(t*1.2));x.fillStyle='#e0b070';rr(320,860-0,440,70,30);x.fill();x.fillStyle='#8a3a2a';rr(330,800-200*(1-p),420,50,20);x.fill();x.fillStyle='#e8c080';rr(320,560+170*cl((t-1)*1.5),440,70,30);x.fill();bigText(t<1.6?'KIZARMIŞ EKMEK':'ARASINA ET',W/2,300,105,'#ffd23f',back(cl((t<1.6?t:t-1.6)*3)));});
+// 4 sandwich'inkinden
+shot(4,4,t=>{gtable(t);for(let i=0;i<4;i++)sil(220+i*210,900,1.3,'#111');sandwich(540,1000,0.7,0);sbubble(540,450,800,170,"SANDWICH'İNKİNDEN!",eOut(cl(t*3)),64);if(t>2.2)bigText('İSİM BÖYLE DOĞDU',W/2,1370,80,'#ffd23f',back(cl((t-2.2)*3)));});
+// 5 biyografi: çalışma masası
+shot(5,5,t=>{bgDoc('#1e2a3a','#070a10');x.fillStyle='#5a3a22';x.fillRect(160,900,760,40);x.fillRect(200,940,30,200);x.fillRect(850,940,30,200);for(let i=0;i<4;i++){x.fillStyle='#ece4d2';x.save();x.translate(340+i*40,860-i*14);x.rotate(-0.1+i*0.05);x.fillRect(-90,-20,180,40);x.restore();}sandwich(720,840,0.45,1);sil(540,880,1.9,'#0a0a10');badge(540,300,'BİYOGRAFİ YAZARI','#2f8a3a',t*3);if(t>1.8)bigText('ÇALIŞMA MASASI',W/2,470,100,'#ffd23f',back(cl((t-1.8)*3)));});
+// 6 soru
+shot(6,6,t=>{gtable(t);cards(300,880,t);x.save();x.translate(780,880);x.fillStyle='#ece4d2';x.fillRect(-120,-70,240,140);x.restore();sandwich(540,700,0.8,0);bigText('OYUN MU',W/2,260,120,'#fff',1);bigText('İŞ Mİ?',W/2,400,130,'#ffd23f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#3a1c0e','#0f0704'));

@@ -1,0 +1,20 @@
+function cookie(cx,cy,s,ch=1,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#c98a3e';x.beginPath();for(let i=0;i<16;i++){const a=i*0.3927,r=118+((i*37)%9);x.lineTo(Math.cos(a)*r,Math.sin(a)*r);}x.closePath();x.fill();x.fillStyle='#e0a858';x.beginPath();x.arc(-15,-15,85,0,7);x.fill();if(ch){x.fillStyle='#3a1a08';for(const [a,b] of [[-50,-40],[30,-60],[60,10],[-20,40],[-70,20],[20,70],[0,-5]]){x.beginPath();x.ellipse(a,b,15,12,a*0.1,0,7);x.fill();}}x.restore();}
+function inn(t){x.fillStyle=grad(0,H,['#7fb4e0','#f6e2b0']);x.fillRect(0,0,W,H);x.fillStyle='#5a8a3a';x.fillRect(0,1000,W,H);x.fillStyle='#f4f1ea';x.fillRect(200,640,680,380);x.fillStyle='#8a2a1a';x.beginPath();x.moveTo(160,650);x.lineTo(540,430);x.lineTo(920,650);x.fill();for(let i=0;i<3;i++){x.fillStyle='rgba(255,220,140,'+(0.7+0.2*Math.sin(t*3+i))+')';x.fillRect(260+i*200,720,120,110);}x.fillStyle='#5a3a22';x.fillRect(490,860,100,160);x.fillStyle='#2a1a10';rr(330,560,420,80,14);x.fill();x.fillStyle='#ffd23f';x.font=`900 50px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('TOLL HOUSE',540,601);}
+// 0 kanca
+shot(0,0,t=>{bgWarm();rays(540,800,t);chocBar(330,820,1.3,0,-0.2);cookie(720,820,1.6,1,t*0.3);bigText('TARİFİNİ VERDİ',W/2,250,115,'#fff',1);bigText('ÖMÜR BOYU ÇİKOLATA',W/2,400,88,'#ffd23f',1);});
+// 1 1930lar toll house
+shot(1,1,t=>{inn(t);if(t<2.2){x.fillStyle='rgba(0,0,0,0.45)';x.fillRect(0,0,W,H);bigText("1930'LAR",W/2,600,190,'#ffd23f',eOut(cl(t*2)));bigText('ABD',W/2,800,100,'#fff',cl(t*2-0.3));}else badge(540,300,'RUTH WAKEFIELD','#c1121f',(t-2.2)*3);});
+// 2 müşteriler tatlı için
+shot(2,2,t=>{bgShop();table(t);for(let i=0;i<5;i++)cookie(220+i*160,1000-Math.abs(Math.sin(t*3+i))*30,0.45);bigText('MÜŞTERİLER',W/2,300,110,'#fff',eOut(cl(t*3)));bigText('TATLI İÇİN GELİRDİ',W/2,440,90,'#ffd23f',eOut(cl((t-0.5)*3)));});
+// 3 çikolata kırıp kattı
+shot(3,3,t=>{bgWarm();x.fillStyle='#b8b8c0';x.beginPath();x.ellipse(540,820,330,150,0,0,7);x.fill();x.fillStyle='#ecd29a';x.beginPath();x.ellipse(540,800,290,115,0,0,7);x.fill();if(t<1.8){chocBar(540,520,1.6,0,0);knife(760,470,1.2,0.8+Math.sin(t*10)*0.2);}else{const r=rng(7);for(let i=0;i<14;i++){const p=cl((t-1.8)*1.5-i*0.04);x.fillStyle='#3a1a08';x.fillRect(320+r()*440,500+(780-500)*eOut(p)+r()*40,34,30);}}bigText(t<1.8?'KIRDI':'HAMURA KATTI',W/2,300,120,'#ffd23f',back(cl((t<1.8?t:t-1.8)*3)));});
+// 4 erimedi, kurabiye doğdu
+shot(4,4,t=>{bgWarm();spot(540,780,480,0.45);if(t<1.8){cookie(540,780,2.6*eOut(cl(t*2)),1,0);bigText('ERİMEDİ!',W/2,300,140,'#fff',back(cl(t*3)));}else{rays(540,780,t);cookie(540,780,2.6,1,Math.sin(t*2)*0.1);bigText('ÇİKOLATALI',W/2,260,115,'#fff',1);bigText('KURABİYE',W/2,400,125,'#ffd23f',back(cl((t-1.8)*3)));}});
+// 5 satışlar patladı, nestle izin
+shot(5,5,t=>{bgDoc('#1e2a3a','#070a10');if(t<2.6){chart(180,1000,720,520,cl(t*0.8),0);bigText('SATIŞLAR PATLADI',W/2,320,95,'#ffd23f',back(cl(t*3)));}else{chocBar(540,820,2.2,0,0);x.save();x.fillStyle='#fff8e6';x.translate(540,820);x.rotate(-0.08);rr(-200,-70,400,140,12);x.fill();x.fillStyle='#5a2a14';x.font=`900 46px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('TARİF PAKETTE',0,0);x.restore();badge(540,320,'TARİFE İZİN','#2a5cff',(t-2.6)*3);}});
+// 6 ömür boyu çikolata
+shot(6,6,t=>{bgWarm();const r=rng(11);for(let i=0;i<14;i++){const yy=((t*260+r()*1600)%1700)-100;chocBar(80+r()*920,yy,0.6,0,r()*6);}x.fillStyle='rgba(0,0,0,0.35)';x.fillRect(0,0,W,H);bigText('ÖMÜR BOYU',W/2,330,130,'#fff',back(cl(t*3)));bigText('BEDAVA ÇİKOLATA',W/2,480,100,'#ffd23f',back(cl((t-0.4)*3)));badge(540,1370,'ANLATILANA GÖRE','#555',(t-0.8)*3);});
+// 7 soru
+shot(7,7,t=>{bgWarm();cookie(540,800,2.0,1,t*0.4);bigText('SEN OLSAN',W/2,260,120,'#fff',1);bigText('NEYE DEĞİŞİRDİN?',W/2,400,96,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1c0e','#0f0704'));

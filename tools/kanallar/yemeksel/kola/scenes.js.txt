@@ -1,0 +1,21 @@
+function glassK(cx,cy,s,t,fill=1){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='rgba(255,255,255,0.25)';x.beginPath();x.moveTo(-90,-170);x.lineTo(90,-170);x.lineTo(65,170);x.lineTo(-65,170);x.fill();const top=170-330*fill;x.fillStyle='#4a1a0a';x.beginPath();x.moveTo(-65+(-25)*(170-top)/340,top);x.lineTo(65+25*(170-top)/340,top);x.lineTo(65,170);x.lineTo(-65,170);x.fill();x.fillStyle='rgba(255,255,255,0.7)';const r=rng(3);for(let i=0;i<10;i++){const by=170-((t*120+r()*300)%(170-top+1));x.beginPath();x.arc(-50+r()*100,by,4,0,7);x.fill();}x.restore();}
+function bottleM(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#3a1a0a';rr(-60,-60,120,200,18);x.fill();x.fillRect(-22,-140,44,90);x.fillStyle='#f4f1ea';rr(-55,0,110,70,8);x.fill();x.fillStyle='#c1121f';x.font=`900 34px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('ŞURUP',0,36);x.restore();}
+function pharmacy(t){x.fillStyle=grad(0,H,['#3a2a1a','#120c06']);x.fillRect(0,0,W,H);for(let r=0;r<3;r++){x.fillStyle='#5a3a22';x.fillRect(100,420+r*200,880,18);for(let i=0;i<7;i++){x.fillStyle=['#2f8a3a','#2a5cff','#c1121f','#d8a020'][(i+r)%4];rr(130+i*122,340+r*200,70,80,10);x.fill();}}x.fillStyle='#5a3a22';x.fillRect(80,1000,920,80);}
+// 0 kanca
+shot(0,0,t=>{pharmacy(t);x.fillStyle='rgba(0,0,0,0.35)';x.fillRect(0,0,W,H);glassK(540,860,1.6,t);bigText('KOLA',W/2,250,150,'#fff',1);bigText('İLAÇ DİYE SATILDI',W/2,410,100,'#ffd23f',1);});
+// 1 1886 atlanta, pemberton
+shot(1,1,t=>{pharmacy(t);if(t<2.6){x.fillStyle='rgba(0,0,0,0.5)';x.fillRect(0,0,W,H);yearStamp('1886','ATLANTA',eOut(cl(t*2)),600);}else{sil(540,1000,2.4,'#0a0604');badge(540,300,'ECZACI JOHN PEMBERTON','#c1121f',(t-2.6)*3);badge(540,1370,'SAVAŞ YARASI','#555',(t-4)*3);}});
+// 2 şurup
+shot(2,2,t=>{bgWarm();pot(540,820,1.3,t,'#4a1a0a');bottleM(820,700,1.2);bigText('ŞURUP',W/2,300,140,'#ffd23f',back(cl(t*3)));badge(540,1370,'BAŞ AĞRISI · YORGUNLUK','#2f8a3a',(t-1)*3);});
+// 3 soda + 5 sent
+shot(3,3,t=>{pharmacy(t);glassK(540,820,1.5,t,cl(t*0.8));x.save();x.translate(820,600);x.fillStyle='#b8b8c0';rr(-60,-120,120,240,20);x.fill();x.fillStyle='#4aa0d0';x.font=`900 40px ${F}`;x.textAlign='center';x.fillText('SODA',0,10);x.restore();if(t>1.8)coin(260,560,90,t,'5¢');bigText('BARDAĞI 5 SENT',W/2,280,100,'#ffd23f',back(cl((t-1.8)*3)));});
+// 4 günde 9 bardak
+shot(4,4,t=>{pharmacy(t);x.fillStyle='rgba(0,0,0,0.4)';x.fillRect(0,0,W,H);for(let i=0;i<9;i++){const p=cl(t*4-i*0.3);if(p>0)glassK(180+(i%5)*180,700+Math.floor(i/5)*250,0.5*back(p),t);}counter(0,9,t/1.4,540,330,170,'#ffd23f',' BARDAK');badge(540,1370,'GÜNDE ORTALAMA','#c1121f',(t-0.8)*3);});
+// 5 haklarını sattı, öldü
+shot(5,5,t=>{bgDoc('#2a2a30','#0a0a0c');x.save();x.translate(540,760);x.rotate(-0.05);x.fillStyle='#ece4d2';x.fillRect(-260,-320,520,640);x.fillStyle='#333';for(let i=0;i<8;i++)x.fillRect(-200,-250+i*55,400-(i%3)*60,14);x.restore();const p=cl((t-0.8)*1.2);x.strokeStyle='#c1121f';x.lineWidth=10;for(let i=0;i<3;i++){x.beginPath();x.moveTo(540,440+i*210);x.lineTo(540+40*Math.sin(i),440+i*210+200*p);x.stroke();}bigText('HAKLARINI SATTI',W/2,300,100,'#fff',back(cl(t*3)));if(t>2.2)badge(540,1370,'1888','#555',(t-2.2)*3);});
+// 6 dünyaya yayıldı
+shot(6,6,t=>{bgDoc('#1e2a3a','#070a10');worldMap(t);const r=rng(6);for(let i=0;i<12;i++){const p=cl(t*2-i*0.15);if(p>0)glassK(120+r()*840,500+r()*500,0.35*back(p),t);}bigText('DÜNYAYA YAYILDI',W/2,300,100,'#ffd23f',back(cl(t*3)));});
+// 7 soru
+shot(7,7,t=>{bgWarm();glassK(360,840,1.2,t);x.save();x.translate(720,840);x.scale(1.2,1.2);x.fillStyle='rgba(255,255,255,0.25)';x.beginPath();x.moveTo(-90,-170);x.lineTo(90,-170);x.lineTo(65,170);x.lineTo(-65,170);x.fill();x.fillStyle='#f4f1ea';x.beginPath();x.moveTo(-84,-130);x.lineTo(84,-130);x.lineTo(65,170);x.lineTo(-65,170);x.fill();x.restore();bigText('GAZLI İÇECEK Mİ',W/2,260,95,'#fff',1);bigText('AYRAN MI?',W/2,400,125,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1c0e','#0f0704'));

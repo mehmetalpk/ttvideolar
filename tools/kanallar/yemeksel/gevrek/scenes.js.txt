@@ -1,0 +1,21 @@
+function flakes(cx,cy,w,n,t,seed=3,col='#e8b850'){const r=rng(seed);for(let i=0;i<n;i++){x.save();x.translate(cx-w/2+r()*w,cy-60+r()*120);x.rotate(r()*6+Math.sin(t*2+i)*0.1);x.fillStyle=i%3?col:'#d89a30';x.beginPath();x.ellipse(0,0,30+r()*14,18+r()*8,0,0,7);x.fill();x.restore();}}
+function cbowl(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#f4f1ea';x.beginPath();x.ellipse(0,-10,210,46,0,0,7);x.fill();x.restore();flakes(cx,cy-20*s,300*s,22,t,5);x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#2a5cff';x.beginPath();x.moveTo(-220,-10);x.quadraticCurveTo(0,240,220,-10);x.fill();x.restore();}
+function roller(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#8a8a90';x.fillRect(-260,-150,520,40);x.fillRect(-260,110,520,40);for(const yy of [-60,60]){x.save();x.translate(0,yy);x.fillStyle='#b8b8c0';rr(-240,-50,480,100,50);x.fill();x.strokeStyle='#777';x.lineWidth=5;for(let i=0;i<8;i++){const xx=-220+((i*60+t*200)%440);x.beginPath();x.moveTo(xx,-45);x.lineTo(xx,45);x.stroke();}x.restore();}x.restore();}
+// 0 kanca
+shot(0,0,t=>{bgWarm();spot(540,820,480,0.4);cbowl(540,840,1.7,t);bigText('UNUTULAN BUĞDAY',W/2,250,100,'#fff',1);bigText('KAHVALTIYI DEĞİŞTİRDİ',W/2,400,82,'#ffd23f',1);});
+// 1 1894 sağlık merkezi
+shot(1,1,t=>{x.fillStyle=grad(0,H,['#9ac4e8','#f0e6c8']);x.fillRect(0,0,W,H);x.fillStyle='#6a9a4a';x.fillRect(0,1000,W,H);palace(540,1000,1.0);if(t<2.6){x.fillStyle='rgba(0,0,0,0.45)';x.fillRect(0,0,W,H);yearStamp('1894','ABD',eOut(cl(t*2)),560);}else{badge(540,300,'DR. JOHN HARVEY KELLOGG','#c1121f',(t-2.6)*3);badge(540,1370,'SADE YİYECEK','#2f8a3a',(t-3.6)*3);}});
+// 2 kardeşi will, hamur
+shot(2,2,t=>{bgShop();sil(380,1100,2.3,'#2a1206');sil(700,1100,2.1,'#3a2414');pot(540,1340,0.8,t,'#d8b060');badge(380,350,'JOHN','#c1121f',t*3);badge(700,500,'WILL','#2a5cff',(t-0.8)*3);});
+// 3 ocakta unuttular
+shot(3,3,t=>{bgDoc('#1e2a3a','#070a10');pot(540,780,1.5,t,'#d8b060');clock(820,420,110,t*10);bigText('UNUTULDU',W/2,300,120,'#ffd23f',back(cl(t*3)));});
+// 4 merdane, pullar
+shot(4,4,t=>{bgWarm();roller(540,620,1.4,t);const p=cl((t-0.8)*0.7);flakes(540,780+200*p,620,Math.floor(4+22*p),t,8);bigText(t<2?'MERDANE':'İNCE PULLAR!',W/2,300,120,'#ffd23f',back(cl((t<2?t:t-2)*3)));});
+// 5 kızarttılar, mısır
+shot(5,5,t=>{bgWarm();if(t<2.3){fire(540,1040,600,100,t,0.8);x.fillStyle='#444';x.fillRect(220,860,640,40);flakes(540,780,560,26,t,9,'#d89a30');bigText('HASTALAR BAYILDI',W/2,300,96,'#fff',back(cl(t*3)));}else{x.fillStyle='#f0c030';for(let i=0;i<3;i++){x.save();x.translate(320+i*220,800);x.rotate(-0.2+i*0.2);rr(-55,-180,110,360,55);x.fill();x.fillStyle='#5a9a3a';x.beginPath();x.moveTo(-50,140);x.quadraticCurveTo(-90,0,-20,-120);x.lineTo(0,160);x.fill();x.fillStyle='#f0c030';x.restore();}bigText('SIRA MISIRDA',W/2,300,115,'#ffd23f',back(cl((t-2.3)*3)));}});
+// 6 şeker, bozuştu
+shot(6,6,t=>{bgDoc('#3a1010','#0a0303');sil(330,1100,2.2,'#111');sil(750,1100,2.2,'#111');x.fillStyle='#fff';for(let i=0;i<4;i++){x.fillRect(510+(i%2)*40,640-Math.floor(i/2)*40+Math.sin(t*6+i)*4,34,34);}if(t>1.8){stampT('MAHKEME',540,560,cl((t-1.8)*3),'#c1121f',120);}bigText('ŞEKER KAVGASI',W/2,300,110,'#ffd23f',back(cl(t*3)));});
+// 7 soru
+shot(7,7,t=>{bgWarm();cbowl(340,860,1.0,t);x.save();x.translate(760,860);x.strokeStyle='#b0642a';x.lineWidth=46;x.beginPath();x.arc(0,0,130,0,7);x.stroke();x.fillStyle='#f4e0b0';for(let i=0;i<14;i++){const a=i*0.45;x.beginPath();x.arc(Math.cos(a)*130,Math.sin(a)*130,5,0,7);x.fill();}x.restore();bigText('GEVREK Mİ',W/2,260,120,'#fff',1);bigText('SİMİT Mİ?',W/2,400,125,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1c0e','#0f0704'));

@@ -1,0 +1,21 @@
+function tray(cx,cy,s,full=1){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#b88a3a';x.beginPath();x.ellipse(0,0,220,70,0,0,7);x.fill();x.fillStyle='#d8aa4a';x.beginPath();x.ellipse(0,-8,200,58,0,0,7);x.fill();if(full){x.save();x.beginPath();x.ellipse(0,-10,190,52,0,0,7);x.clip();x.fillStyle='#e8b850';x.fillRect(-200,-70,400,130);x.strokeStyle='#a8742a';x.lineWidth=4;for(let i=-6;i<=6;i++){x.beginPath();x.moveTo(i*40-60,-70);x.lineTo(i*40+60,60);x.stroke();x.beginPath();x.moveTo(i*40+60,-70);x.lineTo(i*40-60,60);x.stroke();}x.fillStyle='#4a8a3a';for(let i=0;i<14;i++){x.beginPath();x.arc(-150+(i%7)*50,-25+Math.floor(i/7)*35,6,0,7);x.fill();}x.restore();}x.restore();}
+function jan(cx,base,s,col='#7a1d1d'){sil(cx,base,s,col);x.fillStyle='#f4f1ea';x.beginPath();x.moveTo(cx-28*s,base-180*s);x.lineTo(cx+28*s,base-180*s);x.lineTo(cx+18*s,base-260*s);x.quadraticCurveTo(cx+70*s,base-250*s,cx+60*s,base-170*s);x.lineTo(cx-28*s,base-180*s);x.fill();}
+function carry(cx,base,s,t){const b=Math.sin(t*6)*6;jan(cx-150*s,base+b,s);jan(cx+150*s,base-b,s);x.strokeStyle='#6a4a2a';x.lineWidth=14*s;x.beginPath();x.moveTo(cx-200*s,base-140*s);x.lineTo(cx+200*s,base-140*s);x.stroke();x.fillStyle='#d8c8a0';x.beginPath();x.moveTo(cx-60*s,base-140*s);x.quadraticCurveTo(cx,base-40*s,cx+60*s,base-140*s);x.fill();tray(cx,base-60*s,0.45*s);}
+// 0 kanca
+shot(0,0,t=>{bgWarm();rays(540,820,t);tray(540,820,2.0);crown(540,600,1.0);bigText('PADİŞAHTAN',W/2,250,120,'#fff',1);bigText('TEPSİ TEPSİ BAKLAVA',W/2,400,90,'#ffd23f',1);});
+// 1 ramazan 15 hırka-i şerif
+shot(1,1,t=>{x.fillStyle=grad(0,H,['#0a1030','#2a2050']);x.fillRect(0,0,W,H);crescent(780,320,90,'#ffd23f');mosque(540,1000,1.4,'#3a2a60');x.fillStyle='#120e24';x.fillRect(0,1000,W,H);bigText('RAMAZAN',W/2,560,130,'#fff',eOut(cl(t*3)));bigText('15. GÜN',W/2,720,140,'#ffd23f',back(cl((t-0.5)*3)));badge(540,1380,'HIRKA-İ ŞERİF ZİYARETİ','#2f8a3a',(t-1.6)*3);});
+// 2 saray mutfağı
+shot(2,2,t=>{bgShop();palace(540,760,0.9);for(let i=0;i<3;i++)tray(250+i*290,980-Math.abs(Math.sin(t*3+i))*20,0.6);bigText('SARAY MUTFAĞI',W/2,250,110,'#ffd23f',eOut(cl(t*3)));badge(540,1380,'YENİÇERİLERE','#c1121f',(t-1.4)*3);});
+// 3 her 10 yeniçeriye 1 tepsi
+shot(3,3,t=>{bgWarm();for(let i=0;i<10;i++){const p=cl(t*4-i*0.25);if(p>0)jan(130+i*91,1000,0.75*p);}tray(540,1360,0.9);counter(0,10,t/0.9,540,330,190,'#fff');bigText('YENİÇERİ',W/2,490,90,'#fff',1);bigText('= 1 TEPSİ',W/2,640,120,'#ffd23f',cl((t-0.8)*3));});
+// 4 sırık, peştamal
+shot(4,4,t=>{x.fillStyle=grad(0,H,['#f6d8a0','#e0a860']);x.fillRect(0,0,W,H);x.fillStyle='#a87848';x.fillRect(0,1000,W,H);carry(540,1000,1.7,t);bigText('PEŞTAMAL + SIRIK',W/2,280,100,'#7a1d1d',eOut(cl(t*3)));badge(540,1380,'İKİ YENİÇERİ','#c1121f',(t-1.5)*3);});
+// 5 baklava alayı
+shot(5,5,t=>{x.fillStyle=grad(0,H,['#f6d8a0','#e0a860']);x.fillRect(0,0,W,H);x.fillStyle='#a87848';x.fillRect(0,1000,W,H);const off=(t*160)%700;for(let i=-1;i<3;i++)carry(-200+i*700+off,1000,0.95,t+i);rays(540,560,t,'rgba(255,255,255,0.15)');bigText('BAKLAVA',W/2,420,150,'#7a1d1d',back(cl(t*3)));bigText('ALAYI',W/2,600,150,'#c1121f',back(cl((t-0.4)*3)));});
+// 6 halk izler
+shot(6,6,t=>{x.fillStyle=grad(0,H,['#f6d8a0','#e0a860']);x.fillRect(0,0,W,H);x.fillStyle='#a87848';x.fillRect(0,1000,W,H);hillHouses(760,t);for(let i=0;i<9;i++)sil(60+i*120,760+Math.abs(Math.sin(t*5+i))*-12,1.0,'#3a2414');const off=(t*160)%700;for(let i=-1;i<3;i++)carry(-200+i*700+off,1000,0.95,t+i);bigText('HALK YOLLARDA',W/2,280,110,'#fff',eOut(cl(t*3)));});
+// 7 soru
+shot(7,7,t=>{bgWarm();tray(540,820,2.0);bigText('EN GÜZEL BAKLAVA',W/2,260,95,'#fff',1);bigText('HANGİ ŞEHİRDE?',W/2,400,105,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1c0e','#0f0704'));
