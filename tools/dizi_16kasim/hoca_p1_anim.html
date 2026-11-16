@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+const inKemal=(sm)=>()=>{x.fillStyle='#2f5a46';x.fillRect(-120,-95,240,190);kemal(0,-10,48,{smile:sm,look:-1});};
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);corridor();x.fillStyle='rgba(255,60,60,0.10)';x.fillRect(0,0,W,H);x.save();zoom(540,900,1.05+0.04*t);kemal(540,820,190,{brow:-0.6,smile:0.5,eyeOpen:0.7});lock(860,1080,1.0,'#e02030');x.restore();x.restore();vignette(0.4);
+ hook([['HOCAMIZ GEÇ KALANI',84,'#fff'],['DERSE',170,YEL],['ALMIYORDU!',120,'#fff']],270);tBadge(t,1);}});
+// 1 saati kürsüye koydu
+sc.push({a:mid(1),f(t,T){classroom();x.save();zoom(540,950,1.0+0.04*t);kemal(540,760,120,{brow:-0.4});lectern(540,1150,1.0);const q=ease(prog(T,W2(1,'kürsüye')-0.3,W2(1,'koydu')+0.1));wristWatch(700-90*q,800+130*q,0.7,0);x.restore();
+ B('İLK DERS',300,100,'#fff',t);B('KOL SAATİ ⌚',420,105,YEL,t,0.12);}});
+// 2 dakika beş kapı kilit
+sc.push({a:mid(2),f(t,T){classroom();x.save();zoom(540,900,1.1+0.05*t);kemal(540,860,190,{brow:-0.8,angry:0.4,mouthOpen:0.4*Math.abs(Math.sin(T*10))});x.restore();
+ bubble2(540,330,820,220,'DAKİKA 5,','KAPI KİLİT! 🔒',80,T);}});
+// 3 beşi geçen devamsız
+sc.push({a:mid(3),f(t,T){radial(540,900,1300,'#3a1010','#0c0404');x.save();zoom(540,700,1.0+0.04*t);digital(540,650,1.3,'09:06');const p=prog(T,W2(3,'devamsız')-0.15,W2(3,'devamsız')+0.25);if(p>0)stamp('DEVAMSIZ ❌',540,880,90,'#ff3b3b',p,-0.12);x.restore();
+ B('BEŞİ GEÇERSE',330,95,'#fff',t);}});
+// 4 hepimiz güldük
+sc.push({a:mid(4),f(t,T){classroom();x.save();zoom(540,950,1.0+0.03*t);STU.forEach((P,i)=>person(P,180+i*240,960+8*Math.sin(T*14+i),95,{mouthOpen:0.7,smile:1,eyeOpen:0.25}));x.restore();
+ B('HEPİMİZ GÜLDÜK 😂',300,95,'#fff',t);B('ŞAKA SANDIK',420,100,YEL,t,0.15);}});
+// 5 burak 9:06
+sc.push({a:mid(5),f(t,T){corridor();x.save();zoom(540,950,1.0+0.03*t);wallClock(820,520,0.9,6);const q=prog(T,st(5),en(5));burak(150+450*q,900+10*Math.sin(T*20),130,{mouthOpen:0.5,sweat:1,look:1});sweat(150+450*q,900,1,T);x.restore();
+ B('İKİNCİ HAFTA',300,95,'#fff',t);B('BURAK 9:06 🏃',420,105,YEL,t,0.12);}});
+// 6 kapı kolu kilitli
+sc.push({a:mid(6),f(t,T){corridor();const lk=T>W2(6,'Kilitliydi')-0.1;x.save();if(lk)shake(T,W2(6,'Kilitliydi'),W2(6,'Kilitliydi')+0.4,10);zoom(540,900,1.1+0.04*t);classDoor(540,1300,1.3,inKemal(0),lk);x.restore();
+ if(lk)bigText('KİLİTLİ! 🔒',540,330,120,RED,PP(T,6,'Kilitliydi'),-0.03);else B('KAPI KOLU...',330,105,'#fff',t);}});
+// 7 kemal saatine baktı başını salladı
+sc.push({a:mid(7),f(t,T){classroom();x.save();zoom(540,900,1.1+0.05*t);const sh=T>W2(7,'başını')-0.1?Math.sin(T*16)*25:0;kemal(540+sh,860,190,{brow:-0.5,lookDown:T<W2(7,'başını')?1:0,eyeOpen:0.6});wristWatch(250,1250,0.8);x.restore();
+ B('SAATİNE BAKTI',300,95,'#fff',t);if(T>W2(7,'başını')-0.15)bigText('"HAYIR." 🙅',540,420,105,YEL,PP(T,7,'başını'),-0.03);}});
+// 8 burak koridorda devamsız
+sc.push({a:mid(8),f(t,T){corridor();x.save();zoom(540,950,1.05+0.04*t);classDoor(300,1300,1.0,inKemal(0),true);burak(760,900,140,{sad:1,brow:0.6,lookDown:1,eyeOpen:0.6});x.restore();
+ B('BURAK',300,100,'#fff',t);if(T>W2(8,'Devamsız')-0.15)stamp('DEVAMSIZ ❌',540,440,90,'#ff3b3b',PP(T,8,'Devamsız'),-0.1);else B('KORİDORDA 😞',420,100,YEL,t,0.12);}});
+// 9 sonra sıra bana
+sc.push({a:mid(9),f(t,T){x.save();shake(t,0,0.5,5);radial(540,900,1300,'#5a3a1a','#140a04');x.save();zoom(540,900,1.1+0.05*t);kiz(540,860,200,{brow:0.8,eyeBig:1.3,mouthOpen:0.3});x.restore();x.restore();
+ B('SONRA SIRA',300,105,'#fff',t);B('BANA GELDİ 😰',420,110,YEL,t,0.12);}});
+// 10 sağanak yağmur, otobüs kaçtı
+sc.push({a:mid(10),f(t,T){x.fillStyle='#4a5a6a';x.fillRect(0,0,W,H);x.fillStyle='#3a3f48';x.fillRect(0,1300,W,700);const q=prog(T,W2(10,'otobüsü')-0.3,en(10)+0.3);bus(700+600*q,1080,0.9);kiz(260,900,130,{brow:0.8,mouthOpen:0.6,look:1});rain(T,1);
+ B('SAĞANAK 🌧️',300,100,'#fff',t);if(T>W2(10,'otobüsü')-0.15)bigText('OTOBÜS KAÇTI!',540,420,100,YEL,PP(T,10,'otobüsü'),-0.03);}});
+// 11 sırılsıklam koştum 9:07
+sc.push({a:mid(11),f(t,T){corridor();x.save();zoom(540,950,1.0+0.03*t);wallClock(820,520,0.9,7);const q=prog(T,st(11),en(11));kiz(150+420*q,900+10*Math.sin(T*20),130,{mouthOpen:0.5,brow:0.6,look:1});x.fillStyle='rgba(80,150,255,0.6)';for(let i=0;i<6;i++){const dy=((T*400+i*60)%200);x.beginPath();x.arc(100+420*q+i*20,1000+dy,8,0,7);x.fill();}x.restore();
+ B('SIRILSIKLAM',300,100,'#fff',t);if(T>W2(11,'Dokuzu')-0.15)bigText('9:07 ⏰',540,420,120,RED,PP(T,11,'Dokuzu'),-0.03);}});
+// 12 kapı kilitliydi
+sc.push({a:mid(12),f(t,T){corridor();x.save();shake(t,0,0.5,10);zoom(540,900,1.15);classDoor(540,1300,1.3,inKemal(0),true);x.restore();
+ bigText('KİLİTLİ! 🔒',540,330,120,RED,prog(t,0,0.15),-0.03);}});
+// 13 camdan baktım, gülümsedi
+sc.push({a:mid(13),f(t,T){corridor();const z=1.0+1.4*ease(prog(t,0,1.0));x.save();zoom(540,880,z);classDoor(540,1300,1.3,inKemal(T>W2(13,'gülümsedi')-0.1?1:0.2),true);x.restore();
+ B('CAMDAN BAKTIM',300,95,'#fff',t);if(T>W2(13,'gülümsedi')-0.15)bigText('GÜLÜMSEDİ 🙂',540,420,105,YEL,PP(T,13,'gülümsedi'),-0.03);}});
+// 14 bütün dönem
+sc.push({a:mid(14),f(t,T){classroom();x.save();zoom(540,900,1.0+0.03*t);const m=['EYLÜL','EKİM','KASIM','ARALIK'];const k=Math.min(3,Math.floor((T-mid(14))*2.2));paper(540,640,520,420,0.03*Math.sin(T*6),[[m[k],100,RED,900]],{lh:100,y0:0});x.restore();
+ B('BÜTÜN DÖNEM',300,100,'#fff',t);}});
+// 15 alçılı arkadaş kapıda
+sc.push({a:mid(15),f(t,T){corridor();x.save();zoom(540,950,1.05+0.04*t);classDoor(280,1300,1.0,inKemal(0),true);person(STU[1],740,860,130,{sad:1,brow:0.6,look:-1});crutchCast(740,860,130);x.restore();
+ B('ALÇILI AYAKLA',300,95,'#fff',t);B('BİLE! 🦽',420,110,YEL,t,0.12);}});
+// 16 trafik, hastalık, sınav günü
+sc.push({a:mid(16),f(t,T){radial(540,900,1300,'#2a2a3a','#08080c');[['🚗 TRAFİK','Trafik',560],['🤒 HASTALIK','hastalık',720],['📝 SINAV GÜNÜ','sınav',880]].forEach(([l,w,y])=>{const p=PP(T,16,w);if(p>0)bigText(l,540,y,95,'#fff',p,-0.02);});if(T>W2(16,'fark')-0.1)bigText('FARK ETMEZ ❌',540,330,100,RED,PP(T,16,'fark'),-0.03);}});
+// 17 kural kuraldı
+sc.push({a:mid(17),f(t,T){classroom();x.save();zoom(540,880,1.15+0.06*t);kemal(540,820,210,{brow:-0.9,angry:0.5});x.restore();
+ B('KURAL',300,120,'#fff',t);B('KURALDI.',430,130,YEL,t,0.12);}});
+// 18 ta ki o sabaha kadar
+sc.push({a:mid(18),f(t,T){x.fillStyle='#0a0c14';x.fillRect(0,0,W,H);x.save();zoom(540,800,1.0+0.06*t);wallClock(540,760,1.6,4+(T-mid(18))*0.7);x.restore();
+ B('TA Kİ',300,110,'#fff',t);B('O SABAHA KADAR...',420,95,YEL,t,0.15);}});
+// 19 9:05 herkes yerinde
+sc.push({a:mid(19),f(t,T){classroom();x.save();zoom(540,950,1.0+0.03*t);wallClock(880,330,0.6,5);STU.forEach((P,i)=>person(P,180+i*240,980,90,{look:0,brow:0.3}));kiz(540,1180,90,{look:0});x.restore();
+ B('9:05',300,120,YEL,t);B('HERKES YERİNDE',420,90,'#fff',t,0.12);}});
+// 20 kürsü boştu
+sc.push({a:mid(20),f(t,T){x.save();shake(t,0,0.6,10);classroom();x.fillStyle='rgba(0,0,0,0.45)';x.fillRect(0,0,W,H);x.fillStyle='rgba(255,240,180,0.25)';x.beginPath();x.moveTo(470,0);x.lineTo(610,0);x.lineTo(820,1500);x.lineTo(260,1500);x.fill();x.save();zoom(540,950,1.1);lectern(540,1100,1.1);x.restore();x.restore();
+ bigText('KÜRSÜ BOŞ! 😳',540,330,120,YEL,prog(t,0,0.15),-0.03);}});
+sc.push({a:en(20)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(20)+0.1+2.4);
+</script></body></html>

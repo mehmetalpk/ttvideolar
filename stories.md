@@ -41,3 +41,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-15 | Müdürüm tuvalet için rapor istedi (Tuvalet Raporu) [Part 1] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 27.5 sn | 12:30 | -7066753366164027132 | ÖĞLE | parkur:hayır
 - 2026-11-15 | Babam akıllı evi fişten çekti (Hacker Kerem S2) [Part 10 — FİNAL] | kendi kurgu | komedi/seri | Emrullah | 28.6 sn | 17:00 | -1738909288624272626 | AKŞAM | parkur:hayır
 - 2026-11-15 | Doktorum müdürüme alaycı rapor yazdı (Tuvalet Raporu) [Part 2] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 29.6 sn | 20:30 | -2903166034579667473 | GECE | parkur:hayır
+- 2026-11-16 | Babam 45 yaşında YouTuber oldu (Hacker Kerem S3) [Part 1] | kendi kurgu | komedi/seri | Emrullah | 27.6 sn | 09:00 | 2508347117621170050 | SABAH | parkur:hayır
+- 2026-11-16 | Beş arkadaşım aynı raporu getirdi (Tuvalet Raporu) [Part 3 — FİNAL] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 26.1 sn | 12:30 | -2074083586317072636 | ÖĞLE | parkur:hayır
+- 2026-11-16 | Babamın ilk videosu 3 izlenme aldı (Hacker Kerem S3) [Part 2] | kendi kurgu | komedi/seri | Emrullah | 27.4 sn | 17:00 | 4048749132732517272 | AKŞAM | parkur:hayır
+- 2026-11-16 | Hocamız geç kalanı derse almıyordu (Kapıyı Kilitleyen Hoca) [Part 1] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 48.1 sn | 20:30 | 1689284055029794915 | GECE | parkur:hayır
