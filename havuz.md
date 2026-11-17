@@ -3,7 +3,9 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
-> 17 KASIM (16 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P3 + 17:00 P4 (plan aşağıda). Tuvalet Raporu BİTTİ (P3 16.11 12:30; bölüm 'Kullanıldı'ya taşındı). 12:30 = Kapıyı Kilitleyen Hoca P2 (≤40 sn, İrem; P1 cliff: 9:05'te kürsü boş), 20:30 = Hoca P3 FİNAL (≤40 sn, İrem). 18.11 12:30 = sıradaki seri 'Amcanın Gürültülü Hediyeleri' P1 (Emrullah). Çizimler: tools/dizi_16kasim/ (s3.js stüdyo nesneleri, hoca.js = Kemal Bey/KIZ/Burak/sınıf/koridor kapısı).
+> 18 KASIM (17 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P5 + 17:00 P6 (plan aşağıda). Kapıyı Kilitleyen Hoca BİTTİ (P3 17.11 20:30; 'Kullanıldı'ya taşındı). 12:30 = Amcanın Gürültülü Hediyeleri P1 (Emrullah; güçlü kancalıysa 55–85 sn olabilir), 20:30 = Amca P2 (≤40 sn). 19.11 12:30 = Amca P3 FİNAL, 19.11 20:30 = sıradaki seri 'Kar Küremeyi İstemeyen Komşu' P1. Çizimler: tools/dizi_17kasim/ (common_hdr.txt: nanaSpecs, smoke, comment; contract, openDoor, wedge anim içinde).
+
+> 17 KASIM (GEÇERSİZ, 17 Kas üretildi) (16 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P3 + 17:00 P4 (plan aşağıda). Tuvalet Raporu BİTTİ (P3 16.11 12:30; bölüm 'Kullanıldı'ya taşındı). 12:30 = Kapıyı Kilitleyen Hoca P2 (≤40 sn, İrem; P1 cliff: 9:05'te kürsü boş), 20:30 = Hoca P3 FİNAL (≤40 sn, İrem). 18.11 12:30 = sıradaki seri 'Amcanın Gürültülü Hediyeleri' P1 (Emrullah). Çizimler: tools/dizi_16kasim/ (s3.js stüdyo nesneleri, hoca.js = Kemal Bey/KIZ/Burak/sınıf/koridor kapısı).
 
 > 16 KASIM (GEÇERSİZ, 16 Kas üretildi) (15 Kas gece görevi notu; FORMAT 4): 09:00 + 17:00 Hacker Kerem SEZON 3 P1 + P2 (14 partlık plan YAZILDI — aşağıda "SEZON 3 'Babamın YouTube Kanalı'", haftalık analiz 15.11). 12:30 = Tuvalet Raporu P3 FİNAL (≤40 sn, Emrullah; plan aşağıda "SERİ: Tuvalet Raporu"). 20:30 = "SERİ: Kapıyı Kilitleyen Hoca" P1 (İrem; 3 partlık plan aşağıda). Sonraki seri sırası: Amcanın Gürültülü Hediyeleri → Kar Küremeyi İstemeyen Komşu → Görümcemin Kek Topları (haftalık analiz 15.11; strateji.md 15.11 kuralları: güçlü kancalı P1 55–85 sn, ara part kancası yeni somut olay). Çizimler: tools/dizi_15kasim/ (tuv.js = Necati Bey, doktor, anlatıcı kulaklıklı).
 
@@ -108,8 +110,8 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Yeni felaket partları (strateji: yeni somut olaylı kanca): P1, P3, P5, P9, P11, P13.
 - P1 (16.11 09:00): Babam "ünlü olacağım" diye video kanalı açar, salonu stüdyoya çevirir (halka ışık, mikrofon, yazı tahtasında "1 MİLYON ABONE"). Kanca: "Babam 45 yaşında YouTuber oldu." Cliff: Montajı Kerem'e verir; Kerem gözlüğünü indirir: "Ücretim var." ✅ 2026-11-16 (09:00, 27,6 sn)
 - P2 (16.11 17:00): İlk video babamın menemen tarifi; Kerem her "ııı"yı keser, video 9 saniyeye iner. 3 izlenme: annem, anneanne, babam. Kanca: "Babamın ilk videosu 3 izlenme aldı." Cliff: Kerem videonun arka planında bir şey fark eder: dans eden anneanne. ✅ 2026-11-16 (17:00, 27,4 sn)
-- P3 (17.11 09:00): Kerem anneannenin 4 saniyelik dansını ayrı paylaşır; sabah 200 bin izlenme. Babam kıskançlıktan menemeni yakar. Kanca: "Anneannem bir gecede ünlü oldu." Cliff: Yorumların hepsi aynı: "Teyzeyi geri getirin!"
-- P4 (17.11 17:00): Babam anneanneyi konuk ister; anneanne şartlarını sayar: kendi çay bardağı, öğlen uykusu, menajeri Kerem. Kanca: "Anneannem babama sözleşme imzalattı." Cliff: Kanalın adı bir gecede değişmiş: "Anneanne ve Damadı".
+- P3 (17.11 09:00): Kerem anneannenin 4 saniyelik dansını ayrı paylaşır; sabah 200 bin izlenme. Babam kıskançlıktan menemeni yakar. Kanca: "Anneannem bir gecede ünlü oldu." Cliff: Yorumların hepsi aynı: "Teyzeyi geri getirin!" ✅ 2026-11-17 (09:00, 26,7 sn; başlık "Anneannem", babam poz verirken tavayı yaktı)
+- P4 (17.11 17:00): Babam anneanneyi konuk ister; anneanne şartlarını sayar: kendi çay bardağı, öğlen uykusu, menajeri Kerem. Kanca: "Anneannem babama sözleşme imzalattı." Cliff: Kanalın adı bir gecede değişmiş: "Anneanne ve Damadı". ✅ 2026-11-17 (17:00, 24,8 sn; şartlar çay bardağı/öğlen uykusu/menajer Kerem, babam okumadan imzaladı)
 - P5 (18.11 09:00): Babam ilk canlı yayını açar; kamera ters, 40 dakika tavanı yayınlar, izleyiciler tavandaki lekeye isim koyar. Kanca: "Babam 40 dakika tavanı canlı yayınladı." Cliff: Yayın hâlâ açıkken mutfaktan annemin sesi: "Bulaşıkları kim yıkayacak?!"
 - P6 (18.11 17:00): Annem ev kuralı koyar: bulaşık yıkamayan video çekemez. Babam bulaşığı çekip "bulaşık meydan okuması" yapar; komşular da katılır. Kanca: "Annem kanala bulaşık kuralı koydu." Cliff: Kanala ilk iş birliği teklifi gelir — ama Kerem'in adına.
 - P7 (19.11 09:00): Bir çorap firması (adı YOK) reklam ister; babam tek cümlelik reklamı 27 kez çeker, her seferinde "çorap" yerine başka kelime söyler. Kanca: "Babam bir cümleyi 27 kez çekti." Cliff: Kerem anneanneyle gizlice tek çekimde bitirip gönderir.
@@ -122,15 +124,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P14 FİNAL (22.11 17:00): Babam şarkıyı canlı söyler, anneanne arkada dans eder, stüdyo alkışlar. Eve dönünce babam kanalı Kerem'e devreder, tek şart: ödevler. Son sahne: Kerem kanalın adını "Hacker Kerem" yapar, anneanne göz kırpar. Soru: "Sizin evde kim YouTuber olurdu?" Outro: "Sezon 4 pazartesi! Kaçırmamak için takip et."
 - Hashtag: #hikaye #reddithikayeleri #hackerkerem #komedi #youtuber #aile #keşfet #fyp
 
-### SERİ (aktif, 12:30/20:30; 3 part, İrem — okul): Kapıyı Kilitleyen Hoca (komedi / okul) — P1 16.11 20:30, P2 17.11 12:30, P3 17.11 20:30
-- Kaynak: r/MaliciousCompliance, u/Khromez — listverse.com "Top 10 Stories of Malicious Compliance" #3 (eski MÜNFERİT 3). Doğrulanmamış; "Reddit'teki bir hikâyeden ilham alınmıştır."
-- Anlatıcı: üniversite öğrencisi kız → İrem. Hoca: Prof. Kemal Bey (kurgusal; gri sakal, papyon, kol saati). Sınıf başkanı: Burak. Üniversite adı YOK.
-- PART 1 (güçlü kanca adayı → 55–85 sn olabilir): Kemal Bey ilk derste kural koyar: "Dakika beş, kapı kilit." Geç kalan devamsız sayılır. Anlatıcı yağmurda otobüs kaçırınca kapının dışında kalır; camdan hocanın gülümsemesi. Bütün dönem 5'i geçen herkes kapıda. Kanca: "Hocamız geç kalanı derse almıyordu." Cliff: Bir sabah saat 09:05… kürsü boş. ✅ 2026-11-16 (20:30, 48,1 sn, İrem; güçlü kanca 4/4; Burak 9:06'da kapıda kaldı, anlatıcı yağmurda 9:07, alçılı arkadaş bile kapıda)
-- PART 2 (≤40 sn): Sınıf saate bakar; Burak ayağa kalkar, sakin sakin kapıyı içeriden kilitler: "Kural kuraldır." Koridordan ayak sesleri, kapı kolu oynar, camda Kemal Bey'in şaşkın yüzü. Kanca: "Bir gün hocamız geç kaldı." Cliff: Kapı çalınır; içeriden hep bir ağızdan: "Kuralınız hocam!"
-- PART 3 FİNAL (≤40 sn): Hoca dersin sonuna kadar koridorda bekler; sınıf kendi kendine konuyu çalışır. Ertesi hafta kapı ardına kadar açık, kapıya bir takoz: "Bugün kapı açık kalsın." Son espri: o günden sonra hoca derse 10 dk erken gelip kapıda öğrencileri karşılıyor. Kanca: "Sınıf hocayı kapıda bıraktı." Soru: "Sence sınıf fazla mı ileri gitti?"
-- Hashtag: #hikaye #reddithikayeleri #okul #üniversite #hoca #komedi #keşfet #fyp
-
-### SERİ (3 part, Emrullah — aile): Amcanın Gürültülü Hediyeleri (komedi / aile) — sonraki seri
+### SERİ (aktif, 12:30/20:30; 3 part, Emrullah — aile): Amcanın Gürültülü Hediyeleri (komedi / aile) — P1 18.11 12:30, P2 18.11 20:30, P3 19.11 12:30
 - Kaynak: r/pettyrevenge, u/PrinceGuti — ranker.com "petty-revenge-jun-2022/miguelgr" #3 ("More Gifts, More Problems"). Doğrulanmamış; uyarlama, kendi cümlelerimizle.
 - Anlatıcı: bekâr amca (erkek) → Emrullah. Ağabey: Murat (yeğenlerin babası), yenge: Sevgi, yeğenler: Ali (7) ve Zeynep (5). Mağaza/oyuncak markası YOK.
 - PART 1 (güçlü kanca adayı → 55–85 sn olabilir): Ağabeyim bayramda "Sen bekârsın, paran bol; çocuklara doğru dürüst hediye al, yoksa bir dahakine görmezsin" diye laf sokar. Ertesi gün oyuncakçıda tezgâhtara tek soru: "En gürültülü ne var?" Kanca: "Ağabeyim hediyelerimi beğenmedi." Cliff: Bagaj ağzına kadar: davul, iki trompet, org, ksilofon ve bir kova sim.
@@ -200,6 +194,14 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Ton: komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #işyeri #müdür #komedi #keşfet #fyp #shorts
 
 ## Kullanıldı
+### SERİ (BİTTİ 17.11): Kapıyı Kilitleyen Hoca (komedi / okul) — P1 16.11 20:30, P2 17.11 12:30, P3 17.11 20:30
+- Kaynak: r/MaliciousCompliance, u/Khromez — listverse.com "Top 10 Stories of Malicious Compliance" #3 (eski MÜNFERİT 3). Doğrulanmamış; "Reddit'teki bir hikâyeden ilham alınmıştır."
+- Anlatıcı: üniversite öğrencisi kız → İrem. Hoca: Prof. Kemal Bey (kurgusal; gri sakal, papyon, kol saati). Sınıf başkanı: Burak. Üniversite adı YOK.
+- PART 1 (güçlü kanca adayı → 55–85 sn olabilir): Kemal Bey ilk derste kural koyar: "Dakika beş, kapı kilit." Geç kalan devamsız sayılır. Anlatıcı yağmurda otobüs kaçırınca kapının dışında kalır; camdan hocanın gülümsemesi. Bütün dönem 5'i geçen herkes kapıda. Kanca: "Hocamız geç kalanı derse almıyordu." Cliff: Bir sabah saat 09:05… kürsü boş. ✅ 2026-11-16 (20:30, 48,1 sn, İrem; güçlü kanca 4/4; Burak 9:06'da kapıda kaldı, anlatıcı yağmurda 9:07, alçılı arkadaş bile kapıda)
+- PART 2 (≤40 sn): Sınıf saate bakar; Burak ayağa kalkar, sakin sakin kapıyı içeriden kilitler: "Kural kuraldır." Koridordan ayak sesleri, kapı kolu oynar, camda Kemal Bey'in şaşkın yüzü. Kanca: "Bir gün hocamız geç kaldı." Cliff: Kapı çalınır; içeriden hep bir ağızdan: "Kuralınız hocam!" ✅ 2026-11-17 (12:30, 25,6 sn, İrem)
+- PART 3 FİNAL (≤40 sn): Hoca dersin sonuna kadar koridorda bekler; sınıf kendi kendine konuyu çalışır. Ertesi hafta kapı ardına kadar açık, kapıya bir takoz: "Bugün kapı açık kalsın." Son espri: o günden sonra hoca derse 10 dk erken gelip kapıda öğrencileri karşılıyor. Kanca: "Sınıf hocayı kapıda bıraktı." Soru: "Sence sınıf fazla mı ileri gitti?" ✅ 2026-11-17 (20:30, 24,7 sn, İrem) — SERİ BİTTİ
+- Hashtag: #hikaye #reddithikayeleri #okul #üniversite #hoca #komedi #keşfet #fyp
+
 ### SERİ (BİTTİ 16.11): Tuvalet Raporu (komedi / iş yeri) — 3 PART (FORMAT 4)
 - Kaynak: r/MaliciousCompliance, u/argash — ranker.com "20 Times People Got Revenge By Doing EXACTLY What They Were Told" #3 (eski MÜNFERİT 4). Doğrulanmamış; "Reddit'teki bir hikâyeden ilham alınmıştır."
 - Anlatıcı: çağrı merkezi çalışanı (erkek, kulaklıklı, yeşil gömlek) → Emrullah. Müdür: Necati Bey (gözlük, bıyık, beyaz gömlek + kırmızı kravat, elinde kronometre). Doktor: gri saç, önlük, steteskop. Rozet "PART n". Çizim: tools/dizi_15kasim/tuv.js.

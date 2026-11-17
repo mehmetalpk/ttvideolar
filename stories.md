@@ -45,3 +45,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-16 | Beş arkadaşım aynı raporu getirdi (Tuvalet Raporu) [Part 3 — FİNAL] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 26.1 sn | 12:30 | -2074083586317072636 | ÖĞLE | parkur:hayır
 - 2026-11-16 | Babamın ilk videosu 3 izlenme aldı (Hacker Kerem S3) [Part 2] | kendi kurgu | komedi/seri | Emrullah | 27.4 sn | 17:00 | 4048749132732517272 | AKŞAM | parkur:hayır
 - 2026-11-16 | Hocamız geç kalanı derse almıyordu (Kapıyı Kilitleyen Hoca) [Part 1] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 48.1 sn | 20:30 | 1689284055029794915 | GECE | parkur:hayır
+- 2026-11-17 | Anneannem bir gecede ünlü oldu (Hacker Kerem S3) [Part 3] | kendi kurgu | komedi/seri | Emrullah | 26.7 sn | 09:00 | -1211882974651595211 | SABAH | parkur:hayır
+- 2026-11-17 | Bir gün hocamız geç kaldı (Kapıyı Kilitleyen Hoca) [Part 2] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 25.6 sn | 12:30 | -6705771655308096005 | ÖĞLE | parkur:hayır
+- 2026-11-17 | Anneannem babama sözleşme imzalattı (Hacker Kerem S3) [Part 4] | kendi kurgu | komedi/seri | Emrullah | 24.8 sn | 17:00 | 1502175854493255554 | AKŞAM | parkur:hayır
+- 2026-11-17 | Sınıf hocayı kapıda bıraktı (Kapıyı Kilitleyen Hoca) [Part 3 — FİNAL] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 24.7 sn | 20:30 | -8718590887802616821 | GECE | parkur:hayır
