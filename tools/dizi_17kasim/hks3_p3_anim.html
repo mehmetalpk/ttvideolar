@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function vidScr(T){x.fillStyle='#f3dfc0';x.fillRect(0,0,480,300);x.fillStyle='#b07a4a';x.fillRect(0,230,480,70);danceNana(240,120,40,T);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,7);radial(540,900,1300,'#5a1a4a','#12040e');x.save();zoom(540,900,1.05+0.04*t);danceNana(540,780,175,T);x.restore();x.restore();vignette(0.45);
+ hook([['ANNEANNEM',110,'#fff'],['BİR GECEDE',140,YEL],['ÜNLÜ OLDU!',120,'#fff']],270);s3Badge(t,3);}});
+// 1 Kerem dansı kesip paylaştı
+sc.push({a:mid(1),f(t,T){x.fillStyle='#0b0d14';x.fillRect(0,0,W,H);x.save();zoom(540,900,1.0+0.03*t);laptop(540,700,1.3,()=>{vidScr(T);});sunglassesKerem(540,1400,120,{smile:0.6,brow:-0.4});x.restore();
+ B('4 SANİYE ✂️',300,110,YEL,t);}});
+// 2 başlık: anneannem
+sc.push({a:mid(2),f(t,T){x.fillStyle='#14182a';x.fillRect(0,0,W,H);x.save();zoom(540,800,1.0+0.04*t);const n='ANNEANNEM';const k=Math.min(n.length,Math.floor((T-mid(2))*9));x.fillStyle='#fff';rr(120,620,840,200,30);x.fill();x.font=`700 40px ${F}`;x.fillStyle='#888';x.textAlign='left';x.fillText('BAŞLIK:',160,665);x.font=`900 100px ${F}`;x.fillStyle='#111';x.textBaseline='middle';x.fillText(n.slice(0,k)+(Math.floor(T*3)%2?'|':''),160,755);x.restore();
+ B('TEK KELİME',330,105,'#fff',t);}});
+// 3 sabah 200 bin izlenme
+sc.push({a:mid(3),f(t,T){x.save();const w=W2(3,'İki');shake(T,w,w+0.5,10);x.fillStyle='#14182a';x.fillRect(0,0,W,H);burst(540,750,900,'rgba(255,210,63,0.18)',t);x.save();zoom(540,750,1.0+0.05*t);viewBox(540,720,1.1,T>w-0.1?'200 BİN':'...','İZLENME');x.restore();x.restore();
+ B('SABAH...',330,110,'#fff',t);}});
+// 4 anneanne telefona baktı
+sc.push({a:mid(4),f(t,T){salon();x.save();zoom(540,950,1.05+0.04*t);person(ANNEANNE,400,840,165,{eyeBig:1.3,brow:0.7,mouthOpen:0.5});nanaSpecs(400,840,165);phoneScr(800,900,0.85,-0.1,'👁','200.000',null,null);x.restore();
+ B('BU KADAR İNSAN',300,90,'#fff',t);B('BENİ Mİ İZLEDİ? 😳',420,95,YEL,t,0.12);}});
+// 5 babam: hala üç
+sc.push({a:mid(5),f(t,T){salon();x.save();zoom(540,950,1.05+0.05*t);person(BABA,380,860,160,{sad:0.6,brow:-0.6,angry:0.4,shirt:BS});phoneScr(780,880,0.9,0.05,'👁 3','MENEMEN',null,null);x.restore();
+ B('BABAMIN VİDEOSU:',300,90,'#fff',t);if(T>W2(5,'Hâlâ')-0.15)bigText('HÂLÂ 3 😑',540,420,120,RED,PP(T,5,'Hâlâ'),-0.03);}});
+// 6 kıskançlıktan mutfağa daldı
+sc.push({a:mid(6),f(t,T){x.save();shake(t,0,0.4,6);kitchen(false);x.save();zoom(540,950,1.05+0.04*t);const q=ease(prog(t,0,0.6));person(BABA,-100+480*q,860,160,{angry:0.8,brow:-0.9,shirt:BS});pan(760,1000,0.9,T);camTri(860,700,0.55,true,T);x.restore();x.restore();
+ B('KISKANÇLIK 😤',300,110,RED,t);B('YENİ MENEMEN!',420,105,'#fff',t,0.12);}});
+// 7 poz verirken unuttu
+sc.push({a:mid(7),f(t,T){kitchen(false);x.save();zoom(540,950,1.05+0.04*t);ringLight(840,640,0.7,true);person(BABA,420,820,165,{smile:1,eyeOpen:0.5,brow:0.3,shirt:BS});pan(760,1100,0.8,T);smoke(760,1050,T,0.4*prog(t,0.6,1.6));x.restore();
+ B('POZ 😎',300,120,'#fff',t);if(T>W2(7,'menemeni')-0.15)bigText('MENEMEN?!',540,420,110,YEL,PP(T,7,'menemeni'),-0.03);}});
+// 8 tava dumanlar içinde
+sc.push({a:mid(8),f(t,T){x.save();shake(t,0,1.2,9);kitchen(false);x.fillStyle='rgba(255,90,40,0.15)';x.fillRect(0,0,W,H);x.save();zoom(540,950,1.1);pan(540,1050,1.4,T);smoke(540,1000,T,1);person(BABA,840,760,120,{eyeBig:1.4,mouthOpen:0.8,brow:0.9,shirt:BS});x.restore();x.restore();
+ bigText('DUMAN! 🔥',540,320,130,RED,prog(t,0,0.15),-0.03);}});
+// 9 Kerem yorumları okudu
+sc.push({a:mid(9),f(t,T){x.fillStyle='#0b0d14';x.fillRect(0,0,W,H);x.save();zoom(540,900,1.0+0.03*t);sunglassesKerem(540,500,100,{brow:0.4,look:0});const L=[[680,'@ayse_42'],[810,'@mehmet.k'],[940,'@zehra_tt']];L.forEach(([y,n],i)=>comment(540,y,820,n,'.......',prog(T,st(9)+0.3+i*0.35,st(9)+0.6+i*0.35),'#6a8ac0'));x.restore();
+ B('YORUMLAR 💬',300,110,'#fff',t);}});
+// 10 teyzeyi geri getirin
+sc.push({a:mid(10),f(t,T){x.save();shake(t,0,0.6,8);radial(540,900,1300,'#3a1a5a','#0a0414');x.save();zoom(540,900,1.0+0.03*t);const N=['@ayse_42','@mehmet.k','@zehra_tt','@can.06'];N.forEach((n,i)=>comment(540,500+i*130,880,n,'TEYZEYİ GERİ GETİRİN!',prog(t,i*0.12,i*0.12+0.25),['#e05a7a','#5a9ae0','#e0a03a','#4ab07a','#a06ad0'][i]));x.restore();x.restore();
+ bigText('HEPSİ AYNI:',540,330,110,YEL,prog(t,0,0.15),-0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,4,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

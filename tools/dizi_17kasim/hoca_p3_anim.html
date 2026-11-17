@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+const inKemal=(o)=>()=>{x.fillStyle='#d8d2c0';x.fillRect(-120,-95,240,190);kemal(0,-10,48,o||{});};
+function fBadge(T){x.save();x.translate(540,215);const s=0.82+0.04*Math.sin(T*8);x.scale(s,s);x.rotate(-0.04);x.fillStyle='#ff2d55';rr(-280,-58,560,116,26);x.fill();x.strokeStyle='#fff';x.lineWidth=7;x.stroke();x.font=`900 58px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#fff';x.fillText('PART 3 · FİNAL',0,4,520);x.restore();}
+function openDoor(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#5e3e24';rr(-230,-560,460,580,10);x.fill();x.fillStyle='#f3ead2';x.fillRect(-200,-530,400,550);x.fillStyle='#2f5a46';x.fillRect(-150,-470,300,170);x.fillStyle='#a88a6a';x.fillRect(-200,-120,400,140);
+ x.fillStyle='#8a5e38';x.beginPath();x.moveTo(-200,-530);x.lineTo(-330,-590);x.lineTo(-330,80);x.lineTo(-200,20);x.closePath();x.fill();x.fillStyle='#cfe6ef';x.beginPath();x.moveTo(-230,-470);x.lineTo(-300,-500);x.lineTo(-300,-330);x.lineTo(-230,-300);x.closePath();x.fill();x.restore();}
+function wedge(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#c8a060';x.beginPath();x.moveTo(-160,40);x.lineTo(160,40);x.lineTo(160,-50);x.closePath();x.fill();x.strokeStyle='#8a6a3a';x.lineWidth=6;x.stroke();x.restore();}
+
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);corridor();x.fillStyle='rgba(255,60,60,0.08)';x.fillRect(0,0,W,H);x.save();zoom(540,1000,2.5+0.08*t);classDoor(540,1600,1.6,inKemal({sad:1,brow:0.8}),true);x.restore();x.restore();vignette(0.4);
+ hook([['SINIF HOCAYI',110,'#fff'],['KAPIDA',170,YEL],['BIRAKTI!',130,'#fff']],270);fBadge(t);}});
+// 1 Kemal Bey koridorda bekledi
+sc.push({a:mid(1),f(t,T){corridor();x.save();zoom(540,950,1.0+0.03*t);wallClock(820,520,0.8,10+(T-mid(1))*12);kemal(400,860,140,{sad:0.8,brow:0.5,lookDown:1});x.restore();
+ B('KORİDORDA',300,105,'#fff',t);B('BEKLEDİ ⏳',420,110,YEL,t,0.12);}});
+// 2 içeride kendi kendimize çalıştık
+sc.push({a:mid(2),f(t,T){classroom();x.save();zoom(540,950,1.0+0.03*t);STU.forEach((P,i)=>{person(P,180+i*240,960,85,{lookDown:1,brow:0.2});});x.restore();
+ B('KENDİ KENDİMİZE',300,90,'#fff',t);B('ÇALIŞTIK 📚',420,105,YEL,t,0.12);}});
+// 3 Burak tahtada anlattı
+sc.push({a:mid(3),f(t,T){classroom();x.save();zoom(540,900,1.0+0.03*t);x.strokeStyle='#fff';x.lineWidth=8;x.lineCap='round';const k=prog(T,st(3),en(3));for(let i=0;i<4;i++){const L=cl(k*4-i);if(L>0){x.beginPath();x.moveTo(200,500+i*80);x.lineTo(200+560*L,500+i*80);x.stroke();}}burak(820,820,120,{smile:0.6,mouthOpen:0.4*Math.abs(Math.sin(T*9)),look:-1});x.restore();
+ B('HOCA BURAK 👨‍🏫',300,95,YEL,t);}});
+// 4 ertesi hafta korka korka
+sc.push({a:mid(4),f(t,T){corridor();x.fillStyle='rgba(0,0,40,0.15)';x.fillRect(0,0,W,H);x.save();zoom(540,950,1.05+0.04*t);const q=prog(T,st(4),en(4)+0.3);kiz(250+200*q,880+6*Math.sin(T*25),150,{brow:0.9,eyeBig:1.3,mouthOpen:0.2});sweat(380+200*q,760,1,T);burak(780,900,120,{brow:0.8,eyeBig:1.2});x.restore();
+ B('ERTESİ HAFTA',300,100,'#fff',t);B('KORKA KORKA 😬',420,100,YEL,t,0.12);}});
+// 5 kapı ardına kadar açık
+sc.push({a:mid(5),f(t,T){corridor();x.save();shake(t,0,0.4,6);zoom(540,950,1.0+0.04*t);openDoor(560,1350,1.25);x.restore();
+ bigText('KAPI AÇIK! 🚪',540,330,120,YEL,prog(t,0,0.15),-0.03);}});
+// 6 takoz
+sc.push({a:mid(6),f(t,T){corridor();x.save();zoom(420,1250,1.4+0.1*t);openDoor(560,1350,1.25);wedge(390,1335,0.6);x.strokeStyle=RED;x.lineWidth=8;x.beginPath();x.arc(390,1320,130,0,7);x.stroke();x.restore();
+ B('ALTINDA',300,105,'#fff',t);B('BİR TAKOZ 🪵',420,105,YEL,t,0.12);}});
+// 7 not: bugün kapı açık kalsın
+sc.push({a:mid(7),f(t,T){corridor();x.save();zoom(540,750,1.0+0.04*t);paper(540,720,760,420,-0.03,[['BUGÜN KAPI',90,'#222',900],['AÇIK KALSIN.',90,RED,900],['— K.B.',50,'#555',700]],{lh:110,y0:-100});x.restore();
+ B('BİR NOT 📝',300,105,'#fff',t);}});
+// 8 Kemal Bey 10 dk erken
+sc.push({a:mid(8),f(t,T){classroom();x.save();zoom(540,900,1.0+0.04*t);digital(540,650,1.1,'08:50','#3bff7a');kemal(540,900,130,{smile:0.6,brow:-0.2});x.restore();
+ B('O GÜNDEN SONRA',300,90,'#fff',t);if(T>W2(8,'erken')-0.15)bigText('10 DK ERKEN! ⏰',540,420,100,YEL,PP(T,8,'erken'),-0.03);}});
+// 9 kapıda günaydın
+sc.push({a:mid(9),f(t,T){corridor();x.save();zoom(540,950,1.0+0.03*t);openDoor(330,1350,1.0);kemal(640,820,130,{smile:0.9,eyeOpen:0.6});const q=prog(T,st(9),en(9)+0.4);kiz(1100-200*q,950,90,{smile:0.5,look:-1});x.restore();
+ bubble2(540,360,760,200,'GÜNAYDIN','ÇOCUKLAR! 👋',85,T);}});
+// 10 soru
+sc.push({a:mid(10),f(t,T){radial(540,900,1300,'#3a2a5a','#0a0614');x.save();zoom(540,950,1.0+0.03*t);kemal(330,830,130,{smile:0.6,look:1});burak(760,830,130,{smile:0.6,look:-1});x.restore();
+ B('SENCE SINIF',300,95,'#fff',t);B('FAZLA MI GİTTİ? 🤔',420,95,YEL,t,0.12);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){radial(540,900,1300,'#1b3a6a','#040814');bigText('TAKİP ET',540,600,150,YEL,prog(t,0,0.25),-0.04);eyesIcon(540,820,1.0,T);followBtn(540,1000,T,1.3*back(prog(t,0.15,0.45)));}});
+setup(sc,TIM,en(10)+0.1+1.5);
+</script></body></html>

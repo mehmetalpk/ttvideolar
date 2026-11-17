@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+const inKemal=(o)=>()=>{x.fillStyle='#d8d2c0';x.fillRect(-120,-95,240,190);kemal(0,-10,48,o||{});};
+const inDark=()=>{x.fillStyle='#b9b09a';x.fillRect(-120,-95,240,190);};
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);corridor();x.fillStyle='rgba(255,200,60,0.10)';x.fillRect(0,0,W,H);x.save();zoom(540,900,1.05+0.04*t);kemal(540,820,190,{eyeBig:1.3,brow:0.9,eyeOpen:1});sweat(800,700,1.2,T);wristWatch(860,900,0.7);x.restore();x.restore();vignette(0.4);
+ hook([['BİR GÜN',110,'#fff'],['HOCAMIZ',160,YEL],['GEÇ KALDI!',125,'#fff']],270);tBadge(t,2);}});
+// 1 9:05 kürsü boş
+sc.push({a:mid(1),f(t,T){classroom();x.save();zoom(540,950,1.0+0.04*t);wallClock(860,330,0.6,5);lectern(540,1100,1.1);x.restore();
+ B('9:05',300,130,YEL,t);B('KÜRSÜ BOŞ 😳',430,100,'#fff',t,0.12);}});
+// 2 herkes saate baktı
+sc.push({a:mid(2),f(t,T){classroom();x.save();zoom(540,800,1.0+0.04*t);wallClock(540,620,1.3,5+(T-mid(2))*0.6);STU.forEach((P,i)=>person(P,180+i*240,1360,80,{look:0,brow:0.5,eyeBig:1.2}));x.restore();
+ B('HERKES SAATE BAKTI ⏰',300,80,'#fff',t);}});
+// 3 Burak ayağa kalktı
+sc.push({a:mid(3),f(t,T){classroom();x.save();zoom(540,950,1.05+0.04*t);const q=ease(prog(T,W2(3,'ayağa')-0.2,W2(3,'kalktı')+0.2));STU.forEach((P,i)=>{if(i!==1)person(P,180+i*240,1360,80,{look:i<1?1:-1,eyeBig:1.2})});burak(420,1360-560*q,120,{brow:-0.4,smile:0.2});x.restore();
+ B('BURAK',300,120,'#fff',t);B('AYAĞA KALKTI',430,100,YEL,t,0.12);}});
+// 4 kapıya yürüdü, içeriden kilitledi
+sc.push({a:mid(4),f(t,T){classroom();x.save();zoom(540,950,1.0+0.03*t);const lk=T>W2(4,'kilitledi')-0.05;const q=ease(prog(T,st(4),W2(4,'kilitledi')-0.2));classDoor(680,1350,1.1,inDark,lk);burak(150+250*q,900,120,{brow:-0.3,look:1});x.restore();if(lk)shake(T,W2(4,'kilitledi'),W2(4,'kilitledi')+0.4,10);
+ B('KAPIYA YÜRÜDÜ',300,95,'#fff',t);if(lk)bigText('KİLİTLEDİ! 🔒',540,420,110,RED,PP(T,4,'kilitledi'),-0.03);}});
+// 5 kural kuraldır
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#1a3a6a','#040a14');x.save();zoom(540,900,1.1+0.05*t);burak(540,860,190,{brow:-0.7,smile:0.4,eyeOpen:0.6});x.restore();
+ bubble2(540,330,820,220,'KURAL','KURALDIR. 😏',90,T);}});
+// 6 çıt çıkmadı
+sc.push({a:mid(6),f(t,T){classroom();x.fillStyle='rgba(0,0,0,0.25)';x.fillRect(0,0,W,H);x.save();zoom(540,950,1.0+0.03*t);STU.forEach((P,i)=>person(P,180+i*240,960,95,{eyeBig:1.3,brow:0.8,mouthOpen:0.1}));x.restore();
+ B('ÇIT YOK 🤫',300,120,'#fff',t);}});
+// 7 koridordan ayak sesleri
+sc.push({a:mid(7),f(t,T){corridor();x.save();zoom(540,950,1.0+0.03*t);const q=prog(T,st(7),en(7)+0.3);kemal(100+380*q,760+12*Math.abs(Math.sin(T*12)),130,{brow:0.3});x.restore();
+ B('KORİDORDA...',300,100,'#fff',t);bigText('TAK TAK TAK 👞',540,430,90,YEL,prog(t,0.3,0.5),-0.03);}});
+// 8 kapı kolu oynadı
+sc.push({a:mid(8),f(t,T){classroom();const j=Math.sin(T*22)*8;x.save();zoom(540,950,1.1+0.04*t);x.translate(j*0.3,0);classDoor(540,1350,1.2,inDark,true);x.save();x.translate(540+168*1.2,1350-247*1.2);x.rotate(Math.sin(T*18)*0.5);x.fillStyle='#ffd23f';rr(-10,-14,110,28,12);x.fill();x.restore();x.restore();
+ B('KAPI KOLU',300,110,'#fff',t);B('⬆️ ⬇️ ⬆️ ⬇️',420,90,YEL,t,0.12);}});
+// 9 camda Kemal Bey'in şaşkın yüzü
+sc.push({a:mid(9),f(t,T){classroom();const z=1.0+1.3*ease(prog(t,0,0.9));x.save();zoom(540,900,z);classDoor(540,1350,1.2,inKemal({eyeBig:1.5,brow:1,eyeOpen:1}),true);x.restore();
+ B('CAMDA...',300,110,'#fff',t);if(T>W2(9,'şaşkın')-0.15)bigText('KEMAL BEY! 😱',540,420,105,YEL,PP(T,9,'şaşkın'),-0.03);}});
+// 10 kapıyı çaldı
+sc.push({a:mid(10),f(t,T){classroom();x.save();shake(t,0,0.9,12);zoom(540,950,1.1);classDoor(540,1350,1.2,inKemal({brow:-0.5,angry:0.5}),true);x.restore();
+ bigText('TOK TOK! 🚪',540,330,130,RED,prog(t,0,0.15),-0.03);}});
+// 11 hep bir ağızdan: kuralınız hocam
+sc.push({a:mid(11),f(t,T){const w=W2(11,'Kuralınız');x.save();if(T>w-0.1)shake(T,w,w+0.6,10);classroom();x.save();zoom(540,950,1.0+0.03*t);STU.forEach((P,i)=>person(P,180+i*240,980+(T>w?6*Math.sin(T*16+i):0),95,{mouthOpen:T>w-0.1?0.9:0.2,smile:0.6,brow:-0.2}));kiz(540,1390,80,{mouthOpen:T>w-0.1?0.9:0.2,smile:0.6});x.restore();x.restore();
+ if(T>w-0.15)bubble2(540,360,880,230,'KURALINIZ','HOCAM! 😇',95,T);else B('HEP BİR AĞIZDAN',330,90,'#fff',t);}});
+sc.push({a:en(11)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(11)+0.1+2.4);
+</script></body></html>
