@@ -1,0 +1,13 @@
+[intense] Padişah öldü, ordusu bilmiyordu.
+
+[serious] Bir Mayıs bin beş yüz altmış altı. Yetmiş bir yaşındaki Kanuni Sultan Süleyman, son seferine çıktı. || 1 Mayıs 1566. 71 yaşındaki Kanuni Sultan Süleyman, son seferine çıktı.
+Hedef Viyana'ydı, ama ordu Zigetvar Kalesi'ne yöneldi.
+[curious] Kalede Kont Zrinyi ve iki bin üç yüz asker direniyordu. || Kalede Kont Zrinyi ve 2.300 asker direniyordu.
+[serious] Ağustosta kuşatma başladı. Haftalar geçti, kale düşmedi.
+[whispers] Altı Eylül'ü yediye bağlayan gece, Kanuni çadırında hayata gözlerini yumdu. || 6 Eylül'ü 7'ye bağlayan gece, Kanuni çadırında hayata gözlerini yumdu.
+[intense] Kale ise birkaç saat sonra düştü.
+[serious] Ordu zaferi kutluyordu; padişahının öldüğünü bilmiyordu.
+Sadrazam Sokullu Mehmed Paşa biliyordu: Bu haber yayılırsa ordu dağılabilirdi.
+[whispers] Ve bir sır planı kurdu.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.
