@@ -1,0 +1,12 @@
+[intense] Altı yüz denizci, dünyanın öbür ucuna yelken açtı. || 600 denizci, dünyanın öbür ucuna yelken açtı.
+
+[serious] Temmuz, bin sekiz yüz seksen dokuz. İstanbul. || Temmuz 1889. İstanbul.
+Ertuğrul Fırkateyni, Sultan İkinci Abdülhamid'in hediyelerini Japon imparatoruna götürüyordu. || Ertuğrul Fırkateyni, Sultan II. Abdülhamid'in hediyelerini Japon imparatoruna götürüyordu.
+[curious] Gemi eskiydi; yolculuk tam on bir ay sürdü. || Gemi eskiydi; yolculuk tam 11 ay sürdü.
+[warm] Haziran bin sekiz yüz doksan. Yokohama. || Haziran 1890. Yokohama.
+İmparator Meiji, Osmanlı heyetini sarayında kabul etti.
+[serious] On beş Eylül'de dönüş için demir aldılar. || 15 Eylül'de dönüş için demir aldılar.
+[whispers] Ama Eylül, tayfun mevsimiydi.
+[intense] Ertesi gün gökyüzü karardı.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

@@ -1,0 +1,48 @@
+// Ertuğrul serisi ortak çizimleri
+function osmFlag(cx,cy,w,t){const h=w*0.66;x.save();x.translate(cx,cy);x.fillStyle='#c8102e';x.beginPath();x.moveTo(0,0);for(let i=0;i<=10;i++){x.lineTo(w*i/10,Math.sin(t*6+i*0.6)*w*0.04);}for(let i=10;i>=0;i--){x.lineTo(w*i/10,h+Math.sin(t*6+i*0.6)*w*0.04);}x.fill();x.fillStyle='#fff';x.beginPath();x.arc(w*0.42,h/2,h*0.27,0,7);x.fill();x.fillStyle='#c8102e';x.beginPath();x.arc(w*0.48,h/2,h*0.22,0,7);x.fill();x.fillStyle='#fff';x.beginPath();for(let i=0;i<10;i++){const a=i*Math.PI/5-Math.PI/2,r=i%2?h*0.05:h*0.12;x.lineTo(w*0.66+Math.cos(a)*r,h/2+Math.sin(a)*r);}x.fill();x.restore();}
+function jpFlag(cx,cy,w,t){const h=w*0.66;x.save();x.translate(cx,cy);x.fillStyle='#fff';x.beginPath();x.moveTo(0,0);for(let i=0;i<=10;i++)x.lineTo(w*i/10,Math.sin(t*6+i*0.6)*w*0.04);for(let i=10;i>=0;i--)x.lineTo(w*i/10,h+Math.sin(t*6+i*0.6)*w*0.04);x.fill();x.fillStyle='#bc002d';x.beginPath();x.arc(w/2,h/2,h*0.3,0,7);x.fill();x.restore();}
+function frigate(cx,cy,s,t,o={}){x.save();x.translate(cx,cy);x.rotate(o.tilt||Math.sin(t*1.6)*0.03);x.scale(s,s);
+ const br=o.broken||0;
+ // hull
+ x.fillStyle='#1c140e';x.beginPath();x.moveTo(-340,-30);x.lineTo(360,-40);x.quadraticCurveTo(330,40,280,80);x.lineTo(-300,80);x.quadraticCurveTo(-340,30,-340,-30);x.fill();
+ x.fillStyle='#e8dcc0';x.fillRect(-320,-12,640,16);x.fillStyle='#1c140e';for(let i=0;i<12;i++)x.fillRect(-290+i*50,-10,18,12);
+ // bowsprit
+ x.strokeStyle='#2b1d12';x.lineWidth=8;x.beginPath();x.moveTo(340,-40);x.lineTo(470,-110);x.stroke();
+ // funnel + smoke
+ x.fillStyle='#2b2220';x.fillRect(-30,-150,44,120);if(!o.nosmoke){for(let i=0;i<5;i++){const k=((t*0.6+i*0.2)%1);x.fillStyle=`rgba(80,80,80,${0.5*(1-k)})`;x.beginPath();x.arc(-8-k*160,-170-k*160,24+k*50,0,7);x.fill();}}
+ // masts
+ const ms=[[-210,430],[60,480],[260,400]];ms.forEach(([mx,mh],k)=>{if(br&&k==1){x.save();x.translate(mx,-40);x.rotate(br*1.1);x.fillStyle='#3a2414';x.fillRect(-6,-mh,12,mh);x.restore();return;}x.fillStyle='#3a2414';x.fillRect(mx-6,-40-mh,12,mh);
+  if(!o.bare){for(let j=0;j<3;j++){const yy=-40-mh+30+j*mh*0.3,w=(150-j*-20)*(k==2?0.8:1);x.fillStyle='#efe6d2';x.beginPath();x.moveTo(mx-w/2,yy);x.lineTo(mx+w/2,yy);x.quadraticCurveTo(mx+w/2+16+Math.sin(t*3+j)*6,yy+mh*0.12,mx+w/2-6,yy+mh*0.24);x.lineTo(mx-w/2+6,yy+mh*0.24);x.quadraticCurveTo(mx-w/2-10,yy+mh*0.12,mx-w/2,yy);x.fill();}}});
+ osmFlag(-336,-210,90,t);x.fillStyle='#3a2414';x.fillRect(-340,-210,6,180);
+ x.restore();}
+function seaBg(t,c1,c2,y=980,wc='#2f6f8a',amp=26){x.fillStyle=grad(0,y,[c1,c2]);x.fillRect(0,0,W,H);x.fillStyle=wc;x.fillRect(0,y,W,H-y);waves(y+10,t,wc,amp);waves(y+60,t*1.3+1,'rgba(10,40,60,0.6)',amp*0.8);}
+function storm(t){x.fillStyle=grad(0,H,['#0b1018','#1d2a36']);x.fillRect(0,0,W,H);const fl=(Math.sin(t*7)>0.93)?0.5:0;if(fl){x.fillStyle=`rgba(220,230,255,${fl})`;x.fillRect(0,0,W,H);}rain(t,0.45);}
+function lightning(cx,t,p){if(Math.sin(t*5)<0.7)return;x.save();x.strokeStyle='rgba(235,240,255,0.95)';x.lineWidth=8;x.beginPath();let px=cx,py=0;x.moveTo(px,py);const r=rng(Math.floor(t*5));while(py<760){px+=(r()-0.5)*120;py+=60+r()*50;x.lineTo(px,py);}x.stroke();x.restore();}
+function lighthouse(cx,base,s,t,on=1){x.save();x.translate(cx,base);x.scale(s,s);if(on){x.save();x.translate(0,-420);x.rotate(Math.sin(t*1.2)*0.6);const g=x.createLinearGradient(0,0,-900,0);g.addColorStop(0,'rgba(255,240,170,0.7)');g.addColorStop(1,'rgba(255,240,170,0)');x.fillStyle=g;x.beginPath();x.moveTo(0,0);x.lineTo(-1100,-160);x.lineTo(-1100,160);x.fill();x.restore();}
+ x.fillStyle='#e8e2d4';x.beginPath();x.moveTo(-70,0);x.lineTo(-45,-380);x.lineTo(45,-380);x.lineTo(70,0);x.fill();x.fillStyle='#b22222';x.fillRect(-60,-130,120,40);x.fillRect(-52,-270,104,40);x.fillStyle=on?'#ffe48a':'#555';x.fillRect(-40,-450,80,70);x.fillStyle='#2b2220';x.beginPath();x.moveTo(-55,-450);x.lineTo(0,-510);x.lineTo(55,-450);x.fill();x.restore();}
+function cliff(t,col='#15120e'){x.fillStyle=col;x.beginPath();x.moveTo(W,700);x.lineTo(760,760);x.lineTo(700,900);x.lineTo(560,1000);x.lineTo(420,1240);x.lineTo(0,1300);x.lineTo(0,H);x.lineTo(W,H);x.fill();}
+function rocks(y,t,col='#0e0c0a'){x.fillStyle=col;[[120,90],[330,140],[560,100],[800,160],[1000,110]].forEach(([px,h],i)=>{x.beginPath();x.moveTo(px-110,y+20);x.lineTo(px-30,y-h);x.lineTo(px+20,y-h*0.7);x.lineTo(px+100,y+20);x.fill();});}
+function torii(cx,base,s,col='#c8361e'){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;x.fillRect(-170,-380,34,380);x.fillRect(136,-380,34,380);x.fillRect(-210,-300,420,30);x.fillStyle='#1a1410';x.beginPath();x.moveTo(-260,-400);x.quadraticCurveTo(0,-360,260,-400);x.lineTo(250,-360);x.quadraticCurveTo(0,-330,-250,-360);x.fill();x.restore();}
+function mtFuji(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#5a6a8a';x.beginPath();x.moveTo(-500,0);x.lineTo(-90,-380);x.lineTo(90,-380);x.lineTo(500,0);x.fill();x.fillStyle='#f4f6fa';x.beginPath();x.moveTo(-160,-315);x.lineTo(-90,-380);x.lineTo(90,-380);x.lineTo(160,-315);x.lineTo(90,-290);x.lineTo(30,-320);x.lineTo(-40,-290);x.fill();x.restore();}
+function sailor(cx,base,s,col='#0d0a08'){x.save();x.translate(cx,base);x.scale(s,s);sil(0,0,1,col);x.fillStyle='#c8102e';x.beginPath();x.ellipse(0,-182,26,16,0,0,7);x.fill();x.fillRect(-20,-196,40,16);x.restore();}
+function villager(cx,base,s,col='#0d0a08',lamp=0,t=0){x.save();x.translate(cx,base);x.scale(s,s);sil(0,0,1,col);x.fillStyle=col;x.beginPath();x.moveTo(-60,-180);x.lineTo(0,-230);x.lineTo(60,-180);x.fill();x.restore();if(lamp)lantern(cx+55*s,base-110*s,t);}
+// 0 kanca
+shot(0,0,t=>{seaBg(t,'#f2a65a','#ffd9a0',1000);sun(540,860,150);frigate(540+(t*40)-40,1010,1.0,t);bigText('600 DENİZCİ',W/2,330,140,'#fff',1);bigText('DÜNYANIN ÖBÜR UCUNA',W/2,480,74,'#ffd23f',1);vignette(0.35);});
+// 1 temmuz 1889 istanbul
+shot(1,1,t=>{x.fillStyle=grad(0,H,['#8ab6d6','#f3e3c0']);x.fillRect(0,0,W,H);skylineIst(980,'#3a2a1e');x.fillStyle='#2f6f8a';x.fillRect(0,1000,W,H);waves(1010,t,'#2f6f8a',18);frigate(560-t*30,1080,0.75,t);bigText('1889',W/2,560,230,'#ffd23f',eOut(cl(t*3)));bigText('TEMMUZ • İSTANBUL',W/2,330,80,'#fff',1);});
+// 2 hediyeler
+shot(2,2,t=>{paper(true);sultan(540,760,120,{robe:'#1f2a44',smile:0.2});const p=eOut(cl((t-0.8)*2));x.save();x.translate(840,980);x.scale(p*0.5,p*0.5);x.fillStyle='#7a1d1d';rr(-180,-90,360,180,18);x.fill();x.fillStyle=PAL.gold;x.fillRect(-14,-90,28,180);x.fillRect(-180,-14,360,28);x.restore();bigText('II. ABDÜLHAMİD',W/2,330,104,'#ffd23f',1);bigText('JAPONYA\'YA HEDİYE',W/2,470,70,'#fff',eOut(cl((t-0.4)*3)));vignette(0.5);});
+// 3 11 ay
+shot(3,3,t=>{x.fillStyle=grad(0,H,['#20324a','#6a8eb0']);x.fillRect(0,0,W,H);x.fillStyle='#d8c08a';x.beginPath();x.ellipse(540,860,420,300,0,0,7);x.fill();mapArrow(220,800,860,920,cl(t/2.4),'#c1121f');x.fillStyle='#c1121f';x.beginPath();x.arc(220,800,18,0,7);x.fill();frigate(220+640*eOut(cl(t/2.6)),880-40*Math.sin(cl(t/2.6)*3.1),0.25,t);counter(0,11,t/1.8,W/2,330,170,'#ffd23f',' AY');bigText('İSTANBUL',230,700,46,'#fff',1);bigText('JAPONYA',860,1000,46,'#fff',1);});
+// 4 yokohama 1890
+shot(4,4,t=>{x.fillStyle=grad(0,H,['#f7c6a0','#fbe9d6']);x.fillRect(0,0,W,H);mtFuji(540,1000,1.2);x.fillStyle='#2f6f8a';x.fillRect(0,1000,W,H);waves(1010,t,'#2f6f8a',14);torii(840,1000,0.6);frigate(380,1060,0.6,t);bigText('1890',W/2,560,220,'#c1121f',eOut(cl(t*3)));bigText('HAZİRAN • YOKOHAMA',W/2,330,76,'#2b1d12',1);});
+// 5 meiji kabul
+shot(5,5,t=>{paper(false);rays(540,820,t,'rgba(201,162,74,0.14)');osmFlag(150,560,230,t);jpFlag(700,560,230,t);x.fillStyle='#2b1d12';x.fillRect(146,560,6,640);x.fillRect(696,560,6,640);sil(380,1200,1.6,'#2b1d12');sil(700,1200,1.6,'#1a1a2a');bigText('İMPARATOR MEİJİ',W/2,330,96,'#8b1e1e',1);badge(540,1360,'RESMİ KABUL',PAL.navy,(t-0.8)*3);vignette(0.3);});
+// 6 15 eylül demir aldı
+shot(6,6,t=>{seaBg(t,'#a8c4d8','#e6eef2',1000);mtFuji(900,1000,0.6);frigate(560-t*70,1060,0.8,t);bigText('15 EYLÜL',W/2,350,140,'#2b1d12',1);bigText('DÖNÜŞ YOLU',W/2,500,90,'#8b1e1e',eOut(cl((t-0.5)*3)));});
+// 7 tayfun mevsimi
+shot(7,7,t=>{x.fillStyle=grad(0,H,['#3a4656','#8a96a6']);x.fillRect(0,0,W,H);x.save();x.translate(540,760);x.rotate(t*1.5);x.strokeStyle='rgba(230,235,245,0.55)';x.lineWidth=26;for(let k=0;k<3;k++){x.beginPath();for(let a=0;a<9;a+=0.1){const r=20+a*30;x.lineTo(Math.cos(a+k*2.1)*r,Math.sin(a+k*2.1)*r);}x.stroke();}x.restore();bigText('TAYFUN',W/2,340,170,'#ffd23f',1);bigText('MEVSİMİ',W/2,1400,90,'#fff',eOut(cl((t-0.4)*3)));});
+// 8 gökyüzü karardı
+shot(8,8,t=>{const k=cl(t/1.6);seaBg(t,'#2a3644','#5a6a7a',1000,'#1d3a4a',26+k*30);x.fillStyle=`rgba(5,8,14,${k*0.6})`;x.fillRect(0,0,W,H);if(t>0.9)rain(t,0.4);frigate(540,1060,0.8,t,{tilt:Math.sin(t*3)*0.1*k});bigText('GÖKYÜZÜ KARARDI',W/2,380,104,'#fff',1);vignette(0.6);});
+// 9 outro
+shot(9,9,t=>outro(t,2,'#1d2a36','#05080c'));
