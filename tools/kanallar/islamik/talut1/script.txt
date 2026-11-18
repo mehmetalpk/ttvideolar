@@ -1,0 +1,10 @@
+[intense] Fakir bir adam, kral seçildi.
+
+[serious] İsrailoğulları peygamberlerine dedi: Bize bir kral gönder, Allah yolunda savaşalım.
+Allah, Talut'u onlara kral olarak gönderdi.
+[intense] Ama itiraz ettiler: O bize nasıl kral olur? Ona bol mal verilmedi ki!
+[calm] Peygamber dedi: Allah onu seçti. Ona bol ilim ve güçlü bir beden verdi.
+[serious] Krallığının işareti şu: Melekler size bir sandık getirecek.
+[intense] Talut ordusuyla yola çıktı. Önlerinde bir nehir vardı.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.
