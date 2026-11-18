@@ -49,3 +49,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-17 | Bir gün hocamız geç kaldı (Kapıyı Kilitleyen Hoca) [Part 2] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 25.6 sn | 12:30 | -6705771655308096005 | ÖĞLE | parkur:hayır
 - 2026-11-17 | Anneannem babama sözleşme imzalattı (Hacker Kerem S3) [Part 4] | kendi kurgu | komedi/seri | Emrullah | 24.8 sn | 17:00 | 1502175854493255554 | AKŞAM | parkur:hayır
 - 2026-11-17 | Sınıf hocayı kapıda bıraktı (Kapıyı Kilitleyen Hoca) [Part 3 — FİNAL] | r/MaliciousCompliance (havuz) | komedi/seri | İrem | 24.7 sn | 20:30 | -8718590887802616821 | GECE | parkur:hayır
+- 2026-11-18 | Babam 40 dakika tavanı canlı yayınladı (Hacker Kerem S3) [Part 5] | kendi kurgu | komedi/seri | Emrullah | 26.4 sn | 09:00 | 2499186309562647252 | SABAH | parkur:hayır
+- 2026-11-18 | Ağabeyim hediyelerimi beğenmedi (Amcanın Gürültülü Hediyeleri) [Part 1] | r/pettyrevenge (havuz) | komedi/seri | Emrullah | 30.8 sn | 12:30 | -185555981337276926 | ÖĞLE | parkur:hayır
+- 2026-11-18 | Annem kanala bulaşık kuralı koydu (Hacker Kerem S3) [Part 6] | kendi kurgu | komedi/seri | Emrullah | 27.4 sn | 17:00 | 8357923527151863167 | AKŞAM | parkur:hayır
+- 2026-11-18 | Yeğenlerime davul ve trompet aldım (Amcanın Gürültülü Hediyeleri) [Part 2] | r/pettyrevenge (havuz) | komedi/seri | Emrullah | 27.9 sn | 20:30 | 5294021041276734638 | GECE | parkur:hayır

@@ -1,11 +1,11 @@
 # ORTAK HAFIZA — …sal Hikayeler
 (Kural: CLAUDE.md. Her oturum başında oku, her üretim mesajından sonra güncelle ve push et.)
 
-## Güncel durum (son güncelleme: 2026-11-17 04:10)
+## Güncel durum (son güncelleme: 2026-11-18 04:10)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
 - **Redditsel formatı (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
-- **Redditsel seri durumu (17 Kas gece):** 17.11 dolu: HK S3 P3 09:00, Kapıyı Kilitleyen Hoca P2 12:30, HK S3 P4 17:00, Hoca P3 FİNAL 20:30 (seri bitti). Sırada 18.11: HK S3 P5 09:00 + P6 17:00, Amcanın Gürültülü Hediyeleri P1 12:30 + P2 20:30 (Emrullah); 19.11 12:30 Amca P3 FİNAL, 20:30 Kar Küremeyi İstemeyen Komşu P1. Çizim/yardımcılar: tools/dizi_16kasim + dizi_17kasim.
+- **Redditsel seri durumu (18 Kas gece):** 18.11 dolu: HK S3 P5 09:00, Amca P1 12:30, HK S3 P6 17:00, Amca P2 20:30. Sırada 19.11: HK S3 P7 09:00 + P8 17:00, Amca P3 FİNAL 12:30, Kar Küremeyi İstemeyen Komşu P1 20:30; 20.11 12:30 Kar P2, 20:30 Kar P3 FİNAL (sonra Görümcemin Kek Topları, İrem). Çizim/yardımcılar: tools/dizi_17kasim + dizi_18kasim (amca.js).
 - **Redditsel sıradaki (15 Kas haftalık analiz):** HK SEZON 3 "Babamın YouTube Kanalı" 14 partlık plan havuz.md'de (16–22.11). 3 partlık seri sırası: Tuvalet Raporu P3 (16.11 12:30) → Kapıyı Kilitleyen Hoca (İrem, P1 16.11 20:30) → Amcanın Gürültülü Hediyeleri → Kar Küremeyi İstemeyen Komşu → Görümcemin Kek Topları (İrem).
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
 - **Küçük hesaplar planı (10 Kas kararı):** Grup 1 seri (İslamik, Osmanlısal, Motivasyonel) günde 1 part; Grup 2 (Sporsal, Sanatsal, Yemeksel) günde 1, TikTok'a da devam; Grup 3 (Psikolojik, Parasal, Kriminal) iki günde 1 ama daha kaliteli. Saat testi Redditsel hariç: A 09:00 / B 16:00, 23 Kas'ta yer değiştir. Ayrıntı: stok/URETIM.md.
@@ -38,6 +38,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-18 04:10 | gece görevi (Claude) | Redditsel 18.11: HK S3 P5 (09:00, 26,4 sn), Amca P1 (12:30, 30,8 sn), HK S3 P6 (17:00, 27,4 sn), Amca P2 (20:30, 27,9 sn) Metricool'a planlandı; MP4'ler depodan silindi. 17.11 TikTok: Hoca P2 69,1K/1.097 beğeni, HK S3 P3 35,7K/281, HK S3 P4 20,4K/82, Hoca P3 FİNAL 15,0K/277 (ilk saatler); ort. izleme süresi yine boş.
 - 2026-11-17 04:20 | gece görevi (Claude) | Küçük hesaplar İş 1 (18.11): tüm hesaplar doluydu (Grup 3 17.11'de paylaşıyor) → üretim yok. İş 2 (Salı Osmanlısal) 7 video: Ertuğrul Fırkateyni P1–P3 (19–21.11 16:00), Vaka-i Hayriye P1–P3 (22.11 16:00, 23–24.11 09:00 — saat değişimi), Kanuni Zigetvar P1 (25.11 09:00). Hepsi 27–34 sn, TT+IG+YT; MP4'ler depodan silindi.
 - 2026-11-17 04:10 | gece görevi (Claude) | Redditsel 17.11: HK S3 P3 (09:00, 26,7 sn), Hoca P2 (12:30, 25,6 sn, İrem), HK S3 P4 (17:00, 24,8 sn), Hoca P3 FİNAL (20:30, 24,7 sn; seri bitti → Kullanıldı) Metricool'a planlandı; MP4'ler depodan silindi. 16.11 TikTok: HK S3 P2 24,2K/313 beğeni, Hoca P1 15,2K/165, Tuvalet P3 7,4K/89, HK S3 P1 3,7K/35 (ilk saatler); ort. izleme süresi yine boş.
 - 2026-11-16 06:50 | gece görevi (Claude) | Redditsel 16.11: HK S3 P1 (09:00, 27,6 sn), Tuvalet Raporu P3 FİNAL (12:30, 26,1 sn; seri bitti), HK S3 P2 (17:00, 27,4 sn), Kapıyı Kilitleyen Hoca P1 (20:30, 48,1 sn, İrem; güçlü kanca 4/4) Metricool'a planlandı; MP4'ler depodan silindi. 15.11 TikTok: Tuvalet P1 11,5K/170 beğeni, HK S2 P10 FİNAL 2,6K/20, HK S2 P9 2,1K/42, Tuvalet P2 1,8K/28 (ilk saatler); ort. izleme süresi yine boş.

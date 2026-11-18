@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+function paperBits(cx,cy,T,a){x.save();x.globalAlpha=a;const r=rng(11);for(let i=0;i<14;i++){const k=((T*0.9+r())%1);x.save();x.translate(cx+(r()-0.5)*500*k,cy-260*k+300*k*k);x.rotate(T*4+i);x.fillStyle=['#3a7ac0','#ffd23f','#e05a9a'][i%3];x.fillRect(-22,-14,44,28);x.restore();}x.restore();}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);radial(540,900,1300,'#3a1a5a','#0a0414');x.save();zoom(540,900,1.05+0.04*t);amca(380,840,180,{smile:0.8,brow:-0.6,eyeOpen:0.6,look:1});drum(800,1000,0.7,T,true);trumpet(800,760,0.6,-0.4);x.restore();x.restore();vignette(0.45);
+ hook([['YEĞENLERİME',110,'#fff'],['DAVUL VE',150,YEL],['TROMPET ALDIM!',105,'#fff']],270);amBadge(t,2);}});
+// 1 kutuları kapıya taşıdım
+sc.push({a:mid(1),f(t,T){x.fillStyle='#d8cdb8';x.fillRect(0,0,W,H);x.fillStyle='#9a8a70';x.fillRect(0,1350,W,600);x.save();zoom(540,900,1.0+0.04*t);apartDoor(760,900,0.8);giftBox(330,1250,0.8,'#3a7ac0','#ffd23f',false);giftBox(330,1060,0.7,'#e05a9a','#fff',false);giftBox(330,900,0.6,'#40a060','#ffd23f',false);amca(560,800,100,{smile:0.7,brow:-0.4,look:-1});x.restore();
+ B('HAFTA SONU 📦',300,105,'#fff',t);}});
+// 2 ağabeyimle yengem sevindi
+sc.push({a:mid(2),f(t,T){homeRoom();x.save();zoom(540,900,1.0+0.04*t);murat(360,820,150,{smile:1,eyeOpen:0.4});sevgi(720,830,140,{smile:1,eyeOpen:0.4});x.restore();
+ if(T>W2(2,'adam')-0.15)bigText('"SONUNDA ADAM OLDUN!"',540,320,72,YEL,PP(T,2,'adam'),-0.03);else B('ÇOK SEVİNDİLER 😊',300,95,'#fff',t);}});
+// 3 Ali yırttı: davul
+sc.push({a:mid(3),f(t,T){const w=W2(3,'Davul');homeRoom();x.save();if(T>w-0.1)shake(T,w,w+0.5,8);zoom(540,900,1.0+0.04*t);ali(320,820,130,{smile:1,mouthOpen:0.6,eyeBig:1.3});const p=PP(T,3,'Davul');if(p>0){x.save();x.translate(740,880);x.scale(back(p),back(p));drum(0,0,0.9,T,false);x.restore();}else giftBox(740,880,0.9,'#3a7ac0','#ffd23f',false);paperBits(740,820,T,p);x.restore();
+ if(p>0)bigText('DAVUL! 🥁',540,330,130,YEL,p,-0.04);else B('ALİ YIRTTI',300,105,'#fff',t);}});
+// 4 ağabeyimin gülümsemesi söndü
+sc.push({a:mid(4),f(t,T){homeRoom();x.save();zoom(540,880,1.1+0.05*t);const k=prog(T,mid(4)+0.3,en(4));murat(540,860,210,{smile:1-1.4*k,eyeOpen:1-0.3*k,brow:0.3*k});x.restore();
+ B('GÜLÜMSEMESİ',290,100,'#fff',t);B('SÖNDÜ 😐',410,115,YEL,t,0.25);}});
+// 5 Zeynep: iki trompet
+sc.push({a:mid(5),f(t,T){const w=W2(5,'trompet');radial(540,900,1300,'#5a3a10','#140a02');x.save();if(T>w-0.1)shake(T,w,w+0.5,8);zoom(540,880,1.05+0.04*t);zeynep(380,860,150,{smile:1,mouthOpen:0.5});const p=PP(T,5,'trompet');if(p>0){x.save();x.translate(760,820);x.scale(back(p),back(p));trumpet(0,-80,0.8,-0.3);trumpet(0,80,0.8,0.25);x.restore();noteBurst(760,800,T);}x.restore();
+ if(p>0)bigText('İKİ TROMPET!',540,330,115,YEL,p,-0.04);else B('ZEYNEP AÇTI',300,105,'#fff',t);}});
+// 6 yengem yutkundu
+sc.push({a:mid(6),f(t,T){radial(540,900,1300,'#1a3a3a','#040e0e');x.save();zoom(540,880,1.1+0.06*t);sevgi(540,860,210,{eyeBig:1.4,smile:-0.3,brow:0.8});sweat(760,700,1.2,T);x.restore();
+ B('YENGEM',290,105,'#fff',t);B('YUTKUNDU 😰',410,115,YEL,t,0.2);}});
+// 7 son kutu devrildi, halı sim
+sc.push({a:mid(7),f(t,T){const w=W2(7,'halı');homeRoom();const r=rng(21);const sp=prog(T,w-0.3,en(7));for(let i=0;i<220*sp;i++){x.fillStyle=['#ffd23f','#ff5ab0','#5ad0ff','#fff'][i%4];x.fillRect(80+r()*920,1380+r()*240,12,12);}x.save();zoom(540,950,1.0+0.04*t);const tip=prog(T,mid(7)+0.2,mid(7)+0.8);x.save();x.translate(540,860);x.rotate(tip*1.4);glitterBucket(0,0,1.4,T);x.restore();x.restore();glitterRain(T,sp,4);
+ if(T>w-0.15)bigText('BÜTÜN HALI SİM!',540,330,105,YEL,PP(T,7,'halı'),-0.03);else B('SON KUTU DEVRİLDİ',300,90,'#fff',t);}});
+// 8 konser
+sc.push({a:mid(8),f(t,T){x.save();shake(t,0,2,6);radial(540,900,1300,'#5a1a5a','#12040f');glitterRain(T,0.5,8);x.save();zoom(540,900,1.0+0.03*t);ali(300,780,110,{mouthOpen:0.8,smile:1});drum(300,1000,0.8,T,true);zeynep(780,780,105,{smile:1,eyeOpen:0.3});trumpet(640,820,0.6,0.1);noteBurst(540,780,T);x.restore();x.restore();
+ B('KONSER! 🎺',300,120,YEL,t);}});
+// 9 ben çıkarken ağabeyim kulaklarını kapattı
+sc.push({a:mid(9),f(t,T){homeRoom();x.save();zoom(540,900,1.0+0.04*t);apartDoor(880,900,0.7);amca(880,800,90,{smile:0.8,look:1,brow:-0.4});murat(380,840,170,{eyeOpen:0.2,brow:0.9,mouthOpen:0.6});earCover(380,840,170,'#b07850');noteBurst(380,700,T,'#ff5a5a');x.restore();
+ B('KULAKLARINI KAPATTI',300,80,'#fff',t);}});
+// 10 pilleri ne zaman biter
+sc.push({a:mid(10),f(t,T){x.save();shake(t,0,1.4,14);radial(540,900,1300,'#6a0a0a','#140202');x.save();zoom(540,880,1.1+0.05*t);murat(540,860,220,{angry:1,brow:-0.6,mouthOpen:1,red:0.6});earCover(540,860,220,'#b07850');x.restore();x.restore();vignette(0.4);
+ bigText('PİLLERİ NE ZAMAN',540,300,85,'#fff',prog(t,0,0.2),-0.03);bigText('BİTER?!',540,430,140,RED,PP(T,10,'biter'),-0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+function ceil(cx,cy,w,h,T,stain,faceP){x.save();x.beginPath();x.rect(cx-w/2,cy-h/2,w,h);x.clip();x.fillStyle='#efe6d4';x.fillRect(cx-w/2,cy-h/2,w,h);x.strokeStyle='#ddd2bc';x.lineWidth=6;x.strokeRect(cx-w/2+20,cy-h/2+20,w-40,h-40);x.fillStyle='#fff7d0';x.beginPath();x.arc(cx-w*0.2,cy-h*0.1,w*0.09,0,7);x.fill();x.strokeStyle='#999';x.lineWidth=5;x.beginPath();x.arc(cx-w*0.2,cy-h*0.1,w*0.09,0,7);x.stroke();
+ if(stain){const sx=cx+w*0.18,sy=cy+h*0.12,s=w*0.16;x.fillStyle='#b89a6a';x.beginPath();for(let i=0;i<=24;i++){const a=i/24*6.283,rr2=s*(1+0.18*Math.sin(a*5)+0.1*Math.cos(a*3));i?x.lineTo(sx+Math.cos(a)*rr2,sy+Math.sin(a)*rr2*0.8):x.moveTo(sx+Math.cos(a)*rr2,sy+Math.sin(a)*rr2*0.8);}x.closePath();x.fill();
+  if(faceP>0){x.globalAlpha=faceP;x.fillStyle='#2a1a10';[-1,1].forEach(k=>{x.beginPath();x.arc(sx+k*s*0.32,sy-s*0.12,s*0.11,0,7);x.fill();});x.strokeStyle='#2a1a10';x.lineWidth=s*0.08;x.beginPath();x.arc(sx,sy+s*0.05,s*0.3,0.3,2.84);x.stroke();x.fillStyle='#2a1a10';x.beginPath();x.ellipse(sx,sy-s*0.95,s*0.5,s*0.14,0,0,7);x.fill();x.globalAlpha=1;}}
+ x.restore();}
+function liveTag(cx,cy,s,T){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#ff2d2d';rr(-90,-34,180,68,14);x.fill();x.fillStyle='#fff';if(Math.floor(T*2)%2===0){x.beginPath();x.arc(-55,0,12,0,7);x.fill();}x.font=`900 40px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('CANLI',15,2);x.restore();}
+function bigPhone(cx,cy,s,T,inner){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#111';rr(-260,-460,520,920,60);x.fill();x.save();x.beginPath();rr(-235,-430,470,860,40);x.clip();inner();x.restore();x.restore();}
+function sponge(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle='#ffd23f';rr(-70,-40,140,80,12);x.fill();x.fillStyle='#3aa84a';rr(-70,-40,140,28,8);x.fill();x.restore();}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);radial(540,900,1300,'#3a1a5a','#0a0414');x.save();zoom(540,900,1.05+0.04*t);person(BABA,380,840,180,{smile:0.9,mouthOpen:0.6+0.3*Math.sin(T*14),brow:0.5,shirt:BS});phone(810,950,0.9,0.15,false,'#efe6d4');liveTag(810,820,0.8,T);x.restore();x.restore();vignette(0.45);
+ hook([['BABAM 40 DAKİKA',90,'#fff'],['TAVANI',170,YEL],['YAYINLADI!',120,'#fff']],270);s3Badge(t,5);}});
+// 1 ilk canlı yayın, heyecanlı
+sc.push({a:mid(1),f(t,T){salon();x.save();zoom(540,900,1.0+0.04*t);person(BABA,420,830+8*Math.sin(T*10),160,{smile:1,eyeBig:1.2,brow:0.6,shirt:BS});phone(800,880,0.8,0.08,false,'#2b3a6a');liveTag(800,780,0.7,T);x.restore();
+ B('İLK CANLI YAYIN',300,100,'#fff',t);}});
+// 2 telefonu masaya dikti, kamera ters
+sc.push({a:mid(2),f(t,T){salon();x.save();zoom(540,900,1.05+0.04*t);x.fillStyle='#8a5a3a';rr(100,980,880,60,10);x.fill();phone(540,800,1.3,Math.PI,false,'#2b3a6a');x.fillStyle='#111';x.beginPath();x.arc(540,1050-20,14,0,7);x.fill();x.restore();
+ const p=prog(T,W2(2,'ters')-0.2,W2(2,'ters')+0.2);if(p>0){x.save();x.globalAlpha=p;x.strokeStyle=RED;x.lineWidth=16;x.beginPath();x.moveTo(700,700);x.lineTo(700,420);x.stroke();x.fillStyle=RED;x.beginPath();x.moveTo(650,440);x.lineTo(750,440);x.lineTo(700,370);x.fill();x.restore();}
+ B('KAMERA',300,100,'#fff',t);if(T>W2(2,'ters')-0.15)bigText('TERS! 🙃',540,420,110,YEL,PP(T,2,'ters'),-0.03);}});
+// 3 ekranda sadece tavan
+sc.push({a:mid(3),f(t,T){radial(540,900,1300,'#1b2a4a','#050810');x.save();zoom(540,850,1.0+0.04*t);bigPhone(540,830,1.0,T,()=>{ceil(0,0,470,860,T,true,0);liveTag(-120,-370,0.8,T);});x.restore();
+ B('SADECE TAVAN 😶',300,100,'#fff',t);}});
+// 4 40 dakika konuştu
+sc.push({a:mid(4),f(t,T){salon();x.save();zoom(540,900,1.0+0.03*t);person(BABA,400,830,160,{smile:0.8,mouthOpen:0.3+0.4*Math.abs(Math.sin(T*9)),brow:0.4,look:1,shirt:BS});phone(800,960,0.7,Math.PI,false,'#2b3a6a');x.restore();
+ const mm=Math.min(40,Math.floor(prog(T,st(4),en(4))*40));x.fillStyle='#111';rr(330,250,420,150,30);x.fill();x.font=`900 100px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#ff4040';x.fillText(String(mm).padStart(2,'0')+':00',540,330);
+ B('TARİF · ŞAKA 😂',500,72,'#fff',t,0.3);}});
+// 5 lekeye isim: Leke Rıza
+sc.push({a:mid(5),f(t,T){x.save();zoom(640,1000,1.0+0.06*t);ceil(540,960,1300,2000,T,true,prog(T,W2(5,'Leke')-0.2,W2(5,'Leke')+0.2));x.restore();
+ B('İZLEYİCİLER 👀',300,95,'#fff',t);if(T>W2(5,'Leke')-0.15){bigText('LEKE RIZA',540,470,130,YEL,PP(T,5,'Leke'),-0.04);}}});
+// 6 yorumlar: Rıza bugün çok yakışıklı
+sc.push({a:mid(6),f(t,T){radial(540,900,1300,'#2a1a4a','#08040f');x.save();zoom(540,900,1.0+0.03*t);ceil(540,500,1000,560,T,true,1);x.restore();
+ comment(540,1360,860,'ayse_44','Rıza bugün çok yakışıklı 😍',prog(T,st(6)+0.6,st(6)+0.9),'#c0506a');comment(540,850,860,'mert.k','RIZA BAŞKAN 👑',prog(T,st(6)+1.2,st(6)+1.5),'#3a7ac0');comment(540,990,860,'nur_x','Selam Rıza abi!',prog(T,st(6)+1.7,st(6)+2.0),'#3a9a5a');
+ B('YORUMLAR AKTI 💬',330,95,'#fff',t);}});
+// 7 babam sevindi
+sc.push({a:mid(7),f(t,T){x.save();shake(t,0.1,0.6,4);radial(540,900,1300,'#5a3a10','#140a02');burst(540,820,900,'rgba(255,210,63,0.18)',t);x.save();zoom(540,850,1.05+0.05*t);person(BABA,540,840,200,{smile:1,eyeOpen:0.3,brow:0.7,blush:true,shirt:BS});for(let i=0;i<5;i++){const k=((T*0.8+i/5)%1);x.globalAlpha=1-k;heart(300+i*120,700-k*400,0.5,'#ff4a7a');}x.globalAlpha=1;x.restore();x.restore();
+ B('DAHA ÇOK SEVİNDİ 🥹',300,90,'#fff',t);}});
+// 8 mutfaktan ses
+sc.push({a:mid(8),f(t,T){x.fillStyle='#1a1410';x.fillRect(0,0,W,H);x.save();zoom(540,800,1.0+0.06*t);door(540,820,0.8,0.25,'#6a4a2a');x.fillStyle='rgba(255,220,150,0.5)';x.beginPath();x.moveTo(400,370);x.lineTo(380,1270);x.lineTo(200,1400);x.lineTo(240,370);x.fill();x.restore();liveTag(540,560,0.9,T);
+ B('YAYIN HÂLÂ AÇIK',300,90,'#fff',t);B('MUTFAKTAN SES 😨',430,80,YEL,t,0.4);}});
+// 9 bulaşıkları kim yıkayacak
+sc.push({a:mid(9),f(t,T){x.save();shake(t,0,1.2,14);radial(540,900,1300,'#6a0a0a','#140202');x.save();zoom(540,880,1.1+0.05*t);person(ANNE,540,860,220,{angry:1,brow:-0.6,mouthOpen:0.9,red:0.6});sponge(840,1000,1.6,0.3+Math.sin(T*12)*0.1);x.restore();x.restore();vignette(0.4);
+ bigText('BULAŞIKLARI KİM',540,300,85,'#fff',prog(t,0,0.2),-0.03);bigText('YIKAYACAK?!',540,420,120,RED,prog(t,0.15,0.35),-0.03);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,6,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>
