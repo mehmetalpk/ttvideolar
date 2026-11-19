@@ -53,3 +53,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-18 | Ağabeyim hediyelerimi beğenmedi (Amcanın Gürültülü Hediyeleri) [Part 1] | r/pettyrevenge (havuz) | komedi/seri | Emrullah | 30.8 sn | 12:30 | -185555981337276926 | ÖĞLE | parkur:hayır
 - 2026-11-18 | Annem kanala bulaşık kuralı koydu (Hacker Kerem S3) [Part 6] | kendi kurgu | komedi/seri | Emrullah | 27.4 sn | 17:00 | 8357923527151863167 | AKŞAM | parkur:hayır
 - 2026-11-18 | Yeğenlerime davul ve trompet aldım (Amcanın Gürültülü Hediyeleri) [Part 2] | r/pettyrevenge (havuz) | komedi/seri | Emrullah | 27.9 sn | 20:30 | 5294021041276734638 | GECE | parkur:hayır
+- 2026-11-19 | Babam bir cümleyi 27 kez çekti (Hacker Kerem S3) [Part 7] | kendi kurgu | komedi/seri | Emrullah | 28.9 sn | 09:00 | 5655604967416481410 | SABAH | parkur:hayır
+- 2026-11-19 | Yeğenime davul yapma kitabı aldım (Amcanın Gürültülü Hediyeleri) [Part 3 FİNAL] | r/pettyrevenge (havuz) | komedi/seri | Emrullah | 25.9 sn | 12:30 | 7443523608016932690 | ÖĞLE | parkur:hayır
+- 2026-11-19 | Evde kanal kimin kavgası çıktı (Hacker Kerem S3) [Part 8] | kendi kurgu | komedi/seri | Emrullah | 26.9 sn | 17:00 | 4438996716854791610 | AKŞAM | parkur:hayır
+- 2026-11-19 | Komşum kar makinemden şikâyet etti (Kar Küremeyi İstemeyen Komşu) [Part 1] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 21.7 sn | 20:30 | -396454876767305252 | GECE | parkur:hayır

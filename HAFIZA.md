@@ -1,11 +1,11 @@
 # ORTAK HAFIZA — …sal Hikayeler
 (Kural: CLAUDE.md. Her oturum başında oku, her üretim mesajından sonra güncelle ve push et.)
 
-## Güncel durum (son güncelleme: 2026-11-19 04:10)
+## Güncel durum (son güncelleme: 2026-11-19 04:20)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
 - **Redditsel formatı (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
-- **Redditsel seri durumu (18 Kas gece):** 18.11 dolu: HK S3 P5 09:00, Amca P1 12:30, HK S3 P6 17:00, Amca P2 20:30. Sırada 19.11: HK S3 P7 09:00 + P8 17:00, Amca P3 FİNAL 12:30, Kar Küremeyi İstemeyen Komşu P1 20:30; 20.11 12:30 Kar P2, 20:30 Kar P3 FİNAL (sonra Görümcemin Kek Topları, İrem). Çizim/yardımcılar: tools/dizi_17kasim + dizi_18kasim (amca.js).
+- **Redditsel seri durumu (19 Kas gece):** 19.11 dolu: HK S3 P7 09:00, Amca P3 FİNAL 12:30 (seri bitti → Kullanıldı), HK S3 P8 17:00, Kar Küremeyi İstemeyen Komşu P1 20:30. Sırada 20.11: HK S3 P9 09:00 + P10 17:00, Kar P2 12:30, Kar P3 FİNAL 20:30; 21.11 12:30 Görümcemin Kek Topları P1 (İrem). Çizim/yardımcılar: tools/dizi_19kasim (kar.js, d19.js) + dizi_18kasim (amca.js, common_hdr.txt).
 - **Redditsel sıradaki (15 Kas haftalık analiz):** HK SEZON 3 "Babamın YouTube Kanalı" 14 partlık plan havuz.md'de (16–22.11). 3 partlık seri sırası: Tuvalet Raporu P3 (16.11 12:30) → Kapıyı Kilitleyen Hoca (İrem, P1 16.11 20:30) → Amcanın Gürültülü Hediyeleri → Kar Küremeyi İstemeyen Komşu → Görümcemin Kek Topları (İrem).
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
 - **Küçük hesaplar planı (10 Kas kararı):** Grup 1 seri (İslamik, Osmanlısal, Motivasyonel) günde 1 part; Grup 2 (Sporsal, Sanatsal, Yemeksel) günde 1, TikTok'a da devam; Grup 3 (Psikolojik, Parasal, Kriminal) iki günde 1 ama daha kaliteli. Saat testi Redditsel hariç: A 09:00 / B 16:00, 23 Kas'ta yer değiştir. Ayrıntı: stok/URETIM.md.
@@ -40,6 +40,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-19 04:20 | gece görevi (Claude) | Redditsel 19.11: HK S3 P7 (09:00, 28,9 sn), Amca P3 FİNAL (12:30, 25,9 sn; seri bitti → Kullanıldı), HK S3 P8 (17:00, 26,9 sn), Kar Küremeyi İstemeyen Komşu P1 (20:30, 21,7 sn) Metricool'a planlandı; MP4'ler depodan silindi. 18.11 TikTok: HK S3 P5 22,4K/299 beğeni, Amca P1 10,7K/115, HK S3 P6 4,3K/67, Amca P2 1,9K/27 (ilk saatler); ort. izleme süresi yine boş.
 - 2026-11-19 04:10 | gece görevi (Claude) | Küçük hesaplar İş 1 (20.11): tüm hesaplar doluydu (Grup 3 bugün 19.11 paylaşıyor) → üretim yok. İş 2 (Perşembe Motivasyonel) 7 video: Yeniden başla P2–P3 final (21–22.11 16:00), yeni seri Sessizce çalış P1–P3 (23–25.11 09:00), yeni seri Kendinle yarış P1–P2 (26–27.11 09:00). Hepsi 17–22 sn, TT+IG+YT; MP4'ler depodan silindi.
 - 2026-11-18 04:15 | gece görevi (Claude) | Küçük hesaplar İş 1 (19.11): tüm hesaplar doluydu → üretim yok. İş 2 (Çarşamba İslamik) 7 video: Hz. Musa Nil'den saraya P1–P3 (20–22.11 09:00), Zülkarneyn P1–P3 (23–25.11 16:00), Talut P1 (26.11 16:00). Hepsi 24–29 sn, TT+IG+YT; MP4'ler depodan silindi.
 - 2026-11-18 04:10 | gece görevi (Claude) | Redditsel 18.11: HK S3 P5 (09:00, 26,4 sn), Amca P1 (12:30, 30,8 sn), HK S3 P6 (17:00, 27,4 sn), Amca P2 (20:30, 27,9 sn) Metricool'a planlandı; MP4'ler depodan silindi. 17.11 TikTok: Hoca P2 69,1K/1.097 beğeni, HK S3 P3 35,7K/281, HK S3 P4 20,4K/82, Hoca P3 FİNAL 15,0K/277 (ilk saatler); ort. izleme süresi yine boş.

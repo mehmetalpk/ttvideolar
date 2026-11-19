@@ -3,7 +3,9 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
-> 19 KASIM (18 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P7 + 17:00 P8 (plan aşağıda). 12:30 = Amcanın Gürültülü Hediyeleri P3 FİNAL (≤40 sn, Emrullah; P2 cliff: "Bunun pilleri ne zaman biter?!" — P3'te kısa cevap olabilir: "Pili yok, hepsi elle çalıyor."), sonra seri 'Kullanıldı'ya. 20:30 = 'Kar Küremeyi İstemeyen Komşu' P1 (Emrullah). Çizimler: tools/dizi_18kasim/ (amca.js).
+> 20 KASIM (19 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P9 + 17:00 P10 (plan aşağıda). Amcanın Gürültülü Hediyeleri BİTTİ (P3 19.11 12:30; 'Kullanıldı'ya taşındı). 12:30 = Kar Küremeyi İstemeyen Komşu P2 (≤40 sn, Emrullah; P1 cliff: yarım metre kar, Hikmet Bey şehir dışında), 20:30 = Kar P3 FİNAL (≤40 sn). 21.11 12:30 = sıradaki seri 'Görümcemin Kek Topları' P1 (İrem). Çizimler: tools/dizi_19kasim/ (kar.js: karci, hikmet, street(T,clean,dirty), blower, snow; d19.js).
+
+> 19 KASIM (GEÇERSİZ, 19 Kas üretildi) (18 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P7 + 17:00 P8 (plan aşağıda). 12:30 = Amcanın Gürültülü Hediyeleri P3 FİNAL (≤40 sn, Emrullah; P2 cliff: "Bunun pilleri ne zaman biter?!" — P3'te kısa cevap olabilir: "Pili yok, hepsi elle çalıyor."), sonra seri 'Kullanıldı'ya. 20:30 = 'Kar Küremeyi İstemeyen Komşu' P1 (Emrullah). Çizimler: tools/dizi_18kasim/ (amca.js).
 
 > 18 KASIM (GEÇERSİZ, 18 Kas üretildi) (17 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P5 + 17:00 P6 (plan aşağıda). Kapıyı Kilitleyen Hoca BİTTİ (P3 17.11 20:30; 'Kullanıldı'ya taşındı). 12:30 = Amcanın Gürültülü Hediyeleri P1 (Emrullah; güçlü kancalıysa 55–85 sn olabilir), 20:30 = Amca P2 (≤40 sn). 19.11 12:30 = Amca P3 FİNAL, 19.11 20:30 = sıradaki seri 'Kar Küremeyi İstemeyen Komşu' P1. Çizimler: tools/dizi_17kasim/ (common_hdr.txt: nanaSpecs, smoke, comment; contract, openDoor, wedge anim içinde).
 
@@ -116,8 +118,8 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P4 (17.11 17:00): Babam anneanneyi konuk ister; anneanne şartlarını sayar: kendi çay bardağı, öğlen uykusu, menajeri Kerem. Kanca: "Anneannem babama sözleşme imzalattı." Cliff: Kanalın adı bir gecede değişmiş: "Anneanne ve Damadı". ✅ 2026-11-17 (17:00, 24,8 sn; şartlar çay bardağı/öğlen uykusu/menajer Kerem, babam okumadan imzaladı)
 - P5 (18.11 09:00): Babam ilk canlı yayını açar; kamera ters, 40 dakika tavanı yayınlar, izleyiciler tavandaki lekeye isim koyar. Kanca: "Babam 40 dakika tavanı canlı yayınladı." Cliff: Yayın hâlâ açıkken mutfaktan annemin sesi: "Bulaşıkları kim yıkayacak?!" ✅ 2026-11-18 (09:00, 26,4 sn; lekenin adı "Leke Rıza")
 - P6 (18.11 17:00): Annem ev kuralı koyar: bulaşık yıkamayan video çekemez. Babam bulaşığı çekip "bulaşık meydan okuması" yapar; komşular da katılır. Kanca: "Annem kanala bulaşık kuralı koydu." Cliff: Kanala ilk iş birliği teklifi gelir — ama Kerem'in adına. ✅ 2026-11-18 (17:00, 27,4 sn; bütün apartman meydan okumaya katıldı)
-- P7 (19.11 09:00): Bir çorap firması (adı YOK) reklam ister; babam tek cümlelik reklamı 27 kez çeker, her seferinde "çorap" yerine başka kelime söyler. Kanca: "Babam bir cümleyi 27 kez çekti." Cliff: Kerem anneanneyle gizlice tek çekimde bitirip gönderir.
-- P8 (19.11 17:00): Babam reklamda kendisinin olmadığını görür; "Bu kanal kimin?" kavgası, herkes şifreyi değiştirmeye koşar. Kanca: "Evde kanal kimin kavgası çıktı." Cliff: En son babam değiştirir… ve yeni şifreyi unutur.
+- P7 (19.11 09:00): Bir çorap firması (adı YOK) reklam ister; babam tek cümlelik reklamı 27 kez çeker, her seferinde "çorap" yerine başka kelime söyler. Kanca: "Babam bir cümleyi 27 kez çekti." Cliff: Kerem anneanneyle gizlice tek çekimde bitirip gönderir. ✅ 2026-11-19 (09:00, 28,9 sn; çorba/çoban, 27. çekimde halka ışık kafasına düştü)
+- P8 (19.11 17:00): Babam reklamda kendisinin olmadığını görür; "Bu kanal kimin?" kavgası, herkes şifreyi değiştirmeye koşar. Kanca: "Evde kanal kimin kavgası çıktı." Cliff: En son babam değiştirir… ve yeni şifreyi unutur. ✅ 2026-11-19 (17:00, 26,9 sn; reklamda anneanne vardı, 4 kişi şifre değiştirdi)
 - P9 (20.11 09:00): Babam kendi kanalından kilitlenir; kurtarma sorusu "İlk evcil hayvanınızın adı?" Babamın hiç hayvanı olmadığına yemin eder. Kanca: "Babam kendi kanalından kilitlendi." Cliff: Anneanne: "Senin bir kaplumbağan vardı. Adını ben koymuştum."
 - P10 (20.11 17:00): Kaplumbağanın adı için eski albümler, kasetler açılır; Kerem cevabı bulur ("Şimşek"). Kanca: "Babamın gizli kaplumbağası ortaya çıktı." Cliff: Albümün içinden etiketli bir kaset düşer: "1989 — Şimşek'e şarkı". Kerem: "Bu altın."
 - P11 (21.11 09:00): Kaset dijitale aktarılır: 8 yaşındaki babam kaplumbağaya şarkı söylüyor. Kerem paylaşır, kanal patlar; babam utançtan dolaba saklanır. Kanca: "Babamın çocukluk kaseti viral oldu." Cliff: Telefon çalar: bir TV programı aileyi stüdyoya çağırıyor.
@@ -126,17 +128,9 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P14 FİNAL (22.11 17:00): Babam şarkıyı canlı söyler, anneanne arkada dans eder, stüdyo alkışlar. Eve dönünce babam kanalı Kerem'e devreder, tek şart: ödevler. Son sahne: Kerem kanalın adını "Hacker Kerem" yapar, anneanne göz kırpar. Soru: "Sizin evde kim YouTuber olurdu?" Outro: "Sezon 4 pazartesi! Kaçırmamak için takip et."
 - Hashtag: #hikaye #reddithikayeleri #hackerkerem #komedi #youtuber #aile #keşfet #fyp
 
-### SERİ (aktif, 12:30/20:30; 3 part, Emrullah — aile): Amcanın Gürültülü Hediyeleri (komedi / aile) — P1 18.11 12:30, P2 18.11 20:30, P3 19.11 12:30
-- Kaynak: r/pettyrevenge, u/PrinceGuti — ranker.com "petty-revenge-jun-2022/miguelgr" #3 ("More Gifts, More Problems"). Doğrulanmamış; uyarlama, kendi cümlelerimizle.
-- Anlatıcı: bekâr amca (erkek) → Emrullah. Ağabey: Murat (yeğenlerin babası), yenge: Sevgi, yeğenler: Ali (7) ve Zeynep (5). Mağaza/oyuncak markası YOK.
-- PART 1 (güçlü kanca adayı → 55–85 sn olabilir): Ağabeyim bayramda "Sen bekârsın, paran bol; çocuklara doğru dürüst hediye al, yoksa bir dahakine görmezsin" diye laf sokar. Ertesi gün oyuncakçıda tezgâhtara tek soru: "En gürültülü ne var?" Kanca: "Ağabeyim hediyelerimi beğenmedi." Cliff: Bagaj ağzına kadar: davul, iki trompet, org, ksilofon ve bir kova sim. ✅ 2026-11-18 (12:30, 30,8 sn; ≤40 tutuldu, bayramda yeğenlere kitap almıştı)
-- PART 2 (≤40 sn): Ağabeyim ve yengem kutuları sevinçle içeri taşır. Paketler açıldıkça yüzleri düşer: önce davul, sonra trompetler, en son sim kovası halıya devrilir. Çocuklar konser başlatır. Kanca: "Yeğenlerime davul ve trompet aldım." Cliff: Ben çıkarken ağabeyim kulaklarını kapatarak bağırır: "Bunun pilleri ne zaman biter?!" ✅ 2026-11-18 (20:30, 27,9 sn; "Sonunda adam oldun" dediler)
-- PART 3 FİNAL (≤40 sn): Haftalar sonra Zeynep'in doğum günü; ağabeyim telefonda yalvarır: "Bu sefer basit bir şey olsun." Ben: "Merak etme, kitap alacağım." Son espri: kitabın adı "Evde Davul Yapımı". Soru: "Sen olsan bu amcayı bir daha davet eder miydin?"
-- Hashtag: #hikaye #reddithikayeleri #aile #amca #hediye #komedi #keşfet #fyp
-
-### SERİ (3 part, Emrullah — komşu): Kar Küremeyi İstemeyen Komşu (komedi / komşu) — aile serisinden sonra
+### SERİ (aktif, 12:30/20:30; 3 part, Emrullah — komşu): Kar Küremeyi İstemeyen Komşu (komedi / komşu) — P1 19.11 20:30, P2 20.11 12:30, P3 20.11 20:30
 - Kaynak ve özet: aşağıdaki "MÜNFERİT 2" (r/MaliciousCompliance, u/sockfacekiller). Mekân: Erzurum'da bir site; makine markası YOK.
-- PART 1 (≤40 sn ya da güçlü kancayla 55–85 sn): Her kış küçük makineyle bütün sokağın kaldırımını gönüllü temizliyorum; komşular kurabiye getiriyor. Tek istisna Hikmet Bey: "Sese çok hassasım, kuş sesi bile rahatsız ediyor; benim önümü temizleme." Ben: "Peki." Kanca: "Komşum kar makinemden şikâyet etti." Cliff: O hafta yarım metre kar yağar ve Hikmet Bey şehir dışındadır.
+- PART 1 (≤40 sn ya da güçlü kancayla 55–85 sn): Her kış küçük makineyle bütün sokağın kaldırımını gönüllü temizliyorum; komşular kurabiye getiriyor. Tek istisna Hikmet Bey: "Sese çok hassasım, kuş sesi bile rahatsız ediyor; benim önümü temizleme." Ben: "Peki." Kanca: "Komşum kar makinemden şikâyet etti." Cliff: O hafta yarım metre kar yağar ve Hikmet Bey şehir dışındadır. ✅ 2026-11-19 (20:30, 21,7 sn)
 - PART 2 (≤40 sn): Bütün sokak tertemiz, tek bir evin önü dağ gibi. İki gün ılık hava, sonra sert ayaz: kar buz bloğuna dönüyor. Kanca: "Bütün sokağı temizledim, bir ev hariç." Cliff: Hikmet Bey'in arabası döner, kapısının önünde buzul.
 - PART 3 FİNAL (≤40 sn): Hikmet Bey kürekle, sonra kazmayla girişir; kürek kırılır. Akşam kapımı çalar, kısık sesle: "Makineyi… sessiz modda çalıştırabilir misin?" Ben: "Kuşlar rahatsız olmasın, ilkbaharı bekleyelim." (sonra yardım eder). Soru: "Sen olsan yine temizler miydin?"
 - Hashtag: #hikaye #reddithikayeleri #komşu #kar #komedi #keşfet #fyp
@@ -196,6 +190,15 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Ton: komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #işyeri #müdür #komedi #keşfet #fyp #shorts
 
 ## Kullanıldı
+### SERİ (BİTTİ 19.11; 3 part, Emrullah — aile): Amcanın Gürültülü Hediyeleri (komedi / aile) — P1 18.11 12:30, P2 18.11 20:30, P3 19.11 12:30
+- Kaynak: r/pettyrevenge, u/PrinceGuti — ranker.com "petty-revenge-jun-2022/miguelgr" #3 ("More Gifts, More Problems"). Doğrulanmamış; uyarlama, kendi cümlelerimizle.
+- Anlatıcı: bekâr amca (erkek) → Emrullah. Ağabey: Murat (yeğenlerin babası), yenge: Sevgi, yeğenler: Ali (7) ve Zeynep (5). Mağaza/oyuncak markası YOK.
+- PART 1 (güçlü kanca adayı → 55–85 sn olabilir): Ağabeyim bayramda "Sen bekârsın, paran bol; çocuklara doğru dürüst hediye al, yoksa bir dahakine görmezsin" diye laf sokar. Ertesi gün oyuncakçıda tezgâhtara tek soru: "En gürültülü ne var?" Kanca: "Ağabeyim hediyelerimi beğenmedi." Cliff: Bagaj ağzına kadar: davul, iki trompet, org, ksilofon ve bir kova sim. ✅ 2026-11-18 (12:30, 30,8 sn; ≤40 tutuldu, bayramda yeğenlere kitap almıştı)
+- PART 2 (≤40 sn): Ağabeyim ve yengem kutuları sevinçle içeri taşır. Paketler açıldıkça yüzleri düşer: önce davul, sonra trompetler, en son sim kovası halıya devrilir. Çocuklar konser başlatır. Kanca: "Yeğenlerime davul ve trompet aldım." Cliff: Ben çıkarken ağabeyim kulaklarını kapatarak bağırır: "Bunun pilleri ne zaman biter?!" ✅ 2026-11-18 (20:30, 27,9 sn; "Sonunda adam oldun" dediler)
+- PART 3 FİNAL (≤40 sn): Haftalar sonra Zeynep'in doğum günü; ağabeyim telefonda yalvarır: "Bu sefer basit bir şey olsun." Ben: "Merak etme, kitap alacağım." Son espri: kitabın adı "Evde Davul Yapımı". Soru: "Sen olsan bu amcayı bir daha davet eder miydin?" ✅ 2026-11-19 (12:30, 25,9 sn; "Pili yok abi, hepsi elle çalıyor", Ali tencere davulu) — SERİ BİTTİ
+- Hashtag: #hikaye #reddithikayeleri #aile #amca #hediye #komedi #keşfet #fyp
+
+
 ### SERİ (BİTTİ 17.11): Kapıyı Kilitleyen Hoca (komedi / okul) — P1 16.11 20:30, P2 17.11 12:30, P3 17.11 20:30
 - Kaynak: r/MaliciousCompliance, u/Khromez — listverse.com "Top 10 Stories of Malicious Compliance" #3 (eski MÜNFERİT 3). Doğrulanmamış; "Reddit'teki bir hikâyeden ilham alınmıştır."
 - Anlatıcı: üniversite öğrencisi kız → İrem. Hoca: Prof. Kemal Bey (kurgusal; gri sakal, papyon, kol saati). Sınıf başkanı: Burak. Üniversite adı YOK.
