@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);radial(540,900,1300,'#1a3a6a','#040a18');snow(T,0.8,3);x.save();zoom(540,900,1.05+0.04*t);hikmet(380,840,180,{angry:1,brow:-0.6,mouthOpen:0.7,red:0.4});blower(820,1000,0.8,T,true);x.restore();x.restore();vignette(0.45);
+ hook([['KOMŞUM',120,'#fff'],['KAR MAKİNEMDEN',118,YEL],['ŞİKÂYET ETTİ!',110,'#fff']],270);amBadge(t,1);}});
+// 1 Erzurum site
+sc.push({a:mid(1),f(t,T){x.save();zoom(540,900,1.0+0.04*t);street(T,0);snow(T,0.9,4);x.restore();
+ B('ERZURUM ❄️',300,120,'#fff',t);}});
+// 2 bütün sokak
+sc.push({a:mid(2),f(t,T){const p=prog(T,mid(2),mid(3));x.save();zoom(540,950,1.0+0.03*t);street(T,p);blower(80+p*900,940,0.55,T,true);karci(80+p*900-140,860,60,{smile:1});snow(T,0.6,5);x.restore();
+ B('HER KIŞ',290,100,'#fff',t);B('BÜTÜN SOKAK 🧹',410,100,YEL,t,0.2);}});
+// 3 kurabiye
+sc.push({a:mid(3),f(t,T){x.save();zoom(540,900,1.0+0.04*t);street(T,1);person(ANNE,300,820,120,{smile:1});cookies(300,1000,0.9);person(BABA,780,820,120,{smile:1,shirt:'#3a7a5a'});cookies(780,1000,0.9);x.restore();
+ B('KOMŞULARDAN',290,100,'#fff',t);B('KURABİYE 🍪',410,115,YEL,t,0.2);}});
+// 4 tek istisna Hikmet Bey
+sc.push({a:mid(4),f(t,T){const w=W2(4,'Hikmet');radial(540,900,1300,'#3a2a1a','#0c0804');x.save();if(T>w-0.1)shake(T,w,w+0.5,8);zoom(540,880,1.1+0.05*t);hikmet(540,860,210,{angry:0.8,brow:-0.6,smile:-0.6});x.restore();
+ B('TEK İSTİSNA:',290,100,'#fff',t);if(T>w-0.15)bigText('HİKMET BEY 😠',540,410,110,YEL,PP(T,4,'Hikmet'),-0.03);}});
+// 5 sese hassasım, kuş sesi
+sc.push({a:mid(5),f(t,T){const w=W2(5,'Kuş');radial(540,900,1300,'#1a3a3a','#040e0e');x.save();zoom(540,880,1.05+0.04*t);hikmet(420,880,170,{angry:0.6,brow:-0.5,eyeOpen:0.5,mouthOpen:0.4});earCover(420,880,170,'#e2b08a');if(T>w-0.2){bird(830,640,0.9,T);cross(830,640,1.2);}x.restore();
+ B('SESE ÇOK HASSASIM',290,85,'#fff',t);if(T>w-0.15)bigText('KUŞ SESİ BİLE! 🐦',540,1440,95,YEL,PP(T,5,'Kuş'),-0.03);}});
+// 6 benim önümü temizleme
+sc.push({a:mid(6),f(t,T){x.save();shake(t,0.2,0.8,8);radial(540,900,1300,'#5a1a1a','#140404');board(540,640,860,340,[['EVİMİN ÖNÜNÜ',66,'#1b2a6a',prog(t,0,0.2)],['TEMİZLEME!',96,'#c02020',prog(T,W2(6,'temizleme')-0.2,W2(6,'temizleme'))]],T);hikmet(540,1330,130,{angry:1,brow:-0.6,mouthOpen:0.6});x.restore();}});
+// 7 peki dedim
+sc.push({a:mid(7),f(t,T){x.save();zoom(540,900,1.1+0.05*t);street(T,1);karci(540,860,200,{smile:0.8,brow:-0.2,eyeOpen:0.7});x.restore();snow(T,0.5,6);
+ bigText('"PEKİ" 🙂',540,330,130,YEL,prog(t,0.05,0.25),-0.03);}});
+// 8 yarım metre kar
+sc.push({a:mid(8),f(t,T){const p=prog(T,mid(8),en(8)+0.2);x.save();zoom(540,900,1.0+0.03*t);street(T,0);x.fillStyle='#fff';x.fillRect(0,1000-p*260,W,1000);snow(T,1,7,true);x.restore();
+ B('O HAFTA',290,100,'#fff',t);bigText('50 CM KAR! ❄️',540,410,110,YEL,prog(T,W2(8,'yarım')-0.1,W2(8,'yarım')+0.15),-0.03);}});
+// 9 Hikmet Bey şehir dışında
+sc.push({a:mid(9),f(t,T){const w=W2(9,'dışındaydı');x.save();if(T>w-0.1)shake(T,w,w+0.7,12);sky('#5a7aa8','#c8d8ec');snowHouse(540,820,1.5,'#a07ab0',false);x.fillStyle='#fff';x.fillRect(0,980,W,940);const k=prog(T,mid(9),en(9));suitcaseCar(540-k*700,1000,0.8);snow(T,0.8,8,true);x.restore();
+ B('VE HİKMET BEY',300,95,'#fff',t);if(T>w-0.15)bigText('ŞEHİR DIŞINDA! 🧳',540,420,95,YEL,PP(T,9,'dışındaydı'),-0.03);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>
