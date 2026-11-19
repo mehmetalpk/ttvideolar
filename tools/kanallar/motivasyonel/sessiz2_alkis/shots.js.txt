@@ -1,0 +1,1 @@
+const PH=[[0, "Alkış bekleyen, yarı yolda kalır."], [2.0, "Paylaştın, beğeni gelmedi. Çalıştın, kimse fark etmedi."], [5.54, "Moralin mi bozuldu?"], [6.62, "Asıl iş, kimsenin bakmadığı saatlerde yapılır."], [9.28, "Sabah erken. Gece geç. Tek başına."], [11.93, "Alkış sonuçtan sonra gelir. Önce değil."], [14.41, "Devamı 3. partta. Kaçırmamak için takip et."], [17.66, ""]];

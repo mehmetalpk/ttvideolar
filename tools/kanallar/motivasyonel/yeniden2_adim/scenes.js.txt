@@ -1,0 +1,16 @@
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);x.save();x.translate(0,-136);x.scale(1,0.85);stepsUp(6,6,t);x.restore();bigText('BÜYÜK BAŞLAYAN',W/2,330,105,'#fff',1);bigText('ÇABUK BIRAKIR',W/2,470,115,'#ff2d2d',1);});
+// 1 büyük plan
+shot(1,1,t=>{blk();const k=Math.min(2,Math.floor(t/1.2));if(k==0)dumbbell(540,820,1.4);else if(k==1)bookI(540,820,1.3);else{x.save();x.translate(540,840);x.scale(0.8,0.8);calendar(0,0,t,0);x.restore();}slam(['2 SAAT SPOR','1 AYDA KİTAP','MÜKEMMEL PLAN'][k],330,110,'#fff',t%1.2);});
+// 2 üçüncü gün biter
+shot(2,2,t=>{blk();couch(540,1050,t);sil(540,980,1.6,'#3a3a3a');slam('3. GÜN',330,150,'#ff2d2d',t);if(t>0.8)stampX(540,760,1.6,(t-0.8)*3);});
+// 3 komik derecede küçük
+shot(3,3,t=>{blk();rays(540,780,t,'rgba(255,210,63,0.14)');const s=Math.max(0.2,1.6-cl(t/1.2)*1.2);x.fillStyle='#ffd23f';x.beginPath();x.arc(540,800,140*s,0,7);x.fill();slam('KOMİK DERECEDE',330,100,'#fff',t);if(t>0.6)slam('KÜÇÜK BAŞLA',470,125,'#ffd23f',t-0.6);});
+// 4 bir şınav bir sayfa 5 dk
+shot(4,4,t=>{blk();['1 ŞINAV','1 SAYFA','5 DAKİKA'].forEach((w,i)=>badge(540,560+i*170,w,['#c1121f','#ff6a00','#2f8a3a'][i],(t-i*0.6)*3));slam('SADECE',330,120,'#fff',t);});
+// 5 bahane ölür
+shot(5,5,t=>{blk();shk(t,3);sbubble(540,700,560,150,'Yarın başlarım…',t*3,56);if(t>1.2)stampX(540,700,1.8,(t-1.2)*3);slam('BAHANE ÖLÜR',330,130,'#ff2d2d',t);});
+// 6 başlamayı alışkanlık yap
+shot(6,6,t=>{blk();x.save();x.translate(0,-136);x.scale(1,0.85);stepsUp(6,Math.min(6,Math.floor(t*2.2)),t);x.restore();slam('ÖNCE BAŞLA',330,130,'#ffd23f',t);if(t>0.9)slam('SONRA BÜYÜ',470,120,'#fff',t-0.9);});
+// 7 outro
+shot(7,7,t=>outro(t,3,'#2a0606','#050000'));

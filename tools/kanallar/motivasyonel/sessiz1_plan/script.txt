@@ -1,0 +1,9 @@
+[intense] Planlarını herkese anlatmayı bırak.
+
+[serious] "Spora başlıyorum." "Kendi işimi kuracağım." Herkes alkışlar.
+[curious] Sonra garip bir şey olur. Hiçbir şey yapmadan, yapmış gibi hissedersin.
+[serious] Bir de biri güler. Sen de kendinden şüphe etmeye başlarsın.
+
+[intense] Planın gizli kalsın. Sadece sonucu göster.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

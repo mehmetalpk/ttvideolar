@@ -1,0 +1,11 @@
+[intense] Büyük başlayan, çabuk bırakır.
+
+[serious] Her gün iki saat spor. Bir ayda bir kitap. Mükemmel bir plan.
+Üçüncü gün yorulursun ve hepsi biter.
+[curious] Çözüm ne? Komik derecede küçük başla.
+[intense] Bir şınav. Bir sayfa. Beş dakika.
+
+[serious] Küçük adım bahaneyi öldürür. Bahane ölünce devam gelir.
+[intense] Önce başlamayı alışkanlık yap. Büyümeyi sonra düşün.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

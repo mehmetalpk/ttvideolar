@@ -1,0 +1,12 @@
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);sil(540,1050,2.0,'#3a3a3a');x.fillStyle='#ff2d2d';rr(380,780,280,60,30);x.fill();bigText('PLANINI',W/2,330,130,'#fff',1);bigText('ANLATMA',W/2,470,140,'#ff2d2d',1);});
+// 1 herkes alkışlar
+shot(1,1,t=>{blk();sil(540,1000,1.6,'#ffd23f');sbubble(540,560,620,150,t<1.6?'Spora başlıyorum!':'Kendi işimi kuracağım!',t*3,52);people(5,540,1440,0.9,'#3a3a3a',190,-1);if(t>2.4)slam('👏 👏 👏',900,90,'#fff',t-2.4);});
+// 2 yapmış gibi hissedersin
+shot(2,2,t=>{blk();brainI(540,760,1.4,'#ff9ad5');slam('YAPMADAN',330,130,'#fff',t);if(t>1.0)slam('YAPMIŞ GİBİ',470,125,'#ffd23f',t-1.0);});
+// 3 biri güler şüphe
+shot(3,3,t=>{blk();sil(300,1000,1.4,'#3a3a3a');sil(780,1000,1.4,'#ffd23f');sbubble(300,620,360,130,'Haha, sen mi?',t*3,48);if(t>1.4)qmarks(780,700,t);slam('ŞÜPHE',330,150,'#ff2d2d',t);});
+// 4 gizli kalsın sonucu göster
+shot(4,4,t=>{blk();rays(540,800,t,'rgba(255,210,63,0.16)');trophy(540,820,1.2);slam('PLAN GİZLİ',330,125,'#fff',t);if(t>1.0)slam('SONUÇ ORTADA',470,115,'#ffd23f',t-1.0);});
+// 5 outro
+shot(5,5,t=>outro(t,2,'#2a0606','#050000'));

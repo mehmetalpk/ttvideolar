@@ -1,0 +1,10 @@
+[intense] Kanıtlamaya çalışma, sonuç göster.
+
+[serious] Sana inanmadılar. "Sen mi yapacaksın?" dediler.
+[curious] Onlarla tartışıp enerjini mi harcayacaksın?
+[intense] Hayır. Sessizce çalışacaksın.
+[serious] Bir gün sonuç ortaya çıkar. O gün kimse soru sormaz.
+
+[intense] Planını sakla. Alkış bekleme. Bırak sonuçların konuşsun.
+
+[softly] Kaçırmamak için takip et.

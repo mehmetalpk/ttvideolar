@@ -1,0 +1,14 @@
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);x.save();x.translate(0,-136);x.scale(1,0.85);stepsUp(6,3,t);x.restore();bigText('ALKIŞ BEKLEYEN',W/2,330,110,'#fff',1);bigText('YARI YOLDA KALIR',W/2,470,100,'#ff2d2d',1);});
+// 1 beğeni gelmedi
+shot(1,1,t=>{blk();phone(540,800,1.3,t);slam(t<1.8?'0 BEĞENİ':'KİMSE GÖRMEDİ',330,120,'#ff2d2d',t<1.8?t:t-1.8);});
+// 2 moralin mi bozuldu
+shot(2,2,t=>{blk();sil(540,1050,1.8,'#3a3a3a');qmarks(540,620,t);slam('MORAL?',330,140,'#fff',t);});
+// 3 kimsenin bakmadığı saatler
+shot(3,3,t=>{blk();desk(540,1050,t);sil(540,960,1.5,'#ffd23f');x.fillStyle='rgba(255,255,255,0.8)';x.beginPath();x.arc(860,620,60,0,7);x.fill();x.fillStyle='#000';x.beginPath();x.arc(885,605,55,0,7);x.fill();slam('KİMSE BAKMAZKEN',330,95,'#ffd23f',t);});
+// 4 sabah erken gece geç tek başına
+shot(4,4,t=>{blk();const k=Math.min(2,Math.floor(t/0.9));if(k==0)alarm(540,800,1.3,t,'05:00');else if(k==1)clock(540,800,170,t);else sil(540,1050,1.8,'#ffd23f');slam(['SABAH ERKEN','GECE GEÇ','TEK BAŞINA'][k],330,125,'#fff',t%0.9);});
+// 5 alkış sonra gelir
+shot(5,5,t=>{blk();rays(540,800,t,'rgba(255,210,63,0.16)');trophy(540,820,1.2);if(t>1.0)people(5,540,1440,0.9,'#3a3a3a',190,-1);slam('ÖNCE SONUÇ',330,125,'#ffd23f',t);if(t>1.0)slam('SONRA ALKIŞ',470,115,'#fff',t-1.0);});
+// 6 outro
+shot(6,6,t=>outro(t,3,'#2a0606','#050000'));

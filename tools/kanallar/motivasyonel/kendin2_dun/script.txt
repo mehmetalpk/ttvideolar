@@ -1,0 +1,10 @@
+[intense] Tek rakibin, dünkü sen.
+
+[serious] Dün beş sayfa mı okudun? Bugün altı oku.
+Dün erken kalkamadın mı? Bugün on dakika erken kalk.
+[curious] Küçük mü görünüyor?
+[intense] Her gün dünden biraz iyi olan, bir yıl sonra başka biri olur.
+
+[serious] Kimseyi geçmen gerekmiyor. Dünkü kendini geç, yeter.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

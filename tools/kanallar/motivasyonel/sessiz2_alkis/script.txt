@@ -1,0 +1,10 @@
+[intense] Alkış bekleyen, yarı yolda kalır.
+
+[serious] Paylaştın, beğeni gelmedi. Çalıştın, kimse fark etmedi.
+[curious] Moralin mi bozuldu?
+[intense] Asıl iş, kimsenin bakmadığı saatlerde yapılır.
+[serious] Sabah erken. Gece geç. Tek başına.
+
+[intense] Alkış sonuçtan sonra gelir. Önce değil.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.
