@@ -3,7 +3,9 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
-> 20 KASIM (19 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P9 + 17:00 P10 (plan aşağıda). Amcanın Gürültülü Hediyeleri BİTTİ (P3 19.11 12:30; 'Kullanıldı'ya taşındı). 12:30 = Kar Küremeyi İstemeyen Komşu P2 (≤40 sn, Emrullah; P1 cliff: yarım metre kar, Hikmet Bey şehir dışında), 20:30 = Kar P3 FİNAL (≤40 sn). 21.11 12:30 = sıradaki seri 'Görümcemin Kek Topları' P1 (İrem). Çizimler: tools/dizi_19kasim/ (kar.js: karci, hikmet, street(T,clean,dirty), blower, snow; d19.js).
+> 21 KASIM (20 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P11 + 17:00 P12 (plan aşağıda; P10 cliff: kaset "1989 — Şimşek'e şarkı", Kerem "Bu altın"). Kar Küremeyi İstemeyen Komşu BİTTİ (P3 20.11 20:30; 'Kullanıldı'ya taşındı). 12:30 = 'Görümcemin Kek Topları' P1 (İrem; güçlü kancalıysa 55–85 sn olabilir), 20:30 = Kek P2 (≤40 sn, İrem). 22.11 12:30 = Kek P3 FİNAL; 22.11 20:30 için havuzda YENİ 3 partlık seri yok → 22.11 gece görevi (ya da Pazar 21:37 analizi) strateji.md'ye göre seç/yaz. Çizimler: tools/dizi_20kasim/ (t20.js: turtle, album, cassette, ice, pickaxe, shovel, KID).
+
+> 20 KASIM (GEÇERSİZ, 20 Kas üretildi) (19 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P9 + 17:00 P10 (plan aşağıda). Amcanın Gürültülü Hediyeleri BİTTİ (P3 19.11 12:30; 'Kullanıldı'ya taşındı). 12:30 = Kar Küremeyi İstemeyen Komşu P2 (≤40 sn, Emrullah; P1 cliff: yarım metre kar, Hikmet Bey şehir dışında), 20:30 = Kar P3 FİNAL (≤40 sn). 21.11 12:30 = sıradaki seri 'Görümcemin Kek Topları' P1 (İrem). Çizimler: tools/dizi_19kasim/ (kar.js: karci, hikmet, street(T,clean,dirty), blower, snow; d19.js).
 
 > 19 KASIM (GEÇERSİZ, 19 Kas üretildi) (18 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P7 + 17:00 P8 (plan aşağıda). 12:30 = Amcanın Gürültülü Hediyeleri P3 FİNAL (≤40 sn, Emrullah; P2 cliff: "Bunun pilleri ne zaman biter?!" — P3'te kısa cevap olabilir: "Pili yok, hepsi elle çalıyor."), sonra seri 'Kullanıldı'ya. 20:30 = 'Kar Küremeyi İstemeyen Komşu' P1 (Emrullah). Çizimler: tools/dizi_18kasim/ (amca.js).
 
@@ -120,22 +122,15 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - P6 (18.11 17:00): Annem ev kuralı koyar: bulaşık yıkamayan video çekemez. Babam bulaşığı çekip "bulaşık meydan okuması" yapar; komşular da katılır. Kanca: "Annem kanala bulaşık kuralı koydu." Cliff: Kanala ilk iş birliği teklifi gelir — ama Kerem'in adına. ✅ 2026-11-18 (17:00, 27,4 sn; bütün apartman meydan okumaya katıldı)
 - P7 (19.11 09:00): Bir çorap firması (adı YOK) reklam ister; babam tek cümlelik reklamı 27 kez çeker, her seferinde "çorap" yerine başka kelime söyler. Kanca: "Babam bir cümleyi 27 kez çekti." Cliff: Kerem anneanneyle gizlice tek çekimde bitirip gönderir. ✅ 2026-11-19 (09:00, 28,9 sn; çorba/çoban, 27. çekimde halka ışık kafasına düştü)
 - P8 (19.11 17:00): Babam reklamda kendisinin olmadığını görür; "Bu kanal kimin?" kavgası, herkes şifreyi değiştirmeye koşar. Kanca: "Evde kanal kimin kavgası çıktı." Cliff: En son babam değiştirir… ve yeni şifreyi unutur. ✅ 2026-11-19 (17:00, 26,9 sn; reklamda anneanne vardı, 4 kişi şifre değiştirdi)
-- P9 (20.11 09:00): Babam kendi kanalından kilitlenir; kurtarma sorusu "İlk evcil hayvanınızın adı?" Babamın hiç hayvanı olmadığına yemin eder. Kanca: "Babam kendi kanalından kilitlendi." Cliff: Anneanne: "Senin bir kaplumbağan vardı. Adını ben koymuştum."
-- P10 (20.11 17:00): Kaplumbağanın adı için eski albümler, kasetler açılır; Kerem cevabı bulur ("Şimşek"). Kanca: "Babamın gizli kaplumbağası ortaya çıktı." Cliff: Albümün içinden etiketli bir kaset düşer: "1989 — Şimşek'e şarkı". Kerem: "Bu altın."
+- P9 (20.11 09:00): Babam kendi kanalından kilitlenir; kurtarma sorusu "İlk evcil hayvanınızın adı?" Babamın hiç hayvanı olmadığına yemin eder. Kanca: "Babam kendi kanalından kilitlendi." Cliff: Anneanne: "Senin bir kaplumbağan vardı. Adını ben koymuştum." ✅ 2026-11-20 (09:00, 28,8 sn; kedi/köpek yanlış, Kerem "Soruyu sen cevapladın baba")
+- P10 (20.11 17:00): Kaplumbağanın adı için eski albümler, kasetler açılır; Kerem cevabı bulur ("Şimşek"). Kanca: "Babamın gizli kaplumbağası ortaya çıktı." Cliff: Albümün içinden etiketli bir kaset düşer: "1989 — Şimşek'e şarkı". Kerem: "Bu altın." ✅ 2026-11-20 (17:00, 27,7 sn; fotoğrafın arkasında kalemle "Şimşek")
 - P11 (21.11 09:00): Kaset dijitale aktarılır: 8 yaşındaki babam kaplumbağaya şarkı söylüyor. Kerem paylaşır, kanal patlar; babam utançtan dolaba saklanır. Kanca: "Babamın çocukluk kaseti viral oldu." Cliff: Telefon çalar: bir TV programı aileyi stüdyoya çağırıyor.
 - P12 (21.11 17:00): Herkes hazırlanır: anneanne kuaföre, annem en iyi tencereyi paketler, babam şarkı provası. Kanca: "Ailemiz televizyona çağrıldı." Cliff: Stüdyoda yapımcı Kerem'e döner: "Biz aslında 12 yaşındaki dahiyi çağırdık."
 - P13 (22.11 09:00): Kerem canlı yayında mikrofonu babasına uzatır: "Asıl yıldız babam." Babam duygulanır. Kanca: "Kardeşim canlı yayında mikrofonu babama verdi." Cliff: Stüdyoda babamın 8 yaşındaki kaset şarkısı çalmaya başlar.
 - P14 FİNAL (22.11 17:00): Babam şarkıyı canlı söyler, anneanne arkada dans eder, stüdyo alkışlar. Eve dönünce babam kanalı Kerem'e devreder, tek şart: ödevler. Son sahne: Kerem kanalın adını "Hacker Kerem" yapar, anneanne göz kırpar. Soru: "Sizin evde kim YouTuber olurdu?" Outro: "Sezon 4 pazartesi! Kaçırmamak için takip et."
 - Hashtag: #hikaye #reddithikayeleri #hackerkerem #komedi #youtuber #aile #keşfet #fyp
 
-### SERİ (aktif, 12:30/20:30; 3 part, Emrullah — komşu): Kar Küremeyi İstemeyen Komşu (komedi / komşu) — P1 19.11 20:30, P2 20.11 12:30, P3 20.11 20:30
-- Kaynak ve özet: aşağıdaki "MÜNFERİT 2" (r/MaliciousCompliance, u/sockfacekiller). Mekân: Erzurum'da bir site; makine markası YOK.
-- PART 1 (≤40 sn ya da güçlü kancayla 55–85 sn): Her kış küçük makineyle bütün sokağın kaldırımını gönüllü temizliyorum; komşular kurabiye getiriyor. Tek istisna Hikmet Bey: "Sese çok hassasım, kuş sesi bile rahatsız ediyor; benim önümü temizleme." Ben: "Peki." Kanca: "Komşum kar makinemden şikâyet etti." Cliff: O hafta yarım metre kar yağar ve Hikmet Bey şehir dışındadır. ✅ 2026-11-19 (20:30, 21,7 sn)
-- PART 2 (≤40 sn): Bütün sokak tertemiz, tek bir evin önü dağ gibi. İki gün ılık hava, sonra sert ayaz: kar buz bloğuna dönüyor. Kanca: "Bütün sokağı temizledim, bir ev hariç." Cliff: Hikmet Bey'in arabası döner, kapısının önünde buzul.
-- PART 3 FİNAL (≤40 sn): Hikmet Bey kürekle, sonra kazmayla girişir; kürek kırılır. Akşam kapımı çalar, kısık sesle: "Makineyi… sessiz modda çalıştırabilir misin?" Ben: "Kuşlar rahatsız olmasın, ilkbaharı bekleyelim." (sonra yardım eder). Soru: "Sen olsan yine temizler miydin?"
-- Hashtag: #hikaye #reddithikayeleri #komşu #kar #komedi #keşfet #fyp
-
-### SERİ (3 part, İrem — aile): Görümcemin Kek Topları (komedi / aile) — sonraki seri
+### SERİ (aktif, 12:30/20:30; 3 part, İrem — aile): Görümcemin Kek Topları (komedi / aile) — P1 21.11 12:30, P2 21.11 20:30, P3 22.11 12:30
 - Kaynak: r/pettyrevenge, u/throwra_sipitk — ranker.com "petty-revenge-jun-2022/miguelgr" #9 ("Let Them Eat Cake Pops"). Doğrulanmamış; uyarlama.
 - Anlatıcı: gelin (kadın) → İrem. Görümce: Selin. Kaynana: Nermin Hanım. Eşi: Can. Marka YOK.
 - PART 1 (≤40 sn): Kocamın ailesinde ne yapsam dokunulmuyor; görümcemin kek topları ise her toplantıda alkışlanıyor, kaynanam fotoğrafını herkese yolluyor. Benim kurabiyelerim her seferinde masada kalıyor. Kanca: "Kaynanam kurabiyelerime hiç dokunmadı." Cliff: Bir gece görümcemin tarifinin fotoğrafını büyütüp mutfağa geçiyorum.
@@ -190,6 +185,13 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 - Ton: komedi; ses Emrullah; hashtag: #hikaye #reddithikayeleri #işyeri #müdür #komedi #keşfet #fyp #shorts
 
 ## Kullanıldı
+### SERİ (BİTTİ 20.11; 3 part, Emrullah — komşu): Kar Küremeyi İstemeyen Komşu (komedi / komşu) — P1 19.11 20:30, P2 20.11 12:30, P3 20.11 20:30
+- Kaynak ve özet: aşağıdaki "MÜNFERİT 2" (r/MaliciousCompliance, u/sockfacekiller). Mekân: Erzurum'da bir site; makine markası YOK.
+- PART 1 (≤40 sn ya da güçlü kancayla 55–85 sn): Her kış küçük makineyle bütün sokağın kaldırımını gönüllü temizliyorum; komşular kurabiye getiriyor. Tek istisna Hikmet Bey: "Sese çok hassasım, kuş sesi bile rahatsız ediyor; benim önümü temizleme." Ben: "Peki." Kanca: "Komşum kar makinemden şikâyet etti." Cliff: O hafta yarım metre kar yağar ve Hikmet Bey şehir dışındadır. ✅ 2026-11-19 (20:30, 21,7 sn)
+- PART 2 (≤40 sn): Bütün sokak tertemiz, tek bir evin önü dağ gibi. İki gün ılık hava, sonra sert ayaz: kar buz bloğuna dönüyor. Kanca: "Bütün sokağı temizledim, bir ev hariç." Cliff: Hikmet Bey'in arabası döner, kapısının önünde buzul. ✅ 2026-11-20 (12:30, 27,1 sn)
+- PART 3 FİNAL (≤40 sn): Hikmet Bey kürekle, sonra kazmayla girişir; kürek kırılır. Akşam kapımı çalar, kısık sesle: "Makineyi… sessiz modda çalıştırabilir misin?" Ben: "Kuşlar rahatsız olmasın, ilkbaharı bekleyelim." (sonra yardım eder). Soru: "Sen olsan yine temizler miydin?" ✅ 2026-11-20 (20:30, 25,9 sn; kazma tak tak, kuşlar kaçtı, yarım saatte birlikte açtılar) — SERİ BİTTİ
+- Hashtag: #hikaye #reddithikayeleri #komşu #kar #komedi #keşfet #fyp
+
 ### SERİ (BİTTİ 19.11; 3 part, Emrullah — aile): Amcanın Gürültülü Hediyeleri (komedi / aile) — P1 18.11 12:30, P2 18.11 20:30, P3 19.11 12:30
 - Kaynak: r/pettyrevenge, u/PrinceGuti — ranker.com "petty-revenge-jun-2022/miguelgr" #3 ("More Gifts, More Problems"). Doğrulanmamış; uyarlama, kendi cümlelerimizle.
 - Anlatıcı: bekâr amca (erkek) → Emrullah. Ağabey: Murat (yeğenlerin babası), yenge: Sevgi, yeğenler: Ali (7) ve Zeynep (5). Mağaza/oyuncak markası YOK.

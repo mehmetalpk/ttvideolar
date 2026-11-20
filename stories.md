@@ -57,3 +57,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-19 | Yeğenime davul yapma kitabı aldım (Amcanın Gürültülü Hediyeleri) [Part 3 FİNAL] | r/pettyrevenge (havuz) | komedi/seri | Emrullah | 25.9 sn | 12:30 | 7443523608016932690 | ÖĞLE | parkur:hayır
 - 2026-11-19 | Evde kanal kimin kavgası çıktı (Hacker Kerem S3) [Part 8] | kendi kurgu | komedi/seri | Emrullah | 26.9 sn | 17:00 | 4438996716854791610 | AKŞAM | parkur:hayır
 - 2026-11-19 | Komşum kar makinemden şikâyet etti (Kar Küremeyi İstemeyen Komşu) [Part 1] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 21.7 sn | 20:30 | -396454876767305252 | GECE | parkur:hayır
+- 2026-11-20 | Babam kendi kanalından kilitlendi (Hacker Kerem S3) [Part 9] | kendi kurgu | komedi/seri | Emrullah | 28.8 sn | 09:00 | -1339105333128249056 | SABAH | parkur:hayır
+- 2026-11-20 | Bütün sokağı temizledim, bir ev hariç (Kar Küremeyi İstemeyen Komşu) [Part 2] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 27.1 sn | 12:30 | 6454954569911322 | ÖĞLE | parkur:hayır
+- 2026-11-20 | Babamın gizli kaplumbağası ortaya çıktı (Hacker Kerem S3) [Part 10] | kendi kurgu | komedi/seri | Emrullah | 27.7 sn | 17:00 | -886951085311899268 | AKŞAM | parkur:hayır
+- 2026-11-20 | Komşum buzu kazmayla kırmaya çalıştı (Kar Küremeyi İstemeyen Komşu) [Part 3 FİNAL] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 25.9 sn | 20:30 | -7124581839447768833 | GECE | parkur:hayır
