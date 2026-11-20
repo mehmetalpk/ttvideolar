@@ -1,0 +1,10 @@
+[intense] İlk maratonunda olimpiyat şampiyonu oldu.
+
+[serious] Bin dokuz yüz elli iki, Helsinki Olimpiyatları. || 1952, Helsinki Olimpiyatları.
+Çekoslovak koşucu Emil Zatopek önce on bin metrede altın aldı. || Çekoslovak koşucu Emil Zátopek önce 10.000 metrede altın aldı.
+Dört gün sonra beş bin metrede de kazandı. || 4 gün sonra 5000 metrede de kazandı.
+[curious] Ama durmadı. Hayatında hiç koşmadığı maratona yazıldı.
+[intense] Kırk iki kilometrenin sonunda yine birinciydi. Olimpiyat rekoruyla! || 42 kilometrenin sonunda yine birinciydi. Olimpiyat rekoruyla!
+[serious] Aynı olimpiyatta bu üç altını alan tek koşucu hâlâ o. || Aynı olimpiyatta bu 3 altını alan tek koşucu hâlâ o.
+
+[softly] Kaçırmamak için takip et.

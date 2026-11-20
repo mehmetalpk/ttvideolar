@@ -1,0 +1,11 @@
+[intense] Tabela on yazamadı, bir yazdı. || Tabela 10 yazamadı, 1 yazdı.
+
+[serious] Bin dokuz yüz yetmiş altı, Montreal Olimpiyatları. || 1976, Montreal Olimpiyatları.
+On dört yaşındaki Romen jimnastikçi Nadia Komaneçi asimetrik paralelde yarıştı. || 14 yaşındaki Romen jimnastikçi Nadia Comăneci asimetrik paralelde yarıştı.
+Kusursuz bir seri yaptı.
+[curious] Ama skor tabelasında bir nokta sıfır sıfır yazdı. || Ama skor tabelasında 1.00 yazdı.
+Çünkü tabela on puanı gösterecek şekilde yapılmamıştı. || Çünkü tabela 10 puanı gösterecek şekilde yapılmamıştı.
+[intense] Bu, olimpiyat tarihinin ilk on puanıydı. || Bu, olimpiyat tarihinin ilk 10 puanıydı.
+[serious] O oyunlarda yedi kez on aldı, üç altın kazandı. || O oyunlarda 7 kez 10 aldı, 3 altın kazandı.
+
+[softly] Kaçırmamak için takip et.

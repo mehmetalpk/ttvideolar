@@ -1,0 +1,26 @@
+function street(t){x.fillStyle=grad(0,1000,['#f2b46b','#fde3b8']);x.fillRect(0,0,W,H);for(let i=0;i<5;i++){x.fillStyle=['#8a4b3a','#6d5a7a','#9a6b3a','#5a6d7a','#7a3a3a'][i];x.fillRect(i*230-20,520-(i%2)*80,210,480+(i%2)*80);x.fillStyle='rgba(255,230,160,0.7)';for(let k=0;k<6;k++)x.fillRect(i*230+20+(k%2)*90,560-(i%2)*80+Math.floor(k/2)*120,60,70);}x.fillStyle='#555';x.fillRect(0,1000,W,H-1000);x.fillStyle='#777';x.fillRect(0,1000,W,30);}
+function bike(cx,cy,s,col='#d62828',t=0){x.save();x.translate(cx,cy);x.scale(s,s);x.strokeStyle='#222';x.lineWidth=14;for(const wx of[-150,150]){x.beginPath();x.arc(wx,60,95,0,7);x.stroke();x.save();x.translate(wx,60);x.rotate(t*6);x.lineWidth=3;for(let k=0;k<6;k++){x.beginPath();x.moveTo(0,0);x.lineTo(Math.cos(k)*90,Math.sin(k)*90);x.stroke();}x.restore();}x.strokeStyle=col;x.lineWidth=18;x.lineJoin='round';x.beginPath();x.moveTo(-150,60);x.lineTo(-30,60);x.lineTo(90,-70);x.lineTo(-60,-70);x.lineTo(-30,60);x.moveTo(-60,-70);x.lineTo(-80,-110);x.moveTo(90,-70);x.lineTo(150,60);x.moveTo(90,-70);x.lineTo(70,-140);x.stroke();x.fillStyle='#222';rr(-120,-125,90,26,12);x.fill();x.strokeStyle='#222';x.lineWidth=12;x.beginPath();x.moveTo(40,-140);x.lineTo(110,-150);x.stroke();x.restore();}
+function glove(cx,cy,s,rot=0,col='#c1121f'){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle=col;x.beginPath();x.ellipse(0,-20,70,85,0,0,7);x.fill();x.beginPath();x.ellipse(-60,0,30,40,-0.4,0,7);x.fill();x.fillStyle='#fff';x.fillRect(-55,55,110,40);x.restore();}
+function ring(t){x.fillStyle=grad(0,H,['#1d1d2e','#08080f']);x.fillRect(0,0,W,H);spot(540,600,700,0.35);x.fillStyle='#2a4a8a';x.fillRect(0,1000,W,H-1000);x.strokeStyle='#e8e8e8';x.lineWidth=10;for(let i=0;i<3;i++){x.beginPath();x.moveTo(0,760+i*80);x.lineTo(W,760+i*80);x.stroke();}x.fillStyle='#c1121f';x.fillRect(60,700,40,300);x.fillRect(980,700,40,300);}
+function bag(cx,top,t){const a=Math.sin(t*5)*0.15;x.save();x.translate(cx,top);x.rotate(a);x.strokeStyle='#888';x.lineWidth=6;x.beginPath();x.moveTo(0,0);x.lineTo(0,80);x.stroke();x.fillStyle='#7a2a1a';rr(-80,80,160,360,40);x.fill();x.fillStyle='#5a1a10';x.fillRect(-80,140,160,16);x.fillRect(-80,360,160,16);x.restore();}
+function kid(cx,base,s,col='#2b2b3a'){sil(cx,base,s,col);}
+// 0 kanca
+shot(0,0,t=>{ring(t);bike(330,820,1.1,'#d62828',0);stampX(330,820,1.2,cl(t*2));glove(700,780,1.6,-0.3+Math.sin(t*6)*0.08);glove(860,820,1.4,0.3);bigText('BİSİKLETİ ÇALINDI',W/2,300,84,'#fff',1);bigText('DÜNYA ŞAMPİYONU OLDU',W/2,430,64,'#ffd23f',1);});
+// 1 1954
+shot(1,1,t=>{night();yearStamp('1954','LOUISVILLE',eOut(cl(t*2)),640);});
+// 2 bisiklet çalındı
+shot(2,2,t=>{street(t);const k=cl((t-0.8)/2);bike(540+k*700,880,1.2,'#d62828',t);if(k>0)sil(470+k*700,1000,2.4,'#111');kid(220,1000,1.8,'#2b2b3a');badge(540,330,'12 YAŞINDA','#2a5cff',t*3);stampT('ÇALINDI',540,480,cl((t-1.2)*3),'#c1121f',110);});
+// 3 polise koştu
+shot(3,3,t=>{street(t);kid(260+cl(t)*120,1000,1.8,'#2b2b3a');sil(760,1000,3.0,'#1d2b55');x.fillStyle='#1d2b55';rr(700,365,120,40,10);x.fill();sbubble(380,620,520,170,'DÖVECEĞİM!',eOut(cl(t*3)),72);bigText('ÖFKELİ ÇOCUK',W/2,300,100,'#fff',eOut(cl(t*3)));});
+// 4 polis boks hocası
+shot(4,4,t=>{ring(t);sil(540,1000,3.0,'#1d2b55');x.fillStyle='#1d2b55';rr(480,365,120,40,10);x.fill();glove(380,700,1.0,0.2);glove(700,700,1.0,-0.2);badge(540,330,'JOE MARTIN','#c1121f',t*3);bigText('POLİS + BOKS HOCASI',W/2,470,78,'#ffd23f',eOut(cl((t-0.4)*3)));});
+// 5 önce dövüşmeyi öğren
+shot(5,5,t=>{ring(t);sil(760,1000,3.0,'#1d2b55');kid(300,1000,1.8,'#2b2b3a');sbubble(560,520,700,200,'ÖNCE DÖVÜŞMEYİ ÖĞREN',eOut(cl(t*3)),46);});
+// 6 spor salonu
+shot(6,6,t=>{ring(t);bag(720,300,t);kid(420,1000,1.9,'#2b2b3a');glove(500+Math.max(0,Math.sin(t*8))*40,700,0.6,0.1);bigText('İLK GÜN',W/2,330,140,'#fff',back(cl(t*2.5)));});
+// 7 roma 1960 altın
+shot(7,7,t=>{night();rays(540,700,t,'rgba(255,210,63,0.18)');medal(540,700,170,t,'ALTIN');confetti(t);badge(540,330,'6 YIL SONRA','#2a5cff',t*3);bigText('ROMA 1960',W/2,980,110,'#ffd23f',eOut(cl((t-0.5)*3)));});
+// 8 muhammed ali
+shot(8,8,t=>{ring(t);rays(540,600,t,'rgba(255,210,63,0.15)');sil(540,1000,3.0,'#111');glove(400,450-20*Math.sin(t*4),1.0,-0.4);glove(680,450-20*Math.sin(t*4+1),1.0,0.4);bigText('MUHAMMED ALİ',W/2,300,110,'#ffd23f',back(cl(t*2)));});
+// 9 outro
+shot(9,9,t=>outro(t,0,'#13213f','#060b18'));

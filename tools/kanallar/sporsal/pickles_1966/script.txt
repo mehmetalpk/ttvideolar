@@ -1,0 +1,11 @@
+[intense] Dünya Kupası'nı bir köpek buldu.
+
+[serious] Bin dokuz yüz altmış altı, Londra. || 1966, Londra.
+Turnuvaya dört ay kala, Dünya Kupası bir sergiden çalındı. || Turnuvaya 4 ay kala, Dünya Kupası bir sergiden çalındı.
+[curious] Polis her yeri aradı, bulamadı.
+Bir hafta sonra, Pickles adında bir köpek sahibiyle yürüyüşe çıktı.
+[intense] Bir çalının dibinde, gazeteye sarılı bir paket kokladı.
+Paketin içinden kupa çıktı!
+[serious] O yaz İngiltere şampiyon oldu. Pickles da kutlama yemeğine davet edildi.
+
+[softly] Kaçırmamak için takip et.

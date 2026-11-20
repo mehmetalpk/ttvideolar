@@ -1,0 +1,23 @@
+function park(t){x.fillStyle=grad(0,1000,['#7fb8f0','#d9eeff']);x.fillRect(0,0,W,H);x.fillStyle='#fff';for(let i=0;i<3;i++){const cx=((i*420+t*30)%1400)-150;x.beginPath();x.arc(cx,240+i*60,50,0,7);x.arc(cx+60,220+i*60,60,0,7);x.arc(cx+120,240+i*60,45,0,7);x.fill();}x.fillStyle='#3f8f3a';x.fillRect(0,1000,W,H-1000);x.fillStyle='#2f6f2c';for(let i=0;i<6;i++){x.beginPath();x.arc(i*210,1000,120,Math.PI,0);x.fill();}}
+function dogW(cx,base,s,t,sniff=0){x.save();x.translate(cx,base);x.scale(s,s);x.lineCap='round';x.strokeStyle='#f2f2f2';x.lineWidth=16;const k=Math.sin(t*10)*14*(1-sniff);x.beginPath();x.moveTo(-60,-60);x.lineTo(-60-k,0);x.moveTo(-35,-60);x.lineTo(-35+k,0);x.moveTo(50,-60);x.lineTo(50+k,0);x.moveTo(75,-60);x.lineTo(75-k,0);x.stroke();x.fillStyle='#f2f2f2';x.beginPath();x.ellipse(5,-80,95,40,0,0,7);x.fill();x.fillStyle='#1b1b1b';x.beginPath();x.ellipse(-20,-95,50,26,0,0,7);x.fill();const hy=-130+sniff*80;x.fillStyle='#1b1b1b';x.beginPath();x.ellipse(110,hy,42,36,0,0,7);x.fill();x.fillStyle='#f2f2f2';x.beginPath();x.ellipse(150,hy+10,32,18,0,0,7);x.fill();x.fillStyle='#111';x.beginPath();x.arc(180,hy+6,8,0,7);x.fill();x.fillStyle='#fff';x.beginPath();x.arc(118,hy-12,7,0,7);x.fill();x.fillStyle='#1b1b1b';x.beginPath();x.ellipse(90,hy-30,14,26,-0.4,0,7);x.fill();x.strokeStyle='#1b1b1b';x.lineWidth=12;x.beginPath();x.moveTo(-90,-95);x.quadraticCurveTo(-130,-140+Math.sin(t*12)*15,-120,-170);x.stroke();x.restore();}
+function hedge(cx,base,w){x.fillStyle='#1f5a24';for(let i=0;i<7;i++){x.beginPath();x.arc(cx-w/2+i*w/6,base-60-(i%2)*30,80,0,7);x.fill();}x.fillRect(cx-w/2,base-80,w,80);}
+function parcel(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#ece4d2';rr(-70,-50,140,100,10);x.fill();x.fillStyle='#777';for(let i=0;i<5;i++)x.fillRect(-55,-35+i*16,i%2?80:110,7);x.strokeStyle='#8a6a3a';x.lineWidth=6;x.beginPath();x.moveTo(-70,0);x.lineTo(70,0);x.moveTo(0,-50);x.lineTo(0,50);x.stroke();x.restore();}
+function hall(){x.fillStyle=grad(0,H,['#2b2238','#0e0a16']);x.fillRect(0,0,W,H);x.fillStyle='#3a2f4c';x.fillRect(0,1000,W,H-1000);for(let i=0;i<4;i++){x.fillStyle='#463a5c';x.fillRect(90+i*260,300,40,700);}}
+// 0 kanca
+shot(0,0,t=>{park(t);rays(760,780,t,'rgba(255,215,90,0.20)');trophy(760,800,2.4);dogW(330,1000,1.6,t,0.4);bigText('DÜNYA KUPASINI',W/2,300,90,'#fff',1);bigText('BİR KÖPEK BULDU',W/2,430,88,'#ffd23f',1);});
+// 1 1966 londra
+shot(1,1,t=>{night();yearStamp('1966','LONDRA',eOut(cl(t*2)),640);});
+// 2 sergiden çalındı
+shot(2,2,t=>{hall();x.fillStyle='#6b5a86';x.fillRect(440,860,200,140);x.strokeStyle='rgba(200,230,255,0.6)';x.lineWidth=6;x.strokeRect(430,560,220,300);x.save();x.globalAlpha=1-cl((t-1)*1.5);trophy(540,760,1.7);x.restore();sil(250+t*120,1000,2.2,'#000');badge(540,330,'4 AY KALA','#2a5cff',t*3);stampT('ÇALINDI',540,470,cl((t-1.4)*3),'#c1121f',110);});
+// 3 polis bulamadı
+shot(3,3,t=>{noir();rain(t);for(let i=0;i<3;i++)sil(240+i*300,1000,2.0,'#0a0a12');for(let i=0;i<3;i++){x.save();x.globalAlpha=0.25;x.fillStyle='#fff6c0';x.beginPath();x.moveTo(240+i*300,700);x.lineTo(140+i*300+Math.sin(t*2+i)*120,1000);x.lineTo(340+i*300+Math.sin(t*2+i)*120,1000);x.fill();x.restore();}bigText('POLİS ARIYOR',W/2,330,110,'#fff',eOut(cl(t*3)));bigText('???',W/2,480,120,'#ffd23f',eOut(cl((t-0.8)*3)));});
+// 4 pickles yürüyüş
+shot(4,4,t=>{park(t);const dx=t*60;sil(300+dx,1000,2.6,'#2b2b3a');x.strokeStyle='#5a3a1a';x.lineWidth=5;x.beginPath();x.moveTo(330+dx,760);x.quadraticCurveTo(480+dx,900,560+dx,880);x.stroke();dogW(520+dx,1000,1.2,t);badge(540,330,'PICKLES','#c1121f',t*3);bigText('BİR HAFTA SONRA',W/2,470,90,'#fff',eOut(cl((t-0.4)*3)));});
+// 5 paket kokladı
+shot(5,5,t=>{park(t);hedge(700,1000,520);parcel(700,960,1.3);dogW(380+cl(t)*60,1000,1.3,t,1);x.strokeStyle='rgba(255,255,255,0.7)';x.lineWidth=5;for(let k=0;k<3;k++){const p=(t*1.2+k/3)%1;x.globalAlpha=1-p;x.beginPath();x.arc(640,930,20+p*70,Math.PI*0.8,Math.PI*1.3);x.stroke();}x.globalAlpha=1;bigText('GAZETEYE SARILI',W/2,330,100,'#fff',eOut(cl(t*3)));bigText('BİR PAKET',W/2,460,110,'#ffd23f',eOut(cl((t-0.5)*3)));});
+// 6 kupa çıktı
+shot(6,6,t=>{park(t);rays(540,700,t,'rgba(255,215,90,0.25)');trophy(540,820-60*eOut(cl(t*1.5)),2.6*back(cl(t*2)));dogW(250,1000,1.1,t);confetti(t);bigText('KUPA!',W/2,330,170,'#ffd23f',back(cl(t*2.5)));});
+// 7 şampiyon + yemek
+shot(7,7,t=>{stadium(t,['#fff','#c8102e','#1d3b8f']);trophy(540,640,2.2);if(t>1.6){dogW(380,1000,1.2,t);badge(700,930,'DAVETLİ','#c1121f',(t-1.6)*3);}confetti(t);bigText('İNGİLTERE ŞAMPİYON',W/2,330,80,'#fff',eOut(cl(t*3)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#13213f','#060b18'));

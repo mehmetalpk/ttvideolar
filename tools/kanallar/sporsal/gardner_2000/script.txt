@@ -1,0 +1,11 @@
+[intense] On üç yıl yenilmeyen devi bir çiftçi yendi. || 13 yıl yenilmeyen devi bir çiftçi yendi.
+
+[serious] İki bin, Sidney Olimpiyatları. Güreş finali. || 2000, Sidney Olimpiyatları. Güreş finali.
+Bir yanda Rus Aleksandr Karelin.
+Üç olimpiyat altını, on üç yıldır uluslararası yenilgi yok. || 3 olimpiyat altını, 13 yıldır uluslararası yenilgi yok.
+[curious] Karşısında süt çiftliğinde büyümüş Amerikalı Rulon Gardner.
+Kimse ona şans vermiyordu.
+[intense] Maç tek puanla bitti. Bir sıfır, Gardner! || Maç tek puanla bitti. 1-0, Gardner!
+[serious] Bu maça "Minderdeki Mucize" dendi.
+
+[softly] Kaçırmamak için takip et.

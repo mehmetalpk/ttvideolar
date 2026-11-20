@@ -1,0 +1,26 @@
+function field(t){x.fillStyle=grad(0,H,['#1e3a5f','#0c1a2c']);x.fillRect(0,0,W,H);crowd(200,620,t,['#fff','#ffd23f','#c1121f','#5b8cff']);x.fillStyle='#b44a2a';x.fillRect(0,1000,W,H-1000);x.fillStyle='#2f7a3a';x.fillRect(0,1000,W,40);}
+function hj(cx,barY){x.fillStyle='#2a5cff';rr(cx-200,900,400,100,16);x.fill();x.fillStyle='#1a3aa8';x.fillRect(cx-200,900,400,18);x.strokeStyle='#ddd';x.lineWidth=12;x.beginPath();x.moveTo(cx-230,1000);x.lineTo(cx-230,barY-60);x.moveTo(cx+230,1000);x.lineTo(cx+230,barY-60);x.stroke();x.strokeStyle='#ffd23f';x.lineWidth=10;x.beginPath();x.moveTo(cx-240,barY);x.lineTo(cx+240,barY);x.stroke();}
+// sırtüstü atlayıcı: yatay, yüz yukarı
+function flop(cx,cy,s,rot=0,col='#e8e8f8'){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.lineCap='round';x.strokeStyle='#2a1a10';x.lineWidth=24;x.beginPath();x.moveTo(110,20);x.lineTo(200,90);x.lineTo(250,170);x.stroke();x.fillStyle=col;x.beginPath();x.moveTo(-120,0);x.quadraticCurveTo(0,-70,120,0);x.lineTo(120,50);x.quadraticCurveTo(0,-20,-120,50);x.fill();x.strokeStyle=col;x.lineWidth=20;x.beginPath();x.moveTo(-100,20);x.lineTo(-150,110);x.stroke();x.fillStyle='#2a1a10';x.beginPath();x.arc(-170,40,36,0,7);x.fill();x.restore();}
+// yüzüstü atlayıcı
+function straddle(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,-s);flop(0,0,1,0,'#c1121f');x.restore();}
+function laugh(t){x.save();x.font=`900 64px ${F}`;x.textAlign='center';x.fillStyle='#fff';for(let i=0;i<5;i++){x.globalAlpha=0.5+0.5*Math.sin(t*6+i);x.fillText('HA HA',150+i*190,600+Math.sin(t*5+i*2)*20+(i%2)*60);}x.restore();}
+// 0 kanca
+shot(0,0,t=>{field(t);laugh(t);hj(540,760);flop(540,700,1.0,-0.1);bigText('HERKES GÜLDÜ',W/2,300,110,'#fff',1);bigText('O ALTIN ALDI',W/2,430,110,'#ffd23f',1);});
+// 1 herkes yüzüstü
+shot(1,1,t=>{field(t);hj(540,760);const k=cl(t/1.6);straddle(260+k*560,820-Math.sin(k*Math.PI)*180,0.9);badge(540,330,'1960\'LAR','#2a5cff',t*3);bigText('HERKES YÜZÜSTÜ',W/2,470,100,'#fff',eOut(cl((t-0.3)*3)));});
+// 2 fosbury sırtüstü
+shot(2,2,t=>{field(t);hj(540,760);const k=cl(t/2.2);flop(240+k*600,840-Math.sin(k*Math.PI)*200,0.9,-0.6+k*1.2);badge(540,330,'DICK FOSBURY','#c1121f',t*3);bigText('SIRTÜSTÜ!',W/2,470,140,'#ffd23f',eOut(cl((t-0.5)*3)));});
+// 3 en tembel atlayıcı
+shot(3,3,t=>{bgDoc('#3a2f24','#120d08');newspaper(540,780,0.9,-0.05+0.02*Math.sin(t*2),'EN TEMBEL?');laugh(t);bigText('DALGA GEÇTİLER',W/2,300,105,'#fff',eOut(cl(t*3)));});
+// 4 1968 meksiko
+shot(4,4,t=>{night();yearStamp('1968','MEKSİKO',eOut(cl(t*2)),640);});
+// 5 2,24 m
+shot(5,5,t=>{field(t);const by=800-eOut(cl(t))*120;hj(540,by);if(t>0.9){const k=cl((t-0.9)/1.0);flop(260+k*560,by+60-Math.sin(k*Math.PI)*170,0.9,-0.6+k*1.2);}x.save();x.font=`900 150px ${F}`;x.restore();bigText(counterTxt(t),W/2,330,170,'#ffd23f',1);});
+function counterTxt(t){const v=1.80+0.44*eOut(cl(t/1.2));return v.toFixed(2).replace('.',',')+' M';}
+// 6 rekor + altın
+shot(6,6,t=>{night();rays(540,700,t,'rgba(255,210,63,0.18)');medal(540,700,170,t,'ALTIN');confetti(t);badge(540,330,'OLİMPİYAT REKORU','#c1121f',t*3);});
+// 7 bugün herkes
+shot(7,7,t=>{field(t);for(let i=0;i<3;i++){const cx=200+i*340,k=((t*0.6+i*0.33)%1);x.save();x.translate(cx,0);x.scale(0.6,0.6);x.translate(-cx,0);x.restore();x.strokeStyle='#ffd23f';x.lineWidth=6;x.beginPath();x.moveTo(cx-120,820);x.lineTo(cx+120,820);x.stroke();x.fillStyle='#2a5cff';rr(cx-120,940,240,60,10);x.fill();flop(cx-140+k*280,860-Math.sin(k*Math.PI)*120,0.5,-0.6+k*1.2);}bigText('ARTIK HERKES',W/2,330,120,'#fff',eOut(cl(t*3)));bigText('BÖYLE ATLIYOR',W/2,470,100,'#ffd23f',eOut(cl((t-0.5)*3)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#13213f','#060b18'));

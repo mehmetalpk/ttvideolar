@@ -1,0 +1,20 @@
+function trk(t){x.fillStyle=grad(0,H,['#2a3a5a','#121a2a']);x.fillRect(0,0,W,H);crowd(200,640,t,['#fff','#c1121f','#2a5cff','#ffd23f']);x.fillStyle='#b44a2a';x.fillRect(0,660,W,H-660);x.strokeStyle='rgba(255,255,255,0.8)';x.lineWidth=5;for(let i=0;i<6;i++){x.beginPath();x.moveTo(0,720+i*60);x.lineTo(W,720+i*60);x.stroke();}}
+function road(t){x.fillStyle=grad(0,1000,['#9ccbf0','#e8f4ff']);x.fillRect(0,0,W,H);x.fillStyle='#3a7a3a';x.fillRect(0,700,W,300);for(let i=0;i<7;i++){const tx=((i*190-t*120)%1330+1330)%1330-120;x.fillStyle='#2a5a2a';x.beginPath();x.arc(tx,700,70,Math.PI,0);x.fill();}x.fillStyle='#555';x.fillRect(0,820,W,H-820);x.fillStyle='#fff';for(let i=0;i<8;i++)x.fillRect(((i*180-t*500)%1260+1260)%1260-90,900,90,14);}
+function rn(cx,base,s,col,t){player(cx,base,s,col,'#111',t*9);}
+function sign(cx,cy,txt){x.fillStyle='#555';x.fillRect(cx-8,cy,16,200);x.fillStyle='#0b7a3b';rr(cx-150,cy-70,300,110,14);x.fill();x.strokeStyle='#fff';x.lineWidth=6;rr(cx-140,cy-60,280,90,10);x.stroke();x.fillStyle='#fff';x.font=`900 64px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,cx,cy-14);}
+// 0 kanca
+shot(0,0,t=>{road(t);rn(540,1000,1.2,'#c1121f',t);sign(860,700,'42 KM');bigText('İLK MARATONUNDA',W/2,300,86,'#fff',1);bigText('ŞAMPİYON OLDU',W/2,430,96,'#ffd23f',1);});
+// 1 1952 helsinki
+shot(1,1,t=>{night();yearStamp('1952','HELSİNKİ',eOut(cl(t*2)),640);});
+// 2 10.000 altın
+shot(2,2,t=>{trk(t);rn(250+t*120,1000,1.0,'#c1121f',t);for(let i=0;i<3;i++)rn(80+i*110+t*60,1000,0.8,['#fff','#0b7a3b','#5b8cff'][i],t+i);badge(540,300,'EMIL ZÁTOPEK','#c1121f',t*3);if(t>1.6){medal(780,720,90,t,'ALTIN');}bigText('10.000 M',W/2,440,130,'#ffd23f',eOut(cl((t-0.4)*3)));});
+// 3 5000 de altın
+shot(3,3,t=>{trk(t);rn(300+t*140,1000,1.0,'#c1121f',t);medal(320,720,90,0,'10.000');if(t>0.8)medal(760,720,90,t,'5000');badge(540,300,'4 GÜN SONRA','#2a5cff',t*3);bigText('5000 M',W/2,440,130,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 4 maratona yazıldı
+shot(4,4,t=>{road(t);rn(400,1000,1.1,'#c1121f',t);sign(800,700,'42 KM');bigText('HİÇ KOŞMADIĞI',W/2,300,105,'#fff',eOut(cl(t*3)));bigText('MARATON',W/2,440,140,'#ffd23f',eOut(cl((t-0.5)*3)));});
+// 5 birinci rekor
+shot(5,5,t=>{trk(t);const k=cl(t/1.4);x.strokeStyle='#fff';x.lineWidth=8;x.beginPath();x.moveTo(780,720);x.lineTo(780+(k>=1?40:0),1000);x.stroke();x.fillStyle='#fff';x.fillRect(770,700,20,320);rn(200+k*560,1000,1.1,'#c1121f',t);if(k>=1){confetti(t);badge(540,440,'OLİMPİYAT REKORU','#c1121f',(t-1.4)*3);}bigText('YİNE BİRİNCİ',W/2,300,120,'#ffd23f',eOut(cl(t*3)));});
+// 6 üç altın tek koşucu
+shot(6,6,t=>{night();rays(540,640,t,'rgba(255,210,63,0.18)');['10.000','5000','MARATON'].forEach((m,i)=>medal(250+i*290,640,110,t+i,m));bigText('BİR OLİMPİYAT',W/2,300,110,'#fff',eOut(cl(t*3)));bigText('3 ALTIN',W/2,900,130,'#ffd23f',eOut(cl((t-0.6)*3)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#13213f','#060b18'));

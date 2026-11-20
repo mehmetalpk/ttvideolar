@@ -1,0 +1,23 @@
+function arena(t){x.fillStyle=grad(0,H,['#1a1a3a','#0a0a18']);x.fillRect(0,0,W,H);crowd(200,620,t,['#fff','#5b8cff','#c1121f','#ffd23f']);x.fillStyle='#2a5cff';x.fillRect(0,1000,W,H-1000);x.fillStyle='#1a3aa8';x.fillRect(0,1000,W,20);}
+function ubars(cx){x.strokeStyle='#ddd';x.lineWidth=12;x.beginPath();x.moveTo(cx-260,1000);x.lineTo(cx-260,720);x.moveTo(cx+260,1000);x.lineTo(cx+260,720);x.moveTo(cx-140,1000);x.lineTo(cx-140,580);x.moveTo(cx+140,1000);x.lineTo(cx+140,580);x.stroke();x.strokeStyle='#f3e6c4';x.lineWidth=14;x.beginPath();x.moveTo(cx-280,720);x.lineTo(cx+280,720);x.moveTo(cx-160,580);x.lineTo(cx+160,580);x.stroke();}
+function gym(cx,base,s,t,pose=0,rot=0,col='#e8e8f8'){x.save();x.translate(cx,base);x.rotate(rot);x.translate(-cx,-base);player(cx,base,s,col,col,pose);x.restore();}
+function swing(cx,cy,t,s=0.8){x.save();x.translate(cx,cy);x.rotate(t*4.5);x.translate(0,340*s);x.rotate(Math.PI);player(0,0,s,'#e8e8f8','#e8e8f8',0);x.restore();}
+function sboard(txt,cy,p,warn=0){x.save();x.globalAlpha=cl(p*2);x.fillStyle='#111';rr(190,cy-170,700,340,26);x.fill();x.strokeStyle='#555';x.lineWidth=10;rr(190,cy-170,700,340,26);x.stroke();x.fillStyle='#222';rr(230,cy-120,620,240,14);x.fill();x.fillStyle=warn?'#ff4d4d':'#ffd23f';x.font=`900 190px monospace`;x.textAlign='center';x.textBaseline='middle';x.shadowColor=x.fillStyle;x.shadowBlur=30;x.fillText(txt,540,cy+10);x.restore();}
+// 0 kanca
+shot(0,0,t=>{arena(t);sboard('1.00',720,1,Math.floor(t*3)%2);bigText('TABELA 10 YAZAMADI',W/2,300,74,'#fff',1);bigText('1 YAZDI',W/2,430,130,'#ffd23f',1);});
+// 1 1976
+shot(1,1,t=>{night();yearStamp('1976','MONTREAL',eOut(cl(t*2)),640);});
+// 2 14 yaşında nadia paralel
+shot(2,2,t=>{arena(t);ubars(540);swing(540,580,t);badge(540,300,'NADIA COMĂNECI','#c1121f',t*3);bigText('14 YAŞINDA',W/2,430,110,'#fff',eOut(cl((t-0.4)*3)));});
+// 3 kusursuz
+shot(3,3,t=>{arena(t);ubars(540);const k=cl(t/1.2);gym(540+k*80,1000-Math.sin(k*Math.PI)*420,0.9,t,0,k*6.28);if(k>=1){x.strokeStyle='#ffd23f';x.lineWidth=8;x.beginPath();x.arc(620,800,120+20*Math.sin(t*6),0,7);x.stroke();}bigText('KUSURSUZ',W/2,330,150,'#ffd23f',eOut(cl(t*3)));});
+// 4 tabelada 1.00
+shot(4,4,t=>{arena(t);sboard('1.00',700,eOut(cl(t*2)),0);bigText('SKOR: 1.00 ?',W/2,330,120,'#fff',eOut(cl((t-0.5)*3)));});
+// 5 10 sığmadı
+shot(5,5,t=>{bgDoc('#13213f','#060b18');sboard('_.__',700,1,0);x.save();x.font=`900 150px monospace`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#ff4d4d';const p=cl(t*1.2);x.globalAlpha=p;x.fillText('10.00',540,440-(1-p)*60);x.restore();stampX(540,440,0.9,cl((t-1.2)*3));bigText('3 HANE VARDI',W/2,280,110,'#fff',eOut(cl(t*3)));});
+// 6 tarihin ilk 10'u
+shot(6,6,t=>{night();rays(540,700,t,'rgba(255,210,63,0.20)');bigText('10',W/2,720,380,'#ffd23f',back(cl(t*2)));badge(540,330,'TARİHTE İLK','#c1121f',t*3);confetti(t);});
+// 7 7 kez 10, 3 altın
+shot(7,7,t=>{night();for(let i=0;i<3;i++)medal(260+i*280,720,110,t+i,'ALTIN');if(t>0.4)confetti(t);bigText('7 KEZ 10',W/2,330,140,'#ffd23f',eOut(cl(t*3)));bigText('3 ALTIN',W/2,960,110,'#fff',eOut(cl((t-0.8)*3)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#13213f','#060b18'));

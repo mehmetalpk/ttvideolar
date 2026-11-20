@@ -1,0 +1,21 @@
+const HU=['#c8102e','#fff','#0b7a3b'],DE=['#fff','#111','#ddd'];
+function rainy(t){stadium(t,['#c8102e','#fff','#111','#0b7a3b']);x.fillStyle='rgba(20,30,50,0.35)';x.fillRect(0,0,W,H);rain(t,0.5);}
+function mins(m,cx,cy,p){if(p<=0)return;x.save();x.globalAlpha=cl(p*2);x.fillStyle='#111';rr(cx-150,cy-60,300,120,20);x.fill();x.fillStyle='#ff4d4d';x.font=`900 90px monospace`;x.textAlign='center';x.textBaseline='middle';x.fillText(m+"'",cx,cy+4);x.restore();}
+// 0 kanca
+shot(0,0,t=>{stadium(t,['#c8102e','#fff','#111']);score(8,3,'MACARLAR','ALMANYA',1,600);stampX(540,600,1.2,cl(t*2));player(330,1000,0.9,'#fff','#111',t*6);player(750,1000,0.9,'#c8102e','#fff',t*6+1);bigText('8-3 YENİLDİLER',W/2,280,110,'#fff',1);bigText('FİNALDE YENDİLER',W/2,410,92,'#ffd23f',1);});
+// 1 1954
+shot(1,1,t=>{night();yearStamp('1954','DÜNYA KUPASI',eOut(cl(t*2)),640);});
+// 2 macaristan yenilmez
+shot(2,2,t=>{stadium(t,HU);for(let i=0;i<4;i++)player(200+i*230,1000,0.75,'#c8102e','#fff',t*5+i);badge(540,300,'MACARİSTAN','#c8102e',t*3);bigText('4 YIL',W/2,450,140,'#ffd23f',eOut(cl((t-0.3)*3)));bigText('YENİLGİSİZ',W/2,590,100,'#fff',eOut(cl((t-0.6)*3)));});
+// 3 grupta 8-3
+shot(3,3,t=>{stadium(t,HU);badge(540,300,'GRUP MAÇI','#2a5cff',t*3);score(Math.min(8,Math.floor(t*5)),Math.min(3,Math.floor(t*2)),'MACARLAR','ALMANYA',cl(t*3),620);player(300,1000,0.8,'#c8102e','#fff',t*6);player(780,1000,0.8,'#fff','#111',0);});
+// 4 final 2-0 8. dk
+shot(4,4,t=>{stadium(t,DE);badge(540,300,'FİNAL','#c1121f',t*3);score(t>1.5?2:(t>0.6?1:0),0,'MACARLAR','ALMANYA',1,620);mins(8,540,880,cl((t-1.5)*3));});
+// 5 yağmur 2-2 18. dk
+shot(5,5,t=>{rainy(t);score(2,t>1.2?2:1,'MACARLAR','ALMANYA',1,620);mins(18,540,880,cl((t-1.2)*3));bigText('YAĞMUR',W/2,330,130,'#9fd3ff',eOut(cl(t*3)));});
+// 6 rahn 84 3-2
+shot(6,6,t=>{rainy(t);goalNet(540,1000,1.2,cl((t-0.8)*2));const k=cl(t/0.8);ballS(200+k*340,960-Math.sin(k*Math.PI)*120-k*60,34,t*10);player(150,1000,0.8,'#fff','#111',t*8);badge(540,300,'HELMUT RAHN · 84\'','#111',t*3);bigText('GOL!',W/2,460,170,'#ffd23f',back(cl((t-0.8)*2.5)));});
+// 7 bern mucizesi
+shot(7,7,t=>{night();rays(540,700,t,'rgba(255,210,63,0.18)');trophy(540,720,2.4);confetti(t);score(3,2,'ALMANYA','MACARLAR',1,1000-60);bigText('BERN MUCİZESİ',W/2,330,110,'#ffd23f',eOut(cl(t*3)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#13213f','#060b18'));

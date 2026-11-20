@@ -1,0 +1,23 @@
+function mat(t){x.fillStyle=grad(0,H,['#1a1a30','#08080f']);x.fillRect(0,0,W,H);crowd(200,620,t,['#fff','#2a5cff','#c1121f','#ffd23f']);x.fillStyle='#1d4fa0';x.fillRect(0,1000,W,H-1000);x.fillStyle='#e8c23a';x.beginPath();x.ellipse(540,1000,480,50,0,0,7);x.fill();x.fillStyle='#c1121f';x.beginPath();x.ellipse(540,1000,400,40,0,0,7);x.fill();x.fillStyle='#1d4fa0';x.beginPath();x.ellipse(540,1000,330,32,0,0,7);x.fill();}
+function wr(cx,base,s,col,t,lean=0){x.save();x.translate(cx,base);x.rotate(lean);x.translate(-cx,-base);player(cx,base,s,col,col,Math.sin(t*3)*0.3);x.restore();}
+function barn(cx,base){x.fillStyle='#a32020';x.beginPath();x.moveTo(cx-220,base);x.lineTo(cx-220,base-260);x.lineTo(cx,base-420);x.lineTo(cx+220,base-260);x.lineTo(cx+220,base);x.fill();x.fillStyle='#fff';x.fillRect(cx-80,base-200,160,200);x.strokeStyle='#a32020';x.lineWidth=10;x.beginPath();x.moveTo(cx-80,base-200);x.lineTo(cx+80,base);x.moveTo(cx+80,base-200);x.lineTo(cx-80,base);x.stroke();}
+function cow(cx,base,s,t){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#fff';x.fillRect(-90,-70,20,70);x.fillRect(60,-70,20,70);x.beginPath();x.ellipse(0,-110,120,60,0,0,7);x.fill();x.fillStyle='#111';x.beginPath();x.ellipse(-30,-120,40,25,0,0,7);x.fill();x.beginPath();x.ellipse(50,-95,25,18,0,0,7);x.fill();x.fillStyle='#fff';x.beginPath();x.ellipse(140,-150+Math.sin(t*2)*4,45,38,0,0,7);x.fill();x.fillStyle='#f4b6b6';x.beginPath();x.ellipse(170,-135,25,18,0,0,7);x.fill();x.restore();}
+function farm(t){x.fillStyle=grad(0,1000,['#8ec5ff','#e6f4ff']);x.fillRect(0,0,W,H);x.fillStyle='#d9e8b0';x.fillRect(0,1000,W,H-1000);x.fillStyle='#6a9a3a';x.beginPath();x.ellipse(540,1010,800,90,0,Math.PI,0);x.fill();}
+// 0 kanca
+shot(0,0,t=>{mat(t);wr(360,1000,1.35,'#c1121f',t,0.08);wr(720,1000,1.05,'#2a5cff',t+1,-0.08);bigText('13 YIL YENİLMEYEN DEV',W/2,280,76,'#fff',1);bigText('BİR ÇİFTÇİ YENDİ',W/2,410,96,'#ffd23f',1);});
+// 1 2000 sidney
+shot(1,1,t=>{night();yearStamp('2000','SİDNEY · GÜREŞ FİNALİ',eOut(cl(t*2)),640);});
+// 2 karelin
+shot(2,2,t=>{mat(t);wr(540,1000,1.45,'#c1121f',t);badge(540,300,'ALEKSANDR KARELIN','#c1121f',t*3);bigText('RUS DEV',W/2,450,130,'#fff',eOut(cl((t-0.3)*3)));});
+// 3 3 altın 13 yıl
+shot(3,3,t=>{night();for(let i=0;i<3;i++)medal(260+i*280,500,100,t+i,'ALTIN');bigText(String(Math.round(13*eOut(cl(t/1.2)))),W/2,770,230,'#ffd23f',1);bigText('YIL YENİLGİSİZ',W/2,940,90,'#fff',eOut(cl((t-0.4)*3)));});
+// 4 gardner çiftlik
+shot(4,4,t=>{farm(t);barn(780,1000);cow(250,1000,1.1,t);sil(560,1000,2.6,'#2a5cff');badge(540,300,'RULON GARDNER','#2a5cff',t*3);bigText('SÜT ÇİFTLİĞİ',W/2,450,115,'#fff',eOut(cl((t-0.3)*3)));});
+// 5 kimse şans vermiyordu
+shot(5,5,t=>{mat(t);wr(360,1000,1.35,'#c1121f',t);wr(720,1000,1.05,'#2a5cff',t+1);bigText('ŞANS: SIFIR?',W/2,330,120,'#fff',eOut(cl(t*3)));});
+// 6 1-0 gardner
+shot(6,6,t=>{mat(t);const k=cl(t/1.2);wr(360,1000,1.35,'#c1121f',t,-0.25*k);wr(700,1000,1.05,'#2a5cff',t+1,-0.15*k);score(1,0,'GARDNER','KARELIN',cl((t-0.8)*3),560);if(t>1.2)confetti(t);});
+// 7 minderdeki mucize
+shot(7,7,t=>{night();rays(540,700,t,'rgba(255,210,63,0.18)');medal(540,700,170,t,'ALTIN');confetti(t);bigText('MİNDERDEKİ',W/2,300,120,'#fff',eOut(cl(t*3)));bigText('MUCİZE',W/2,440,140,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#13213f','#060b18'));
