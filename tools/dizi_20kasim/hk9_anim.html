@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,7);radial(540,900,1300,'#5a1a1a','#140404');x.save();zoom(540,900,1.06+0.04*t);person(BABA,420,880,230,{eyeBig:1.4,brow:0.9,mouthOpen:0.8,sad:0.4,shirt:BS});lock(840,1000,1.3,'#ffd23f',false);x.restore();x.restore();vignette(0.45);
+ hook([['BABAM',120,'#fff'],['KANALINDAN',140,YEL],['KİLİTLENDİ!',120,'#fff']],270);s3Badge(t,9);}});
+// 1 şifremi unuttum
+sc.push({a:mid(1),f(t,T){radial(540,900,1300,'#1a2a5a','#040814');x.save();zoom(540,880,1.0+0.04*t);pwPanel(540,640,0.9,'????',T,false,'ŞİFRE');person(BABA,540,1330,130,{eyeBig:1.3,brow:0.7,mouthOpen:0.3,shirt:BS});x.restore();
+ B('ŞİFREMİ UNUTTUM 🤦',300,90,YEL,t);}});
+// 2 güvenlik sorusu
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#2a1a4a','#08040e');board(540,700,900,420,[['GÜVENLİK SORUSU',56,'#1b2a6a',prog(t,0,0.2)],['İLK EVCİL',84,'#c02020',prog(t,0.3,0.5)],['HAYVANINIZIN ADI?',72,'#c02020',prog(t,0.5,0.7)]],T);person(BABA,540,1370,110,{brow:0.6,eyeBig:1.2,shirt:BS});}});
+// 3 babam güldü
+sc.push({a:mid(3),f(t,T){salon();x.save();zoom(540,880,1.08+0.05*t);person(BABA,540,860,220,{smile:1,eyeOpen:0.3,mouthOpen:0.6,shirt:BS});x.restore();
+ B('HİÇ HAYVANIM',290,95,'#fff',t);B('OLMADI Kİ! 😂',410,105,YEL,t,0.2);}});
+// 4 kedi yanlış köpek yanlış
+sc.push({a:mid(4),f(t,T){const w=W2(4,'Köpek');const k=T>w-0.1;x.save();shake(T,k?w:W2(4,'yanlış'),(k?w:W2(4,'yanlış'))+0.4,8);radial(540,900,1300,'#3a0a0a','#100202');pwPanel(540,700,0.95,k?'KÖPEK':'KEDİ',T,false,'CEVAP');if(T>W2(4,'yanlış')-0.05)cross(800,560,1.0);x.restore();
+ B('YANLIŞ! ❌',300,120,RED,t);}});
+// 5 Kerem'e döndü
+sc.push({a:mid(5),f(t,T){salon();x.save();shake(t,0,1.2,5);zoom(540,900,1.0+0.04*t);person(BABA,330,880,170,{angry:1,brow:-0.6,mouthOpen:0.8,red:0.4,shirt:BS});sunglassesKerem(780,940,140,{brow:-0.3});x.restore();
+ B('HACKER DEĞİL MİSİN?',290,82,'#fff',t);B('AÇ ŞUNU! 😤',410,110,YEL,t,0.2);}});
+// 6 Kerem gözlük
+sc.push({a:mid(6),f(t,T){radial(540,900,1300,'#0a2a1a','#020a06');x.save();zoom(540,880,1.1+0.05*t);person(KEREM,540,860,220,{smile:0.4,brow:-0.5,noHood:true});glassesDown(540,860,220,1-ease(prog(T,mid(6)+0.1,mid(6)+0.7)));x.restore();
+ B('SORUYU',290,100,'#fff',t);B('SEN CEVAPLADIN 😎',410,90,YEL,t,0.2);}});
+// 7 yemin ederim
+sc.push({a:mid(7),f(t,T){x.save();shake(t,0,1.4,14);radial(540,900,1300,'#6a0a0a','#140202');x.save();zoom(540,880,1.1+0.05*t);person(BABA,540,860,230,{angry:1,brow:-0.7,mouthOpen:1,red:0.6,shirt:BS});x.restore();x.restore();vignette(0.4);
+ bigText('YEMİN EDERİM!',540,300,110,'#fff',prog(t,0,0.2),-0.03);bigText('HAYVANIM YOK!',540,430,100,RED,prog(t,0.15,0.35),-0.03);}});
+// 8 anneanne çayı bıraktı
+sc.push({a:mid(8),f(t,T){salon();x.save();zoom(540,880,1.05+0.05*t);nana(540,840,200,{brow:0.3});teaCup(800,1010,1.2,T);x.restore();
+ B('ANNEANNEM ☕',300,110,YEL,t);}});
+// 9 kaplumbağa
+sc.push({a:mid(9),f(t,T){const w=W2(9,'kaplumbağan');radial(540,900,1300,'#1a4a2a','#04100a');x.save();if(T>w-0.1)shake(T,w,w+0.5,10);zoom(540,880,1.0+0.04*t);nana(330,860,170,{smile:0.9});if(T>w-0.15){x.save();x.translate(780,1000);x.scale(back(PP(T,9,'kaplumbağan')),back(PP(T,9,'kaplumbağan')));turtle(0,0,1.1,T);x.restore();}x.restore();
+ if(T>w-0.15)bigText('KAPLUMBAĞAN VARDI! 🐢',540,320,82,YEL,PP(T,9,'kaplumbağan'),-0.03);else B('OĞLUM...',320,110,'#fff',t);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,10,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>

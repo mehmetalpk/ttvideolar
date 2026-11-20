@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+function kidPhoto(cx,cy,w,h){const k=w/620;picFrame(cx,cy,w,h,()=>{x.fillStyle='#d8c08a';x.fillRect(cx-w/2,cy-h/2,w,h);person(KID,cx-90*k,cy-20*k,120*k,{smile:1,mouthOpen:0.4});turtle(cx+130*k,cy+150*k,0.6*k,0);});}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,7);radial(540,900,1300,'#1a4a2a','#04100a');x.save();zoom(540,900,1.06+0.04*t);person(BABA,380,880,220,{eyeBig:1.4,brow:0.9,mouthOpen:0.8,shirt:BS});turtle(800,1060,1.1,T);x.restore();x.restore();vignette(0.45);
+ hook([['BABAMIN',120,'#fff'],['GİZLİ',150,YEL],['KAPLUMBAĞASI!',115,'#fff']],270);s3Badge(t,10);}});
+// 1 albümler
+sc.push({a:mid(1),f(t,T){salon();x.save();zoom(540,880,1.0+0.04*t);nana(380,860,170,{smile:0.6});const p=prog(T,mid(1),mid(1)+0.8);album(800,1080-p*40,0.9,'#7a3a2a',-0.05);album(800,990-p*60,0.85,'#2a4a7a',0.06);album(800,900-p*80,0.8,'#4a6a2a',-0.03);x.restore();
+ B('ESKİ ALBÜMLER 📚',300,100,YEL,t);}});
+// 2 hatırlamıyorum
+sc.push({a:mid(2),f(t,T){salon();x.save();zoom(540,880,1.08+0.05*t);person(BABA,540,860,220,{angry:0.5,brow:-0.4,smile:-0.3,eyeOpen:0.6,shirt:BS});x.restore();
+ B('KAPLUMBAĞA MI?',290,95,'#fff',t);B('HATIRLAMIYORUM 🙄',410,90,YEL,t,0.2);}});
+// 3 fotoğraf
+sc.push({a:mid(3),f(t,T){radial(540,900,1300,'#4a3a1a','#100c04');x.save();zoom(540,820,1.0+0.05*t);kidPhoto(540,760,620,520);x.restore();
+ B('8 YAŞINDAKİ BABAM 😂',300,85,YEL,t);}});
+// 4 arkasını çevirdi
+sc.push({a:mid(4),f(t,T){radial(540,900,1300,'#0a2a1a','#020a06');x.save();zoom(540,880,1.0+0.04*t);sunglassesKerem(380,900,170,{brow:-0.3});const r=prog(T,mid(4)+0.2,mid(4)+0.9);x.save();x.translate(790,880);x.scale(Math.cos(r*Math.PI),1);if(r<0.5)kidPhoto(0,0,300,250);else{x.fillStyle='#f4ecd0';rr(-150,-125,300,250,10);x.fill();}x.restore();x.restore();
+ B('ARKASINDA... 🔍',300,100,'#fff',t);}});
+// 5 Şimşek
+sc.push({a:mid(5),f(t,T){const w=W2(5,'Şimşek.');radial(540,900,1300,'#4a3a0a','#100c02');x.save();if(T>w-0.1)shake(T,w,w+0.5,10);zoom(540,800,1.0+0.05*t);x.fillStyle='#f4ecd0';rr(140,520,800,480,16);x.fill();x.font=`italic 700 50px ${F}`;x.textAlign='center';x.fillStyle='#555';x.fillText('kalemle:',540,620);if(T>w-0.2)bigText('ŞİMŞEK ⚡',540,800,130,'#1b2a6a',PP(T,5,'Şimşek.'),-0.04);x.restore();
+ B('TEK KELİME',330,100,'#fff',t);}});
+// 6 kanal açıldı
+sc.push({a:mid(6),f(t,T){const w=W2(6,'açıldı!');radial(540,900,1300,'#0a3a1a','#020c04');x.save();zoom(540,880,1.0+0.04*t);pwPanel(540,660,0.95,'ŞİMŞEK',T,true,'CEVAP');person(BABA,540,1340,130,{smile:1,mouthOpen:0.6,eyeBig:1.2,shirt:BS});if(T>w-0.1)check(820,520,1.2,'#2ecc40');x.restore();
+ if(T>w-0.15)bigText('KANAL AÇILDI! ✅',540,330,100,YEL,PP(T,6,'açıldı!'),-0.03);else B('BABAM YAZDI',330,100,'#fff',t);}});
+// 7 kaset düştü
+sc.push({a:mid(7),f(t,T){const w=W2(7,'düştü.');radial(540,900,1300,'#2a1a3a','#08040c');x.save();if(T>w)shake(T,w,w+0.5,10);zoom(540,880,1.0+0.04*t);album(540,700,1.3,'#7a3a2a',0);const f=prog(T,w-0.6,w);cassette(540,700+f*420,0.7,f*0.6,null,T);x.restore();
+ if(T>w-0.15)bigText('BİR KASET DÜŞTÜ! 😳',540,320,90,YEL,PP(T,7,'düştü.'),-0.03);else B('AMA...',320,110,'#fff',t);}});
+// 8 1989 Şimşek'e şarkı
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#3a1a0a','#0c0402');x.save();zoom(540,800,1.05+0.05*t);cassette(540,760,1.7,-0.04,['1989',"ŞİMŞEK'E ŞARKI 🎵"],T);x.restore();
+ B('ÜSTÜNDE YAZI:',330,95,'#fff',t);}});
+// 9 bu altın
+sc.push({a:mid(9),f(t,T){const w=W2(9,'altın.');radial(540,900,1300,'#5a4a0a','#141002');x.save();if(T>w-0.1)shake(T,w,w+0.5,8);zoom(540,880,1.1+0.05*t);person(KEREM,540,860,220,{smile:0.7,brow:-0.5,noHood:true});glassesDown(540,860,220,ease(prog(T,mid(9)+0.1,W2(9,'indirdi')+0.3)));x.restore();
+ if(T>w-0.15)bigText('BU ALTIN! 💰',540,320,120,YEL,PP(T,9,'altın.'),-0.03);else B('KEREM',320,110,'#fff',t);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,11,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>

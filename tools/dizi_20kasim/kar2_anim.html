@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+function pile(cx,cy,s,col){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle=col||'#fff';x.beginPath();x.moveTo(-240,60);x.quadraticCurveTo(-200,-120,-60,-170);x.quadraticCurveTo(40,-230,120,-150);x.quadraticCurveTo(240,-60,250,60);x.closePath();x.fill();x.restore();}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);radial(540,900,1300,'#1a3a6a','#040a18');x.save();zoom(540,900,1.06+0.04*t);karci(360,860,200,{smile:0.9,brow:-0.3,eyeOpen:0.7});pile(820,1080,0.9);x.restore();x.restore();vignette(0.45);
+ hook([['BÜTÜN SOKAĞI',115,'#fff'],['TEMİZLEDİM',130,YEL],['BİR EV HARİÇ!',115,'#fff']],270);amBadge(t,2);}});
+// 1 sabah makine
+sc.push({a:mid(1),f(t,T){const p=prog(T,mid(1),mid(2));x.save();zoom(540,950,1.0+0.03*t);street(T,p);blower(80+p*800,940,0.55,T,true);karci(80+p*800-140,860,60,{smile:1});x.restore();
+ B('SABAH 🌅',300,120,'#fff',t);}});
+// 2 Hikmet'in önünde durdum
+sc.push({a:mid(2),f(t,T){x.save();zoom(540,950,1.05+0.03*t);street(T,1,true);blower(470,940,0.55,T,false);karci(330,860,60,{brow:0.3});x.restore();
+ B("HİKMET BEY'İN ÖNÜ",300,95,YEL,t);B('DURDUM ✋',420,100,'#fff',t,0.2);}});
+// 3 söz sözdür
+sc.push({a:mid(3),f(t,T){radial(540,900,1300,'#1a3a3a','#040e0e');x.save();zoom(540,880,1.1+0.05*t);karci(540,860,210,{smile:0.6,eyeOpen:0.7});x.restore();
+ B('SÖZ SÖZDÜR 🤝',300,115,YEL,t);}});
+// 4 dağ gibi
+sc.push({a:mid(4),f(t,T){x.save();zoom(540,900,1.0+0.04*t);street(T,1);pile(670,960,1.2);x.restore();
+ B('SOKAK TERTEMİZ',290,100,'#fff',t);B('BİR EV DAĞ GİBİ ⛰️',410,95,YEL,t,0.2);}});
+// 5 ılık hava, eridi
+sc.push({a:mid(5),f(t,T){sky('#f0b060','#ffe8b0');sun(830,420,1.3,T);x.fillStyle='#eef4fb';x.fillRect(0,1080,W,840);x.save();zoom(540,980,1.0+0.03*t);const m=prog(T,mid(5),en(5));pile(540,1040,1.4-m*0.25,'#e8f0f8');drip(540,1060,T);x.restore();
+ B('2 GÜN ILIK HAVA ☀️',300,95,'#fff',t);}});
+// 6 ayaz
+sc.push({a:mid(6),f(t,T){x.fillStyle='#0a1430';x.fillRect(0,0,W,H);nightSky();x.fillStyle='#c8e0f4';x.fillRect(0,1080,W,840);x.save();zoom(540,980,1.0+0.03*t);pile(540,1040,1.15,'#cfe6f6');x.restore();snow(T,0.4,9);
+ B('SERT AYAZ 🥶',320,120,'#9fd4f0',t);}});
+// 7 buz bloğu
+sc.push({a:mid(7),f(t,T){const w=W2(7,'buz');radial(540,900,1300,'#0a3a5a','#020a14');x.save();if(T>w-0.1)shake(T,w,w+0.6,12);zoom(540,880,1.0+0.05*t);ice(540,920,1.5,T);x.restore();
+ if(T>w-0.15)bigText('BUZ BLOĞU! 🧊',540,330,120,YEL,PP(T,7,'buz'),-0.03);else B('O DAĞ...',330,110,'#fff',t);}});
+// 8 araba girdi
+sc.push({a:mid(8),f(t,T){const k=prog(T,mid(8),en(8));sky('#3a3a6a','#c88a6a');for(let i=0;i<4;i++)snowHouse(150+i*260,780,0.72,['#c98a5a','#8aa0b8','#c0a070','#a07ab0'][i],i!=2);x.fillStyle='#eef4fb';x.fillRect(0,880,W,1040);x.fillStyle='#9aa4b0';x.fillRect(0,960,W,70);suitcaseCar(-200+k*800,1000,0.7);
+ B('CUMARTESİ AKŞAMI',300,95,'#fff',t);B('BİR ARABA 🚗',420,100,YEL,t,0.2);}});
+// 9 buzul
+sc.push({a:mid(9),f(t,T){const w=W2(9,'buzul');radial(540,900,1300,'#0a3a5a','#020a14');x.save();if(T>w-0.1)shake(T,w,w+0.7,12);zoom(540,880,1.05+0.05*t);hikmet(330,820,160,{eyeBig:1.5,brow:0.9,mouthOpen:0.9});ice(720,1080,1.0,T);x.restore();
+ if(T>w-0.15)bigText('KAPISINDA BUZUL! 🧊',540,320,90,YEL,PP(T,9,'buzul'),-0.03);else B('HİKMET BEY DÖNDÜ',320,90,'#fff',t);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>
