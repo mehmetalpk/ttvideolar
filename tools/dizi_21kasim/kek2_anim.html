@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+function twoPlates(T,left,right,ly){const y=ly||900;popPlate(300,y,0.85,left,T);popPlate(780,y,0.85,right,T);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);radial(540,900,1300,'#5a1a3a','#14040c');x.save();zoom(540,900,1.06+0.04*t);gelin(540,820,180,{smile:0.7,brow:-0.6,eyeOpen:0.6,look:-1});x.restore();popPlate(250,1390,0.7,5,T);popPlate(830,1390,0.7,5,T);bigText('=',540,1380,150,YEL,1);x.restore();vignette(0.4);
+ hook([['GÖRÜMCEMİN TATLISININ',90,'#fff'],['AYNISINI',150,YEL],['YAPTIM!',125,'#fff']],270);kekBadge(t,2);}});
+// 1 3 gece deneme
+sc.push({a:mid(1),f(t,T){kitchen(true);x.save();zoom(540,880,1.05+0.04*t);gelin(380,820,160,{eyeOpen:0.45,smile:0.2});apron(380,820,160,'#fff');const n=1+Math.min(2,Math.floor(prog(T,mid(1),en(1))*3));for(let i=0;i<n;i++)cakePop(700+i*110,900,0.9,(i-1)*0.15);x.restore();
+ B('3 GECE DENEME 🌙',300,100,YEL,t);B(n+'. GECE',1440,80,'#fff',t);}});
+// 2 aynı çikolata şeker çubuk
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#3a1a0a','#0c0402');x.save();zoom(540,860,1.0+0.04*t);cakePop(540,720,2.6,0);x.restore();const L=[['AYNI ÇİKOLATA ✅','çikolata,'],['AYNI ŞEKERLER ✅','şekerler,'],['AYNI ÇUBUK ✅','çubuklar.']];L.forEach(([l,wd],i)=>{const p=PP(T,2,wd);if(p>0)bigText(l,540,290+i*95,72,i==2?YEL:'#fff',p,-0.02);});}});
+// 3 bayram sofrası
+sc.push({a:mid(3),f(t,T){homeRoom();x.save();zoom(540,880,1.0+0.03*t);selin(540,620,120,{smile:0.8,eyeOpen:0.5});bayramTable(860);popPlate(540,840,0.8,7,T);[[200,'#c98a3a'],[880,'#e0702a']].forEach(([a,c])=>{plate(a,880,0.7);x.fillStyle=c;x.beginPath();x.ellipse(a,872,50,20,0,0,7);x.fill();});x.restore();
+ B('BAYRAM SOFRASI 🎉',300,95,YEL,t);}});
+// 4 yanına koydum, demedim
+sc.push({a:mid(4),f(t,T){const w=W2(4,'Kimseye');homeRoom();x.save();zoom(540,880,1.0+0.03*t);bayramTable(860);const k=ease(prog(T,mid(4),mid(4)+0.8));popPlate(300,830,1.0,7,T);x.save();x.globalAlpha=Math.min(1,k*2);popPlate(1130-k*350,830,1.0,7,T);x.restore();gelin(760,560,95,{smile:0.6,brow:-0.4,eyeOpen:0.6});x.restore();
+ if(T>w-0.15)bigText('KİMSEYE TEK KELİME 🤫',540,320,80,YEL,PP(T,4,'Kimseye'),-0.03);else B('YAN YANA 👀',320,100,'#fff',t);}});
+// 5 herkes saldırdı
+sc.push({a:mid(5),f(t,T){const w=W2(5,'saldırdı.');homeRoom();x.save();shake(T,w-0.1,w+0.6,8);zoom(540,880,1.0+0.03*t);bayramTable(860);popPlate(300,830,1.0,7,T);const left=Math.max(1,7-Math.floor(prog(T,mid(5),en(5)+0.3)*6));popPlate(780,830,1.0,left,T,true);[[KARCI,620,560],[SEVGI,780,520],[MURAT,940,560]].forEach(([pp,a,b],i)=>person(pp,a,b+Math.sin(T*10+i)*10,80,{mouthOpen:0.7,eyeBig:1.2,smile:1}));x.restore();
+ bigText('HERKES BENİM TABAĞIMA! 😂',540,320,74,YEL,prog(t,0.05,0.25),-0.03);}});
+// 6 kaynanam üçüncüsü
+sc.push({a:mid(6),f(t,T){const w=W2(6,'üçüncüsünü');radial(540,900,1300,'#3a1a4a','#0c0414');x.save();zoom(540,880,1.05+0.04*t);nermin(380,820,170,{smile:1,eyeOpen:0.6});const k=prog(T,w-0.2,w+0.6);cakePop(720-k*80,900-k*120,1.3,-0.2);x.restore();
+ B('KAYNANAM',290,100,'#fff',t);if(T>w-0.15)bigText('3. KEK TOPU 🍭',540,410,100,YEL,PP(T,6,'üçüncüsünü'),-0.03);}});
+// 7 Selin bunlar fotoğraftakinden güzel
+sc.push({a:mid(7),f(t,T){const w=W2(7,'güzel');radial(540,900,1300,'#5a4a0a','#141002');x.save();if(T>w-0.1)shake(T,w,w+0.5,8);zoom(540,880,1.08+0.05*t);nermin(540,940,200,{smile:1,eyeOpen:0.3,mouthOpen:0.7});x.restore();
+ bigText('"SELİN, BUNLAR',540,280,88,'#fff',prog(t,0.05,0.25),-0.03);bigText('FOTOĞRAFTAKİNDEN',540,390,84,YEL,PP(T,7,'fotoğraftakinden'),-0.03);if(T>w-0.2)bigText('DE GÜZEL!" 😍',540,500,100,YEL,PP(T,7,'güzel'),-0.03);}});
+// 8 çay içtim
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#4a1a0a','#120402');x.save();zoom(540,880,1.08+0.04*t);gelin(420,820,180,{smile:0.5,eyeOpen:0.25,brow:-0.3});teaGlass(790,930,1.3);x.restore();
+ B('BEN SADECE...',290,95,'#fff',t);B('ÇAYIMI İÇTİM ☕',410,100,YEL,t,0.25);}});
+// 9 Selin dolu tabağına baktı
+sc.push({a:mid(9),f(t,T){const w=W2(9,'dolu');homeRoom();x.save();zoom(540,860,1.05+0.04*t);selin(540,600,140,{eyeBig:1.2,smile:-0.2,lookDown:1});bayramTable(860);popPlate(540,840,0.9,7,T);x.restore();
+ B('SONRA SELİN...',300,95,'#fff',t);if(T>w-0.15)bigText('TABAĞI DOPDOLU 😶',540,1440,80,YEL,PP(T,9,'dolu'),-0.03);}});
+// 10 benimkileri neden kimse yemiyor
+sc.push({a:mid(10),f(t,T){const w=W2(10,'kimse');radial(540,900,1300,'#5a1a3a','#14040c');x.save();if(T>w-0.1)shake(T,w,w+0.6,10);zoom(540,880,1.1+0.05*t);selin(540,860,220,{eyeBig:1.3,brow:0.8,sad:0.6,mouthOpen:0.5});x.restore();
+ bigText('"BENİMKİLERİ NEDEN',540,290,82,'#fff',prog(t,0.05,0.25),-0.03);if(T>w-0.2)bigText('KİMSE YEMİYOR?!"',540,410,100,YEL,PP(T,10,'kimse'),-0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{radial(540,900,1300,'#5a1a3a','#14040c');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

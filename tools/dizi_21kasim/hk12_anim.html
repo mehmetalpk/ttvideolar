@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,7);studioBg(T);x.save();zoom(540,900,1.06+0.04*t);person(BABA,330,900,170,{eyeBig:1.4,mouthOpen:0.9,shirt:BS});nana(760,900,150,{eyeBig:1.4,mouthOpen:0.7});camTri(540,1250,0.7,true,T);x.restore();x.restore();vignette(0.4);
+ hook([['BÜTÜN AİLEMİZ',112,'#fff'],['TELEVİZYONA',125,YEL],['ÇAĞRILDI! 📺',115,'#fff']],270);s3Badge(t,12);}});
+// 1 telaş
+sc.push({a:mid(1),f(t,T){salon();x.save();shake(T,mid(1),en(1)+0.3,6);zoom(540,880,1.0+0.04*t);const r=T*9;person(ANNE,260+Math.sin(r)*60,860,120,{eyeBig:1.3,mouthOpen:0.6});person(BABA,540+Math.sin(r+2)*60,820,130,{eyeBig:1.3,mouthOpen:0.6,shirt:BS});nana(820+Math.sin(r+4)*50,880,115,{mouthOpen:0.5});speedL(T);x.restore();
+ B('BÜYÜK TELAŞ 🌀',300,105,YEL,t);}});
+// 2 kuaför
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#5a2a4a','#14060e');x.save();zoom(540,880,1.05+0.04*t);nana(540,880,190,{smile:0.9,eyeOpen:0.4});curlers(540,880,190);hairDryer(540,600,1.1,T);x.restore();
+ B('ANNEANNEM',290,100,'#fff',t);B('KUAFÖRDE 💇‍♀️',410,100,YEL,t,0.2);}});
+// 3a tencere
+sc.push({a:mid(3),f(t,T){kitchen();x.save();zoom(540,880,1.0+0.04*t);person(ANNE,330,820,150,{smile:1});bigPot(750,960,1.05);x.restore();
+ B('EN GÜZEL TENCERE',300,88,'#fff',t);}});
+// 3b dolma
+sc.push({a:W2(3,'Stüdyoya')-0.1,f(t,T){kitchen();x.save();zoom(540,900,1.1+0.04*t);bigPot(540,930,1.5);x.restore();
+ bigText('STÜDYOYA DOLMA! 🫑',540,350,92,YEL,prog(t,0.05,0.25),-0.03);}});
+// 4 banyoda prova
+sc.push({a:mid(4),f(t,T){const w=W2(4,'Koş');radial(540,900,1300,'#1a4a5a','#040e12');x.save();if(T>w-0.1)shake(T,w,w+0.6,9);zoom(540,880,1.05+0.04*t);x.fillStyle='#bfe3ff';rr(160,420,760,560,30);x.fill();x.fillStyle='#e8f6ff';rr(180,440,720,520,24);x.fill();person(BABA,540,780,180,{mouthOpen:0.6+0.4*Math.abs(Math.sin(T*8)),eyeOpen:0.3,shirt:'#fff'});towel(540,780,180);notes(830,520,T,YEL);x.restore();
+ B('BANYODA PROVA 🚿',300,92,'#fff',t);if(T>w-0.15)bigText('"KOŞ ŞİMŞEK KOŞ!"',540,1420,85,YEL,PP(T,4,'Koş'),-0.03);}});
+// 5 Kerem gözlük siler
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#0a2a1a','#020a06');x.save();zoom(540,880,1.08+0.04*t);sunglassesKerem(540,860,210,{smile:0.3,brow:-0.3});x.fillStyle='#fff';x.globalAlpha=0.9;x.beginPath();x.ellipse(540+Math.sin(T*10)*80,860,70,40,0.3,0,7);x.fill();x.globalAlpha=1;x.restore();
+ B('KEREM İSE... 😎',300,100,YEL,t);}});
+// 6a stüdyo ışıklar
+sc.push({a:mid(6),f(t,T){studioBg(T);x.save();zoom(540,900,1.0+0.04*t);camTri(250,880,0.9,true,T);camTri(830,880,0.9,true,T);x.fillStyle='#ff2d55';rr(340,560,400,110,24);x.fill();x.font=`900 56px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#fff';x.fillText('● CANLI',540,617);x.restore();
+ B('STÜDYO 🎬',300,115,YEL,t);}});
+// 6b alkış
+sc.push({a:W2(6,'alkışlar.')-0.2,f(t,T){studioBg(T);x.save();zoom(540,900,1.0+0.03*t);person(BABA,300,760,120,{smile:1,mouthOpen:0.5,shirt:BS});bowTie(300,760,120);person(ANNE,540,760,110,{smile:1});nana(780,760,110,{smile:1});curlers(780,760,110);audience(T,1520);x.restore();
+ bigText('👏 ALKIŞ 👏',540,330,110,YEL,prog(t,0.05,0.25),-0.03);}});
+// 7 mikrofon
+sc.push({a:mid(7),f(t,T){studioBg(T);x.save();zoom(540,900,1.08+0.04*t);mic(720,820,1.1);person(BABA,420,820,190,{smile:0.9,brow:0.4,mouthOpen:0.3,shirt:BS});bowTie(420,820,190);x.restore();
+ B('BABAM HAZIR 🎤',300,100,'#fff',t);}});
+// 8 yapımcı geçti
+sc.push({a:mid(8),f(t,T){const w=W2(8,'Kerem\'e');studioBg(T);x.save();zoom(540,900,1.0+0.03*t);const k=ease(prog(T,mid(8),w));person(BABA,250,820,120,{eyeBig:1.3,mouthOpen:0.5,shirt:BS});bowTie(250,820,120);yapimci(200+k*420,820,130,{smile:0.6});sunglassesKerem(880,960,110,{});x.restore();
+ B('AMA YAPIMCI...',300,100,'#fff',t);if(T>w-0.15)bigText('➜ KEREM\'E DÖNDÜ',540,430,90,YEL,PP(T,8,'Kerem\'e'),-0.03);}});
+// 9 dahi
+sc.push({a:mid(9),f(t,T){const w=W2(9,'dahiyi');studioBg(T);x.save();if(T>w-0.1)shake(T,w,w+0.6,10);zoom(540,900,1.08+0.05*t);yapimci(300,820,150,{smile:0.7});sunglassesKerem(760,860,160,{smile:0.2,brow:-0.4});person(BABA,900,1420,90,{eyeBig:1.5,mouthOpen:0.9,shirt:BS});x.restore();
+ B('"12 YAŞINDAKİ',290,95,'#fff',t);if(T>w-0.15)bigText('DAHİYİ ÇAĞIRDIK!"',540,410,100,YEL,PP(T,9,'dahiyi'),-0.03);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,13,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+const RLT=['TEYZE','HALA','KUZEN','ABLA'];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,6);radial(540,900,1300,'#5a2a1a','#140804');x.save();zoom(540,900,1.06+0.04*t);nermin(360,880,210,{brow:-0.2,angry:0.4,smile:-0.6,eyeOpen:0.55,look:1});cookiePlate(800,860,0.95);cross(800,820,1.3);x.restore();x.restore();vignette(0.45);
+ hook([['KAYNANAM',120,'#fff'],['KURABİYELERİME',112,YEL],['HİÇ DOKUNMADI!',112,'#fff']],270);kekBadge(t,1);}});
+// 1 3 yıldır kurabiye götürüyorum
+sc.push({a:mid(1),f(t,T){homeRoom();x.save();zoom(540,880,1.0+0.04*t);gelin(420,820,170,{smile:1});cookiePlate(720,1020,0.9);x.restore();
+ B('3 YILDIR',290,100,'#fff',t);B('HER TOPLANTI 🍪',410,95,YEL,t,0.2);}});
+// 2 dolu geri
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#2a2a3a','#08080c');x.save();zoom(540,880,1.05+0.04*t);gelin(540,700,170,{sad:1,smile:-0.4,eyeOpen:0.7});cookiePlate(540,940,1.15);x.restore();
+ B('DOLU GERİ DÖNÜYOR 😞',300,82,YEL,t);}});
+// 3 Selin kek topları
+sc.push({a:mid(3),f(t,T){const w=W2(3,'kek');radial(540,900,1300,'#5a1a3a','#14040c');x.save();zoom(540,880,1.05+0.04*t);selin(360,820,170,{smile:1,eyeOpen:0.6});popPlate(780,1020,1.0,7,T);x.restore();
+ B('GÖRÜMCEM SELİN',290,92,'#fff',t);if(T>w-0.15)bigText('KEK TOPLARI 🍭',540,410,100,YEL,PP(T,3,'kek'),-0.03);}});
+// 4a alkış
+sc.push({a:mid(4),f(t,T){homeRoom();x.save();zoom(540,880,1.0+0.03*t);selin(540,700,130,{smile:1,eyeOpen:0.4});popPlate(540,940,0.8,7,T);[[KARCI,170],[SEVGI,370],[MURAT,710],[ZEYNEP,910]].forEach(([pp,a],i)=>{person(pp,a,1420+Math.sin(T*9+i)*8,80,{smile:1,mouthOpen:0.5});});x.restore();
+ B('👏 HERKES ALKIŞLIYOR',300,82,'#fff',t);}});
+// 4b fotoğraf herkese
+sc.push({a:W2(4,'Kaynanam')-0.1,f(t,T){radial(540,900,1300,'#3a1a4a','#0c0414');x.save();zoom(540,880,1.0+0.03*t);nermin(300,820,150,{smile:1,eyeOpen:0.5});phone(560,860,0.75,0.1,false,'#fde3ec');x.save();x.translate(560,840);x.scale(0.45,0.45);popPlate(0,0,1,5,T);x.restore();RLT.forEach((r,i)=>{const p=prog(T,W2(4,'Kaynanam')+i*0.35,W2(4,'Kaynanam')+i*0.35+0.4);if(p>0){x.save();x.globalAlpha=p;x.fillStyle='#fff';rr(700,560+i*130,300,100,24);x.fill();x.font=`900 38px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#3a7ac0';x.fillText('📩 '+r,850,610+i*130);x.restore();}});x.restore();
+ B('BÜTÜN AKRABALARA 📲',300,82,YEL,t);}});
+// 5 elleri altın
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#5a4a0a','#141002');x.save();zoom(540,880,1.08+0.05*t);nermin(540,860,210,{smile:1,eyeOpen:0.3,mouthOpen:0.4});x.restore();
+ bigText('"SELİN\'İN ELLERİ',540,300,88,'#fff',prog(t,0.05,0.25),-0.03);bigText('ALTIN!" ✨',540,420,110,YEL,PP(T,5,'altın,'),-0.03);}});
+// 6 bir kez denedi
+sc.push({a:mid(6),f(t,T){homeRoom();x.save();zoom(540,880,1.05+0.04*t);nermin(420,820,170,{brow:0.3,smile:-0.2,eyeOpen:0.7});x.fillStyle='#d79a4a';x.beginPath();x.arc(680,980,60,0,7);x.fill();x.fillStyle='#3a1e0e';[[-14,-12],[12,-4],[-4,14]].forEach(([p,q])=>{x.beginPath();x.arc(680+p,980+q,8,0,7);x.fill();});x.restore();
+ B('GEÇEN HAFTA',290,95,'#fff',t);B('BİR KEZ DENEDİ 🍪',410,95,YEL,t,0.2);}});
+// 7 ısırdı peçete çanta
+sc.push({a:mid(7),f(t,T){const w1=W2(7,'peçeteye'),w2=W2(7,'çantasına');radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,880,1.0+0.04*t);nermin(300,800,150,{smile:-0.5,mouthOpen:0.2,eyeOpen:0.6});const d=prog(T,w2-0.1,w2+0.5);handbag(780,1040,0.9,true);wrapNapkin(680+d*100,860+d*140,0.8*(1-d*0.4),prog(T,w1-0.1,w1+0.4));x.restore();
+ const lab=T<w1-0.1?'ISIRDI 😬':(T<w2-0.1?'➜ PEÇETEYE 🧻':'➜ ÇANTAYA 👜');bigText(lab,540,320,100,YEL,1,-0.03);}});
+// 8 Can omuz silkti
+sc.push({a:mid(8),f(t,T){homeRoom();x.save();zoom(540,880,1.08+0.04*t);const s=Math.abs(Math.sin(T*5))*20;canM(540,860-s,200,{brow:0.6,smile:-0.1,eyeOpen:0.8});x.restore();
+ B('KOCAM CAN 🤷‍♂️',300,95,'#fff',t);bigText('"ANNEM BÖYLE."',540,420,100,YEL,PP(T,8,'Annem'),-0.03);}});
+// 9 tarif fotoğrafını büyüttüm
+sc.push({a:mid(9),f(t,T){const w=W2(9,'büyüttüm.');radial(540,900,1300,'#0a1a3a','#02040c');x.save();zoom(540,880,1.0+0.04*t);const k=1+0.5*ease(prog(T,mid(9)+0.4,w+0.2));recipePhone(560,860,0.95*k,0.04,'SELİN\'İN TARİFİ');x.restore();
+ B('O GECE... 🌙',300,100,'#fff',t);if(T>w-0.15)bigText('🔍 BÜYÜT',540,1440,90,YEL,PP(T,9,'büyüttüm.'),-0.03);}});
+// 10 önlük mutfak
+sc.push({a:mid(10),f(t,T){const w=W2(10,'mutfağa');kitchen(true);x.save();if(T>w-0.1)shake(T,w,w+0.5,8);zoom(540,880,1.08+0.05*t);gelin(540,820,200,{smile:0.6,brow:-0.5,eyeOpen:0.7});apron(540,820,200,'#fff');x.restore();
+ B('ÖNLÜK TAKILDI 👩‍🍳',300,90,'#fff',t);if(T>w-0.15)bigText('MUTFAĞA! 🔥',540,420,110,YEL,PP(T,10,'mutfağa'),-0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#5a1a3a','#14040c');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

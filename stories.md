@@ -61,3 +61,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-20 | Bütün sokağı temizledim, bir ev hariç (Kar Küremeyi İstemeyen Komşu) [Part 2] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 27.1 sn | 12:30 | 6454954569911322 | ÖĞLE | parkur:hayır
 - 2026-11-20 | Babamın gizli kaplumbağası ortaya çıktı (Hacker Kerem S3) [Part 10] | kendi kurgu | komedi/seri | Emrullah | 27.7 sn | 17:00 | -886951085311899268 | AKŞAM | parkur:hayır
 - 2026-11-20 | Komşum buzu kazmayla kırmaya çalıştı (Kar Küremeyi İstemeyen Komşu) [Part 3 FİNAL] | r/MaliciousCompliance (havuz) | komedi/seri | Emrullah | 25.9 sn | 20:30 | -7124581839447768833 | GECE | parkur:hayır
+- 2026-11-21 | Babamın çocukluk kaseti viral oldu (Hacker Kerem S3) [Part 11] | kendi kurgu | komedi/seri | Emrullah | 26.2 sn | 09:00 | -4862001760443416439 | SABAH | parkur:hayır
+- 2026-11-21 | Kaynanam kurabiyelerime hiç dokunmadı (Görümcemin Kek Topları) [Part 1] | r/pettyrevenge (havuz) | komedi/seri | İrem | 30.7 sn | 12:30 | -4239829006845984344 | ÖĞLE | parkur:hayır
+- 2026-11-21 | Bütün ailemiz televizyona çağrıldı (Hacker Kerem S3) [Part 12] | kendi kurgu | komedi/seri | Emrullah | 27.7 sn | 17:00 | 4525613348886695583 | AKŞAM | parkur:hayır
+- 2026-11-21 | Görümcemin tatlısının aynısını yaptım (Görümcemin Kek Topları) [Part 2] | r/pettyrevenge (havuz) | komedi/seri | İrem | 28.1 sn | 20:30 | 4909991112558857455 | GECE | parkur:hayır

@@ -1,0 +1,4 @@
+# 21 Kas üretimi — HK S3 P11/P12, Görümcemin Kek Topları P1/P2 (İrem)
+Kurulum: dizi_20kasim/README ile aynı (hacker_dizi/s2 paketi + p23/p4x/p56/p78/tuv/s3/hoca/amca/d19/kar/t20 .js'leri üst klasöre) + bu klasördeki d21.js → ../d21.js. anim.html = dizi_19kasim/kar1_anim.html ilk 17 satırı (kar.js'ten sonra t20.js + d21.js eklenmiş) + sahneler.
+d21.js: Kek serisi GELIN gelin() (anlatıcı, İrem), SELIN selin() (sarışın, küpe), NERMIN nermin() (kaynana, gözlük), CAN canM(); cakePop, popPlate(cx,cy,s,n,T,eaten), cookiePlate, handbag, wrapNapkin, apron, recipePhone, bayramTable, teaGlass, kekBadge(=amBadge). HK: YAPIMCI yapimci() (kulaklıklı), laptop, waveBars, wardrobe(cx,cy,s,open,inner), landline (zil), studioBg (TV stüdyosu spotlar), audience, curlers (bigudi), hairDryer, bigPot, bowTie.
+Miks: python3 mix.py <dir> 0.1 2.5 (final 1.5).
