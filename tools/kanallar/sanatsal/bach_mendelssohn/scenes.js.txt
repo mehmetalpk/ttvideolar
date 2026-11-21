@@ -1,0 +1,25 @@
+function score(cx,cy,s,dust,t){x.save();x.translate(cx,cy);x.scale(s,s);x.rotate(-0.05);x.fillStyle='#efe3c2';x.fillRect(-260,-330,520,660);x.strokeStyle='#5a4a30';x.lineWidth=3;for(let b=0;b<5;b++)for(let i=0;i<5;i++){x.beginPath();x.moveTo(-220,-240+b*110+i*14);x.lineTo(220,-240+b*110+i*14);x.stroke();}
+ x.fillStyle='#3a2a18';for(let b=0;b<5;b++)for(let i=0;i<8;i++){x.beginPath();x.ellipse(-190+i*55,-235+b*110+((i*37+b*13)%5)*12,9,7,-0.4,0,7);x.fill();x.fillRect(-182+i*55,-275+b*110+((i*37+b*13)%5)*12,3,40);}
+ x.fillStyle='#2a1a0a';x.font='900 40px Georgia,serif';x.textAlign='center';x.fillText('MATTHÄUS-PASSION',0,-280);
+ if(dust>0){x.fillStyle=`rgba(110,95,70,${0.7*dust})`;x.fillRect(-260,-330,520,660);const r=rng(7);for(let i=0;i<40;i++){x.fillStyle=`rgba(80,70,50,${0.6*dust})`;x.beginPath();x.arc(-260+r()*520,-330+r()*660,4+r()*14,0,7);x.fill();}}x.restore();}
+function church(cx,base,s,col='#2a1e14'){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;x.fillRect(-260,-420,520,420);x.beginPath();x.moveTo(-60,-420);x.lineTo(0,-820);x.lineTo(60,-420);x.fill();x.fillRect(-90,-560,180,140);x.fillStyle='#ffd27a';for(let i=0;i<4;i++){x.beginPath();x.moveTo(-200+i*120,-120);x.lineTo(-200+i*120,-280);x.arc(-170+i*120,-280,30,Math.PI,0);x.lineTo(-140+i*120,-120);x.fill();}x.restore();}
+function dustP(t){const r=rng(12);for(let i=0;i<40;i++){x.fillStyle='rgba(230,210,170,0.35)';x.beginPath();x.arc((r()*W+t*20*(r()-0.5))%W,(r()*H+t*30)%H,2+r()*4,0,7);x.fill();}}
+function door(cx,base,t){x.fillStyle='#3a2414';x.fillRect(cx-200,base-520,400,520);x.fillStyle='#ffd27a';x.fillRect(cx-170,base-490,340,490);for(let i=0;i<7;i++)sil(cx-150+i*50,base-30,1.1,'#2a1608');}
+// 0 kanca
+shot(0,0,t=>{bgDoc('#2a1e14','#0a0604');dustP(t);score(540,700,1.0,1-cl((t-0.6)*1.2),t);bigText('UNUTULAN BACH',W/2,230,100,'#fff',1);bigText('20 YAŞINDA GENÇ',W/2,1380,90,'#ffd23f',1);});
+// 1 1727 leipzig
+shot(1,1,t=>{bgDoc('#1a2030','#06080e');if(t<1.8)yearStamp('1727','LEIPZIG',eOut(cl(t*2)),640);else{church(540,1000,1.0);staff(1330,t,10);bigText('MATTA PASYONU',W/2,260,110,'#ffd23f',back(cl((t-1.8)*3)));}});
+// 2 unutuldu 100 yıl
+shot(2,2,t=>{bgDoc('#2a2218','#0a0806');dustP(t);x.fillStyle='#4a3420';for(let i=0;i<3;i++)x.fillRect(120,520+i*220,840,24);x.fillStyle='#6a4a2a';for(let i=0;i<3;i++)for(let j=0;j<9;j++)x.fillRect(150+j*88,520+i*220-150-(j%3)*10,70,150+(j%3)*10);score(540,760,0.55,1,t);bigText('UNUTULDU',W/2,230,130,'#fff',eOut(cl(t*3)));if(t>2.2){counter(0,100,(t-2.2)/1.4,W/2,1420,120,'#ffd23f',' YIL');}});
+// 3 mendelssohn prova
+shot(3,3,t=>{bgDoc('#3a1a10','#0e0604');spot(540,700,520,0.4);choir(760,t);conductor(540,1060,1.4,t);bigText('PROVA',W/2,250,150,'#ffd23f',back(cl(t*2.5)));bigText('AYLARCA',W/2,1380,100,'#fff',eOut(cl((t-1)*3)));});
+// 4 1829 berlin
+shot(4,4,t=>{opera();if(t<1.9){yearStamp('1829','11 MART · BERLİN',eOut(cl(t*2)),640);}else{curtains(t);stageFloor(1000);orchestra(980,t,12,'#1a0808');conductor(540,960,1.2,t);staff(380,t,8);badge(540,1430,'20 YAŞINDA','#c1121f',(t-2.2)*3);}});
+// 5 salon doldu, kapıda kaldı
+shot(5,5,t=>{bgDoc('#1a1a28','#06060c');door(540,1000,t);for(let i=0;i<12;i++){const px=60+i*88+Math.sin(t*3+i)*6;sil(px,1580+(i%3)*30,1.6,i%2?'#3a3550':'#2a2640');}stampT('DOLU',540,660,cl((t-0.3)*3),'#c1121f',120);bigText('KAPIDA',W/2,250,140,'#ffd23f',back(cl((t-0.8)*2.5)));});
+// 6 bach geri döndü
+shot(6,6,t=>{bgDoc('#2a1e14','#0a0604');rays(540,760,t,'rgba(255,220,140,0.18)');score(540,760,0.9,0,t);for(let i=0;i<8;i++){const a=t*0.8+i*0.785;x.fillStyle='#ffd23f';x.font='900 80px serif';x.fillText('♪',540+Math.cos(a)*400-20,760+Math.sin(a)*400);}bigText('BACH',W/2,230,160,'#ffd23f',back(cl(t*2.5)));bigText('GERİ DÖNDÜ',W/2,1380,100,'#fff',eOut(cl((t-0.6)*3)));});
+// 7 soru
+shot(7,7,t=>{bgDoc('#2a1e14','#0a0604');dustP(t);for(let i=0;i<3;i++)score(260+i*280,780,0.45,1,t);for(let i=0;i<3;i++){const a=t*1.5+i*2.1;bigText('?',540+Math.cos(a)*320,760+Math.sin(a)*140,90,'#ffd23f',1);}bigText('KAÇ DAHİ',W/2,240,130,'#fff',1);bigText('BEKLİYOR?',W/2,380,120,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#2a1e14','#0a0604'));

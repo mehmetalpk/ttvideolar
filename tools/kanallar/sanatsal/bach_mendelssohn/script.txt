@@ -1,0 +1,11 @@
+[intense] Unutulan Bach'ı, yirmi yaşında bir genç kurtardı. || Unutulan Bach'ı, 20 yaşında bir genç kurtardı.
+
+[serious] Bin yedi yüz yirmi yedi, Leipzig. Bach, Matta Pasyonu'nu ilk kez seslendirdi. || 1727, Leipzig. Bach, Matta Pasyonu'nu ilk kez seslendirdi.
+[curious] Bach ölünce eserleri büyük ölçüde unutuldu. Bu dev eser yaklaşık yüz yıl sahneden uzak kaldı. || Bach ölünce eserleri büyük ölçüde unutuldu. Bu dev eser yaklaşık 100 yıl sahneden uzak kaldı.
+[intense] Genç Felix Mendelssohn partisyonu buldu ve aylarca prova yaptırdı.
+[serious] On bir Mart bin sekiz yüz yirmi dokuz, Berlin. Mendelssohn, yirmi yaşında eseri yeniden sahneye koydu. || 11 Mart 1829, Berlin. Mendelssohn, 20 yaşında eseri yeniden sahneye koydu.
+[intense] Salon doldu, yüzlerce kişi kapıda kaldı.
+[serious] Bu konser, Bach'ı yeniden dünyaya tanıttı.
+Sence kaç dahi, keşfedilmeyi bekliyor?
+
+[softly] Kaçırmamak için takip et.

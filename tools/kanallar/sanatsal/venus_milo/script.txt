@@ -1,0 +1,10 @@
+[intense] Bir çiftçi, tarlasında tanrıça buldu.
+
+[serious] Sekiz Nisan bin sekiz yüz yirmi, Yunanistan'ın Milos adası. || 8 Nisan 1820, Yunanistan'ın Milos adası.
+[curious] Bir çiftçi taş ararken, toprağın altından mermer bir heykelin gövdesi çıktı.
+[intense] Yakındaki bir Fransız deniz subayı bunu gördü. Diğer parçaları birlikte çıkardılar.
+[serious] Fransa heykeli satın aldı. Kral On Sekizinci Louis, onu Louvre'a bağışladı. || Fransa heykeli satın aldı. Kral XVIII. Louis, onu Louvre'a bağışladı.
+[intense] Ama heykelin kolları hiç bulunamadı. Elinde ne tuttuğu bugün bile tartışılıyor.
+Sence kolsuz hali mi daha etkileyici?
+
+[softly] Kaçırmamak için takip et.

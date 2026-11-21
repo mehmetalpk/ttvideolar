@@ -1,0 +1,10 @@
+[intense] Bir roman, bir katedrali kurtardı.
+
+[serious] Bin sekiz yüz otuzlar, Paris. Notre-Dame harap haldeydi. Heykeller kırılmıştı, yıkılması bile konuşuluyordu. || 1830'lar, Paris. Notre-Dame harap haldeydi. Heykeller kırılmıştı, yıkılması bile konuşuluyordu.
+[curious] Victor Hugo kalemi aldı ve bin sekiz yüz otuz birde Notre-Dame'ın Kamburu'nu yayımladı. || Victor Hugo kalemi aldı ve 1831'de Notre-Dame'ın Kamburu'nu yayımladı.
+[intense] Kitap büyük ses getirdi. Parisliler katedrali yeniden sevdi.
+[serious] Bin sekiz yüz kırk dörtte büyük restorasyon başladı. Mimar Viollet-le-Duc, katedrale yeni bir sivri kule de ekledi. || 1844'te büyük restorasyon başladı. Mimar Viollet-le-Duc, katedrale yeni bir sivri kule de ekledi.
+[intense] O kule, iki bin on dokuz yangınında çöktü. Katedral, iki bin yirmi dörtte yeniden açıldı. || O kule, 2019 yangınında çöktü. Katedral, 2024'te yeniden açıldı.
+Sence bir kitap bir binayı kurtarabilir mi?
+
+[softly] Kaçırmamak için takip et.
