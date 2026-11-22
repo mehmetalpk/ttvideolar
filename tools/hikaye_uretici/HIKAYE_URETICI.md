@@ -50,6 +50,13 @@ Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri a
 - Hiçbir zaman "gerçek/yaşanmış" deme; #gerçekhikaye yasak. İsimler Türk ve kurgusal; marka/kurum adı yok.
 - Havuzdaki kayıtta "Kaynak: özgün (hikâye üretici)" ya da Reddit kaynağı yazılır.
 
+## 5b. Telif ve kişilik hakkı güvenliği (22 Kas kullanıcı kararı)
+- Reddit uyarlamaları serbest (mevcutlar kalır; kaynak satırı yazılır). Diğer kaynaklarda (YouTube/izleyici hikâyesi kanalları, kitap, dizi, haber) SADECE soyut durum alınır.
+- TANINIRLIK TESTİ: Orijinali bilen biri bizim seriyi izlese "bu o hikâye" der mi? Derse yeniden yaz.
+- KARIŞTIRMA: Her özgün seri en az 2 farklı soyut durumdan kurulur; ters köşe ve final bize ait olur.
+- "Gerçek/yaşanmış/izleyicimizden geldi" iddiası YOK (gerçek kişilerin kişilik hakları + yanıltma).
+- KAYIT: Havuzdaki her özgün seride hangi soyut durumlardan kurulduğu ve puanı yazılır (bağımsız yaratımın kanıtı).
+
 ## 6. Örnek defteri (haftalık analiz günceller)
 ### İyi (tekrar edilecek kalıp)
 - Kapıyı Kilitleyen Hoca: kural "dakika beş, kapı kilit" → hoca geç kalır → sınıf kapıyı kilitler "Kural kuraldır" → hoca kapıda.
