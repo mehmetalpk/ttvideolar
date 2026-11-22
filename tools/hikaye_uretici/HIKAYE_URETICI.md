@@ -72,3 +72,18 @@ Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri a
 - Öğretmen "ödevi elle yazın" dedi → 40 sayfalık el yazısı
 - Kayınbiraderim arabamı izinsiz aldı → kilometre ve benzin faturası
 - Komşu teyze camdan her şeyi not alıyor → site toplantısında defter okunur
+
+## 8. İzleyici-hikâyesi kanalından SOYUT durumlar (22 Kas; "akraba terörü" bölümü, 46 dk)
+KURAL: Bunlar sadece durum/çatışma tipidir. Kaynak hikâyelerin olay sırası, dönüşü, finali, isimleri, şehirleri KULLANILMAZ; üretici kendi karakteri, kendi planı ve kendi komik sonuyla baştan kurar. Kaynaktaki ağır öğeler (kilitleme, aç bırakma, şiddet, sahte görüntü, gizli kamera, aldatma) ASLA alınmaz; sadece hafif, komik çekirdek kalır.
+Gözlem: "akraba" teması o kanalın en sevilen konusu; yorum/izleyici katılımı en yüksek. Bizde de aile/akraba ekseni ağırlık alabilir. Kötü karakter en çok: yenge, hala/enişte, kıskanç kuzen, kayırmacı büyük.
+- Telefonla geçiştirme → habersiz ziyaret: Bir akraba "her şey yolunda, büyüğümüz telefona çıkamıyor" diye herkesi oyalıyor; aile habersiz gidince bambaşka bir manzara (komik: dede aslında köyde kahvede turnuva yönetiyor, telefonu hala saklıyor çünkü dede ona borç yazdırıyor).
+- Tek bina, aynı kat: Miras paylaşımında herkes aynı daireyi (en üst kat/manzaralı kat) istiyor; pazarlıklar zincirleniyor ("alt katı alırım ama…"). Komik çözüm: büyükten kalan zarfta önceden yapılmış kura/şart.
+- Rehin pazarlık: "Dükkânı bana vermezsen köydeki ortak arsaya ev yapmana imza atmam."
+- Kefil tuzağı: Akraba "çok sıkıştım" deyip kefil olmanı istiyor, aldığını başkasının üstüne yazıp ödemeyi sana bırakıyor. Karşı hamle kâğıt üstünde: sözleşme, tutanak, aile toplantısında makbuzlar.
+- Başarı kıskançlığı: Sınavı/işi kazanan gence kıskanç kuzen/yenge sülalede asılsız söylenti yayıyor. İfşa: kanıtla herkesin önünde (ör. "olmayan" şeyin olmadığını gösteren basit bir belge/fotoğraf). Söylenti içeriği HAFİF tutulur (tembellik, yalan başarı, vb.).
+- Uydurma senaryo: Gitmediğin bir düğün/davet yüzünden yenge senin hakkında koca bir hikâye uyduruyor (olmayan nişanlı, olmayan ayrılık). Komik ifşa: "Benim nişanlım bile yok ki." — sofrada ya da aile grubunda.
+- Sahte bilirkişi akraba: Sülalenin her konuda güvendiği enişte/dayı (doktor, avukat, usta, hoca edası) aslında her şeyi uyduruyor; anlatıcı onun kendi kuralıyla onu yakalıyor (dolandırıcılık/büyü/sapıklık YOK; sadece kibirli uydurmacılık).
+- Pusu sofrası: Aile büyüğü, küs iki tarafı haber vermeden aynı yemeğe çağırıp "barışın" dayatıyor (aldatma/kuma YOK; ör. küs iki kardeş, kavgalı iki komşu).
+- Kayırmacı büyük: Babaanne/anneanne torunların tabağına/kilosuna/okuluna karışıyor, birini sürekli övüp diğerini eziyor. Komik ters tepme: kendi "kuralı" kendine uygulanıyor (beden/kilo alay konusu YAPILMAZ; konu kural ve kayırmacılık).
+- "Üstümüze yapalım mı?" şakası: Bir akraba mirası gizlice kendi üstüne alma fikrini şaka diye ortaya atıyor; kimse gülmüyor.
+- Dedikodu zinciri: Bir söylenti sülalede dolaşırken her ağızda büyüyor; anlatıcı zinciri tersten takip edip kaynağı sofrada açıklıyor.
