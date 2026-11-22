@@ -44,6 +44,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-22 12:50 | mehmetalp | Soru: günde 6 video = 2 tam 3'lük seri/gün? Değerlendirme verildi (artı: 2 P1/gün, seri aynı gün biter; risk: hacim 10–14 Kas'ta video başı izlenmeyi düşürmüştü, havuzda sadece Çöp Kovası var → haftada 14 yeni hikâye gerekir, gece üretim ~6 video + küçük hesaplar limit). Öneri: 1 haftalık test, ölçüt günlük toplam izlenme + yeni takipçi. Karar bekleniyor; görevler değişmedi.
 - 2026-11-22 12:45 | arkadaş | Haftalık video sayısı soruldu: kurala göre ~80 farklı video/hafta (Redditsel 28 + Grup 1 21 + Grup 2 21 + Grup 3 9–12), platform kopyalarıyla ~230 gönderi. 16–22.11 gerçekleşen: 79 (Redditsel 28 + küçük 51). Karar yok.
 - 2026-11-22 12:45 | mehmetalp | Revizyon kararı: Hacker Kerem'e son, günde 4 video 3 partlık serilerle. Önce analiz istendi (yapıldı: 3'lük seriler medyan 35,4K vs HK 9,3K; 15–21 Kas aynı video sayısında 956K vs 334K; takipçi 1.896→3.329). Görevler henüz değişmedi, akış tartışılıyor.
 - 2026-11-22 04:30 | gece görevi (Claude) | Küçük hesaplar İş 1 (23.11): sadece Grup 3 boştu → Psikolojik Milgram P2 (16:00, 31,7 sn), Parasal John Law P2 (09:00, 33,3 sn), Kriminal Louvre P2 (09:00 TT+YT, 28,5 sn; soruşturma güncel durumu web'de doğrulandı). İş 2 (Pazar Grup 3) 9 video: P3 finaller 25.11 (Milgram, John Law, Louvre); yeni seriler P1 27.11 + P2 29.11: Marshmallow testi, Hunt kardeşler/Gümüş Perşembe, Baker Street 1971. Hepsi 24–31 sn; MP4'ler depodan silindi.
