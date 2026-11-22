@@ -3,6 +3,16 @@ Kullanıcının seçtiği hikâyeler. Günlük görev ÖNCE buradan seçer (en �
 Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uyarlama kendi cümlelerinle yazılır.
 
 
+> FORMAT 5 (22 Kas 13:05, kullanıcı kararı — 23.11'den itibaren; ÖNCEKİ FORMAT 4 ve HK notlarını GEÇERSİZ kılar):
+>  - HACKER KEREM BİTTİ (S3 P14 FİNAL 22.11 17:00, "Sezon 4" duyurusu videodan kesildi). Sezon 4 YOK. HK planı yazma/üretme.
+>  - GÜNDE 6 VİDEO = 2 TAM 3 PARTLIK SERİ/GÜN, iki hat: A hattı 10:30 P1 → 13:00 P2 → 15:30 P3 FİNAL; B hattı 18:00 P1 → 20:30 P2 → 22:30 P3 FİNAL. Bir seri aynı gün başlar ve biter.
+>  - Hikâyeler tools/hikaye_uretici/HIKAYE_URETICI.md ile yazılır (formül + Türk aile draması/gündüz kuşağı tadı + 8/10 puanlama). Havuzda hazır seri yoksa gece görevi üreticiyle 2 yeni seri yazar. Aynı gün iki seri farklı mekânda; her 3 seriden 1'i İrem.
+>  - Özgün seride açıklamaya "Reddit'teki bir hikâyeden ilham alınmıştır" YAZILMAZ ve #reddithikayeleri kullanılmaz; Reddit uyarlamasında yazılır.
+>  - Süre: her part ≤40 sn; strateji 4/4 güçlü kancalı P1 40–60 sn olabilir. Outro P1/P2: "Devamı <n+1>. partta, kaçırmamak için takip et." P3: "Kaçırmamak için takip et."
+>  - 23.11 GEÇİŞ GÜNÜ (5 video): A hattı 10:30 Çöp Kovası P2, 13:00 Çöp Kovası P3 FİNAL (15:30 boş); B hattı Düğün Albümü P1/P2/P3 (18:00/20:30/22:30).
+>  - 24.11: A = Her Şey Yazılı Olacak, B = Terlik Cezası. 25.11: A = Dedemin Mirası, B = üreticiyle yeni seri (25.11 gecesi yazılır).
+>  - TEST: 23–29 Kas bir hafta. Ölçüt: günlük toplam TikTok izlenme + günlük yeni takipçi (15–21 Kas: ~185K/gün, ~200 takipçi/gün).
+
 > 23 KASIM (22 Kas gece görevi notu; FORMAT 4): HK SEZON 3 BİTTİ (P14 FİNAL 22.11 17:00). 09:00 + 17:00 = HK SEZON 4 P1 + P2 (14 partlık planı Pazar 21:37 analizi yazar; yoksa 23.11 gece görevi önce planı yazar). Görümcemin Kek Topları BİTTİ (P3 22.11 12:30; 'Kullanıldı'ya taşındı). 12:30 = 'Çöp Kovası Savaşı' P2 (≤40 sn, Emrullah; P1 cliff: gece kamerasında Ferhat Bey poşetleri bastırıp kameraya EL SALLADI), 20:30 = Çöp P3 FİNAL (≤40 sn). 24.11 12:30 = yeni 3 partlık seri P1 (komşudan sonra aile/okul/iş yeri; İrem tercih). Çizimler: tools/dizi_22kasim/ (cop.js: babac, ferhat, binC çöp kovası, trashBag, diaper, babyB, pizzaBox, wallCam, cctv gece filtresi, frontYard).
 
 > 22 KASIM (GEÇERSİZ, 22 Kas üretildi) (21 Kas gece görevi notu; FORMAT 4): 09:00 HK S3 P13 + 17:00 P14 FİNAL (plan aşağıda; P12 cliff: yapımcı Kerem'e "Biz aslında 12 yaşındaki dahiyi çağırdık." P14 outro: "Sezon 4 pazartesi! Kaçırmamak için takip et."). 12:30 = 'Görümcemin Kek Topları' P3 FİNAL (≤40 sn, İrem; P2 cliff: Selin "Benimkileri neden kimse yemiyor?"), sonra seri 'Kullanıldı'ya. 20:30 için havuzda YENİ 3 partlık seri YOK → 22.11 gece görevi strateji.md "KANCA + KONU SEÇİMİ"ne göre seç/yaz (son 3 seri aile ağırlıklı → komşu/site çatışması tercih), P1'i 20:30'a üret. Pazar 21:37 analizi HK Sezon 4 planını yazar. Çizimler: tools/dizi_21kasim/ (d21.js: Kek karakterleri GELIN/SELIN/NERMIN/CAN, cakePop, popPlate, bayramTable, teaGlass; HK: yapimci, studioBg, wardrobe, landline).
@@ -100,6 +110,35 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 > GÜNCELLEME (4 Kas 16:55): İki kapanış cümlesi AYRI ekranlarda değil, TEK EKRANDA arka arkaya: üstte "3K BEĞENİ = PART <n>" + kalp, altta "YORUMLARA "HATIRLAT" YAZ 💬" balonu; iki ses klibi arasında ~0.1 sn boşluk. Kapanış toplam ~6.5 sn.
 
 ## Bekleyen
+
+### SERİ (FORMAT 5 — 23.11 B hattı 18:00/20:30/22:30; 3 part, İrem — aile/düğün): Düğün Albümü (komedi / kaynana) — Kaynak: özgün (hikâye üretici) — puan 9/10
+- Anlatıcı: gelin (İrem). Kaynana: Saadet Hanım (topuz, inci kolye, mor ceket). Kayınpeder: Nuri Bey (bıyık, hırka; yumuşak kalpli). Eşi: Emre. Fotoğrafçı adı/marka YOK.
+- PART 1 (güçlü kanca 4/4 → 40–60 sn): Düğün albümü eve geliyor; kaynanam bastırmış, kocaman deri albüm. Sayfaları çeviriyorum: her fotoğrafta ben yarımım; bir kolum, bir duvak ucu. Salona asılan dev çerçevede Emre, kaynanam ve teyzeler — ben yokum. Kaynanam: "Fotoğrafçı öyle çekmiş kızım." Ben: "Peki." Kanca: "Kaynanam düğün albümünden beni kestirmiş." Cliff: Fotoğrafçının bütün ham dosyaları benim telefonumda.
+- PART 2 (≤40 sn): Nuri Bey'in 60. yaş günü; kaynanam "Sen bilgisayardan anlarsın, slayt sen hazırla" der. Bütün aile salonda, perde iniyor, ışıklar kapanıyor. Kanca: "Kayınpederimin yaş günü slaytını ben hazırladım." Cliff: İlk fotoğraf ekrana geliyor: kaynanamdan sadece bir kulak ve topuzun yarısı.
+- PART 3 FİNAL (≤40 sn): Her slaytta kaynanam yarım: bir dirsek, bir çanta, inci kolyenin ucu. Teyzeler kıkırdıyor, Nuri Bey kahkahayı basıyor. Kaynanam kıpkırmızı: "Bu ne?" Ben sakince: "Fotoğrafçı öyle çekmiş anneciğim." Tatlı son: ertesi hafta albüm yeniden basılıyor, salondaki çerçevenin ortasında ben varım. Soru: "Sence fazla mı ileri gittim?"
+- Hashtag (özgün): #hikaye #komedi #kaynana #gelin #düğün #aile #keşfet #fyp (Reddit satırı YOK)
+
+### SERİ (FORMAT 5 — 24.11 A hattı 10:30/13:00/15:30; 3 part, Emrullah — iş yeri): Her Şey Yazılı Olacak (komedi / müdür) — Kaynak: özgün (hikâye üretici; r/MaliciousCompliance tipi kalıp) — puan 9/10
+- Anlatıcı: muhasebe çalışanı (erkek, Emrullah; gözlük, lacivert kazak). Müdür: Selami Bey (kel, kalın kaşlı, gri yelek, sürekli kahve). Genel müdür: Ayten Hanım (kısa beyaz saç, kırmızı gözlük). Şirket adı YOK.
+- PART 1 (≤40 sn): Selami Bey sözlü verilen izni sonra "Ben öyle demedim" diye inkâr ediyor, maaşımdan yarım gün kesiliyor. Toplantıda kural: "Bundan sonra her şey yazılı olacak. E-posta yoksa olay yoktur." Ben: "Peki." Kanca: "Müdürüm 'her şey yazılı olacak' dedi." Cliff: Ertesi sabah 08:59'da ilk e-postam gidiyor: "Konu: Bilgisayarımı açıyorum."
+- PART 2 (≤40 sn): Gün boyu her şeyi yazıyorum: "Kalemim bitti, yenisini alıyorum", "Pencereyi 3 cm aralıyorum", "Çayıma bir şeker atıyorum." Bütün ekip de başlıyor. Selami Bey'in ekranında sayaç: 143 okunmamış. Kanca: "Müdürüme bir günde 143 e-posta attım." Cliff: Ekip arkadaşım yanlışlıkla "Tümünü yanıtla"ya basıyor; bilgi kısmında genel müdür Ayten Hanım.
+- PART 3 FİNAL (≤40 sn): Ayten Hanım odaya giriyor, elinde çıktılar: "Selami Bey, neden tuvalete gitmek için e-posta onayı istiyorsunuz?" Selami Bey kekeliyor; kesilen yarım günüm iade ediliyor. Tatlı son: ertesi gün Selami Bey'den tek satırlık e-posta: "Konu: Sözlü de olur." Ben cevap yazıyorum: "Yazılı teşekkürler." Soru: "Senin müdürün de böyle mi?"
+- Hashtag (özgün): #hikaye #komedi #işyeri #müdür #eposta #ofis #keşfet #fyp
+
+### SERİ (FORMAT 5 — 24.11 B hattı 18:00/20:30/22:30; 3 part, Emrullah — apartman): Terlik Cezası (komedi / apartman yöneticisi) — Kaynak: özgün (hikâye üretici) — puan 8/10
+- Anlatıcı: genç kiracı (erkek, Emrullah). Yönetici: Cevdet Bey (yeleği cepli, bıyıklı, elinde ajanda ve kırmızı kalem). Annem: Fatma Hanım (eşarp, tatlı ama kararlı). Apartman/site adı YOK.
+- PART 1 (≤40 sn): Kapımın önündeki terliğe kırmızı kalemle tutanak: "Ortak alan işgali — 200 TL ceza." Cevdet Bey: "Yönetmelik!" Oysa kendi kapısının önünde iki dev saksı, bir bisiklet ve paspas dağı. Ben: "Peki, yönetmeliği okuyayım." Kanca: "Yönetici kapımdaki terliğe ceza yazdı." Cliff: Yönetmeliğin 12. maddesini okuyunca gülümsüyorum.
+- PART 2 (≤40 sn): Madde 12: ortak alana konan HER eşya için ceza. Bütün apartman bir gecede yönetmeliği harfiyen uyguluyor: Cevdet Bey'in saksıları, bisikleti, paspası, hatta merdivendeki kedi mamasına tutanak; kapısında 14 kırmızı kâğıt. Kanca: "Yöneticiye 14 tutanak yazdık." Cliff: Cevdet Bey olağanüstü genel kurul çağırıyor: "Beni kim şikâyet etti?!"
+- PART 3 FİNAL (≤40 sn): Genel kurulda herkes elinde yönetmelik; tutanaklar tek tek okunuyor, toplam ceza 2.800 TL. Oylama: yönetici değişiyor; yeni yönetici annem Fatma Hanım. İlk kararı: "Kapı önüne terlik serbest." Tatlı son: Cevdet Bey'in saksıları da kalıyor, ama annem her birine isim etiketi yapıştırıyor. Soru: "Sizin apartmanda da böyle bir yönetici var mı?"
+- Hashtag (özgün): #hikaye #komedi #apartman #yönetici #komşu #site #keşfet #fyp
+
+### SERİ (FORMAT 5 — 25.11 A hattı 10:30/13:00/15:30; 3 part, İrem — aile/miras, gündüz kuşağı tadı): Dedemin Mirası (komedi / akraba) — Kaynak: özgün (hikâye üretici) — puan 9/10
+- Anlatıcı: torun (kız, İrem). Dede: Hüsnü Dede (köylü, kasket, beyaz bıyık, baston; çok esprili). Kuzenler: Tolga (takım elbise, telefonu elinden düşmüyor) ve Sinem (abartılı makyaj). Teyze: Nevin. Köy adı YOK.
+- PART 1 (güçlü kanca 4/4 → 40–60 sn): Dedem aile grubuna yazıyor: "Pazar herkes köye gelsin, mirasımı paylaştıracağım." Yıllardır uğramayan kuzenler bir anda arabalarla kapıda; Tolga dedeme tablet, Sinem ipek eşarp getirmiş, teyzem börek üstüne börek. Ben her hafta olduğu gibi dedemle tavuklara yem veriyorum. Dedem cebinden kara bir defter çıkarıyor. Kanca: "Dedem mirasını paylaştırmak için herkesi topladı." Cliff: Defterin ilk sayfasında başlık: "KİM KAÇ KERE GELDİ."
+- PART 2 (≤40 sn): Dedem defteri okuyor: Tolga "2 kere, ikisi de bayram", Sinem "1 kere, fotoğraf çekip gitti". Sofrada buz gibi sessizlik. Tam o sırada kapı çalınıyor: hiç tanımadığımız, çamurlu çizmeli bir adam. Dedem: "Gel evladım, sen de mirasçısın." Kanca: "Mirasın ortasında kayıp bir mirasçı çıktı." Cliff: Herkes bana dönüyor: "Bu adam kim?!"
+- PART 3 FİNAL (≤40 sn): Adam komşu köyden Yusuf; on yıldır dedemin tavuklarına benimle birlikte bakıyor. Dedem vasiyeti açıklıyor: tarla ve ev Yusuf'la bana; kuzenlere… "her birine birer tavuk, bakmayı öğrensinler diye." Tolga tabletini geri istemeye utanıyor. Tatlı son: ertesi pazar Tolga ve Sinem, ellerinde birer tavuk, köyde ders alıyor. Soru: "Sence dede adil mi davrandı?"
+- Hashtag (özgün): #hikaye #komedi #miras #dede #akraba #aile #keşfet #fyp
+
 
 ### SERİ (aktif, 2 part/gün): Hacker Kerem — SEZON 2 "Akıllı Ev" (komedi) — 11 Kas'tan itibaren 09:00 ve 17:00 — 10 PART, FİNAL 15.11 Pazar 17:00 (FORMAT 4)
 - Karakterler/renkler Sezon 1 ile AYNI (anlatıcı abi Emre = Emrullah sesi; Kerem 12, güneş gözlüklü; hacker kurslu baba; "gerçek hacker" anne; anneanne). Rozet: "SEZON 2 · PART n". Açıklama satırı: "Hacker Kerem Sezon 2 — Part n 👀".

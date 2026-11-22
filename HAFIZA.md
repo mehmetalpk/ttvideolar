@@ -4,7 +4,7 @@
 ## Güncel durum (son güncelleme: 2026-11-22 04:30)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
-- **Redditsel formatı (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
+- **Redditsel formatı → FORMAT 5 (23.11'den): günde 6 video, 2 tam 3'lük seri/gün, Hacker Kerem bitti; havuz.md üst notu + tools/hikaye_uretici/.** Eski: (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
 - **Redditsel seri durumu (22 Kas gece):** 22.11 dolu: HK S3 P13 09:00, Kek P3 FİNAL 12:30 (İrem; seri bitti), HK S3 P14 FİNAL 17:00 (Sezon 3 bitti), yeni seri 'Çöp Kovası Savaşı' P1 20:30 (komşu, Emrullah, 41,7 sn güçlü kanca). Sırada 23.11: HK SEZON 4 P1 09:00 + P2 17:00 (planı Pazar 21:37 analizi yazar), Çöp P2 12:30 + P3 FİNAL 20:30; 24.11 12:30 yeni seri P1 (aile/okul/iş yeri, İrem tercih; havuzda yok). Çizim: tools/dizi_22kasim (cop.js).
 - **Redditsel sıradaki (15 Kas haftalık analiz):** HK SEZON 3 "Babamın YouTube Kanalı" 14 partlık plan havuz.md'de (16–22.11). 3 partlık seri sırası: Tuvalet Raporu P3 (16.11 12:30) → Kapıyı Kilitleyen Hoca (İrem, P1 16.11 20:30) → Amcanın Gürültülü Hediyeleri → Kar Küremeyi İstemeyen Komşu → Görümcemin Kek Topları (İrem).
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
@@ -33,7 +33,7 @@
 - 12 Kas Metricool raporu (1–12 Kas, PDF): raporlar/2026-11-12_metricool_analiz.pdf · özet raporlar/2026-11-12_metricool_analiz.md (YouTube bölümleri geçersiz).
 
 ## Açık konular
-- REDDITSEL REVİZYON (22.11, kullanıcı): Hacker Kerem BİTİYOR, günde 4 video tamamen 3 partlık serilerle. Analiz raporlar/2026-11-22_redditsel_format_analizi.md. Slot/akış düzeni kullanıcıyla konuşuluyor; zamanlanmış görev HENÜZ DEĞİŞTİRİLMEDİ (kullanıcı: 'daha değiştirme').
+- FORMAT 5 testi 23–29 Kas (6 video/gün, 2 seri). 30.11'de ölç: günlük toplam izlenme + yeni takipçi vs 15–21 Kas (~185K/gün, ~200/gün).
 - Redditsel profil fotoğrafı: arkadaş 2 ve 5'i beğendi, türevleri 6–10, turuncu zeminli 11–12 (marka/redditsel/). Son seçim bekleniyor (arkadaş + mehmetalp).
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
@@ -44,6 +44,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-22 13:05 | mehmetalp | FORMAT 5 kabul: 23.11'den günde 6 video = 2 tam 3'lük seri (A 10:30/13:00/15:30, B 18:00/20:30/22:30), Hacker Kerem bitti. Hikâye üretici kuruldu (tools/hikaye_uretici/HIKAYE_URETICI.md: tutan seri DNA'sı + Türk aile draması/gündüz kuşağı tadı + puanlama). İlk 4 özgün seri havuzda (Düğün Albümü, Her Şey Yazılı Olacak, Terlik Cezası, Dedemin Mirası). HK S3 P14'ün 'Sezon 4 pazartesi' outrosu kesildi, açıklama düzeltildi. Özgün serilerde Reddit satırı yok.
 - 2026-11-22 12:50 | mehmetalp | Soru: günde 6 video = 2 tam 3'lük seri/gün? Değerlendirme verildi (artı: 2 P1/gün, seri aynı gün biter; risk: hacim 10–14 Kas'ta video başı izlenmeyi düşürmüştü, havuzda sadece Çöp Kovası var → haftada 14 yeni hikâye gerekir, gece üretim ~6 video + küçük hesaplar limit). Öneri: 1 haftalık test, ölçüt günlük toplam izlenme + yeni takipçi. Karar bekleniyor; görevler değişmedi.
 - 2026-11-22 12:45 | arkadaş | Haftalık video sayısı soruldu: kurala göre ~80 farklı video/hafta (Redditsel 28 + Grup 1 21 + Grup 2 21 + Grup 3 9–12), platform kopyalarıyla ~230 gönderi. 16–22.11 gerçekleşen: 79 (Redditsel 28 + küçük 51). Karar yok.
 - 2026-11-22 12:45 | mehmetalp | Revizyon kararı: Hacker Kerem'e son, günde 4 video 3 partlık serilerle. Önce analiz istendi (yapıldı: 3'lük seriler medyan 35,4K vs HK 9,3K; 15–21 Kas aynı video sayısında 956K vs 334K; takipçi 1.896→3.329). Görevler henüz değişmedi, akış tartışılıyor.
