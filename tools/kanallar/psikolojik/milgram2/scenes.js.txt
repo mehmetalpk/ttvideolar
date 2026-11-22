@@ -1,0 +1,25 @@
+function shockBox(cx,cy,s,lit,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#3a3f4a';rr(-440,-170,880,340,24);x.fill();x.fillStyle='#22252c';rr(-410,-140,820,90,14);x.fill();x.fillStyle='#ffd23f';x.font=`900 44px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('ŞOK ÜRETECİ',0,-95);
+ for(let i=0;i<30;i++){const px=-405+i*28,on=i<lit;x.fillStyle=on?(i>20?'#ff2d2d':'#ffb000'):'#555';x.fillRect(px,10,20,46);x.fillStyle=on?'#fff':'#999';x.beginPath();x.arc(px+10,90,8,0,7);x.fill();}
+ x.fillStyle='#fff';x.font=`800 30px ${F}`;x.fillText('15 V',-380,140);x.fillText('450 V',370,140);x.restore();}
+function bolt(cx,cy,s,a){x.save();x.globalAlpha=a;x.translate(cx,cy);x.scale(s,s);x.fillStyle='#ffd23f';x.beginPath();x.moveTo(10,-90);x.lineTo(-40,10);x.lineTo(0,10);x.lineTo(-15,90);x.lineTo(45,-15);x.lineTo(5,-15);x.closePath();x.fill();x.restore();}
+function wallSplit(){x.fillStyle='#14102a';x.fillRect(530,500,20,700);}
+function bar100(cx,cy,w,h,p,col,label,pct){x.fillStyle='rgba(255,255,255,0.12)';rr(cx-w/2,cy-h/2,w,h,20);x.fill();x.fillStyle=col;rr(cx-w/2,cy-h/2,Math.max(1,w*p),h,20);x.fill();x.fillStyle='#fff';x.font=`900 56px ${F}`;x.textAlign='left';x.textBaseline='middle';x.fillText(label,cx-w/2+24,cy);x.textAlign='right';x.fillText(pct,cx+w/2-24,cy);}
+// 0 kanca: 40 kişiden 26
+shot(0,0,t=>{bgPsi('#3a1030','#12040e');for(let i=0;i<40;i++){const cx=150+(i%8)*112,cy=600+Math.floor(i/8)*110;const on=i<26&&t>i*0.05;x.fillStyle=on?'#ff4d4d':'#5a5a70';x.beginPath();x.arc(cx,cy-30,22,0,7);x.fill();rr(cx-26,cy-6,52,50,16);x.fill();}bigText('40 KİŞİDEN 26\'SI',W/2,280,100,'#fff',1);bigText('SONUNA KADAR',W/2,410,95,'#ffd23f',1);});
+// 1 uzman tahmini
+shot(1,1,t=>{bgDoc('#1c2440','#070a14');coat(300,1080,1.7);coat(780,1080,1.7);sbubble(540,560,700,160,'KİMSE YAPMAZ!',eOut(cl((t-0.8)*3)),80);badge(540,300,'UZMAN TAHMİNİ','#2a5cff',t*3);if(t>3)bigText('%1 ?',W/2,1380,110,'#5fe08a',back(cl((t-3)*2.5)));});
+// 2 öğrenci duvara vurdu sustu
+shot(2,2,t=>{bgPsi('#3a1030','#12040e');wallSplit();const quiet=t>3.2;const sh=quiet?0:Math.sin(t*40)*8;sil(800+sh,1060,1.8,'#0a0718');if(!quiet){bigText('BAM!',760,640+Math.sin(t*25)*10,110,'#ff4d4d',back(cl((t-0.6)*3)));if(t>1.8)bigText('AAAH!',840,800,90,'#ffd23f',back(cl((t-1.8)*3)));}else{bigText('...',800,700,160,'#fff',1);badge(540,1380,'SESSİZLİK','#555',(t-3.2)*3);}sil(280,1060,1.8,'#ffd23f');shockBox(280,560,0.5,18+Math.floor(t*2),t);});
+// 3 öğretmenler terledi
+shot(3,3,t=>{bgPsi();spot(540,760,420,0.35);const sh=Math.sin(t*30)*5;sil(540+sh,1100,2.6,'#ffd23f');for(let i=0;i<5;i++){const k=(t*0.8+i*0.37)%1;x.fillStyle='rgba(120,200,255,0.85)';x.beginPath();x.ellipse(430+i*55,520+k*260,12,20,0,0,7);x.fill();}bigText('TERLEDİLER',W/2,280,110,'#fff',back(cl(t*2.5)));if(t>1.6)bigText('TİTREDİLER',W/2,410,95,'#ff9ad5',back(cl((t-1.6)*2.5)));});
+// 4 devam etmeniz gerekiyor
+shot(4,4,t=>{bgDoc('#22252c','#0a0b0e');coat(540,1100,2.6);for(let i=0;i<3;i++){const p=cl((t-0.6-i*0.9)*3);if(p>0)sbubble(540,360+i*200,940,140,'DEVAM ETMENİZ GEREKİYOR',p,54);}});
+// 5 herkes en az 300 V
+shot(5,5,t=>{bgPsi('#3a1030','#12040e');shockBox(540,720,1.0,Math.min(20,Math.floor(t*10)),t);bigText('HERKES',W/2,300,130,'#fff',back(cl(t*2.5)));if(t>1)bigText('EN AZ 300 VOLT',W/2,1380,90,'#ffb000',back(cl((t-1)*2.5)));});
+// 6 %65 450 V
+shot(6,6,t=>{bgPsi('#3a1030','#12040e');shockBox(540,720,1.0,30,t);bolt(220,520,1.2,0.6+0.4*Math.sin(t*12));bolt(860,520,1.2,0.6+0.4*Math.cos(t*11));bigText('%'+Math.round(65*eOut(cl(t/1.2))),W/2,330,170,'#ff4d4d',1);if(t>1.4)bigText('450 VOLT',W/2,1380,110,'#fff',back(cl((t-1.4)*2.5)));});
+// 7 neden itaat
+shot(7,7,t=>{bgPsi();people(5,540,1100,1.4,'#0a0718',170);qmarks(540,800,t,3);bigText('NEDEN',W/2,280,130,'#fff',back(cl(t*2.5)));bigText('İTAAT ETTİLER?',W/2,410,100,'#ffd23f',back(cl((t-0.4)*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,3,'#3a1030','#12040e'));
+function coat(cx,base,s){sil(cx,base,s,'#0a0718');x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e8e8f0';x.beginPath();x.moveTo(-70,-150);x.lineTo(70,-150);x.lineTo(84,0);x.lineTo(-84,0);x.closePath();x.fill();x.fillStyle='#0a0718';x.beginPath();x.moveTo(-14,-150);x.lineTo(14,-150);x.lineTo(0,-90);x.fill();x.restore();}

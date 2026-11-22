@@ -1,0 +1,25 @@
+function frNote(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#efe4c8';rr(-260,-120,520,240,8);x.fill();x.strokeStyle='#3a4a8a';x.lineWidth=6;rr(-240,-100,480,200,6);x.stroke();x.fillStyle='#3a4a8a';x.font=`900 44px Georgia,serif`;x.textAlign='center';x.fillText('BANQUE GÉNÉRALE',0,-20);x.font=`900 60px Georgia,serif`;x.fillText('100 LIVRES',0,60);x.restore();}
+function goldBar(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#e0a800';x.beginPath();x.moveTo(-120,40);x.lineTo(120,40);x.lineTo(90,-40);x.lineTo(-90,-40);x.closePath();x.fill();x.fillStyle='#ffd23f';x.fillRect(-80,-36,160,20);x.restore();}
+function palace(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#d8cfb8';x.fillRect(-420,-300,840,300);x.fillStyle='#4a5a7a';x.beginPath();x.moveTo(-440,-300);x.lineTo(0,-420);x.lineTo(440,-300);x.fill();x.fillStyle='#7a8aa8';for(let i=0;i<7;i++)x.fillRect(-370+i*110,-250,60,140);x.fillStyle='#5a3418';x.fillRect(-50,-120,100,120);x.restore();}
+function share(cx,cy,s,rot,val){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#f1e6c8';rr(-230,-150,460,300,10);x.fill();x.strokeStyle='#8a5a20';x.lineWidth=8;rr(-210,-130,420,260,8);x.stroke();x.fillStyle='#8a5a20';x.font=`900 34px Georgia,serif`;x.textAlign='center';x.textBaseline='middle';x.fillText('CIE DES INDES',0,-80);x.font=`900 70px Georgia,serif`;x.fillText(val,0,10);x.font=`800 30px Georgia,serif`;x.fillText('LIVRES',0,80);x.restore();}
+function street(t){x.fillStyle=grad(0,H,['#c9b48a','#4a3a24']);x.fillRect(0,0,W,H);for(const sd of [-1,1]){x.fillStyle='#8a7350';x.beginPath();x.moveTo(540+sd*540,0);x.lineTo(540+sd*170,700);x.lineTo(540+sd*170,1150);x.lineTo(540+sd*540,1400);x.fill();x.fillStyle='#3a2a1a';for(let i=0;i<4;i++){const k=i/4;x.fillRect(540+sd*(470-k*260)-20,180+k*450,40,110-k*50);}}x.fillStyle='#6a5a40';x.fillRect(0,1150,W,H-1150);}
+function ship2(cx,cy,s,t){x.save();x.translate(cx,cy+Math.sin(t*2)*8);x.scale(s,s);x.fillStyle='#5a3418';x.beginPath();x.moveTo(-200,0);x.lineTo(200,0);x.lineTo(160,70);x.lineTo(-160,70);x.fill();x.fillStyle='#4a2a10';x.fillRect(-6,-260,12,260);x.fillStyle='#f4f1ea';x.beginPath();x.moveTo(10,-250);x.quadraticCurveTo(120,-150,10,-40);x.fill();x.beginPath();x.moveTo(-10,-230);x.quadraticCurveTo(-110,-140,-10,-50);x.fill();x.restore();}
+// 0 kanca 20 kat
+shot(0,0,t=>{bgMoney();upChart(t,cl(t/1.6));share(540,1380,0.6,-0.05,'×20');bigText('BİR HİSSE',W/2,270,120,'#fff',1);bigText('20 KATINA FIRLADI',W/2,400,90,'#5fe08a',1);});
+// 1 1717 Mississippi Şirketi
+shot(1,1,t=>{bgDoc('#1c2440','#070a14');palace(540,1040,0.9);yearStamp('1717','MISSISSIPPI ŞİRKETİ',eOut(cl(t*2)),360);sil(540,1100,1.4,'#c1121f');});
+// 2 tekel + altın cenneti
+shot(2,2,t=>{x.fillStyle='#1b4f72';x.fillRect(0,0,W,H);waves(980,t,'#2a6fb0');ship2(380+t*40,880,0.9,t);x.fillStyle='#2f8a3a';x.beginPath();x.ellipse(900,900,260,120,0,0,7);x.fill();if(t>2.4){for(let i=0;i<5;i++)goldBar(820+(i%3)*70,820-Math.floor(i/3)*60,0.4);rays(880,760,t,'rgba(255,220,100,0.25)');}badge(540,300,'TİCARET TEKELİ','#c9a46a',t*3);if(t>2.4)bigText('ALTIN CENNETİ?',W/2,1400,90,'#ffd23f',back(cl((t-2.4)*2.5)));});
+// 3 1719 Quincampoix kalabalık
+shot(3,3,t=>{street(t);people(9,540+Math.sin(t*3)*10,1150,1.2,'#1a120a',105);people(7,540-Math.sin(t*3)*10,1250,1.4,'#0a0705',130);badge(540,1400,'RUE QUINCAMPOIX','#2a5cff',t*3);yearStamp('1719','',eOut(cl(t*2)),420);});
+// 4 500 -> 10.000
+shot(4,4,t=>{bgMoney();share(540,760,1.4,-0.03,Math.round(500+9500*eOut(cl((t-0.3)/1.8))).toLocaleString('tr-TR'));bigText('500 → 10.000',W/2,300,110,'#5fe08a',back(cl(t*2.5)));});
+// 5 hizmetçiler zengin, milyoner
+shot(5,5,t=>{bgMoney();coins(t,20,4);people(3,540,1080,1.8,'#0a0705',250,1);if(t>2.6)bigText('MİLYONER',W/2,320,140,'#ffd23f',back(cl((t-2.6)*2.5)));else bigText('BİR GECEDE ZENGİN',W/2,320,90,'#fff',back(cl(t*2.5)));});
+// 6 kağıt para basıldı
+shot(6,6,t=>{bgDoc('#2a2016','#0c0906');press(540,820,1.1,t);for(let i=0;i<8;i++){const k=(t*0.9+i*0.13)%1;frNote(200+(i%4)*230,560+k*500,0.3,(i-3)*0.15);}bigText('DURMADAN BASKI',W/2,300,100,'#ffd23f',back(cl(t*2.5)));});
+// 7 herkes parasını isterse
+shot(7,7,t=>{noir();people(7,540,1100,1.5,'#000',135);for(let i=0;i<7;i++){const p=cl((t-i*0.2)*3);if(p>0)frNote(150+i*130,860-p*120,0.25,(i-3)*0.1);}qmarks(540,800,t,3);bigText('HERKES AYNI ANDA',W/2,290,95,'#fff',back(cl(t*2.5)));bigText('İSTERSE?',W/2,410,110,'#ff4d4d',back(cl((t-0.5)*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,3,'#13261c','#060d09'));
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}

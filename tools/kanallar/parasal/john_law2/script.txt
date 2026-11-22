@@ -1,0 +1,11 @@
+[intense] Bir hisse, yirmi katına fırladı. || Bir hisse, 20 katına fırladı.
+
+[serious] Bin yedi yüz on yedide John Law, Mississippi Şirketi'nin başına geçti. || 1717'de John Law, Mississippi Şirketi'nin başına geçti.
+[curious] Şirket, Fransa'nın Amerika'daki topraklarında ticaret tekeli aldı. Halka altın dolu bir cennet anlatıldı.
+[serious] Bin yedi yüz on dokuzda yeni hisseler satışa çıktı. Paris'te Quincampoix Sokağı'na binlerce kişi akın etti. || 1719'da yeni hisseler satışa çıktı. Paris'te Quincampoix Sokağı'na binlerce kişi akın etti.
+[intense] Beş yüz livrelik hisse, on bin livreye yaklaştı. || 500 livrelik hisse, 10.000 livreye yaklaştı.
+[curious] Hizmetçiler, aşçılar bir gecede zengin oldu. Anlatılana göre milyoner kelimesi o günlerde yayıldı.
+[serious] Hisseler alınsın diye Law'ın bankası durmadan kâğıt para bastı.
+[intense] Peki herkes aynı anda parasını geri isterse ne olacaktı?
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

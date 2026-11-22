@@ -1,0 +1,11 @@
+[intense] Kırk kişiden yirmi altısı, sonuna kadar gitti. || 40 kişiden 26'sı, sonuna kadar gitti.
+
+[serious] Milgram deneyden önce uzmanlara sordu. Tahmin şuydu: Neredeyse kimse en sona çıkmaz.
+[curious] Deney başladı. Öğrenci duvara vurdu, bağırdı, sonra tamamen sustu.
+[serious] Öğretmenler terledi, titredi, bazıları sinirle gülmeye başladı.
+[intense] Ama beyaz önlüklü adam hep aynı şeyi söyledi: Devam etmeniz gerekiyor.
+[serious] Sonuç: Herkes en az üç yüz volta kadar gitti. || Sonuç: Herkes en az 300 volta kadar gitti.
+[intense] Yüzde altmış beşi, en sondaki dört yüz elli volta bastı. || %65'i, en sondaki 450 volta bastı.
+[curious] Peki iyi insanlar neden itaat etti?
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.
