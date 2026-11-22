@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,7);frontYard(false);x.save();zoom(540,900,1.06+0.04*t);binC(760,1080,1.05,1.3,0.55,null,'#2f6f4a');babac(330,860,190,{angry:1,brow:-0.2,mouthOpen:0.6,red:0.5});x.restore();x.restore();vignette(0.4);
+ hook([['KOMŞUM ÇÖPÜNÜ',115,'#fff'],['BENİM KOVAMA',125,YEL],['ATIYOR! 🗑️',120,'#fff']],270);copBadge(t,1);}});
+// 1 kızım doğdu
+sc.push({a:mid(1),f(t,T){radial(540,900,1300,'#5a2a4a','#14060e');x.save();zoom(540,880,1.05+0.04*t);babac(480,800,180,{smile:1,eyeOpen:0.4});babyB(720,1020,90);x.restore();
+ B('KIZIM DOĞDU 👶',300,110,YEL,t);}});
+// 2 günde 15 bez
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#1a3a6a','#040814');const n=Math.min(15,1+Math.floor(prog(T,mid(2),en(2))*15));x.save();zoom(540,900,1.0+0.03*t);for(let i=0;i<n;i++)diaper(240+(i%5)*150,700+Math.floor(i/5)*150,0.8,(i%3-1)*0.2);x.restore();
+ B('GÜNDE '+n+' BEZ 😵',300,110,YEL,t);}});
+// 3 her çöp günü kova dolu
+sc.push({a:mid(3),f(t,T){const w=W2(3,'ağzına');frontYard(false);x.save();zoom(540,950,1.0+0.04*t);binC(540,1030,1.0,T>w?1.3:0.6,T>w?0.55:0);x.restore();
+ B('HER ÇÖP GÜNÜ... 📅',300,95,'#fff',t);if(T>w-0.15)bigText('AĞZINA KADAR DOLU!',540,420,90,YEL,PP(T,3,'ağzına'),-0.03);}});
+// 4 poşetlerim dışarıda
+sc.push({a:mid(4),f(t,T){frontYard(false);x.save();zoom(540,950,1.0+0.03*t);binC(380,1030,0.9,1.3,0.55);bagsBy(3,640,1300);babac(820,800,110,{sad:0.8,brow:0.6});x.restore();
+ B('BENİM POŞETLERİM',290,90,'#fff',t);B('DIŞARIDA KALDI 😩',400,90,YEL,t,0.2);}});
+// 5 kovayı açtım
+sc.push({a:mid(5),f(t,T){frontYard(false);x.save();zoom(540,1000,1.25+0.05*t);const k=ease(prog(T,mid(5),mid(5)+0.8));binC(540,1080,1.0,1.1,k);x.restore();
+ B('KOVAYI AÇTIM 🔍',300,105,'#fff',t);}});
+// 6 pizza kutusu etiket
+sc.push({a:mid(6),f(t,T){const w=W2(6,'etiket:');radial(540,900,1300,'#3a2a0a','#0c0802');x.save();zoom(540,820,1.0+0.05*t);pizzaBox(540,780,1.5,-0.05,T>w-0.2);x.restore();
+ B('EN ÜSTTE PİZZA KUTUSU 🍕',300,78,'#fff',t);if(T>w-0.15)bigText('ETİKET: FERHAT BEY!',540,1420,80,YEL,PP(T,6,'etiket:'),-0.03);}});
+// 7 yan komşum
+sc.push({a:mid(7),f(t,T){frontYard(false);x.save();zoom(540,950,1.0+0.03*t);ferhat(820,880,110,{smile:0.5});babac(260,880,110,{eyeBig:1.3,brow:0.6});x.restore();
+ B('YAN KOMŞUM: 7 NUMARA 🏠',300,80,YEL,t);}});
+// 8 kapısını çaldım
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,900,1.0+0.03*t);apartDoor(700,950,0.85);babac(300,860,150,{smile:0.4});x.restore();const k=Math.floor((T-mid(8))*3)%2;
+ B('KİBARCA SORDUM 🙂',300,95,'#fff',t);bigText('TOK TOK',700,1400,k?90:80,YEL,prog(t,0.1,0.3),0.05);}});
+// 9 Ben mi? Asla!
+sc.push({a:mid(9),f(t,T){const w=W2(9,'Asla!');radial(540,900,1300,'#5a1a1a','#140404');x.save();if(T>w-0.1)shake(T,w,w+0.6,9);zoom(540,880,1.08+0.05*t);ferhat(540,860,220,{eyeOpen:0.3,brow:0.6,smile:0.3,mouthOpen:T>w-0.1?0.7:0});heart(560,1240,0.9,'#ff2d55');x.restore();
+ bigText('"BEN Mİ?',540,290,110,'#fff',prog(t,0.05,0.25),-0.03);if(T>w-0.2)bigText('ASLA!" 🙄',540,420,120,YEL,PP(T,9,'Asla!'),-0.03);}});
+// 10 ertesi hafta yine dolu
+sc.push({a:mid(10),f(t,T){frontYard(false);x.save();shake(T,mid(10)+0.6,mid(10)+1.2,8);zoom(540,1000,1.05+0.04*t);binC(540,1050,1.0,1.3,0.55);x.restore();
+ B('ERTESİ HAFTA...',290,95,'#fff',t);B('YİNE DOLU! 😤',400,110,YEL,t,0.4);}});
+// 11 kamera taktım
+sc.push({a:mid(11),f(t,T){frontYard(false);x.save();zoom(540,700,1.2+0.06*t);wallCam(540,520,1.4,T);babac(300,860,120,{smile:0.6,brow:-0.5});x.restore();
+ B('KAMERA TAKTIM 📹',300,100,YEL,t);}});
+// 12 gece üç hareket
+sc.push({a:mid(12),f(t,T){frontYard(true);x.save();zoom(540,950,1.0+0.03*t);binC(300,1080,0.8,0.5,0);x.restore();cctv(T,'03:00');
+ B('GECE 03:00 🌙',300,110,'#fff',t);B('HAREKET VAR!',410,95,YEL,t,0.4);}});
+// 13 pijamalı adam
+sc.push({a:mid(13),f(t,T){frontYard(true);x.save();zoom(540,950,1.0+0.03*t);binC(250,1080,0.8,0.5,0);const k=prog(T,mid(13),en(13)+0.3);const px=900-k*380,b=Math.abs(Math.sin(T*6))*20;ferhat(px,820-b,110,{eyeOpen:0.5,look:-1});pajama(px,820-b,110);[0,1,2].forEach(i=>trashBag(px-140+i*30,1080-b+i*25,0.6,'#2a2a30',0));x.restore();cctv(T,'03:01');
+ B('PİJAMALI BİR ADAM',290,90,'#fff',t);B('3 POŞET 🗑️',400,100,YEL,t,0.3);}});
+// 14 Ferhat Bey'di, bastırdı
+sc.push({a:mid(14),f(t,T){const w=W2(14,'bastırdı.');frontYard(true);x.save();zoom(540,950,1.12+0.04*t);binC(420,1080,0.95,T>w-0.3?1.3:0.6,0.55);ferhat(760,820,130,{eyeOpen:0.5,brow:0.3,angry:T>w-0.3?0.6:0});pajama(760,820,130);x.restore();cctv(T,'03:02');
+ bigText('FERHAT BEY! 😱',540,300,110,YEL,prog(t,0.05,0.25),-0.03);if(T>w-0.15)bigText('BASTIR BASTIR!',540,1420,85,'#fff',PP(T,14,'bastırdı.'),-0.03);}});
+// 15 kameraya döndü
+sc.push({a:mid(15),f(t,T){frontYard(true);x.save();zoom(540,880,1.3+0.08*t);ferhat(540,860,200,{eyeOpen:0.7,look:0});pajama(540,860,200);x.restore();cctv(T,'03:02');
+ B('KAMERAYA DÖNDÜ 👀',300,95,'#fff',t);}});
+// 16 el salladı
+sc.push({a:mid(16),f(t,T){const w=W2(16,'salladı.');frontYard(true);x.save();if(T>w-0.1)shake(T,w,w+0.5,6);zoom(540,880,1.35+0.05*t);ferhat(540,860,200,{smile:1,eyeOpen:0.4});pajama(540,860,200);if(T>w-0.3)hand(830,780,1.0,Math.sin(T*12)*0.3);x.restore();cctv(T,'03:02');
+ B('VE...',290,100,'#fff',t);if(T>w-0.15)bigText('EL SALLADI! 👋',540,410,115,YEL,PP(T,16,'salladı.'),-0.03);}});
+sc.push({a:en(16)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(16)+0.1+2.5);
+</script></body></html>

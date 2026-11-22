@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function nana(cx,cy,r,o={}){person(ANNEANNE,cx,cy,r,o);nanaSpecs(cx,cy,r);}
+function liveTag(){x.fillStyle='#ff2d55';rr(380,560,320,96,22);x.fill();x.font=`900 50px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#fff';x.fillText('● CANLI',540,610);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.8,7);studioBg(T);x.save();zoom(540,900,1.06+0.04*t);sunglassesKerem(330,900,160,{smile:0.4});mic(560,950,0.9);person(BABA,780,900,170,{eyeBig:1.4,mouthOpen:0.9,shirt:BS});bowTie(780,900,170);x.restore();x.restore();vignette(0.4);
+ hook([['KARDEŞİM',125,'#fff'],['MİKROFONU',140,YEL],['BABAMA VERDİ! 🎤',100,'#fff']],270);s3Badge(t,13);}});
+// 1 kameralar Kerem'e
+sc.push({a:mid(1),f(t,T){studioBg(T);x.save();zoom(540,900,1.0+0.04*t);camTri(200,760,0.8,true,T);camTri(880,760,0.8,true,T);sunglassesKerem(540,860,170,{smile:0.2});x.restore();liveTag();
+ B('BÜTÜN KAMERALAR 🎥',300,90,'#fff',t);B('KEREM\'DE',1420,90,YEL,t,0.2);}});
+// 2 gözlüğünü indirdi, uzattı
+sc.push({a:mid(2),f(t,T){const w=W2(2,'uzattı.');studioBg(T);x.save();zoom(540,900,1.06+0.04*t);const g=Math.min(1,prog(T,mid(2),mid(2)+0.8));sunglassesKerem(400,860,200,{glasses:g*0.9,smile:0.5});const k=ease(prog(T,w-0.4,w+0.3));mic(560+k*260,980,1.0);x.restore();
+ B('KEREM...',300,105,'#fff',t);if(T>w-0.3)bigText('MİKROFONU UZATTI ➜',540,420,82,YEL,PP(T,2,'uzattı.'),-0.03);}});
+// 3 asıl yıldız babam
+sc.push({a:mid(3),f(t,T){const w=W2(3,'babam,');radial(540,900,1300,'#5a3a0a','#140c02');x.save();if(T>w-0.1)shake(T,w,w+0.5,8);zoom(540,880,1.08+0.05*t);sunglassesKerem(540,880,220,{glasses:0.9,smile:0.7});x.restore();
+ bigText('"ASIL YILDIZ',540,290,100,'#fff',prog(t,0.05,0.25),-0.03);if(T>w-0.2)bigText('BABAM!" ⭐',540,420,130,YEL,PP(T,3,'babam,'),-0.03);}});
+// 4 sessizlik
+sc.push({a:mid(4),f(t,T){studioBg(T);x.fillStyle='rgba(0,0,0,0.45)';x.fillRect(0,0,W,H);x.save();zoom(540,900,1.0+0.03*t);person(BABA,300,860,120,{eyeBig:1.3,shirt:BS});bowTie(300,860,120);yapimci(540,860,110,{eyeBig:1.2});nana(780,860,110,{eyeBig:1.2});x.restore();
+ B('SESSİZLİK... 🤫',300,105,'#fff',t);}});
+// 5 babamın gözleri doldu
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#1a3a6a','#040814');x.save();zoom(540,880,1.1+0.05*t);person(BABA,540,880,230,{sad:0.6,brow:0.5,smile:0.4,eyeOpen:0.7,shirt:BS});bowTie(540,880,230);x.fillStyle='#7ac8ff';const d=(T*1.2)%1;[-1,1].forEach(s=>{x.beginPath();x.ellipse(540+s*76,895+d*140,14,22,0,0,7);x.fill();});x.restore();
+ B('BABAMIN GÖZLERİ',290,92,'#fff',t);B('DOLDU 🥲',410,110,YEL,t,0.2);}});
+// 6 anneanne mendil
+sc.push({a:mid(6),f(t,T){studioBg(T);x.save();zoom(540,880,1.08+0.04*t);nana(540,860,200,{sad:0.5,smile:0.3,eyeOpen:0.5});curlers(540,860,200);x.fillStyle='#fff';x.save();x.translate(700+Math.sin(T*6)*20,900);x.rotate(Math.sin(T*6)*0.3);rr(-70,-60,140,120,16);x.fill();x.restore();x.restore();
+ B('ANNEANNEM',290,100,'#fff',t);B('MENDİLİ ÇIKARDI',410,90,YEL,t,0.2);}});
+// 7 annem dolma ikram
+sc.push({a:mid(7),f(t,T){const w=W2(7,'ikram');studioBg(T);x.save();zoom(540,900,1.0+0.04*t);person(ANNE,320,840,150,{smile:1});const k=ease(prog(T,w-0.6,w+0.2));bigPot(520+k*120,1000,0.8);yapimci(820,840,140,{eyeBig:1.3,mouthOpen:0.4});x.restore();
+ B('ANNEM İSE...',300,100,'#fff',t);if(T>w-0.3)bigText('DOLMA İKRAMI! 🫑',540,420,95,YEL,PP(T,7,'ikram'),-0.03);}});
+// 8 sunucu iki dolma yedi
+sc.push({a:mid(8),f(t,T){const w=W2(8,'iki');studioBg(T);x.save();zoom(540,880,1.1+0.04*t);yapimci(540,860,210,{mouthOpen:0.3+0.5*Math.abs(Math.sin(T*9)),eyeOpen:0.3,smile:0.6});x.restore();liveTag();
+ if(T>w-0.15)bigText('2 DOLMA 😋',540,330,130,YEL,PP(T,8,'iki'),-0.03);else B('SUNUCU...',330,110,'#fff',t);}});
+// 9 ışıklar karardı
+sc.push({a:mid(9),f(t,T){const w=W2(9,'karardı.');studioBg(T);const k=prog(T,w-0.3,w+0.2);x.fillStyle=`rgba(0,0,0,${0.92*k})`;x.fillRect(0,0,W,H);x.save();x.globalAlpha=1-0.6*k;zoom(540,900,1.0+0.03*t);person(BABA,300,860,120,{eyeBig:1.4,shirt:BS});sunglassesKerem(540,880,110,{});nana(780,860,110,{eyeBig:1.4});x.restore();
+ B('SONRA...',300,110,'#fff',t);if(T>w-0.2)bigText('IŞIKLAR KARARDI! 🌑',540,430,90,YEL,PP(T,9,'karardı.'),-0.03);}});
+// 10 hoparlör Koş Şimşek koş
+sc.push({a:mid(10),f(t,T){const w=W2(10,'Koş');x.fillStyle='#05040a';x.fillRect(0,0,W,H);x.save();if(T>w-0.1)shake(T,w,w+0.8,10);zoom(540,860,1.05+0.05*t);cassette(540,820,1.6,-0.05,['1989',"ŞİMŞEK'E ŞARKI 🎵"],T);notes(820,560,T,YEL);person(BABA,540,1480,110,{eyeBig:1.6,mouthOpen:0.9,shirt:BS});x.restore();
+ B('🔊 TANIDIK BİR SES...',290,82,'#fff',t);if(T>w-0.15)bigText('"KOŞ ŞİMŞEK KOŞ!" 🐢',540,420,88,YEL,PP(T,10,'Koş'),-0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,14,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

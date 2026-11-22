@@ -65,3 +65,7 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-21 | Kaynanam kurabiyelerime hiç dokunmadı (Görümcemin Kek Topları) [Part 1] | r/pettyrevenge (havuz) | komedi/seri | İrem | 30.7 sn | 12:30 | -4239829006845984344 | ÖĞLE | parkur:hayır
 - 2026-11-21 | Bütün ailemiz televizyona çağrıldı (Hacker Kerem S3) [Part 12] | kendi kurgu | komedi/seri | Emrullah | 27.7 sn | 17:00 | 4525613348886695583 | AKŞAM | parkur:hayır
 - 2026-11-21 | Görümcemin tatlısının aynısını yaptım (Görümcemin Kek Topları) [Part 2] | r/pettyrevenge (havuz) | komedi/seri | İrem | 28.1 sn | 20:30 | 4909991112558857455 | GECE | parkur:hayır
+- 2026-11-22 | Kardeşim canlı yayında mikrofonu babama verdi (Hacker Kerem S3) [Part 13] | kendi kurgu | komedi/seri | Emrullah | 26.7 sn | 09:00 | 6129241110020309174 | SABAH | parkur:hayır
+- 2026-11-22 | Kaynanama yediği tatlının benim olduğunu söyledim (Görümcemin Kek Topları) [Part 3 FİNAL] | r/pettyrevenge (havuz) | komedi/seri | İrem | 28.2 sn | 12:30 | -2435249683952614703 | ÖĞLE | parkur:hayır
+- 2026-11-22 | Babam canlı yayında kaplumbağa şarkısı söyledi (Hacker Kerem S3) [Part 14 FİNAL] | kendi kurgu | komedi/seri | Emrullah | 28.7 sn | 17:00 | 7003292620555699061 | AKŞAM | parkur:hayır
+- 2026-11-22 | Komşum çöpünü her gece benim kovama atıyor (Çöp Kovası Savaşı) [Part 1] | r/pettyrevenge ilhamı (komşu çöp kovası) | komedi/seri | Emrullah | 41.7 sn | 20:30 | -6152032238591131592 | GECE | parkur:hayır
