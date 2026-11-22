@@ -33,6 +33,7 @@
 - 12 Kas Metricool raporu (1–12 Kas, PDF): raporlar/2026-11-12_metricool_analiz.pdf · özet raporlar/2026-11-12_metricool_analiz.md (YouTube bölümleri geçersiz).
 
 ## Açık konular
+- REDDITSEL REVİZYON (22.11, kullanıcı): Hacker Kerem BİTİYOR, günde 4 video tamamen 3 partlık serilerle. Analiz raporlar/2026-11-22_redditsel_format_analizi.md. Slot/akış düzeni kullanıcıyla konuşuluyor; zamanlanmış görev HENÜZ DEĞİŞTİRİLMEDİ (kullanıcı: 'daha değiştirme').
 - Redditsel profil fotoğrafı: arkadaş 2 ve 5'i beğendi, türevleri 6–10, turuncu zeminli 11–12 (marka/redditsel/). Son seçim bekleniyor (arkadaş + mehmetalp).
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
@@ -43,6 +44,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-22 12:45 | mehmetalp | Revizyon kararı: Hacker Kerem'e son, günde 4 video 3 partlık serilerle. Önce analiz istendi (yapıldı: 3'lük seriler medyan 35,4K vs HK 9,3K; 15–21 Kas aynı video sayısında 956K vs 334K; takipçi 1.896→3.329). Görevler henüz değişmedi, akış tartışılıyor.
 - 2026-11-22 04:30 | gece görevi (Claude) | Küçük hesaplar İş 1 (23.11): sadece Grup 3 boştu → Psikolojik Milgram P2 (16:00, 31,7 sn), Parasal John Law P2 (09:00, 33,3 sn), Kriminal Louvre P2 (09:00 TT+YT, 28,5 sn; soruşturma güncel durumu web'de doğrulandı). İş 2 (Pazar Grup 3) 9 video: P3 finaller 25.11 (Milgram, John Law, Louvre); yeni seriler P1 27.11 + P2 29.11: Marshmallow testi, Hunt kardeşler/Gümüş Perşembe, Baker Street 1971. Hepsi 24–31 sn; MP4'ler depodan silindi.
 - 2026-11-22 04:15 | gece görevi (Claude) | Redditsel 22.11: HK S3 P13 (09:00, 26,7 sn), Kek P3 FİNAL (12:30, 28,2 sn, İrem; seri bitti → Kullanıldı), HK S3 P14 FİNAL (17:00, 28,7 sn; Sezon 3 bitti), yeni 3 partlık seri 'Çöp Kovası Savaşı' yazıldı (r/pettyrevenge ilhamı, komşu) ve P1 20:30 (41,7 sn) Metricool'a planlandı; MP4'ler depodan silindi. 21.11 TikTok: Kek P1 44,0K/582 beğeni, Kek P2 18,8K/354, HK S3 P12 7,0K/57, HK S3 P11 3,5K/38 (ilk saatler); ort. izleme süresi yine boş.
 - 2026-11-21 04:10 | gece görevi (Claude) | Küçük hesaplar İş 1 (22.11): tüm hesaplar doluydu (Grup 3 bugün paylaşıyor) → üretim yok. İş 2 (Cumartesi Sanatsal) 7 tek video 23–29.11 16:00: İnci Küpeli Kız, Bach/Mendelssohn 1829, Venüs de Milo 1820, Terracotta Ordusu 1974, Chopin'in kalbi, Guernica, Notre-Dame/Victor Hugo. Hepsi 25–36 sn, TT+IG+YT; MP4'ler depodan silindi.
