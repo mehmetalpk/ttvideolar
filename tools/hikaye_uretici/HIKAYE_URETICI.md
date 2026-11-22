@@ -91,3 +91,25 @@ Gözlem: "akraba" teması o kanalın en sevilen konusu; yorum/izleyici katılım
 ### §8 ek — "En çok tekrar izlenen" grafiği (kullanıcının ekran görüntüsü, ±1 dk tahmin)
 Tepeler kurulum anlarında DEĞİL; (1) ters köşe/ifşa cümlesinde ve (2) "hak ettiğini buldu" (karma/adalet) anında: akrabanın oyununun açığa çıktığı an, "ilk kez bir akrabadan şikâyetçi olduk", "düğünden sonra herkes hastalandı" tipi sonuçlar. Giriş ve sunucu sohbeti düşük.
 UYGULAMA: P2 sonu = ifşadan hemen önceki an (cliff); P3'ün ilk 10 sn'si = ifşa cümlesi; P3'ün son 10 sn'si = net karma/adalet sonucu (kötü karakter bedel öder, komik ve hafif) + soru. "Tatlı son" karmanın YERİNE değil, ARDINDAN gelir.
+
+## 9. İzleyici kanalı — "Karma ve ilahi adalet" (48 dk) + "Ağır okul itirafları 2" (37 dk) — SOYUT durumlar (22 Kas)
+Aynı kural: sadece durum tipi; olay/final/isim alınmaz. Kaynaktaki ağır öğeler (ilaç/müshil, balkondan itme, dayak, kısırlık, ölüm, aldatma, vandalizm) ASLA alınmaz.
+### Karma (rol tersine dönmesi) durumları
+- Sabotaj bumerangı: Kıskanç biri rakibini sınavdan/yarışmadan önce sabote etmeye kalkar; plan ona patlar (komik ve zararsız: yanlış kalem, yanlış salon, yanlış saat).
+- Misafir dedikoducu: Her gün çaya gelip ikram yiyen komşu, gizlice evi/eşyayı kötüleyip mahallede anlatıyor; sonunda kendi evinin hâli herkesin önünde ortaya çıkıyor.
+- Sus payı: Çalışan, patronun bir yalanını örtmek için zam/avans alıyor; yalan patlayınca en çok o ödüyor (aldatma YOK; ör. sahte sertifika, uydurma rapor).
+- Zorba ve yıllar sonra: Okulda lakap takan zorba, yıllar sonra anlatıcının karşısına iş başvurusuna/müşteri olarak çıkıyor; roller değişmiş.
+- Kanka hıyaneti: Arkadaşının sevgilisine/fırsatına göz diken "kanka" kendi kurduğu oyunda rezil oluyor (kavga/şiddet YOK).
+- Kaynananın seçtiği gelin: Kaynana "kendi çevresinden mükemmel gelin" diye anlatıcıyı istemiyor; seçtiği gelin kaynanaya kendi kurallarını uygulayınca ters tepiyor.
+- Takıntının ironisi: Bir şeye takıntılı büyük (ör. "mutlaka doktor torun", "mutlaka büyük düğün") tam tersini yaşıyor.
+### Okul durumları
+- Kelime yanlış anlaşılması: Çocuğun okul formuna yazdığı masum bir kelime (meslek, lakap) yanlış anlaşılıp büyük olaya dönüyor; ifşa sınıfta/veli toplantısında.
+- Mektup okunması: Öğretmen bir öğrencinin özel notunu "imla dersi" diye sınıfta okuyor; sınıf öğretmene aynı yöntemle karşılık veriyor (öğretmenin kendi duyurusundaki hatalar).
+- Tutanak delisi hoca: Her şeye tutanak tutan hoca; öğrenciler yönetmeliği okuyup hocanın kendi ihlallerine tutanak tutuyor (Terlik Cezası kalıbı, okulda).
+- Kayırmacı/sıfırcı hoca + güçlü eş: Hoca sınıfı keyfi sıfırlıyor; hocanın nüfuzlu eşi okula gelip tehdit edince sınıf toplu ve kurallı karşılık veriyor (dilekçe, veli imzası).
+- Tuvalet/kapı kaosu: Arkadaşı için kapıyı tutarken başka bir öğrenciyle yanlış anlaşılma, koridorda kaos, müdür yardımcısının odasında absürt ifade.
+- Utanç anı: Okulda en kötü anda pantolon yırtılması / tahtaya kalkınca rezalet; arkadaşların kurtarma operasyonu.
+### Tekrar izlenme grafikleri (2 video, kullanıcı ekran görüntüleri, ±1 dk)
+- Karma: en yüksek tepeler ZORBANIN BEDEL ÖDEDİĞİ anda ve SON İRONİDE (takıntılı büyüğün tam tersini yaşadığı an); ikincil tepeler her hikâyenin "karma geldi" cümlesinde.
+- Okul: en yüksek tepeler UTANÇ ANINDA (pantolon yırtılması) ve TIRMANMA ANINDA (hocanın eşi okulu bastı); ikincil tepeler yanlış anlaşılmanın ifşasında (form kelimesi) ve sınıf önünde mektup okunmasında.
+- KURAL EKLE: Her seride en az bir "görsel utanç/tırmanma" anı (birinin beklenmedik biçimde rezil olduğu, bir büyüğün olaya daldığı an) ve P3'te net rol tersine dönmesi. Bu anlar videoda dev yazı + yakın plan + 0,5 sn durakla verilir.

@@ -44,6 +44,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-22 13:40 | mehmetalp | İki bölüm daha işlendi (Karma 48 dk = 880 kredi; Okul itirafları 37 dk = 676 kredi; bugün toplam STT 2.408 kredi). Transkriptler depoya konmadı. HIKAYE_URETICI.md §9: 13 soyut durum + tekrar izlenme dersi (tepeler: zorbanın bedel ödediği an, son ironi, utanç anı, bir büyüğün olaya daldığı tırmanma anı) → her seride en az bir görsel utanç/tırmanma anı + P3'te net rol tersine dönmesi.
 - 2026-11-22 13:25 | mehmetalp | İzleyici kanalı videosunun 'en çok tekrar izlenen' grafiği paylaşıldı: tepeler ifşa/ters köşe ve karma (hak ettiğini bulma) anlarında. HIKAYE_URETICI.md §8 eki: P3 ilk 10 sn ifşa, son 10 sn net karma sonucu, tatlı son ondan sonra.
 - 2026-11-22 13:20 | mehmetalp | İzleyici-hikâyesi okuyan bir YouTube kanalının 'akraba terörü' bölümü (46 dk) ElevenLabs Scribe ile yazıya çevrildi (852 kredi / ~0,15 $; yeni STT izinli anahtar sadece çalışma alanında, depoda YOK). Transkript depoya KONMADI. Sadece 11 soyut durum HIKAYE_URETICI.md §8'e eklendi (olay/final/isim kopyası yok, ağır öğeler çıkarıldı). Kural: birebir hikâye/uyarlama ASLA.
 - 2026-11-22 13:10 | mehmetalp | Zamanlanmış görevler FORMAT 5'e göre güncellendi: günlük Redditsel (03:55) 6 video + üretici; haftalık analiz (Pazar 21:37) HK planı yazmaz, FORMAT 5 testini ölçer, üretici örnek defterini büyütür, havuzda ≥4 seri tutar. Küçük hesap görevi değişmedi.
