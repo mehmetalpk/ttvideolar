@@ -1,0 +1,10 @@
+[intense] Sherlock'un sokağında banka soyuldu.
+
+[serious] Londra, Baker Street. Bin dokuz yüz yetmiş bir. || Londra, Baker Street. 1971.
+[curious] Bir çete, Lloyds Bankası'ndan iki kapı ötedeki deri dükkânını kiraladı.
+[serious] Dükkânın bodrumundan, bankanın kasa dairesine on iki metrelik bir tünel kazdılar. || Dükkânın bodrumundan, bankanın kasa dairesine 12 metrelik bir tünel kazdılar.
+[intense] On bir Eylül Cumartesi gecesi, kasa dairesinin zeminini delip içeri girdiler. || 11 Eylül Cumartesi gecesi, kasa dairesinin zeminini delip içeri girdiler.
+[curious] Yüzlerce kiralık kasayı tek tek açmaya başladılar.
+[intense] Ama bir sorun vardı: Biri onları dinliyordu.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

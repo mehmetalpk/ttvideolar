@@ -1,0 +1,11 @@
+[intense] Kâğıt para çöktü, Law kaçtı.
+
+[serious] Bin yedi yüz yirmi başında yatırımcılar kârlarını altına çevirmek istedi. || 1720 başında yatırımcılar kârlarını altına çevirmek istedi.
+[curious] Law altın ödemeyi sınırladı. Hatta evde fazla madeni para saklamayı yasakladı.
+[serious] Ama panik durmadı. Bankaların önünde izdiham çıktı.
+[intense] Dokuz bin livrelik hisse, aralık ayında bin livreye düştü. || 9.000 livrelik hisse, aralık ayında 1.000 livreye düştü.
+[curious] Aralık bin yedi yüz yirmide John Law, Fransa'dan kaçtı. || Aralık 1720'de John Law, Fransa'dan kaçtı.
+[serious] Bir zamanlar Avrupa'nın en güçlü bankacısıydı. Dokuz yıl sonra Venedik'te yoksul olarak öldü.
+[intense] Sence balonu patlatan Law muydu, açgözlülük mü?
+
+[softly] Kaçırmamak için takip et.

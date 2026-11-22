@@ -1,0 +1,10 @@
+[intense] Gümüş, tek günde yarı yarıya çöktü.
+
+[serious] Yedi Ocak bin dokuz yüz seksen. New York'taki emtia borsası yeni bir kural koydu. || 7 Ocak 1980. New York'taki emtia borsası yeni bir kural koydu.
+[curious] Kimse sınırsız gümüş sözleşmesi tutamayacaktı. Birkaç hafta sonra yeni alım tamamen durduruldu.
+[serious] Fiyat düşmeye başladı. Kardeşler borçla almıştı, aracı kurumlar ek teminat istedi.
+[intense] Yirmi yedi Mart bin dokuz yüz seksen. Hunt'lar teminatı ödeyemedi. || 27 Mart 1980. Hunt'lar teminatı ödeyemedi.
+[curious] Gümüş on dolar seksen sente indi. Bu gün tarihe Gümüş Perşembe diye geçti. || Gümüş 10,80 dolara indi. Bu gün tarihe Gümüş Perşembe diye geçti.
+[intense] Peki milyarlık borcu kim kapatacaktı?
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

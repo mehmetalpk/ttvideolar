@@ -1,0 +1,11 @@
+[intense] Otorite uzaklaşınca, itaat çöktü.
+
+[serious] Milgram deneyi farklı koşullarla tekrar tekrar yaptı.
+[curious] Öğretmen ve öğrenci aynı odadayken, sonuna kadar gidenler yüzde kırka düştü. || Öğretmen ve öğrenci aynı odadayken, sonuna kadar gidenler %40'a düştü.
+[curious] Öğretmen, öğrencinin elini plakaya kendisi bastırmak zorunda kalınca yüzde otuz. || Öğretmen, öğrencinin elini plakaya kendisi bastırmak zorunda kalınca %30.
+[intense] Deneyci emirleri telefondan verince, sadece yüzde yirmi. || Deneyci emirleri telefondan verince, sadece %20.
+[serious] Milgram'a göre insanlar sorumluluğu emri verene bıraktı: Ben sadece söyleneni yaptım.
+[curious] Bugün bu deney, etik nedenlerle aynı şekilde yapılamıyor.
+[intense] Sence sen hayır diyebilir miydin?
+
+[softly] Kaçırmamak için takip et.

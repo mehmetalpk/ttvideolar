@@ -1,0 +1,28 @@
+function frNote(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#efe4c8';rr(-260,-120,520,240,8);x.fill();x.strokeStyle='#3a4a8a';x.lineWidth=6;rr(-240,-100,480,200,6);x.stroke();x.fillStyle='#3a4a8a';x.font=`900 44px Georgia,serif`;x.textAlign='center';x.fillText('BANQUE GÉNÉRALE',0,-20);x.font=`900 60px Georgia,serif`;x.fillText('100 LIVRES',0,60);x.restore();}
+function goldBar(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#e0a800';x.beginPath();x.moveTo(-120,40);x.lineTo(120,40);x.lineTo(90,-40);x.lineTo(-90,-40);x.closePath();x.fill();x.fillStyle='#ffd23f';x.fillRect(-80,-36,160,20);x.restore();}
+function palace(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#d8cfb8';x.fillRect(-420,-300,840,300);x.fillStyle='#4a5a7a';x.beginPath();x.moveTo(-440,-300);x.lineTo(0,-420);x.lineTo(440,-300);x.fill();x.fillStyle='#7a8aa8';for(let i=0;i<7;i++)x.fillRect(-370+i*110,-250,60,140);x.fillStyle='#5a3418';x.fillRect(-50,-120,100,120);x.restore();}
+function frNote(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#efe4c8';rr(-260,-120,520,240,8);x.fill();x.strokeStyle='#3a4a8a';x.lineWidth=6;rr(-240,-100,480,200,6);x.stroke();x.fillStyle='#3a4a8a';x.font=`900 44px Georgia,serif`;x.textAlign='center';x.fillText('BANQUE GÉNÉRALE',0,-20);x.font=`900 60px Georgia,serif`;x.fillText('100 LIVRES',0,60);x.restore();}
+function goldBar(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#e0a800';x.beginPath();x.moveTo(-120,40);x.lineTo(120,40);x.lineTo(90,-40);x.lineTo(-90,-40);x.closePath();x.fill();x.fillStyle='#ffd23f';x.fillRect(-80,-36,160,20);x.restore();}
+function palace(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#d8cfb8';x.fillRect(-420,-300,840,300);x.fillStyle='#4a5a7a';x.beginPath();x.moveTo(-440,-300);x.lineTo(0,-420);x.lineTo(440,-300);x.fill();x.fillStyle='#7a8aa8';for(let i=0;i<7;i++)x.fillRect(-370+i*110,-250,60,140);x.fillStyle='#5a3418';x.fillRect(-50,-120,100,120);x.restore();}
+function share(cx,cy,s,rot,val){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#f1e6c8';rr(-230,-150,460,300,10);x.fill();x.strokeStyle='#8a5a20';x.lineWidth=8;rr(-210,-130,420,260,8);x.stroke();x.fillStyle='#8a5a20';x.font=`900 34px Georgia,serif`;x.textAlign='center';x.textBaseline='middle';x.fillText('CIE DES INDES',0,-80);x.font=`900 70px Georgia,serif`;x.fillText(val,0,10);x.font=`800 30px Georgia,serif`;x.fillText('LIVRES',0,80);x.restore();}
+function street(t){x.fillStyle=grad(0,H,['#c9b48a','#4a3a24']);x.fillRect(0,0,W,H);for(const sd of [-1,1]){x.fillStyle='#8a7350';x.beginPath();x.moveTo(540+sd*540,0);x.lineTo(540+sd*170,700);x.lineTo(540+sd*170,1150);x.lineTo(540+sd*540,1400);x.fill();x.fillStyle='#3a2a1a';for(let i=0;i<4;i++){const k=i/4;x.fillRect(540+sd*(470-k*260)-20,180+k*450,40,110-k*50);}}x.fillStyle='#6a5a40';x.fillRect(0,1150,W,H-1150);}
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
+function venice(t){x.fillStyle=grad(0,H,['#f0b27a','#5a3a6a']);x.fillRect(0,0,W,H);x.fillStyle='#3a2a3a';for(let i=0;i<6;i++){const hh=300+((i*137)%5)*60;x.fillRect(i*190-20,1000-hh,170,hh);x.fillStyle='#f4d08a';for(let k=0;k<3;k++)x.fillRect(i*190+20+k*45,1000-hh+60,22,40);x.fillStyle='#3a2a3a';}waves(1000,t,'#2a4a6a',16,160);}
+// 0 kanca
+shot(0,0,t=>{bgMoney();downChart(t,cl(t/1.4));frNote(540,1380,0.6,Math.sin(t*3)*0.1);bigText('KÂĞIT PARA ÇÖKTÜ',W/2,270,95,'#ff4d4d',1);bigText('LAW KAÇTI',W/2,400,110,'#fff',1);});
+// 1 1720 altına çevirmek
+shot(1,1,t=>{bgDoc('#2a2016','#0c0906');frNote(300,760,0.6,-0.08);mapArrow(470,760,640,760,cl((t-0.6)/0.8),'#ffd23f');goldBar(800,760,1.2);yearStamp('1720','',eOut(cl(t*2)),360);if(t>1.6)badge(540,1400,'ALTIN İSTİYORUZ','#c1121f',(t-1.6)*3);});
+// 2 altın ödemesini sınırladı, yasak
+shot(2,2,t=>{bgDoc('#1c2440','#070a14');coins(t,14,7);goldBar(540,760,1.8);stampX(540,760,1.6,cl((t-0.8)*3));bigText('YASAK!',W/2,320,150,'#ff4d4d',back(cl((t-1)*2.5)));});
+// 3 izdiham
+shot(3,3,t=>{bgDoc('#22252c','#0a0b0e');palace(540,880,0.9);for(let r=0;r<3;r++)people(8,540+Math.sin(t*9+r)*14,1000+r*90,1.0+r*0.15,'#0a0705',125);bigText('PANİK',W/2,300,150,'#ff4d4d',back(cl(t*2.5)));});
+// 4 9000 -> 1000
+shot(4,4,t=>{bgMoney();downChart(t,cl(t/2));share(540,800,1.3,0.04,Math.round(9000-8000*eOut(cl((t-0.3)/1.8))).toLocaleString('tr-TR'));bigText('9.000 → 1.000',W/2,300,110,'#ff4d4d',back(cl(t*2.5)));});
+// 5 aralık 1720 kaçtı
+shot(5,5,t=>{noir();rain(t,0.25);city(1150,'#0b0b12',0);const p=cl((t-0.3)/2);sil(200+p*700,1120,1.9,'#000');yearStamp('1720','ARALIK · KAÇIŞ',eOut(cl(t*2)),380);});
+// 6 venedik yoksul
+shot(6,6,t=>{venice(t);sil(540,1000,1.6,'#1a1020');badge(540,300,'VENEDİK · 1729','#5a3a6a',t*3);if(t>2.4)stampT('YOKSUL',540,1400,cl((t-2.4)*3),'#c1121f',100);});
+// 7 soru
+shot(7,7,t=>{bgMoney();sil(300,1080,1.8,'#c1121f');people(4,780,1080,1.2,'#0a0705',110);qmarks(540,820,t,3);bigText('LAW MU?',W/2,280,120,'#fff',back(cl(t*2.5)));bigText('AÇGÖZLÜLÜK MÜ?',W/2,410,100,'#ffd23f',back(cl((t-0.6)*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#13261c','#060d09'));

@@ -1,0 +1,26 @@
+function shockBox(cx,cy,s,lit,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#3a3f4a';rr(-440,-170,880,340,24);x.fill();x.fillStyle='#22252c';rr(-410,-140,820,90,14);x.fill();x.fillStyle='#ffd23f';x.font=`900 44px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('ŞOK ÜRETECİ',0,-95);
+ for(let i=0;i<30;i++){const px=-405+i*28,on=i<lit;x.fillStyle=on?(i>20?'#ff2d2d':'#ffb000'):'#555';x.fillRect(px,10,20,46);x.fillStyle=on?'#fff':'#999';x.beginPath();x.arc(px+10,90,8,0,7);x.fill();}
+ x.fillStyle='#fff';x.font=`800 30px ${F}`;x.fillText('15 V',-380,140);x.fillText('450 V',370,140);x.restore();}
+function bolt(cx,cy,s,a){x.save();x.globalAlpha=a;x.translate(cx,cy);x.scale(s,s);x.fillStyle='#ffd23f';x.beginPath();x.moveTo(10,-90);x.lineTo(-40,10);x.lineTo(0,10);x.lineTo(-15,90);x.lineTo(45,-15);x.lineTo(5,-15);x.closePath();x.fill();x.restore();}
+function coat(cx,base,s){sil(cx,base,s,'#0a0718');x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e8e8f0';x.beginPath();x.moveTo(-70,-150);x.lineTo(70,-150);x.lineTo(84,0);x.lineTo(-84,0);x.closePath();x.fill();x.fillStyle='#0a0718';x.beginPath();x.moveTo(-14,-150);x.lineTo(14,-150);x.lineTo(0,-90);x.fill();x.restore();}
+function wallSplit(){x.fillStyle='#14102a';x.fillRect(530,500,20,700);}
+function vbar(cx,base,h,col,lab,p){const hh=h*eOut(cl(p));x.fillStyle=col;rr(cx-80,base-hh,160,hh,18);x.fill();bigText(lab,cx,base-hh-60,64,'#fff',cl(p*2));}
+function phoneBig(cx,cy,s,t){x.save();x.translate(cx,cy);x.rotate(Math.sin(t*20)*0.05);x.scale(s,s);x.fillStyle='#1a1a1a';rr(-160,-40,320,120,30);x.fill();x.fillStyle='#2a2a2a';rr(-200,-110,400,90,45);x.fill();x.fillStyle='#444';for(let i=0;i<9;i++){x.beginPath();x.arc(-60+(i%3)*60,-5+Math.floor(i/3)*30,10,0,7);x.fill();}x.restore();}
+// 0 kanca: otorite uzaklaşınca
+shot(0,0,t=>{bgPsi('#3a1030','#12040e');const p=eOut(cl(t/1.6));coat(540-p*300,1080,2.2-p*1.0);x.globalAlpha=1-p*0.6;x.globalAlpha=1;bigText('%'+Math.round(65-45*p),760,760,150,'#ff4d4d',1);bigText('OTORİTE UZAKLAŞINCA',W/2,270,82,'#fff',1);bigText('İTAAT ÇÖKTÜ',W/2,400,110,'#ffd23f',1);});
+// 1 farklı koşullar
+shot(1,1,t=>{bgDoc('#1c2440','#070a14');const L=['AYNI ODA','EL TEMASI','TELEFON','FARKLI BİNA'];for(let i=0;i<4;i++){const p=cl((t-0.3-i*0.4)*3);if(p>0)badge(540,520+i*130,L[i],['#5b6cff','#e63946','#2a9d8f','#e6a100'][i],p);}bigText('TEKRAR TEKRAR',W/2,320,110,'#fff',back(cl(t*2.5)));});
+// 2 aynı oda %40
+shot(2,2,t=>{bgPsi();sil(360,1060,1.8,'#ffd23f');sil(720,1060,1.8,'#0a0718');x.fillStyle='#5b6cff';rr(640,880,160,60,12);x.fill();badge(540,300,'AYNI ODA','#5b6cff',t*3);if(t>1.2)bigText('%65 → %40',W/2,500,120,'#ff9ad5',back(cl((t-1.2)*2.5)));});
+// 3 el teması %30
+shot(3,3,t=>{bgPsi('#3a1030','#12040e');x.fillStyle='#3a3f4a';rr(240,760,600,120,20);x.fill();x.fillStyle='#ffb000';rr(420,770,240,60,10);x.fill();const p=eOut(cl((t-0.5)/1));x.fillStyle='#f0c8a0';x.beginPath();x.ellipse(540,620+p*150,90,60,0,0,7);x.fill();x.fillStyle='#ffd23f';x.fillRect(470,380+p*150,140,240);if(p>=1)bolt(760,640,1,0.5+0.5*Math.sin(t*14));badge(540,300,'EL PLAKADA','#e63946',t*3);if(t>2)bigText('%30',W/2,1400,140,'#ff4d4d',back(cl((t-2)*2.5)));});
+// 4 telefon %20
+shot(4,4,t=>{bgDoc('#22252c','#0a0b0e');phoneBig(540,700,1.6,t<1.5?t:0);sil(540,1100,1.3,'#ffd23f');badge(540,300,'EMİR TELEFONDAN','#2a9d8f',t*3);if(t>1.2)bigText('SADECE %20',W/2,1400,110,'#5fe08a',back(cl((t-1.2)*2.5)));});
+// 5 sorumluluk
+shot(5,5,t=>{bgPsi();coat(820,1080,1.6);sil(300,1080,2.0,'#ffd23f');const p=cl((t-0.4)/1.2);x.strokeStyle='#ffd23f';x.lineWidth=10;x.setLineDash([24,18]);x.beginPath();x.moveTo(380,700);x.quadraticCurveTo(560,560,740,700);x.stroke();x.setLineDash([]);if(t>2.4)sbubble(540,380,880,150,'SÖYLENENİ YAPTIM',eOut(cl((t-2.4)*3)),64);else badge(540,380,'SORUMLULUK','#e63946',(t-0.4)*3);});
+// 6 etik
+shot(6,6,t=>{bgDoc('#2a2016','#0c0906');shockBox(540,760,0.9,0,t);stampX(540,760,1.4,cl((t-0.5)*3));bigText('BUGÜN YAPILAMAZ',W/2,300,90,'#fff',back(cl(t*2.5)));if(t>1.4)badge(540,1400,'ETİK KURALLAR','#c1121f',(t-1.4)*3);});
+// 7 sen
+shot(7,7,t=>{bgPsi('#3a1030','#12040e');spot(540,760,420,0.4);sil(540,1100,2.6,'#ffd23f');bigText('SEN',W/2,270,150,'#fff',back(cl(t*2.5)));bigText('HAYIR DER MİYDİN?',W/2,420,90,'#ffd23f',back(cl((t-0.4)*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1030','#12040e'));

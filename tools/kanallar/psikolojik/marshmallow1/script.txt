@@ -1,0 +1,11 @@
+[intense] Bir şeker şimdi, iki şeker sonra.
+
+[serious] Bin dokuz yüz altmışların sonu, Stanford Üniversitesi'nin anaokulu. || 1960'ların sonu, Stanford Üniversitesi'nin anaokulu.
+[curious] Psikolog Walter Mischel, dört beş yaşındaki çocukları tek tek bir odaya aldı. || Psikolog Walter Mischel, 4-5 yaşındaki çocukları tek tek bir odaya aldı.
+[serious] Masaya bir marşmelov koydu ve bir teklif yaptı.
+[curious] Şimdi yersen, bir tane. Ben dönene kadar beklersen, iki tane.
+[serious] Sonra odadan çıktı. Bekleme on beş dakikaya kadar sürebiliyordu. || Sonra odadan çıktı. Bekleme 15 dakikaya kadar sürebiliyordu.
+[intense] Kimi gözlerini kapattı, kimi şarkı söyledi, kimi şekeri hemen yuttu.
+[curious] Asıl şaşırtıcı sonuç ise yıllar sonra geldi.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

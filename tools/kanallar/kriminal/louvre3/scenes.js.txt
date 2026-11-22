@@ -1,0 +1,26 @@
+function paris(t){x.fillStyle=grad(0,H,['#9ac8f0','#e8f2ff']);x.fillRect(0,0,W,H);x.fillStyle='#c8b896';x.fillRect(0,1000,W,H-1000);}
+function facade(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e6dcc4';x.fillRect(-520,-520,1040,520);x.fillStyle='#5a6a80';x.fillRect(-540,-580,1080,70);for(let r=0;r<2;r++)for(let i=0;i<7;i++){x.fillStyle='#4a5a74';rr(-470+i*140,-470+r*230,80,170,30);x.fill();}x.fillStyle='#b8ac90';x.fillRect(-520,-290,1040,24);x.restore();}
+function pyramid(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='rgba(120,170,210,0.85)';x.beginPath();x.moveTo(-220,0);x.lineTo(0,-200);x.lineTo(220,0);x.fill();x.strokeStyle='rgba(255,255,255,0.6)';x.lineWidth=3;for(let i=1;i<6;i++){x.beginPath();x.moveTo(-220+i*36,0);x.lineTo(0,-200);x.stroke();}x.restore();}
+function vitrine(cx,cy,s,broken,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#3a2a18';x.fillRect(-180,60,360,200);x.fillStyle='rgba(180,220,255,0.35)';x.fillRect(-180,-200,360,260);x.strokeStyle='#c9a46a';x.lineWidth=8;x.strokeRect(-180,-200,360,260);if(!broken){diamond(0,-60,0.9,t);}else{x.strokeStyle='#fff';x.lineWidth=4;for(let i=0;i<7;i++){const a=i*0.9;x.beginPath();x.moveTo(0,-70);x.lineTo(Math.cos(a)*170,-70+Math.sin(a)*120);x.stroke();}}x.restore();}
+function tiara(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#ffd23f';x.beginPath();x.moveTo(-140,40);x.lineTo(-150,-30);x.lineTo(-80,10);x.lineTo(-40,-70);x.lineTo(0,-10);x.lineTo(40,-70);x.lineTo(80,10);x.lineTo(150,-30);x.lineTo(140,40);x.closePath();x.fill();x.fillStyle='#e8f6ff';for(let i=-3;i<=3;i++){x.beginPath();x.arc(i*40,20,12,0,7);x.fill();}x.fillStyle='#ffd23f';x.beginPath();x.arc(0,-90,26,0,7);x.fill();x.fillStyle='#2f8a3a';x.beginPath();x.arc(0,-90,12,0,7);x.fill();x.restore();}
+function magnifier(cx,cy,r){x.strokeStyle='#ddd';x.lineWidth=18;x.beginPath();x.arc(cx,cy,r,0,7);x.stroke();x.lineWidth=30;x.beginPath();x.moveTo(cx+r*0.7,cy+r*0.7);x.lineTo(cx+r*1.4,cy+r*1.4);x.stroke();x.fillStyle='rgba(200,230,255,0.15)';x.beginPath();x.arc(cx,cy,r,0,7);x.fill();}
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
+function bike(cx,base,s,t){x.save();x.translate(cx,base);x.scale(s,s);x.strokeStyle='#111';x.lineWidth=10;for(const p of [-110,110]){x.beginPath();x.arc(p,-70,70,0,7);x.stroke();}x.beginPath();x.moveTo(-110,-70);x.lineTo(-20,-170);x.lineTo(90,-170);x.lineTo(110,-70);x.moveTo(-20,-170);x.lineTo(10,-70);x.lineTo(90,-170);x.stroke();x.restore();sil(cx-10*s,base-120*s,1.2*s,'#111');}
+function cam(cx,cy,s,old){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle=old?'#8a8a7a':'#e8e8ea';rr(-120,-50,220,100,16);x.fill();x.fillStyle='#222';x.beginPath();x.arc(110,0,40,0,7);x.fill();x.fillStyle='#555';x.fillRect(-30,50,20,80);x.restore();}
+function senate(t){x.fillStyle=grad(0,H,['#5a1a1a','#1a0606']);x.fillRect(0,0,W,H);for(let r=0;r<4;r++){x.fillStyle=`rgba(200,60,60,${0.25+r*0.1})`;x.beginPath();x.ellipse(540,1250,180+r*130,60+r*50,0,Math.PI,0);x.lineTo(540+180+r*130,1250);x.fill();}}
+// 0 kanca: bisikletli
+shot(0,0,t=>{paris(t);facade(540,1000,0.8);bike(300+t*120,1080,1.1,t);bigText('İLK ALARMI',W/2,270,115,'#fff',1);bigText('BİR BİSİKLETLİ VERDİ',W/2,400,80,'#ffd23f',1);if(t>0.4){x.fillStyle='rgba(255,77,77,'+(0.5+0.5*Math.sin(t*10))+')';x.beginPath();x.arc(820,620,40,0,7);x.fill();}});
+// 1 polis şefi senato
+shot(1,1,t=>{senate(t);sil(540,1000,2.2,'#000');x.fillStyle='#3a2a18';x.fillRect(380,900,320,120);badge(540,300,'SENATO','#c1121f',t*3);if(t>2.4)sbubble(540,520,860,150,'İLK HABER: BİSİKLETLİ',eOut(cl((t-2.4)*3)),58);});
+// 2 eski kameralar
+shot(2,2,t=>{x.fillStyle='#0a0c12';x.fillRect(0,0,W,H);cam(320,720,1.4,true);cam(760,720,1.4,true);x.fillStyle='rgba(255,255,255,0.06)';for(let k=0;k<40;k++)x.fillRect(0,((k*53+t*400)%H),W,3);bigText('ESKİ KAMERALAR',W/2,320,100,'#fff',back(cl(t*2.5)));if(t>1.4)badge(540,1400,'ANALOG','#555',(t-1.4)*3);});
+// 3 yeni önlemler
+shot(3,3,t=>{paris(t);facade(540,1000,0.8);const L=['YENİ KAMERALAR','BARİYERLER','DEVRİYE'];for(let i=0;i<3;i++){const p=cl((t-0.4-i*0.9)*3);if(p>0)badge(540,300+i*140,L[i],['#2a5cff','#e6a100','#2a9d8f'][i],p);}});
+// 4 bir yıl, hâlâ kayıp
+shot(4,4,t=>{x.fillStyle=grad(0,H,['#3a2a4a','#120a18']);x.fillRect(0,0,W,H);vitrine(540,880,1.3,false,t);x.fillStyle='rgba(18,10,24,0.92)';x.fillRect(320,660,440,240);bigText('BOŞ',540,790,110,'#ff4d4d',back(cl((t-0.6)*2.5)));yearStamp('1 YIL','HÂLÂ KAYIP',eOut(cl(t*2)),300);});
+// 5 sökülmüş, eritilmiş
+shot(5,5,t=>{x.fillStyle=grad(0,H,['#2a1206','#0a0402']);x.fillRect(0,0,W,H);const p=cl((t-0.4)/2);tiara(540,640,1.3*(1-p*0.5),0);x.globalAlpha=p;fire(540,1000,520,260,t);x.globalAlpha=1;for(let i=0;i<6;i++){const k=cl((t-1-i*0.15)*2);if(k>0)diamond(260+i*110,700+k*260,0.45,t+i);}bigText('SÖKÜLDÜ MÜ?',W/2,280,100,'#fff',back(cl(t*2.5)));if(t>2)bigText('ERİTİLDİ Mİ?',W/2,1400,100,'#ff9f1c',back(cl((t-2)*2.5)));});
+// 6 geri döner mi
+shot(6,6,t=>{paris(t);pyramid(540,1000,1.6);tiara(540,560,0.9,Math.sin(t*2)*0.1);qmarks(540,820,t,3);bigText('GERİ DÖNER Mİ?',W/2,300,105,'#c1121f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#16161c','#050508'));

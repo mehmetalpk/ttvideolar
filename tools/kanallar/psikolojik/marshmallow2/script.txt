@@ -1,0 +1,10 @@
+[intense] Bekleyen çocuklar, yıllar sonra öne geçti.
+
+[serious] Mischel, aynı çocukların bir kısmını ergenlik çağında yeniden buldu.
+[curious] Şekeri bekleyebilenlerin üniversite sınavı puanları ortalamada daha yüksekti.
+[serious] Aileleri onları daha odaklı ve strese daha dayanıklı anlattı.
+[intense] Haber dünyaya yayıldı: Sabır, başarının sırrıydı.
+[curious] Kitaplar yazıldı, seminerler verildi. Herkes çocuğuna beklemeyi öğretmeye çalıştı.
+[intense] Ama iki bin on sekizde araştırmacılar testi dokuz yüzden fazla çocukla yeniden yaptı. || Ama 2018'de araştırmacılar testi 900'den fazla çocukla yeniden yaptı.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.
