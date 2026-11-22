@@ -1,56 +1,71 @@
 # Strateji (haftalık analiz görevi günceller)
 Günlük görev bu dosyayı OKUR ve buradaki "Uygulanacak kurallar"a uyar. Haftalık görev her pazar Metricool verisiyle günceller.
-Not: havuz.md başındaki KULLANICI notları (FORMAT 4, süre, outro, altyazı konumu, ses efekti yasağı, kanca kuralı) bu dosyadan ÖNCE gelir; çelişirse kullanıcı notu geçerlidir.
+Not: havuz.md başındaki KULLANICI notları (şu an FORMAT 5, süre, outro, altyazı konumu, ses efekti yasağı, kanca kuralı) bu dosyadan ÖNCE gelir; çelişirse kullanıcı notu geçerlidir.
 
 ## Son güncelleme
-2026-11-15 (3. haftalık analiz — 08–14.11, 19 video; FORMAT 4'ün ilk 2 günü dahil. 15.11 videoları Metricool'a henüz düşmedi → gelecek hafta.)
+2026-11-22 (4. haftalık analiz — 16–21.11, 24 video; FORMAT 4'ün son tam haftası. 22.11'in 4 videosu Metricool analitiğine henüz düşmedi → veri yok. FORMAT 5 23.11'de başlıyor → bu hafta TEST ÖLÇÜLEMEDİ; aşağıdaki "FORMAT 5 kıyas tabanı" 29.11 analizinde kullanılır.)
 
-## Veri özeti (Metricool TikTok, brand 8012068, 08.11–14.11, saatler Europe/Istanbul, veri 15.11 akşamı çekildi)
-VERİ EKSİKLERİ: Yeni brand (10 Kas) için TKPO11 erişim, TKPO13 tam izleme, TKPO14/15 izleme süresi, TKPO16 Senin İçin, TKPO17/20 kaynak dağılımı TÜM videolarda BOŞ (null). Ana ölçüt (ort. izleme süresi / tam izleme) bu hafta HESAPLANAMADI → yorumlar izlenme + beğeni oranına dayanır. HK S2 P3 (12.11 09:00, TikTok'ta yayınlandı) Metricool analitiğinde yok. 13–14.11 videoları 1–2 günlük → izlenmeleri henüz tamamlanmadı, düşük görünür.
+## Veri özeti (Metricool TikTok, brand 8012068, 16.11–21.11, Europe/Istanbul, veri 22.11 21:40 çekildi)
+VERİ EKSİKLERİ: TKPO15 ort. izleme süresi ve TKPO13 tam izleme TÜM videolarda yine BOŞ (null) → yorumlar izlenme + beğeni oranına dayanır. 22.11 videoları (HK S3 P13, Kek P3, HK S3 P14, Çöp P1) ve 22.11 takipçi satırı analitikte yok. 20–21.11 videoları 1–2 günlük → düşük görünür.
 
-| Yayın | Video | Tür | Ses | Süre | Parkur | İzlenme | Beğeni | Yorum | Paylaşım | Beğeni % |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 08.11 09:02 | Mayonez babası (tek) | komedi/baba | Emrullah | 85 | hayır | 11.642 | 210 | 3 | 10 | 1,80 |
-| 09.11 21:55 | Park Yeri P1 | komedi/komşu | Emrullah | 83 | hayır | **138.600** | 1.970 | 14 | 45 | 1,42 |
-| 10.11 10:46 | HK iş birliği videosu (sponsorlu, kullanıcı) | komedi/HK | — | 55 | hayır | 26.807 | 346 | 15 | 16 | 1,29 |
-| 10.11 17:21 | Park Yeri P2 (açık uç) | komedi/komşu | Emrullah | 65 | hayır | 42.746 | 755 | 7 | 11 | 1,77 |
-| 11.11 10:03 | HK S2 P1 | komedi/HK | Emrullah | 30 | hayır | 26.645 | 275 | 7 | 20 | 1,03 |
-| 11.11 12:31 | Park Yeri P3 | komedi/komşu | Emrullah | 28 | **evet** | 11.011 | 68 | 1 | 2 | 0,62 |
-| 11.11 17:03 | HK S2 P2 | komedi/HK | Emrullah | 32 | hayır | 12.064 | 116 | 6 | 4 | 0,96 |
-| 11.11 20:32 | Park Yeri P4 | komedi/komşu | Emrullah | 26 | hayır | 6.561 | 75 | 2 | 1 | 1,14 |
-| 12.11 09:00 | HK S2 P3 | komedi/HK | Emrullah | 35 | hayır | (analitikte yok) | | | | |
-| 12.11 12:31 | Park Yeri P5 | komedi/komşu | Emrullah | 24 | **evet** | 4.495 | 42 | 1 | 0 | 0,93 |
-| 12.11 17:04 | HK S2 P4 | komedi/HK | Emrullah | 29 | hayır | 21.335 | 311 | 6 | 4 | 1,46 |
-| 12.11 20:30 | Park Yeri P6 | komedi/komşu | Emrullah | 28 | hayır | 4.335 | 46 | 3 | 0 | 1,06 |
-| 13.11 09:02 | HK S2 P5 | komedi/HK | Emrullah | 29 | hayır | 19.082 | 274 | 6 | 8 | 1,44 |
-| 13.11 12:31 | Park Yeri P7 FİNAL | komedi/komşu | Emrullah | 30 | hayır | 4.973 | 43 | 2 | 1 | 0,86 |
-| 13.11 17:05 | Bahçe Sınırı P1 | komedi/komşu | İrem | 43 | hayır | 17.521 | 231 | 7 | 4 | 1,32 |
-| 13.11 20:31 | HK S2 P6 | komedi/HK | Emrullah | 30 | hayır | 5.882 | 94 | 2 | 0 | 1,60 |
-| 14.11 09:01 | HK S2 P7 | komedi/HK | Emrullah | 29 | hayır | 7.378 | 111 | 5 | 5 | 1,50 |
-| 14.11 12:31 | Bahçe Sınırı P2 | komedi/komşu | İrem | 29 | hayır | 8.780 | 165 | 6 | 2 | 1,88 |
-| 14.11 17:04 | HK S2 P8 | komedi/HK | Emrullah | 29 | hayır | 1.591* | 23 | 2 | 0 | 1,45 |
-| 14.11 20:31 | Bahçe Sınırı P3 FİNAL | komedi/komşu | İrem | 32 | hayır | 2.372* | 48 | 2 | 0 | 2,02 |
+| Yayın | Video | Seri/part | Ses | Süre | İzlenme | Beğeni | Yorum | Paylaşım | Beğeni % |
+|---|---|---|---|---|---|---|---|---|---|
+| 16.11 09:02 | Babam 45 yaşında YouTuber oldu | HK S3 P1 | Emrullah | 27 | 7.408 | 59 | 2 | 2 | 0,80 |
+| 16.11 12:31 | Beş arkadaşım aynı raporu getirdi | Tuvalet P3 | Emrullah | 26 | 36.337 | 199 | 3 | 1 | 0,55 |
+| 16.11 17:02 | Babamın ilk videosu 3 izlenme aldı | HK S3 P2 | Emrullah | 27 | **141.511** | 2.372 | 20 | 31 | 1,68 |
+| 16.11 20:31 | Hocamız geç kalanı derse almıyordu | Hoca P1 | İrem | 48 | **360.298** | 6.030 | 57 | 148 | 1,67 |
+| 17.11 09:02 | Anneannem bir gecede ünlü oldu | HK S3 P3 | Emrullah | 26 | 53.231 | 451 | 6 | 16 | 0,85 |
+| 17.11 12:30 | Bir gün hocamız geç kaldı | Hoca P2 | İrem | 25 | **189.802** | 3.384 | 32 | 76 | 1,78 |
+| 17.11 17:06 | Anneannem babama sözleşme imzalattı | HK S3 P4 | Emrullah | 24 | 43.069 | 183 | 7 | 4 | 0,42 |
+| 17.11 20:32 | Sınıf hocayı kapıda bıraktı | Hoca P3 | İrem | 24 | 70.922 | 1.486 | 21 | 19 | 2,10 |
+| 18.11 09:02 | Babam 40 dakika tavanı canlı yayınladı | HK S3 P5 | Emrullah | 26 | 34.223 | 507 | 3 | 21 | 1,48 |
+| 18.11 12:31 | Ağabeyim hediyelerimi beğenmedi | Amca P1 | Emrullah | 30 | 14.464 | 160 | 2 | 4 | 1,11 |
+| 18.11 17:05 | Annem kanala bulaşık kuralı koydu | HK S3 P6 | Emrullah | 27 | 7.155 | 123 | 3 | 3 | 1,72 |
+| 18.11 20:32 | Yeğenlerime davul ve trompet aldım | Amca P2 | Emrullah | 27 | 4.957 | 79 | 3 | 0 | 1,59 |
+| 19.11 09:02 | Babam bir cümleyi 27 kez çekti | HK S3 P7 | Emrullah | 28 | 3.274 | 61 | 5 | 7 | 1,86 |
+| 19.11 12:31 | Yeğenime davul yapma kitabı aldım | Amca P3 | Emrullah | 25 | 4.638 | 106 | 1 | 0 | 2,29 |
+| 19.11 17:02 | Evde kanal kimin kavgası çıktı | HK S3 P8 | Emrullah | 26 | 2.298 | 47 | 2 | 0 | 2,05 |
+| 19.11 20:32 | Komşum kar makinemden şikâyet etti | Kar P1 | Emrullah | 21 | 31.620 | 476 | 15 | 6 | 1,51 |
+| 20.11 09:02 | Babam kendi kanalından kilitlendi | HK S3 P9 | Emrullah | 28 | 8.607 | 103 | 1 | 3 | 1,20 |
+| 20.11 12:30 | Bütün sokağı temizledim, bir ev hariç | Kar P2 | Emrullah | 27 | 24.714 | 381 | 5 | 2 | 1,54 |
+| 20.11 17:03 | Babamın gizli kaplumbağası ortaya çıktı | HK S3 P10 | Emrullah | 27 | 8.055 | 61 | 1 | 0 | 0,76 |
+| 20.11 20:32 | Komşum buzu kazmayla kırmaya çalıştı | Kar P3 | Emrullah | 25 | 8.452 | 120 | 4 | 0 | 1,42 |
+| 21.11 09:02 | Babamın çocukluk kaseti viral oldu | HK S3 P11 | Emrullah | 26 | 3.493 | 38 | 2 | 0 | 1,09 |
+| 21.11 12:31 | Kaynanam kurabiyelerime hiç dokunmadı | Kek P1 | İrem | 30 | 44.036 | 582 | 14 | 15 | 1,32 |
+| 21.11 17:03 | Bütün ailemiz televizyona çağrıldı | HK S3 P12 | Emrullah | 27 | 6.968 | 57 | 5 | 3 | 0,82 |
+| 21.11 20:31 | Görümcemin tatlısının aynısını yaptım | Kek P2 | İrem | 28 | 18.788 | 354 | 12 | 16 | 1,88 |
 
-\* <1,5 günlük veri.
+- Hafta (16–21.11, 6 gün, 24 video): **1.128.320 izlenme** (≈188K/gün, video başı ~47K), 17.419 beğeni, 226 yorum, 377 paylaşım. Önceki 7 gün (09–15.11, 22 video): 649.295 izlenme (video başı ~29,5K) → **+%74**.
+- Günlük izlenme (yayın gününe göre): 16.11 546K · 17.11 357K · 18.11 61K · 19.11 42K · 20.11 50K · 21.11 73K. ORTALAMA YANILTICI: haftanın %50'si tek seri (Hoca 621K) + HK S3 P2 (141K). Hit olmayan günlerde 4 video ≈ **42–73K/gün** (medyan gün ~55K).
+- Takipçi: 15.11 1.917 → 16.11 2.054 (+137) → 17.11 2.634 (+580) → 18.11 2.973 (+339) → 19.11 3.066 (+93) → 20.11 3.122 (+56) → 21.11 **3.329** (+207) = 6 günde **+1.412 (~235/gün)**; önceki 6 gün (10–15.11) +425 (~71/gün). 22.11 takipçi: veri yok.
+- Takipçi patlaması izlenmeyle aynı günlerde (Hoca 16–18.11); hit yokken +56–93/gün.
 
-- Hafta toplamı (08–14.11): 19 video (analitikte), **373.820 izlenme**, 5.203 beğeni, 97 yorum, 133 paylaşım. Video başı ort. ~19,7K.
-- Önceki hafta (01–07.11): 13 video, 498.075 izlenme (video başı ~38,3K; Hacker Kerem S1 P1 198,9K ağırlıklı).
-- Takipçi: 1.358 (07.11) → 1.492 (09.11) → 1.558 → 1.710 → 1.756 → 1.826 → **1.896 (14.11)** = haftada **≈ +540** (önceki hafta +1.357). Günlük artış 46–152, FORMAT 4 günlerinde (13–14.11) +70/gün.
-- Instagram/YouTube: değerlendirilmedi (YouTube verisi hatalı — kullanıcı kararı).
+### FORMAT 5 kıyas tabanı (29.11 analizi bununla karşılaştırır)
+| Ölçüt | 16–21.11 (FORMAT 4, 4 video/gün) |
+|---|---|
+| Günlük ort. izlenme | ~188K (hit dahil) |
+| Hit hariç gün (18–21.11) | 42–73K/gün, ort. ~56K |
+| Günlük ort. yeni takipçi | ~235 (hit dahil); hit yokken (19–21.11) ~119/gün (93 · 56 · 207) |
+| 3 partlık seri toplamı (medyan) | ~63K (Kar 65K, Kek P1+P2 63K, Amca 24K, Hoca 621K) |
+| P1 → P2 → P3 | medyan %53 → %34 (Hoca 53/37, Kar 78/34, Kek 43/–, Amca 34/94) |
+Başarı ölçütü (öneri): FORMAT 5 haftası hit hariç günlerde >80K/gün ve >150 takipçi/gün yaparsa hacim işe yarıyor; ~56K/gün civarında kalırsa video başı değer düşüyor demektir.
 
-## Tür performansı (bu hafta)
-- Hepsi komedi (gerilim yok). Alt tür kıyası: komşu/site çatışması (Park, Bahçe) P1'leri en güçlü (138,6K ve 17,5K); aile/teknoloji (HK S2) P1 26,6K ama sezon ortasında yeni olaylarla toparlanıyor (P4 21,3K, P5 19,1K). Baba/aile tek video (Mayonez) 11,6K.
-- Seri düşüşü: **Park** P1 138,6K → P2 42,7K (%31) → P3 11,0K (%26) → P4–P7 4–6,5K (taban). **HK S2** P1 26,6K → P2 12,1K → P4 21,3K → P5 19,1K → P6 5,9K → P7 7,4K → P8 1,6K* (dalgalı; somut yeni olaylı partlar yükseliyor). **Bahçe** P1 17,5K → P2 8,8K (%50) → P3 2,4K* → 3 partlık seri, uzun seriye göre daha az kayıp (eğilim, n=1).
-- Ses: İrem (Bahçe, 3 video) beğeni oranı %1,32–2,02; Emrullah seri partları çoğunlukla %0,9–1,5. Eğilim İrem lehine, örneklem küçük.
+## Tür / seri performansı (16–21.11)
+- **3 partlık Reddit uyarlamaları (12 video) 809K, medyan 28,2K** vs **Hacker Kerem S3 (12 video, kendi kurgu) 319K, medyan 7,7K** — aynı video sayısında ~2,5 kat. Özgün (hikâye üretici) seriler henüz yayınlanmadı (ilk 23.11 Düğün Albümü) → özgün vs Reddit kıyası 29.11'de.
+- Seri toplamları: Hoca 621K (P1 360K, 48 sn, İrem, okul/otorite) · Kar 65K (P1 21 sn) · Kek P1+P2 63K (İrem, kaynana/görümce) · Tuvalet P3 36K (seri toplam 183K) · Amca 24K (ZAYIF).
+- HK S3: P2 141K, P3 53K, P4 43K, P5 34K → P6–P12 2,3–8,6K. Sezonun 6. partından sonra çöküş (önceki sezon da aynı) → HK'nin bitmesi veriyle uyumlu.
+- Ses: İrem anlatıcılı 5 video (Hoca ×3, Kek ×2) 684K, beğeni %1,3–2,1; Emrullah 3'lük seri partları %1,1–2,3 (Amca P3 yüksek oran düşük izlenme). İrem lehine eğilim sürüyor (n küçük; Hoca etkisi baskın).
+- Slot (içerik karışık; HK 09/17'de): 09:00 medyan 8,0K · 12:30 30,5K · 17:00 7,6K · 20:30 25,2K. Fark büyük olasılıkla içerikten (HK vs 3'lük seri) → saat hükmü VERİLEMEZ. FORMAT 5'te iki hat aynı içerik tipini taşıyor → A vs B kıyası 29.11'de ilk kez temiz.
 
 ## Gözlemler
-- Süre: en yüksek izlenmeler yine uzun ve güçlü kancalı P1'lerde (Park P1 83 sn 138,6K; Park P2 65 sn 42,7K). ≤35 sn partlar 1,6–26,6K. İzleme süresi verisi olmadığı için süre–tutma ilişkisi ölçülemedi; FORMAT 4'ün "güçlü kancalı P1 85 sn'ye kadar" istisnası veriyle uyumlu.
-- Parkur (bölünmüş ekran): Park P3 (11,0K, beğeni %0,62) ve P5 (4,5K, %0,93) komşu tam ekran partlara (P4 6,6K %1,14; P6 4,3K %1,06) göre izlenmede fark yok, beğeni oranında daha düşük → kullanıcının 12.11 kaldırma kararını destekliyor.
-- Günde 4 video (FORMAT 4, 13–14.11): günlük toplam izlenme 11.11 56K, 12.11 30K (3 video ölçülü), 13.11 47K, 14.11 20K* — hacim artışı toplam erişimi belirgin ARTIRMADI, video başı izlenme yarıya indi; takipçi artışı ~70/gün'de sabit. Videolar henüz genç; kesin hüküm 22.11'de.
-- Yayın saati: seri sırasıyla karışık. 20:30 slotu en zayıf görünüyor (HK P6 20:30'da 5,9K vs 09:00/17:00 HK partları 7–21K; 20:30'daki Park P4/P6 4–6,5K) — eğilim, kesin değil. Park P1 21:55'te çıktı ve 138,6K yaptı → akşam geç saat tek başına engel değil.
-- Kanca: HK S2'de yükselen partlar yeni somut olay + aile bireyi ("Anneannem akıllı evi çökertti" 21,3K; "Akıllı ev bizi yağmurda dışarıda bıraktı" 19,1K); düşen partlar önceki partın devamı/iç olay ("Babam gece 3'te buzdolabıyla dertleşmiş" 1,6K*, "Babam kapıya ninni söylemek zorunda kaldı" 5,9K).
-- Senin İçin oranı ölçülemedi (null). İzlenmelerde ani çöküş yok (14.11 videoları da 1 günde 7–9K'ya ulaştı) → erişim kısıtlaması şüphesi YOK.
-- Sponsorlu HK iş birliği videosu (10.11, 55 sn) 26,8K — normal HK partı seviyesinde; reklam etiketi erişimi düşürmedi (n=1).
+- Kanca: en iyiler "otorite kendi kuralına takılır" (Hoca: "Hocamız geç kalanı derse almıyordu" → P2 "Bir gün hocamız geç kaldı") ve "dediğini harfiyen yaptım + istisna" ("Bütün sokağı temizledim, bir ev hariç" P1'in %78'ini tuttu). P2 kancası rol tersine dönmesini müjdeliyorsa düşüş az.
+- Süre: Hoca P1 48 sn 360K, Kar P1 21 sn 31,6K, Kek P1 30 sn 44K → süre değil kanca belirleyici (11–21.11 analiziyle aynı).
+- Zayıf seri (Amca): anlatıcı "intikamı" yeğenlere gürültülü hediye almak → çocuklar/aile rahatsız, anlatıcının haklılığı tartışmalı, herkesin önünde ifşa yok. P1 14K, P2 4,9K.
+- Final partların beğeni oranı en yüksek (%1,4–2,3): sadakatli izleyici kalıyor; ama izlenme P1'in %13–35'i.
+- Erişim kısıtı şüphesi yok (aynı gün içinde 2K'dan 360K'ya geniş dağılım).
+
+## Önceki hafta özeti (08–14.11, 15.11 analizi)
+- 19 video 373,8K izlenme, +~540 takipçi; Park P1 138,6K (83 sn); FORMAT 4 ilk günlerinde video başı izlenme yarıya indi; parkur zayıf (kaldırıldı); 20:30 o hafta zayıf görünmüştü (bu hafta 20:30 Hoca P1 360K ile çürüdü).
 
 ## KANCA + KONU SEÇİMİ (12 Kas kullanıcı kararı — SABİT; haftalık görev veriyle günceller ama silmez)
 Veri: Metricool TikTok 1–12 Kas. YouTube verisi HATALI (kullanıcı 12 Kas) → YouTube rakamlarıyla karar VERME, yorumlama.
@@ -68,6 +83,8 @@ Veri: Metricool TikTok 1–12 Kas. YouTube verisi HATALI (kullanıcı 12 Kas) �
 - YAPMA: gerilim/korku (Kaan 4K, Gece 3 3K, Gizli Ajan 2K), duygusal tek video, belirsiz kanca.
 - (15 Kas haftalık ek) Bahçe Sınırı P1 17,5K (İrem, 43 sn) → komşu çatışması P1 kalıbı ikinci kez tuttu. HK S2'de "[aile bireyi] + [evi/aileyi etkileyen yeni felaket]" partları (P4 21K, P5 19K) iç-olay partlarının (P6 5,9K, P8 1,6K*) 3–10 katı.
 - Seri ara partları her partta düşüyor (Park P1→P3 %6'ya indi) → P1 kancası en kritik; P2–P3 kancası yeni somut çatışma getirir ("Komşunun kuzeni park yerimi tapuyla istedi").
+- (22 Kas haftalık ek) En güçlü kalıp: **OTORİTE KENDİ KURALINA TAKILIR** — Hoca P1 360K / P2 190K ("Hocamız geç kalanı derse almıyordu" → "Bir gün hocamız geç kaldı"). İkinci: "harfiyen uydum + tek istisna" ("Bütün sokağı temizledim, bir ev hariç" P2, P1'in %78'i). P1 kancası kuralı ve kuralı koyanı aynı cümlede söyler; P2 kancası rol tersine dönmesini müjdeler.
+- (22 Kas) ZAYIF: anlatıcının "intikamının" masum üçüncü kişiye (çocuk, aile) yük olduğu hikâyeler (Amca 24K toplam). Anlatıcı her zaman açıkça haklı ve sempatik olmalı.
 
 ### Küçük hesaplar — işe yarayan kanca tipleri (TikTok, örneklem küçük)
 - "Sen de yaşadın mı?" tanıdık gündelik an + adı konmuş etki (Psikolojik: Pratfall 1.980, Zeigarnik 1.330, Spot ışığı 945).
@@ -88,7 +105,10 @@ Veri: Metricool TikTok 1–12 Kas. YouTube verisi HATALI (kullanıcı 12 Kas) �
 - Seri formatı: Hacker Kerem haftalık sezon (Pzt–Paz, 14 part); diğer tüm seriler TAM 3 part (FORMAT 4). Part 2+ ilk 2 sn'de tek cümle özetle başlar. (korundu)
 - ⟳ Ses: anlatıcı kadınsa veya cinsiyet serbestse İrem; her 3 yeni seriden en az 1'i İrem anlatıcılı olsun (Bahçe/İrem beğeni oranı %1,3–2,0, Emrullah partları %0,9–1,5 — eğilim, n=3). Hacker Kerem = Emrullah (değişmez).
 - İlk kare/ilk cümle: en şok edici/absürt an ilk 1,5 sn'de, somut kişi + eylem; giriş/selam YOK. (korundu)
-- ⟳ Yayın saati: FORMAT 4 slotları (09:00/12:30/17:00/20:30) DEĞİŞMEZ (kullanıcı kararı). Ama bir serinin P1'i asla 20:30'a düşmesin diye sıra ayarlanabiliyorsa P1'i 12:30'a koy (20:30 bu hafta en zayıf slot görünümünde — eğilim). Düşerse yine yayınla, değişiklik yapma.
+- ⟳ (22.11) FORMAT 5 (23.11'den, kullanıcı kararı): seri formatı, slotlar, süre ve outro için havuz.md üst notu geçerlidir; aşağıdaki FORMAT 4/HK maddeleri yalnız tarihsel kayıttır. Hikâyeler tools/hikaye_uretici/HIKAYE_URETICI.md ile yazılır (puan ≥8/10).
+- ⟳ (22.11) P1 kancası tercihen "otorite + kural + ters tepme" ya da "harfiyen uyum + istisna" kalıbında; anlatıcının karşı hamlesi masum üçüncü kişiye zarar vermez (Amca dersi). Gerekçe: Hoca 621K / Kar 65K vs Amca 24K.
+- ⟳ (22.11) ÖNERİ (kullanıcı kararı değil): FORMAT 5 haftasında aynı gün A ve B hattına farklı ses koy (biri İrem); İrem serileri 16–21.11'de izlenmenin %61'i. Hit olmayan günlerin ortalaması (~56K/gün) ayrı raporlansın.
+- (tarihsel) Yayın saati: FORMAT 4 slotları (09:00/12:30/17:00/20:30) DEĞİŞMEZ (kullanıcı kararı). Ama bir serinin P1'i asla 20:30'a düşmesin diye sıra ayarlanabiliyorsa P1'i 12:30'a koy (20:30 bu hafta en zayıf slot görünümünde — eğilim). Düşerse yine yayınla, değişiklik yapma.
 - Parkur (bölünmüş ekran): KULLANMA (kullanıcı kararı 12.11; veri de destekliyor: parkurlu partların beğeni oranı %0,6–0,9, tam ekran %1,1).
 - Açıklama ve hashtag'lerde #gerçekhikaye ve "gerçek/yaşanmış" ifadesi kesinlikle yok; yapay zekâ etiketi (isAigc/isAiGenerated/isAiGeneratedContent) her gönderide true. (sabit)
 - Aynı türden iki seri art arda gelmesin: komşu serisinden sonra aile/okul/iş yeri serisi gelsin. (havuz.md 9 Kas notundan)

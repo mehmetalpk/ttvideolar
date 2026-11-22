@@ -1,10 +1,11 @@
 # ORTAK HAFIZA — …sal Hikayeler
 (Kural: CLAUDE.md. Her oturum başında oku, her üretim mesajından sonra güncelle ve push et.)
 
-## Güncel durum (son güncelleme: 2026-11-22 04:30)
+## Güncel durum (son güncelleme: 2026-11-22 21:45)
 - **Metricool:** ücretli hesap, sınır yok. Brand ID'ler metricool_brandlar.md (Redditsel 8012068). MANUEL MOD bitti; görevler doğrudan planlar.
 - **Hesaplar:** Redditsel (ana, ~1.5K TikTok takipçi), Osmanlısal, İslamik, Psikolojik, Kriminal (IG KAPALI — hesaba girilemiyor), Parasal, Sanatsal, Sporsal, Motivasyonel, Yemeksel (TikTok yok). Hayatsal İPTAL.
 - **Redditsel formatı → FORMAT 5 (23.11'den): günde 6 video, 2 tam 3'lük seri/gün, Hacker Kerem bitti; havuz.md üst notu + tools/hikaye_uretici/.** Eski: (FORMAT 4, 13 Kas'tan — kullanıcı kararı 12 Kas 15:44; ayrıntı havuz.md üst notu):** günde 4 video. 09:00 + 17:00 Hacker Kerem HAFTALIK SEZON (Pzt P1 → Paz 17:00 FİNAL, 14 part). 12:30 + 20:30 = TAM 3 partlık seriler sırayla. Parkur (alttaki oyun videosu) KALDIRILDI: tüm videolar tam ekran. Varsayılan ≤40 sn; güçlü kancalı (strateji.md 4/4 kontrol) seri P1/tek video 85 sn'ye kadar. Konu/kanca seçimi: strateji.md "KANCA + KONU SEÇİMİ (12 Kas)".
+- **Redditsel havuz (22 Kas 21:45 haftalık analiz):** Bekleyen seriler 27.11'e kadar: 23.11 B Düğün Albümü (A: Çöp P2–P3), 24.11 Her Şey Yazılı Olacak / Terlik Cezası, 25.11 Dedemin Mirası / Yengemin Uydurduğu Nişanlı, 26.11 Hocanın Tavuk Zil Sesi / Babamın Kombi Yasağı (ikisi Emrullah), 27.11 Teyzemin Karne Harçlığı (İrem) / Dayımın Rüzgâr Gülleri (Reddit uyarlaması). 28.11'den itibaren gece görevi üreticiyle yazar.
 - **Redditsel seri durumu (22 Kas gece):** 22.11 dolu: HK S3 P13 09:00, Kek P3 FİNAL 12:30 (İrem; seri bitti), HK S3 P14 FİNAL 17:00 (Sezon 3 bitti), yeni seri 'Çöp Kovası Savaşı' P1 20:30 (komşu, Emrullah, 41,7 sn güçlü kanca). Sırada 23.11: HK SEZON 4 P1 09:00 + P2 17:00 (planı Pazar 21:37 analizi yazar), Çöp P2 12:30 + P3 FİNAL 20:30; 24.11 12:30 yeni seri P1 (aile/okul/iş yeri, İrem tercih; havuzda yok). Çizim: tools/dizi_22kasim (cop.js).
 - **Redditsel sıradaki (15 Kas haftalık analiz):** HK SEZON 3 "Babamın YouTube Kanalı" 14 partlık plan havuz.md'de (16–22.11). 3 partlık seri sırası: Tuvalet Raporu P3 (16.11 12:30) → Kapıyı Kilitleyen Hoca (İrem, P1 16.11 20:30) → Amcanın Gürültülü Hediyeleri → Kar Küremeyi İstemeyen Komşu → Görümcemin Kek Topları (İrem).
 - **Metricool teknik:** createScheduledPost'ta tiktokData.title ZORUNLU (yoksa "TikTok title is required").
@@ -23,6 +24,9 @@
 - **Otomatik görevler:** 03:55 Redditsel (FORMAT 5), 03:55 küçük hesaplar, Pazar 21:37 analiz (gorevler.md). Gece çalışması kullanıcının gündüz limitini korumak için.
 - **Arkadaş:** kendi Claude'uyla depo üzerinden yardım ediyor (collaborator izni 10 Kas 22:41; Claude'u 22:47'de bağlandı, protokolü okudu). Metricool'a planlamaz; MP4 + stok.md satırını stok/<hesap>/ altına push eder, gece görevi planlar.
 
+## Performans özeti (16–21 Kas haftalık analiz — raporlar/2026-11-22_haftalik.md)
+- 24 video 1,13M TikTok izlenme (önceki 7 gün 649K, +%74), takipçi 1.917 → 3.329 (+1.412, ~235/gün). Hoca serisi 621K tek başına yarısı; hit olmayan günler ~56K/gün. 3'lük Reddit serileri 809K (medyan 28K) vs HK S3 319K (medyan 7,7K). En zayıf: Amca 24K. FORMAT 5 kıyas tabanı strateji.md'de (29.11 ölçülecek). İzleme süresi yine boş.
+
 ## Performans özeti (8–14 Kas haftalık analiz — ayrıntı strateji.md)
 - 19 video, 373,8K TikTok izlenme (önceki hafta 13 video 498K), takipçi 1.358 → 1.896 (+~540). En iyi Park P1 138,6K (83 sn), en zayıf HK S2 P8 1,6K (genç). Metricool yeni brand'de izleme süresi/tam izleme/Senin İçin alanları BOŞ. Günde 4 video toplam izlenmeyi belirgin artırmadı (eğilim; 22.11'de tekrar bak).
 
@@ -33,17 +37,17 @@
 - 12 Kas Metricool raporu (1–12 Kas, PDF): raporlar/2026-11-12_metricool_analiz.pdf · özet raporlar/2026-11-12_metricool_analiz.md (YouTube bölümleri geçersiz).
 
 ## Açık konular
-- FORMAT 5 testi 23–29 Kas (6 video/gün, 2 seri). 30.11'de ölç: günlük toplam izlenme + yeni takipçi vs 15–21 Kas (~185K/gün, ~200/gün).
+- FORMAT 5 testi 23–29 Kas (6 video/gün, 2 seri). 29.11 analizinde ölç: kıyas tabanı strateji.md (16–21.11: ~188K/gün, ~235 takipçi/gün; hit hariç ~56K/gün, ~119/gün). Özgün vs Reddit ve A vs B hattı da ilk kez 29.11'de.
 - Redditsel profil fotoğrafı: arkadaş 2 ve 5'i beğendi, türevleri 6–10, turuncu zeminli 11–12 (marka/redditsel/). Son seçim bekleniyor (arkadaş + mehmetalp).
 - Saat testi (09:00 vs 16:00) sonucu → 30 Kas.
 - Kriminal Instagram'ı düzeltilecek (kullanıcı hesaba girince "Kriminal IG açıldı" diyecek).
 - Sporsal TikTok kısıtı (hesap düzeyi şüphesi): kullanıcı uygulamada Ayarlar > Hesap > Hesap durumu ve videoların 'Senin İçin'e uygun değil' uyarısını kontrol edecek. Sonuca göre: ihlal varsa itiraz; yoksa birkaç gün TikTok'u durdurup YT+IG'ye devam veya yeni hesap.
-- FORMAT 4 ilk sonuç (15.11): video başı izlenme ~38K → ~20K, takipçi ~70/gün; hacim toplamı artırmadı (eğilim). 22.11 analizinde kesinleştir; kullanıcıya 3/gün önerisi raporda iletildi (karar kullanıcıda).
 - Metricool izleme süresi / Senin İçin verisi boş → kullanıcıdan TikTok Studio değerleri istendi (15.11 rapor).
 - ElevenLabs kredisi günde ~11–15 videoya yetiyor mu? İlk günlerde izle.
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-22 21:45 | haftalık analiz (Claude) | 16–21.11: 24 video 1,13M izlenme (+%74), takipçi +1.412 (3.329); Hoca 621K, Kar 65K, Kek 63K+, Amca 24K, HK S3 319K/12 video. FORMAT 5 henüz başlamadığı için test ölçülmedi; kıyas tabanı strateji.md'ye yazıldı. Üretici: örnek defteri (en iyi Hoca/Kar, en kötü Amca/HK S3 P6+), puanlama madde 10–12, 10 tohum. Havuza 26–27.11 için 4 seri (Tavuk Zil Sesi, Kombi Yasağı, Karne Harçlığı/İrem, Rüzgâr Gülleri/Reddit). Rapor: raporlar/2026-11-22_haftalik.md.
 - 2026-11-22 13:50 | mehmetalp | 'Annem Gizli Ajan' reddedildi (bayat: tahmin edilebilir, ifşa tesadüf, ton fazla tatlı). Yerine 'Yengemin Uydurduğu Nişanlı' onaylandı → havuz, 25.11 B hattı. Kullanıcı: 'çok tahmin edilebilir olmadığı sürece bozmaz, ama içerik eğitiminden (üretici formülünden) şaşmamak gerek' → HIKAYE_URETICI puanlamaya 7–9 eklendi (ifşa anlatıcının hamlesiyle, aşırı tahmin edilebilirlik yasak, formülden şaşma yok).
 - 2026-11-22 13:40 | mehmetalp | Telif konuşuldu: Reddit uyarlamaları SERBEST (mevcutlar kalır). Diğer kaynaklardan sadece soyut durum; tanınırlık testi, en az 2 durum karıştırma, 'gerçek/izleyiciden' iddiası yok, kaynak kaydı (HIKAYE_URETICI §5b). Örnek özgün seri 'Annem Gizli Ajan' yazıldı → tools/hikaye_uretici/taslaklar.md (kullanıcı incelemesi bekliyor; görevler üretmez).
 - 2026-11-22 13:40 | mehmetalp | İki bölüm daha işlendi (Karma 48 dk = 880 kredi; Okul itirafları 37 dk = 676 kredi; bugün toplam STT 2.408 kredi). Transkriptler depoya konmadı. HIKAYE_URETICI.md §9: 13 soyut durum + tekrar izlenme dersi (tepeler: zorbanın bedel ödediği an, son ironi, utanç anı, bir büyüğün olaya daldığı tırmanma anı) → her seride en az bir görsel utanç/tırmanma anı + P3'te net rol tersine dönmesi.

@@ -46,6 +46,10 @@ YASAK (Müge Anlı'nın karanlık tarafı): cinayet, kaybolma/kaçırma, şiddet
 7. İfşayı ANLATICININ HAMLESİ mi tetikliyor (tesadüf değil)? — zorunlu; hayırsa yeniden yaz.
 8. Tahmin edilebilirlik: izleyici finali ilk 5 sn'de kesin tahmin ediyorsa yeniden yaz (biraz tahmin bozmaz; ilgi asıl "nasıl" sorusunda).
 9. Formülden şaşma: her seri §1 çekirdek formül + §3 iskelet + §8–9 ders kurallarına uyar; ton: yetişkin anlatıcı, keskin "haklı çıkma", fazla tatlı/naif değil.
+10. ⟳ (22.11 veri ayarı) BONUS +1: Kötü karakter bir OTORİTE (hoca, müdür, yönetici, kaynana, aile büyüğü) ve P3'te KENDİ koyduğu kurala takılıyor (Hoca 621K, Tuvalet 183K). P1 kancası kuralı ve kuralı koyanı aynı cümlede söylüyorsa ("Hocamız geç kalanı derse almıyordu") ayrıca güçlü sayılır.
+11. ⟳ (22.11) CEZA −2: Anlatıcının karşı hamlesi masum üçüncü kişiye (çocuk, yaşlı, aile, komşular) yük oluyor ya da anlatıcının haklılığı tartışmalı (Amca 24K: yeğenlere gürültülü hediye). Anlatıcı her an açıkça haklı ve sempatik olmalı.
+12. ⟳ (22.11) P2 kancası rol tersine dönmesini ya da "tek istisna"yı müjdeliyor mu? ("Bir gün hocamız geç kaldı" P1'in %53'ü; "Bütün sokağı temizledim, bir ev hariç" %78'i; Amca P2 "Yeğenlerime davul ve trompet aldım" %34'ü) → 6. maddenin 1 puanı ancak böyleyse tam verilir.
+Not: Süre puanlanmaz — Hoca P1 48 sn 360K, Kar P1 21 sn 32K, Kek P1 30 sn 44K: belirleyici kanca. Toplam 10 üstünden; bonus/cezadan sonra eşik yine 8.
 Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri aynı mekânda olmasın (ör. ikisi de komşu değil).
 
 ## 5. Kaynak ve dürüstlük
@@ -65,7 +69,11 @@ Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri a
 - Kapıyı Kilitleyen Hoca: kural "dakika beş, kapı kilit" → hoca geç kalır → sınıf kapıyı kilitler "Kural kuraldır" → hoca kapıda.
 - Tuvalet Raporu: "fazla mola için doktor raporu getir" → rapor "böbreklerini kullanmaya devam etmesi önerilir" → beş kişi aynı raporla.
 - Kek Topları: görümcenin kek topları övülür → aynısını yapıp onun tabağının yanına koy → "Yediğiniz benimkilerdi".
+- ⟳ HAFTA 16–21.11 EN İYİ 1 — Kapıyı Kilitleyen Hoca (İrem, Reddit uyarlaması): 621K toplam (P1 360K 48 sn, P2 190K, P3 71K), takipçi 17.11'de tek günde +580. NEDEN: (a) kural tek cümle ve sayılı ("9:05'ten sonra kapı kilit"), (b) herkes okulda yaşamış, (c) P2 kancası tersine dönüşü müjdeliyor ("Bir gün hocamız geç kaldı"), (d) ifşayı toplu ve kurala uygun sınıf hamlesi tetikliyor, (e) kötü karakter otorite → ceza ona kendi kuralıyla geliyor. Final beğeni %2,1.
+- ⟳ HAFTA 16–21.11 EN İYİ 2 — Kar Küremeyi İstemeyen Komşu (Emrullah, Reddit uyarlaması): 65K (P1 31,6K 21 sn, P2 24,7K = P1'in %78'i, P3 8,5K). NEDEN: "harfiyen uydum" + görsel istisna ("Bütün sokağı temizledim, bir ev hariç") tek karede anlaşılıyor; kısa P1 de yetiyor. ZAYIF YANI: P3'te "doğa intikam alır" = ifşa anlatıcının hamlesi değil → P3 sert düştü (%34). Yeni seriler P3'te insan karşısında ifşa kursun.
 ### Zayıf (kaçın)
+- ⟳ HAFTA 16–21.11 EN KÖTÜ 1 — Amcanın Gürültülü Hediyeleri (Emrullah, Reddit): 24K toplam (P1 14,5K, P2 5,0K, P3 4,6K). NEDEN: hakaret küçük (hediye beğenilmedi), anlatıcının intikamı çocuklara gürültülü oyuncak → sempati bölünüyor, kimse herkesin önünde rezil olmuyor, P2 kancası yeni olay değil sadece eylem. → Puanlamada madde 11 cezası.
+- ⟳ HAFTA 16–21.11 EN KÖTÜ 2 — Hacker Kerem S3 P6–P12 (kendi kurgu, uzun sezon): 7 partta toplam 40K (2,3–8,6K/part) vs aynı sezonun P2–P5'i 272K. NEDEN: kötü karakter/haksızlık yok, ev içi iç olaylar ("kanal kimin kavgası", "kaplumbağa"), izleyici önceki partları bilmeden anlamıyor, ifşa/karma anı yok. → 3 partta bitir; her part bağımsız anlaşılır kancayla açılsın.
 - Annem Gizli Ajan (taslak, kullanıcı reddetti 22.11 'bayat'): final ilk saniyede tahmin ediliyor, ifşa tesadüf (kamyonet geliyor), kötü karakter hafif, ton fazla tatlı/çocuksu.
 - Amcanın Hediyeleri: hakaret küçük, kimse gerçekten zarar görmüyor, ifşa anı yok.
 - Uzun sezonlu karakter dizileri (HK S3 P6+): yeni felaket olmadan ev içi olaylar.
@@ -83,6 +91,17 @@ Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri a
 - Öğretmen "ödevi elle yazın" dedi → 40 sayfalık el yazısı
 - Kayınbiraderim arabamı izinsiz aldı → kilometre ve benzin faturası
 - Komşu teyze camdan her şeyi not alıyor → site toplantısında defter okunur
+### ⟳ 22.11 haftalık eklemesi (10 tohum; hepsi "otorite/büyük kendi kuralına takılır" ya da "harfiyen uyum" çekirdekli)
+- (aile) Babam "evde kombi 20 dereceyi geçmeyecek, faturayı ben ödüyorum" dedi → herkes kuralı harfiyen uygular; babamın odasındaki gizli elektrikli ısıtıcı sayaçtan ifşa — havuzda 26.11 B (Babamın Kombi Yasağı)
+- (apartman) Üst kat komşusu "22:00'den sonra ses yok" tutanağı astı → kendi gece 23:00 koşu bandı, apartman toplantısında herkesin tuttuğu saat kaydı
+- (iş yeri) Müdür "toplantıya geç kalan herkese çay ısmarlar" kuralı koydu → kendisi her toplantıya geç; ay sonunda 47 çay borcu, bütün kat çay günü
+- (okul) Öğretmen "derste telefonu çalanın telefonu veliye teslim" dedi → kendi telefonu derste komik zil sesiyle çalıyor, sınıf başkanı kuralı harfiyen uyguluyor — havuzda 26.11 A (Hocanın Tavuk Zil Sesi)
+- (düğün) Görümcem nişanda çeyizimi tek tek saydı, "eksik" listesi yaptı → kendi çeyiz listesinin aile sandığından çıkması
+- (bayram) Teyzem her bayram harçlığı karneye göre veriyor → babaannenin sandığından teyzemin kendi eski karnesi çıkıyor (İrem) — havuzda 27.11 A (Teyzemin Karne Harçlığı)
+- (miras/akraba) Halam ortak yazlığın takvimine her yaz kendini yazıyor → dedemin eski "sıra defteri" kuralı ona uygulanıyor
+- (komşu) Komşu teyze kargolarımı teslim alıp açıyor → anlatıcının "meraklı komşuma" etiketli kutu planı ve apartman grubunda ifşa
+- (okul/veli) Okul aile birliği başkanı veli her kararı "oy birliğiyle" tek başına alıyor → veliler tüzüğü okuyup kendi kuralıyla oylama yapıyor
+- (düğün) Yengem kına gecesinde herkesin dansını puanlayıp jüri oldu → sıra kendisine gelince bütün masa puan kartı kaldırıyor
 
 ## 8. İzleyici-hikâyesi kanalından SOYUT durumlar (22 Kas; "akraba terörü" bölümü, 46 dk)
 KURAL: Bunlar sadece durum/çatışma tipidir. Kaynak hikâyelerin olay sırası, dönüşü, finali, isimleri, şehirleri KULLANILMAZ; üretici kendi karakteri, kendi planı ve kendi komik sonuyla baştan kurar. Kaynaktaki ağır öğeler (kilitleme, aç bırakma, şiddet, sahte görüntü, gizli kamera, aldatma) ASLA alınmaz; sadece hafif, komik çekirdek kalır.
