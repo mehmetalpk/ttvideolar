@@ -87,3 +87,7 @@ Gözlem: "akraba" teması o kanalın en sevilen konusu; yorum/izleyici katılım
 - Kayırmacı büyük: Babaanne/anneanne torunların tabağına/kilosuna/okuluna karışıyor, birini sürekli övüp diğerini eziyor. Komik ters tepme: kendi "kuralı" kendine uygulanıyor (beden/kilo alay konusu YAPILMAZ; konu kural ve kayırmacılık).
 - "Üstümüze yapalım mı?" şakası: Bir akraba mirası gizlice kendi üstüne alma fikrini şaka diye ortaya atıyor; kimse gülmüyor.
 - Dedikodu zinciri: Bir söylenti sülalede dolaşırken her ağızda büyüyor; anlatıcı zinciri tersten takip edip kaynağı sofrada açıklıyor.
+
+### §8 ek — "En çok tekrar izlenen" grafiği (kullanıcının ekran görüntüsü, ±1 dk tahmin)
+Tepeler kurulum anlarında DEĞİL; (1) ters köşe/ifşa cümlesinde ve (2) "hak ettiğini buldu" (karma/adalet) anında: akrabanın oyununun açığa çıktığı an, "ilk kez bir akrabadan şikâyetçi olduk", "düğünden sonra herkes hastalandı" tipi sonuçlar. Giriş ve sunucu sohbeti düşük.
+UYGULAMA: P2 sonu = ifşadan hemen önceki an (cliff); P3'ün ilk 10 sn'si = ifşa cümlesi; P3'ün son 10 sn'si = net karma/adalet sonucu (kötü karakter bedel öder, komik ve hafif) + soru. "Tatlı son" karmanın YERİNE değil, ARDINDAN gelir.
