@@ -1,0 +1,23 @@
+function sbar(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#9aa4b0';x.beginPath();x.moveTo(-120,40);x.lineTo(120,40);x.lineTo(90,-40);x.lineTo(-90,-40);x.closePath();x.fill();x.fillStyle='#dfe6ee';x.fillRect(-80,-36,160,20);x.fillStyle='#6a7480';x.font=`900 26px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('Ag',0,16);x.restore();}
+function silverPile(cx,base,n,s){let k=0;for(let r=0;k<n;r++){const m=Math.max(1,6-r);for(let i=0;i<m&&k<n;i++,k++)sbar(cx+(i-(m-1)/2)*200*s,base-r*70*s,s);}}
+function cowboy(cx,base,s,col){sil(cx,base,s,col);x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;x.beginPath();x.ellipse(0,-205,90,18,0,0,7);x.fill();rr(-45,-260,90,60,20);x.fill();x.restore();}
+function palace(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#d8cfb8';x.fillRect(-420,-300,840,300);x.fillStyle='#4a5a7a';x.beginPath();x.moveTo(-440,-300);x.lineTo(0,-420);x.lineTo(440,-300);x.fill();x.fillStyle='#7a8aa8';for(let i=0;i<7;i++)x.fillRect(-370+i*110,-250,60,140);x.fillStyle='#5a3418';x.fillRect(-50,-120,100,120);x.restore();}
+function qmarks(cx,cy,t,n=3){for(let i=0;i<n;i++){const a=t*1.5+i*2.1;bigText('?',cx+Math.cos(a)*170,cy-120+Math.sin(a)*60-i*30,90+i*10,'#ffd23f',1,Math.sin(a)*0.3);}}
+function exch(t){x.fillStyle=grad(0,H,['#1c2440','#070a14']);x.fillRect(0,0,W,H);x.fillStyle='#2a3352';for(let i=0;i<5;i++){x.fillRect(80+i*190,700,150,420);}x.fillStyle='#0d1222';for(let i=0;i<5;i++)for(let k=0;k<5;k++){x.fillStyle=(Math.sin(t*3+i+k)>0.3)?'#ff4d4d':'#5fe08a';x.fillRect(100+i*190,730+k*70,110,30);}}
+function ringPhone(cx,cy,s,t){x.save();x.translate(cx,cy);x.rotate(Math.sin(t*30)*0.08);x.scale(s,s);x.fillStyle='#c1121f';rr(-160,-40,320,140,30);x.fill();rr(-200,-110,400,90,45);x.fill();x.restore();for(let i=0;i<3;i++){x.strokeStyle='rgba(255,210,63,'+(0.8-i*0.2)+')';x.lineWidth=8;x.beginPath();x.arc(cx,cy,180+i*50+((t*120)%50),-2.4,-0.7);x.stroke();}}
+// 0 kanca
+shot(0,0,t=>{bgMoney();downChart(t,cl(t/1.4));sbar(540,800,2.0);if(t>0.3){x.strokeStyle='#111';x.lineWidth=8;x.beginPath();x.moveTo(540,730);x.lineTo(510,790);x.lineTo(560,820);x.lineTo(530,870);x.stroke();}bigText('GÜMÜŞ TEK GÜNDE',W/2,270,95,'#fff',1);bigText('YARIYA ÇÖKTÜ',W/2,400,110,'#ff4d4d',1);});
+// 1 7 ocak 1980 borsa
+shot(1,1,t=>{exch(t);yearStamp('1980','7 OCAK · NEW YORK',eOut(cl(t*2)),360);if(t>2.4)badge(540,1400,'YENİ KURAL','#c1121f',(t-2.4)*3);});
+// 2 limit + yeni alım durdu
+shot(2,2,t=>{bgDoc('#1c2430','#06080c');silverPile(540,960,10,0.7);x.strokeStyle='#ff4d4d';x.lineWidth=14;x.setLineDash([30,20]);x.beginPath();x.moveTo(100,700);x.lineTo(980,700);x.stroke();x.setLineDash([]);badge(540,300,'SINIR KONDU','#c1121f',t*3);if(t>2.2)stampT('YENİ ALIM YOK',540,560,cl((t-2.2)*3),'#c1121f',80);});
+// 3 fiyat düşüyor, ek teminat
+shot(3,3,t=>{bgMoney();downChart(t,cl(t/2));ringPhone(540,760,1.2,t);bigText('EK TEMİNAT!',W/2,300,120,'#ff4d4d',back(cl((t-1)*2.5)));});
+// 4 27 mart 1980 ödeyemedi
+shot(4,4,t=>{noir();cowboy(400,1080,1.8,'#000');cowboy(680,1080,1.8,'#000');yearStamp('1980','27 MART',eOut(cl(t*2)),360);if(t>1.6)stampT('ÖDEYEMEDİ',540,700,cl((t-1.6)*3),'#c1121f',100);});
+// 5 10,80 $ gümüş perşembe
+shot(5,5,t=>{bgMoney();downChart(t,1);const v=21.62-10.82*eOut(cl(t/1.6));bigText(v.toFixed(2).replace('.',',')+' $',W/2,600,160,'#ff4d4d',1);if(t>2.6)badge(540,300,'GÜMÜŞ PERŞEMBE','#6a7480',(t-2.6)*3);});
+// 6 borcu kim kapatacak
+shot(6,6,t=>{bgDoc('#22252c','#0a0b0e');palace(540,1040,0.8);qmarks(540,690,t,3);bigText('BORCU KİM',W/2,290,120,'#fff',back(cl(t*2.5)));bigText('KAPATACAK?',W/2,420,110,'#ffd23f',back(cl((t-0.4)*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,3,'#1c2430','#06080c'));

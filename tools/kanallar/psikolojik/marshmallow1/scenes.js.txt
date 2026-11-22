@@ -1,0 +1,23 @@
+function mm(cx,cy,s,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#fffaf0';rr(-60,-50,120,100,40);x.fill();x.fillStyle='#f0e6d6';rr(-60,10,120,40,20);x.fill();x.restore();}
+function plate(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#dfe6ee';x.beginPath();x.ellipse(0,0,200,60,0,0,7);x.fill();x.fillStyle='#f4f8fb';x.beginPath();x.ellipse(0,-6,150,40,0,0,7);x.fill();x.restore();}
+function kid(cx,base,s,col='#ff9ad5',pose=0,t=0){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;rr(-70,-200,140,200,50);x.fill();x.fillStyle='#f0c8a0';x.beginPath();x.arc(0,-260,70,0,7);x.fill();x.fillStyle='#4a2a10';x.beginPath();x.arc(0,-275,74,Math.PI*1.02,Math.PI*1.98);x.lineTo(70,-250);x.quadraticCurveTo(0,-300,-70,-250);x.fill();x.fillStyle='#222';if(pose===1){x.lineWidth=6;x.strokeStyle='#222';x.beginPath();x.moveTo(-34,-262);x.lineTo(-14,-262);x.moveTo(14,-262);x.lineTo(34,-262);x.stroke();}else{x.beginPath();x.arc(-24,-262,8,0,7);x.arc(24,-262,8,0,7);x.fill();}x.strokeStyle='#222';x.lineWidth=5;x.beginPath();if(pose===2){x.arc(0,-225,14,0,7);}else x.arc(0,-232,16,0.2,2.9);x.stroke();x.restore();}
+function tableK(base){x.fillStyle='#8a5a30';x.fillRect(140,base,800,40);x.fillRect(180,base+40,30,200);x.fillRect(870,base+40,30,200);}
+function clockS(cx,cy,r,p){x.fillStyle='#fff';x.beginPath();x.arc(cx,cy,r,0,7);x.fill();x.fillStyle='rgba(255,77,77,0.85)';x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,r-12,-Math.PI/2,-Math.PI/2+p*Math.PI*2);x.fill();x.strokeStyle='#222';x.lineWidth=8;x.beginPath();x.arc(cx,cy,r,0,7);x.stroke();}
+// 0 kanca
+shot(0,0,t=>{bgPsi('#2a1f5c','#0e0a24');plate(330,800,1.1);mm(330,770,1.2);plate(750,800,1.1);mm(705,770,1.0);mm(795,770,1.0);bigText('1 ŞİMDİ',330,620,80,'#fff',1);bigText('2 SONRA',750,620,80,'#ffd23f',1);bigText('BİR ŞEKER ŞİMDİ',W/2,270,100,'#fff',1);bigText('İKİ ŞEKER SONRA',W/2,400,100,'#ffd23f',1);});
+// 1 stanford anaokulu
+shot(1,1,t=>{bgDoc('#1c2440','#070a14');house(540,1040,600,300,'#c96e4a');yearStamp('1960','SONLARI · STANFORD ANAOKULU',eOut(cl(t*2)),400);});
+// 2 mischel çocukları odaya aldı
+shot(2,2,t=>{bgPsi();doorP(220,1080,1,1,true);sil(420,1080,1.9,'#0a0718');const p=cl((t-0.4)/1.6);kid(560+p*120,1080,1.0,'#5fd3a0',0,t);badge(540,300,'WALTER MISCHEL','#5b6cff',t*3);if(t>1.8)badge(540,1400,'4-5 YAŞ','#e6a100',(t-1.8)*3);});
+// 3 marşmelov masaya
+shot(3,3,t=>{bgPsi();tableK(900);plate(540,890,1.2);const p=eOut(cl((t-0.2)/0.8));mm(540,600+p*260,1.4);bigText('MARŞMELOV',W/2,300,120,'#fff',back(cl(t*2.5)));});
+// 4 teklif
+shot(4,4,t=>{bgPsi('#2a1f5c','#0e0a24');plate(330,860,1.0);mm(330,830,1.1);plate(750,860,1.0);mm(705,830,0.95);mm(795,830,0.95);badge(330,620,'ŞİMDİ: 1','#ff6b6b',t*3);badge(750,620,'BEKLE: 2','#2a9d8f',(t-1.6)*3);bigText('TEKLİF',W/2,300,130,'#ffd23f',back(cl(t*2.5)));});
+// 5 odadan çıktı, 15 dk
+shot(5,5,t=>{bgPsi();doorP(200,1080,1,cl(1-t),false);tableK(900);plate(540,890,1.1);mm(540,860,1.2);clockS(800,560,140,cl((t-0.8)/3));bigText('15 DAKİKA',W/2,300,120,'#fff',back(cl((t-1.2)*2.5)));});
+// 6 kimi gözlerini kapadı, şarkı, yuttu
+shot(6,6,t=>{bgPsi('#2a1f5c','#0e0a24');const k=Math.floor(t/1.2)%3;tableK(950);kid(250,940,0.85,'#ff9ad5',1,t);kid(540,940,0.85,'#5fd3a0',0,t);kid(830,940,0.85,'#ffd23f',2,t);if(t>1.2)notes(540,560,t,5,180);mm(830,(t>2.4?760:920),0.6);bigText('BEKLEYEBİLDİLER Mİ?',W/2,300,82,'#fff',back(cl(t*2.5)));});
+// 7 asıl sonuç yıllar sonra
+shot(7,7,t=>{bgPsi();const p=cl(t/1.5);kid(360,1080,0.8+p*0.5,'#5fd3a0',0,t);mapArrow(480,800,700,800,p,'#ffd23f');sil(820,1080,1.9,'#ffd23f');qmarks(820,760,t,3);bigText('YILLAR SONRA',W/2,300,120,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,2));

@@ -1,0 +1,22 @@
+function londonSt(t,night){x.fillStyle=night?grad(0,H,['#0b1024','#1a1a2a']):grad(0,H,['#9fb4c8','#d8dee6']);x.fillRect(0,0,W,H);x.fillStyle=night?'#2a2a34':'#7a7a80';x.fillRect(0,1000,W,H-1000);}
+function shop(cx,base,w,h,col,label,lit){x.fillStyle=col;x.fillRect(cx-w/2,base-h,w,h);x.fillStyle='#1a1a1a';x.fillRect(cx-w/2+16,base-h+16,w-32,70);x.fillStyle='#fff';x.font=`900 40px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(label,cx,base-h+52);x.fillStyle=lit?'#ffd23f':'#9ac8e8';x.fillRect(cx-w/2+30,base-h+120,w-60,h-260);x.fillStyle='#3a2a1a';x.fillRect(cx-40,base-120,80,120);}
+function sign(cx,cy,txt){x.fillStyle='#fff';rr(cx-260,cy-60,520,120,12);x.fill();x.strokeStyle='#c1121f';x.lineWidth=10;rr(cx-250,cy-50,500,100,8);x.stroke();x.fillStyle='#111';x.font=`900 56px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,cx,cy+4);}
+function underground(t,p){x.fillStyle='#5a3a24';x.fillRect(0,860,W,500);x.fillStyle='#4a2e1c';for(let i=0;i<40;i++){x.beginPath();x.arc((i*97)%W,880+((i*61)%460),8+(i%4)*4,0,7);x.fill();}}
+function boxes(t,n,openK){for(let i=0;i<n;i++){const cx=170+(i%7)*124,cy=520+Math.floor(i/7)*110;const o=i<openK;x.fillStyle=o?'#2a2a2a':'#b8bcc4';x.fillRect(cx-55,cy-45,110,90);x.strokeStyle='#666';x.lineWidth=4;x.strokeRect(cx-55,cy-45,110,90);if(!o){x.fillStyle='#555';x.beginPath();x.arc(cx+30,cy,8,0,7);x.fill();}else{x.fillStyle='#ffd23f';x.fillRect(cx-30,cy-10,60,30);}}}
+function radio(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#3a3f46';rr(-220,-110,440,220,20);x.fill();x.fillStyle='#222';rr(-190,-80,220,160,12);x.fill();x.fillStyle='#5fe08a';for(let i=0;i<10;i++){const h=20+Math.abs(Math.sin(t*8+i))*90;x.fillRect(-180+i*21,60-h,14,h);}x.fillStyle='#888';x.beginPath();x.arc(120,-20,40,0,7);x.arc(120,60,24,0,7);x.fill();x.strokeStyle='#888';x.lineWidth=8;x.beginPath();x.moveTo(180,-110);x.lineTo(240,-330);x.stroke();x.restore();for(let i=0;i<3;i++){x.strokeStyle='rgba(95,224,138,'+(0.8-i*0.25)+')';x.lineWidth=8;x.beginPath();x.arc(cx+240*s,cy-330*s,60+i*50+((t*100)%50),-2.6,-0.5);x.stroke();}}
+// 0 kanca
+shot(0,0,t=>{londonSt(t,true);shop(270,1000,300,560,'#3a2a4a','',false);shop(810,1000,300,560,'#2a3a4a','BANKA',false);sign(540,560,'BAKER STREET');bigText("SHERLOCK'UN SOKAĞINDA",W/2,270,66,'#fff',1);bigText('BANKA SOYULDU',W/2,400,110,'#ffd23f',1);});
+// 1 londra 1971
+shot(1,1,t=>{londonSt(t,false);x.fillStyle='#c1121f';rr(180,820,280,180,30);x.fill();x.fillStyle='#9ac8e8';x.fillRect(200,840,240,60);x.fillStyle='#222';x.beginPath();x.arc(240,1000,30,0,7);x.arc(400,1000,30,0,7);x.fill();sign(720,880,'BAKER ST');yearStamp('1971','LONDRA',eOut(cl(t*2)),400);});
+// 2 iki kapı ötedeki deri dükkanı
+shot(2,2,t=>{londonSt(t,false);shop(190,1000,300,520,'#8a5a30','DERİ',false);shop(540,1000,300,520,'#6a7480','',false);shop(890,1000,300,520,'#2a3a4a','BANKA',false);const p=eOut(cl((t-0.6)/1.4));mapArrow(190,420,890,420,p,'#ffd23f');if(t>2)badge(540,300,'2 KAPI ÖTE','#c1121f',(t-2)*3);});
+// 3 12 metrelik tünel
+shot(3,3,t=>{londonSt(t,false);shop(190,860,300,420,'#8a5a30','DERİ',false);shop(890,860,300,420,'#2a3a4a','BANKA',false);underground(t);const p=cl((t-0.3)/2.4);x.fillStyle='#1a0f08';x.beginPath();x.moveTo(190,880);x.lineTo(190,960);x.lineTo(190+p*640,960);x.lineTo(190+p*640,900);x.lineTo(250,900);x.lineTo(250,880);x.fill();x.fillStyle='#ffd23f';x.beginPath();x.arc(190+p*640,930,14,0,7);x.fill();x.fillStyle='#5a5f66';x.fillRect(780,860,220,40);bigText(Math.round(12*p)+' METRE',W/2,320,120,'#ffd23f',1);});
+// 4 11 eylül cumartesi gecesi
+shot(4,4,t=>{noir();x.fillStyle='#f4f1ea';x.beginPath();x.arc(860,640,60,0,7);x.fill();x.fillStyle='#2a2a30';x.fillRect(140,860,800,80);const p=cl((t-0.8)/1.2);x.fillStyle='#0a0a0a';x.beginPath();x.ellipse(540,900,140*p,40*p,0,0,7);x.fill();dust(540,900,300,t);bigText('11 EYLÜL',W/2,300,140,'#ffd23f',back(cl(t*2.5)));badge(540,450,'CUMARTESİ GECESİ','#2a5cff',(t-0.4)*3);});
+// 5 yüzlerce kasa
+shot(5,5,t=>{x.fillStyle='#14161c';x.fillRect(0,0,W,H);boxes(t,35,Math.floor(t*6));bigText('YÜZLERCE KASA',W/2,300,105,'#fff',back(cl(t*2.5)));});
+// 6 biri dinliyordu
+shot(6,6,t=>{nightSky();radio(470,820,1.1,t);bigText('BİRİ',W/2,290,130,'#fff',back(cl(t*2.5)));bigText('DİNLİYORDU',W/2,420,110,'#5fe08a',back(cl((t-0.4)*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,2,'#16161c','#050508'));

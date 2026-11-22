@@ -1,0 +1,22 @@
+function mm(cx,cy,s,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#fffaf0';rr(-60,-50,120,100,40);x.fill();x.fillStyle='#f0e6d6';rr(-60,10,120,40,20);x.fill();x.restore();}
+function plate(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#dfe6ee';x.beginPath();x.ellipse(0,0,200,60,0,0,7);x.fill();x.fillStyle='#f4f8fb';x.beginPath();x.ellipse(0,-6,150,40,0,0,7);x.fill();x.restore();}
+function kid(cx,base,s,col='#ff9ad5',pose=0,t=0){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle=col;rr(-70,-200,140,200,50);x.fill();x.fillStyle='#f0c8a0';x.beginPath();x.arc(0,-260,70,0,7);x.fill();x.fillStyle='#4a2a10';x.beginPath();x.arc(0,-275,74,Math.PI*1.02,Math.PI*1.98);x.lineTo(70,-250);x.quadraticCurveTo(0,-300,-70,-250);x.fill();x.fillStyle='#222';if(pose===1){x.lineWidth=6;x.strokeStyle='#222';x.beginPath();x.moveTo(-34,-262);x.lineTo(-14,-262);x.moveTo(14,-262);x.lineTo(34,-262);x.stroke();}else{x.beginPath();x.arc(-24,-262,8,0,7);x.arc(24,-262,8,0,7);x.fill();}x.strokeStyle='#222';x.lineWidth=5;x.beginPath();if(pose===2){x.arc(0,-225,14,0,7);}else x.arc(0,-232,16,0.2,2.9);x.stroke();x.restore();}
+function clockS(cx,cy,r,p){x.fillStyle='#fff';x.beginPath();x.arc(cx,cy,r,0,7);x.fill();x.fillStyle='rgba(255,77,77,0.85)';x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,r-12,-Math.PI/2,-Math.PI/2+p*Math.PI*2);x.fill();x.strokeStyle='#222';x.lineWidth=8;x.beginPath();x.arc(cx,cy,r,0,7);x.stroke();}
+function teen(cx,base,s,col){kid(cx,base,s,col,0,0);}
+function bookB(cx,cy,w,h,col,txt){x.fillStyle=col;rr(cx-w/2,cy-h/2,w,h,10);x.fill();x.fillStyle='#fff';x.font=`900 40px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,cx,cy);}
+// 0 kanca
+shot(0,0,t=>{bgPsi('#2a1f5c','#0e0a24');const p=eOut(cl(t/1.5));kid(330,1080,0.9+0.4*p,'#5fd3a0',0,t);kid(750,1080,0.9+0.1*p,'#ff9ad5',0,t);mm(330,560-p*80,0.8);mm(400,560-p*80,0.8);mapArrow(330,700,330,520-p*60,p,'#5fe08a');bigText('BEKLEYENLER',W/2,270,110,'#fff',1);bigText('ÖNE GEÇTİ',W/2,400,110,'#5fe08a',1);});
+// 1 ergenlikte yeniden
+shot(1,1,t=>{bgDoc('#1c2440','#070a14');const p=eOut(cl((t-0.4)/1.6));kid(540,1080,0.8+p*0.7,'#5fd3a0',0,t);bigText('YILLAR SONRA',W/2,280,120,'#ffd23f',back(cl(t*2.5)));badge(540,420,'ERGENLİK ÇAĞI','#5b6cff',(t-0.5)*3);});
+// 2 sınav puanları
+shot(2,2,t=>{bgPsi();const q=eOut(cl((t-0.4)/1.4));[[0.85,'BEKLEYEN','#5fe08a',330],[0.6,'YİYEN','#ff6b6b',750]].forEach(([v,l,c,cx])=>{const hh=460*v*q;x.fillStyle=c;rr(cx-110,960-hh,220,hh,20);x.fill();bigText(l,cx,1010,56,'#fff',1);});mm(330,960-460*0.85*q-60,0.7);mm(400,960-460*0.85*q-60,0.7);mm(750,960-460*0.6*q-60,0.7);bigText('SINAV PUANI',W/2,300,120,'#fff',back(cl(t*2.5)));});
+// 3 odaklı, dayanıklı
+shot(3,3,t=>{bgPsi('#2a1f5c','#0e0a24');kid(540,1080,1.4,'#5fd3a0',0,t);badge(540,320,'DAHA ODAKLI','#2a9d8f',t*3);badge(540,470,'STRESE DAYANIKLI','#5b6cff',(t-1.4)*3);});
+// 4 haber yayıldı
+shot(4,4,t=>{bgDoc('#2a2016','#0c0906');newspaper(540,720,0.75,-0.04+Math.sin(t*2)*0.02,'SABIR = BAŞARI');bigText('DÜNYAYA YAYILDI',W/2,280,95,'#ffd23f',back(cl(t*2.5)));});
+// 5 kitaplar seminerler
+shot(5,5,t=>{bgPsi();const C=['#e63946','#2a9d8f','#e6a100','#5b6cff','#ff9ad5'];for(let i=0;i<5;i++){const p=cl((t-0.2-i*0.3)*3);if(p>0)bookB(540,940-i*90,520-i*30,80,C[i],'SABIR');}bigText('KİTAPLAR',W/2,300,120,'#fff',back(cl(t*2.5)));if(t>2.4)badge(540,1400,'SEMİNERLER','#e63946',(t-2.4)*3);});
+// 6 2018 900+ çocuk
+shot(6,6,t=>{bgPsi('#3a1030','#12040e');for(let i=0;i<60;i++){const p=cl((t-0.6-i*0.02)*4);if(p<=0)continue;const cx=120+(i%10)*93,cy=620+Math.floor(i/10)*80;x.fillStyle=['#5fd3a0','#ff9ad5','#ffd23f','#5b6cff'][i%4];x.beginPath();x.arc(cx,cy,22*p,0,7);x.fill();}yearStamp('2018','900+ ÇOCUK',eOut(cl(t*2)),330);if(t>2.6)bigText('?',W/2,1400,140,'#ffd23f',back(cl((t-2.6)*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,3));
