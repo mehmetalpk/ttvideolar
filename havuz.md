@@ -10,7 +10,7 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 >  - Özgün seride açıklamaya "Reddit'teki bir hikâyeden ilham alınmıştır" YAZILMAZ ve #reddithikayeleri kullanılmaz; Reddit uyarlamasında yazılır.
 >  - Süre: her part ≤40 sn; strateji 4/4 güçlü kancalı P1 40–60 sn olabilir. Outro P1/P2: "Devamı <n+1>. partta, kaçırmamak için takip et." P3: "Kaçırmamak için takip et."
 >  - 23.11 GEÇİŞ GÜNÜ (5 video): A hattı 10:30 Çöp Kovası P2, 13:00 Çöp Kovası P3 FİNAL (15:30 boş); B hattı Düğün Albümü P1/P2/P3 (18:00/20:30/22:30).
->  - 24.11: A = Her Şey Yazılı Olacak, B = Terlik Cezası. 25.11: A = Dedemin Mirası, B = üreticiyle yeni seri (25.11 gecesi yazılır).
+>  - 24.11: A = Her Şey Yazılı Olacak, B = Terlik Cezası. 25.11: A = Dedemin Mirası, B = Yengemin Uydurduğu Nişanlı (havuzda, kullanıcı onaylı). ⚠ 25.11'de iki seri de İrem → B hattında yenge sesi tek; A'yı (Dedemin Mirası) İrem, B'yi İrem kalsın ama 26.11'de iki seri de Emrullah olsun (denge).
 >  - TEST: 23–29 Kas bir hafta. Ölçüt: günlük toplam TikTok izlenme + günlük yeni takipçi (15–21 Kas: ~185K/gün, ~200 takipçi/gün).
 
 > 23 KASIM (22 Kas gece görevi notu; FORMAT 4): HK SEZON 3 BİTTİ (P14 FİNAL 22.11 17:00). 09:00 + 17:00 = HK SEZON 4 P1 + P2 (14 partlık planı Pazar 21:37 analizi yazar; yoksa 23.11 gece görevi önce planı yazar). Görümcemin Kek Topları BİTTİ (P3 22.11 12:30; 'Kullanıldı'ya taşındı). 12:30 = 'Çöp Kovası Savaşı' P2 (≤40 sn, Emrullah; P1 cliff: gece kamerasında Ferhat Bey poşetleri bastırıp kameraya EL SALLADI), 20:30 = Çöp P3 FİNAL (≤40 sn). 24.11 12:30 = yeni 3 partlık seri P1 (komşudan sonra aile/okul/iş yeri; İrem tercih). Çizimler: tools/dizi_22kasim/ (cop.js: babac, ferhat, binC çöp kovası, trashBag, diaper, babyB, pizzaBox, wallCam, cctv gece filtresi, frontYard).
@@ -110,6 +110,15 @@ Not: Tam metin burada tutulmaz (depo herkese açık); özet + kaynak yeterli, uy
 > GÜNCELLEME (4 Kas 16:55): İki kapanış cümlesi AYRI ekranlarda değil, TEK EKRANDA arka arkaya: üstte "3K BEĞENİ = PART <n>" + kalp, altta "YORUMLARA "HATIRLAT" YAZ 💬" balonu; iki ses klibi arasında ~0.1 sn boşluk. Kapanış toplam ~6.5 sn.
 
 ## Bekleyen
+
+### SERİ (FORMAT 5 — 25.11 B hattı 18:00/20:30/22:30; 3 part, İrem — aile/bayram): Yengemin Uydurduğu Nişanlı (komedi / yenge) — Kaynak: özgün (hikâye üretici; durumlar §8 'uydurma senaryo' + 'dedikodu zinciri' + §1 'sofrada canlı kanıt') — puan 10/10, kullanıcı onayladı 22.11
+- Anlatıcı: 27 yaşında kız (İrem). Yenge: Sevim (sarı röfle, altın bilezikler, sürekli sesli mesaj atan). Kuzen: Kevser (yengenin kızı, saf ve hevesli). Babaanne: Hayriye (beyaz yazma, gözlük zinciri, otoriter). Teyze: Nurten. Bakkal Cemil (sadece P1'de bir an). Yengenin teyzesi: sadece hoparlörden ses (İrem değil, farklı tonla; ya da metinde dev yazı + altyazı).
+- Görsel tırmanma/utanç anı: P2 sonu hoparlörden gelen ses + bütün sofranın donması (dev yazı, yakın plan, 0,5 sn durak); P3 başı babaannenin çatalı bırakması.
+- PART 1 (güçlü kanca 4/4 → 40–55 sn) — Kanca: "Yengem olmayan nişanlımdan ayrıldığımı yaydı." Kuzenin düğününe gitmiyorum; bir hafta sonra bütün sülale arıyor: yengem herkese "Nişanlısı Mert bunu bıraktı; mimarmış, annesi beni aradı, kız çok huysuzmuş dedi" demiş. Babaannem muska yolluyor, teyzem beni "dul ama varlıklı" bakkal Cemil'le tanıştırmaya çalışıyor. Benim sevgilim bile yok. Cliff: Bayram sofrası, yengem yine anlatıyor; araya giriyorum: "Yenge, Mert'in annesinin numarası sende ya? Hadi arayalım, herkesin önünde barışalım."
+- PART 2 (≤40 sn) — Kanca: "Yengemden sofrada telefon açmasını istedim." (ilk 3 sn özet: "Yengem olmayan nişanlımı bütün sülaleye anlatmıştı.") Yengem terliyor: "Şarjım bitti." Kevser hevesle kendi telefonunu uzatıyor: "Al anne, benimkinden ara!" Sofra susuyor; yengem mecburen bir numara çeviriyor, hoparlörü ben açıyorum. Cliff: Hoparlörden kadın sesi: "Sevim? Kızım ben teyzenim. Yine kimin hikâyesini uyduruyorsun?"
+- PART 3 FİNAL (≤40 sn) — Kanca: "Yengemin yalanı hoparlörden patladı." İlk 10 sn İFŞA: teyze devam ediyor: "Geçen ay da komşunun kızını 'Almanya'ya kaçtı' diye yaymıştın!" Babaannem çatalını bırakıyor. Karma: Babaannem: "Bu yalanın cezası: bu bayram bütün bulaşık senin." Aile grubunun yöneticisi yengemdi; oy birliğiyle yöneticilikten alınıyor, yeni yönetici babaannem. Tatlı son: ertesi hafta gruba yazıyorum: "Mert'le barıştık 💍" + fotoğraf: yeni kedim, adı Mert. Soru: "Sence yenge bu bayramdan sonra ders alır mı?"
+- Hashtag (özgün): #hikaye #komedi #yenge #aile #bayram #dedikodu #keşfet #fyp
+
 
 ### SERİ (FORMAT 5 — 23.11 B hattı 18:00/20:30/22:30; 3 part, İrem — aile/düğün): Düğün Albümü (komedi / kaynana) — Kaynak: özgün (hikâye üretici) — puan 9/10
 - Anlatıcı: gelin (İrem). Kaynana: Saadet Hanım (topuz, inci kolye, mor ceket). Kayınpeder: Nuri Bey (bıyık, hırka; yumuşak kalpli). Eşi: Emre. Fotoğrafçı adı/marka YOK.

@@ -1,6 +1,6 @@
 # Taslaklar (kullanıcı onayı bekleyenler — GÖREVLER BURADAN ÜRETMEZ)
 
-## Annem Gizli Ajan (İrem — okul/veli grubu) — Kaynak: özgün (hikâye üretici) — puan 10/10
+## [REDDEDİLDİ 22.11 — 'bayat'] Annem Gizli Ajan (İrem — okul/veli grubu) — Kaynak: özgün (hikâye üretici) — puan 10/10
 - Kurulduğu soyut durumlar: "kelime yanlış anlaşılması" (§9) + "dedikodu zinciri" (§8) + "kibirli otorite herkesin önünde ters köşe" (§1). Tanınırlık testi: geçti (meslek, mekân, ifşa ve final bize ait).
 - Anlatıcı: ilkokulu hatırlayan kız (İrem). Annem: Hatice (bone + un lekeli önlük, kalın kollu, sakin). Öğretmen: Nermin Hanım (kızıl fönlü saç, büyük gözlük, telefonu elinden düşmüyor). Müdür: Reşat Bey (tombul, kravatlı, simit sever). Fırın/okul adı YOK.
 - Görsel tırmanma/utanç anı: P2 sonunda fırın kamyonetinin okul bahçesine girmesi + müdürün donup kalması (dev yazı, yakın plan, 0,5 sn durak).

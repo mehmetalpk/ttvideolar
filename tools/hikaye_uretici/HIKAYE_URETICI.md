@@ -43,6 +43,9 @@ YASAK (Müge Anlı'nın karanlık tarafı): cinayet, kaybolma/kaçırma, şiddet
 4. Herkesin önünde ifşa/ters tepme anı var mı? — 2 puan
 5. Hayata bağlanma: aile, komşu, iş, okul — Türkiye'de herkesin yaşadığı bir an mı? — 1 puan
 6. P2 kancası yeni somut olay mı? — 1 puan
+7. İfşayı ANLATICININ HAMLESİ mi tetikliyor (tesadüf değil)? — zorunlu; hayırsa yeniden yaz.
+8. Tahmin edilebilirlik: izleyici finali ilk 5 sn'de kesin tahmin ediyorsa yeniden yaz (biraz tahmin bozmaz; ilgi asıl "nasıl" sorusunda).
+9. Formülden şaşma: her seri §1 çekirdek formül + §3 iskelet + §8–9 ders kurallarına uyar; ton: yetişkin anlatıcı, keskin "haklı çıkma", fazla tatlı/naif değil.
 Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri aynı mekânda olmasın (ör. ikisi de komşu değil).
 
 ## 5. Kaynak ve dürüstlük
@@ -63,6 +66,7 @@ Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri a
 - Tuvalet Raporu: "fazla mola için doktor raporu getir" → rapor "böbreklerini kullanmaya devam etmesi önerilir" → beş kişi aynı raporla.
 - Kek Topları: görümcenin kek topları övülür → aynısını yapıp onun tabağının yanına koy → "Yediğiniz benimkilerdi".
 ### Zayıf (kaçın)
+- Annem Gizli Ajan (taslak, kullanıcı reddetti 22.11 'bayat'): final ilk saniyede tahmin ediliyor, ifşa tesadüf (kamyonet geliyor), kötü karakter hafif, ton fazla tatlı/çocuksu.
 - Amcanın Hediyeleri: hakaret küçük, kimse gerçekten zarar görmüyor, ifşa anı yok.
 - Uzun sezonlu karakter dizileri (HK S3 P6+): yeni felaket olmadan ev içi olaylar.
 
