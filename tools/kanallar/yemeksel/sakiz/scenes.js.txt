@@ -1,0 +1,23 @@
+function chicle(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#c8a878';for(let i=0;i<7;i++){x.beginPath();x.ellipse(-120+(i%4)*80,-(Math.floor(i/4))*60,70,45,i*0.4,0,7);x.fill();}x.fillStyle='#a8885a';for(let i=0;i<5;i++){x.beginPath();x.arc(-100+i*50,10-(i%2)*30,10,0,7);x.fill();}x.restore();}
+function gumball(cx,cy,r,col){x.fillStyle=col;x.beginPath();x.arc(cx,cy,r,0,7);x.fill();x.fillStyle='rgba(255,255,255,0.5)';x.beginPath();x.arc(cx-r*0.35,cy-r*0.35,r*0.25,0,7);x.fill();}
+function tire(cx,cy,s,t){x.save();x.translate(cx,cy);x.rotate(t);x.scale(s,s);x.strokeStyle='#222';x.lineWidth=60;x.beginPath();x.arc(0,0,130,0,7);x.stroke();x.strokeStyle='#888';x.lineWidth=10;for(let i=0;i<6;i++){x.beginPath();x.moveTo(0,0);x.lineTo(Math.cos(i)*100,Math.sin(i)*100);x.stroke();}x.restore();}
+function general(cx,base,s){sil(cx,base,s,'#1a2a4a');x.fillStyle='#ffd23f';x.fillRect(cx-40*s,base-125*s,80*s,12*s);x.fillStyle='#1a2a4a';x.beginPath();x.moveTo(cx-50*s,base-185*s);x.lineTo(cx+50*s,base-185*s);x.lineTo(cx,base-215*s);x.fill();}
+function lab(){x.fillStyle=grad(0,H,['#2a3a3a','#0a1212']);x.fillRect(0,0,W,H);x.fillStyle='#4a2e1a';x.fillRect(100,980,880,30);}
+// 0 kanca
+shot(0,0,t=>{bgWarm();rays(540,800,t);general(360,1000,1.8);for(let i=0;i<6;i++)gumball(640+(i%3)*110,860-Math.floor(i/3)*110+Math.sin(t*3+i)*8,48,['#ff5a8a','#5ac8ff','#7adf6a','#ffd23f','#ff8a3a','#c88aff'][i]);bigText('BİR GENERAL',W/2,250,120,'#fff',1);bigText('SAKIZI BAŞLATTI',W/2,400,100,'#ffd23f',1);});
+// 1 1860lar new york santa anna şikle
+shot(1,1,t=>{x.fillStyle=grad(0,H,['#4a6a8a','#1a2a3a']);x.fillRect(0,0,W,H);general(330,1000,1.7);chicle(720,940,1.1*back(cl(t-1.5)));bigText("1860'LAR",W/2,270,160,'#ffd23f',back(cl(t*3)));bigText('NEW YORK',W/2,420,100,'#fff',back(cl(t*3-0.4)));if(t>3)badge(540,1370,'SÜRGÜNDE','#c1121f',(t-3)*3);});
+// 2 ağaç reçinesi, lastik planı
+shot(2,2,t=>{bgShop();if(t<2){x.fillStyle='#5a3a1a';x.fillRect(480,420,120,600);x.fillStyle='#2f6a2a';x.beginPath();x.arc(540,420,240,0,7);x.fill();x.fillStyle='#e8d0a0';x.beginPath();x.ellipse(600,760+t*20,16,30,0,0,7);x.fill();bigText('AĞAÇ REÇİNESİ',W/2,260,100,'#fff',back(cl(t*3)));}else{chicle(320,900,0.9);mapArrow(470,850,610,850,cl((t-2)*2),'#ffd23f');tire(800,840,0.9,t);bigText('LASTİK PLANI',W/2,300,110,'#ffd23f',back(cl((t-2)*3)));}});
+// 3 adams aylarca, olmadı
+shot(3,3,t=>{lab();sil(300,980,1.6,'#d9b48a');pot(680,880,1.1,t);smoke(t,0.25);if(t>1.8){tire(700,560,0.6,t);stampX(700,560,1,(t-1.8)*3);}bigText('THOMAS ADAMS',W/2,280,105,'#fff',back(cl(t*3)));if(t>1.8)badge(540,1370,'LASTİK OLMADI','#c1121f',(t-1.8)*3);});
+// 4 işe yaramaz yığın, çiğneme fikri
+shot(4,4,t=>{lab();chicle(540,900,1.5);if(t<2.3){bigText('İŞE YARAMAZ',W/2,300,120,'#fff',back(cl(t*3)));}else{sil(800,980,1.4,'#d9b48a');x.fillStyle='#ffd23f';x.beginPath();x.arc(800,500+Math.sin(t*6)*10,46,0,7);x.fill();x.fillStyle='#2a1a10';x.font=`900 60px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('!',800,504+Math.sin(t*6)*10);bigText('ÇİĞNENİYORDU!',W/2,300,105,'#ffd23f',back(cl((t-2.3)*3)));}});
+// 5 kaynattı toplar, tükendi
+shot(5,5,t=>{bgShop();for(let i=0;i<12;i++){const p=back(cl(t*1.5-i*0.08));if(p>0)gumball(220+(i%4)*210,640+Math.floor(i/4)*130,50*p,['#ff5a8a','#5ac8ff','#7adf6a','#ffd23f'][i%4]);}bigText('KÜÇÜK TOPLAR',W/2,300,110,'#fff',back(cl(t*3)));badge(540,1370,'ÇABUCAK TÜKENDİ','#2f8a3a',(t-1.6)*3);});
+// 6 1871 patent
+shot(6,6,t=>{x.fillStyle=grad(0,H,['#1f3a5a','#081420']);x.fillRect(0,0,W,H);x.save();x.translate(540,780);x.rotate(-0.05);x.fillStyle='#f4ead0';rr(-260,-300,520,560,10);x.fill();x.strokeStyle='#2a4a7a';x.lineWidth=4;x.beginPath();x.arc(-60,-60,90,0,7);x.stroke();x.strokeRect(40,-150,160,200);x.fillStyle='#5a3a1a';for(let i=0;i<4;i++)x.fillRect(-200,120+i*34,400-(i%2)*80,10);x.restore();sealWax(760,1000,70);bigText('1871',W/2,280,180,'#ffd23f',back(cl(t*3)));badge(540,1370,'PATENT','#2a4a7a',(t-0.8)*3);});
+// 7 soru
+shot(7,7,t=>{bgWarm();for(let i=0;i<5;i++)gumball(180+i*180,840+Math.sin(t*3+i)*14,70,['#ff5a8a','#5ac8ff','#7adf6a','#ffd23f','#c88aff'][i]);bigText('EN SEVDİĞİN',W/2,270,115,'#fff',back(cl(t*3)));bigText('SAKIZ TADI?',W/2,420,120,'#ffd23f',back(cl(t*3-0.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1c0e','#0f0704'));

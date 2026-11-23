@@ -1,0 +1,11 @@
+[intense] Sürgündeki bir general, sakızı başlattı.
+
+[serious] Bin sekiz yüz altmışlar, New York. Sürgündeki Meksikalı general Santa Anna yanında bir yığın şikle getirdi. || 1860'lar, New York. Sürgündeki Meksikalı general Santa Anna yanında bir yığın şikle getirdi.
+Şikle bir ağacın reçinesiydi. Plan, ondan ucuz lastik yapıp zengin olmaktı.
+[curious] Mucit Thomas Adams aylarca uğraştı ama lastik olmadı.
+[intense] Elinde bir yığın işe yaramaz reçine kaldı. Sonra Meksikalıların onu çiğnediğini hatırladı.
+[serious] Kaynatıp küçük toplar yaptı, bir dükkâna verdi. Çabucak tükendi.
+Bin sekiz yüz yetmiş birde sakız makinesinin patentini aldı. || 1871'de sakız makinesinin patentini aldı.
+[curious] Sen en çok hangi tat sakızı seversin?
+
+[softly] Kaçırmamak için takip et.
