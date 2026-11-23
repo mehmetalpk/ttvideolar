@@ -1,0 +1,10 @@
+[intense] Bir imparatoriçe beğendi, adı öyle kaldı.
+
+[serious] Bin sekiz yüz altmış dokuz. Fransa İmparatoriçesi Eugénie, Süveyş Kanalı'nın açılışına giderken İstanbul'a uğradı. || 1869. Fransa İmparatoriçesi Eugénie, Süveyş Kanalı açılışına giderken İstanbul'a uğradı.
+Sultan Abdülaziz onu Beylerbeyi Sarayı'nda ağırladı.
+[curious] Anlatılana göre saray aşçıları közlenmiş patlıcanı sütlü bir beğendiyle ezdi, üstüne et koydu.
+[intense] İmparatoriçe o kadar beğendi ki yemeğin adı Hünkâr Beğendi kaldı.
+[serious] Ama bazı tarihçiler bu hikâyenin sonradan uydurulduğunu düşünüyor.
+[curious] Sence efsane mi, gerçek mi?
+
+[softly] Kaçırmamak için takip et.

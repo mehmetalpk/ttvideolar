@@ -1,0 +1,22 @@
+function goat(cx,base,s,t,jump=0,col='#f4f1ea'){const j=jump?Math.abs(Math.sin(t*7+cx))*90:0;x.save();x.translate(cx,base-j*s);x.scale(s,s);x.rotate(jump?Math.sin(t*7+cx)*0.15:0);x.fillStyle=col;x.beginPath();x.ellipse(0,-120,110,60,0,0,7);x.fill();x.strokeStyle=col;x.lineWidth=18;x.lineCap='round';for(const lx of [-70,-30,40,80]){x.beginPath();x.moveTo(lx,-80);x.lineTo(lx+(jump?Math.sin(t*14+lx)*15:0),0);x.stroke();}x.beginPath();x.ellipse(120,-190,40,30,-0.5,0,7);x.fill();x.beginPath();x.moveTo(95,-210);x.lineTo(80,-260);x.stroke();x.fillStyle='#2a1a10';x.beginPath();x.arc(132,-198,6,0,7);x.fill();x.fillStyle=col;x.beginPath();x.moveTo(130,-165);x.lineTo(125,-130);x.lineTo(145,-160);x.fill();x.restore();}
+function bush(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#2f6a2a';for(let i=0;i<6;i++){x.beginPath();x.arc(-80+i*32,-40-(i%2)*40,70,0,7);x.fill();}x.fillStyle='#d8202a';for(let i=0;i<14;i++){x.beginPath();x.arc(-120+(i*53)%240,-90+(i*37)%110,13,0,7);x.fill();}x.restore();}
+function hills(t,night=0){x.fillStyle=grad(0,1000,night?['#0a1030','#2a2a5a']:['#f4c07a','#e08a4a']);x.fillRect(0,0,W,H);if(night){x.fillStyle='#f4f1ea';x.beginPath();x.arc(820,300,60,0,7);x.fill();x.fillStyle='#fff';for(let i=0;i<30;i++)x.fillRect((i*197)%W,(i*113)%600,4,4);}x.fillStyle=night?'#1a2a1a':'#6a8a3a';x.beginPath();x.moveTo(0,1000);for(let i=0;i<=10;i++)x.lineTo(i*108,920-Math.sin(i*1.3)*60);x.lineTo(W,H);x.lineTo(0,H);x.fill();}
+function monastery(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#c8a878';x.fillRect(-260,-300,520,300);x.fillStyle='#8a5a3a';x.beginPath();x.moveTo(-300,-300);x.lineTo(0,-470);x.lineTo(300,-300);x.fill();x.fillStyle='#4a2e1a';rr(-60,-180,120,180,50);x.fill();x.restore();}
+// 0 kanca
+shot(0,0,t=>{hills(t);rays(540,700,t);goat(400,1000,1.4,t,1);beanPile(760,980,260,22,5,t);bigText('KAHVEYİ',W/2,250,130,'#fff',1);bigText('KEÇİLER Mİ BULDU?',W/2,400,90,'#ffd23f',1);});
+// 1 habeş efsanesi, uyumayan keçiler
+shot(1,1,t=>{hills(t,1);sil(220,1000,1.6,'#2a1a10');for(let i=0;i<3;i++)goat(480+i*190,1000,0.9,t,0,'#d8d0c0');bigText('HABEŞ EFSANESİ',W/2,280,100,'#ffd23f',back(cl(t*3)));if(t>2)badge(540,1370,'KEÇİLER UYUMUYOR','#2a2a5a',(t-2)*3);});
+// 2 kırmızı meyve, dans
+shot(2,2,t=>{hills(t);bush(220,900,1.1);for(let i=0;i<3;i++)goat(480+i*200,1000,0.9,t+i,1);bigText('DANS EDEN',W/2,270,120,'#fff',back(cl(t*3)));bigText('KEÇİLER',W/2,410,120,'#ffd23f',back(cl(t*3-0.4)));});
+// 3 manastıra
+shot(3,3,t=>{hills(t);monastery(720,1000,1);sil(200+cl(t/2)*260,1000,1.5,'#2a1a10');x.fillStyle='#d8202a';for(let i=0;i<5;i++){x.beginPath();x.arc(170+cl(t/2)*260+(i%3)*14,780+Math.floor(i/3)*14,9,0,7);x.fill();}bigText('MANASTIR',W/2,300,130,'#fff',back(cl(t*3)));});
+// 4 ateşe attı, koku
+shot(4,4,t=>{x.fillStyle=grad(0,H,['#1a0e08','#060302']);x.fillRect(0,0,W,H);fire(540,1000,600,420,t);if(t<2.2){bigText('ATEŞE ATTI',W/2,300,130,'#ff6a3a',back(cl(t*3)));}else{x.strokeStyle='rgba(255,230,190,0.55)';x.lineWidth=10;for(let i=0;i<4;i++){x.beginPath();for(let k=0;k<=20;k++){const yy=600-k*25,xx=380+i*110+Math.sin(k*0.5+t*3+i)*30;k?x.lineTo(xx,yy):x.moveTo(xx,yy);}x.stroke();}bigText('MİS GİBİ KOKU',W/2,280,110,'#ffd23f',back(cl((t-2.2)*3)));}});
+// 5 sıcak suya → kahve
+shot(5,5,t=>{bgWarm();rays(540,800,t);if(t<2.2){beanPile(540,900,420,40,7,t);bigText('KAVRULDU',W/2,300,130,'#fff',back(cl(t*3)));}else{turkCup(540,860,1.6);bigText('KAHVE DOĞDU',W/2,300,120,'#ffd23f',back(cl((t-2.2)*3)));}});
+// 6 1671 yazıya geçti
+shot(6,6,t=>{x.fillStyle=grad(0,H,['#3a2a1a','#0e0904']);x.fillRect(0,0,W,H);bookOld(540,800,1.2,1,'');bigText('1671',W/2,300,180,'#ffd23f',back(cl(t*3)));badge(540,1370,'İLK YAZILI KAYIT','#8a5a2a',(t-1)*3);});
+// 7 soru
+shot(7,7,t=>{bgWarm();turkCup(330,860,1.1);teaGlass(760,860,1.1,1,t);bigText('KAHVE Mİ',W/2,270,120,'#fff',back(cl(t*3)));bigText('ÇAY MI?',W/2,420,130,'#ffd23f',back(cl(t*3-0.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a1c0e','#0f0704'));

@@ -1,0 +1,20 @@
+function eggplant(cx,cy,s,rot=0){x.save();x.translate(cx,cy);x.rotate(rot);x.scale(s,s);x.fillStyle='#4a1a5a';x.beginPath();x.ellipse(0,40,70,130,0,0,7);x.fill();x.fillStyle='#6a2a7a';x.beginPath();x.ellipse(-22,10,18,70,0,0,7);x.fill();x.fillStyle='#3a7a2a';x.beginPath();x.moveTo(-50,-80);x.lineTo(50,-80);x.lineTo(0,-120);x.fill();x.fillRect(-8,-150,16,40);x.restore();}
+function hbPlate(cx,cy,s,meat=1){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#f4f1ea';x.beginPath();x.ellipse(0,0,300,120,0,0,7);x.fill();x.fillStyle='#d8d0c0';x.beginPath();x.ellipse(0,0,250,96,0,0,7);x.fill();x.fillStyle='#efe2c0';x.beginPath();x.ellipse(0,-10,200,72,0,0,7);x.fill();if(meat){x.fillStyle='#8a3a1a';for(let i=0;i<7;i++){x.beginPath();x.arc(-90+(i%4)*60,-30+Math.floor(i/4)*36,28,0,7);x.fill();}x.fillStyle='#3a8a3a';for(let i=0;i<5;i++)x.fillRect(-60+i*30,-55+(i%2)*20,10,10);}x.restore();}
+function empress(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#e8e0f4';x.beginPath();x.moveTo(-120,0);x.quadraticCurveTo(-60,-160,-30,-200);x.lineTo(30,-200);x.quadraticCurveTo(60,-160,120,0);x.fill();x.beginPath();x.arc(0,-240,36,0,7);x.fill();x.restore();crown(cx,base-300*s,0.5*s);}
+function bosphorus(t){x.fillStyle=grad(0,1000,['#f4b06a','#7a5aa0']);x.fillRect(0,0,W,H);waves(1000,t,'#2a3a6a');x.fillStyle='#2a3a6a';x.fillRect(0,1000,W,H);}
+// 0 kanca
+shot(0,0,t=>{bgWarm();rays(540,820,t);hbPlate(540,860,1.4);crown(540,640,0.9);bigText('İMPARATORİÇE',W/2,250,110,'#fff',1);bigText('BEĞENDİ',W/2,400,140,'#ffd23f',1);});
+// 1 1869 eugenie süveyş
+shot(1,1,t=>{bosphorus(t);mosque(280,1000,1,'#3a2a50');mosque(820,1000,0.7,'#3a2a50');ship(200+cl(t/5)*600,990,0.9,Math.sin(t*1.5)*0.04);bigText('1869',W/2,280,180,'#ffd23f',back(cl(t*3)));if(t>2)badge(540,1370,'SÜVEYŞ YOLUNDA','#c1121f',(t-2)*3);});
+// 2 abdülaziz beylerbeyi
+shot(2,2,t=>{bosphorus(t);palace(540,1000,1.3);bigText('BEYLERBEYİ',W/2,280,115,'#fff',back(cl(t*3)));bigText('SARAYI',W/2,420,110,'#ffd23f',back(cl(t*3-0.4)));});
+// 3 aşçılar patlıcan beğendi et
+shot(3,3,t=>{bgShop();coals(540,1000,700,t);if(t<2.4){eggplant(380,820,1,0.3);eggplant(700,820,1,-0.3);smoke(t,0.3);bigText('KÖZ PATLICAN',W/2,300,105,'#fff',back(cl(t*3)));}else{hbPlate(540,860,1.3,cl((t-3.3)*3)>0.5);bigText('+ SÜTLÜ BEĞENDİ',W/2,260,85,'#fff',back(cl((t-2.4)*3)));if(t>3.3)bigText('+ ET',W/2,400,110,'#ffd23f',back(cl((t-3.3)*3)));}});
+// 4 adı hünkar beğendi
+shot(4,4,t=>{bgWarm();rays(540,800,t);hbPlate(540,900,1.2);empress(830,1000,1.1);sbubble(330,620,440,140,'NEFİS!',(t-0.3)*3,80);bigText('HÜNKÂR BEĞENDİ',W/2,300,100,'#ffd23f',back(cl(t*3-0.6)));});
+// 5 tarihçiler şüpheli
+shot(5,5,t=>{x.fillStyle=grad(0,H,['#2a2a3a','#0a0a12']);x.fillRect(0,0,W,H);bookOld(540,760,1.1,1,'');x.fillStyle='#ffd23f';x.font=`900 260px ${F}`;x.textAlign='center';x.textBaseline='middle';x.globalAlpha=cl(t*2);x.fillText('?',540+Math.sin(t*4)*10,760);x.globalAlpha=1;bigText('EFSANE Mİ?',W/2,300,130,'#fff',back(cl(t*3)));});
+// 6 soru
+shot(6,6,t=>{bgWarm();hbPlate(540,860,1.3);bigText('EFSANE Mİ',W/2,270,120,'#fff',back(cl(t*3)));bigText('GERÇEK Mİ?',W/2,420,120,'#ffd23f',back(cl(t*3-0.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#3a1c0e','#0f0704'));

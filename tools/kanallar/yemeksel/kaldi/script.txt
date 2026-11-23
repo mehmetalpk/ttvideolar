@@ -1,0 +1,11 @@
+[intense] Kahveyi keçiler mi buldu?
+
+[serious] Bir Habeş efsanesi. Kaldi adında bir çoban, keçilerinin geceleri uyumadığını fark etti.
+Keçiler kırmızı meyveleri yiyip zıplıyor, adeta dans ediyordu.
+[curious] Kaldi meyveleri bir manastıra götürdü.
+[intense] Rahip onları şeytan işi sayıp ateşe attı. Ama ateşten mis gibi bir koku yükseldi.
+[serious] Kavrulan çekirdekler toplandı, sıcak suya atıldı. Böylece kahve doğdu.
+[curious] Bu hikâye ilk kez bin altı yüz yetmiş birde yazıya geçti. || Bu hikâye ilk kez 1671'de yazıya geçti.
+[curious] Sen sabahları kahve mi içersin, çay mı?
+
+[softly] Kaçırmamak için takip et.
