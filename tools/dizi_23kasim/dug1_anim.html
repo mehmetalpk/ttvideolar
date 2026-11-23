@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function nanaSpecs(cx,cy,r){const ey=cy-r*0.02;x.strokeStyle='#8a5a2a';x.lineWidth=r*0.045;[-1,1].forEach(s=>{x.beginPath();x.arc(cx+s*r*0.33,ey,r*0.17,0,7);x.stroke();});x.beginPath();x.moveTo(cx-r*0.16,ey);x.lineTo(cx+r*0.16,ey);x.stroke();}
+function smoke(cx,cy,T,a){x.save();for(let i=0;i<9;i++){const k=((T*0.6+i/9)%1);x.globalAlpha=(1-k)*0.75*(a||1);x.fillStyle='#777';x.beginPath();x.arc(cx+Math.sin(i*2.3+T)*80*k,cy-k*600,60+k*140,0,7);x.fill();}x.restore();}
+function comment(cx,cy,w,name,txt2,p,col){if(p<=0)return;x.save();x.translate(cx+(1-back(p))*400,cy);x.globalAlpha=Math.min(1,p*2);x.fillStyle='#fff';rr(-w/2,-60,w,120,26);x.fill();x.fillStyle=col||'#7a8aa0';x.beginPath();x.arc(-w/2+60,0,34,0,7);x.fill();x.textAlign='left';x.textBaseline='middle';x.font=`700 30px ${F}`;x.fillStyle='#888';x.fillText(name,-w/2+110,-26);x.font=`900 42px ${F}`;x.fillStyle='#111';x.fillText(txt2,-w/2+110,18,w-140);x.restore();}
+const sc=[];
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const PINK='#ff8ab0';
+function famPhoto(cx,cy,w,h,withBride){weddingBg(cx,cy,w,h);const s=h/700;emreG(cx-w*0.28,cy-h*0.05,70*s,{smile:1});saadet(cx,cy-h*0.08,70*s,{smile:1});teyze(TEYZE1,cx+w*0.28,cy-h*0.05,66*s,{smile:1});if(withBride)brideArm(cx+w/2-150*s,cy+h*0.25,s*0.9,-0.2);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.6,6);radial(540,900,1300,'#5a2a4a','#14060e');x.save();zoom(540,900,1.05+0.04*t);photo(800,1340,300,220,0.15,()=>famPhoto(800,1340,300,220,true));bride(380,880,210,{sad:0.9,brow:0.6,eyeOpen:0.8,mouthOpen:0.3});x.restore();x.restore();vignette(0.4);
+ hook([['KAYNANAM',120,'#fff'],['ALBÜMDEN',130,YEL],['BENİ KESTİ! ✂️',115,'#fff']],270);copBadge(t,1);}});
+// 1 albüm eve geldi
+sc.push({a:mid(1),f(t,T){wallLiving();x.save();zoom(540,900,1.0+0.04*t);const k=back(prog(T,mid(1),mid(1)+0.6));x.save();x.translate(540,860);x.scale(k,k);albumBook(0,0,0.75,false);x.restore();x.restore();
+ B('3 AY SONRA...',290,100,'#fff',t);B('ALBÜM GELDİ! 📖',400,105,YEL,t,0.3);}});
+// 2 Saadet Hanım bastırmış
+sc.push({a:mid(2),f(t,T){wallLiving();x.save();zoom(540,900,1.05+0.04*t);saadet(360,860,170,{smile:0.9,brow:-0.2});albumBook(790,1000,0.45,false);x.restore();
+ B('KAYNANAM SAADET HANIM',290,78,'#fff',t);B('KOCAMAN DERİ ALBÜM 💼',400,82,YEL,t,0.3);}});
+// 3 heyecanla açtım
+sc.push({a:mid(3),f(t,T){radial(540,900,1300,'#5a3a0a','#140c02');x.save();zoom(540,900,1.06+0.05*t);bride(540,880,200,{smile:1,eyeBig:1.3,blush:true});x.restore();
+ B('HEYECANLA AÇTIM 😍',300,95,YEL,t);}});
+// 4 Emre, kaynanam, teyzeler, ben bir kol
+sc.push({a:mid(4),f(t,T){const w=W2(4,'kolum');radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,820,1.0+0.04*t);photo(540,780,820,600,-0.02,()=>famPhoto(540,780,820,600,T>w-0.4));x.restore();
+ B('EMRE, KAYNANAM, TEYZELER',290,70,'#fff',t);if(T>w-0.15)bigText('BEN? SADECE BİR KOL 💪',540,1420,78,YEL,PP(T,4,'kolum'),-0.03);}});
+// 5 duvak ucu
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,820,1.02+0.04*t);photo(540,780,820,600,0.03,()=>{weddingBg(540,780,820,600);saadet(420,760,110,{smile:1});emreG(640,760,100,{smile:1});x.fillStyle='rgba(255,255,255,0.8)';x.beginPath();x.moveTo(950,520);x.quadraticCurveTo(880,800,950,1080);x.lineTo(1000,1080);x.lineTo(1000,520);x.fill();});x.restore();
+ B('SONRAKİ SAYFA:',290,90,'#fff',t);B('DUVAĞIMIN UCU 👰',400,95,YEL,t,0.3);}});
+// 6 omzum, yarım gülümseme
+sc.push({a:mid(6),f(t,T){radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,820,1.02+0.04*t);photo(540,780,820,600,-0.03,()=>{weddingBg(540,780,820,600);teyze(TEYZE2,420,760,110,{smile:1});emreG(620,760,100,{smile:1});bride(1000,760,150,{smile:1});});x.restore();
+ B('SONRAKİ: OMZUM',290,90,'#fff',t);B('YARIM GÜLÜMSEME 🙂',400,90,YEL,t,0.3);}});
+// 7 yüz yirmi fotoğraf
+sc.push({a:mid(7),f(t,T){radial(540,900,1300,'#5a2a4a','#14060e');const n=Math.min(12,1+Math.floor(prog(T,mid(7),en(7))*12));x.save();zoom(540,820,1.0+0.03*t);for(let i=0;i<n;i++){const px=220+(i%4)*215,py=560+Math.floor(i/4)*200;photo(px,py,170,130,((i*7)%5-2)*0.05,()=>{weddingBg(px,py,170,130);saadet(px-20,py,22,{smile:1});emreG(px+30,py,20,{smile:1});});}x.restore();
+ B('120 FOTOĞRAF 📸',290,100,'#fff',t);B('HİÇBİRİNDE TAM DEĞİLİM',1420,72,YEL,t,0.4);}});
+// 8 salona dev çerçeve
+sc.push({a:mid(8),f(t,T){wallLiving();x.save();zoom(540,750,1.0+0.04*t);const k=back(prog(T,mid(8),mid(8)+0.6));x.save();x.translate(540,700);x.scale(k,k);x.translate(-540,-700);bigFrame(540,700,700,500,()=>famPhoto(540,700,700,500,false));x.restore();x.restore();
+ B('SALONA DEV ÇERÇEVE 🖼️',290,82,'#fff',t);}});
+// 9 gelin yok
+sc.push({a:mid(9),f(t,T){const w=W2(9,'Gelin');wallLiving();x.save();if(T>w)shake(T,w,w+0.6,8);zoom(540,750,1.1+0.04*t);bigFrame(540,700,700,500,()=>famPhoto(540,700,700,500,false));x.restore();
+ B('EMRE + KAYNANAM + TEYZELER',290,64,'#fff',t);if(T>w-0.15)stamp('GELİN YOK! ❌',540,1400,90,'#ff3b3b',PP(T,9,'Gelin'),-0.06);}});
+// 10 kaynanama sordum
+sc.push({a:mid(10),f(t,T){wallLiving();x.save();zoom(540,900,1.05+0.03*t);gelin(300,880,150,{brow:0.5,eyeOpen:0.9});saadet(780,880,150,{smile:0.5});x.restore();
+ B('KAYNANAMA SORDUM 🤨',300,90,YEL,t);}});
+// 11 fotoğrafçı öyle çekmiş
+sc.push({a:mid(11),f(t,T){radial(540,900,1300,'#4a2a6a','#0e0614');x.save();zoom(540,880,1.08+0.05*t);saadet(540,880,210,{smile:1,eyeOpen:0.3,brow:-0.3});x.restore();
+ bigText('"FOTOĞRAFÇI',540,290,105,'#fff',prog(t,0.05,0.25),-0.03);bigText('ÖYLE ÇEKMİŞ" 🙄',540,400,105,YEL,prog(t,0.2,0.4),-0.03);}});
+// 12 peki dedim gülümsedim
+sc.push({a:mid(12),f(t,T){radial(540,900,1300,'#1a3a4a','#04080e');x.save();zoom(540,880,1.08+0.04*t);gelin(540,880,210,{smile:0.9,eyeOpen:0.5,brow:-0.2});x.restore();
+ B('"PEKİ." 🙂',300,120,YEL,t);}});
+// 13 bilmediği bir şey
+sc.push({a:mid(13),f(t,T){radial(540,900,1300,'#2a1a3a','#06040a');x.save();zoom(540,880,1.15+0.05*t);gelin(540,880,210,{smile:0.6,brow:-0.7,eyeOpen:0.45,look:1});x.restore();
+ B('AMA KAYNANAMIN',290,95,'#fff',t);B('BİLMEDİĞİ BİR ŞEY VAR... 🤫',400,74,YEL,t,0.3);}});
+// 14 ham dosyalar telefonumda
+sc.push({a:mid(14),f(t,T){const w=W2(14,'ham');radial(540,900,1300,'#1a3a2a','#040c06');x.save();if(T>w)shake(T,w,w+0.5,6);zoom(540,850,1.05+0.05*t);phone(540,800,1.6,-0.05,false,'#1a2030');const n=Math.min(9,Math.floor(prog(T,w-0.2,en(14))*9));for(let i=0;i<n;i++){const px=420+(i%3)*120,py=580+Math.floor(i/3)*120;x.fillStyle='#f6e7d0';x.fillRect(px-50,py-45,100,90);saadet(px,py+5,22,{smile:1});}x.restore();
+ B('FOTOĞRAFÇININ',290,95,'#fff',t);if(T>w-0.15)bigText('TÜM HAM DOSYALARI BENDE! 📲',540,400,72,YEL,PP(T,14,'ham'),-0.03);}});
+sc.push({a:en(14)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#5a2a4a','#14060e');});}});
+setup(sc,TIM,en(14)+0.1+2.5);
+</script></body></html>

@@ -69,3 +69,8 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-22 | Kaynanama yediği tatlının benim olduğunu söyledim (Görümcemin Kek Topları) [Part 3 FİNAL] | r/pettyrevenge (havuz) | komedi/seri | İrem | 28.2 sn | 12:30 | -2435249683952614703 | ÖĞLE | parkur:hayır
 - 2026-11-22 | Babam canlı yayında kaplumbağa şarkısı söyledi (Hacker Kerem S3) [Part 14 FİNAL] | kendi kurgu | komedi/seri | Emrullah | 28.7 sn | 17:00 | 7003292620555699061 | AKŞAM | parkur:hayır
 - 2026-11-22 | Komşum çöpünü her gece benim kovama atıyor (Çöp Kovası Savaşı) [Part 1] | r/pettyrevenge ilhamı (komşu çöp kovası) | komedi/seri | Emrullah | 41.7 sn | 20:30 | -6152032238591131592 | GECE | parkur:hayır
+- 2026-11-23 | Komşum çöp kovamın kilidini kesti (Çöp Kovası Savaşı) [Part 2] | Reddit (r/pettyrevenge ilhamı) | komedi/seri | Emrullah | 31.0 sn | 10:30 | -7232943317543073430 | hat A
+- 2026-11-23 | Komşum beni belediyeye şikâyet etti (Çöp Kovası Savaşı) [Part 3 FİNAL] | Reddit (r/pettyrevenge ilhamı) | komedi/seri | Emrullah | 31.3 sn | 13:00 | 158141970412031488 | hat A
+- 2026-11-23 | Kaynanam düğün albümünden beni kestirmiş (Düğün Albümü) [Part 1] | özgün | komedi/seri | İrem | 35.8 sn | 18:00 | 138609346394015813 | hat B
+- 2026-11-23 | Kayınpederimin yaş günü slaytını ben hazırladım (Düğün Albümü) [Part 2] | özgün | komedi/seri | İrem | 29.9 sn | 20:30 | -1603756890666350902 | hat B
+- 2026-11-23 | Kaynanam slaytta hep yarım çıktı (Düğün Albümü) [Part 3 FİNAL] | özgün | komedi/seri | İrem | 31.3 sn | 22:30 | 1980698392900291575 | hat B
