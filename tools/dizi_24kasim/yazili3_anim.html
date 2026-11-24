@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+function ofis(){office();}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.4,6);radial(540,900,1300,'#5a1a1a','#140404');x.save();zoom(540,900,1.04+0.04*t);printout(250,1000,0.9,-0.15,'143 E-POSTA');printout(830,1010,0.9,0.15);ayten(540,900,165,{brow:0.4,angry:0.3,eyeOpen:0.9});x.restore();x.restore();vignette(0.35);
+ hook([['GENEL MÜDÜR',115,'#fff'],['143 E-POSTAYI',120,YEL],['TEK TEK OKUDU!',105,'#fff']],270);copBadge(t,3,true);}});
+// 1 çıktılarla odaya girdi
+sc.push({a:mid(1),f(t,T){ofis();x.save();zoom(540,900,1.05+0.03*t);const k=eOut(prog(T,mid(1),mid(1)+0.8));ayten(1150-k*450,860,150,{brow:0.3});printout(1150-k*450+170,1010,0.7,0.1);selami(260,880,130,{eyeBig:1.3,brow:0.6});x.restore();
+ B('ELİNDE ÇIKTILAR 🗂️',290,90,'#fff',t);B('ODAYA GİRDİ!',400,100,YEL,t,0.3);}});
+// 2 tuvalet onayı
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#3a3a5a','#0a0a14');x.save();zoom(540,900,1.06+0.04*t);ayten(540,860,170,{angry:0.5,brow:0.2,mouthOpen:0.5});x.restore();bubble(540,460,900,160,'"Tuvalete e-posta onayı mı?!"',58,'#fff',640);
+ B('🚽 ❓',290,100,YEL,t);}});
+// 3 kekeledi ben öyle demedim
+sc.push({a:mid(3),f(t,T){radial(540,900,1300,'#5a3a0a','#140c02');x.save();shake(T,mid(3)+0.2,mid(3)+1.5,4);zoom(540,880,1.08+0.05*t);selami(540,860,210,{eyeBig:1.3,sad:0.8,brow:0.6,mouthOpen:0.3,red:0.3});x.restore();
+ bigText('"BEN ÖYLE',540,290,105,'#fff',prog(t,0.05,0.25),-0.03);bigText('DEMEDİM..." 😰',540,410,100,YEL,prog(t,0.2,0.4),-0.03);}});
+// 4 ama yazılı
+sc.push({a:mid(4),f(t,T){const w=W2(4,'yazılı');ofis();x.save();zoom(540,900,1.05+0.04*t);desk(1000);printout(540,880,1.2,-0.05,'TUVALET ONAYI?');x.restore();
+ B('ÇIKTIYI KOYDU 📄',290,90,'#fff',t);if(T>w-0.15)stamp('AMA YAZILI!',540,1350,110,'#ff3b3b',PP(T,4,'yazılı'),-0.08);}});
+// 5 bana döndü
+sc.push({a:mid(5),f(t,T){ofis();x.save();zoom(540,900,1.08+0.03*t);ayten(320,880,140,{smile:0.4,look:1});muh(780,900,140,{eyeBig:1.3,brow:0.5});x.restore();
+ B('SONRA BANA DÖNDÜ 👀',290,85,YEL,t);}});
+// 6 geri yattı
+sc.push({a:mid(6),f(t,T){const w=W2(6,'geri');radial(540,900,1300,'#0a5a2a','#021408');x.save();zoom(540,850,1.0+0.04*t);payslip(540,820,1.1,-0.04,false);x.restore();
+ B('AYNI GÜN',290,100,'#fff',t);if(T>w-0.15)stamp('GERİ YATTI! 💸',540,1330,100,'#39d353',PP(T,6,'geri'),-0.06);}});
+// 7 ertesi gün e-posta
+sc.push({a:mid(7),f(t,T){ofis();x.save();zoom(540,800,1.05+0.03*t);monitor(540,720,1.2,()=>inboxScr(1,['Selami Bey: (1 satır)'],false));x.restore();muh(540,1440,110,{eyeBig:1.2,brow:0.4});
+ B('ERTESİ GÜN 📩',290,100,'#fff',t);B('SELAMİ BEY\'DEN',400,90,YEL,t,0.2);}});
+// 8 sözlü de olur
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#1b3a6a','#040814');x.save();zoom(540,800,1.0+0.04*t);emailCard(540,620,880,'Sözlü de olur.',prog(t,0.05,0.35),'Kimden: Selami Bey');selami(540,1450,110,{sad:0.6,brow:0.4,eyeOpen:0.7});x.restore();
+ B('TEK SATIR 😅',290,100,YEL,t);}});
+// 9 yazılı teşekkürler
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#5a3a0a','#140c02');x.save();zoom(540,800,1.0+0.04*t);emailCard(540,600,880,'Yazılı teşekkürler. 😇',prog(T,W2(9,'Yazılı')-0.2,W2(9,'Yazılı')+0.2),'Kime: Selami Bey');x.restore();muh(540,1440,115,{smile:0.8,brow:-0.5,eyeOpen:0.5});
+ B('CEVABIM ✍️',290,100,'#fff',t);}});
+// 10 soru
+sc.push({a:mid(10),f(t,T){radial(540,900,1300,'#5a3a0a','#140c02');x.save();zoom(540,880,1.06+0.04*t);selami(320,860,140,{sad:0.5});muh(780,860,140,{smile:0.7,brow:-0.3});x.restore();
+ bigText('SENİN MÜDÜRÜN',540,290,95,'#fff',prog(t,0.05,0.25),-0.03);bigText('DE BÖYLE Mİ? 👇',540,400,100,YEL,prog(t,0.2,0.4),-0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){radial(540,900,1300,'#1b3a6a','#040814');bigText('TAKİP ET',540,600,150,YEL,prog(t,0,0.25),-0.04);eyesIcon(540,820,1.0,T);followBtn(540,1000,T,1.3*back(prog(t,0.15,0.45)));}});
+setup(sc,TIM,en(10)+0.1+1.5);
+</script></body></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.4,6);hallway();x.save();zoom(540,1000,1.05+0.04*t);aptDoorN(200,1050,0.75,4);slippers(400,1400,0.85,'#3b6fb6');tutanak(600,1440,0.42,0.12);kir(820,880,125,{angry:0.6,eyeBig:1.3,brow:0.5,mouthOpen:0.7,red:0.4});x.restore();x.restore();vignette(0.35);
+ hook([['YÖNETİCİ',120,'#fff'],['TERLİĞİME',130,YEL],['CEZA YAZDI! 🩴',110,'#fff']],270);copBadge(t,1);}});
+// 1 kırmızı kalemle tutanak
+sc.push({a:mid(1),f(t,T){hallway();x.save();zoom(540,1100,1.25+0.05*t);slippers(540,1250,1.0,'#3b6fb6');const k=back(prog(T,mid(1)+0.3,mid(1)+0.7));x.save();x.translate(540,1000);x.scale(k,k);tutanak(0,0,0.9,-0.08);x.restore();x.restore();
+ B('TERLİĞİN ÜSTÜNDE',290,90,'#fff',t);B('TUTANAK! 📝',400,105,YEL,t,0.2);}});
+// 2 ortak alan işgali 200 TL
+sc.push({a:mid(2),f(t,T){const w=W2(2,'yüz');radial(540,900,1300,'#5a1a1a','#140404');x.save();if(T>w)shake(T,w,w+0.6,10);zoom(540,820,1.0+0.05*t);tutanak(540,780,1.5,-0.04,'Ortak alan işgali',T>w-0.15?'200 TL CEZA':'');x.restore();
+ B('🩴 = SUÇ?!',290,100,'#fff',t);}});
+// 3 kapısını çaldım, ajanda
+sc.push({a:mid(3),f(t,T){const w=W2(3,'Cevdet');hallway();x.save();zoom(540,900,1.05+0.03*t);aptDoorN(760,1050,0.8,2);kir(260,880,120,{brow:0.4});if(T>w-0.2){cevdet(760,850,140,{brow:0.3});agenda(900,1180,0.55,0.15);}x.restore();
+ B('TOK TOK 🚪',290,105,'#fff',t);if(T>w-0.15)bigText('CEVDET BEY',540,410,95,YEL,PP(T,3,'Cevdet'),-0.03);}});
+// 4 yönetmelik evladım
+sc.push({a:mid(4),f(t,T){radial(540,900,1300,'#3a3a5a','#0a0a14');x.save();shake(T,mid(4)+0.2,mid(4)+1.0,5);zoom(540,880,1.08+0.06*t);cevdet(540,850,200,{angry:0.6,brow:0.3,mouthOpen:0.7});agenda(830,1230,0.7,0.2);x.restore();
+ bigText('"YÖNETMELİK',540,290,105,'#fff',prog(t,0.05,0.25),-0.03);bigText('EVLADIM!" ☝️',540,410,105,YEL,prog(t,0.2,0.4),-0.03);}});
+// 5 arkasına baktım
+sc.push({a:mid(5),f(t,T){hallway();x.save();zoom(540,900,1.1+0.04*t);cevdet(540,860,150,{});kir(860,900,110,{look:-1,eyeBig:1.2,brow:0.4});x.restore();
+ B('SONRA ARKASINA',290,95,'#fff',t);B('BAKTIM... 👀',400,105,YEL,t,0.2);}});
+// 6 saksı bisiklet paspas
+sc.push({a:mid(6),f(t,T){const w1=W2(6,'saksı'),w2=W2(6,'bisiklet'),w3=W2(6,'paspas');hallway();x.save();zoom(540,1100,1.0+0.03*t);aptDoorN(540,980,0.75,2);
+ if(T>w1-0.2){pot(200,1260,0.9);pot(880,1260,0.9);}if(T>w2-0.2)bike(560,1330,0.9);if(T>w3-0.2)matPile(560,1500,0.9,7);x.restore();
+ B('KENDİ KAPISI:',290,100,'#fff',t);if(T>w1-0.15)bigText('2 SAKSI 🪴',290,410,85,YEL,PP(T,6,'saksı'),-0.03);if(T>w2-0.15)bigText('BİSİKLET 🚲',790,410,85,YEL,PP(T,6,'bisiklet'),0.03);if(T>w3-0.15)bigText('PASPAS DAĞI! ⛰️',540,520,80,'#ff5a5a',PP(T,6,'paspas'),-0.03);}});
+// 7 peki
+sc.push({a:mid(7),f(t,T){hallway();x.save();zoom(540,900,1.15+0.04*t);kir(540,800,165,{smile:0.6,brow:-0.5,eyeOpen:0.5});x.restore();
+ bigText('"PEKİ." 😏',540,320,130,YEL,prog(t,0.05,0.3),-0.03);}});
+// 8 akşam okudum
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#2a2a4a','#06060e');x.save();zoom(540,900,1.0+0.04*t);rulebook(540,760,1.0,-0.05,false);kir(540,1460,110,{lookDown:1,brow:0.3});x.restore();
+ B('AKŞAM 🌙',290,100,'#fff',t);B('BAŞTAN SONA OKUDUM',400,80,YEL,t,0.3);}});
+// 9 madde 12 gülümsedim
+sc.push({a:mid(9),f(t,T){const w=W2(9,'gülümsedim');radial(540,900,1300,'#5a3a0a','#140c02');x.save();zoom(540,800,1.0+0.05*t);rulebook(540,760,1.05,0,true,0);x.fillStyle='rgba(0,0,0,0.6)';x.restore();
+ bigText('MADDE 12... 🤫',540,290,100,YEL,prog(t,0.05,0.25),-0.03);x.save();zoom(540,1400,1+0.06*t);kir(540,1420,120,{smile:T>w-0.2?0.9:0,brow:T>w-0.2?-0.6:0,eyeOpen:T>w-0.2?0.5:1});x.restore();}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#1b3a6a','#040814');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>

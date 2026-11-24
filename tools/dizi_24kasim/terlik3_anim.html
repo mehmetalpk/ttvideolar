@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+const NB=[{skin:'#f0c4a0',hair:'#3a2418',hairStyle:'long',shirt:'#c0506a'},{skin:'#d9a07a',hair:'#1a1a1a',shirt:'#d08a30'},{skin:'#eab896',hair:'#8a5a2a',shirt:'#6b4a8a'}];
+function crowd(T,hands,y){[[150,0],[400,1],[680,2],[930,0]].forEach(([px,i],k)=>{person(NB[i],px,y,85,{smile:0.5});if(hands)raisedHand(px+90,y-40-Math.abs(Math.sin(T*4+k))*20,0.6,NB[i].shirt);});}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.4,6);gavelRoom();x.save();zoom(540,950,1.04+0.04*t);cevdet(300,900,140,{eyeBig:1.4,brow:0.7,mouthOpen:0.6,red:0.5});fatma(780,900,140,{smile:0.8});x.restore();x.restore();vignette(0.35);
+ hook([['GENEL KURULDA',100,'#fff'],['YÖNETİCİYİ',130,YEL],['DEĞİŞTİRDİK!',110,'#fff']],270);copBadge(t,3,true);}});
+// 1 elinde yönetmelik
+sc.push({a:mid(1),f(t,T){gavelRoom();x.save();zoom(540,950,1.0+0.03*t);[[180,0],[420,1],[660,2],[900,0]].forEach(([px,i],k)=>{person(NB[i],px,860,95,{smile:0.4,brow:-0.2});rulebook(px,1080,0.3,(k%2?0.1:-0.1),false);});x.restore();
+ bigText('HERKESİN ELİNDE',540,500,85,'#fff',prog(t,0.05,0.25),-0.03);bigText('YÖNETMELİK 📘',540,600,95,YEL,prog(t,0.2,0.4),-0.03);}});
+// 2 beni kim şikayet etti
+sc.push({a:mid(2),f(t,T){x.save();shake(T,mid(2)+0.3,mid(2)+1.3,7);gavelRoom();x.save();zoom(540,960,1.03+0.04*t);cevdet(540,960,165,{angry:1,brow:0.3,mouthOpen:0.9,red:0.6});x.restore();x.restore();
+ bigText('"BENİ KİM',540,520,100,'#fff',prog(t,0.05,0.25),-0.03);bigText('ŞİKÂYET ETTİ?!"',540,630,95,YEL,prog(t,0.2,0.4),-0.03);}});
+// 3 yönetmelik şikayet etti
+sc.push({a:mid(3),f(t,T){const w=W2(3,'Yönetmelik');radial(540,900,1300,'#5a3a0a','#140c02');x.save();zoom(540,880,1.06+0.04*t);kir(540,850,180,{smile:0.6,brow:-0.4,eyeOpen:0.6});rulebook(830,1250,0.45,0.15,false);x.restore();
+ B('AYAĞA KALKTIM 🧍',290,90,'#fff',t);if(T>w-0.15)bigText('"YÖNETMELİK ETTİ."',540,410,85,YEL,PP(T,3,'Yönetmelik'),-0.03);}});
+// 4 tutanaklar okundu
+sc.push({a:mid(4),f(t,T){gavelRoom();x.save();zoom(540,900,1.0+0.03*t);for(let i=0;i<5;i++){const k=prog(T,mid(4)+i*0.3,mid(4)+i*0.3+0.4);if(k>0)tutanak(300+i*120,820+i*40,0.55*back(k),(i-2)*0.08,['Saksı 1','Saksı 2','Bisiklet','Paspas','Kedi kabı'][i],'200 TL');}x.restore();
+ bigText('TEK TEK OKUNDU 📜',540,520,85,YEL,prog(t,0.05,0.3),-0.03);}});
+// 5 toplam 2800
+sc.push({a:mid(5),f(t,T){const w=W2(5,'iki');x.save();if(T>w)shake(T,w,w+0.7,10);radial(540,900,1300,'#5a1a1a','#140404');x.save();zoom(540,800,1.0+0.05*t);burst(540,780,340,'#ff3b3b',T);if(T>w-0.15)txt('2.800 TL',540,780,170,'#fff');x.restore();x.restore();
+ B('TOPLAM CEZA:',290,105,YEL,t);cevdet(540,1450,110,{eyeBig:1.5,brow:0.8,mouthOpen:0.9,red:0.7});}});
+// 6 yeni yönetici seçelim
+sc.push({a:mid(6),f(t,T){gavelRoom();x.save();zoom(540,950,1.0+0.03*t);crowd(T,false,900);x.restore();bubble(540,560,760,140,'"Yeni yönetici seçelim!"',58,'#fff',400);}});
+// 7 eller annemi gösterdi
+sc.push({a:mid(7),f(t,T){const w=W2(7,'Fatma');gavelRoom();x.save();zoom(540,950,1.0+0.03*t);crowd(T,true,980);if(T>w-0.3)fatma(540,700,110,{smile:0.9,blush:true});x.restore();
+ if(T>w-0.15)bigText('ANNEM! 🙋‍♀️',540,520,110,YEL,PP(T,7,'Fatma'),-0.03);else bigText('BÜTÜN ELLER... ✋',540,520,90,'#fff',prog(t,0.05,0.3),-0.03);}});
+// 8 terlik serbest
+sc.push({a:mid(8),f(t,T){hallway();x.save();zoom(540,950,1.05+0.03*t);fatma(540,830,170,{smile:0.9});x.restore();slippers(540,1420,0.9,'#3b6fb6');
+ B('İLK KARAR:',290,95,'#fff',t);B('TERLİK SERBEST! 🩴',400,95,YEL,t,0.3);}});
+// 9 saksılar kaldı
+sc.push({a:mid(9),f(t,T){hallway();x.save();zoom(540,1000,1.0+0.03*t);aptDoorN(540,1000,0.75,2);pot(220,1200,0.9);pot(860,1200,0.9);cevdet(540,800,110,{sad:0.4,smile:0.3});x.restore();
+ B('SAKSILAR KALDI 🪴',290,90,'#fff',t);}});
+// 10 isim etiketi
+sc.push({a:mid(10),f(t,T){const w=W2(10,'etiketi');hallway();x.save();zoom(540,1050,1.05+0.03*t);const L=T>w-0.2;pot(300,1330,1.0,L?'Saksı 1':null);pot(780,1330,1.0,L?'Saksı 2':null);x.restore();
+ B('AMA ANNEM...',290,95,'#fff',t);if(T>w-0.15)bigText('İSİM ETİKETİ! 🏷️',540,410,95,YEL,PP(T,10,'etiketi'),-0.03);}});
+// 11 soru
+sc.push({a:mid(11),f(t,T){radial(540,900,1300,'#5a3a0a','#140c02');x.save();zoom(540,880,1.06+0.04*t);cevdet(320,860,135,{sad:0.4});fatma(780,860,135,{smile:0.8});x.restore();
+ bigText('SİZİN APARTMANDA',540,290,85,'#fff',prog(t,0.05,0.25),-0.03);bigText('BÖYLESİ VAR MI? 👇',540,400,90,YEL,prog(t,0.2,0.4),-0.03);}});
+sc.push({a:en(11)+0.1,noCap:true,f(t,T){radial(540,900,1300,'#1b3a6a','#040814');bigText('TAKİP ET',540,600,150,YEL,prog(t,0,0.25),-0.04);eyesIcon(540,820,1.0,T);followBtn(540,1000,T,1.3*back(prog(t,0.15,0.45)));}});
+setup(sc,TIM,en(11)+0.1+1.5);
+</script></body></html>

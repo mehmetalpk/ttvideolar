@@ -74,3 +74,9 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-23 | Kaynanam düğün albümünden beni kestirmiş (Düğün Albümü) [Part 1] | özgün | komedi/seri | İrem | 35.8 sn | 18:00 | 138609346394015813 | hat B
 - 2026-11-23 | Kayınpederimin yaş günü slaytını ben hazırladım (Düğün Albümü) [Part 2] | özgün | komedi/seri | İrem | 29.9 sn | 20:30 | -1603756890666350902 | hat B
 - 2026-11-23 | Kaynanam slaytta hep yarım çıktı (Düğün Albümü) [Part 3 FİNAL] | özgün | komedi/seri | İrem | 31.3 sn | 22:30 | 1980698392900291575 | hat B
+- 2026-11-24 | Müdürüm "her şey yazılı olacak" dedi (Her Şey Yazılı Olacak) [Part 1] | özgün | komedi/seri | Emrullah | 28.7 sn | 10:30 | -8233504868705155950 | hat A
+- 2026-11-24 | Müdürüme bir günde 143 e-posta attım (Her Şey Yazılı Olacak) [Part 2] | özgün | komedi/seri | Emrullah | 29.4 sn | 13:00 | 3164730348353766552 | hat A
+- 2026-11-24 | Genel müdür 143 e-postayı tek tek okudu (Her Şey Yazılı Olacak) [Part 3 FİNAL] | özgün | komedi/seri | Emrullah | 29.7 sn | 15:30 | -7928318862221819072 | hat A
+- 2026-11-24 | Yönetici kapımdaki terliğe ceza yazdı (Terlik Cezası) [Part 1] | özgün | komedi/seri | Emrullah | 26.0 sn | 18:00 | 3243599228172783522 | hat B
+- 2026-11-24 | Yöneticiye 14 tutanak yazdık (Terlik Cezası) [Part 2] | özgün | komedi/seri | Emrullah | 31.3 sn | 20:30 | 217882030301466512 | hat B
+- 2026-11-24 | Genel kurulda yöneticiyi değiştirdik (Terlik Cezası) [Part 3 FİNAL] | özgün | komedi/seri | Emrullah | 29.9 sn | 22:30 | 8582195674080825150 | hat B
