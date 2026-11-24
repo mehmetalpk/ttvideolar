@@ -1,0 +1,12 @@
+[intense] Padişahın yatağında başka biri yatıyordu.
+
+[serious] Sokullu, Kanuni'nin ölümünü bilen herkese susmasını emretti.
+Padişahın iç organları çıkarıldı, bedeni misk ve amberle korundu.
+[whispers] Cenaze namazı gece, gizlice kılındı.
+[serious] Çadırdaki yatağa ise hasta gibi bir adam yatırıldı.
+Ordu, padişahının sadece hasta olduğunu sanıyordu.
+[curious] Sokullu, Kütahya'daki tek varis Şehzade Selim'e bir mektup yolladı.
+[serious] Ordu haftalarca Zigetvar'da bekledi. Selim'in Rumeli'ye geçtiği haberi gelince, Belgrad'a doğru yola çıktı.
+[whispers] Ama bu sır, daha ne kadar saklanabilirdi?
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

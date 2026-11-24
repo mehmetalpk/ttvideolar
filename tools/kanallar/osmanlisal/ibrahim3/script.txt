@@ -1,0 +1,12 @@
+[intense] İftara çağrıldı, sabahı göremedi.
+
+[serious] Mart bin beş yüz otuz altı. Ramazan ayı. || Mart 1536. Ramazan ayı.
+İbrahim Paşa, Topkapı Sarayı'nda padişahla iftar yaptı.
+[whispers] O gece sarayda kaldı.
+[intense] Ve gece, odasında boğduruldu.
+[serious] Gerekçe hiç açıklanmadı.
+[curious] Tarihçiler hâlâ tartışıyor: Aşırı güç mü? "Serasker Sultan" unvanı mı? Saray entrikaları mı?
+[serious] Naaşı saraydan çıkarıldı ve Galata'da, Tersane'nin arkasına gömüldü.
+[sad] Yıllarca "Makbul İbrahim" denen adama, artık "Maktul İbrahim" deniyordu.
+
+[softly] Kaçırmamak için takip et.

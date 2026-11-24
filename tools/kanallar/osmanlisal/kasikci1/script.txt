@@ -1,0 +1,11 @@
+[intense] Bulduğu elması üç kaşığa sattı. || Bulduğu elması 3 kaşığa sattı.
+
+[curious] Efsaneye göre İstanbul'da, Yenikapı kıyısında yoksul bir balıkçı, parlak bir taş buldu.
+[serious] Cam parçası sandı. Taşı bir kuyumcuya götürdü.
+Kuyumcu taşa baktı ve karşılığında üç kaşık verdi. || Kuyumcu taşa baktı ve karşılığında 3 kaşık verdi.
+[intense] Çünkü bunun bir elmas olduğunu anlamıştı.
+[serious] Ama haber yayıldı. Başka kuyumcular da pay istedi, kavga büyüdü.
+Sonunda iş bir vezirin kulağına gitti.
+[whispers] Vezir taşı görünce, bunun sıradan bir elmas olmadığını anladı.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

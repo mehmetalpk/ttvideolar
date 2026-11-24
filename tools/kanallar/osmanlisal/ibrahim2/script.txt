@@ -1,0 +1,11 @@
+[intense] Adının yanına "sultan" kelimesini ekledi.
+
+[serious] İbrahim Paşa, Mısır'da isyanın ardından düzeni yeniden kurdu.
+Mohaç'ta, Macar ordusunun yenilgisinde büyük rol oynadı.
+[curious] Bin beş yüz otuz üçte doğu seferine komutan oldu ve "Serasker Sultan" unvanını kullandı. || 1533'te doğu seferine komutan oldu ve "Serasker Sultan" unvanını kullandı.
+[serious] Sarayda bu, padişaha meydan okumak gibi görüldü.
+Seferde Defterdar İskender Çelebi'yle çatıştı ve onu Bağdat'ta idam ettirdi.
+[intense] Artık sarayda düşmanı çoktu.
+[whispers] Ve bir Ramazan akşamı, padişah onu iftara çağırdı.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

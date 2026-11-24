@@ -1,0 +1,12 @@
+[intense] Köle olarak satıldı, sadrazam oldu.
+
+[serious] Parga'da bir balıkçının oğluydu. Altı yaşlarında esir alındı ve köle oldu. || Parga'da bir balıkçının oğluydu. 6 yaşlarında esir alındı ve köle oldu.
+[curious] Yolu, genç bir şehzadeyle kesişti: Süleyman.
+[warm] İkisi ayrılmaz dost oldular.
+[serious] Bin beş yüz yirmide Süleyman padişah oldu. || 1520'de Süleyman padişah oldu.
+Üç yıl sonra İbrahim, hiç vezirlik yapmadan sadrazam yapıldı. || 3 yıl sonra İbrahim, hiç vezirlik yapmadan sadrazam yapıldı.
+[curious] Saray şaşkındı. Bu, geleneğe aykırıydı.
+[serious] Bir köleden, padişahtan sonraki en güçlü adam olmuştu.
+[whispers] Ama onu bu kadar yükselten güç, bir gün onu düşürebilirdi de.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.
