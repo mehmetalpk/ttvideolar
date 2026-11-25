@@ -1,3 +1,5 @@
+> METRICOOL GECİKMESİ (25 Kas): TikTok video izlenmeleri Metricool'da 2–3 gün geriden geliyor (ör. 206K'lık video 0 görünüyordu). Son 3 günün verisiyle hüküm verme; 'veri olgunlaşmadı' de.
+
 # Strateji (haftalık analiz görevi günceller)
 Günlük görev bu dosyayı OKUR ve buradaki "Uygulanacak kurallar"a uyar. Haftalık görev her pazar Metricool verisiyle günceller.
 Not: havuz.md başındaki KULLANICI notları (şu an FORMAT 5, süre, outro, altyazı konumu, ses efekti yasağı, kanca kuralı) bu dosyadan ÖNCE gelir; çelişirse kullanıcı notu geçerlidir.
