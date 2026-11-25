@@ -1,0 +1,10 @@
+[intense] Su içen, ordudan çıkarıldı.
+
+[serious] Talut askerlerine dedi: Allah sizi bu nehirle sınayacak.
+Kim ondan içerse benden değildir. Sadece bir avuç alan müstesna.
+[intense] Ama birkaç kişi hariç, hepsi kana kana içti.
+[serious] Nehri geçince korktular: Bugün Calut'a ve ordusuna gücümüz yetmez.
+[calm] Allah'a kavuşacağını bilenler dedi: Nice az topluluk, Allah'ın izniyle çok topluluğa galip gelmiştir.
+[intense] Ve karşılarında Calut'un ordusu duruyordu.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.
