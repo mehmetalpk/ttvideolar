@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+const BL=[['TOLGA: 2 KERE',48,'#222'],['(ikisi de bayram)',38,'#c0392b'],['SİNEM: 1 KERE',48,'#222'],['(fotoğraf çekti, gitti)',34,'#c0392b']];
+function book(T,n){blackBook(540,780,1.1,-0.02,true,['KİM KAÇ','KERE GELDİ?'],BL.slice(0,n));}
+function sofra(){villageRoom();husnu(540,760,105,{smile:0.2,eyeOpen:0.7});tolga(230,880,90,{});sinem(850,880,90,{});nevin(390,900,80,{});torun(690,900,80,{});villageTable(1060);borekTray(540,1060,0.5,2);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.4,6);villageRoom();x.save();zoom(540,900,1.05+0.04*t);knockDoor(820,1050,0.75,0);yusuf(820,880,120,{smile:0.6});tolga(250,900,150,{eyeBig:1.4,mouthOpen:0.6,brow:0.5});sinem(500,960,120,{eyeBig:1.4,mouthOpen:0.5});x.restore();x.restore();vignette(0.35);
+ hook([['MİRASIN ORTASINDA',90,'#fff'],['KAYIP MİRASÇI',120,YEL],['ÇIKTI!',130,'#fff']],270);copBadge(t,2);}});
+// 1 özet
+sc.push({a:mid(1),f(t,T){x.save();zoom(540,1000,1.0+0.03*t);sofra();x.restore();
+ B('DEDEM HERKESİ',290,100,'#fff',t);B('KÖYE TOPLAMIŞTI 🏡',400,95,YEL,t,0.3);}});
+// 2 okumaya başladı
+sc.push({a:mid(2),f(t,T){villageRoom();x.save();zoom(540,900,1.06+0.04*t);husnu(400,880,190,{eyeOpen:0.6,lookDown:1});specs(400,880,190,'#222');blackBook(800,1150,0.4,0.1,false);x.restore();
+ B('DEDEM OKUYOR 📓',290,100,YEL,t);}});
+// 3 Tolga 2 kere
+sc.push({a:mid(3),f(t,T){radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,800,1.0+0.04*t);book(T,T>W2(3,'İkisi')-0.1?2:1);x.restore();
+ B('TOLGA: 2 KERE',290,105,'#fff',t);if(T>W2(3,'İkisi')-0.15)bigText('İKİSİ DE BAYRAM 🎉',540,1420,82,YEL,PP(T,3,'İkisi'),-0.03);}});
+// 4 Tolga telefon cebe
+sc.push({a:mid(4),f(t,T){villageRoom();x.save();zoom(540,900,1.08+0.04*t);tolga(540,860,200,{eyeOpen:0.6,lookDown:1,red:0.5,smile:-0.4});const k=prog(t,0.2,1.6);phone(780,1000+k*400,0.6,0.2);x.restore();
+ B('TELEFON',290,100,'#fff',t);B('SESSİZCE CEBE 📱',400,100,YEL,t,0.3);}});
+// 5 Sinem 1 kere
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,800,1.02+0.04*t);book(T,T>W2(5,'Fotoğraf')-0.1?4:3);x.restore();
+ B('SİNEM: 1 KERE',290,105,'#fff',t);if(T>W2(5,'Fotoğraf')-0.15)bigText('FOTOĞRAF ÇEKTİ, GİTTİ 📸',540,1420,72,YEL,PP(T,5,'Fotoğraf'),-0.03);}});
+// 6 rimel aktı
+sc.push({a:mid(6),f(t,T){radial(540,900,1300,'#4a2a4a','#0e060e');x.save();zoom(540,880,1.08+0.05*t);sinem(540,860,220,{sad:0.9,brow:0.4,mascara:prog(t,0.1,1.0),mouthOpen:0.25});x.restore();
+ B('SİNEM\'İN RİMELİ AKTI 😭',290,85,YEL,t);}});
+// 7 buz gibi sessizlik
+sc.push({a:mid(7),f(t,T){x.save();zoom(540,1000,1.0+0.03*t);sofra();x.restore();x.fillStyle='rgba(80,150,230,0.35)';x.fillRect(0,0,W,H);
+ B('BUZ GİBİ SESSİZLİK 🥶',290,88,'#fff',t);}});
+// 8 kapı çalındı
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#4a3a2a','#0c0804');x.save();const w=W2(8,'kapı');if(T>w)shake(T,w,w+0.5,10);zoom(540,900,1.0+0.04*t);knockDoor(540,950,0.95,0);x.restore();
+ bigText('TOK TOK!',540,330,150,YEL,prog(T,w-0.1,w+0.15),-0.06);}});
+// 9 çamurlu çizmeli adam
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#4a3a2a','#0c0804');x.save();zoom(540,950,1.0+0.04*t);knockDoor(540,950,0.95,1);yusuf(540,700,140,{smile:0.5});boots(540,1420,0.9);x.restore();
+ B('ÇAMURLU ÇİZMELİ',290,95,'#fff',t);B('TANIMADIĞIMIZ ADAM 🥾',400,80,YEL,t,0.3);}});
+// 10 sen de mirasçısın
+sc.push({a:mid(10),f(t,T){const w=W2(10,'Gel');villageRoom();x.save();zoom(540,900,1.06+0.04*t);husnu(330,900,170,{smile:1,eyeOpen:0.6});yusuf(780,930,140,{smile:0.4,eyeBig:1.2});x.restore();
+ B('DEDEM GÜLÜMSEDİ 😊',290,90,'#fff',t);if(T>w-0.15)bubble(540,560,880,150,'"Sen de mirasçısın!"',66,'#fff',330);}});
+// 11 bu adam kim
+sc.push({a:mid(11),f(t,T){const w=W2(11,'adam');radial(540,900,1300,'#5a1a1a','#140404');x.save();if(T>w)shake(T,w,w+0.6,9);zoom(540,900,1.05+0.05*t);tolga(200,840,110,{angry:0.6,mouthOpen:0.6,look:1});nevin(880,840,110,{angry:0.5,mouthOpen:0.6,look:-1});sinem(540,720,95,{eyeBig:1.3,mouthOpen:0.5,mascara:1});torun(540,980,150,{eyeBig:1.4,mouthOpen:0.3,brow:0.5});x.restore();
+ B('HERKES BANA DÖNDÜ',290,85,'#fff',t);if(T>w-0.15)bigText('"BU ADAM KİM?!" 😳',540,1420,90,YEL,PP(T,11,'adam'),-0.03);}});
+sc.push({a:en(11)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{radial(540,900,1300,'#4a3a2a','#0c0804');});}});
+setup(sc,TIM,en(11)+0.1+2.5);
+</script></body></html>

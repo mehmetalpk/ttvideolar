@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+function hChick(cx,cy,s,T){chicken(cx,cy,s,T,false);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.4,6);yard();x.save();zoom(540,900,1.05+0.04*t);villageHouse(820,780,0.45);husnu(300,860,170,{smile:0.8,eyeOpen:0.6});yusuf(740,900,150,{eyeBig:1.3,mouthOpen:0.4});will(560,1330,0.45,0.1,[]);x.restore();x.restore();vignette(0.35);
+ hook([['DEDEM TARLASINI',100,'#fff'],['YABANCIYA',135,YEL],['BIRAKTI!',125,'#fff']],270);copBadge(t,3,true);}});
+// 1 özet
+sc.push({a:mid(1),f(t,T){radial(540,900,1300,'#4a3a2a','#0c0804');x.save();zoom(540,950,1.0+0.04*t);knockDoor(540,950,0.95,1);yusuf(540,720,140,{smile:0.4});x.restore();
+ B('MİRAS SOFRASINA',290,95,'#fff',t);B('BİR YABANCI GELDİ 🚪',400,88,YEL,t,0.3);}});
+// 2 Yusuf
+sc.push({a:mid(2),f(t,T){yard();x.save();zoom(540,880,1.08+0.05*t);yusuf(540,860,220,{smile:0.9});x.restore();
+ B('ADI YUSUF',290,110,'#fff',t);B('KOMŞU KÖYDEN 🏘️',400,95,YEL,t,0.3);}});
+// 3 10 yıldır tavuklar
+sc.push({a:mid(3),f(t,T){yard();x.save();zoom(540,1000,1.0+0.03*t);yusuf(320,820,120,{smile:0.9});torun(740,840,120,{smile:0.9});feed(540,1060,T);chicken(260,1360,0.75,T,true);chicken(560,1420,0.65,T+0.4,true);chicken(840,1360,0.7,T+0.8,true);x.restore();
+ B('10 YILDIR BENİMLE',290,95,'#fff',t);B('TAVUKLARA BAKIYOR 🐔',400,88,YEL,t,0.3);}});
+// 4 vasiyet
+sc.push({a:mid(4),f(t,T){villageRoom();x.save();zoom(540,900,1.05+0.04*t);husnu(300,880,150,{eyeOpen:0.7,lookDown:1});specs(300,880,150,'#222');const k=back(prog(t,0.05,0.4));x.save();x.translate(740,950);x.scale(k,k);will(0,0,0.6,0.05,[]);x.restore();x.restore();
+ B('DEDEMİN VASİYETİ 📜',290,92,YEL,t);}});
+// 5 ev ve tarla
+sc.push({a:mid(5),f(t,T){const w=W2(5,'Yusuf');radial(540,900,1300,'#3a5a2a','#081004');x.save();zoom(540,820,1.0+0.04*t);will(540,780,1.0,-0.03,[['EV + TARLA',64,'#222',900],['',30],T>w-0.1?['YUSUF',70,'#2a8a3a',900]:['',30],T>w-0.1?['+ TORUNUM',70,'#2a8a3a',900]:['',30]]);x.restore();
+ B('EV VE TARLA 🏡',290,100,'#fff',t);if(T>w-0.15)bigText('YUSUF\'LA BANA! 🎉',540,1420,90,YEL,PP(T,5,'Yusuf'),-0.03);}});
+// 6 birer tavuk
+sc.push({a:mid(6),f(t,T){const w=W2(6,'tavuk');villageRoom();x.save();if(T>w)shake(T,w,w+0.6,9);zoom(540,900,1.05+0.04*t);tolga(290,860,140,{eyeBig:1.4,mouthOpen:0.6,brow:0.5});sinem(780,860,140,{eyeBig:1.4,mouthOpen:0.6,brow:0.5});if(T>w-0.15){const k=back(PP(T,6,'tavuk'));chicken(290,1330,0.6*k,T,false);chicken(780,1330,0.6*k,T+0.5,false);}x.restore();
+ B('TOLGA VE SİNEM\'E',290,95,'#fff',t);if(T>w-0.15)bigText('BİRER TAVUK! 🐔',540,400,110,YEL,PP(T,6,'tavuk'),-0.03);}});
+// 7 bakmayı öğrensinler
+sc.push({a:mid(7),f(t,T){villageRoom();x.save();zoom(540,900,1.08+0.04*t);husnu(540,900,210,{smile:1,eyeOpen:0.4,brow:-0.3});chicken(860,1330,0.5,T,true);x.restore();
+ bubble(540,420,880,150,'"Bakmayı öğrensinler!"',66,'#fff',540);}});
+// 8 tablet utandı
+sc.push({a:mid(8),f(t,T){villageRoom();x.save();zoom(540,900,1.06+0.04*t);tolga(330,880,170,{red:0.8,eyeOpen:0.6,lookDown:1,smile:-0.4});tabletG(780,1000,0.8,0.1);x.restore();
+ B('TABLETİ GERİ',290,105,'#fff',t);B('İSTEYEMEDİ 😳',400,105,YEL,t,0.3);}});
+// 9 ertesi pazar
+sc.push({a:mid(9),f(t,T){sky('#9fd3f5','#e6f4ff');x.fillStyle='#c8b080';x.fillRect(-60,1150,W+120,900);x.save();zoom(540,950,1.0+0.03*t);villageHouse(540,820,0.9);const k=eOut(prog(t,0,0.8));carS(-200+k*420,1300,0.7,'#3b6fb6');carS(1300-k*420,1340,0.7,'#e0202a');x.restore();
+ B('ERTESİ PAZAR 📅',290,100,'#fff',t);B('İKİSİ DE KÖYDE!',400,100,YEL,t,0.3);}});
+// 10 tavuklu ders
+sc.push({a:mid(10),f(t,T){yard();x.save();zoom(540,1000,1.0+0.03*t);yusuf(540,760,110,{smile:0.9,mouthOpen:0.3});tolga(240,880,110,{smile:-0.2,brow:0.3});sinem(840,880,110,{smile:-0.2,brow:0.3});chicken(240,1330,0.6,T,false);chicken(840,1330,0.6,T+0.5,false);feed(540,1000,T);x.restore();
+ B('ELLERİNDE TAVUK 🐔',290,95,'#fff',t);B('YUSUF\'TAN DERS ALIYORLAR',400,72,YEL,t,0.3);}});
+// 11 soru
+sc.push({a:mid(11),f(t,T){radial(540,900,1300,'#5a4a1a','#140e04');x.save();zoom(540,880,1.06+0.04*t);husnu(540,880,200,{smile:1,eyeOpen:0.5});x.restore();
+ B('SENCE DEDEM',290,105,'#fff',t);B('ADİL Mİ? 🤔',410,125,YEL,t,0.2);}});
+sc.push({a:en(11)+0.1,noCap:true,f(t,T){radial(540,900,1300,'#5a4a1a','#140e04');bigText('TAKİP ET',540,600,150,YEL,prog(t,0,0.25),-0.04);eyesIcon(540,820,1.0,T);followBtn(540,1000,T,1.3*back(prog(t,0.15,0.45)));}});
+setup(sc,TIM,en(11)+0.1+1.5);
+</script></body></html>

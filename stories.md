@@ -80,3 +80,9 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-24 | Yönetici kapımdaki terliğe ceza yazdı (Terlik Cezası) [Part 1] | özgün | komedi/seri | Emrullah | 26.0 sn | 18:00 | 3243599228172783522 | hat B
 - 2026-11-24 | Yöneticiye 14 tutanak yazdık (Terlik Cezası) [Part 2] | özgün | komedi/seri | Emrullah | 31.3 sn | 20:30 | 217882030301466512 | hat B
 - 2026-11-24 | Genel kurulda yöneticiyi değiştirdik (Terlik Cezası) [Part 3 FİNAL] | özgün | komedi/seri | Emrullah | 29.9 sn | 22:30 | 8582195674080825150 | hat B
+- 2026-11-25 | Dedem mirasını paylaştırmak için herkesi topladı (Dedemin Mirası) [Part 1] | özgün | komedi/seri | İrem | 30.1 sn | 10:30 | -3900481684653783470 | hat A
+- 2026-11-25 | Mirasın ortasında kayıp bir mirasçı çıktı (Dedemin Mirası) [Part 2] | özgün | komedi/seri | İrem | 30.7 sn | 13:00 | 2208683686128731286 | hat A
+- 2026-11-25 | Dedem tarlasını bir yabancıya bıraktı (Dedemin Mirası) [Part 3 FİNAL] | özgün | komedi/seri | İrem | 27.2 sn | 15:30 | 1474812433640540839 | hat A
+- 2026-11-25 | Yengem olmayan nişanlımdan ayrıldığımı yaydı (Yengemin Uydurduğu Nişanlı) [Part 1] | özgün | komedi/seri | İrem | 31.4 sn | 18:00 | -7631617780639905224 | hat B
+- 2026-11-25 | Yengemden sofrada telefon açmasını istedim (Yengemin Uydurduğu Nişanlı) [Part 2] | özgün | komedi/seri | İrem | 25.0 sn | 20:30 | 5922427281338417868 | hat B
+- 2026-11-25 | Yengemin yalanı hoparlörden patladı (Yengemin Uydurduğu Nişanlı) [Part 3 FİNAL] | özgün | komedi/seri | İrem | 28.2 sn | 22:30 | 1321630832043903366 | hat B

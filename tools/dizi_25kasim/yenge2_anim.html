@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+function battery(cx,cy,s){x.save();x.translate(cx,cy);x.scale(s,s);x.strokeStyle='#fff';x.lineWidth=12;rr(-120,-60,220,120,16);x.stroke();x.fillStyle='#fff';rr(104,-25,24,50,6);x.fill();x.fillStyle='#ff3b3b';rr(-104,-44,30,88,8);x.fill();x.restore();}
+function sofraB(fr){homeBay();hayriye(540,760,100,{eyeBig:fr?1.3:1});sevim(230,860,105,{sweat:fr?1:0,eyeBig:fr?1.3:1});kevser(850,880,90,{eyeBig:fr?1.3:1});nurten(390,920,80,{eyeBig:fr?1.3:1});kizy(700,920,85,{smile:0.5});feastTable(1080);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.4,6);homeBay();x.save();zoom(540,900,1.05+0.04*t);sevim(330,880,180,{eyeBig:1.4,mouthOpen:0.5,brow:0.6,sweat:T});spkPhone(560,1150,0.45,T,'Mert\'in annesi?',false,-0.15);kizy(820,920,140,{smile:0.9,eyeOpen:0.5,brow:-0.3});x.restore();x.restore();vignette(0.35);
+ hook([['SOFRADA YENGEME',95,'#fff'],['TELEFON',135,YEL],['AÇTIRDIM!',125,'#fff']],270);copBadge(t,2);}});
+// 1 özet
+sc.push({a:mid(1),f(t,T){homeBay();x.save();zoom(540,900,1.05+0.04*t);sevim(360,880,170,{smile:0.9,mouthOpen:0.4+0.3*Math.abs(Math.sin(T*9))});voiceMsg(760,1330,460,prog(t,0.1,0.4),T,'1:12');x.restore();
+ B('YENGEM OLMAYAN',290,95,'#fff',t);B('NİŞANLIMI YAYMIŞTI 🗣️',400,85,YEL,t,0.3);}});
+// 2 şarjım bitti
+sc.push({a:mid(2),f(t,T){const w=W2(2,'Şarjım');radial(540,900,1300,'#5a3a1a','#140c04');x.save();zoom(540,880,1.08+0.05*t);sevim(540,860,200,{sweat:T,eyeBig:1.2,mouthOpen:0.3,brow:0.5});x.restore();
+ B('YENGEM TERLEDİ 💦',290,95,'#fff',t);if(T>w-0.15){bigText('"ŞARJIM BİTTİ!"',540,1420,92,YEL,PP(T,2,'Şarjım'),-0.03);battery(540,1560,0.6);}}});
+// 3 Kevser
+sc.push({a:mid(3),f(t,T){const w=W2(3,'Al');homeBay();x.save();zoom(540,900,1.06+0.04*t);kevser(330,900,170,{smile:1,eyeBig:1.2,mouthOpen:0.5});const k=eOut(prog(t,0.1,0.6));phone(560+k*220,1000,0.55,0.2);x.restore();
+ B('KEVSER HEMEN',290,95,'#fff',t);if(T>w-0.15)bubble(540,520,880,150,'"Al anne, benimkinden ara!"',56,'#fff',330);}});
+// 4 sofra sustu
+sc.push({a:mid(4),f(t,T){x.save();zoom(540,1000,1.0+0.03*t);sofraB(true);x.restore();x.fillStyle='rgba(80,150,230,0.3)';x.fillRect(0,0,W,H);
+ B('BÜTÜN SOFRA SUSTU 🤐',290,85,'#fff',t);}});
+// 5 numara çevirdi
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#2a3a5a','#060a14');x.save();zoom(540,880,1.0+0.04*t);sevim(300,860,140,{sweat:T,brow:0.6,lookDown:1});x.save();x.translate(720,960);x.rotate(0.1);x.fillStyle='#111';rr(-150,-280,300,560,40);x.fill();x.fillStyle='#1c1f2b';rr(-132,-258,264,516,26);x.fill();x.fillStyle='#fff';x.font=`900 40px ${F}`;x.textAlign='center';x.textBaseline='middle';const dg='0532 ...'.slice(0,Math.max(1,Math.floor(prog(t,0.1,1.2)*8)));x.fillText(dg,0,-180);for(let i=0;i<9;i++){x.fillStyle='#3a3f55';x.beginPath();x.arc(-80+(i%3)*80,-60+Math.floor(i/3)*90,34,0,7);x.fill();x.fillStyle='#fff';x.fillText(String(i+1),-80+(i%3)*80,-58+Math.floor(i/3)*90);}x.restore();x.restore();
+ B('MECBUREN ARADI ☎️',290,95,YEL,t);}});
+// 6 hoparlör
+sc.push({a:mid(6),f(t,T){homeBay();x.save();zoom(540,900,1.06+0.04*t);kizy(300,880,160,{smile:0.9,eyeOpen:0.6,brow:-0.3});spkPhone(740,960,0.6,T,'???',true);x.restore();
+ B('HOPARLÖRÜ BEN AÇTIM 🔊',290,82,YEL,t);}});
+// 7 çalıyor
+sc.push({a:mid(7),f(t,T){x.save();zoom(540,1000,1.0+0.03*t);sofraB(true);x.restore();x.save();x.translate(540,1440);x.rotate(Math.sin(T*30)*0.06);spkPhone(0,0,0.45,T,'',false);x.restore();ringWaves(540,1410,0.6,T);
+ B('ÇALIYOR!',290,105,'#fff',t);B('ÇALIYOR! 📞',400,105,YEL,t,0.5);}});
+// 8 bir kadın açtı
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#1d4a3a','#04100a');x.save();zoom(540,880,1.0+0.05*t);spkPhone(540,900,1.0,T,'Bağlandı',true);x.restore();
+ B('BİR KADIN AÇTI!',290,100,YEL,t);}});
+// 9 ben teyzenim
+sc.push({a:mid(9),f(t,T){const w=W2(9,'teyzenim');radial(540,900,1300,'#1d4a3a','#04100a');x.save();zoom(540,900,1.0+0.04*t);spkPhone(800,1000,0.55,T,'Bağlandı',true,0.1);sevim(320,880,160,{eyeBig:1.5,mouthOpen:0.4,sweat:T});x.restore();
+ bigText('"SEVİM? KIZIM,',540,290,95,'#fff',prog(t,0.05,0.25),-0.03);if(T>w-0.15)bigText('BEN TEYZENİM!" 📞',540,400,100,YEL,PP(T,9,'teyzenim'),-0.03);}});
+// 10 yine kimin hikayesi
+sc.push({a:mid(10),f(t,T){const w=W2(10,'uyduruyorsun');radial(540,900,1300,'#5a1a1a','#140404');x.save();if(T>w)shake(T,w,w+0.7,11);zoom(540,1000,1.1+0.04*t);sofraB(true);x.restore();x.fillStyle='rgba(200,30,30,0.28)';x.fillRect(0,0,W,H);vignette(0.4);
+ bigText('"YİNE KİMİN HİKÂYESİNİ',540,290,80,'#fff',prog(t,0.05,0.25),-0.03);if(T>w-0.15)bigText('UYDURUYORSUN?!"',540,410,105,YEL,PP(T,10,'uyduruyorsun'),-0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{radial(540,900,1300,'#5a2a3a','#14060a');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

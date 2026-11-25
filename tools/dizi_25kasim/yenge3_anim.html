@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+function sofraB(fr){homeBay();hayriye(540,760,100,{eyeBig:fr?1.3:1});sevim(230,860,105,{sweat:fr?1:0,eyeBig:fr?1.3:1});kevser(850,880,90,{eyeBig:fr?1.3:1});nurten(390,920,80,{eyeBig:fr?1.3:1});kizy(700,920,85,{smile:0.5});feastTable(1080);}
+function poll(cx,cy,s,p){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#fff';rr(-380,-200,760,400,30);x.fill();x.font=`900 40px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#222';x.fillText('📊 Yönetici değişsin mi?',0,-140,700);
+ [['EVET',1,'#2a9a4a'],['HAYIR',0,'#c0392b']].forEach(([l,v,c],i)=>{const y=-40+i*120;x.fillStyle='#eee';rr(-340,y-40,680,80,40);x.fill();x.fillStyle=c;rr(-340,y-40,Math.max(80,680*v*p),80,40);x.fill();x.fillStyle=v&&p>0.3?'#fff':'#222';x.font=`900 38px ${F}`;x.textAlign='left';x.fillText(l,-310,y+2);x.textAlign='right';x.fillStyle='#222';x.fillText(Math.round(v*p*100)+'%',320,y+2);});x.restore();}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.4,7);radial(540,900,1300,'#5a1a1a','#140404');x.save();zoom(540,900,1.05+0.04*t);spkPhone(760,1000,0.65,T,'Teyze',true,0.1);sevim(320,900,180,{eyeBig:1.5,mouthOpen:0.6,brow:0.7,sweat:T});x.restore();x.restore();vignette(0.35);
+ hook([['YENGEMİN YALANI',100,'#fff'],['HOPARLÖRDEN',125,YEL],['PATLADI!',130,'#fff']],270);copBadge(t,3,true);}});
+// 1 teyzesi çıktı
+sc.push({a:mid(1),f(t,T){radial(540,900,1300,'#1d4a3a','#04100a');x.save();zoom(540,880,1.0+0.05*t);spkPhone(540,900,1.0,T,'Teyze',true);x.restore();
+ B('ARADIĞI NUMARA:',290,95,'#fff',t);B('KENDİ TEYZESİ! 📞',400,100,YEL,t,0.3);}});
+// 2 Almanya
+sc.push({a:mid(2),f(t,T){const w=W2(2,'yaymıştın');radial(540,900,1300,'#1d4a3a','#04100a');x.save();zoom(540,900,1.0+0.04*t);spkPhone(800,1000,0.55,T,'Teyze',true,0.1);sevim(320,880,160,{eyeBig:1.5,mouthOpen:0.4,sweat:T,red:0.5});x.restore();
+ bigText('"GEÇEN AY DA',540,290,100,'#fff',prog(t,0.05,0.25),-0.03);bigText('KOMŞUNUN KIZINI! ✈️',540,400,92,YEL,prog(t,0.4,0.6),-0.03);if(T>w-0.15)bigText('"YAYMIŞTIN!"',540,1420,92,'#ff5a5a',PP(T,2,'yaymıştın'),-0.03);}});
+// 3 çatal
+sc.push({a:mid(3),f(t,T){const w=W2(3,'bıraktı');homeBay();x.save();if(T>w)shake(T,w,w+0.5,10);zoom(540,880,1.08+0.05*t);hayriye(540,860,200,{angry:0.6,brow:0.2,smile:-0.4});const k=eOut(prog(T,w-0.2,w+0.3));fork(820,1150+k*250,0.9,0.4+k*1.2);x.restore();
+ B('BABAANNEM',290,105,'#fff',t);B('ÇATALINI BIRAKTI 🍴',400,95,YEL,t,0.3);}});
+// 4 bulaşık
+sc.push({a:mid(4),f(t,T){const w=W2(4,'bulaşık');kitchen(false);x.save();zoom(540,950,1.0+0.04*t);sevim(540,820,150,{sad:0.9,brow:0.4,mouthOpen:0.2});sinkPile(540,1350,1.1);x.restore();
+ bigText('"BU BAYRAM BÜTÜN',540,290,88,'#fff',prog(t,0.05,0.25),-0.03);if(T>w-0.15)bigText('BULAŞIK SENİN!" 🍽️',540,400,95,YEL,PP(T,4,'bulaşık'),-0.03);}});
+// 5 grup yöneticisi
+sc.push({a:mid(5),f(t,T){radial(540,900,1300,'#2a3a5a','#060a14');x.save();zoom(540,980,1.0+0.03*t);chatScr(540,1080,1.05,'AİLE GRUBU 👨‍👩‍👧',[{n:'Grup bilgisi',t:'Yönetici:|Sevim 👑',p:prog(t,0.1,0.4),sz:44,nc:'#ffd23f'}],T);x.restore();
+ B('GRUP YÖNETİCİSİ:',290,95,'#fff',t);B('YENGEMDİ 👑',400,110,YEL,t,0.3);}});
+// 6 oylama
+sc.push({a:mid(6),f(t,T){const w=W2(6,'alındı');radial(540,900,1300,'#2a3a5a','#060a14');x.save();zoom(540,820,1.0+0.04*t);poll(540,800,1.15,prog(t,0.2,1.4));x.restore();
+ B('OYLAMA YAPILDI 🗳️',290,95,'#fff',t);if(T>w-0.15)stamp('YÖNETİCİLİKTEN ALINDI!',540,1420,64,'#ff3b3b',PP(T,6,'alındı'),-0.06);}});
+// 7 yeni yönetici babaannem
+sc.push({a:mid(7),f(t,T){radial(540,900,1300,'#5a4a1a','#140e04');x.save();zoom(540,880,1.06+0.04*t);hayriye(540,900,200,{smile:0.7,eyeOpen:0.6});crown(540,620-(1-back(prog(t,0.1,0.5)))*200,1.3);x.restore();
+ B('YENİ YÖNETİCİ:',290,100,'#fff',t);B('BABAANNEM 👑',400,110,YEL,t,0.3);}});
+// 8 barıştık
+sc.push({a:mid(8),f(t,T){const w=W2(8,'barıştık');radial(540,900,1300,'#2a3a5a','#060a14');x.save();zoom(540,980,1.0+0.03*t);chatScr(540,1080,1.05,'AİLE GRUBU 👨‍👩‍👧',[{n:'Ben',t:'Mert\'le barıştık 💍',p:prog(T,w-0.3,w),sz:44,col:'#2a6a4a',nc:'#ffd23f'}],T);x.restore();
+ B('ERTESİ HAFTA',290,100,'#fff',t);B('GRUBA YAZDIM 😇',400,95,YEL,t,0.3);}});
+// 9 fotoğraf
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#2a3a5a','#060a14');x.save();zoom(540,980,1.0+0.03*t);chatScr(540,1080,1.05,'AİLE GRUBU 👨‍👩‍👧',[{n:'Ben',t:'Mert\'le barıştık 💍',p:1,sz:44,col:'#2a6a4a',nc:'#ffd23f'}],T);const k=back(prog(t,0.1,0.5));x.save();x.translate(540,1120);x.scale(k,k);x.fillStyle="#fff";rr(-230,-150,460,300,20);x.fill();x.fillStyle='#c8d0e0';rr(-210,-130,420,260,12);x.fill();txt('📷',0,0,120,'#fff',{stroke:false});x.restore();x.restore();
+ B('ALTINA BİR',290,100,'#fff',t);B('FOTOĞRAF 📸',400,110,YEL,t,0.3);}});
+// 10 kedi Mert
+sc.push({a:mid(10),f(t,T){const w=W2(10,'Mert');radial(540,900,1300,'#5a3a1a','#140c04');x.save();zoom(540,880,1.04+0.04*t);x.fillStyle='#fff';rr(160,520,760,760,30);x.fill();x.fillStyle='#f6e7c8';rr(190,550,700,700,20);x.fill();cat(540,940,1.4,T);x.restore();
+ B('YENİ KEDİM 🐱',290,105,'#fff',t);if(T>w-0.15)bigText('ADI MERT! 💍',540,1420,110,YEL,PP(T,10,'Mert'),-0.03);}});
+// 11 soru
+sc.push({a:mid(11),f(t,T){kitchen(false);x.save();zoom(540,950,1.0+0.04*t);sevim(540,820,150,{sad:0.9,brow:0.4});sinkPile(540,1350,1.1);x.restore();
+ B('SENCE YENGEM',290,100,'#fff',t);B('DERS ALIR MI? 🤔',400,105,YEL,t,0.2);}});
+sc.push({a:en(11)+0.1,noCap:true,f(t,T){radial(540,900,1300,'#5a2a3a','#14060a');bigText('TAKİP ET',540,600,150,YEL,prog(t,0,0.25),-0.04);eyesIcon(540,820,1.0,T);followBtn(540,1000,T,1.3*back(prog(t,0.15,0.45)));}});
+setup(sc,TIM,en(11)+0.1+1.5);
+</script></body></html>
