@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="../d26.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.4,10);classroom();x.save();zoom(540,1000,1.05+0.04*t);nihat(420,880,180,{eyeBig:1.5,mouthOpen:0.7,red:0.5,brow:0.5});chickPhone(820,1150,0.75,T,true,0.15);x.restore();x.restore();vignette(0.35);
+ hook([['SINAV ORTASINDA',100,'#fff'],['HOCANIN TELEFONU',105,YEL],['GIDAKLADI! 🐔',120,'#fff']],270);copBadge(t,2);}});
+// 1 özet
+sc.push({a:mid(1),f(t,T){classroom();x.save();zoom(540,900,1.0+0.04*t);nihat(380,880,150,{angry:0.5});sheetX(800,1000,0.7,0.08,'KURAL',['Telefon çalarsa','→ VELİSİ GELİR']);x.restore();
+ B('ÖNCE HATIRLA:',290,95,'#fff',t);B('ÇALAN → VELİYE! 📵',400,95,YEL,t,0.3);}});
+// 2 otuz kişi kalem bıraktı
+sc.push({a:mid(2),f(t,T){classroom();desksRow(1300);x.save();zoom(540,1000,1.0+0.03*t);stuRow(1150,72,T,{eyeBig:1.5,look:1});x.restore();
+ B('30 KİŞİ',290,120,YEL,t);B('KALEMİ BIRAKTI ✏️',410,95,'#fff',t,0.3);}});
+// 3 susturmaya çalıştı
+sc.push({a:mid(3),f(t,T){const w=W2(3,'Telefon');radial(540,900,1300,'#3a3a5a','#0a0a14');x.save();zoom(540,880,1.05+0.04*t);nihat(380,850,170,{red:0.6,eyeBig:1.3,brow:0.4});chickPhone(800,1050,0.85,T,T>w-0.1,0.12);x.restore();
+ if(T<w-0.1){B('SUSTURMAYA ÇALIŞTI 🤫',290,85,'#fff',t);}else{cluck(540,300,130,T,prog(T,w,w+0.15));bigText('BİR KEZ DAHA!',540,430,90,'#fff',prog(T,w+0.3,w+0.5),0.03);}}});
+// 4 ayağa kalktım
+sc.push({a:mid(4),f(t,T){const w=W2(4,'Hocam');classroom();x.save();zoom(540,900,1.05+0.04*t);const k=eOut(prog(t,0,0.4));sb(540,1000-k*120,190,{brow:-0.2,smile:0.3,mouthOpen:T>w?0.4:0});x.restore();
+ B('AYAĞA KALKTIM 🙋',290,95,'#fff',t);if(T>w-0.1)bigText('"KURAL HERKES İÇİN!"',540,410,85,YEL,prog(T,w-0.1,w+0.15),-0.03);}});
+// 5 kural kuraldır
+sc.push({a:mid(5),f(t,T){const w=W2(5,'kuraldır');classroom();x.save();shake(T,w-0.2,w+0.6,8);zoom(540,1000,1.0+0.04*t);stuRow(1050,90,T,{mouthOpen:0.8,smile:0.5});x.restore();
+ B('BÜTÜN SINIF:',290,95,'#fff',t);bigText('"KURAL KURALDIR!" 📢',540,420,95,YEL,prog(T,w-0.3,w),-0.03);}});
+// 6 zarf, müdür yardımcısı
+sc.push({a:mid(6),f(t,T){const w=W2(6,'müdür');corridor();x.save();zoom(540,1000,1.0+0.03*t);if(T<w-0.1){envelope(540,950,1.2*back(prog(t,0,0.4)),0.05,'TELEFON 🐔');}else{classDoor(780,1350,0.75,null,false);const k=eOut(prog(T,w,w+0.8));sb(-100+k*400,880,130,{smile:0.5});envelope(110+k*400,1200,0.5,0.1,'');}x.restore();
+ if(T<w-0.1)B('ZARFA KOYDUM ✉️',290,100,'#fff',t);else bigText('→ MÜDÜR YARDIMCISI',540,290,80,YEL,prog(T,w-0.1,w+0.15),-0.03);}});
+// 7 Sevda tutanak
+sc.push({a:mid(7),f(t,T){const w=W2(7,'Kural');radial(540,900,1300,'#3a2a3a','#0c060c');x.save();zoom(540,880,1.05+0.04*t);sevda(380,860,160,{brow:0.3});tutanak(800,1100,0.6,0.08);x.restore();
+ B('SEVDA HANIM 📋',290,95,'#fff',t);if(T>w-0.1)bigText('"KURAL YAZILI MI?"',540,410,90,YEL,prog(T,w-0.1,w+0.15),-0.03);}});
+// 8 Berk kural kağıdı
+sc.push({a:mid(8),f(t,T){corridor();x.save();zoom(540,900,1.05+0.04*t);berk(300,880,150,{smile:0.8,brow:-0.3});const k=back(prog(t,0.1,0.5));x.save();x.translate(760,1000);x.scale(k,k);sheetX(0,0,0.85,-0.08,'KURAL',['Derste telefonu','çalan → MÜDÜRE','Velisi gelip alır.','','HERKES İÇİN!'],{});x.restore();x.restore();
+ B('BERK UZATTI:',290,95,'#fff',t);B('YAZILI KURAL ✅',400,100,YEL,t,0.3);}});
+// 9 Sevda telefonu açtı
+sc.push({a:mid(9),f(t,T){const w=W2(9,'Annesini');radial(540,900,1300,'#5a1a1a','#140404');x.save();if(T>w)shake(T,w,w+0.7,10);zoom(540,880,1.05+0.05*t);sevda(360,860,160,{smile:0.6,brow:-0.3});phoneOn(800,1000,0.85,T,'NİHAT BEY - VELİ',0.1);x.restore();
+ B('"VELİSİ KİM?"',290,105,'#fff',t);if(T>w-0.1)bigText('ANNESİNİ ARIYOR! 📞',540,410,90,YEL,prog(T,w-0.1,w+0.15),-0.03);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{radial(540,900,1300,'#5a1a1a','#140404');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>

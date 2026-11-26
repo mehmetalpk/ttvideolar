@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="../d26.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+function cls(){classroom();board(540,630,700,300,[],0);}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.2,6);classroom();x.save();zoom(540,1000,1.05+0.04*t);nihat(560,900,190,{angry:0.6,brow:0.4,mouthOpen:0.5});chickPhone(870,1250,0.7,T,false,0.2);x.restore();x.restore();vignette(0.35);
+ hook([['HOCAMIZ',115,'#fff'],['ÇALAN TELEFONU',110,YEL],['VELİYE VERİYOR! 📵',95,'#fff']],270);copBadge(t,1);}});
+// 1 kimya hocası Nihat Bey
+sc.push({a:mid(1),f(t,T){classroom();x.save();zoom(540,900,1.0+0.04*t);nihat(540,880,180,{brow:0.2});x.restore();
+ B('KİMYA HOCASI ⚗️',290,95,'#fff',t);B('NİHAT BEY',400,110,YEL,t,0.3);}});
+// 2 kural
+sc.push({a:mid(2),f(t,T){const w=W2(2,'Velisi');radial(540,900,1300,'#3a3a5a','#0a0a14');x.save();zoom(540,880,1.0+0.04*t);
+ if(T<w-0.1){nihat(540,850,190,{angry:0.5,mouthOpen:0.6});chickPhone(850,1250,0.55,T,false,0.15);}else{sheetX(540,820,1.3,-0.03,'KURAL',['Derste telefonu','çalan → MÜDÜRE','Velisi gelip alır.','','HERKES İÇİN!']);}x.restore();
+ if(T<w-0.1){B('TELEFON ÇALARSA',290,90,'#fff',t);B('→ MÜDÜRE! 📵',400,105,YEL,t,0.3);}else{bigText('VELİSİ GELİR! 👨‍👩‍👦',540,290,90,'#ff5a5a',prog(T,w-0.1,w+0.15),-0.03);}}});
+// 3 Berk'in telefonu çaldı, annesi
+sc.push({a:mid(3),f(t,T){const w=W2(3,'Arayan');classroom();desksRow(1380);x.save();zoom(540,900,1.05+0.04*t);berk(380,860,150,{eyeBig:1.4,mouthOpen:0.4,red:0.3});if(T<w-0.1)chickPhone(800,1050,0.75,T,false,0.1);else phoneOn(800,1050,0.75,T,'ANNEM',0.1);x.restore();
+ B('BERK\'İN TELEFONU',290,90,'#fff',t);B('ÇALDI! 📳',400,110,YEL,t,0.25);if(T>w-0.1)bigText('ARAYAN: ANNESİ',540,1580,70,'#ff5a5a',prog(T,w-0.1,w+0.15),0.02);}});
+// 4 Hülya Hanım okula geldi
+sc.push({a:mid(4),f(t,T){corridor();x.save();zoom(540,1000,1.0+0.03*t);classDoor(820,1350,0.75,null,false);const k=eOut(prog(t,0,0.7));hulya(-100+k*480,880,140,{brow:0.3,sad:0.4});handbag(140+k*330,1250,0.7,false);x.restore();
+ B('İŞTEN İZİN ALIP',290,90,'#fff',t);B('OKULA GELDİ 🏫',400,100,YEL,t,0.3);}});
+// 5 taahhüt imzası
+sc.push({a:mid(5),f(t,T){const w=W2(5,'Bir');radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,820,1.0+0.05*t);sheetX(540,800,1.3,0.03,'TAAHHÜT',['Bir daha','olmayacak.'],{sig:prog(T,w,w+1.4)});x.restore();
+ B('KORİDORDA İMZA ✍️',290,95,'#fff',t);}});
+// 6 Berk kıpkırmızı
+sc.push({a:mid(6),f(t,T){classroom();x.save();zoom(540,900,1.1+0.06*t);berk(540,860,210,{red:1,lookDown:1,eyeOpen:0.6,smile:-0.4});x.restore();
+ B('BERK KIPKIRMIZI 🍅',290,100,'#ff5a5a',t);}});
+// 7 sınıf başkanı defter
+sc.push({a:mid(7),f(t,T){const w=W2(7,'Defterime');classroom();x.save();zoom(540,900,1.05+0.04*t);if(T<w-0.1){sb(540,860,190,{smile:0.3,brow:0.2});}else{sb(300,880,140,{smile:0.6,brow:-0.4,eyeOpen:0.6});notebook(740,1000,0.9,0.1);}x.restore();
+ if(T<w-0.1){B('BEN: SINIF BAŞKANI',290,85,'#fff',t);B('🎖️',410,110,YEL,t,0.3);}else{bigText('NOT ALDIM 📝',540,290,95,'#fff',prog(T,w-0.1,w+0.15),-0.03);bigText('"KURAL HERKES İÇİN."',540,410,80,YEL,prog(T,w+1.0,w+1.25),-0.03);}}});
+// 8 sınav, sessizlik
+sc.push({a:mid(8),f(t,T){const w=W2(8,'Sınıf');classroom();txt('KİMYA SINAVI',540,630,80,'#fff',{stroke:false});desksRow(1300);x.save();zoom(540,1000,1.0+0.03*t);stuRow(1150,70,T,{lookDown:1});x.restore();if(T>w-0.1)frost(0.15*prog(T,w,w+0.5));
+ B('BİR HAFTA SONRA',290,90,'#fff',t);if(T>w-0.1)bigText('BUZ GİBİ SESSİZLİK 🤫',540,410,80,'#9fd8ff',prog(T,w-0.1,w+0.15),-0.03);}});
+// 9 çekmeceden ses
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#3a2a1a','#0c0804');x.save();zoom(540,1100,1.0+0.08*t);tDesk(540,1150,1.1,false,T,t>1.2);x.restore();
+ B('ÖĞRETMEN MASASININ',290,80,'#fff',t);B('ÇEKMECESİNDEN... 👂',400,90,YEL,t,0.4);}});
+// 10 GIDAK
+sc.push({a:mid(10),f(t,T){radial(540,900,1300,'#5a3a0a','#140c02');x.save();shake(t,0,1.2,14);zoom(540,1000,1.05+0.05*t);tDesk(540,1300,1.0,true,T,true);chickPhone(540,1250,0.8,T,true,0);chicken(240,820,0.7,T,true);chicken(840,820,0.7,T+0.4,true);x.restore();
+ cluck(540,330,150,T,prog(t,0,0.15));bigText('GIDAK GIDAAAK! 🐔',540,500,80,'#fff',prog(t,0.4,0.6),0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#5a3a0a','#140c02');});}});
+setup(sc,TIM,en(10)+0.1+2.5);
+</script></body></html>

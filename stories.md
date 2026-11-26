@@ -86,3 +86,9 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-25 | Yengem olmayan nişanlımdan ayrıldığımı yaydı (Yengemin Uydurduğu Nişanlı) [Part 1] | özgün | komedi/seri | İrem | 31.4 sn | 18:00 | -7631617780639905224 | hat B
 - 2026-11-25 | Yengemden sofrada telefon açmasını istedim (Yengemin Uydurduğu Nişanlı) [Part 2] | özgün | komedi/seri | İrem | 25.0 sn | 20:30 | 5922427281338417868 | hat B
 - 2026-11-25 | Yengemin yalanı hoparlörden patladı (Yengemin Uydurduğu Nişanlı) [Part 3 FİNAL] | özgün | komedi/seri | İrem | 28.2 sn | 22:30 | 1321630832043903366 | hat B
+- 2026-11-26 | Hocamız derste çalan telefonu veliye teslim ediyordu (Hocanın Tavuk Zil Sesi) [Part 1] | özgün | komedi/seri | Emrullah | 36.3 sn | 10:30 | 71725985878919505 | hat A
+- 2026-11-26 | Sınav ortasında hocanın telefonu gıdakladı (Hocanın Tavuk Zil Sesi) [Part 2] | özgün | komedi/seri | Emrullah | 29.1 sn | 13:00 | 5485672431365541430 | hat A
+- 2026-11-26 | Hocamızın annesi okula çağrıldı (Hocanın Tavuk Zil Sesi) [Part 3 FİNAL] | özgün | komedi/seri | Emrullah | 28.4 sn | 15:30 | 1916103663082753635 | hat A
+- 2026-11-26 | Babam kombiye şifre koydu (Babamın Kombi Yasağı) [Part 1] | özgün | komedi/seri | Emrullah | 28.6 sn | 18:00 | 3563685803130241301 | hat B
+- 2026-11-26 | Elektrik sayacımız her gece fırlıyordu (Babamın Kombi Yasağı) [Part 2] | özgün | komedi/seri | Emrullah | 29.9 sn | 20:30 | 7735935882810310864 | hat B
+- 2026-11-26 | Babamın odasından gizli ısıtıcı çıktı (Babamın Kombi Yasağı) [Part 3 FİNAL] | özgün | komedi/seri | Emrullah | 31.1 sn | 22:30 | -1007148358857241738 | hat B

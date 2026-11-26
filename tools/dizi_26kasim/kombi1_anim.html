@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="../d26.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const BS='#7aa0d8';
+function studio(){salon();greenWall();}
+function hand(cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot||0);x.scale(s,s);x.fillStyle=FERHAT.skin;x.beginPath();x.ellipse(0,0,60,70,0,0,7);x.fill();for(let i=0;i<4;i++){rr(-52+i*30,-130,24,90,12);x.fill();}rr(48,-40,24,70,12);x.fill();x.restore();}
+function bagsBy(n,cx,y){for(let i=0;i<n;i++)trashBag(cx+i*110,y,0.8,'#e8e8f0',(i-1)*0.2);}
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.2,6);homeK(true);x.save();zoom(540,1000,1.05+0.04*t);babak(360,900,175,{angry:0.6,brow:0.4,smile:-0.2});thermo(800,1420,0.75,19,true,T);x.restore();x.restore();vignette(0.35);
+ hook([['BABAM',125,'#fff'],['KOMBİYE',140,YEL],['ŞİFRE KOYDU! 🔒',105,'#fff']],270);copBadge(t,1);}});
+// 1 19 derece kilit
+sc.push({a:mid(1),f(t,T){radial(540,900,1300,'#1a3a5a','#040a14');x.save();zoom(540,880,1.0+0.05*t);thermo(540,850,1.5,19,prog(t,0.5,0.6)>0,T);x.restore();
+ B('19 DERECEYE',290,110,'#9fd8ff',t);B('KİLİTLİ! ❄️',410,115,YEL,t,0.3);}});
+// 2 faturayı ben ödüyorum
+sc.push({a:mid(2),f(t,T){const w=W2(2,'Tasarruf');homeK(false);x.save();zoom(540,900,1.06+0.04*t);babak(540,860,200,{brow:0.3,angry:0.3});x.restore();
+ if(T<w-0.1){B('"FATURAYI',290,110,'#fff',t);B('BEN ÖDÜYORUM!" 💸',410,95,YEL,t,0.25);}else{bigText('"TASARRUF',540,290,110,'#fff',prog(T,w-0.1,w+0.1),-0.03);bigText('KARAKTER İŞİDİR!" ☝️',540,410,90,YEL,prog(T,w+0.2,w+0.4),-0.03);}}});
+// 3 kim fazla yakarsa
+sc.push({a:mid(3),f(t,T){radial(540,900,1300,'#5a1a1a','#140404');x.save();shake(t,0.8,1.4,6);zoom(540,880,1.05+0.05*t);sheetX(540,820,1.3,-0.03,'EV KURALI',['Kim fazla yakarsa','FARKI O ÖDER!','','— Baba']);x.restore();
+ B('YENİ EV KURALI 📜',290,95,'#fff',t);}});
+// 4 annem montla bulaşık
+sc.push({a:mid(4),f(t,T){kitchen(false);frost(0.25);x.save();zoom(540,950,1.05+0.03*t);gulay(420,840,150,{coat:true,sad:0.5});sinkPile(800,1250,0.7);x.restore();
+ B('ANNEM: MONTLA',290,100,'#fff',t);B('BULAŞIK 🧥',400,110,YEL,t,0.25);}});
+// 5 Elif battaniye
+sc.push({a:mid(5),f(t,T){homeK(true);x.save();zoom(540,950,1.05+0.03*t);elif(540,860,170,{blanket:true,sad:0.4});notebook(540,1350,0.7,0.05);x.restore();
+ B('ELİF: BATTANİYEYLE',290,85,'#fff',t);B('DERS 📚',400,115,YEL,t,0.3);}});
+// 6 ben eldiven klavye
+sc.push({a:mid(6),f(t,T){homeK(true);x.save();zoom(540,950,1.05+0.03*t);ogul(540,820,160,{sad:0.4,brow:0.3});kbd(540,1330,1.0);glove(400,1270+Math.sin(T*14)*10,0.7,'#c0392b');glove(680,1270+Math.cos(T*14)*10,0.7,'#c0392b');x.restore();
+ B('BEN: ELDİVENLE',290,100,'#fff',t);B('KLAVYE 🧤',400,115,YEL,t,0.3);}});
+// 7 babam: bana sıcak bile geliyor
+sc.push({a:mid(7),f(t,T){const w=W2(7,'deyip');if(T<w-0.1){homeK(false);x.save();zoom(540,900,1.06+0.04*t);babak(540,860,190,{smile:0.7,brow:-0.2});x.restore();
+ B('"BANA SICAK',290,110,'#fff',t);B('BİLE GELİYOR" 😌',410,100,YEL,t,0.3);}else{darkHall(T,false);x.save();zoom(540,1000,1.0+0.03*t);const k=eOut(prog(T,w,w+1.2));babak(380+k*200,900,130,{smile:0.5});x.restore();
+ bigText('ÇALIŞMA ODASINA... 🚪',540,290,85,YEL,prog(T,w-0.1,w+0.15),-0.03);}}});
+// 8 peki baba, sayaç foto
+sc.push({a:mid(8),f(t,T){const w=W2(8,'Ertesi');if(T<w-0.1){homeK(true);x.save();zoom(540,900,1.1+0.04*t);ogul(540,860,190,{smile:0.6,brow:-0.5,eyeOpen:0.5});x.restore();bigText('"PEKİ BABA." 😏',540,320,120,YEL,prog(t,0.05,0.3),-0.03);}
+ else{radial(540,900,1300,'#2a3a4a','#060a10');x.save();zoom(540,900,1.0+0.04*t);meterK(540,850,1.2,'04812',T,1);const f=prog(T,w+0.8,w+1.0)-prog(T,w+1.0,w+1.3);x.fillStyle=`rgba(255,255,255,${f*0.9})`;x.fillRect(-60,-60,W+120,H+120);x.restore();
+ bigText('SAYACIN FOTOĞRAFI 📸',540,290,85,'#fff',prog(T,w-0.1,w+0.15),-0.03);}}});
+// 9 gece 1-7 üç katı
+sc.push({a:mid(9),f(t,T){const w=W2(9,'sayaç');radial(540,900,1300,'#5a1a1a','#140404');x.save();if(T>w)shake(T,w,w+0.8,10);zoom(540,880,1.0+0.05*t);meterK(540,850,1.2,T>w?'04851':'04812',T,T>w?6:1,T>w?'#ff5a5a':'#39d353');x.restore();
+ B('GECE 01:00 – 07:00 🌙',290,85,'#fff',t);if(T>w-0.1)bigText('3 KATI! ⚡',540,410,130,'#ff5a5a',prog(T,w-0.1,w+0.15),-0.03);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,2,()=>{radial(540,900,1300,'#5a1a1a','#140404');});}});
+setup(sc,TIM,en(9)+0.1+2.5);
+</script></body></html>
