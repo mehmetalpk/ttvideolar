@@ -55,6 +55,7 @@
 - Grup 3 (Psikolojik, Parasal, Kriminal) 24 Kas'ta hâlâ tutmuyorsa durdurulabilir.
 
 ## Karar günlüğü (en yeni en üstte)
+- 2026-11-27 02:00 | mehmetalp | TikTok uygulama ekran görüntüsü (27.11 01:59): 26.11 Kombi (B) P1/P2/P3 = 30.5K/16.1K/6.4K (P3 21:00'de çıktı, olgunlaşmadı); Hocanın Tavuk Zil Sesi (A) 15.5K/6.3K/4.3K; 26.11 toplam ≈79K (6 video, ~16 saat). 25.11: Yengem Nişanlı 34.3K/9.0K/8.1K; Dedemin Mirası 301.6K/110.1K/67K (≈479K, aykırı değer). Not: 26.11 günü FORMAT 5 haftasının en düşük günü; baz 185K/gün.
 - 2026-11-26 10:50 | mehmetalp | KARAR: 27.11'den itibaren A hattı bekleme testi: P1 10:30 → P2 11:30 → P3 15:30 FİNAL; outro'da saat söylenir (P1 "devamı 11:30", P2 "final 15:30"); B hattı değişmez. 7 gün (27 Kas–3 Ara). havuz.md üst notuna işlendi; görev promptları havuz notunu esas aldığı için değiştirilmedi. Haftalık analiz (29 Kas) FORMAT 5 + bekleme testini birlikte, A vs B takip/1000 izlenme ile ölçsün.
 - 2026-11-26 10:40 | mehmetalp | Takip dönüşümü için "bekleme" fikri tartışıldı (A hattı P1 10:30 → P2 11:30 → P3 15:30; outro "Final bugün 15:30, takip et", saat ekranda). Karar verilmedi, kullanıcı onayı bekleniyor. Ölçüt: P2/P3 1.000 izlenme başına takipçi.
 - 2026-11-26 10:18 | mehmetalp | B hattı saatleri 17:00 / 19:00 / 21:00 oldu (eski 17:00/19:00/21:00). Bugünkü Kombi Yasağı P1–P3 de kaydırıldı. Günlük ve haftalık görev promptları güncellendi.
