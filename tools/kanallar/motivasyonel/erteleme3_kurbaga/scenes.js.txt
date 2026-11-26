@@ -1,0 +1,15 @@
+function frog(cx,cy,s,t){x.save();x.translate(cx,cy+Math.abs(Math.sin(t*4))*-20);x.scale(s,s);x.fillStyle='#3fa34d';x.beginPath();x.ellipse(0,40,220,150,0,0,7);x.fill();x.fillStyle='#2f7a3a';x.beginPath();x.ellipse(-180,150,90,40,0,0,7);x.ellipse(180,150,90,40,0,0,7);x.fill();x.fillStyle='#3fa34d';x.beginPath();x.arc(-95,-90,65,0,7);x.arc(95,-90,65,0,7);x.fill();x.fillStyle='#fff';x.beginPath();x.arc(-95,-95,40,0,7);x.arc(95,-95,40,0,7);x.fill();x.fillStyle='#111';x.beginPath();x.arc(-90,-90,18,0,7);x.arc(100,-90,18,0,7);x.fill();x.strokeStyle='#1a4a22';x.lineWidth=10;x.beginPath();x.arc(0,40,110,0.2,Math.PI-0.2);x.stroke();x.restore();}
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);frog(540,790,1.15,t);bigText('SABAH İLK İŞ',W/2,330,115,'#fff',1);bigText('KURBAĞANI YE',W/2,470,120,'#5fe08a',1);});
+// 1 en zor iş = kurbağa
+shot(1,1,t=>{blk();frog(540,800,1.05,t);badge(540,600,'EN ZOR İŞ',('#c1121f'),(t-0.6)*3);slam('SENİN KURBAĞAN',330,110,'#5fe08a',t);});
+// 2 akşama bırakır
+shot(2,2,t=>{blk();clock(330,780,150,t*3);x.save();x.globalAlpha=0.9;frog(780,820,0.6,t);x.restore();sbubble(780,600,300,110,'SONRA...',t*3,54);slam('AKŞAMA BIRAKIR',330,110,'#fff',t);if(t>1.5)slam('AKLI ONDA KALIR',470,100,'#ff2d2d',t-1.5);});
+// 3 Brian Tracy kuralı
+shot(3,3,t=>{blk();alarm(540,830,1.15,t,'07:00');slam('EN ZOR İŞ',330,130,'#fff',t);if(t>1.2)slam('SABAH İLK',470,130,'#ffd23f',t-1.2);});
+// 4 yokuş aşağı
+shot(4,4,t=>{blk();x.fillStyle='#2a2a2a';x.beginPath();x.moveTo(100,620);x.lineTo(980,1000);x.lineTo(980,1060);x.lineTo(100,1060);x.fill();const p=cl(t/1.3);x.fillStyle='#ffd23f';x.beginPath();x.arc(150+p*780,600+p*340,50,0,7);x.fill();slam('GERİSİ KOLAY',330,130,'#5fe08a',t);});
+// 5 özet
+shot(5,5,t=>{blk();['2 DAKİKA KURALI','25 DAKİKA','SABAH KURBAĞASI'].forEach((w,i)=>badge(540,560+i*170,w,['#3a7bd5','#e23b2e','#2f8a3a'][i],(t-i*0.9)*3));if(t>2.9)slam('ERTELEME BİTTİ',330,120,'#ffd23f',t-2.9);});
+// 6 outro
+shot(6,6,t=>outro(t,0,'#2a0606','#050000'));

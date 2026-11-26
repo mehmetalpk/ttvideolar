@@ -1,0 +1,15 @@
+function bars3(a,b,la,lb,p,ca,cb){const base=900,h=360;[[a,la,ca,340],[b,lb,cb,740]].forEach(([v,l,c,cx])=>{const hh=h*v*eOut(cl(p));x.fillStyle=c;rr(cx-110,base-hh,220,hh,20);x.fill();bigText(l,cx,base+50,52,'#fff',1);});}
+function pct(v0,v1,p,cx,cy,sz,col){bigText('%'+Math.round(v0+(v1-v0)*eOut(cl(p))),cx,cy,sz,col,1);}
+function paper(cx,cy,s,lines,p){x.save();x.translate(cx,cy);x.rotate(-0.04);x.scale(s,s);x.fillStyle='#f7f3e6';x.fillRect(-260,-320,520,640);x.strokeStyle='#cfd8e8';x.lineWidth=3;for(let i=0;i<9;i++){x.beginPath();x.moveTo(-230,-240+i*60);x.lineTo(230,-240+i*60);x.stroke();}x.fillStyle='#1a1a1a';x.font=`800 54px ${F}`;x.textAlign='left';x.textBaseline='middle';lines.forEach((l,i)=>{const k=cl(p*lines.length-i);if(k>0)x.fillText(l.slice(0,Math.ceil(l.length*k)),-220,-210+i*120);});x.restore();}
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);dumbbell(540,820,1.4);bigText('TEK BİR CÜMLE',W/2,330,115,'#fff',1);bigText('SPORU 2 KATINA ÇIKARDI',W/2,470,80,'#ffd23f',1);});
+// 1 2002 İngiltere deney
+shot(1,1,t=>{blk();yearStamp('2002','İNGİLTERE',cl(t*2),560);people(5,540,990,0.8,'#3a3a3a',170,-1);slam('BİR DENEY',330,130,'#fff',t);});
+// 2 gün saat yer
+shot(2,2,t=>{blk();paper(540,760,0.7,['GÜN: SALI','SAAT: 18:00','YER: PARK'],(t-0.4)/2.6);slam('NE ZAMAN? NEREDE?',330,95,'#ffd23f',t);});
+// 3 %91 vs <%40
+shot(3,3,t=>{blk();bars3(0.91,0.38,'YAZAN','YAZMAYAN',t/1.5,'#5fe08a','#ff6b6b');pct(0,91,(t-0.3)/1.2,340,470,100,'#5fe08a');if(t>2.4)bigText('<%40',740,470,90,'#ff6b6b',cl((t-2.4)*3));slam('SONUÇ',330,110,'#fff',t);});
+// 4 bir ara deme
+shot(4,4,t=>{blk();if(t<1.2){bigText('"BİR ARA"',W/2,780,130,'#888',1);stampX(540,780,1.6,(t-0.4)*3);slam('DEME',330,150,'#ff2d2d',t);}else{calendar(540,780,t,1);slam('GÜN + SAAT + YER',330,105,'#ffd23f',t-1.2);}});
+// 5 outro
+shot(5,5,t=>outro(t,3,'#2a0606','#050000'));

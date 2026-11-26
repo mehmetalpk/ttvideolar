@@ -1,0 +1,15 @@
+function bars3(a,b,la,lb,p,ca,cb){const base=900,h=360;[[a,la,ca,340],[b,lb,cb,740]].forEach(([v,l,c,cx])=>{const hh=h*v*eOut(cl(p));x.fillStyle=c;rr(cx-110,base-hh,220,hh,20);x.fill();bigText(l,cx,base+50,52,'#fff',1);});}
+function pct(v0,v1,p,cx,cy,sz,col){bigText('%'+Math.round(v0+(v1-v0)*eOut(cl(p))),cx,cy,sz,col,1);}
+function paper(cx,cy,s,lines,p){x.save();x.translate(cx,cy);x.rotate(-0.04);x.scale(s,s);x.fillStyle='#f7f3e6';x.fillRect(-260,-320,520,640);x.strokeStyle='#cfd8e8';x.lineWidth=3;for(let i=0;i<9;i++){x.beginPath();x.moveTo(-230,-240+i*60);x.lineTo(230,-240+i*60);x.stroke();}x.fillStyle='#1a1a1a';x.font=`800 54px ${F}`;x.textAlign='left';x.textBaseline='middle';lines.forEach((l,i)=>{const k=cl(p*lines.length-i);if(k>0)x.fillText(l.slice(0,Math.ceil(l.length*k)),-220,-210+i*120);});x.restore();}
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);paper(540,770,0.68,['HEDEFİM:','1.','2.'],1);bigText('YAZANLAR',W/2,330,130,'#fff',1);bigText('%42 ÖNDE',W/2,470,140,'#ffd23f',1);});
+// 1 Gail Matthews gruplar
+shot(1,1,t=>{blk();bookI(540,600,0.8);people(5,540,960,0.9,'#3a3a3a',170,Math.floor(t*2)%5);slam('BİR ARAŞTIRMA',330,115,'#fff',t);});
+// 2 aklında vs kağıda
+shot(2,2,t=>{blk();x.fillStyle='#1a1a1a';x.fillRect(0,540,540,460);x.fillStyle='#262010';x.fillRect(540,540,540,460);sil(270,980,1.2,'#3a3a3a');bigText('?',270,760,110,'#ffd23f',1);sil(810,980,1.2,'#ffd23f');paper(810,780,0.3,['HEDEF'],cl(t-1.2));bigText('AKLINDA',270,600,60,'#aaa',1);bigText('KÂĞITTA',810,600,60,'#ffd23f',cl(t-1.2)*3);slam('DÜŞÜNMEK / YAZMAK',330,90,'#fff',t);});
+// 3 %42
+shot(3,3,t=>{blk();bars3(0.55,0.78,'DÜŞÜNEN','YAZAN',t/1.5,'#555','#ffd23f');if(t>0.8)pct(0,42,(t-0.8)/1.2,540,470,130,'#ffd23f');slam('YAKLAŞIK',330,100,'#fff',t);});
+// 4 dilek vs söz
+shot(4,4,t=>{blk();if(t<1.6){qmarks(540,780,t,3);slam('AKLINDAKİ = DİLEK',330,82,'#aaa',t);}else{paper(540,770,0.68,['SÖZ VERİYORUM'],(t-1.6)*1.5);slam('KÂĞITTAKİ = SÖZ',330,82,'#ffd23f',t-1.6);}});
+// 5 outro
+shot(5,5,t=>outro(t,2,'#2a0606','#050000'));

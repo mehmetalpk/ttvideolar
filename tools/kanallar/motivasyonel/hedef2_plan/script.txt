@@ -1,0 +1,8 @@
+[intense] Tek bir cümle, spor oranını ikiye katladı.
+
+[serious] İki bin iki yılında İngiltere'de bir deney yapıldı. Herkes daha çok spor yapmak istiyordu. || 2002'de İngiltere'de bir deney yapıldı. Herkes daha çok spor yapmak istiyordu.
+[curious] Bir gruba tek bir cümle yazdırıldı: Hangi gün, hangi saatte, nerede spor yapacağım?
+[intense] Bu cümleyi yazanların yüzde doksan biri spor yaptı. Yazmayanlarda oran yüzde kırkı bile bulmadı. || Bu cümleyi yazanların %91'i spor yaptı. Yazmayanlarda oran %40'ı bile bulmadı.
+[serious] "Bir ara" deme. Gün, saat ve yer söyle.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

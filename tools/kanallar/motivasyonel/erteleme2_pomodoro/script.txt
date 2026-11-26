@@ -1,0 +1,9 @@
+[intense] Bir mutfak saati, ertelemeyi yendi.
+
+[serious] Seksenlerin sonunda İtalyan bir öğrenci, Francesco Cirillo, ders çalışamıyordu. || 1980'lerin sonunda İtalyan bir öğrenci, Francesco Cirillo, ders çalışamıyordu.
+[curious] Domates şeklinde bir mutfak saatini yirmi beş dakikaya kurdu. || Domates şeklinde bir mutfak saatini 25 dakikaya kurdu.
+[intense] Saat çalana kadar sadece tek iş. Sonra beş dakika mola. || Saat çalana kadar sadece tek iş. Sonra 5 dakika mola.
+[serious] Yöntemine, İtalyanca domates demek olan "Pomodoro" adını verdi.
+[intense] Büyük işi böl. Yirmi beş dakikaya herkes dayanır. || Büyük işi böl. 25 dakikaya herkes dayanır.
+
+[softly] Devamı üçüncü partta. Kaçırmamak için takip et. || Devamı 3. partta. Kaçırmamak için takip et.

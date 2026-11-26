@@ -1,0 +1,9 @@
+[intense] Bitti dediğinde, daha yüzde kırktasın. || Bitti dediğinde, daha %40'tasın.
+
+[serious] Eski bir Navy SEAL'in meşhur kuralı: Zihnin "yeter" dediğinde, gücünün sadece yüzde kırkını kullanmışsındır. || Eski bir Navy SEAL'in meşhur kuralı: Zihnin "yeter" dediğinde, gücünün sadece %40'ını kullanmışsındır.
+[curious] Bilimsel bir ölçü değil. Bir hatırlatma.
+[intense] Vazgeçmek istediğin an, asıl yarışın başladığı an.
+
+[serious] Hedefini yaz. Gününü ve saatini koy. Yorulunca bir adım daha at.
+
+[softly] Kaçırmamak için takip et.

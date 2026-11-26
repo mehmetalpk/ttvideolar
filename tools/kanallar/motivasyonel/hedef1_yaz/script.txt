@@ -1,0 +1,8 @@
+[intense] Hedefini yazanlar yüzde kırk iki önde. || Hedefini yazanlar %42 önde.
+
+[serious] Dominican Üniversitesi'nden Gail Matthews, insanları gruplara ayırdı.
+[curious] Bazıları hedefini sadece aklında tuttu. Bazıları kâğıda yazdı.
+[intense] Yazanların hedefe ulaşma ihtimali yaklaşık yüzde kırk iki daha yüksek çıktı. || Yazanların hedefe ulaşma ihtimali yaklaşık %42 daha yüksek çıktı.
+[serious] Aklındaki hedef bir dilek. Kâğıttaki hedef bir söz.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

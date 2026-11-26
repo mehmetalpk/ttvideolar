@@ -1,0 +1,8 @@
+[intense] İki dakikalık işi asla erteleme. || İki dakikalık işi asla erteleme.
+
+[serious] Bir bulaşık, bir mesaj, bir fatura. Hepsi iki dakika sürer.
+[curious] Ama sen onları yarına atarsın. Sonra biriktirip dağ yaparsın.
+[intense] Kural basit: İki dakikadan kısa sürecekse, şimdi yap. || Kural basit: 2 dakikadan kısa sürecekse, şimdi yap.
+[serious] Bu kural, David Allen'ın meşhur "Getting Things Done" yönteminden.
+
+[softly] Devamı ikinci partta. Kaçırmamak için takip et. || Devamı 2. partta. Kaçırmamak için takip et.

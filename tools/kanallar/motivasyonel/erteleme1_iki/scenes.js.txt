@@ -1,0 +1,13 @@
+function timer2(cx,cy,r,p){x.fillStyle='#1a1a1a';x.beginPath();x.arc(cx,cy,r,0,7);x.fill();x.fillStyle='#ffd23f';x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,r-14,-Math.PI/2,-Math.PI/2+Math.PI*2*cl(p));x.closePath();x.fill();x.strokeStyle='#fff';x.lineWidth=10;x.beginPath();x.arc(cx,cy,r,0,7);x.stroke();const s=Math.max(0,Math.ceil(120*(1-cl(p))));bigText(Math.floor(s/60)+':'+String(s%60).padStart(2,'0'),cx,cy+r+70,80,'#fff',1);}
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);timer2(540,720,180,t/2);bigText('2 DAKİKALIK İŞİ',W/2,330,105,'#fff',1);bigText('ERTELEME',W/2,470,140,'#ff2d2d',1);});
+// 1 bulaşık mesaj fatura
+shot(1,1,t=>{blk();const k=Math.min(2,Math.floor(t/1.0));const L=['BULAŞIK','MESAJ','FATURA'];L.forEach((w,i)=>{if(i<=k)badge(540,580+i*150,w,['#3a7bd5','#8e54e9','#c1121f'][i],(t-i)*3);});slam('HEPSİ 2 DAKİKA',330,110,'#ffd23f',t);});
+// 2 yarına at, dağ yap
+shot(2,2,t=>{blk();const n=Math.min(14,Math.floor(t*6));for(let i=0;i<n;i++){const row=Math.floor((Math.sqrt(8*i+1)-1)/2),col=i-row*(row+1)/2;x.fillStyle=['#3a7bd5','#8e54e9','#c1121f','#ff6a00'][i%4];rr(540-row*60+col*120-55,980-(4-row)*95,110,85,12);x.fill();}slam('YARINA ATTIN',330,115,'#fff',t);if(t>1.5)slam('DAĞ OLDU',470,130,'#ff2d2d',t-1.5);});
+// 3 kural şimdi yap
+shot(3,3,t=>{blk();rays(540,800,t,'rgba(255,210,63,0.16)');timer2(540,720,180,t/2.5);slam('2 DK ALTI',330,130,'#fff',t);if(t>1.2)slam('ŞİMDİ YAP',470,140,'#ffd23f',t-1.2);});
+// 4 David Allen GTD
+shot(4,4,t=>{blk();bookI(540,860,1.2);stampT('GETTING THINGS DONE',540,600,t*2,'#c1121f',58,-0.08);slam('2 DAKİKA KURALI',330,105,'#ffd23f',t);});
+// 5 outro
+shot(5,5,t=>outro(t,2,'#2a0606','#050000'));

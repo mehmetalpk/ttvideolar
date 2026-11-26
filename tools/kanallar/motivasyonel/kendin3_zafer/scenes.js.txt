@@ -1,0 +1,14 @@
+// 0 kanca
+shot(0,0,t=>{blk();shk(t,4);trophy(540,840,1.2);bigText('KÜÇÜK ZAFERLERİNİ',W/2,330,95,'#fff',1);bigText('SAY',W/2,470,150,'#ffd23f',1);});
+// 1 her akşam sor
+shot(1,1,t=>{blk();x.fillStyle='rgba(255,210,63,0.12)';x.beginPath();x.arc(780,640,90,0,7);x.fill();x.fillStyle='#ffd23f';x.beginPath();x.arc(800,630,70,0,7);x.fill();x.fillStyle='#000';x.beginPath();x.arc(830,610,62,0,7);x.fill();desk(540,1050,t);sil(540,960,1.5,'#3a3a3a');slam('HER AKŞAM',330,120,'#fff',t);if(t>1)slam('DÜNDEN İYİ NE YAPTIM?',470,70,'#ffd23f',t-1);});
+// 2 liste yaz
+shot(2,2,t=>{blk();x.fillStyle='#f3f3f3';rr(220,520,640,480,24);x.fill();x.save();x.translate(0,0);check(310,620,1,t>0.6,'');check(310,760,1,t>2.2,'');x.restore();x.fillStyle='#222';x.font=`800 50px ${F}`;x.textAlign='left';x.textBaseline='middle';x.fillText('+1 SAYFA',390,622);x.fillText('−TELEFON',390,762);x.fillText('...',390,900);slam('YAZ',330,150,'#ffd23f',t);});
+// 3 neden mi
+shot(3,3,t=>{blk();bigText('?',W/2,780,320+20*Math.sin(t*8),'#ffd23f',1);slam('NEDEN Mİ?',330,140,'#fff',t);});
+// 4 beyin eksik sayar
+shot(4,4,t=>{blk();brainI(540,780,1.6,'#ff9ad5',16);const k=Math.floor(t*3)%3;['−','−','−'].forEach((m,i)=>bigText(m,330+i*210,560,110,i===k?'#ff2d2d':'#552222',1));slam('BEYNİN EKSİK SAYAR',330,90,'#ff2d2d',t);if(t>1.5)slam('SEN KAZANCI SAY',470,95,'#5fe08a',t-1.5);});
+// 5 her gün bir zafer
+shot(5,5,t=>{blk();x.save();x.translate(0,-136);x.scale(1,0.85);stepsUp(6,Math.min(6,Math.floor(t*2)),t);x.restore();['KIYASLAMAYI BIRAK','DÜNKÜ SENİ GEÇ','HER GÜN +1 ZAFER'].forEach((w,i)=>badge(540,330+i*150,w,['#c1121f','#ff6a00','#2f8a3a'][i],(t-i*1.0)*3));});
+// 6 outro
+shot(6,6,t=>outro(t,0,'#2a0606','#050000'));
