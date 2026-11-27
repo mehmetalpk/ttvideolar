@@ -94,14 +94,14 @@ Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri a
 ### ⟳ 22.11 haftalık eklemesi (10 tohum; hepsi "otorite/büyük kendi kuralına takılır" ya da "harfiyen uyum" çekirdekli)
 - (aile) Babam "evde kombi 20 dereceyi geçmeyecek, faturayı ben ödüyorum" dedi → herkes kuralı harfiyen uygular; babamın odasındaki gizli elektrikli ısıtıcı sayaçtan ifşa — havuzda 26.11 B (Babamın Kombi Yasağı)
 - (apartman) Üst kat komşusu "22:00'den sonra ses yok" tutanağı astı → kendi gece 23:00 koşu bandı, apartman toplantısında herkesin tuttuğu saat kaydı
-- (iş yeri) Müdür "toplantıya geç kalan herkese çay ısmarlar" kuralı koydu → kendisi her toplantıya geç; ay sonunda 47 çay borcu, bütün kat çay günü
+- (iş yeri) Müdür "toplantıya geç kalan herkese çay ısmarlar" kuralı koydu → kendisi her toplantıya geç; ay sonunda 47 çay borcu, bütün kat çay günü — havuzda 28.11 A (Müdürün Çay Cezası)
 - (okul) Öğretmen "derste telefonu çalanın telefonu veliye teslim" dedi → kendi telefonu derste komik zil sesiyle çalıyor, sınıf başkanı kuralı harfiyen uyguluyor — havuzda 26.11 A (Hocanın Tavuk Zil Sesi)
 - (düğün) Görümcem nişanda çeyizimi tek tek saydı, "eksik" listesi yaptı → kendi çeyiz listesinin aile sandığından çıkması
 - (bayram) Teyzem her bayram harçlığı karneye göre veriyor → babaannenin sandığından teyzemin kendi eski karnesi çıkıyor (İrem) — havuzda 27.11 A (Teyzemin Karne Harçlığı)
 - (miras/akraba) Halam ortak yazlığın takvimine her yaz kendini yazıyor → dedemin eski "sıra defteri" kuralı ona uygulanıyor
 - (komşu) Komşu teyze kargolarımı teslim alıp açıyor → anlatıcının "meraklı komşuma" etiketli kutu planı ve apartman grubunda ifşa
 - (okul/veli) Okul aile birliği başkanı veli her kararı "oy birliğiyle" tek başına alıyor → veliler tüzüğü okuyup kendi kuralıyla oylama yapıyor
-- (düğün) Yengem kına gecesinde herkesin dansını puanlayıp jüri oldu → sıra kendisine gelince bütün masa puan kartı kaldırıyor
+- (düğün) Yengem kına gecesinde herkesin dansını puanlayıp jüri oldu → sıra kendisine gelince bütün masa puan kartı kaldırıyor — havuzda 28.11 B (Yengemin Kına Jürisi)
 
 ## 8. İzleyici-hikâyesi kanalından SOYUT durumlar (22 Kas; "akraba terörü" bölümü, 46 dk)
 KURAL: Bunlar sadece durum/çatışma tipidir. Kaynak hikâyelerin olay sırası, dönüşü, finali, isimleri, şehirleri KULLANILMAZ; üretici kendi karakteri, kendi planı ve kendi komik sonuyla baştan kurar. Kaynaktaki ağır öğeler (kilitleme, aç bırakma, şiddet, sahte görüntü, gizli kamera, aldatma) ASLA alınmaz; sadece hafif, komik çekirdek kalır.

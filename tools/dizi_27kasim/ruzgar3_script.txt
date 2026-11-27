@@ -1,0 +1,11 @@
+[excited] Bahçe ödülünü dayımın çiti aldı.
+Jüri Nalan Hanım'ın kapısının önünden geçti ve dayımın çitinde durdu.
+Kurdeleyi taktılar: "Yılın en yaratıcı bahçesi."
+[angry] Nalan Hanım koştu: "Bu adil değil! Bu çit kuralsız!"
+[calm] Dayım cebinden bir kâğıt çıkardı. Onun kendi mektubu.
+[dry humor] "Güzelleştirilsin. Gerekirse siteye örnek olsun. İmza: Nalan."
+[laughs] Jüri gülerek mektubu panoya astı. Nalan Hanım dördüncü bile olamadı.
+Mektup site grubunda yılın tavsiyesi diye dolaştı.
+[warm] Ertesi hafta dayım Nalan Hanım'ın kapısına tek bir rüzgâr gülü bıraktı.
+Levhasında iki kelime vardı: "Sıra sende."
+[curious] Sence dayım fazla mı ileri gitti?

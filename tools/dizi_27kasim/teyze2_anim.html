@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="../d26.js"></script><script src="../d27.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const sc=[];
+const YZ='#f0d060';
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.2,6);balconyBg();x.save();zoom(540,1000,1.05+0.04*t);fik(260,880,130,{smile:0.6});muz(800,880,130,{eyeBig:1.4,mouthOpen:0.5,brow:0.6});sandik(540,1350,1.05,true,T);naftalin(540,1150,T);x.restore();x.restore();vignette(0.35);
+ hook([['ANNEANNEMİN',110,'#fff'],['SANDIĞINI',140,YEL],['BAYRAMDA AÇTIK! 🗝️',95,'#fff']],270);copBadge(t,2);}});
+// 1 özet
+sc.push({a:mid(1),f(t,T){const w=W2(1,'Ben');homeBay();x.save();zoom(540,920,1.05+0.04*t);muz(330,900,150,{smile:0.6,brow:0.3});halfZarf(330,1330,0.7,0.1);nrz(780,920,145,{smile:0.5,brow:-0.2});x.restore();
+ B('TEYZEM: KARNEYE GÖRE',290,82,'#fff',t);B('HARÇLIK! 📒',400,105,YEL,t,0.3);if(T>w-0.15)bigText('BEN DE ONUNKİNİ SORDUM',540,1560,62,'#fff',PP(T,1,'Ben'),0.02);}});
+// 2 balkon toplandı
+sc.push({a:mid(2),f(t,T){balconyBg();x.save();zoom(540,1000,1.0+0.03*t);ozan(150,900,90,{eyeBig:1.2});leyla(330,880,90,{});nrz(520,900,95,{smile:0.4});fik(720,880,95,{smile:0.5});muz(920,900,95,{sad:0.4,brow:0.5});sandik(540,1320,0.95,false,T);x.restore();
+ B('BÜTÜN AİLE BALKONDA',290,86,'#fff',t);B('SANDIĞIN BAŞINDA 👀',400,90,YEL,t,0.3);}});
+// 3 çeyiz
+sc.push({a:mid(3),f(t,T){const w=W2(3,'naftalin');radial(540,900,1300,'#5a4a2a','#140e04');x.save();zoom(540,1000,1.05+0.05*t);sandik(540,1150,1.4,true,T);naftalin(540,850,T);x.restore();
+ B('ÇEYİZ, MEKTUPLAR... 📜',290,88,'#fff',t);if(T>w-0.15)bigText('NAFTALİN KOKUSU 🤢',540,410,90,YEL,PP(T,3,'naftalin'),-0.03);}});
+// 4 kapatın
+sc.push({a:mid(4),f(t,T){const w=W2(4,'kapatın');radial(540,900,1300,'#5a1a1a','#140404');x.save();if(T>w-0.1)shake(T,w,w+0.6,10);zoom(540,880,1.08+0.05*t);muz(540,900,210,{eyeBig:1.5,mouthOpen:0.7,brow:0.8,angry:0.3});x.restore();
+ B('TEYZEM ATILDI! 🏃‍♀️',290,95,'#fff',t);if(T>w-0.15)bigText('"KAPATIN!" 😱',540,410,120,'#ff5a5a',PP(T,4,'kapatın'),-0.03);}});
+// 5 ozan sarı zarf
+sc.push({a:mid(5),f(t,T){balconyBg();x.save();zoom(540,950,1.05+0.04*t);ozan(380,900,160,{eyeBig:1.3,mouthOpen:0.4});const k=eOut(prog(t,0.3,1.2));sandik(540,1500,0.9,true,T);zarfK(760,1380-k*240,0.9,0.12,'',YZ);x.restore();
+ B('SANDIĞIN DİBİNDEN',290,92,'#fff',t);B('SARI BİR ZARF! ✉️',400,100,YEL,t,0.3);}});
+// 6 Müzeyyen okul
+sc.push({a:mid(6),f(t,T){radial(540,900,1300,'#5a4a1a','#140e04');x.save();zoom(540,900,1.0+0.06*t);zarfK(540,800,2.4,-0.04,'',YZ);x.save();x.translate(540,960);x.rotate(-0.04);x.font=`900 60px ${F}`;x.textAlign='center';x.fillStyle='#3a2a10';x.fillText('MÜZEYYEN — OKUL',0,0);x.restore();x.restore();
+ B('ÜSTÜNDE KOCAMAN:',290,95,'#fff',t);B('"MÜZEYYEN, OKUL" 😳',400,90,YEL,t,0.4);}});
+// 7 uzandı, baston
+sc.push({a:mid(7),f(t,T){const w=W2(7,'Anneannem');balconyBg();x.save();zoom(540,950,1.05+0.04*t);const k=T>w?eOut(prog(T,w,w+0.8)):0;muz(820,900,140,{eyeBig:1.3,mouthOpen:0.4,brow:0.5});fik(250,900,140,{smile:0.4,brow:0.3});cane(420+0*k,1150,0.8);zarfK(620-k*230,1300,0.6,0.1,'',YZ);x.restore();
+ B('TEYZEM UZANDI ✋',290,95,'#fff',t);if(T>w-0.15)bigText('ANNEANNEM: BASTON! 🦯',540,410,82,YEL,PP(T,7,'Anneannem'),-0.03);}});
+// 8 ben okurum
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#2a4a5a','#04101a');x.save();zoom(540,880,1.08+0.05*t);fik(540,900,210,{smile:0.5,brow:0.3,specsDown:true});x.restore();
+ B('"DUR KIZIM."',290,105,'#fff',t);B('"BEN OKURUM." 👓',400,105,YEL,t,0.35);}});
+// 9 ilk karne köşe
+sc.push({a:mid(9),f(t,T){radial(540,900,1300,'#3a3a2a','#0e0e08');x.save();zoom(700,1100,1.0+0.12*t);karne(540,1010,1.2,-0.03,[['TÜRKÇE','3'],['MATEMATİK','2','#d02020'],['FEN','2','#d02020']],null);x.restore();
+ B('İLK KARNE... 📄',290,100,'#fff',t);B('KÖŞEDE KIRMIZI NOT 🖍️',400,85,YEL,t,0.4);}});
+// 10 velisi okula gelsin
+sc.push({a:mid(10),f(t,T){radial(540,900,1300,'#5a1a1a','#140404');x.save();shake(t,0.1,0.8,12);zoom(560,1200,1.15+0.05*t);karne(540,1010,1.2,-0.03,[['TÜRKÇE','3'],['MATEMATİK','2','#d02020'],['FEN','2','#d02020']],'VELİSİ OKULA GELSİN',prog(t,0,0.3)*1);x.restore();
+ bigText('"VELİSİ OKULA',540,290,100,'#fff',prog(t,0.05,0.25),-0.03);bigText('GELSİN!" 😱',540,410,115,'#ff5a5a',prog(t,0.2,0.4),-0.03);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){devamiSaat(t,T,'FİNAL • 15:30 👀','BUGÜN',()=>{radial(540,900,1300,'#5a1a1a','#140404');});}});
+setup(sc,TIM,en(10)+0.1+2.6);
+</script></body></html>

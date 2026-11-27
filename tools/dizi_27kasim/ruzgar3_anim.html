@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="../d26.js"></script><script src="../d27.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const sc=[];
+const LET2=['Bu çit ya kalksın','ya da güzelleştirilsin.','Gerekirse siteye','ÖRNEK OLSUN!','','İmza: NALAN'];
+const cheeks=(T)=>0.3+0.4*Math.abs(Math.sin(T*9));
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.2,6);siteBg();fenceK(1680,{pins:48,T:T,spin:1.5});x.save();zoom(540,950,1.05+0.04*t);rif(300,960,140,{smile:0.9,eyeOpen:0.6});nal(780,980,130,{eyeBig:1.5,mouthOpen:0.6,brow:0.7});ribbon(540,1250,0.9,T,'1.');x.restore();x.restore();vignette(0.3);
+ hook([['BAHÇE ÖDÜLÜNÜ',105,'#fff'],['DAYIMIN ÇİTİ',125,YEL],['ALDI! 🏆',115,'#fff']],270);copBadge(t,3,true);}});
+// 1 jüri geçti durdu
+sc.push({a:mid(1),f(t,T){const w=W2(1,'durdu');siteBg();fenceK(1680,{pins:36,T:T,spin:1});x.save();zoom(540,950,1.0+0.03*t);knockDoor(170,1000,0.6,false);nal(170,900,95,{smile:T<w?0.8:-0.3,eyeBig:T>w?1.4:1,dress:true});const k=eOut(prog(T,0,w));for(let i=0;i<3;i++)juror(i,250+k*480+i*130,980,85,{smile:0.4});x.restore();
+ B('JÜRİ GEÇTİ... 🚶',290,100,'#fff',t);if(T>w-0.15)bigText('DAYIMIN ÇİTİNDE DURDU!',540,410,80,YEL,PP(T,1,'durdu'),-0.03);}});
+// 2 kurdele
+sc.push({a:mid(2),f(t,T){siteBg();fenceK(1680,{pins:36,T:T,spin:1});x.save();zoom(540,900,1.0+0.04*t);ribbon(540,880,1.8*back(prog(t,0.1,0.5)),T,'1.');x.restore();
+ B('KURDELE TAKILDI 🎀',290,95,'#fff',t);bigText('YILIN EN YARATICI BAHÇESİ',540,1560,62,YEL,prog(t,0.6,0.85),0.02);}});
+// 3 Nalan koştu
+sc.push({a:mid(3),f(t,T){const w=W2(3,'kuralsız');radial(540,900,1300,'#5a1a1a','#140404');x.save();shake(t,0,0.8,10);zoom(540,880,1.08+0.05*t);nal(540,900,210,{angry:0.9,brow:0.8,mouthOpen:cheeks(T),red:0.5});x.restore();
+ B('"BU ADİL DEĞİL!" 😡',290,95,'#fff',t);if(T>w-0.15)bigText('"BU ÇİT KURALSIZ!"',540,410,95,'#ff5a5a',PP(T,3,'kuralsız'),-0.03);}});
+// 4 kağıt
+sc.push({a:mid(4),f(t,T){const w=W2(4,'kendi');radial(540,900,1300,'#3a4a2a','#0a1004');x.save();zoom(540,900,1.05+0.04*t);rif(330,900,160,{smile:0.6,eyeOpen:0.7,brow:-0.2});const k=eOut(prog(t,0.3,1.2));sheetX(800,1400-k*280,0.6,0.1,'ŞİKÂYET',['Bu çit ya kalksın','ya da...']);x.restore();
+ B('DAYIM CEBİNDEN...',290,95,'#fff',t);if(T>w-0.15)bigText('ONUN KENDİ MEKTUBU! 📄',540,410,80,YEL,PP(T,4,'kendi'),-0.03);}});
+// 5 okuma
+sc.push({a:mid(5),f(t,T){const w=W2(5,'İmza');radial(540,900,1300,'#3a3a2a','#0e0e08');x.save();zoom(540,1100,1.0+0.05*t);sheetX(540,1000,1.2,-0.03,'ŞİKÂYET',LET2);x.restore();
+ B('"GÜZELLEŞTİRİLSİN.',290,90,'#fff',t);B('SİTEYE ÖRNEK OLSUN."',400,85,YEL,t,0.4);if(T>w-0.15)bigText('İMZA: NALAN ✍️',540,1580,90,'#ff5a5a',PP(T,5,'İmza'),0.02);}});
+// 6 panoya astı
+sc.push({a:mid(6),f(t,T){const w=W2(6,'dördüncü');siteBg();x.save();zoom(540,950,1.0+0.03*t);sitePano(540,800,1.0,T,()=>{sheetX(0,40,0.45,-0.04,'ŞİKÂYET',['Bu çit ya kalksın','...','İmza: NALAN']);});for(let i=0;i<3;i++)juror(i,240+i*300,1250,85,{smile:1,mouthOpen:cheeks(T+i*0.3)});x.restore();
+ B('JÜRİ PANOYA ASTI 📌',290,90,'#fff',t);if(T>w-0.15)bigText('NALAN DÖRDÜNCÜ BİLE DEĞİL! 😂',540,1580,60,YEL,PP(T,6,'dördüncü'),0.02);}});
+// 7 site grubu
+sc.push({a:mid(7),f(t,T){radial(540,900,1300,'#2a3a5a','#060a14');x.save();zoom(540,950,1.0+0.03*t);phoneUI(540,850,1.15,'SİTE GRUBU',[{n:'Komşu',sz:40,t:'Yılın tavsiyesi 😂',p:prog(t,0.1,0.5)},{n:'Komşu',sz:40,t:'"Gerekirse örnek|olsun!" 🌀',p:prog(t,0.8,1.2)}],T);x.restore();
+ B('SİTE GRUBUNDA 📱',290,95,'#fff',t);B('YILIN TAVSİYESİ!',400,95,YEL,t,0.3);}});
+// 8 tek rüzgâr gülü
+sc.push({a:mid(8),f(t,T){siteBg('#ffe8c0');x.save();zoom(540,1000,1.0+0.04*t);knockDoor(620,1000,0.85,false);const k=eOut(prog(t,0,1.0));rif(250+k*0,920,130,{smile:0.8});pinwheel(860,1180,1.0*back(prog(t,0.8,1.3)),T,'#e04040',1);x.restore();
+ B('ERTESİ HAFTA',290,105,'#fff',t);B('KAPISINA TEK RÜZGÂR GÜLÜ 🌀',400,70,YEL,t,0.3);}});
+// 9 sıra sende
+sc.push({a:mid(9),f(t,T){const w=W2(9,'Sıra');radial(540,900,1300,'#5a4a1a','#140e04');x.save();zoom(540,900,1.0+0.05*t);pinwheel(540,800,2.6,T,'#e04040',0.8);if(T>w-0.1){x.fillStyle='#fff6e0';rr(290,1330,500,120,12);x.fill();x.font=`900 72px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#5a3a1a';x.fillText('SIRA SENDE',540,1392);}x.restore();
+ B('LEVHADA İKİ KELİME:',290,88,'#fff',t);if(T>w-0.15)bigText('"SIRA SENDE." 😏',540,410,110,YEL,PP(T,9,'Sıra'),-0.03);}});
+// 10 soru
+sc.push({a:mid(10),f(t,T){radial(540,900,1300,'#5a4a1a','#140e04');x.save();zoom(540,900,1.05+0.04*t);rif(320,900,150,{smile:0.9,eyeOpen:0.6});yeg(780,920,145,{smile:0.6});x.restore();
+ B('SENCE DAYIM',290,105,'#fff',t);B('FAZLA MI İLERİ GİTTİ? 🤔',410,78,YEL,t,0.2);}});
+sc.push({a:en(10)+0.1,noCap:true,f(t,T){radial(540,900,1300,'#5a4a1a','#140e04');bigText('TAKİP ET',540,600,150,YEL,prog(t,0,0.25),-0.04);eyesIcon(540,820,1.0,T);followBtn(540,1000,T,1.3*back(prog(t,0.15,0.45)));}});
+setup(sc,TIM,en(10)+0.1+1.5);
+</script></body></html>

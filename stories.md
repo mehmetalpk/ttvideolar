@@ -92,3 +92,9 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-26 | Babam kombiye şifre koydu (Babamın Kombi Yasağı) [Part 1] | özgün | komedi/seri | Emrullah | 28.6 sn | 18:00 | 3563685803130241301 | hat B
 - 2026-11-26 | Elektrik sayacımız her gece fırlıyordu (Babamın Kombi Yasağı) [Part 2] | özgün | komedi/seri | Emrullah | 29.9 sn | 20:30 | 7735935882810310864 | hat B
 - 2026-11-26 | Babamın odasından gizli ısıtıcı çıktı (Babamın Kombi Yasağı) [Part 3 FİNAL] | özgün | komedi/seri | Emrullah | 31.1 sn | 22:30 | -1007148358857241738 | hat B
+- 2026-11-27 | Teyzem bayram harçlığını karneye göre veriyor (Teyzemin Karne Harçlığı) [Part 1] | özgün | komedi/seri | İrem | 40.1 sn | 10:30 | -4424392130172008034 | hat A
+- 2026-11-27 | Anneannemin sandığını bayramda açtık (Teyzemin Karne Harçlığı) [Part 2] | özgün | komedi/seri | İrem | 31.6 sn | 11:30 | 6453016619431839205 | hat A
+- 2026-11-27 | Teyzemin karnesi bayram sofrasında okundu (Teyzemin Karne Harçlığı) [Part 3 FİNAL] | özgün | komedi/seri | İrem | 39.4 sn | 15:30 | -2325938250636376979 | hat A
+- 2026-11-27 | Komşumuz dayımın çitine şikâyet yazdı (Dayımın Rüzgâr Gülleri) [Part 1] | Reddit | komedi/seri | Emrullah | 33.6 sn | 17:00 | -2600740937435623458 | hat B
+- 2026-11-27 | Dayım çitine 60 rüzgâr gülü dizdi (Dayımın Rüzgâr Gülleri) [Part 2] | Reddit | komedi/seri | Emrullah | 30.6 sn | 19:00 | 1974821199267776098 | hat B
+- 2026-11-27 | Bahçe ödülünü dayımın çiti aldı (Dayımın Rüzgâr Gülleri) [Part 3 FİNAL] | Reddit | komedi/seri | Emrullah | 34.5 sn | 21:00 | -848243896370442648 | hat B

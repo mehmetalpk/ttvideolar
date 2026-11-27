@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="../d26.js"></script><script src="../d27.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const sc=[];
+const cheeks=(T)=>0.3+0.3*Math.abs(Math.sin(T*9));
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.2,6);homeBay();x.save();zoom(540,950,1.05+0.04*t);muz(700,900,160,{smile:0.7,mouthOpen:0.4,brow:0.4});zarfK(780,1330,0.8,-0.1,'TAM');halfZarf(560,1360,0.8,0.12);nrz(290,940,150,{eyeBig:1.4,mouthOpen:0.6,brow:0.6,angry:0.3});x.restore();x.restore();vignette(0.35);
+ hook([['TEYZEM HARÇLIĞI',105,'#fff'],['KARNEYE GÖRE',130,YEL],['VERİYOR! 📒',105,'#fff']],270);copBadge(t,1);}});
+// 1 zarflar masaya
+sc.push({a:mid(1),f(t,T){homeBay();x.save();zoom(540,1000,1.0+0.04*t);muz(540,820,150,{smile:0.5});feastTable(1150);const n=Math.floor(prog(t,0.2,1.8)*5);for(let i=0;i<n;i++)zarfK(190+i*175,1120,0.5,(i-2)*0.06,'');x.restore();
+ B('BAYRAM SABAHI 🍬',290,95,'#fff',t);B('MÜZEYYEN TEYZEM',400,100,YEL,t,0.3);}});
+// 2 defter
+sc.push({a:mid(2),f(t,T){radial(540,900,1300,'#5a4a2a','#140e04');x.save();zoom(540,860,1.0+0.04*t);sheetX(540,860,1.3,-0.03,'ORTALAMALAR',['Ozan ......... 4,2','Kuzen ........ 3,9','Ben .......... 2,8']);x.restore();
+ B('ELİNDE BİR DEFTER 📒',290,90,'#fff',t);B('HERKESİN NOTU YAZILI!',400,80,YEL,t,0.3);}});
+// 3 Ozan tam zarf
+sc.push({a:mid(3),f(t,T){homeBay();x.save();zoom(540,900,1.05+0.04*t);ozan(380,900,160,{smile:0.9,mouthOpen:0.3});const k=back(prog(t,0.3,0.7));zarfK(760,1180,0.9*k,0.1,'TAM');x.restore();
+ B('"OZAN: 4,2"',290,100,'#fff',t);B('TAM ZARF! ✉️',400,110,'#5ad07a',t,0.3);}});
+// 4 yarım zarf
+sc.push({a:mid(4),f(t,T){const w=W2(4,'Yarım');radial(540,900,1300,'#5a2a2a','#140606');x.save();zoom(540,900,1.05+0.04*t);nrz(360,900,160,{sad:0.6,brow:0.5,mouthOpen:0.3});if(T>w-0.1)halfZarf(780,1180,1.0,0.1);x.restore();
+ B('"SEN 2,8 Mİ?"',290,105,'#fff',t);if(T>w-0.15)bigText('YARIM ZARF! ✂️',540,410,105,'#ff5a5a',PP(T,4,'Yarım'),-0.03);}});
+// 5 dörtlük sistem
+sc.push({a:mid(5),f(t,T){const w=W2(5,'Üniversitedeyim');radial(540,900,1300,'#3a3a5a','#0a0a14');x.save();zoom(540,880,1.06+0.04*t);nrz(540,900,200,{eyeOpen:0.45,smile:-0.2,brow:-0.3});x.restore();
+ B('BENİMKİ 4 ÜZERİNDEN 🙄',290,82,'#fff',t);if(T>w-0.15)bigText('ÜNİVERSİTEDEYİM! 🎓',540,410,90,YEL,PP(T,5,'Üniversitedeyim'),-0.03);}});
+// 6 bizim zamanımızda
+sc.push({a:mid(6),f(t,T){const w=W2(6,'Şimdiki');homeBay();x.save();zoom(540,900,1.06+0.04*t);muz(540,920,190,{smile:0.6,mouthOpen:cheeks(T),brow:0.3});x.restore();
+ B('"BİZİM ZAMANIMIZDA',290,85,'#fff',t);B('HEP BEŞTİ!" ⭐',400,105,YEL,t,0.3);if(T>w-0.15)bigText('"GENÇLER TEMBEL!"',540,1480,85,'#ff5a5a',PP(T,6,'Şimdiki'),0.03);}});
+// 7 teyzeler gülüştü, annem
+sc.push({a:mid(7),f(t,T){const w=W2(7,'Annem');homeBay();x.save();zoom(540,1000,1.0+0.03*t);sevim(200,880,105,{smile:1,mouthOpen:cheeks(T)});muz(430,860,115,{smile:1,mouthOpen:cheeks(T+0.3)});nurten(660,880,100,{smile:1,mouthOpen:cheeks(T+0.6)});leyla(890,900,105,{lookDown:1,sad:0.6});feastTable(1150);x.restore();
+ B('TEYZELER GÜLÜŞTÜ 😂',290,90,'#fff',t);if(T>w-0.15)bigText('ANNEM BAŞINI EĞDİ 😔',540,410,82,YEL,PP(T,7,'Annem'),-0.03);}});
+// 8 yarım zarfı aldım
+sc.push({a:mid(8),f(t,T){radial(540,900,1300,'#2a5a5a','#041010');x.save();zoom(540,880,1.06+0.04*t);nrz(540,860,190,{smile:0.3,eyeOpen:0.6,brow:-0.2});halfZarf(820,1260,0.8,-0.15);x.restore();
+ B('YARIM ZARFI ALDIM',290,92,'#fff',t);B('SAKİN SAKİN 😇',400,105,YEL,t,0.3);}});
+// 9 senin karnelerin
+sc.push({a:mid(9),f(t,T){homeBay();x.save();zoom(540,920,1.06+0.04*t);nrz(300,930,160,{smile:0.8,mouthOpen:0.3,blush:true});muz(790,930,150,{smile:0.2,eyeBig:1.2});x.restore();bubble(540,580,900,150,'"Senin karnelerini görebilir miyiz?"',56,'#fff',320);
+ B('"PEKİ TEYZE..." 😇',290,95,YEL,t);}});
+// 10 hepsi kaldırıldı
+sc.push({a:mid(10),f(t,T){radial(540,900,1300,'#5a1a1a','#140404');x.save();shake(t,0,0.6,8);zoom(540,880,1.08+0.05*t);muz(540,900,210,{eyeBig:1.5,mouthOpen:0.6,brow:0.7});x.restore();
+ B('"HEPSİ KALDIRILDI!"',290,92,'#fff',t);B('"ÇOK ESKİ ONLAR!" 😰',400,90,'#ff5a5a',t,0.4);}});
+// 11 anneanneye döndüm
+sc.push({a:mid(11),f(t,T){const w=W2(11,'eski');homeBay();x.save();zoom(540,950,1.05+0.04*t);nrz(280,920,150,{smile:0.7,look:0.5});fik(770,900,160,{smile:0.2});knit(780,1330,0.8,T);x.restore();
+ B('"ANNEANNE..."',290,100,'#fff',t);if(T>w-0.15)bigText('"SANDIĞIN ANAHTARI?" 🗝️',540,410,80,YEL,PP(T,11,'eski'),-0.03);}});
+// 12 gülümsedi
+sc.push({a:mid(12),f(t,T){const w=W2(12,'gülümsedi');radial(540,900,1300,'#5a4a1a','#140e04');x.save();zoom(540,900,1.1+0.06*t);const sm=T>w-0.1?1:0;fik(540,880,210,{smile:sm,eyeOpen:sm?0.55:1,brow:sm?-0.3:0});knit(540-prog(t,0,0.8)*0+250,1350+prog(t,0,0.8)*120,0.7,T);x.restore();
+ B('ÖRGÜSÜNÜ BIRAKTI 🧶',290,92,'#fff',t);if(T>w-0.15)bigText('VE GÜLÜMSEDİ 😏',540,410,110,YEL,PP(T,12,'gülümsedi'),-0.03);}});
+sc.push({a:en(12)+0.1,noCap:true,f(t,T){devamiSaat(t,T,'PART 2 • 11:30 👀','1 SAAT SONRA',()=>{radial(540,900,1300,'#5a4a1a','#140e04');});}});
+setup(sc,TIM,en(12)+0.1+3.3);
+</script></body></html>
