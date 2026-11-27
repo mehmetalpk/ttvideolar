@@ -1,0 +1,20 @@
+function trk(t){x.fillStyle=grad(0,H,['#2a3a5a','#121a2a']);x.fillRect(0,0,W,H);crowd(200,640,t,['#fff','#c1121f','#2a5cff','#ffd23f']);x.fillStyle='#b44a2a';x.fillRect(0,660,W,H-660);x.strokeStyle='rgba(255,255,255,0.8)';x.lineWidth=5;for(let i=0;i<6;i++){x.beginPath();x.moveTo(0,720+i*60);x.lineTo(W,720+i*60);x.stroke();}}
+function rn(cx,base,s,col,t){player(cx,base,s,col,'#111',t*9);}
+function tbox(txt,cy,col='#ff4d4d',sz=170){x.save();x.fillStyle='#111';rr(190,cy-130,700,260,30);x.fill();x.strokeStyle='#ffd23f';x.lineWidth=6;rr(190,cy-130,700,260,30);x.stroke();x.fillStyle=col;x.font=`900 ${sz}px monospace`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,540,cy+10);x.restore();}
+function tape(cx){x.fillStyle='#fff';x.fillRect(cx-6,660,12,360);}
+function shoe(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#ffd23f';x.beginPath();x.moveTo(-260,40);x.quadraticCurveTo(-260,-120,-100,-140);x.lineTo(60,-90);x.quadraticCurveTo(260,-40,270,40);x.closePath();x.fill();x.fillStyle='#111';x.fillRect(-270,40,550,40);x.fillStyle='#0b7a3b';for(let i=0;i<6;i++)x.fillRect(-240+i*90,80,40,30);x.strokeStyle='#fff';x.lineWidth=12;x.lineCap='round';x.beginPath();x.moveTo(-60,-120);x.bezierCurveTo(-120,40+Math.sin(t*5)*30,-40,120,-160+Math.sin(t*4)*40,200);x.moveTo(-20,-110);x.bezierCurveTo(60,40+Math.cos(t*5)*30,0,140,90+Math.sin(t*3)*40,210);x.stroke();x.restore();}
+function armsOpen(cx,base,s,col,t){player(cx,base,s,col,col,t*9);x.save();x.strokeStyle='#2a1a10';x.lineWidth=24*s;x.lineCap='round';x.beginPath();x.moveTo(cx-30*s,base-290*s);x.lineTo(cx-160*s,base-360*s);x.moveTo(cx+30*s,base-290*s);x.lineTo(cx+160*s,base-360*s);x.stroke();x.restore();}
+// 0 kanca
+shot(0,0,t=>{trk(t);rn(540,1000,1.2,'#ffd23f',t);bigText('BAĞCIĞI ÇÖZÜKTÜ',W/2,280,96,'#fff',1);bigText('DÜNYA REKORU KIRDI',W/2,410,86,'#ffd23f',1);});
+// 1 2008 pekin
+shot(1,1,t=>{night();yearStamp('2008','PEKİN · 100 M FİNALİ',eOut(cl(t*2)),600);if(t>3)badge(540,920,'21 YAŞINDA · USAIN BOLT','#0b7a3b',(t-3)*3);});
+// 2 bağcık
+shot(2,2,t=>{night();rays(540,700,t,'rgba(255,255,255,0.08)');shoe(540,720,1.4,t);bigText('BAĞCIK ÇÖZÜK!',W/2,300,110,'#ff4d4d',eOut(cl(t*3)));});
+// 3 silah patladı
+shot(3,3,t=>{trk(t);const cols=['#2a5cff','#c1121f','#0b7a3b','#ff8a00','#fff'];for(let i=0;i<5;i++)rn(120+t*120+i*20,1000-i*20,0.75,cols[i],t+i);rn(380+t*230,1000,0.9,'#ffd23f',t*1.4);bigText('BANG!',W/2,300,150,'#fff',back(cl(t*3)));});
+// 4 erken kutlama
+shot(4,4,t=>{trk(t);tape(900);armsOpen(620+t*60,1000,1.0,'#ffd23f',t);for(let i=0;i<3;i++)rn(150+i*90+t*40,980-i*20,0.7,['#2a5cff','#c1121f','#fff'][i],t+i);bigText('ERKEN KUTLAMA',W/2,300,104,'#ffd23f',eOut(cl(t*3)));});
+// 5 9.69 dünya rekoru
+shot(5,5,t=>{night();rays(540,640,t,'rgba(255,210,63,0.18)');confetti(t);tbox('9.69',620,'#ffd23f',190);badge(540,880,'DÜNYA REKORU','#c1121f',t*3);});
+// 6 outro
+shot(6,6,t=>outro(t,0,'#13213f','#060b18'));

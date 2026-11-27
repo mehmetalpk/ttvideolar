@@ -1,0 +1,9 @@
+[intense] Rakibinin tavsiyesiyle altın madalya kazandı.
+
+[serious] Bin dokuz yüz otuz altı, Berlin Olimpiyatları. Jesse Owens uzun atlama elemesinde iki kez faul yaptı. || 1936 Berlin Olimpiyatları. Jesse Owens uzun atlama elemesinde 2 kez faul yaptı.
+[curious] Bir hakkı daha giderse elenecekti. Anlatılana göre yanına Alman rakibi Luz Long geldi.
+Çizgiden biraz önce sıçra, dedi. Owens finale kaldı. || "Çizgiden biraz önce sıçra" dedi. Owens finale kaldı.
+[intense] Finalde altını Owens aldı, gümüşü Long. Onu ilk tebrik eden de Long oldu.
+[serious] Owens o olimpiyatı dört altınla bitirdi. Ama yıllarca en çok bu dostluğu anlattı. || Owens o olimpiyatı 4 altınla bitirdi. Ama yıllarca en çok bu dostluğu anlattı.
+
+[softly] Kaçırmamak için takip et.

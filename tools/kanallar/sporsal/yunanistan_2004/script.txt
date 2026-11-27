@@ -1,0 +1,9 @@
+[intense] Kimse şans vermedi, Avrupa şampiyonu oldular.
+
+[serious] İki bin dört Avrupa Şampiyonası. Yunanistan daha önce büyük bir turnuvada hiç maç kazanamamıştı. || 2004 Avrupa Şampiyonası. Yunanistan daha önce büyük bir turnuvada hiç maç kazanamamıştı.
+Bahisçiler onlara yüz elliye bir oran veriyordu. || Bahisçiler onlara 150'ye 1 oran veriyordu.
+[curious] Açılış maçında ev sahibi Portekiz'i yendiler. Sonra Fransa'yı, sonra Çekya'yı.
+[intense] Finalde rakip yine Portekiz'di. Elli yedinci dakika, Haristeas'ın kafası! || Finalde rakip yine Portekiz'di. 57. dakika, Haristeas'ın kafası!
+[serious] Bir sıfır. Yunanistan, Avrupa'nın zirvesine çıktı. || 1-0. Yunanistan, Avrupa'nın zirvesine çıktı.
+
+[softly] Kaçırmamak için takip et.

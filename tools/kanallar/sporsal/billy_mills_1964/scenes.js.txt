@@ -1,0 +1,19 @@
+function trk(t){x.fillStyle=grad(0,H,['#2a3a5a','#121a2a']);x.fillRect(0,0,W,H);crowd(200,640,t,['#fff','#c1121f','#2a5cff','#ffd23f']);x.fillStyle='#b44a2a';x.fillRect(0,660,W,H-660);x.strokeStyle='rgba(255,255,255,0.8)';x.lineWidth=5;for(let i=0;i<6;i++){x.beginPath();x.moveTo(0,720+i*60);x.lineTo(W,720+i*60);x.stroke();}}
+function rn(cx,base,s,col,t){player(cx,base,s,col,'#111',t*9);}
+function tbox(txt,cy,col='#ff4d4d',sz=170){x.save();x.fillStyle='#111';rr(190,cy-130,700,260,30);x.fill();x.strokeStyle='#ffd23f';x.lineWidth=6;rr(190,cy-130,700,260,30);x.stroke();x.fillStyle=col;x.font=`900 ${sz}px monospace`;x.textAlign='center';x.textBaseline='middle';x.fillText(txt,540,cy+10);x.restore();}
+function tape(cx){x.fillStyle='#fff';x.fillRect(cx-6,660,12,360);}
+function pack(t,lead,hi){const cols=['#2a5cff','#c1121f','#0b7a3b','#ffd23f','#ff8a00'];for(let i=0;i<5;i++){const cx=180+i*150+(i===hi?lead:0);rn(cx,1000-(i%2)*30,0.85,i===hi?'#fff':cols[i],t+i);}}
+// 0 kanca
+shot(0,0,t=>{trk(t);pack(t,0,4);bigText('KİMSE TANIMIYORDU',W/2,280,90,'#fff',1);bigText('ŞAMPİYON OLDU',W/2,410,100,'#ffd23f',1);});
+// 1 1964 tokyo, ron clarke
+shot(1,1,t=>{night();yearStamp('1964','TOKYO · 10.000 M',eOut(cl(t*2)),600);if(t>2.2)badge(540,920,'FAVORİ: RON CLARKE','#c1121f',(t-2.2)*3);});
+// 2 billy mills
+shot(2,2,t=>{trk(t);pack(t,0,4);x.fillStyle='#ffd23f';x.font=`900 140px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('?',780,720+Math.sin(t*4)*10);badge(540,300,'BILLY MILLS','#111',(t-1.5)*3);bigText('ADI BİLİNMEYEN',W/2,440,90,'#fff',eOut(cl(t*3)));});
+// 3 son tur itildi
+shot(3,3,t=>{trk(t);pack(t,-Math.min(1,t)*420,4);bigText('SON TUR',W/2,280,120,'#fff',eOut(cl(t*3)));bigText('3.',W/2,450,150,'#ff4d4d',eOut(cl((t-0.6)*3)));});
+// 4 son düzlük, olimpiyat rekoru
+shot(4,4,t=>{trk(t);const k=cl(t/2);tape(900);rn(760-k*0,1000,0.85,'#c1121f',t);rn(700,970,0.85,'#2a5cff',t+1);const mx=300+k*580;x.strokeStyle='rgba(255,255,255,0.6)';x.lineWidth=6;for(let i=0;i<4;i++){x.beginPath();x.moveTo(mx-80-i*30,860+i*30);x.lineTo(mx-200-i*30,860+i*30);x.stroke();}rn(mx,1000,0.95,'#fff',t*1.5);if(k>=1)confetti(t);bigText(k<1?'SON DÜZLÜK':'OLİMPİYAT REKORU',W/2,320,k<1?120:90,'#ffd23f',1);});
+// 5 tek amerikalı
+shot(5,5,t=>{night();rays(540,640,t,'rgba(255,210,63,0.18)');medal(540,640,150,t,'ALTIN');bigText('HÂLÂ TEK',W/2,300,120,'#ffd23f',eOut(cl(t*3)));bigText('AMERİKALI',W/2,920,96,'#fff',eOut(cl((t-0.6)*3)));});
+// 6 outro
+shot(6,6,t=>outro(t,0,'#13213f','#060b18'));

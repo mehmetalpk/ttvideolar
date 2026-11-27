@@ -1,0 +1,17 @@
+const GRK=['#0d5eaf','#fff','#111'];
+function slip(cx,cy,t){x.save();x.translate(cx,cy);x.rotate(-0.06+Math.sin(t)*0.02);x.fillStyle='#f5f1e6';rr(-300,-230,600,460,24);x.fill();x.fillStyle='#0d5eaf';x.fillRect(-300,-230,600,90);x.fillStyle='#fff';x.font=`900 56px ${F}`;x.textAlign='center';x.textBaseline='middle';x.fillText('KUPON',0,-185);x.fillStyle='#111';x.font=`800 40px ${F}`;x.fillText('YUNANİSTAN ŞAMPİYON',0,-80);x.fillStyle='#c1121f';x.font=`900 170px monospace`;x.fillText('150/1',0,70);x.restore();}
+function row(txt,cy,p,i){if(p<=0)return;x.save();x.globalAlpha=cl(p*2);x.fillStyle='#111';rr(170,cy-70,740,140,22);x.fill();x.fillStyle='#fff';x.font=`900 64px ${F}`;x.textAlign='left';x.textBaseline='middle';x.fillText(txt,220,cy+4);x.fillStyle='#2ecc71';x.font=`900 80px ${F}`;x.textAlign='center';x.fillText('✓',830,cy+4);x.restore();}
+// 0 kanca
+shot(0,0,t=>{stadium(t,GRK);trophy(540,800,1.6);player(270,1000,0.9,'#0d5eaf','#fff',t*6);player(810,1000,0.9,'#0d5eaf','#fff',t*6+1);bigText('KİMSE ŞANS VERMEDİ',W/2,280,84,'#fff',1);bigText('AVRUPA ŞAMPİYONU',W/2,410,92,'#ffd23f',1);});
+// 1 2004
+shot(1,1,t=>{night();yearStamp('2004','AVRUPA ŞAMPİYONASI',eOut(cl(t*2)),600);if(t>2)bigText('HİÇ GALİBİYET YOKTU',W/2,920,72,'#ff4d4d',eOut(cl((t-2)*3)));});
+// 2 150/1
+shot(2,2,t=>{night();rays(540,640,t,'rgba(255,255,255,0.08)');slip(540,620,t);bigText('ORAN',W/2,260,120,'#ffd23f',eOut(cl(t*3)));});
+// 3 portekiz fransa çekya
+shot(3,3,t=>{stadium(t,GRK);bigText('YUNANİSTAN YENDİ',W/2,250,90,'#ffd23f',eOut(cl(t*3)));row('PORTEKİZ',420,t*2,0);row('FRANSA',590,(t-1.2)*2,1);row('ÇEKYA',760,(t-2.2)*2,2);});
+// 4 57. dk kafa
+shot(4,4,t=>{stadium(t,['#c8102e','#006600','#fff']);goalNet(540,1000,1.2,cl((t-1.2)*2));const k=cl(t/1.2);player(430,1000-90*Math.sin(Math.min(1,t/0.9)*Math.PI),0.95,'#0d5eaf','#fff',0);ballS(200+k*260,700+k*170-Math.sin(k*Math.PI)*120,30,t*8);if(t>1.2)ballS(560+cl((t-1.2)*2)*150,900,30,t*8);badge(540,290,"57' · HARİSTEAS",'#0d5eaf',t*3);bigText('GOL!',W/2,460,170,'#ffd23f',back(cl((t-1.2)*2.5)));});
+// 5 1-0 şampiyon
+shot(5,5,t=>{night();rays(540,640,t,'rgba(255,210,63,0.18)');trophy(540,560,2.2);confetti(t);score(1,0,'YUNANİSTAN','PORTEKİZ',cl((t-0.3)*3),880);bigText('AVRUPA ŞAMPİYONU',W/2,270,96,'#ffd23f',eOut(cl(t*3)));});
+// 6 outro
+shot(6,6,t=>outro(t,0,'#13213f','#060b18'));

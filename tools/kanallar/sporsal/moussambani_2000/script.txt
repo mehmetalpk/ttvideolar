@@ -1,0 +1,9 @@
+[intense] Elli metrelik havuzu ilk kez olimpiyatta gördü. || 50 metrelik havuzu ilk kez olimpiyatta gördü.
+
+[serious] İki bin, Sidney Olimpiyatları. Ekvator Ginesi'nden Eric Moussambani, yüz metre serbestte. || 2000 Sidney Olimpiyatları. Ekvator Ginesi'nden Eric Moussambani, 100 metre serbestte.
+Ülkesinde antrenman yapabildiği tek yer küçük bir otel havuzuydu.
+[curious] Serideki iki rakibi erken çıkış yapıp diskalifiye oldu. Eric havuzda tek başına kaldı. || Serideki 2 rakibi erken çıkış yapıp diskalifiye oldu. Eric havuzda tek başına kaldı.
+[intense] Son metrelerde neredeyse batıyordu. Binlerce seyirci ayağa kalkıp onu destekledi.
+[serious] Bir dakika elli iki saniyeyle serisini kazandı. Olimpiyat tarihinin en yavaş yüz metre serbest derecesiyle! || 1:52.72 ile serisini kazandı. Olimpiyat tarihinin en yavaş 100 metre serbest derecesiyle!
+
+[softly] Kaçırmamak için takip et.

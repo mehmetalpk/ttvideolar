@@ -1,0 +1,16 @@
+function pit(t){x.fillStyle=grad(0,640,['#6a8fc0','#c9dcf0']);x.fillRect(0,0,W,H);crowd(220,640,t,['#fff','#c1121f','#111','#ffd23f']);x.fillStyle='#b44a2a';x.fillRect(0,660,W,H-660);x.fillStyle='#e8cf8a';x.fillRect(560,700,520,330);x.fillStyle='#fff';x.fillRect(500,700,30,330);}
+function jumper(cx,base,s,col,t){player(cx,base,s,col,'#fff',t*9);}
+// 0 kanca
+shot(0,0,t=>{pit(t);sil(300,1000,2.2,'#3a2416');sil(760,1000,2.2,'#e8e8e8');bigText('RAKİBİNİN TAVSİYESİ',W/2,280,84,'#fff',1);bigText('ALTIN GETİRDİ',W/2,410,100,'#ffd23f',1);});
+// 1 1936 berlin iki faul
+shot(1,1,t=>{night();yearStamp('1936','BERLİN · UZUN ATLAMA',eOut(cl(t*2)),560);if(t>2.6){stampX(360,880,0.8,cl((t-2.6)*3));stampX(720,880,0.8,cl((t-3.2)*3));bigText('FAUL',360,880,60,'#fff',cl((t-2.6)*3));bigText('FAUL',720,880,60,'#fff',cl((t-3.2)*3));}});
+// 2 son hak, luz long
+shot(2,2,t=>{pit(t);sil(380,1000,2.3,'#3a2416');sil(640+Math.max(0,1.5-t)*200,1000,2.3,'#e8e8e8');bigText('SON HAK',W/2,280,120,'#ff4d4d',eOut(cl(t*3)));if(t>2)badge(540,430,'LUZ LONG','#111',(t-2)*3);});
+// 3 çizgiden önce sıçra
+shot(3,3,t=>{pit(t);x.strokeStyle='#ffd23f';x.lineWidth=10;x.setLineDash([24,16]);x.beginPath();x.moveTo(440,700);x.lineTo(440,1030);x.stroke();x.setLineDash([]);const k=cl(t/1.8);const jx=120+k*800;const jy=1000-(jx>440?Math.sin(cl((jx-440)/440)*Math.PI)*260:0);jumper(jx,jy,0.9,'#ffffff',t);bigText('ÇİZGİDEN ÖNCE',W/2,280,100,'#fff',eOut(cl(t*3)));bigText('SIÇRA',W/2,410,130,'#ffd23f',eOut(cl((t-0.3)*3)));});
+// 4 altın owens gümüş long
+shot(4,4,t=>{night();x.save();x.translate(0,-400);podium(1,t);sil(540,1180,1.8,'#3a2416');sil(300,1240,1.8,'#e8e8e8');x.restore();medal(540,330,55,t,'ALTIN');medal(300,400,50,t,'GÜMÜŞ');bigText('İLK TEBRİK',W/2,200,100,'#ffd23f',eOut(cl((t-0.8)*3)));});
+// 5 4 altın, dostluk
+shot(5,5,t=>{night();rays(540,640,t,'rgba(255,210,63,0.16)');['100 M','200 M','UZUN','4X100'].forEach((m,i)=>medal(180+i*240,600,90,t+i,m));bigText('4 ALTIN',W/2,300,130,'#ffd23f',eOut(cl(t*3)));bigText('VE BİR DOSTLUK',W/2,880,90,'#fff',eOut(cl((t-1.5)*3)));});
+// 6 outro
+shot(6,6,t=>outro(t,0,'#13213f','#060b18'));

@@ -1,0 +1,9 @@
+[intense] Dört dakikanın altı imkânsız sanılıyordu. || 4 dakikanın altı imkânsız sanılıyordu.
+
+[serious] Yıllarca bir mili dört dakikanın altında koşmanın imkânsız olduğu söylendi. || Yıllarca 1 mili 4 dakikanın altında koşmanın imkânsız olduğu söylendi.
+Bin dokuz yüz elli dört, altı Mayıs, Oxford. Tıp öğrencisi Roger Bannister piste çıktı. || 6 Mayıs 1954, Oxford. Tıp öğrencisi Roger Bannister piste çıktı.
+[curious] Hava rüzgârlıydı. Koşmaktan neredeyse vazgeçiyordu.
+[intense] Spiker sonucu okumaya başladı: Üç dakika... Gerisi alkıştan duyulmadı. Üç elli dokuz dört! || Spiker okumaya başladı: "Üç dakika..." Gerisi alkıştan duyulmadı. 3:59.4!
+[serious] Sadece kırk altı gün sonra rekoru başkası kırdı. Duvar bir kez yıkılınca, arkasından herkes geçti. || Sadece 46 gün sonra rekoru başkası kırdı. Duvar bir kez yıkılınca, arkasından herkes geçti.
+
+[softly] Kaçırmamak için takip et.
