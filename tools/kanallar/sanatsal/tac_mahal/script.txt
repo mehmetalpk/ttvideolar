@@ -1,0 +1,10 @@
+[intense] Bir aşk için yirmi bin işçi çalıştı. || Bir aşk için 20.000 işçi çalıştı.
+
+[sad] Bin altı yüz otuz bir. Babür İmparatoru Şah Cihan'ın eşi Mümtaz Mahal, on dördüncü çocuğunu doğururken öldü. || 1631. Babür İmparatoru Şah Cihan'ın eşi Mümtaz Mahal, 14. çocuğunu doğururken öldü.
+[serious] Şah Cihan, ona dünyanın en güzel mezarını yaptırmaya karar verdi.
+[intense] Yaklaşık yirmi bin işçi, beyaz mermer ve değerli taşlarla yirmi yıldan fazla çalıştı. Ortaya Tac Mahal çıktı. || Yaklaşık 20.000 işçi, beyaz mermer ve değerli taşlarla 20 yıldan fazla çalıştı. Ortaya Tac Mahal çıktı.
+[sad] Ama hikâye mutlu bitmedi. Oğlu tahtı ele geçirdi ve Şah Cihan'ı Agra Kalesi'ne hapsetti.
+[softly] Anlatılana göre son yıllarını, pencereden Tac Mahal'e bakarak geçirdi. Öldüğünde, eşinin yanına gömüldü.
+Sence aşk, bir imparatorluğa değer mi?
+
+[softly] Kaçırmamak için takip et.

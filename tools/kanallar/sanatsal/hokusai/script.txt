@@ -1,0 +1,10 @@
+[intense] Başyapıtını yetmiş yaşından sonra yaptı. || Başyapıtını 70 yaşından sonra yaptı.
+
+[serious] Japon ressam Hokusai, altı yaşından beri resim yapıyordu. Ama kendini hiç yeterli görmedi. || Japon ressam Hokusai, 6 yaşından beri resim yapıyordu. Ama kendini hiç yeterli görmedi.
+[intense] Yetmiş yaşını geçince Büyük Dalga'yı yaptı. Bugün dünyanın en tanınan resimlerinden biri. || 70 yaşını geçince Büyük Dalga'yı yaptı. Bugün dünyanın en tanınan resimlerinden biri.
+[curious] Hokusai ise şöyle yazdı: Yetmiş yaşından önce yaptığım hiçbir şey kayda değer değil. || Hokusai ise şöyle yazdı: "70 yaşından önce yaptığım hiçbir şey kayda değer değil."
+[serious] Yüz on yaşında, her nokta ve her çizgi canlı olacak. || "110 yaşında, her nokta ve her çizgi canlı olacak."
+[sad] Seksen sekiz yaşında, ölüm döşeğinde şöyle dediği anlatılır: Bana beş yıl daha verilseydi, gerçek bir ressam olurdum. || 88 yaşında, ölüm döşeğinde şöyle dediği anlatılır: "Bana 5 yıl daha verilseydi, gerçek bir ressam olurdum."
+Sence ustalığın bir yaşı var mı?
+
+[softly] Kaçırmamak için takip et.

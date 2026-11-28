@@ -1,0 +1,11 @@
+[intense] Sekiz yaşında bir kız, sanat tarihini değiştirdi. || 8 yaşında bir kız, sanat tarihini değiştirdi.
+
+[serious] Bin sekiz yüz yetmiş dokuz, İspanya. Marcelino de Sautuola, kızı Maria ile Altamira Mağarası'na girdi. || 1879, İspanya. Marcelino de Sautuola, kızı Maria ile Altamira Mağarası'na girdi.
+[excited] Maria tavana baktı ve bağırdı: Bak baba, öküzler!
+[serious] Tavan, kırmızı bizon resimleriyle doluydu. Babası, bunların binlerce yıllık olduğunu ilan etti.
+[intense] Ama uzmanlar güldü. İlkel insan bu kadar güzel resim yapamaz, dediler. Sahtekârlıkla suçlandı.
+[sad] Sautuola, bin sekiz yüz seksen sekizde, itibarı lekelenmiş halde öldü. || Sautuola, 1888'de, itibarı lekelenmiş halde öldü.
+[serious] On dört yıl sonra en sert eleştirmeni Cartailhac, hatasını kabul eden bir makale yazdı. Resimler gerçekti. || 14 yıl sonra en sert eleştirmeni Cartailhac, hatasını kabul eden bir makale yazdı. Resimler gerçekti.
+Sence bir dâhinin hakkı neden hep geç verilir?
+
+[softly] Kaçırmamak için takip et.

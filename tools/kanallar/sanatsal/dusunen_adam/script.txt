@@ -1,0 +1,10 @@
+[intense] Düşünen Adam, aslında bir şairdi.
+
+[serious] Bin sekiz yüz seksen, Paris. Heykeltıraş Rodin'e, yeni bir müze için dev bir bronz kapı sipariş edildi. || 1880, Paris. Heykeltıraş Rodin'e, yeni bir müze için dev bir bronz kapı sipariş edildi.
+[curious] Konu, Dante'nin Cehennem'iydi. Rodin kapının tepesine, aşağıdaki ruhları seyreden bir adam koydu.
+[intense] Bu adam Dante'nin kendisiydi. Heykelin ilk adı Şair'di.
+[serious] Sonra heykel büyütüldü, tek başına sergilendi ve adı Düşünen Adam oldu.
+[sad] Peki ya kapı? Rodin ona otuz yılı aşkın çalıştı ama müze hiç yapılmadı. Rodin öldüğünde kapı hâlâ bitmemişti. || Peki ya kapı? Rodin ona 30 yılı aşkın çalıştı ama müze hiç yapılmadı. Rodin öldüğünde kapı hâlâ bitmemişti.
+Sence Düşünen Adam ne düşünüyor?
+
+[softly] Kaçırmamak için takip et.

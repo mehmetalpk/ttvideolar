@@ -1,0 +1,18 @@
+function thinker(cx,base,s,col='#2e4a3a'){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#5a5a5e';rr(-200,-200,300,200,30);x.fill();x.fillStyle='#4a4a4e';x.fillRect(-240,-30,400,30);x.strokeStyle=col;x.fillStyle=col;x.lineCap='round';x.lineJoin='round';const L=(w,p)=>{x.lineWidth=w;x.beginPath();x.moveTo(p[0],p[1]);for(let i=2;i<p.length;i+=2)x.lineTo(p[i],p[i+1]);x.stroke();};L(66,[-60,-220,120,-240,110,-40]);L(60,[-80,-210,90,-200,150,-30]);L(40,[110,-40,170,-30]);L(110,[-60,-230,20,-430]);L(52,[30,-420,120,-260]);L(42,[120,-260,100,-430]);x.beginPath();x.arc(80,-480,56,0,7);x.fill();x.restore();}
+function gate(cx,base,s,t,top=1){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#2a3028';x.fillRect(-380,-1100,760,1100);x.fillStyle='#3a4238';x.fillRect(-420,-1180,840,110);x.fillStyle='#1a1e18';x.fillRect(-300,-950,280,950);x.fillRect(20,-950,280,950);const r=rng(4);x.fillStyle='#4a5248';for(let i=0;i<22;i++){x.beginPath();x.arc(-280+r()*560,-900+r()*860,14+r()*14,0,7);x.fill();}x.restore();if(top)thinker(cx,base-1000*s,0.28*s);}
+// 0 kanca
+shot(0,0,t=>{bgDoc('#3a3a42','#101014');spot(540,800,560,0.3);zoomed(1+t*0.03,()=>thinker(500,1300,1.6));bigText('DÜŞÜNEN ADAM',W/2,230,120,'#fff',1);bigText('ASLINDA ŞAİRDİ',W/2,1440,110,'#ffd23f',1);});
+// 1 1880 paris bronz kapı siparişi
+shot(1,1,t=>{if(t<1.8){bgDoc('#3a3a42','#101014');yearStamp('1880','PARİS',eOut(cl(t*2)),640);}else{museum();gate(540,1380,0.95*cl((t-1.8)*1.5+0.3),t,0);bigText('RODİN',W/2,230,140,'#ffd23f',back(cl((t-1.8)*3)));badge(540,1440,'DEV BRONZ KAPI','#8a5a2a',(t-2.8)*3);}});
+// 2 dante'nin cehennemi, tepede adam
+shot(2,2,t=>{bgDoc('#2a0a06','#0a0202');gate(540,1380,0.95,t,1);fire(540,1500,800,260,t,0.8);for(let i=0;i<8;i++)sil(160+i*110,1450+Math.sin(t*3+i)*20,0.9,'#1a0606');bigText('CEHENNEM',W/2,180,140,'#ff4d4d',back(cl(t*2.5)));});
+// 3 dante'nin kendisi, şair
+shot(3,3,t=>{bgDoc('#2a3028','#0a0c0a');spot(540,800,500,0.3);thinker(500,1300,1.6*(1+cl(t/3)*0.05));bigText('DANTE',W/2,230,150,'#ffd23f',back(cl(t*2.5)));stampT('İLK ADI: ŞAİR',540,1440,cl((t-1.8)*3),'#c1121f',84);});
+// 4 büyütüldü, düşünen adam
+shot(4,4,t=>{museum();const g=cl(t/2);thinker(520,1360,0.6+g*1.1);people(5,540,1560,1.2,'#1a1410',150);bigText('DÜŞÜNEN ADAM',W/2,230,120,'#ffd23f',back(cl((t-2)*3)));});
+// 5 kapı bitmedi
+shot(5,5,t=>{museum();gate(540,1360,0.9,t,1);scaffold(540,1360,760,900);counter(0,30,t/2.4,W/2,230,150,'#ffd23f','+ YIL');if(t>3)stampT('MÜZE YOK',540,1430,cl((t-3)*3),'#c1121f',84);if(t>4.6)badge(540,420,'KAPI BİTMEDİ','#c1121f',(t-4.6)*3);});
+// 6 soru
+shot(6,6,t=>{bgDoc('#3a3a42','#101014');thinker(500,1300,1.4);for(let i=0;i<3;i++){const a=t*1.5+i*2.1;bigText('?',540+Math.cos(a)*360,560+Math.sin(a)*60,90,'#ffd23f',1);}bigText('NE DÜŞÜNÜYOR?',W/2,1440,110,'#ffd23f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#3a3a42','#101014'));

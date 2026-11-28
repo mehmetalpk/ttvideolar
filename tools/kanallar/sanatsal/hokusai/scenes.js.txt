@@ -1,0 +1,20 @@
+function paper(){x.fillStyle=grad(0,H,['#efe2c4','#d8c49a']);x.fillRect(0,0,W,H);}
+function fuji(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#3a4a6a';x.beginPath();x.moveTo(-200,0);x.lineTo(-40,-200);x.lineTo(40,-200);x.lineTo(200,0);x.fill();x.fillStyle='#fff';x.beginPath();x.moveTo(-40,-200);x.lineTo(40,-200);x.lineTo(70,-160);x.lineTo(20,-170);x.lineTo(0,-150);x.lineTo(-30,-170);x.lineTo(-70,-160);x.fill();x.restore();}
+function bigWave(cx,cy,s,t,p=1){x.save();x.translate(cx,cy);x.scale(s,s);x.globalAlpha*=cl(p*2);const o=Math.sin(t*2)*10;x.fillStyle='#1f3a6a';x.beginPath();x.moveTo(-500,300);x.bezierCurveTo(-450,-100,-150,-420,150+o,-380);x.bezierCurveTo(330,-350,380,-220,280,-160);x.bezierCurveTo(200,-260,60,-260,0,-120);x.bezierCurveTo(-60,40,100,200,500,300);x.fill();x.fillStyle='#fff';for(let i=0;i<9;i++){const a=i/8;const px=150-a*120+o,py=-380+a*40;x.beginPath();x.arc(px+Math.cos(i)*20,py,22-i,0,7);x.fill();}x.strokeStyle='rgba(255,255,255,0.6)';x.lineWidth=8;for(let i=0;i<4;i++){x.beginPath();x.moveTo(-420+i*60,280);x.bezierCurveTo(-380+i*60,-60,-120+i*40,-340,120,-340+i*30);x.stroke();}x.restore();}
+function brush(cx,cy,t){x.save();x.translate(cx+Math.sin(t*6)*20,cy);x.rotate(0.5);x.fillStyle='#7a5a32';x.fillRect(-8,-200,16,180);x.fillStyle='#111';x.beginPath();x.moveTo(-12,-20);x.lineTo(12,-20);x.lineTo(0,30);x.fill();x.restore();}
+// 0 kanca
+shot(0,0,t=>{paper();fuji(700,1000,1);bigWave(500,900,1.05+t*0.03,t);bigText('BAŞYAPITINI',W/2,230,120,'#fff',1);bigText("70'İNDEN SONRA",W/2,1380,110,'#c1121f',1);});
+// 1 6 yaşından beri, yeterli görmedi
+shot(1,1,t=>{paper();sil(380,1300,1.4+cl(t/4)*1.2,'#2a1a10');brush(560,1000,t);x.strokeStyle='#111';x.lineWidth=6;for(let i=0;i<Math.min(6,Math.floor(t*1.6));i++){x.beginPath();x.moveTo(650,620+i*60);x.lineTo(900,600+i*60);x.stroke();}counter(6,70,t/4,W/2,240,140,'#c1121f',' YAŞ');if(t>2.6)stampT('YETERSİZ',540,1440,cl((t-2.6)*3),'#c1121f',96);});
+// 2 büyük dalga
+shot(2,2,t=>{paper();fuji(720,1020,1);bigWave(480,920,1.1,t,t);bigText('BÜYÜK DALGA',W/2,230,120,'#1f3a6a',back(cl(t*2.5)));badge(540,1440,'70+ YAŞ','#c1121f',(t-2.4)*3);});
+// 3 70'ten önce kayda değer değil
+shot(3,3,t=>{paper();scroll(540,760,1.2,cl(t*1.5),"70'TEN ÖNCE");if(t>1.8)stampX(540,800,0.9,cl((t-1.8)*3));bigText('"KAYDA DEĞER DEĞİL"',W/2,1440,76,'#c1121f',back(cl((t-2.4)*3)));bigText('HOKUSAI',W/2,230,120,'#1f3a6a',eOut(cl(t*3)));});
+// 4 110 yaşında her nokta canlı
+shot(4,4,t=>{paper();const r=rng(8);const n=Math.floor(cl(t/2.6)*120);for(let i=0;i<n;i++){x.fillStyle=i%3?'#1f3a6a':'#c1121f';const px=120+r()*840,py=520+r()*480;x.beginPath();x.arc(px,py+Math.sin(t*4+i)*6,8+r()*8,0,7);x.fill();}counter(70,110,t/2,W/2,250,150,'#c1121f',' YAŞ');bigText('HER NOKTA CANLI',W/2,1440,90,'#1f3a6a',back(cl((t-1.4)*3)));});
+// 5 88 yaşında, 5 yıl daha
+shot(5,5,t=>{bgDoc('#3a2a1a','#0c0804');spot(540,900,500,0.3);sleeper(540,1000,2,'#0a0604');bigText('88 YAŞINDA',W/2,250,130,'#ffd23f',back(cl(t*2.5)));sbubble(540,1440,880,170,'5 YIL DAHA...',cl((t-2)*3),76);});
+// 6 soru
+shot(6,6,t=>{paper();fuji(720,1020,1);bigWave(480,920,1,t);for(let i=0;i<3;i++){const a=t*1.5+i*2.1;bigText('?',540+Math.cos(a)*360,1380+Math.sin(a)*50,90,'#c1121f',1);}bigText('USTALIĞIN',W/2,230,120,'#1f3a6a',1);bigText('YAŞI VAR MI?',W/2,370,110,'#c1121f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#1f3a6a','#0a1428'));

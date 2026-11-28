@@ -1,0 +1,21 @@
+function desert(t){x.fillStyle=grad(0,900,['#e8a050','#f6d090']);x.fillRect(0,0,W,900);x.fillStyle='#c88a48';x.beginPath();x.moveTo(0,900);x.lineTo(200,620);x.lineTo(420,760);x.lineTo(700,560);x.lineTo(1080,800);x.lineTo(W,900);x.fill();x.fillStyle='#d8a868';x.fillRect(0,900,W,H-900);sun(820,220,70);}
+function shovelT(cx,cy,s,t){x.save();x.translate(cx,cy);x.rotate(-0.4+Math.abs(Math.sin(t*5))*0.35);x.scale(s,s);x.fillStyle='#7a5a32';x.fillRect(-8,-260,16,240);x.fillStyle='#8a8f96';x.beginPath();x.moveTo(-40,-20);x.lineTo(40,-20);x.lineTo(30,60);x.lineTo(0,80);x.lineTo(-30,60);x.fill();x.restore();}
+function mask(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#e0b63a';x.beginPath();x.moveTo(-200,-160);x.quadraticCurveTo(0,-300,200,-160);x.lineTo(240,260);x.lineTo(-240,260);x.fill();x.fillStyle='#1f3f8a';for(let i=0;i<6;i++){x.fillRect(-240+i*0,60+i*34,480,14);}x.fillStyle='#f0c850';x.beginPath();x.ellipse(0,-40,120,150,0,0,7);x.fill();x.fillStyle='#111';x.beginPath();x.ellipse(-50,-70,26,12,0,0,7);x.ellipse(50,-70,26,12,0,0,7);x.fill();x.fillStyle='#1f3f8a';x.fillRect(-14,90,28,120);x.restore();spot(cx,cy,400*s,0.25);}
+function chest(cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#c89a2a';x.fillRect(-120,-140,240,140);x.fillStyle='#e0b63a';x.fillRect(-130,-170,260,40);x.fillStyle='#1f3f8a';x.fillRect(-90,-110,180,20);x.restore();}
+function sealDoor(t,hole){x.fillStyle='#2a1a0a';x.fillRect(0,0,W,H);x.fillStyle='#b08a5a';x.fillRect(200,400,680,1100);x.fillStyle='#8a6a3a';for(let i=0;i<5;i++)for(let j=0;j<3;j++){x.beginPath();x.ellipse(320+j*220,560+i*200,40,28,0,0,7);x.fill();}if(hole>0){x.fillStyle='#0a0604';x.beginPath();x.arc(540,780,70*hole,0,7);x.fill();x.fillStyle=`rgba(255,210,90,${hole})`;x.beginPath();x.arc(540,780,40*hole,0,7);x.fill();}}
+// 0 kanca
+shot(0,0,t=>{bgDoc('#2a1a0a','#0a0602');rays(540,780,t,'rgba(255,210,63,0.12)');mask(540,800,1+t*0.04,t);bigText('SON ŞANSINDA',W/2,230,120,'#fff',1);bigText('BİR FİRAVUN',W/2,1440,120,'#ffd23f',1);});
+// 1 yıllarca kazı, son sezon
+shot(1,1,t=>{desert(t);for(let i=0;i<3;i++){sil(250+i*280,1500,2,'#3a2410');shovelT(330+i*280,1300,1.2,t+i*0.4);}dust(540,1380,700,t);bigText('KRALLAR VADİSİ',W/2,250,100,'#3a2410',eOut(cl(t*3)));if(t>2.6)stampT('HİÇBİR ŞEY',540,420,cl((t-2.6)*3),'#c1121f',90);badge(540,1440,'SON SEZON','#c1121f',(t-5.4)*3);});
+// 2 4 kasım 1922 basamak
+shot(2,2,t=>{if(t<1.6){bgDoc('#3a2410','#0c0804');yearStamp('4 KASIM','1922',eOut(cl(t*2)),640);}else{desert(t);const p=cl((t-1.6)/1.2);x.fillStyle='#8a6a42';x.fillRect(340,1340,400,50*p);x.fillStyle='#6a4e2e';x.fillRect(340,1390,400,14*p);rays(540,1360,t,'rgba(255,255,200,0.15)');sil(180,1000,2,'#3a2410');bigText('BİR BASAMAK',W/2,300,120,'#3a2410',back(cl((t-1.6)*3)));}});
+// 3 26 kasım delik, mum
+shot(3,3,t=>{sealDoor(t,cl((t-1)/1.5));sil(900,1700,2.6,'#000');x.fillStyle='#f3e6c4';x.fillRect(745,1180,18,70);fire(754,1180,26,50,t);bigText('26 KASIM',W/2,250,140,'#ffd23f',back(cl(t*2.5)));badge(540,1440,'MUM IŞIĞI','#8a4a1a',(t-2.6)*3);});
+// 4 harika şeyler
+shot(4,4,t=>{sealDoor(t,1);zoomed(1+cl(t/4)*0.4,()=>{x.fillStyle='rgba(255,200,80,0.4)';x.beginPath();x.arc(540,780,60,0,7);x.fill();});sbubble(540,1440,860,160,'BİR ŞEY GÖRÜYOR MUSUN?',cl(t*3),58);if(t>2.4){sbubble(540,280,860,180,'EVET, HARİKA ŞEYLER!',cl((t-2.4)*3),66);coins(t,14,4);}});
+// 5 altın eşyalar, tutankamon
+shot(5,5,t=>{bgDoc('#3a2410','#0a0602');rays(540,800,t,'rgba(255,210,63,0.15)');chest(170,1000,0.9);chest(910,1000,0.9);mask(540,700,0.8,t);counter(0,3000,t/2,W/2,230,130,'#ffd23f','+ YIL');badge(540,1440,'TUTANKAMON','#1f3f8a',(t-3)*3);});
+// 6 soru
+shot(6,6,t=>{bgDoc('#2a1a0a','#0a0602');mask(540,760,0.8,t);for(let i=0;i<3;i++){const a=t*1.5+i*2.1;bigText('?',540+Math.cos(a)*380,1380+Math.sin(a)*50,90,'#ffd23f',1);}bigText('İLK BAKAN',W/2,230,120,'#fff',1);bigText('SEN OLSAYDIN?',W/2,370,110,'#ffd23f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#3a2410','#0a0602'));

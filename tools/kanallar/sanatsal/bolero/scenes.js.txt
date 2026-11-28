@@ -1,0 +1,19 @@
+function snare(cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#c1121f';x.fillRect(-200,-40,400,180);x.fillStyle='#e8e8ee';x.beginPath();x.ellipse(0,-40,200,50,0,0,7);x.fill();x.fillStyle='#e8e8ee';x.beginPath();x.ellipse(0,140,200,50,0,0,Math.PI);x.fill();x.strokeStyle='#e0b63a';x.lineWidth=8;for(let i=-3;i<=3;i++){x.beginPath();x.moveTo(i*60,-20);x.lineTo(i*60+30,130);x.stroke();}const h=Math.abs(Math.sin(t*12));x.strokeStyle='#5a3a1a';x.lineWidth=16;x.beginPath();x.moveTo(-60,-60-h*40);x.lineTo(-200,-260);x.moveTo(60,-60-(1-h)*40);x.lineTo(200,-260);x.stroke();x.restore();}
+function vol(t,g){for(let i=0;i<12;i++){const hh=(30+i*28)*g*(0.85+0.15*Math.sin(t*10+i));x.fillStyle=i<8?'#ffd23f':'#ff4d4d';x.fillRect(90+i*78,1420-hh,56,hh);}}
+function dancer(cx,base,s,t){x.save();x.translate(cx,base);x.scale(s,s);x.fillStyle='#120606';x.beginPath();x.moveTo(-20,-140);x.lineTo(20,-140);x.lineTo(90,0);x.lineTo(-90,0);x.fill();x.fillRect(-18,-240,36,110);x.beginPath();x.arc(0,-270,30,0,7);x.fill();x.lineWidth=16;x.strokeStyle='#120606';const a=Math.sin(t*3)*0.4;x.beginPath();x.moveTo(-10,-220);x.lineTo(-90,-330+a*60);x.moveTo(10,-220);x.lineTo(90,-330-a*60);x.stroke();x.restore();}
+// 0 kanca
+shot(0,0,t=>{opera();spot(540,800,500,0.3);snare(540,820,1.3,t);staff(1360,t);bigText('MÜZİĞİ OLMAYAN',W/2,230,100,'#fff',1);bigText('BAŞYAPIT',W/2,370,140,'#ffd23f',1);});
+// 1 1928 paris bolero
+shot(1,1,t=>{if(t<1.8){opera();yearStamp('1928','PARİS',eOut(cl(t*2)),640);}else{opera();stageFloor(1250);spot(540,900,420,0.4);x.fillStyle='#3a1a10';rr(240,1150,600,100,20);x.fill();dancer(540,1160,1.6,t);curtains(t);bigText('BOLERO',W/2,250,160,'#ffd23f',back(cl((t-1.8)*3)));badge(540,1440,'~15 DAKİKA','#c1121f',(t-2.8)*3);}});
+// 2 tek melodi, aynı ritim, büyüyor
+shot(2,2,t=>{opera();snare(540,700,0.9,t);vol(t,cl(t/5));bigText(t<2.6?'TEK MELODİ':'AYNI RİTİM',W/2,230,120,'#fff',t<2.6?eOut(cl(t*3)):back(cl((t-2.6)*3)));if(t>3.8)badge(540,400,'SES BÜYÜYOR','#c1121f',(t-3.8)*3);});
+// 3 bir kadın: bu adam deli
+shot(3,3,t=>{opera();for(let r=0;r<2;r++)for(let i=0;i<8;i++)sil(80+i*130+(r%2)*60,1560+r*120,1.5,r?'#140606':'#1e0a0a');const up=cl((t-0.4)/0.4);sil(560,1560-up*40,1.9,'#2a0a14');sbubble(540,1440,760,170,'BU ADAM DELİ!',cl((t-0.6)*3),76);bigText('İLK GECE',W/2,250,130,'#fff',eOut(cl(t*3)));});
+// 4 ravel: o eseri anlamış
+shot(4,4,t=>{bgDoc('#2a1e14','#0a0604');spot(540,900,500,0.35);sil(540,1700,3,'#0a0604');sbubble(540,1440,840,170,'O, ESERİ ANLAMIŞ.',cl((t-0.3)*3),70);bigText('RAVEL',W/2,250,150,'#ffd23f',back(cl(t*2.5)));});
+// 5 müziği olmayan, en çok çalınan
+shot(5,5,t=>{opera();stageFloor(1100);orchestra(980,t,14,'#140808');conductor(540,1100,1,t);vol(t,0.5+cl(t/6)*0.5);bigText(t<3.4?'"MÜZİĞİ YOK"':'EN ÇOK ÇALINAN',W/2,250,t<3.4?120:100,t<3.4?'#fff':'#ffd23f',t<3.4?eOut(cl(t*3)):back(cl((t-3.4)*3)));});
+// 6 soru
+shot(6,6,t=>{opera();snare(540,820,1.1,t);for(let i=0;i<3;i++){const a=t*1.5+i*2.1;bigText('?',540+Math.cos(a)*360,1380+Math.sin(a)*50,90,'#ffd23f',1);}bigText('SIKICI MI,',W/2,230,120,'#fff',1);bigText('BÜYÜLEYİCİ Mİ?',W/2,370,110,'#ffd23f',back(cl(t*2.5)));});
+// 7 outro
+shot(7,7,t=>outro(t,0,'#3a0a16','#0e0306'));

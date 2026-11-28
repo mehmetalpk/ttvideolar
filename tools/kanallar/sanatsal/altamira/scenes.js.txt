@@ -1,0 +1,22 @@
+function caveBg(t,lit=1){x.fillStyle=grad(0,H,['#3a2416','#1a0e08']);x.fillRect(0,0,W,H);const r=rng(11);x.fillStyle='rgba(0,0,0,0.25)';for(let i=0;i<30;i++){x.beginPath();x.ellipse(r()*W,r()*H,60+r()*120,30+r()*60,r()*3,0,7);x.fill();}spot(540,600,700,0.28*lit+0.04*Math.sin(t*9));}
+function bison(cx,cy,s,col='#b8321e',a=1){if(a<=0)return;x.save();x.globalAlpha*=a;x.translate(cx,cy);x.scale(s,s);x.fillStyle=col;x.beginPath();x.ellipse(0,0,150,80,0,0,7);x.fill();x.beginPath();x.ellipse(-70,-50,90,70,-0.3,0,7);x.fill();x.beginPath();x.ellipse(-170,10,55,45,0.2,0,7);x.fill();x.fillStyle='#1a0e08';for(const lx of[-100,-50,60,110])x.fillRect(lx,50,26,90);x.strokeStyle='#1a0e08';x.lineWidth=10;x.beginPath();x.arc(-185,-30,30,3.6,5.6);x.stroke();x.strokeStyle='rgba(20,10,5,0.6)';x.lineWidth=6;x.beginPath();x.ellipse(0,0,150,80,0,0,7);x.stroke();x.restore();}
+function torch(cx,cy,t){x.fillStyle='#5a3a1a';x.fillRect(cx-8,cy,16,140);fire(cx,cy+10,70,110,t);spot(cx,cy-40,320,0.35);}
+function ceiling(t,n=6){const P=[[220,420,0.9],[640,360,1],[880,560,0.7],[330,720,0.75],[760,820,0.85],[180,940,0.6]];for(let i=0;i<n;i++)bison(P[i][0],P[i][1],P[i][2],i%2?'#a52a18':'#c2401e',1);}
+// 0 kanca
+shot(0,0,t=>{caveBg(t);zoomed(1+t*0.03,()=>ceiling(t));sil(300,1700,1.6,'#0a0604');torch(420,1380,t);bigText('8 YAŞINDA BİR KIZ',W/2,230,100,'#fff',1);bigText('SANAT TARİHİNİ',W/2,1330,90,'#ffd23f',1);bigText('DEĞİŞTİRDİ',W/2,1450,90,'#ffd23f',1);});
+// 1 1879 ispanya, mağaraya giriş
+shot(1,1,t=>{if(t<1.8){bgDoc('#3a2416','#0c0604');yearStamp('1879','İSPANYA',eOut(cl(t*2)),640);}else{bgDoc('#8ab0c8','#d8c8a0');x.fillStyle='#6a8a4a';x.fillRect(0,1300,W,H-1300);cave(540,1000,1.1,0.3);const w=cl((t-1.8)/3);sil(380+w*200,1500,2.4,'#111');sil(500+w*200,1500,1.4,'#222');bigText('ALTAMIRA',W/2,250,150,'#ffd23f',back(cl((t-1.8)*3)));badge(540,420,'BABA VE KIZI','#c1121f',(t-2.4)*3);}});
+// 2 bak baba öküzler
+shot(2,2,t=>{caveBg(t,0.6);ceiling(t,Math.min(6,Math.floor(t*3)));sil(380,1700,1.5,'#0a0604');torch(480,1380,t);sil(760,1700,2.4,'#0a0604');sbubble(540,1440,800,170,'BAK BABA, ÖKÜZLER!',cl(t*3),66);});
+// 3 bizonlar, binlerce yıl
+shot(3,3,t=>{caveBg(t);zoomed(1.05+t*0.04,()=>ceiling(t));bigText('KIRMIZI BİZONLAR',W/2,230,96,'#fff',eOut(cl(t*3)));stampT('BİNLERCE YILLIK',540,1440,cl((t-2.4)*3),'#ffd23f',80);});
+// 4 uzmanlar güldü, sahte
+shot(4,4,t=>{bgDoc('#2a2a3a','#0a0a14');x.fillStyle='#4a3020';rr(120,1020,840,60,16);x.fill();for(let i=0;i<5;i++){const b=Math.abs(Math.sin(t*8+i))*14;sil(180+i*180,1020-b,1.5,'#111');}for(let i=0;i<3;i++)if(t>0.5+i*0.3)bigText('HA HA',220+i*320,720-((t*60+i*40)%80),70,'#fff',1);bigText('UZMANLAR GÜLDÜ',W/2,250,100,'#fff',eOut(cl(t*3)));stampT('SAHTE!',540,1440,cl((t-3)*3),'#c1121f',130);});
+// 5 1888 öldü
+shot(5,5,t=>{bgDoc('#1a1a22','#050508');spot(540,900,500,0.2,'200,200,230');x.fillStyle='#6a6a72';x.beginPath();x.moveTo(380,1300);x.lineTo(380,800);x.arc(540,800,160,Math.PI,0);x.lineTo(700,1300);x.fill();x.fillStyle='#3a3a42';x.font=`900 90px ${F}`;x.textAlign='center';x.fillText('1888',540,850);x.fillStyle='#2a3a22';x.fillRect(0,1300,W,H-1300);bigText('İTİBARI LEKELİ',W/2,250,110,'#ff4d4d',back(cl(t*2.5)));});
+// 6 1902 cartailhac hatasını kabul
+shot(6,6,t=>{bgDoc('#3a2a18','#0c0804');if(t<1.4){yearStamp('1902','14 YIL SONRA',eOut(cl(t*2)),640);}else{newspaper(540,640,0.75,-0.04+Math.sin(t)*0.02,'HATAMI KABUL');badge(540,1440,'RESİMLER GERÇEK','#2a8a4a',(t-3.2)*3);bigText('CARTAILHAC',W/2,230,110,'#ffd23f',back(cl((t-1.4)*3)));}});
+// 7 soru
+shot(7,7,t=>{caveBg(t);ceiling(t);for(let i=0;i<3;i++){const a=t*1.5+i*2.1;bigText('?',540+Math.cos(a)*330,1380+Math.sin(a)*60,90,'#ffd23f',1);}bigText('HAK NEDEN',W/2,230,120,'#fff',1);bigText('GEÇ VERİLİR?',W/2,370,110,'#ffd23f',back(cl(t*2.5)));});
+// 8 outro
+shot(8,8,t=>outro(t,0,'#3a2416','#0c0604'));

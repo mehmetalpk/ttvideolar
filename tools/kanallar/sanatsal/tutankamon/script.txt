@@ -1,0 +1,10 @@
+[intense] Son şansında, bir firavun buldu.
+
+[serious] Howard Carter, Krallar Vadisi'nde yıllarca kazdı ama neredeyse hiçbir şey bulamadı. Destekçisi Lord Carnarvon, ona son bir sezon verdi.
+[intense] Dört Kasım, bin dokuz yüz yirmi iki. Kumların altından bir basamak çıktı. || 4 Kasım 1922. Kumların altından bir basamak çıktı.
+[curious] Yirmi altı Kasım'da Carter, mühürlü kapıda küçük bir delik açtı ve mum ışığıyla içeri baktı. || 26 Kasım'da Carter, mühürlü kapıda küçük bir delik açtı ve mum ışığıyla içeri baktı.
+[excited] Carnarvon sordu: Bir şey görebiliyor musun? Carter cevap verdi: Evet, harika şeyler!
+[intense] İçeride, üç bin yılı aşkın süredir dokunulmamış altın eşyalar vardı. Bu, Tutankamon'un mezarıydı. || İçeride, 3.000 yılı aşkın süredir dokunulmamış altın eşyalar vardı. Bu, Tutankamon'un mezarıydı.
+Sence o odaya ilk bakan sen olsaydın, ne hissederdin?
+
+[softly] Kaçırmamak için takip et.
