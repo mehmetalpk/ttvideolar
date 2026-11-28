@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="../d26.js"></script><script src="../d27.js"></script><script src="../d28.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const sc=[];
+function notes(T){x.save();x.font=`900 90px ${F}`;x.textAlign='center';for(let i=0;i<5;i++){const ph=(T*0.6+i*0.2)%1;x.globalAlpha=1-ph;x.fillStyle=['#ffd23f','#ff5a8a','#5ad0ff'][i%3];x.fillText(i%2?'♪':'♫',150+i*190,1000-ph*500);}x.restore();}
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.0,5);kinaBg(T);x.save();zoom(540,950,1.05+0.04*t);abl(380,900,160,{smile:0.8,eyeOpen:0.6,brow:-0.2});cardDeck(780,1120,1.0,0.1);x.restore();x.restore();vignette(0.35);
+ hook([['KINADA BÜTÜN',105,'#fff'],['MASALARA',115,'#fff'],['PUAN KARTI DAĞITTIM! 🃏',88,YEL]],270);copBadge(t,2);}});
+// 1 recap 3
+sc.push({a:mid(1),f(t,T){radial(540,900,1300,'#5a1a2a','#140406');x.save();zoom(540,900,1.03+0.04*t);ece(330,900,140,{sad:0.7,tear:0.6,lookDown:0.5});scoreCard(760,960,1.3,3,0.1);x.restore();
+ B('YENGEM GELİNE',290,100,'#fff',t);B('3 PUAN VERMİŞTİ 😢',400,95,'#ff5a5a',t,0.3);}});
+// 2 1'den 10'a
+sc.push({a:mid(2),f(t,T){kinaBg(T);x.save();zoom(540,900,1.0+0.04*t);const n=Math.min(10,Math.floor(prog(t,0,1.6)*10)+1);for(let i=0;i<n;i++)scoreCard(150+(i%5)*195,i<5?720:1420,0.6,i+1,(i%2?0.06:-0.06));x.restore();
+ B('HER DESTEDE',290,100,'#fff',t);B('1\'DEN 10\'A KART! 🔢',400,95,YEL,t,0.3);}});
+// 3 halam kaptı, damadın annesi gülümsedi
+sc.push({a:mid(3),f(t,T){const w=W2(3,'Damadın');kinaBg(T);x.save();zoom(540,950,1.0+0.04*t);if(T<w-0.1){nrm(440,900,160,{smile:1,mouthOpen:0.3+0.4*Math.abs(Math.sin(T*9))});cardDeck(800,1120,0.9,0.2+Math.sin(T*5)*0.1);}else{smr(540,900,170,{smile:0.8,eyeOpen:0.7});}x.restore();
+ B(T<w-0.1?'HALAM KAHKAHAYLA 😂':'DAMADIN ANNESİ BİLE',290,88,'#fff',t);if(T>w-0.15)bigText('GÜLÜMSEDİ 😊',540,410,110,YEL,PP(T,3,'Damadın'),-0.03);else B('BİR DESTE KAPTI! 🃏',400,90,YEL,t,0.3);}});
+// 4 bunlar bana destek
+sc.push({a:mid(4),f(t,T){const w=W2(4,'Bunlar');radial(540,900,1300,'#1f5a5a','#041010');x.save();zoom(540,900,1.06+0.04*t);skr(540,880,200,{smile:0.9,eyeOpen:0.5,brow:0.5});x.restore();
+ B('YENGEM FARK ETMEDİ 🙄',290,90,'#fff',t);if(T>w-0.15)bigText('"BUNLAR BANA DESTEK!"',540,410,84,YEL,PP(T,4,'Bunlar'),-0.03);}});
+// 5 DJ işaret, müzik değişti
+sc.push({a:mid(5),f(t,T){const w=W2(5,'Müzik');kinaBg(T);x.save();zoom(540,950,1.0+0.04*t);abl(330,880,140,{smile:0.7,look:1});djBooth(720,1250,1.0,T);if(T>w-0.1)notes(T);x.restore();
+ B('DJ\'E İŞARET ETTİM 👉',290,88,'#fff',t);if(T>w-0.15)bigText('MÜZİK DEĞİŞTİ! 🎶',540,410,100,YEL,PP(T,5,'Müzik'),-0.03);}});
+// 6 mikrofon
+sc.push({a:mid(6),f(t,T){const w=W2(6,'Pistte');kinaBg(T);x.save();zoom(540,920,1.04+0.04*t);abl(540,860,190,{smile:0.6,mouthOpen:0.3+0.3*Math.abs(Math.sin(T*8))});mic(830,900,0.9,0.3);x.restore();
+ B('"KURAL YENGEMİZİN:',290,88,'#fff',t);if(T>w-0.15)bigText('PİSTTE OLAN PUANLANIR!"',540,410,74,YEL,PP(T,6,'Pistte'),-0.03);}});
+// 7 sahne jürimizin
+sc.push({a:mid(7),f(t,T){x.save();shake(t,0,0.6,6);kinaBg(T);confetti(T,40);x.restore();bigText('"SAHNE ŞİMDİ',540,700,110,'#fff',prog(t,0,0.25),-0.04);bigText('JÜRİMİZİN!" 🎤',540,860,130,YEL,prog(t,0.15,0.4),-0.04);}});
+// 8 spot yengeye
+sc.push({a:mid(8),f(t,T){kinaBg(T,true);spotOn(540,T,prog(t,0,0.4));x.save();zoom(540,950,1.0+0.05*t);skr(540,900,160,{eyeBig:1.3,mouthOpen:0.3,brow:0.5});x.restore();
+ B('SPOT IŞIĞI 🔦',290,110,'#fff',t);B('YENGEME DÖNDÜ!',400,105,YEL,t,0.3);}});
+// 9 donup kaldı
+sc.push({a:mid(9),f(t,T){const w=W2(9,'donup');kinaBg(T,true);spotOn(540,T,1);x.save();zoom(540,900,1.08+0.12*prog(t,0,2.8));skr(540,880,200,{eyeBig:1.6,mouthOpen:0.5,brow:0.8,red:0.2});cardDeck(850,1300,0.7,0.2);x.restore();vignette(0.5);
+ B('KARTLAR ELİNDE...',290,95,'#fff',t);if(T>w-0.15)bigText('DONUP KALDI! 🥶',540,410,110,'#5ad0ff',PP(T,9,'donup'),-0.03);}});
+sc.push({a:en(9)+0.1,noCap:true,f(t,T){devamiN(t,T,3,()=>{kinaBg(T,true);});}});
+setup(sc,TIM,en(9)+0.1+2.6);
+</script></body></html>

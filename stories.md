@@ -98,3 +98,9 @@ Her satır: tarih | Türkçe başlık | kaynak (subreddit / link) | anlatıcı
 - 2026-11-27 | Komşumuz dayımın çitine şikâyet yazdı (Dayımın Rüzgâr Gülleri) [Part 1] | Reddit | komedi/seri | Emrullah | 33.6 sn | 17:00 | -2600740937435623458 | hat B
 - 2026-11-27 | Dayım çitine 60 rüzgâr gülü dizdi (Dayımın Rüzgâr Gülleri) [Part 2] | Reddit | komedi/seri | Emrullah | 30.6 sn | 19:00 | 1974821199267776098 | hat B
 - 2026-11-27 | Bahçe ödülünü dayımın çiti aldı (Dayımın Rüzgâr Gülleri) [Part 3 FİNAL] | Reddit | komedi/seri | Emrullah | 34.5 sn | 21:00 | -848243896370442648 | hat B
+- 2026-11-28 | Müdürümüz geç kalana çay cezası koydu (Müdürün Çay Cezası) [Part 1] | özgün | komedi/seri | Emrullah | 38.2 sn | 10:30 | -5911083263600410450 | hat A
+- 2026-11-28 | Müdürümüz kendi toplantısına geç kaldı (Müdürün Çay Cezası) [Part 2] | özgün | komedi/seri | Emrullah | 32.2 sn | 11:30 | 6127599746419674861 | hat A
+- 2026-11-28 | Müdürümüz bütün kata 47 çay ısmarladı (Müdürün Çay Cezası) [Part 3 FİNAL] | özgün | komedi/seri | Emrullah | 31.9 sn | 15:30 | 5103731909898289968 | hat A
+- 2026-11-28 | Yengem kına gecesinde dansları puanladı (Yengemin Kına Jürisi) [Part 1] | özgün | komedi/seri | İrem | 35.6 sn | 17:00 | 6044097714185783571 | hat B
+- 2026-11-28 | Kınada bütün masalara puan kartı dağıttım (Yengemin Kına Jürisi) [Part 2] | özgün | komedi/seri | İrem | 28.6 sn | 19:00 | 604916739811328295 | hat B
+- 2026-11-28 | Kınada bütün salon yengeme puan verdi (Yengemin Kına Jürisi) [Part 3 FİNAL] | özgün | komedi/seri | İrem | 34.1 sn | 21:00 | -2533569238219796915 | hat B

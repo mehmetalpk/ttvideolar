@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../lib.js"></script><script src="../common.js"></script><script src="../extra.js"></script><script src="../helpers_final.js"></script><script src="../p23.js"></script><script src="../p4x.js"></script><script src="../p56.js"></script><script src="../p78.js"></script><script src="../tuv.js"></script><script src="../s3.js"></script><script src="../hoca.js"></script><script src="../amca.js"></script><script src="../d19.js"></script><script src="../kar.js"></script><script src="../t20.js"></script><script src="../d21.js"></script><script src="../cop.js"></script><script src="../d23.js"></script><script src="../d24.js"></script><script src="../d25.js"></script><script src="../d26.js"></script><script src="../d27.js"></script><script src="../d28.js"></script><script src="timing.js"></script>
+<script>
+TIM=TIMDATA;
+const st=i=>TIM[i].s, en=i=>TIM[i].e, mid=i=>(en(i-1)+st(i))/2;
+const W2=(si,w)=>wt(si,w);
+const PP=(T,si,w)=>prog(T,wt(si,w)-0.1,wt(si,w)+0.15);
+const B=(tx,y,sz,col,t,d=0)=>bigText(tx,540,y,sz,col,prog(t,d,d+0.2),-0.03);
+const sc=[];
+// 0 HOOK
+sc.push({a:0,f(t,T){x.save();shake(t,0,1.0,5);kinaBg(T,true);spotOn(540,T,1);x.save();zoom(540,950,1.03+0.04*t);skr(540,860,150,{eyeBig:1.4,mouthOpen:0.5,brow:0.7});crowdCards(1520,T,[2,3,1,2,1,3,2],1);x.restore();x.restore();vignette(0.3);
+ hook([['KINADA BÜTÜN SALON',92,'#fff'],['YENGEME',120,YEL],['PUAN VERDİ! 📋',105,'#fff']],270);copBadge(t,3,true);}});
+// 1 iki adım durdu
+sc.push({a:mid(1),f(t,T){const w=W2(1,'durdu');kinaBg(T,true);spotOn(540,T,1);x.save();zoom(540,950,1.0+0.05*t);const step=T<w-0.1?Math.sin(T*7)*30:0;skr(540+step,900,160,{eyeBig:1.2,mouthOpen:0.2,brow:0.4,red:T>w?0.3:0});x.restore();
+ B('İKİ ADIM ATTI... 💃',290,100,'#fff',t);if(T>w-0.15)bigText('VE DURDU! 😶',540,410,115,YEL,PP(T,1,'durdu'),-0.03);}});
+// 2 salon kart kaldırdı
+sc.push({a:mid(2),f(t,T){kinaBg(T);x.save();zoom(540,1000,1.0+0.04*t);crowdCards(1000,T,[2,3,1,2,3,1,2],prog(t,0.2,1.2),{});x.restore();
+ B('BÜTÜN SALON AYNI ANDA',290,82,'#fff',t);B('2! 3! 1! 😂',400,120,'#ff5a5a',t,0.3);}});
+// 3 halam yırttı
+sc.push({a:mid(3),f(t,T){const w=W2(3,'Yarım');kinaBg(T);x.save();zoom(540,950,1.03+0.04*t);nrm(360,900,150,{smile:1,mouthOpen:0.3+0.4*Math.abs(Math.sin(T*9))});const p=prog(T,w-0.6,w-0.1);scoreCard(760-p*60,1000,1.0,1,-0.2-p*0.3,{torn:true});x.restore();
+ B('HALAM KARTI YIRTTI ✂️',290,90,'#fff',t);if(T>w-0.15)bigText('"YARIM!" 🤣',540,410,130,YEL,PP(T,3,'Yarım'),-0.03);}});
+// 4 bu adil değil
+sc.push({a:mid(4),f(t,T){x.save();shake(t,0,0.8,9);radial(540,900,1300,'#5a1a1a','#140404');x.save();zoom(540,900,1.08+0.04*t);skr(540,880,210,{angry:0.9,brow:-0.4,mouthOpen:0.7,red:0.4});x.restore();x.restore();
+ B('"BU ADİL DEĞİL!" 😡',290,100,'#ff5a5a',t);}});
+// 5 mikrofonu uzattım
+sc.push({a:mid(5),f(t,T){const w=W2(5,'pisti');kinaBg(T);x.save();zoom(540,920,1.04+0.04*t);abl(300,920,150,{smile:0.6,eyeOpen:0.6,brow:-0.2});skr(790,930,140,{sad:0.5,eyeBig:1.2,red:0.3});x.restore();if(T>w-0.2)bubble(540,620,920,150,'"Gelin dediğin pisti yakar demiştin!"',52,'#fff',300);
+ B('MİKROFONU UZATTIM 🎤',290,90,'#fff',t);}});
+// 6 Semra Hanım kalktı
+sc.push({a:mid(6),f(t,T){kinaBg(T);spotOn(540,T,prog(t,0,0.5));x.save();zoom(540,950,1.0+0.05*t);smr(540,900-prog(t,0,0.6)*40,170,{smile:0.5});x.restore();
+ B('DAMADIN ANNESİ',290,100,'#fff',t);B('SEMRA HANIM KALKTI 👑',400,85,YEL,t,0.3);}});
+// 7 10 kartını verdi
+sc.push({a:mid(7),f(t,T){const w=W2(7,'on');kinaBg(T);x.save();zoom(540,950,1.03+0.04*t);smr(310,900,140,{smile:0.8});ece(760,900,140,{smile:T>w?0.6:0,blush:true,eyeBig:1.1});const p=prog(T,w-0.4,w+0.2);scoreCard(420+p*230,1380,0.9+0.3*p,10,0.1);x.restore();
+ B('KENDİ KARTINI VERDİ',290,90,'#fff',t);if(T>w-0.15)bigText('10! 💚',540,410,150,'#5ad07a',PP(T,7,'on'),-0.03);}});
+// 8 salon 10, Ece güldü
+sc.push({a:mid(8),f(t,T){const w=W2(8,'güldü');kinaBg(T);confetti(T,35);x.save();zoom(540,950,1.0+0.04*t);if(T<w-0.1){crowdCards(1000,T,[10,10,10,10,10,10,10],prog(t,0,0.9));}else{ece(540,880,190,{smile:1,mouthOpen:0.4,blush:true,eyeOpen:0.6});}x.restore();
+ B('BÜTÜN SALON: 10! 🎉',290,95,'#5ad07a',t);if(T>w-0.15)bigText('ECE SONUNDA GÜLDÜ ❤️',540,410,82,YEL,PP(T,8,'güldü'),-0.03);}});
+// 9 düğünde jüri masası yok
+sc.push({a:mid(9),f(t,T){radial(540,900,1400,'#f6e7d0','#d8b890');x.save();zoom(540,950,1.03+0.04*t);skr(540,900,170,{smile:0.6,blush:true,eyeOpen:0.7});x.restore();
+ B('DÜĞÜNDE YENGEM 👗',290,95,'#fff',t);B('JÜRİ MASASI İSTEMEDİ!',400,82,YEL,t,0.3);}});
+// 10 ALKIŞ kartları
+sc.push({a:mid(10),f(t,T){const w=W2(10,'Alkış');radial(540,900,1400,'#f6e7d0','#d8b890');x.save();zoom(540,950,1.0+0.04*t);if(T<w-0.1){skr(540,900,150,{smile:0.8});}else{[[240,800,-0.12],[540,760,0.05],[840,800,0.12]].forEach(([a,b,r],i)=>scoreCard(a,b,1.1*back(prog(T,w-0.1+i*0.1,w+0.3+i*0.1)),'ALKIŞ',r,{col:'#1a7a3a'}));}x.restore();
+ B('KARTLARINA TEK KELİME:',290,82,'#fff',t);if(T>w-0.15)bigText('"ALKIŞ!" 👏',540,410,130,YEL,PP(T,10,'Alkış'),-0.03);}});
+// 11 soru
+sc.push({a:mid(11),f(t,T){kinaBg(T);x.save();zoom(540,900,1.05+0.04*t);abl(540,880,190,{smile:0.7});x.restore();
+ B('SİZİN AİLEDE DE',290,100,'#fff',t);B('PUAN VEREN VAR MI? 👇',400,85,YEL,t,0.3);}});
+sc.push({a:en(11)+0.1,noCap:true,f(t,T){kinaBg(T,true);bigText('TAKİP ET',540,600,150,YEL,prog(t,0,0.25),-0.04);eyesIcon(540,820,1.0,T);followBtn(540,1000,T,1.3*back(prog(t,0.15,0.45)));}});
+setup(sc,TIM,en(11)+0.1+1.5);
+</script></body></html>

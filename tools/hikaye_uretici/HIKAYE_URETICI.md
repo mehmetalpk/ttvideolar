@@ -84,7 +84,7 @@ Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri a
 - Yönetici kapımdaki terliğe ceza yazdı → herkes yönetmeliği harfiyen uygular — havuzda
 - Dedem mirası paylaşmak için herkesi topladı → kayıp kuzen + tavuk kümesi (İrem) — havuzda
 - Elti takı töreninde kimin ne taktığını deftere yazıyor → kendi düğününde defter ifşası
-- Ev sahibi "duvara çivi çakma" dedi → çıkışta aynı kuralı onun yeni boyasına uygula
+- Ev sahibi "duvara çivi çakma" dedi → çıkışta aynı kuralı onun yeni boyasına uygula — havuzda 29.11 A (Ev Sahibimin Çivi Yasağı; final kontratın kendi dili + ev sahibinin 9 çivisi)
 - Patronun yeğeni sunumumu kendi adıyla sundu → sunumun son slaytı
 - Kuzenim aile grubunda başarılarımı küçümsedi → bayram sofrasında karne/ödül ifşası
 - Kapıcı sadece bahşiş verenin çöpünü alıyor → apartman tutanağı
@@ -98,7 +98,7 @@ Seri dengesi: her 3 seriden 1'i kadın anlatıcı (İrem). Aynı gün iki seri a
 - (okul) Öğretmen "derste telefonu çalanın telefonu veliye teslim" dedi → kendi telefonu derste komik zil sesiyle çalıyor, sınıf başkanı kuralı harfiyen uyguluyor — havuzda 26.11 A (Hocanın Tavuk Zil Sesi)
 - (düğün) Görümcem nişanda çeyizimi tek tek saydı, "eksik" listesi yaptı → kendi çeyiz listesinin aile sandığından çıkması
 - (bayram) Teyzem her bayram harçlığı karneye göre veriyor → babaannenin sandığından teyzemin kendi eski karnesi çıkıyor (İrem) — havuzda 27.11 A (Teyzemin Karne Harçlığı)
-- (miras/akraba) Halam ortak yazlığın takvimine her yaz kendini yazıyor → dedemin eski "sıra defteri" kuralı ona uygulanıyor
+- (miras/akraba) Halam ortak yazlığın takvimine her yaz kendini yazıyor → dedemin eski "sıra defteri" kuralı ona uygulanıyor — havuzda 29.11 B (Halamın Yazlık Takvimi; defter yerine halanın "önce büyükler" kuralı babaanne/Rıza Dede ile ona uygulanıyor, İrem)
 - (komşu) Komşu teyze kargolarımı teslim alıp açıyor → anlatıcının "meraklı komşuma" etiketli kutu planı ve apartman grubunda ifşa
 - (okul/veli) Okul aile birliği başkanı veli her kararı "oy birliğiyle" tek başına alıyor → veliler tüzüğü okuyup kendi kuralıyla oylama yapıyor
 - (düğün) Yengem kına gecesinde herkesin dansını puanlayıp jüri oldu → sıra kendisine gelince bütün masa puan kartı kaldırıyor — havuzda 28.11 B (Yengemin Kına Jürisi)
